@@ -34,7 +34,18 @@ export function Tracks() {
                 </div>
               </div>
               <div className="track-actions">
-                <Link to={`/tracks/${track.id}`} className="btn soft">
+                <Link
+                  to={
+                    track.id === 'python'
+                      ? '/python'
+                      : track.id === 'agents'
+                      ? '/agents'
+                      : track.id === 'asyncconcur'
+                        ? '/async'
+                        : `/tracks/${track.id}`
+                  }
+                  className="btn soft"
+                >
                   Overview
                 </Link>
                 {first ? (

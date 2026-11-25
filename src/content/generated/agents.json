@@ -1,0 +1,4754 @@
+[
+ {
+  "id": "ag-01-module-1-agentic-ai-fundamentals-5ddc78",
+  "trackId": "agents",
+  "title": "01. Foundations: Module 1: Agentic AI Fundamentals",
+  "summary": "Goal: Build a solid mental model of what Agentic AI is, how agents work under the hood, and write your first autonomous agent from scratch in Python — no frameworks required.",
+  "order": 1,
+  "objectives": [
+   "What is Agentic AI?",
+   "Core Agent Architectures",
+   "Agent Components Deep Dive",
+   "Agent Communication Patterns",
+   "Python Agent from Scratch (No Framework)",
+   "Key Terminology Glossary"
+  ],
+  "sourceFile": "01-agentic-ai-fundamentals.md",
+  "labIds": [],
+  "series": "Agentic AI Curriculum"
+ },
+ {
+  "id": "ag-01-module-4-hugging-face-quantized-models-for-agent-817d00",
+  "trackId": "agents",
+  "title": "01. Foundations: Module 4: Hugging Face & Quantized Models for Agent Developers",
+  "summary": "Prerequisites: Modules 1–3 (Python basics, LangChain/LangGraph, tool use).",
+  "order": 2,
+  "objectives": [
+   "Hugging Face for Agent Developers",
+   "Quantization: Complete Guide",
+   "Comparison Table",
+   "Building an Agent with Local Quantized Models",
+   "GPU / CPU Considerations",
+   "Best Practices"
+  ],
+  "sourceFile": "04-huggingface-quantized-models.md",
+  "labIds": [],
+  "series": "Agentic AI Curriculum"
+ },
+ {
+  "id": "ag-01-what-is-an-ai-agent-definition-anatomy-916115",
+  "trackId": "agents",
+  "title": "01. Foundations: What is an AI Agent — Definition & Anatomy",
+  "summary": "An AI Agent is an autonomous software system that perceives its environment, reasons about goals, selects actions (including tool calls), executes them, and iterates until a goal is achieved — without requiring step-by-step human…",
+  "order": 3,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "01_agent_foundations.md",
+  "labIds": [],
+  "series": "Senior Agent Engineering"
+ },
+ {
+  "id": "ag-01-agent-vs-chatbot-vs-workflow-automation-1a5872",
+  "trackId": "agents",
+  "title": "01. Foundations: Agent vs Chatbot vs Workflow Automation",
+  "summary": "A Chatbot is a reactive system that responds to user messages in a single turn — it reads input, generates output, and stops. It has no tools, no planning, and no persistent memory beyond the conversation window.",
+  "order": 4,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "01_agent_foundations.md",
+  "labIds": [],
+  "series": "Senior Agent Engineering"
+ },
+ {
+  "id": "ag-01-react-reasoning-acting-pattern-4e8524",
+  "trackId": "agents",
+  "title": "01. Foundations: ReAct (Reasoning + Acting) Pattern",
+  "summary": "ReAct (Reasoning + Acting) is a prompting paradigm introduced in the 2022 paper \"ReAct: Synergizing Reasoning and Acting in Language Models.\" It interleaves Thought (the LLM's internal reasoning), Action (a tool call), and Observation (the…",
+  "order": 5,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "01_agent_foundations.md",
+  "labIds": [],
+  "series": "Senior Agent Engineering"
+ },
+ {
+  "id": "ag-01-chain-of-thought-cot-vs-tree-of-thought-tot-in-a-4ace1f",
+  "trackId": "agents",
+  "title": "01. Foundations: Chain-of-Thought (CoT) vs Tree-of-Thought (ToT) in Agents",
+  "summary": "Chain-of-Thought (CoT) prompts the LLM to reason step-by-step in a linear sequence before producing an answer — each reasoning step builds on the previous one.",
+  "order": 6,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "01_agent_foundations.md",
+  "labIds": [],
+  "series": "Senior Agent Engineering"
+ },
+ {
+  "id": "ag-01-planning-in-agents-task-decomposition-goal-setti-b309da",
+  "trackId": "agents",
+  "title": "01. Foundations: Planning in Agents (Task Decomposition & Goal Setting)",
+  "summary": "Planning in agents refers to the process of decomposing a high-level goal into an ordered sequence of subtasks, identifying dependencies between them, and determining which tools and resources are needed for each.",
+  "order": 7,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "01_agent_foundations.md",
+  "labIds": [],
+  "series": "Senior Agent Engineering"
+ },
+ {
+  "id": "ag-01-agent-memory-types-6901b9",
+  "trackId": "agents",
+  "title": "01. Foundations: Agent Memory Types",
+  "summary": "Agent memory encompasses all mechanisms by which an agent stores and retrieves information across time.",
+  "order": 8,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "01_agent_foundations.md",
+  "labIds": [],
+  "series": "Senior Agent Engineering"
+ },
+ {
+  "id": "ag-01-agent-state-management-017c20",
+  "trackId": "agents",
+  "title": "01. Foundations: Agent State Management",
+  "summary": "Agent state is the complete set of data the agent needs to resume execution at any point — analogous to a process's memory in an operating system.",
+  "order": 9,
+  "objectives": [
+   "① Concept Explanation",
+   "② Implementation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "01_agent_foundations.md",
+  "labIds": [],
+  "series": "Senior Agent Engineering"
+ },
+ {
+  "id": "ag-01-agent-loops-observe-think-act-64137e",
+  "trackId": "agents",
+  "title": "01. Foundations: Agent Loops (Observe → Think → Act)",
+  "summary": "The agent loop is the fundamental execution cycle that drives autonomous behavior — it is the engine that makes an agent \"agentic.\" The canonical loop is: Observe (read current state, memory, and tool results), Think (LLM reasons about the…",
+  "order": 10,
+  "objectives": [
+   "① Concept Explanation",
+   "② Production Agent Loop Implementation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "01_agent_foundations.md",
+  "labIds": [],
+  "series": "Senior Agent Engineering"
+ },
+ {
+  "id": "ag-01-05-prompt-engineering-for-agents-442ea6",
+  "trackId": "agents",
+  "title": "01. Foundations: 05 — Prompt Engineering for Agents",
+  "summary": "Concepts Covered: System Prompt Design | Few-Shot Prompting in Agent Loops | Instruction Hierarchy | Prompt Injection Attacks | Dynamic Prompt Assembly | Agent Persona & Constraints | Prompt Compression | Agent Ignores System Prompt Fix |…",
+  "order": 11,
+  "objectives": [
+   "CONCEPT 1: System Prompt Design for Agents",
+   "CONCEPT 2: Instruction Hierarchy",
+   "CONCEPT 3-9: Remaining Prompt Engineering Concepts",
+   "CONCEPT 3: Dynamic Prompt Assembly",
+   "CONCEPT 4: Prompt Compression"
+  ],
+  "sourceFile": "05_prompt_engineering.md",
+  "labIds": [],
+  "series": "Senior Agent Engineering"
+ },
+ {
+  "id": "ag-01-day-1-introduction-to-pydantic-ai-and-your-first-63a8e2",
+  "trackId": "agents",
+  "title": "01. Foundations: Day 1 — Introduction to Pydantic AI and Your First Typed Agent",
+  "summary": "Welcome to Day 1. Today you install Pydantic AI, wire up an API key, and build a typed agent that classifies text into a Pydantic model.",
+  "order": 12,
+  "objectives": [
+   "Why Pydantic AI?",
+   "Installation",
+   "API Key Setup with .env",
+   "Core Concepts: Agent, system_prompt, model, result_type",
+   "First Real Example: Task Classifier Agent",
+   "Switching Models"
+  ],
+  "sourceFile": "day-01-intro-and-first-agent.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-01-day-2-model-providers-result-type-and-structured-b33914",
+  "trackId": "agents",
+  "title": "01. Foundations: Day 2 — Model Providers, result_type, and Structured Outputs",
+  "summary": "Yesterday you built a typed classifier with one provider (OpenAI). Today you learn the full model menu, the Model class, and every flavor of result_type — including Union types that let the agent choose between success and error schemas.",
+  "order": 13,
+  "objectives": [
+   "Supported Model Providers",
+   "The Model Class",
+   "Inferring the Model from Environment Variables",
+   "Deep Dive: result_type",
+   "result_validator — Custom Validation with Retries",
+   "Common Pitfalls"
+  ],
+  "sourceFile": "day-02-models-and-structured-outputs.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-01-tool-registration-12bf62",
+  "trackId": "agents",
+  "title": "01. Foundations: Tool Registration",
+  "summary": "Tool Registration: explanations and runnable examples.",
+  "order": 14,
+  "objectives": [
+   "Tool Registration"
+  ],
+  "sourceFile": "thu_may_28_2026_ai_agent_interview_preparation_guide.md",
+  "labIds": [],
+  "series": "Agentic AI Interview Prep Guide"
+ },
+ {
+  "id": "ag-01-indexing-offline-done-once-3706af",
+  "trackId": "agents",
+  "title": "01. Foundations: INDEXING (Offline — Done Once)",
+  "summary": "INDEXING (Offline — Done Once): explanations and runnable examples.",
+  "order": 15,
+  "objectives": [
+   "INDEXING (Offline — Done Once)"
+  ],
+  "sourceFile": "thu_may_28_2026_ai_agent_interview_preparation_guide.md",
+  "labIds": [],
+  "series": "Agentic AI Interview Prep Guide"
+ },
+ {
+  "id": "ag-01-generation-online-b5ec8c",
+  "trackId": "agents",
+  "title": "01. Foundations: GENERATION (Online)",
+  "summary": "Q1 (Beginner): What is RAG and why is it better than just prompting the LLM with all your data?",
+  "order": 16,
+  "objectives": [
+   "Chunking Strategies — The Art and Science",
+   "Hybrid Search — Dense + Sparse",
+   "Re-Ranking — Dramatically Improves Quality",
+   "STEP 3 — ARCHITECTURE EXPLANATION",
+   "Complete Production RAG Architecture",
+   "Agentic RAG Architecture"
+  ],
+  "sourceFile": "thu_may_28_2026_ai_agent_interview_preparation_guide.md",
+  "labIds": [],
+  "series": "Agentic AI Interview Prep Guide"
+ },
+ {
+  "id": "ag-01-agentic-ai-layers-from-foundations-to-advanced-1-c01a87",
+  "trackId": "agents",
+  "title": "01. Foundations: Agentic AI Layers — From Foundations to Advanced 1/3: What Are Foundations? · — LLM Fundamentals …",
+  "summary": "The absolute bedrock concepts every agentic AI engineer must master. Without these, everything built on top is shaky.",
+  "order": 17,
+  "objectives": [
+   "What Are Foundations?",
+   "— LLM Fundamentals",
+   "— Tokenization",
+   "— Prompt Engineering",
+   "— Function Calling (Tool Use)",
+   "— Embeddings & Similarity Search"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Complete Agentic AI Layers — From Foundations to Advanced"
+ },
+ {
+  "id": "ag-01-agentic-ai-layers-from-foundations-to-advanced-2-5052fd",
+  "trackId": "agents",
+  "title": "01. Foundations: Agentic AI Layers — From Foundations to Advanced 2/3: Tool Categories",
+  "summary": "Covers Tool Categories.",
+  "order": 18,
+  "objectives": [
+   "Tool Categories"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Complete Agentic AI Layers — From Foundations to Advanced"
+ },
+ {
+  "id": "ag-01-agentic-ai-layers-from-foundations-to-advanced-3-47f5c3",
+  "trackId": "agents",
+  "title": "01. Foundations: Agentic AI Layers — From Foundations to Advanced 3/3: All Layers Summary",
+  "summary": "Say \"deep dive Layer 3 agent architectures\" or \"build a complete coding agent\" for the next full implementation!",
+  "order": 19,
+  "objectives": [
+   "All Layers Summary"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Complete Agentic AI Layers — From Foundations to Advanced"
+ },
+ {
+  "id": "ag-01-what-is-artificial-intelligence-generative-ai-a628ac",
+  "trackId": "agents",
+  "title": "01. Foundations: What is Artificial Intelligence & Generative AI?",
+  "summary": "AI is making computers smart enough to do things that normally require human intelligence.",
+  "order": 20,
+  "objectives": [
+   "What is Artificial Intelligence (AI)?",
+   "What is Generative AI?"
+  ],
+  "sourceFile": "ggggg.md",
+  "labIds": [],
+  "series": "Generative AI Teaching Material"
+ },
+ {
+  "id": "ag-01-what-are-large-language-models-llms-4aa3d2",
+  "trackId": "agents",
+  "title": "01. Foundations: What are Large Language Models (LLMs)?",
+  "summary": "A language model is a system that understands and generates human language.",
+  "order": 21,
+  "objectives": [
+   "What is a Language Model?",
+   "Popular LLMs in 2024-2025"
+  ],
+  "sourceFile": "ggggg.md",
+  "labIds": [],
+  "series": "Generative AI Teaching Material"
+ },
+ {
+  "id": "ag-01-genai-applications-ab6f5f",
+  "trackId": "agents",
+  "title": "01. Foundations: GenAI Applications",
+  "summary": "RAG (Retrieval-Augmented Generation) > Upload your company's 1000-page manual → Ask questions in plain English → LLM answers using YOUR documents",
+  "order": 22,
+  "objectives": [
+   "Real-World Applications",
+   "Enterprise Applications",
+   "Application Categories"
+  ],
+  "sourceFile": "ggggg.md",
+  "labIds": [],
+  "series": "Generative AI Teaching Material"
+ },
+ {
+  "id": "ag-01-transformer-architecture-b11fb0",
+  "trackId": "agents",
+  "title": "01. Foundations: Transformer Architecture",
+  "summary": "Transformer is the neural network architecture that powers ALL modern LLMs.",
+  "order": 23,
+  "objectives": [
+   "What is a Transformer?",
+   "Transformer Components Explained Simply",
+   "The ATTENTION Mechanism (The Magic Ingredient)",
+   "Encoder vs Decoder vs Encoder-Decoder"
+  ],
+  "sourceFile": "ggggg.md",
+  "labIds": [],
+  "series": "Generative AI Teaching Material"
+ },
+ {
+  "id": "ag-01-tokenization-1860ee",
+  "trackId": "agents",
+  "title": "01. Foundations: Tokenization",
+  "summary": "Tokenization is the process of breaking text into smaller pieces called \"tokens\" that the LLM can process.",
+  "order": 24,
+  "objectives": [
+   "What is Tokenization?",
+   "Types of Tokenizers"
+  ],
+  "sourceFile": "ggggg.md",
+  "labIds": [],
+  "series": "Generative AI Teaching Material"
+ },
+ {
+  "id": "ag-01-embeddings-6f8f27",
+  "trackId": "agents",
+  "title": "01. Foundations: Embeddings",
+  "summary": "Embeddings are numerical representations (lists of numbers) that capture the MEANING of text.",
+  "order": 25,
+  "objectives": [
+   "What are Embeddings?",
+   "Simple Definition",
+   "The Core Problem",
+   "The Magic: Similar Meaning = Similar Numbers",
+   "The Famous Example: Word Arithmetic",
+   "Types of Embeddings"
+  ],
+  "sourceFile": "ggggg.md",
+  "labIds": [],
+  "series": "Generative AI Teaching Material"
+ },
+ {
+  "id": "ag-01-context-window-502d62",
+  "trackId": "agents",
+  "title": "01. Foundations: Context Window",
+  "summary": "The context window is the maximum amount of text (in tokens) that an LLM can \"see\" and process at one time.",
+  "order": 26,
+  "objectives": [
+   "What is a Context Window?",
+   "Simple Definition",
+   "Analogy: The Whiteboard",
+   "Visual Representation",
+   "Context Window Sizes (2024-2025)",
+   "What Happens When Context Window is Full?"
+  ],
+  "sourceFile": "ggggg.md",
+  "labIds": [],
+  "series": "Generative AI Teaching Material"
+ },
+ {
+  "id": "ag-01-temperature-top-p-sampling-parameters-ba2d02",
+  "trackId": "agents",
+  "title": "01. Foundations: Temperature & Top-P (Sampling Parameters)",
+  "summary": "Before understanding Temperature and Top-P, understand this:",
+  "order": 27,
+  "objectives": [
+   "How LLMs Generate Text (The Foundation)",
+   "Temperature",
+   "Top-P (Nucleus Sampling)"
+  ],
+  "sourceFile": "ggggg.md",
+  "labIds": [],
+  "series": "Generative AI Teaching Material"
+ },
+ {
+  "id": "ag-01-streaming-f29219",
+  "trackId": "agents",
+  "title": "01. Foundations: Streaming",
+  "summary": "Streaming means the LLM sends its response word-by-word (token-by-token) as it generates them, instead of waiting until the complete response is ready.",
+  "order": 28,
+  "objectives": [
+   "What is Streaming?",
+   "Simple Definition",
+   "Analogy: Typing vs. Delivering a Letter",
+   "Why Streaming Exists",
+   "How Streaming Works Technically",
+   "When to Use Streaming"
+  ],
+  "sourceFile": "ggggg.md",
+  "labIds": [],
+  "series": "Generative AI Teaching Material"
+ },
+ {
+  "id": "ag-01-llm-capabilities-limitations-31ca6a",
+  "trackId": "agents",
+  "title": "01. Foundations: LLM Capabilities & Limitations",
+  "summary": "Why it happens: LLMs predict the NEXT LIKELY word. A convincing-sounding fake is more likely than \"I don't know.",
+  "order": 29,
+  "objectives": [
+   "What LLMs CAN Do Well",
+   "What LLMs CANNOT Do Well"
+  ],
+  "sourceFile": "ggggg.md",
+  "labIds": [],
+  "series": "Generative AI Teaching Material"
+ },
+ {
+  "id": "ag-01-how-to-approach-generative-ai-problems-8b54fc",
+  "trackId": "agents",
+  "title": "01. Foundations: How to Approach Generative AI Problems",
+  "summary": "Teaching Tips: 1. Start every session with a real-world analogy before any technical content 2.",
+  "order": 30,
+  "objectives": [
+   "The GenAI Problem-Solving Framework",
+   "Which Approach to Use When?",
+   "Prompt Engineering Best Practices"
+  ],
+  "sourceFile": "ggggg.md",
+  "labIds": [],
+  "series": "Generative AI Teaching Material"
+ },
+ {
+  "id": "ag-01-python-virtual-environment-windows-f0bfd0",
+  "trackId": "agents",
+  "title": "01. Foundations: Python Virtual Environment (Windows)",
+  "summary": "A venv is an isolated Python environment — like a clean room for each project. Each project gets its own packages without conflicting with others.",
+  "order": 31,
+  "objectives": [
+   "What is a Virtual Environment?",
+   "Step-by-Step Windows venv Guide"
+  ],
+  "sourceFile": "ggggg.md",
+  "labIds": [],
+  "series": "Generative AI Teaching Material"
+ },
+ {
+  "id": "ag-01-tokenization-complete-examples-2edd8a",
+  "trackId": "agents",
+  "title": "01. Foundations: Tokenization — Complete Examples",
+  "summary": "Covers Tokenization with Tiktoken (OpenAI's Tokenizer).",
+  "order": 32,
+  "objectives": [
+   "Tokenization with Tiktoken (OpenAI's Tokenizer)"
+  ],
+  "sourceFile": "ggggg.md",
+  "labIds": [],
+  "series": "Generative AI Teaching Material"
+ },
+ {
+  "id": "ag-01-llm-connections-text-generation-66f71e",
+  "trackId": "agents",
+  "title": "01. Foundations: LLM Connections & Text Generation",
+  "summary": "Covers OpenAI Text Generation, Groq API Text Generation (Ultra Fast!), Anthropic Claude API.",
+  "order": 33,
+  "objectives": [
+   "OpenAI Text Generation",
+   "Groq API Text Generation (Ultra Fast!)",
+   "Anthropic Claude API"
+  ],
+  "sourceFile": "ggggg.md",
+  "labIds": [],
+  "series": "Generative AI Teaching Material"
+ },
+ {
+  "id": "ag-01-embeddings-generation-4a2b41",
+  "trackId": "agents",
+  "title": "01. Foundations: Embeddings Generation",
+  "summary": "Embeddings Generation: explanations and runnable examples.",
+  "order": 34,
+  "objectives": [
+   "Embeddings Generation"
+  ],
+  "sourceFile": "ggggg.md",
+  "labIds": [],
+  "series": "Generative AI Teaching Material"
+ },
+ {
+  "id": "ag-01-temperature-top-p-top-k-max-tokens-580fcd",
+  "trackId": "agents",
+  "title": "01. Foundations: Temperature, Top-P, Top-K, Max Tokens",
+  "summary": "Temperature, Top-P, Top-K, Max Tokens: explanations and runnable examples.",
+  "order": 35,
+  "objectives": [
+   "Temperature, Top-P, Top-K, Max Tokens"
+  ],
+  "sourceFile": "ggggg.md",
+  "labIds": [],
+  "series": "Generative AI Teaching Material"
+ },
+ {
+  "id": "ag-01-complete-similarity-search-system-860335",
+  "trackId": "agents",
+  "title": "01. Foundations: Complete Similarity Search System",
+  "summary": "Complete Similarity Search System: explanations and runnable examples.",
+  "order": 36,
+  "objectives": [
+   "Complete Similarity Search System"
+  ],
+  "sourceFile": "ggggg.md",
+  "labIds": [],
+  "series": "Generative AI Teaching Material"
+ },
+ {
+  "id": "ag-01-everything-together-master-reference-file-8035f4",
+  "trackId": "agents",
+  "title": "01. Foundations: Everything Together — Master Reference File",
+  "summary": "This is your complete, runnable Python codebase! Every file is ready to run — just: 1.",
+  "order": 37,
+  "objectives": [
+   "Complete Project Structure",
+   "Formula Quick-Reference Card"
+  ],
+  "sourceFile": "ggggg.md",
+  "labIds": [],
+  "series": "Generative AI Teaching Material"
+ },
+ {
+  "id": "ag-01-huggingface-complete-deep-dive-0d7024",
+  "trackId": "agents",
+  "title": "01. Foundations: HUGGINGFACE — Complete Deep Dive",
+  "summary": "HuggingFace is the GitHub of AI. It hosts 500,000+ models, 100,000+ datasets, and provides the libraries (transformers, datasets, PEFT, TRL, accelerate) that the entire AI industry uses to train, fine-tune, and deploy models.",
+  "order": 38,
+  "objectives": [
+   "What Is HuggingFace?",
+   "HuggingFace Ecosystem Map",
+   "HuggingFace Transformers — How It Works Internally"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "GGUF, llama.cpp & HuggingFace"
+ },
+ {
+  "id": "ag-01-gguf-complete-deep-dive-11e792",
+  "trackId": "agents",
+  "title": "01. Foundations: GGUF — Complete Deep Dive",
+  "summary": "GGUF (GPT-Generated Unified Format) is a binary file format that packages an entire LLM — weights, tokenizer, hyperparameters, and metadata — into a single portable file, with built-in quantization support.",
+  "order": 39,
+  "objectives": [
+   "What Is GGUF?",
+   "GGUF File Structure — Internals",
+   "GGUF Naming Convention"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "GGUF, llama.cpp & HuggingFace"
+ },
+ {
+  "id": "ag-01-llama-cpp-complete-deep-dive-ba427c",
+  "trackId": "agents",
+  "title": "01. Foundations: llama.cpp — Complete Deep Dive",
+  "summary": "llama.cpp is a C/C++ implementation of LLM inference, written by Georgi Gerganov.",
+  "order": 40,
+  "objectives": [
+   "What Is llama.cpp?",
+   "llama.cpp Architecture",
+   "llama.cpp Tools",
+   "Complete Summary"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "GGUF, llama.cpp & HuggingFace"
+ },
+ {
+  "id": "ag-01-how-llms-actually-work-a93a38",
+  "trackId": "agents",
+  "title": "01. Foundations: How LLMs Actually Work",
+  "summary": "An LLM (Large Language Model) is a next-token predictor. That's it.",
+  "order": 41,
+  "objectives": [
+   "Plain English First",
+   "Why This Matters for Agents"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 1: Foundations"
+ },
+ {
+  "id": "ag-01-tokenization-deep-c0ce26",
+  "trackId": "agents",
+  "title": "01. Foundations: Tokenization (Deep)",
+  "summary": "Covers What Is a Token?, Token Costs — Why You MUST Understand This.",
+  "order": 42,
+  "objectives": [
+   "What Is a Token?",
+   "Token Costs — Why You MUST Understand This"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 1: Foundations"
+ },
+ {
+  "id": "ag-01-prompt-engineering-deep-047748",
+  "trackId": "agents",
+  "title": "01. Foundations: Prompt Engineering (Deep)",
+  "summary": "Covers The Anatomy of a Perfect Prompt, Prompting Techniques Compared.",
+  "order": 43,
+  "objectives": [
+   "The Anatomy of a Perfect Prompt",
+   "Prompting Techniques Compared"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 1: Foundations"
+ },
+ {
+  "id": "ag-01-embeddings-semantic-search-ed5913",
+  "trackId": "agents",
+  "title": "01. Foundations: Embeddings & Semantic Search",
+  "summary": "Say \"explain Layer 3 Agent Architectures\" and I'll give it the same deep treatment — full explanation, visuals, and complete working code for every architecture pattern!",
+  "order": 44,
+  "objectives": [
+   "What Are Embeddings?",
+   "Semantic Search — The Core of RAG"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 1: Foundations"
+ },
+ {
+  "id": "ag-01-lora-low-rank-adaptation-bd32a9",
+  "trackId": "agents",
+  "title": "01. Foundations: LoRA — Low-Rank Adaptation",
+  "summary": "LoRA freezes all original model weights and adds small trainable \"adapter\" matrices that capture the fine-tuning changes. You only train the adapters — typically 1-10% of parameters.",
+  "order": 45,
+  "objectives": [
+   "What Is LoRA?",
+   "LoRA Architecture — Deep Dive"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "LoRA, QLoRA, Unsloth & Fine-Tuning Frameworks"
+ },
+ {
+  "id": "ag-01-qlora-quantized-lora-60e305",
+  "trackId": "agents",
+  "title": "01. Foundations: QLoRA — Quantized LoRA",
+  "summary": "QLoRA = NF4 Quantization + LoRA + Double Quantization + Paged Optimizers. It brings fine-tuning a 65B model down to a single 48GB GPU — tasks that previously needed 8× A100s.",
+  "order": 46,
+  "objectives": [
+   "What Is QLoRA?",
+   "QLoRA — All 4 Innovations"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "LoRA, QLoRA, Unsloth & Fine-Tuning Frameworks"
+ },
+ {
+  "id": "ag-01-unsloth-2-5x-faster-fine-tuning-201359",
+  "trackId": "agents",
+  "title": "01. Foundations: UNSLOTH — 2-5x Faster Fine-Tuning",
+  "summary": "Unsloth is a library that makes LoRA/QLoRA fine-tuning 2-5x faster and uses 60% less memory through hand-crafted CUDA kernels, smart gradient checkpointing, and optimized attention implementations — with ZERO quality loss.",
+  "order": 47,
+  "objectives": [
+   "What Is Unsloth?",
+   "How Unsloth Achieves Its Speed"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "LoRA, QLoRA, Unsloth & Fine-Tuning Frameworks"
+ },
+ {
+  "id": "ag-01-other-fine-tuning-frameworks-8298f4",
+  "trackId": "agents",
+  "title": "01. Foundations: Other Fine-Tuning Frameworks",
+  "summary": "Say \"explain vLLM and LLM serving frameworks\" or \"explain RLHF and DPO alignment in depth\" for the next complete breakdown!",
+  "order": 48,
+  "objectives": [
+   "Framework Landscape",
+   "Complete Summary"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "LoRA, QLoRA, Unsloth & Fine-Tuning Frameworks"
+ },
+ {
+  "id": "ag-01-quantization-dbb426",
+  "trackId": "agents",
+  "title": "01. Foundations: Quantization",
+  "summary": "Quantization is the process of reducing the numerical precision of a model's weights and activations — from high-precision floating point numbers (32-bit or 16-bit) down to lower-precision formats (8-bit, 4-bit, or even 2-bit) — so the…",
+  "order": 49,
+  "objectives": [
+   "What Is Quantization?",
+   "The Core Concept — Numbers Take Space",
+   "The Problem Quantization Solves — Visually",
+   "How Quantization Actually Works",
+   "Types of Quantization",
+   "Major Quantization Methods Explained"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Quantization"
+ },
+ {
+  "id": "ag-02-module-10-tool-authentication-authorization-eval-76ed49",
+  "trackId": "agents",
+  "title": "02. Tool Calling & MCP: Module 10: Tool Authentication, Authorization & Evaluation",
+  "summary": "Prerequisites: Modules 1–6 (agent architectures, LangChain/LangGraph, tool use, multi-agent systems, evaluation). You should be comfortable building agents in Python, defining tools, and running them end-to-end.",
+  "order": 50,
+  "objectives": [
+   "Part 1: Why Tool Security Matters",
+   "Part 2: Authentication — Proving Identity",
+   "Part 3: Authorization — Controlling Access",
+   "Part 4: Sandboxing Tools",
+   "Part 5: Tool Evaluation",
+   "Part 6: Tool Design Best Practices"
+  ],
+  "sourceFile": "10-tool-auth-authorization-evaluation.md",
+  "labIds": [],
+  "series": "Agentic AI Curriculum"
+ },
+ {
+  "id": "ag-02-02-tool-use-function-calling-1-3-concept-1-tool--151225",
+  "trackId": "agents",
+  "title": "02. Tool Calling & MCP: 02 — Tool Use & Function Calling 1/3: CONCEPT 1: Tool Definition & Schema Design (JSON Schema for Tools)",
+  "summary": "Concepts Covered: Tool Schema Design | OpenAI & Anthropic Function Calling | Tool Selection Logic | Output Parsing & Error Handling | Parallel vs Sequential | Tool Chaining | Infinite Loop Detection | Wrong Tool Debugging | Null/Error…",
+  "order": 51,
+  "objectives": [
+   "CONCEPT 1: Tool Definition & Schema Design (JSON Schema for Tools)",
+   "① Concept Explanation",
+   "② 10 Conceptual Interview Questions with Answers",
+   "③ 10 Scenario-Based Q&A",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "02_tool_use_function_calling.md",
+  "labIds": [],
+  "series": "Senior Agent Engineering"
+ },
+ {
+  "id": "ag-02-02-tool-use-function-calling-2-3-concept-2-funct-e314c0",
+  "trackId": "agents",
+  "title": "02. Tool Calling & MCP: 02 — Tool Use & Function Calling 2/3: CONCEPT 2: Function Calling — OpenAI-Style & Anthropic tool_use · CONCEPT 3: T",
+  "summary": "Function calling (OpenAI) and tool_use (Anthropic) are native API features that allow LLMs to output structured tool invocations rather than free-text instructions.",
+  "order": 52,
+  "objectives": [
+   "CONCEPT 2: Function Calling — OpenAI-Style & Anthropic tool_use",
+   "CONCEPT 3: Tool Selection Logic",
+   "CONCEPT 4-10: Remaining Tool Use Concepts",
+   "CONCEPT 4: Tool Output Parsing & Error Handling",
+   "CONCEPT 5: Parallel vs Sequential Tool Calling",
+   "CONCEPT 6-10: Tool Chaining, Infinite Loops, Wrong Tool, Null Handling, Timeouts"
+  ],
+  "sourceFile": "02_tool_use_function_calling.md",
+  "labIds": [],
+  "series": "Senior Agent Engineering"
+ },
+ {
+  "id": "ag-02-02-tool-use-function-calling-3-3-concept-9-tool--0a60f4",
+  "trackId": "agents",
+  "title": "02. Tool Calling & MCP: 02 — Tool Use & Function Calling 3/3: CONCEPT 9: Tool Returns Null/Error Mid-Chain — Graceful Degradation · CONCEPT ",
+  "summary": "[End of 02_tool_use_function_calling.md — 10 concepts covered with full implementations]",
+  "order": 53,
+  "objectives": [
+   "CONCEPT 9: Tool Returns Null/Error Mid-Chain — Graceful Degradation",
+   "CONCEPT 10: Tool Timeout Handling in Production"
+  ],
+  "sourceFile": "02_tool_use_function_calling.md",
+  "labIds": [],
+  "series": "Senior Agent Engineering"
+ },
+ {
+  "id": "ag-02-tool-calling-with-langchain-a27c2f",
+  "trackId": "agents",
+  "title": "02. Tool Calling & MCP: Tool calling with LangChain",
+  "summary": "The LLM can decide to use external tools, APIs, functions, databases, or systems to complete a task instead of only generating text from its training data.",
+  "order": 54,
+  "objectives": [
+   "How Tool Calling Works — Big Picture",
+   "The 6-Step Process We Will Follow",
+   "multiple tools calling",
+   "langchain tools"
+  ],
+  "sourceFile": "0_tool_calling.ipynb",
+  "labIds": [],
+  "series": "LangGraph Notebooks"
+ },
+ {
+  "id": "ag-02-day-3-tools-and-function-calling-8ac404",
+  "trackId": "agents",
+  "title": "02. Tool Calling & MCP: Day 3 — Tools and Function Calling",
+  "summary": "Yesterday you taught agents to return structured data. Today you teach them to do things.",
+  "order": 55,
+  "objectives": [
+   "What Are Tools, and When Do You Use Them?",
+   "@agent.tool vs @agent.tool_plain",
+   "How the Model Picks Between Tools",
+   "Common Pitfalls",
+   "What's Next"
+  ],
+  "sourceFile": "day-03-tools-and-function-calling.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-02-day-6-validation-retries-and-mcp-944494",
+  "trackId": "agents",
+  "title": "02. Tool Calling & MCP: Day 6 — Validation, Retries, and MCP",
+  "summary": "Real agents make mistakes. A model might return an invoice total of $1,200,000 when the prompt said \"small business invoice,\" or call a tool with malformed arguments.",
+  "order": 56,
+  "objectives": [
+   "model_settings — Per-Run Tuning",
+   "Retry Logic with ModelRetry",
+   "Field-Level Validators with Pydantic v2",
+   "Model Context Protocol (MCP)",
+   "Common Pitfalls",
+   "What's Next"
+  ],
+  "sourceFile": "day-06-validation-retries-and-mcp.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-02-day-11-tools-retrieval-6e72f5",
+  "trackId": "agents",
+  "title": "02. Tool Calling & MCP: Day 11 — Tools & Retrieval",
+  "summary": "Today you graduate from \"prompt in, text out\" agents to tool-calling agents that act on the world.",
+  "order": 57,
+  "objectives": [
+   "Common Pitfalls",
+   "Next: Day 12 — Memory & State"
+  ],
+  "sourceFile": "day-11-tools-and-retrieval.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-02-day-18-tool-ecosystems-302a7b",
+  "trackId": "agents",
+  "title": "02. Tool Calling & MCP: Day 18 — Tool Ecosystems",
+  "summary": "So far your agents have used one or two tools at a time. Today you build agents with rich tool ecosystems — six or more tools the agent must choose between, and tools that themselves invoke other LLMs.",
+  "order": 58,
+  "objectives": [
+   "Common Pitfalls",
+   "Next: Day 19 — Production-Grade I"
+  ],
+  "sourceFile": "day-18-tool-ecosystems.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-02-a2a-mcp-human-in-the-loop-1-2-master-architectur-c01a87",
+  "trackId": "agents",
+  "title": "02. Tool Calling & MCP: A2A + MCP + Human-in-the-Loop 1/2: Master Architecture · HITL Decision Points …",
+  "summary": "Covers Master Architecture, HITL Decision Points, Complete Project Structure, Requirements.",
+  "order": 59,
+  "objectives": [
+   "Master Architecture",
+   "HITL Decision Points",
+   "Complete Project Structure",
+   "Requirements"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "A2A + MCP + Human-in-the-Loop"
+ },
+ {
+  "id": "ag-02-a2a-mcp-human-in-the-loop-2-2-orchestrator-agent-5052fd",
+  "trackId": "agents",
+  "title": "02. Tool Calling & MCP: A2A + MCP + Human-in-the-Loop 2/2: Orchestrator Agent · Research + Code + Writer Agents …",
+  "summary": "Say \"add persistence/memory to this system\" or \"add streaming dashboard to the HITL portal\" for the next deep dive!",
+  "order": 60,
+  "objectives": [
+   "Orchestrator Agent",
+   "Research + Code + Writer Agents",
+   "launcher.py — Launch Everything",
+   "Complete System Summary"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "A2A + MCP + Human-in-the-Loop"
+ },
+ {
+  "id": "ag-02-parallel-tool-calling-bde987",
+  "trackId": "agents",
+  "title": "02. Tool Calling & MCP: Parallel Tool Calling",
+  "summary": "Parallel Tool Calling: explanations and runnable examples.",
+  "order": 61,
+  "objectives": [
+   "Parallel Tool Calling"
+  ],
+  "sourceFile": "thu_may_28_2026_ai_agent_interview_preparation_guide.md",
+  "labIds": [],
+  "series": "Agentic AI Interview Prep Guide"
+ },
+ {
+  "id": "ag-02-tool-schema-validation-flow-613095",
+  "trackId": "agents",
+  "title": "02. Tool Calling & MCP: Tool Schema Validation Flow",
+  "summary": "Q1 (Beginner): What happens when you call client.chat.completions.create() with tools? Does the LLM execute the tool?",
+  "order": 62,
+  "objectives": [
+   "Sequential vs Parallel vs Dependency Chains",
+   "Sequential Tool Calling",
+   "Parallel Tool Calling",
+   "Dependency Chain (Mixed)",
+   "STEP 3 — ARCHITECTURE EXPLANATION",
+   "Complete Tool Calling Architecture"
+  ],
+  "sourceFile": "thu_may_28_2026_ai_agent_interview_preparation_guide.md",
+  "labIds": [],
+  "series": "Agentic AI Interview Prep Guide"
+ },
+ {
+  "id": "ag-02-scenario-4-preventing-unnecessary-tool-calls-5a73d2",
+  "trackId": "agents",
+  "title": "02. Tool Calling & MCP: Scenario 4 — Preventing Unnecessary Tool Calls",
+  "summary": "Scenario 4 — Preventing Unnecessary Tool Calls: explanations and runnable examples.",
+  "order": 63,
+  "objectives": [
+   "Scenario 4 — Preventing Unnecessary Tool Calls"
+  ],
+  "sourceFile": "sun_may_31_2026_building_an_ai_agent_without_frameworks.md",
+  "labIds": [],
+  "series": "Deep Dive: AI Agent from Scratch"
+ },
+ {
+  "id": "ag-02-llm-tools-function-calling-9a6005",
+  "trackId": "agents",
+  "title": "02. Tool Calling & MCP: LLM Tools & Function Calling",
+  "summary": "An LLM is like a brilliant expert locked in a room with only a notepad. They can think and write beautifully, but they can't GO anywhere or DO anything.",
+  "order": 64,
+  "objectives": [
+   "The Problem: LLMs are \"Brains Without Hands\"",
+   "What is Function Calling?",
+   "Types of Tools LLMs Can Use",
+   "AI Agents: Function Calling on Steroids"
+  ],
+  "sourceFile": "ggggg.md",
+  "labIds": [],
+  "series": "Generative AI Teaching Material"
+ },
+ {
+  "id": "ag-02-function-calling-tool-use-feb25b",
+  "trackId": "agents",
+  "title": "02. Tool Calling & MCP: Function Calling (Tool Use)",
+  "summary": "Covers What Is It and Why Does It Exist?, How Function Calling Works Step by Step.",
+  "order": 65,
+  "objectives": [
+   "What Is It and Why Does It Exist?",
+   "How Function Calling Works Step by Step"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 1: Foundations"
+ },
+ {
+  "id": "ag-02-what-makes-a-good-tool-a7a2ab",
+  "trackId": "agents",
+  "title": "02. Tool Calling & MCP: What Makes a GOOD Tool?",
+  "summary": "What Makes a GOOD Tool?: explanations and runnable examples.",
+  "order": 66,
+  "objectives": [
+   "What Makes a GOOD Tool?"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 5: Tool & Skill Ecosystem"
+ },
+ {
+  "id": "ag-02-tool-design-patterns-50e23c",
+  "trackId": "agents",
+  "title": "02. Tool Calling & MCP: Tool Design Patterns",
+  "summary": "Tool Design Patterns: explanations and runnable examples.",
+  "order": 67,
+  "objectives": [
+   "Tool Design Patterns"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 5: Tool & Skill Ecosystem"
+ },
+ {
+  "id": "ag-02-tool-registry-dynamic-loading-d57f4f",
+  "trackId": "agents",
+  "title": "02. Tool Calling & MCP: Tool Registry & Dynamic Loading",
+  "summary": "Tool Registry & Dynamic Loading: explanations and runnable examples.",
+  "order": 68,
+  "objectives": [
+   "Tool Registry & Dynamic Loading"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 5: Tool & Skill Ecosystem"
+ },
+ {
+  "id": "ag-02-tool-chaining-148221",
+  "trackId": "agents",
+  "title": "02. Tool Calling & MCP: Tool Chaining",
+  "summary": "Tool Chaining: explanations and runnable examples.",
+  "order": 69,
+  "objectives": [
+   "Tool Chaining"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 5: Tool & Skill Ecosystem"
+ },
+ {
+  "id": "ag-02-tool-categories-deep-dive-8b4bb8",
+  "trackId": "agents",
+  "title": "02. Tool Calling & MCP: Tool Categories Deep Dive",
+  "summary": "Say \"explain Layer 7 Advanced RAG Patterns\" for the next deep dive with the same clarity!",
+  "order": 70,
+  "objectives": [
+   "Complete Code — Layer 5",
+   "Layer 5 Complete Summary"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 5: Tool & Skill Ecosystem"
+ },
+ {
+  "id": "ag-02-fastmcp-servers-abda0d",
+  "trackId": "agents",
+  "title": "02. Tool Calling & MCP: FastMCP Servers",
+  "summary": "@mcp.prompt() def analysis_prompt(data: str, goal: str) -> str: \"\"\"Generate a data analysis prompt.\"\"\" return f\"\"\" Analyze the following data to achieve this goal: {goal}",
+  "order": 71,
+  "objectives": [
+   "Basic FastMCP Server",
+   "Code Execution MCP Server"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "MCP (Model Context Protocol)"
+ },
+ {
+  "id": "ag-02-mcp-clients-with-all-frameworks-bcff18",
+  "trackId": "agents",
+  "title": "02. Tool Calling & MCP: MCP Clients with All Frameworks",
+  "summary": "Say \"build a production MCP server with HTTP transport\" or \"implement RAG with MCP + LangGraph\" for deeper dives!",
+  "order": 72,
+  "objectives": [
+   "Scenario 1: Azure OpenAI + MCP",
+   "Scenario 2: LangChain + MCP",
+   "Scenario 3: LangGraph + MCP",
+   "Scenario 4: Semantic Kernel + MCP",
+   "Scenario 5: AutoGen + MCP",
+   "main.py — Run All Scenarios"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "MCP (Model Context Protocol)"
+ },
+ {
+  "id": "ag-02-production-mcp-server-with-http-transport-900352",
+  "trackId": "agents",
+  "title": "02. Tool Calling & MCP: Production MCP Server with HTTP Transport",
+  "summary": "Covers Architecture, Requirements, server/config.py — Settings, server/auth.py — Authentication, server/middleware.py — Middleware and more.",
+  "order": 73,
+  "objectives": [
+   "Architecture",
+   "Requirements",
+   "server/config.py — Settings",
+   "server/auth.py — Authentication",
+   "server/middleware.py — Middleware",
+   "server/tools/search_tools.py"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Part 1: Production MCP Server with HTTP Transport"
+ },
+ {
+  "id": "ag-02-rag-with-mcp-langgraph-b3c3b6",
+  "trackId": "agents",
+  "title": "02. Tool Calling & MCP: RAG with MCP + LangGraph",
+  "summary": "Say \"add streaming to the MCP server\" or \"add memory/persistence to the LangGraph RAG\" for the next deep dive!",
+  "order": 74,
+  "objectives": [
+   "Architecture",
+   "rag_langgraph/graph_state.py",
+   "rag_langgraph/nodes.py — All Graph Nodes",
+   "rag_langgraph/vector_store.py",
+   "rag_langgraph/graph.py — Build the Graph",
+   "rag_langgraph/agent.py — Main RAG Agent"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Part 1: Production MCP Server with HTTP Transport"
+ },
+ {
+  "id": "ag-03-module-5-building-agents-without-frameworks-1-2--af07de",
+  "trackId": "agents",
+  "title": "03. Agents from Scratch: Module 5: Building Agents Without Frameworks 1/2: Why Build Without Frameworks? · Building Blocks Every Agent Needs",
+  "summary": "Before you can bend a framework to your will, you must first understand what it's actually doing.\" > > — Every senior engineer who has debugged a 47-layer LangChain abstraction at 2 AM.",
+  "order": 75,
+  "objectives": [
+   "Why Build Without Frameworks?",
+   "Building Blocks Every Agent Needs",
+   "Building a Complete Agent from Scratch — Step by Step",
+   "Advanced: Building a ReAct Agent from Scratch",
+   "Advanced: Building a Plan-and-Execute Agent",
+   "Advanced: Building a Multi-Agent System from Scratch"
+  ],
+  "sourceFile": "05-building-agents-without-frameworks.md",
+  "labIds": [],
+  "series": "Agentic AI Curriculum"
+ },
+ {
+  "id": "ag-03-module-5-building-agents-without-frameworks-2-2--e3ba9c",
+  "trackId": "agents",
+  "title": "03. Agents from Scratch: Module 5: Building Agents Without Frameworks 2/2: Connecting to Local Models · Memory System from Scratch …",
+  "summary": "One major advantage of building from scratch: swapping the LLM backend is trivial.",
+  "order": 76,
+  "objectives": [
+   "Connecting to Local Models",
+   "Memory System from Scratch",
+   "Observability from Scratch",
+   "Testing Your Custom Agent",
+   "When to Migrate to a Framework"
+  ],
+  "sourceFile": "05-building-agents-without-frameworks.md",
+  "labIds": [],
+  "series": "Agentic AI Curriculum"
+ },
+ {
+  "id": "ag-03-module-9-context-engineering-loop-engineering-1--bebf59",
+  "trackId": "agents",
+  "title": "03. Agents from Scratch: Module 9: Context Engineering & Loop Engineering 1/2: Part I: Context Engineering · Context Engineering: The New Pa",
+  "summary": "Prerequisites: Modules 1–8 (agent fundamentals, LangChain/LangGraph, tool use, multi-agent systems, evaluation, observability, quantized models).",
+  "order": 77,
+  "objectives": [
+   "Part I: Context Engineering",
+   "Context Engineering: The New Paradigm",
+   "Context Window Management",
+   "Building Effective System Prompts for Agents",
+   "Context for Tool Use",
+   "Part II: Loop Engineering"
+  ],
+  "sourceFile": "09-context-engineering-and-loop-engineering.md",
+  "labIds": [],
+  "series": "Agentic AI Curriculum"
+ },
+ {
+  "id": "ag-03-module-9-context-engineering-loop-engineering-2--c5e36c",
+  "trackId": "agents",
+  "title": "03. Agents from Scratch: Module 9: Context Engineering & Loop Engineering 2/2: Loop Failure Modes and Mitigations · Loop Observability …",
+  "summary": "Understanding failure modes is the core of loop engineering. Here are the six major failure modes:",
+  "order": 78,
+  "objectives": [
+   "Loop Failure Modes and Mitigations",
+   "Loop Observability",
+   "Designing Robust Production Loops",
+   "The Future: Harness Engineering"
+  ],
+  "sourceFile": "09-context-engineering-and-loop-engineering.md",
+  "labIds": [],
+  "series": "Agentic AI Curriculum"
+ },
+ {
+  "id": "ag-03-day-10-pydantic-ai-fundamentals-projects-build-2-5c87fc",
+  "trackId": "agents",
+  "title": "03. Agents from Scratch: Day 10 — Pydantic AI Fundamentals (Projects): Build 2 Productivity Agents",
+  "summary": "You spent Days 1–7 inside Pydantic AI. Days 8 and 9 introduced LangChain (linear chains) and LangGraph (stateful graphs).",
+  "order": 79,
+  "objectives": [
+   "Quick Refresher on Key Pydantic AI APIs",
+   "Common Pitfalls",
+   "What's Next"
+  ],
+  "sourceFile": "day-10-pydantic-ai-fundamentals.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-03-the-internal-decision-flow-0a6f5c",
+  "trackId": "agents",
+  "title": "03. Agents from Scratch: The Internal Decision Flow",
+  "summary": "The Internal Decision Flow: explanations and runnable examples.",
+  "order": 80,
+  "objectives": [
+   "The Internal Decision Flow"
+  ],
+  "sourceFile": "thu_may_28_2026_ai_agent_interview_preparation_guide.md",
+  "labIds": [],
+  "series": "Agentic AI Interview Prep Guide"
+ },
+ {
+  "id": "ag-03-execution-response-loop-b2f71a",
+  "trackId": "agents",
+  "title": "03. Agents from Scratch: Execution & Response Loop",
+  "summary": "Execution & Response Loop: explanations and runnable examples.",
+  "order": 81,
+  "objectives": [
+   "Execution & Response Loop"
+  ],
+  "sourceFile": "thu_may_28_2026_ai_agent_interview_preparation_guide.md",
+  "labIds": [],
+  "series": "Agentic AI Interview Prep Guide"
+ },
+ {
+  "id": "ag-03-building-an-ai-agent-from-scratch-pure-python-op-c43d1b",
+  "trackId": "agents",
+  "title": "03. Agents from Scratch: Building an AI Agent from Scratch — Pure Python + OpenAI API Onl",
+  "summary": "The framework is just a wrapper around this exact loop. Now you own every line of it.",
+  "order": 82,
+  "objectives": [
+   "How It All Works Under the Hood",
+   "Setup — 5 Tools Defined as Pure Python Functions",
+   "What OpenAI Actually Returns — Understanding the Response",
+   "Scenario 1: Single Tool Selection — The Basic Loop",
+   "Scenario 2: Multi-Tool Chaining (Parallel + Sequential)",
+   "Scenario 3: Infinite Loop Detection & Prevention"
+  ],
+  "sourceFile": "sun_may_31_2026_building_an_ai_agent_without_frameworks.md",
+  "labIds": [],
+  "series": "Building an AI Agent from Scratch — Pure Python + OpenAI API Onl"
+ },
+ {
+  "id": "ag-03-building-an-ai-agent-with-openai-c43d1b",
+  "trackId": "agents",
+  "title": "03. Agents from Scratch: Building an AI Agent with OpenAI",
+  "summary": "Let me break this down into 5 clear scenarios with visual diagrams + working Python code.",
+  "order": 83,
+  "objectives": [
+   "Big Picture: How an Agent Works",
+   "Setup — 5 Tools We'll Use",
+   "Scenario 1: How Agent Selects ONE Tool",
+   "Scenario 2: Agent Needs 2+ Tools (Chaining)",
+   "Scenario 3: Handling Infinite Loop Tool Calling",
+   "Scenario 4: LangGraph for Smart Loop Control"
+  ],
+  "sourceFile": "sun_may_31_2026_building_an_ai_agent_without_frameworks.md",
+  "labIds": [],
+  "series": "Building an AI Agent with OpenAI"
+ },
+ {
+  "id": "ag-03-complete-agentic-ai-curriculum-what-we-ve-covere-dbb426",
+  "trackId": "agents",
+  "title": "03. Agents from Scratch: Complete Agentic AI Curriculum — What We've Covered & What's Mis",
+  "summary": "We've built a strong foundation (protocols, memory, evaluation) but the CORE reasoning patterns, advanced RAG, production ops, and safety topics are the biggest gaps.",
+  "order": 84,
+  "objectives": [
+   "What We've Already Covered",
+   "The Complete Agentic AI Landscape",
+   "Complete Topic Checklist",
+   "Recommended Learning Path",
+   "Top 10 Most Critical Missing Topics",
+   "What Do You Want to Cover Next?"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Complete Agentic AI Curriculum — What We've Covered & What's Mis"
+ },
+ {
+  "id": "ag-03-what-actually-happens-inside-an-agent-a04e51",
+  "trackId": "agents",
+  "title": "03. Agents from Scratch: What Actually Happens Inside an Agent?",
+  "summary": "What Actually Happens Inside an Agent?: explanations and runnable examples.",
+  "order": 85,
+  "objectives": [
+   "What Actually Happens Inside an Agent?"
+  ],
+  "sourceFile": "sun_may_31_2026_building_an_ai_agent_without_frameworks.md",
+  "labIds": [],
+  "series": "Deep Dive: AI Agent from Scratch"
+ },
+ {
+  "id": "ag-03-setting-up-tools-schema-function-map-8e75b4",
+  "trackId": "agents",
+  "title": "03. Agents from Scratch: Setting Up — Tools, Schema, Function Map",
+  "summary": "Setting Up — Tools, Schema, Function Map: explanations and runnable examples.",
+  "order": 86,
+  "objectives": [
+   "Setting Up — Tools, Schema, Function Map"
+  ],
+  "sourceFile": "sun_may_31_2026_building_an_ai_agent_without_frameworks.md",
+  "labIds": [],
+  "series": "Deep Dive: AI Agent from Scratch"
+ },
+ {
+  "id": "ag-03-dissecting-the-openai-response-object-741cf9",
+  "trackId": "agents",
+  "title": "03. Agents from Scratch: Dissecting the OpenAI Response Object",
+  "summary": "Dissecting the OpenAI Response Object: explanations and runnable examples.",
+  "order": 87,
+  "objectives": [
+   "Dissecting the OpenAI Response Object"
+  ],
+  "sourceFile": "sun_may_31_2026_building_an_ai_agent_without_frameworks.md",
+  "labIds": [],
+  "series": "Deep Dive: AI Agent from Scratch"
+ },
+ {
+  "id": "ag-03-scenario-1-single-tool-step-by-step-7cb47d",
+  "trackId": "agents",
+  "title": "03. Agents from Scratch: Scenario 1 — Single Tool, Step by Step",
+  "summary": "Scenario 1 — Single Tool, Step by Step: explanations and runnable examples.",
+  "order": 88,
+  "objectives": [
+   "Scenario 1 — Single Tool, Step by Step"
+  ],
+  "sourceFile": "sun_may_31_2026_building_an_ai_agent_without_frameworks.md",
+  "labIds": [],
+  "series": "Deep Dive: AI Agent from Scratch"
+ },
+ {
+  "id": "ag-03-scenario-2-multi-tool-chaining-parallel-sequenti-db3b8a",
+  "trackId": "agents",
+  "title": "03. Agents from Scratch: Scenario 2 — Multi-Tool Chaining (Parallel + Sequential)",
+  "summary": "Scenario 2 — Multi-Tool Chaining (Parallel + Sequential): explanations and runnable examples.",
+  "order": 89,
+  "objectives": [
+   "Scenario 2 — Multi-Tool Chaining (Parallel + Sequential)"
+  ],
+  "sourceFile": "sun_may_31_2026_building_an_ai_agent_without_frameworks.md",
+  "labIds": [],
+  "series": "Deep Dive: AI Agent from Scratch"
+ },
+ {
+  "id": "ag-03-scenario-3-infinite-loop-how-it-happens-how-to-s-6b3c89",
+  "trackId": "agents",
+  "title": "03. Agents from Scratch: Scenario 3 — Infinite Loop: How It Happens & How to Stop It",
+  "summary": "Scenario 3 — Infinite Loop: How It Happens & How to Stop It: explanations and runnable examples.",
+  "order": 90,
+  "objectives": [
+   "Scenario 3 — Infinite Loop: How It Happens & How to Stop It"
+  ],
+  "sourceFile": "sun_may_31_2026_building_an_ai_agent_without_frameworks.md",
+  "labIds": [],
+  "series": "Deep Dive: AI Agent from Scratch"
+ },
+ {
+  "id": "ag-03-visual-reference-complete-flow-chart-5329f7",
+  "trackId": "agents",
+  "title": "03. Agents from Scratch: Visual Reference — Complete Flow Chart",
+  "summary": "Bottom line: The entire agent is one while True loop, a json.loads(), a dict lookup, and a **kwargs function call. Frameworks wrap exactly this — now you own every byte of it.",
+  "order": 91,
+  "objectives": [
+   "Final Reference: Every Concept in One Table"
+  ],
+  "sourceFile": "sun_may_31_2026_building_an_ai_agent_without_frameworks.md",
+  "labIds": [],
+  "series": "Deep Dive: AI Agent from Scratch"
+ },
+ {
+  "id": "ag-03-layer-3-agent-architectures-1-3-what-is-this-lay-c01a87",
+  "trackId": "agents",
+  "title": "03. Agents from Scratch: Layer 3: Agent Architectures 1/3: What Is This Layer About? · The Big Picture — Why Architecture Matters …",
+  "summary": "Agent Architecture = How you ORGANIZE agents to solve problems. > Just like a company has org charts — CEO → Managers → Workers — AI agents also need structure.",
+  "order": 92,
+  "objectives": [
+   "What Is This Layer About?",
+   "The Big Picture — Why Architecture Matters",
+   "All Architecture Patterns — Overview",
+   "What Is It?",
+   "ReAct = Reason + Act",
+   "When to Use Single Agent"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 3: Agent Architectures"
+ },
+ {
+  "id": "ag-03-layer-3-agent-architectures-2-3-part-2-5052fd",
+  "trackId": "agents",
+  "title": "03. Agents from Scratch: Layer 3: Agent Architectures 2/3: Part 2",
+  "summary": "Layer 3: Agent Architectures 2/3: Part 2: explanations and runnable examples.",
+  "order": 93,
+  "objectives": [
+   "Layer 3: Agent Architectures 2/3: Part 2"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 3: Agent Architectures"
+ },
+ {
+  "id": "ag-03-layer-3-agent-architectures-3-3-complete-archite-47f5c3",
+  "trackId": "agents",
+  "title": "03. Agents from Scratch: Layer 3: Agent Architectures 3/3: Complete Architecture Summary",
+  "summary": "Say \"explain Layer 5 Tool Ecosystem\" for the next deep dive with the same level of clarity!",
+  "order": 94,
+  "objectives": [
+   "Complete Architecture Summary"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 3: Agent Architectures"
+ },
+ {
+  "id": "ag-03-react-agent-using-azure-openai-dbb426",
+  "trackId": "agents",
+  "title": "03. Agents from Scratch: ReAct Agent using Azure OpenAI",
+  "summary": "A ReAct Agent (Reasoning + Acting) is an agentic pattern where the LLM reasons step-by-step and takes actions (calls tools) in an interleaved loop: Thought → Action → Observation → Thought → Action... until it reaches a final answer.",
+  "order": 95,
+  "objectives": [
+   "Architecture Diagram",
+   "ReAct vs Reflection — Key Difference",
+   "Step-by-Step Setup",
+   "Full Python Implementation",
+   "ReAct Scratchpad — What It Looks Like",
+   "Key Components Summary"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "ReAct Agent using Azure OpenAI"
+ },
+ {
+  "id": "ag-04-module-2-langchain-deep-dive-686dde",
+  "trackId": "agents",
+  "title": "04. LangChain & Frameworks: Module 2: LangChain Deep Dive",
+  "summary": "Prerequisites: Module 1 (Foundations of Agentic AI), working Python knowledge, an OpenAI API key (or Anthropic equivalent). > > Goal: By the end of this module you will be able to build production-quality LLM-powered agents using…",
+  "order": 96,
+  "objectives": [
+   "LangChain Overview (2025/2026 Version)",
+   "Core Concepts",
+   "LCEL Deep Dive — The Modern Way",
+   "Building Agents with LangChain",
+   "Real Working Examples",
+   "LangChain Hub & Templates"
+  ],
+  "sourceFile": "02-langchain-deep-dive.md",
+  "labIds": [],
+  "series": "Agentic AI Curriculum"
+ },
+ {
+  "id": "ag-04-06-agent-frameworks-28ea32",
+  "trackId": "agents",
+  "title": "04. LangChain & Frameworks: 06 — Agent Frameworks",
+  "summary": "Concepts Covered: LangChain AgentExecutor & LCEL | LangGraph State Machines | AutoGen Multi-Agent | CrewAI Role-Based Agents | OpenAI Assistants API v2 | Custom Agent Loops | Framework Selection Criteria | LangChain max_iterations Fix |…",
+  "order": 97,
+  "objectives": [
+   "CONCEPT 1: LangChain AgentExecutor & LCEL",
+   "CONCEPT 2: LangGraph State Machines",
+   "CONCEPT 3: AutoGen Multi-Agent Framework",
+   "CONCEPT 4: CrewAI Role-Based Agents",
+   "CONCEPT 5: Framework Selection Guide"
+  ],
+  "sourceFile": "06_agent_frameworks.md",
+  "labIds": [],
+  "series": "Senior Agent Engineering"
+ },
+ {
+  "id": "ag-04-day-8-langchain-fundamentals-build-2-productivit-397143",
+  "trackId": "agents",
+  "title": "04. LangChain & Frameworks: Day 8 — LangChain Fundamentals: Build 2 Productivity Agents",
+  "summary": "Welcome to Phase 2. For the last seven days you lived inside Pydantic AI.",
+  "order": 98,
+  "objectives": [
+   "LangChain Building Blocks (Quick Reference)",
+   "Common Pitfalls",
+   "What's Next"
+  ],
+  "sourceFile": "day-08-langchain-fundamentals.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-05-module-3-langgraph-deep-dive-fa1ef0",
+  "trackId": "agents",
+  "title": "05. LangGraph: Module 3: LangGraph Deep Dive",
+  "summary": "LangGraph is an open-source framework built by LangChain for constructing stateful, multi-actor applications as directed graphs. Every agent workflow you build is modeled as a graph where:",
+  "order": 99,
+  "objectives": [
+   "LangGraph Overview",
+   "Core Concepts Deep Dive",
+   "Building Your First LangGraph Agent",
+   "Human-in-the-Loop Patterns",
+   "Checkpointing & Time Travel",
+   "Advanced Patterns"
+  ],
+  "sourceFile": "03-langgraph-deep-dive.md",
+  "labIds": [],
+  "series": "Agentic AI Curriculum"
+ },
+ {
+  "id": "ag-05-reducers-why-state-needs-merge-rules-fd0bbd",
+  "trackId": "agents",
+  "title": "05. LangGraph: Reducers — why state needs merge rules",
+  "summary": "In LangGraph, State is a shared dictionary that every node reads and writes.",
+  "order": 100,
+  "objectives": [
+   "The Core Problem — Why Do We Even Need Reducers?",
+   "How LangGraph Calls a Reducer Internally",
+   "Install & Imports"
+  ],
+  "sourceFile": "0_a_langgraph_reducsers.ipynb",
+  "labIds": [],
+  "series": "LangGraph Notebooks"
+ },
+ {
+  "id": "ag-05-tool-nodes-da7ae8",
+  "trackId": "agents",
+  "title": "05. LangGraph: Tool nodes",
+  "summary": "A ToolNode is a prebuilt graph node that reads tool requests from an AIMessage, runs the matching Python tools, and appends each result as a ToolMessage.",
+  "order": 101,
+  "objectives": [
+   "Tool",
+   "ToolNode",
+   "add_messages",
+   "ToolMessage",
+   "tools_condition",
+   "Best agent pattern"
+  ],
+  "sourceFile": "0_tool_nodes.ipynb",
+  "labIds": [],
+  "series": "LangGraph Notebooks"
+ },
+ {
+  "id": "ag-05-reducers-in-langgraph-complete-beginner-s-guide-17ae0b",
+  "trackId": "agents",
+  "title": "05. LangGraph: Reducers in LangGraph — Complete Beginner's Guide",
+  "summary": "Every time a node finishes running, it returns a dictionary of updates. LangGraph needs to decide: how do I apply those updates to the current state?",
+  "order": 102,
+  "objectives": [
+   "What is a Reducer?",
+   "Setup — Imports & LLM",
+   "All Reducers at a Glance",
+   "How to Write ANY Custom Reducer",
+   "Decision Flowchart"
+  ],
+  "sourceFile": "4_reducers_complete.ipynb",
+  "labIds": [],
+  "series": "LangGraph Notebooks"
+ },
+ {
+  "id": "ag-05-langgraph-missing-important-topics-f579a5",
+  "trackId": "agents",
+  "title": "05. LangGraph: LangGraph — Missing Important Topics",
+  "summary": "You already know: Nodes, Edges, StateGraph Conditional Edges Fan-in / Fan-out Loops Tool Calling & ToolNode Human-in-the-Loop Short-term & Long-term Memory Reducers",
+  "order": 103,
+  "objectives": [
+   "Complete Beginner's Guide to 7 Advanced Features",
+   "Setup — Run This First!",
+   "What is MessagesState?",
+   "What is a Subgraph?",
+   "What is a Multi-Agent System?",
+   "What is Streaming in LangGraph?"
+  ],
+  "sourceFile": "5_missing_topics.ipynb",
+  "labIds": [],
+  "series": "LangGraph Notebooks"
+ },
+ {
+  "id": "ag-05-langgraph-advanced-concepts-a9b02e",
+  "trackId": "agents",
+  "title": "05. LangGraph: LangGraph Advanced Concepts",
+  "summary": "This notebook covers 3 core advanced concepts in LangGraph with 4 examples each:",
+  "order": 104,
+  "objectives": [
+   "Conditional Edges | Fan-In / Fan-Out | Looping",
+   "What Are Conditional Edges?",
+   "How It Works",
+   "What is Fan-Out?",
+   "What is Fan-In?",
+   "Key Rules"
+  ],
+  "sourceFile": "langgraph_advanced.ipynb",
+  "labIds": [],
+  "series": "LangGraph Notebooks"
+ },
+ {
+  "id": "ag-05-tool-nodes-different-tools-4-examples-faa3ca",
+  "trackId": "agents",
+  "title": "05. LangGraph: Tool nodes — different tools, 4 examples",
+  "summary": "A Tool Node is a prebuilt LangGraph node that executes tools requested by an AI message. It is very useful when building agents that need to call functions like calculators, database lookups, search tools, weather tools, order tools, etc.",
+  "order": 105,
+  "objectives": [
+   "Clear Explanation + Different Tools + 4 Examples",
+   "Tool",
+   "ToolNode",
+   "add_messages",
+   "tools_condition",
+   "Best Pattern"
+  ],
+  "sourceFile": "langgraph_tool_nodes.ipynb",
+  "labIds": [],
+  "series": "LangGraph Notebooks"
+ },
+ {
+  "id": "ag-05-day-9-langgraph-fundamentals-build-2-productivit-2e33fe",
+  "trackId": "agents",
+  "title": "05. LangGraph: Day 9 — LangGraph Fundamentals: Build 2 Productivity Agents",
+  "summary": "Yesterday you built linear LCEL chains with LangChain. Today we move to LangGraph, a sibling library for when your agent needs to branch, loop, or remember state across steps.",
+  "order": 106,
+  "objectives": [
+   "When LangGraph > LangChain",
+   "The LangGraph Mental Model",
+   "Common Pitfalls",
+   "What's Next"
+  ],
+  "sourceFile": "day-09-langgraph-fundamentals.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-05-day-17-advanced-workflows-a25613",
+  "trackId": "agents",
+  "title": "05. LangGraph: Day 17 — Advanced Workflows",
+  "summary": "Today's two projects share a theme: complex multi-step workflows where many small pieces — some LLM, some pure Python — cooperate to produce a single polished output.",
+  "order": 107,
+  "objectives": [
+   "Common Pitfalls",
+   "Next: Day 18 — Tool Ecosystems"
+  ],
+  "sourceFile": "day-17-advanced-workflows.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-06-04-memory-systems-3196fe",
+  "trackId": "agents",
+  "title": "06. Memory, State & HITL: 04 — Memory Systems",
+  "summary": "Concepts Covered: Short-Term (In-Context) Memory | Long-Term Memory (Vector/KV/Graph) | Episodic Memory | Semantic Memory | Procedural Memory | Retrieval Strategies | Memory Write Conflicts | Memory Compression | Context Overflow →…",
+  "order": 108,
+  "objectives": [
+   "CONCEPT 1: Short-Term (In-Context) Memory",
+   "CONCEPT 2: Long-Term Memory — Vector, Key-Value, Graph",
+   "CONCEPT 3: Episodic Memory",
+   "CONCEPT 4: Retrieval Strategies",
+   "CONCEPT 5: Memory Write Conflicts",
+   "CONCEPT 6: Memory Compression"
+  ],
+  "sourceFile": "04_memory_systems.md",
+  "labIds": [],
+  "series": "Senior Agent Engineering"
+ },
+ {
+  "id": "ag-06-memory-in-langgraph-complete-beginner-s-guide-09d89c",
+  "trackId": "agents",
+  "title": "06. Memory, State & HITL: Memory in LangGraph — Complete Beginner's Guide",
+  "summary": "Welcome! This notebook teaches you everything about memory in LangGraph in the simplest possible way.",
+  "order": 109,
+  "objectives": [
+   "Short-Term Memory | Long-Term Memory (SQLite & MongoDB)",
+   "Step 0 — Install Dependencies",
+   "Step 1 — Setup: Imports & LLM",
+   "What IS short-term memory in LangGraph?",
+   "Short-Term Memory — Quick Recap",
+   "What IS long-term memory in LangGraph?"
+  ],
+  "sourceFile": "3_memory_complete.ipynb",
+  "labIds": [],
+  "series": "LangGraph Notebooks"
+ },
+ {
+  "id": "ag-06-human-in-the-loop-fastapi-sqlite-71c7e8",
+  "trackId": "agents",
+  "title": "06. Memory, State & HITL: Human-in-the-Loop + FastAPI + SQLite",
+  "summary": "You already know how Human-in-the-Loop (HITL) works in a Jupyter notebook using MemorySaver. But in a real application, you use a FastAPI server.",
+  "order": 110,
+  "objectives": [
+   "How State Persists Across HTTP Requests — Complete Beginner Guide",
+   "What This Notebook Teaches",
+   "The Full Architecture",
+   "Step 0 — Install Dependencies",
+   "Step 1 — Setup",
+   "The Problem Explained"
+  ],
+  "sourceFile": "6_hitl_fastapi_sqlite.ipynb",
+  "labIds": [],
+  "series": "LangGraph Notebooks"
+ },
+ {
+  "id": "ag-06-langchain-langgraph-checkpointers-complete-expla-145305",
+  "trackId": "agents",
+  "title": "06. Memory, State & HITL: LangChain / LangGraph Checkpointers: Complete Explanations and Examples 1/4: Install packages in this notebook's k",
+  "summary": "Everything needed to study the course is inside this notebook: twenty detailed chapters, three worked examples per chapter, inline runnable local examples, the complete custom SQLite saver, and PostgreSQL/MongoDB/Redis implementation…",
+  "order": 111,
+  "objectives": [
+   "Install packages in this notebook's kernel",
+   "Shared imports and the first reusable graph",
+   "Build the correct vocabulary"
+  ],
+  "sourceFile": "7_checkpointers_complete.ipynb",
+  "labIds": [],
+  "series": "LangGraph Notebooks"
+ },
+ {
+  "id": "ag-06-langchain-langgraph-checkpointers-complete-expla-70ef4c",
+  "trackId": "agents",
+  "title": "06. Memory, State & HITL: LangChain / LangGraph Checkpointers: Complete Explanations and Examples 2/4: Run against your tutorial service · R",
+  "summary": "For ordinary state inspection, use graph.get_state; payload columns can be typed binary serialization rather than human-readable JSON.",
+  "order": 112,
+  "objectives": [
+   "Run against your tutorial service",
+   "Run the three recipes",
+   "The interface and what each method must preserve"
+  ],
+  "sourceFile": "7_checkpointers_complete.ipynb",
+  "labIds": [],
+  "series": "LangGraph Notebooks"
+ },
+ {
+  "id": "ag-06-langchain-langgraph-checkpointers-complete-expla-33b8d4",
+  "trackId": "agents",
+  "title": "06. Memory, State & HITL: LangChain / LangGraph Checkpointers: Complete Explanations and Examples 3/4: What you must add before a production",
+  "summary": "Implement explicit schema migrations rather than relying forever on CREATE TABLE IF NOT EXISTS. Add bounded queries, connection/pool management, timeouts, retries, deployment ownership, load testing, backups and restore tests.",
+  "order": 113,
+  "objectives": [
+   "What you must add before a production custom backend",
+   "What a Store or cache does not replace"
+  ],
+  "sourceFile": "7_checkpointers_complete.ipynb",
+  "labIds": [],
+  "series": "LangGraph Notebooks"
+ },
+ {
+  "id": "ag-06-langchain-langgraph-checkpointers-complete-expla-398d9f",
+  "trackId": "agents",
+  "title": "06. Memory, State & HITL: LangChain / LangGraph Checkpointers: Complete Explanations and Examples 4/4: Operational measurements worth collec",
+  "summary": "Scenario: a user double-clicks Send while a worker is still processing the previous message.",
+  "order": 114,
+  "objectives": [
+   "Operational measurements worth collecting",
+   "Diagnose by symptom",
+   "Primary references",
+   "Packages inspected locally",
+   "Important version boundaries",
+   "Executed locally"
+  ],
+  "sourceFile": "7_checkpointers_complete.ipynb",
+  "labIds": [],
+  "series": "LangGraph Notebooks"
+ },
+ {
+  "id": "ag-06-langgraph-human-in-the-loop-hitl-764038",
+  "trackId": "agents",
+  "title": "06. Memory, State & HITL: LangGraph: Human-in-the-Loop (HITL)",
+  "summary": "This notebook explains Human-in-the-Loop in LangGraph with 4 examples:",
+  "order": 115,
+  "objectives": [
+   "What is Human-in-the-Loop?",
+   "Recap"
+  ],
+  "sourceFile": "human_in_loop.ipynb",
+  "labIds": [],
+  "series": "LangGraph Notebooks"
+ },
+ {
+  "id": "ag-06-langgraph-memory-0a6798",
+  "trackId": "agents",
+  "title": "06. Memory, State & HITL: LangGraph: Memory",
+  "summary": "This notebook covers the two kinds of memory in LangGraph with examples for each:",
+  "order": 116,
+  "objectives": [
+   "Short-Term Memory | Long-Term Memory",
+   "Recap"
+  ],
+  "sourceFile": "memory.ipynb",
+  "labIds": [],
+  "series": "LangGraph Notebooks"
+ },
+ {
+  "id": "ag-06-day-5-streaming-and-message-history-438c14",
+  "trackId": "agents",
+  "title": "06. Memory, State & HITL: Day 5 — Streaming and Message History",
+  "summary": "A 500-token email drafted in 8 seconds feels slow. The same email printed token-by-token over 8 seconds feels responsive — users see progress and can stop the model the moment it goes off the rails.",
+  "order": 117,
+  "objectives": [
+   "Why Streaming?",
+   "agent.run_stream() — Streaming the Final Result",
+   "agent.iter() — The Full Event Stream",
+   "Message History: Multi-Turn Conversations",
+   "Persisting History Across Processes",
+   "Common Pitfalls"
+  ],
+  "sourceFile": "day-05-streaming-and-message-history.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-06-day-12-memory-state-d31a6d",
+  "trackId": "agents",
+  "title": "06. Memory, State & HITL: Day 12 — Memory & State",
+  "summary": "Yesterday's agents had no memory. Every .invoke() call started from a blank slate.",
+  "order": 118,
+  "objectives": [
+   "Common Pitfalls",
+   "Next: Day 13 — RAG Agents"
+  ],
+  "sourceFile": "day-12-memory-and-state.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-06-day-14-streaming-ux-d454cd",
+  "trackId": "agents",
+  "title": "06. Memory, State & HITL: Day 14 — Streaming & UX",
+  "summary": "A 30-second wait for an LLM response feels broken. A 30-second wait where you watch the answer form token by token feels fast.",
+  "order": 119,
+  "objectives": [
+   "Common Pitfalls",
+   "Next: Day 15 — Multi-Agent Systems"
+  ],
+  "sourceFile": "day-14-streaming-and-ux.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-06-day-16-human-in-the-loop-f81e11",
+  "trackId": "agents",
+  "title": "06. Memory, State & HITL: Day 16 — Human-in-the-Loop",
+  "summary": "Fully autonomous agents are a fantasy for most real productivity tasks. You do not want an agent sending an email to a customer without your review; you do not want a draft report shipped without your edit.",
+  "order": 120,
+  "objectives": [
+   "Common Pitfalls",
+   "Next: Day 17 — Advanced Workflows"
+  ],
+  "sourceFile": "day-16-human-in-the-loop.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-06-the-messages-list-the-agent-s-memory-569327",
+  "trackId": "agents",
+  "title": "06. Memory, State & HITL: The Messages List — The Agent's Memory",
+  "summary": "The Messages List — The Agent's Memory: explanations and runnable examples.",
+  "order": 121,
+  "objectives": [
+   "The Messages List — The Agent's Memory"
+  ],
+  "sourceFile": "sun_may_31_2026_building_an_ai_agent_without_frameworks.md",
+  "labIds": [],
+  "series": "Deep Dive: AI Agent from Scratch"
+ },
+ {
+  "id": "ag-06-human-in-the-loop-hitl-206337",
+  "trackId": "agents",
+  "title": "06. Memory, State & HITL: Human-in-the-Loop (HITL)",
+  "summary": "Some agent actions are too important, too risky, or too irreversible to execute autonomously. Human-in-the-Loop adds checkpoints where a human must review and approve before the agent proceeds.",
+  "order": 122,
+  "objectives": [
+   "What Is It?",
+   "HITL Explained"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 11: Safety & Alignment"
+ },
+ {
+  "id": "ag-06-memory-context-engineering-in-ai-agents-1-3-the--c01a87",
+  "trackId": "agents",
+  "title": "06. Memory, State & HITL: Memory & Context Engineering in AI Agents 1/3: The Big Picture · Memory Taxonomy …",
+  "summary": "Covers The Big Picture, Memory Taxonomy, Context Engineering — What Is It?, Working Memory (In-Context Window Manager), Short-Term Memory (Session Memory) and more.",
+  "order": 123,
+  "objectives": [
+   "The Big Picture",
+   "Memory Taxonomy",
+   "Context Engineering — What Is It?",
+   "Working Memory (In-Context Window Manager)",
+   "Short-Term Memory (Session Memory)",
+   "Long-Term Memory (Persistent)"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Memory & Context Engineering in AI Agents"
+ },
+ {
+  "id": "ag-06-memory-context-engineering-in-ai-agents-2-3-epis-5052fd",
+  "trackId": "agents",
+  "title": "06. Memory, State & HITL: Memory & Context Engineering in AI Agents 2/3: Episodic Memory · Unified Memory Manager …",
+  "summary": "Covers Episodic Memory, Unified Memory Manager, LangGraph Memory Agent.",
+  "order": 124,
+  "objectives": [
+   "Episodic Memory",
+   "Unified Memory Manager",
+   "LangGraph Memory Agent"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Memory & Context Engineering in AI Agents"
+ },
+ {
+  "id": "ag-06-memory-context-engineering-in-ai-agents-3-3-comp-47f5c3",
+  "trackId": "agents",
+  "title": "06. Memory, State & HITL: Memory & Context Engineering in AI Agents 3/3: Complete Demo · Memory & Context Engineering Summary",
+  "summary": "Say \"add vector RAG to the memory agent\" or \"implement memory for LangGraph + A2A agents\" for the next deep dive!",
+  "order": 125,
+  "objectives": [
+   "Complete Demo",
+   "Memory & Context Engineering Summary"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Memory & Context Engineering in AI Agents"
+ },
+ {
+  "id": "ag-07-day-1-adk-foundations-install-architecture-first-72b9cc",
+  "trackId": "agents",
+  "title": "07. Google ADK: Day 1 — ADK Foundations: Install, Architecture & First Agent",
+  "summary": "Get Google ADK v2.7.0 running, understand the stack, build your first agent in 60 minutes",
+  "order": 126,
+  "objectives": [
+   "Why Google ADK?",
+   "The ADK Architecture Stack",
+   "Installation (v2.7.0, August 2026)",
+   "Project Structure",
+   "Four Progressive Examples",
+   "Day 1 Summary"
+  ],
+  "sourceFile": "day_01_adk_foundations.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-07-day-2-llmagent-deep-dive-parameters-instructions-bfccae",
+  "trackId": "agents",
+  "title": "07. Google ADK: Day 2 — LlmAgent Deep Dive: Parameters, Instructions & Config",
+  "summary": "Master the 23-parameter constructor, instruction templating, output schemas, planners & code execution",
+  "order": 127,
+  "objectives": [
+   "Why LlmAgent Mastery Matters",
+   "The LlmAgent Constructor — All 23 Parameters",
+   "Visual: LlmAgent Parameter Map",
+   "How a Single Parameter Shapes the Run",
+   "Instruction Templating — {var}, {var?}, and Jinja2",
+   "generate_content_config — Tuning the LLM"
+  ],
+  "sourceFile": "day_02_llm_agent_deep_dive.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-07-day-3-runner-sessions-events-the-invocation-flow-666bc7",
+  "trackId": "agents",
+  "title": "07. Google ADK: Day 3 — Runner, Sessions & Events: The Invocation Flow",
+  "summary": "How a single user message becomes a stream of Events — and how to inspect, tune, and persist every step",
+  "order": 128,
+  "objectives": [
+   "Why the Invocation Flow Matters",
+   "The Runner Class",
+   "Sessions — The Per-Conversation State",
+   "The Event Class — Every Step is an Event",
+   "is_final_response() — The Most-Called Method",
+   "Event Detection Patterns"
+  ],
+  "sourceFile": "day_03_runner_sessions_events.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-07-day-4-functiontool-basetool-building-custom-tool-158d12",
+  "trackId": "agents",
+  "title": "07. Google ADK: Day 4 — FunctionTool & BaseTool: Building Custom Tools",
+  "summary": "From a Python function to an LLM-callable tool — docstrings, schemas, async, media returns, and the BaseTool escape hatch",
+  "order": 129,
+  "objectives": [
+   "Why Custom Tools Matter",
+   "FunctionTool — Auto-Wrapping Python Functions",
+   "Type Hints → JSON Schema — The Full Table",
+   "Explicit FunctionTool Construction",
+   "BaseTool — The Escape Hatch",
+   "Async Tools — async def for I/O-Bound Work"
+  ],
+  "sourceFile": "day_04_functiontool_basetool.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-07-day-5-toolcontext-longrunningfunctiontool-state--aed027",
+  "trackId": "agents",
+  "title": "07. Google ADK: Day 5 — ToolContext & LongRunningFunctionTool: State, Auth & HITL",
+  "summary": "Give tools access to session state, fire control signals, pause runs for human approval, and persist binary artifacts",
+  "order": 130,
+  "objectives": [
+   "Why ToolContext Unlocks Real Agents",
+   "ToolContext — Field by Field",
+   "State Mutation — Safe vs Unsafe",
+   "EventActions from Tools — Control Flow Signals",
+   "Artifacts — Binary File Storage from Tools",
+   "LongRunningFunctionTool — Human-in-the-Loop"
+  ],
+  "sourceFile": "day_05_toolcontext_longrunning.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-07-day-6-agenttool-mcptoolset-pre-built-tools-fc680d",
+  "trackId": "agents",
+  "title": "07. Google ADK: Day 6 — AgentTool, McpToolset & Pre-built Tools",
+  "summary": "Wrap agents as tools, plug into the Model Context Protocol, and reach for ADK's built-in toolbox",
+  "order": 131,
+  "objectives": [
+   "Why this matters",
+   "Core Concepts",
+   "Architecture — Where tools fit in the ADK stack",
+   "Mermaid — Tool selection decision flow",
+   "Visual — MCP integration landscape",
+   "Four Progressive Examples"
+  ],
+  "sourceFile": "day_06_agenttool_mcp_prebuilt_tools.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-07-day-7-session-state-prefixes-scopes-eventactions-692862",
+  "trackId": "agents",
+  "title": "07. Google ADK: Day 7 — Session State — Prefixes, Scopes & EventActions",
+  "summary": "The four scopes of ADK state, the three safe ways to mutate it, and Jinja2 instruction templating",
+  "order": 132,
+  "objectives": [
+   "Why this matters",
+   "Core Concepts",
+   "Architecture — Scope hierarchy & update paths",
+   "Mermaid — State scope hierarchy",
+   "Visual — Scope hierarchy",
+   "Four Progressive Examples"
+  ],
+  "sourceFile": "day_07_session_state_prefixes_scopes_eventactions.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-07-day-8-session-services-inmemory-database-vertexa-b39c5d",
+  "trackId": "agents",
+  "title": "07. Google ADK: Day 8 — Session Services — InMemory, Database & VertexAi",
+  "summary": "Pick the right backend for your state — and survive restarts, scale, and concurrency",
+  "order": 133,
+  "objectives": [
+   "Why this matters",
+   "Core Concepts",
+   "Architecture — Lifecycle & service comparison",
+   "Mermaid — Pick a session service",
+   "Visual — Three session services side by side",
+   "Four Progressive Examples"
+  ],
+  "sourceFile": "day_08_session_services_inmemory_database_vertexai.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-07-day-9-memory-service-artifacts-long-term-storage-94b894",
+  "trackId": "agents",
+  "title": "07. Google ADK: Day 9 — Memory Service & Artifacts — Long-term Storage",
+  "summary": "Cross-session semantic recall with Memory, and versioned binary storage with Artifacts",
+  "order": 134,
+  "objectives": [
+   "Why this matters",
+   "Core Concepts",
+   "Architecture — Memory flow & Artifact versioning",
+   "Mermaid — Memory + Artifact wiring into the Runner",
+   "Visual — Memory + Artifact services",
+   "Four Progressive Examples"
+  ],
+  "sourceFile": "day_09_memory_service_artifacts.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-07-day-10-multi-agent-basics-sub-agents-transfer-790298",
+  "trackId": "agents",
+  "title": "07. Google ADK: Day 10 — Multi-Agent Basics: Sub-agents & Transfer",
+  "summary": "Compose hierarchies of agents, delegate via LLM-driven transfer, and choose between sub-agents vs AgentTool",
+  "order": 135,
+  "objectives": [
+   "Why Multi-Agent?",
+   "Core Concepts",
+   "Multi-Agent Hierarchy — ASCII Architecture",
+   "Mermaid — Travel Planner Delegation Flow",
+   "Visual Comparison — Sub-agent vs AgentTool vs Remote A2A",
+   "Four Progressive Examples"
+  ],
+  "sourceFile": "day_10_multi_agent_basics.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-07-day-11-workflow-agents-sequential-parallel-loop-8079fa",
+  "trackId": "agents",
+  "title": "07. Google ADK: Day 11 — Workflow Agents: Sequential, Parallel & Loop",
+  "summary": "Orchestrate multi-step agent pipelines deterministically — no LLM routing, no surprises",
+  "order": 136,
+  "objectives": [
+   "Why Workflow Agents?",
+   "Core Concepts",
+   "Workflow Agent Topologies — ASCII",
+   "Mermaid — Three Workflow Patterns",
+   "Visual — Sequential · Parallel · Loop Side by Side",
+   "Four Progressive Examples"
+  ],
+  "sourceFile": "day_11_workflow_agents.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-07-day-12-graph-workflows-collaborative-agents-adk--ed0cfa",
+  "trackId": "agents",
+  "title": "07. Google ADK: Day 12 — Graph Workflows & Collaborative Agents (ADK 2.0)",
+  "summary": "Deterministic graph orchestration with typed data flow, HITL pauses, and collaborative teams",
+  "order": 137,
+  "objectives": [
+   "Why Graph Workflows?",
+   "Core Concepts",
+   "Graph Workflow Topology — ASCII",
+   "Mermaid — Graph Workflow with Conditional Branch & HITL",
+   "Visual — Graph Workflow with Typed Data Flow",
+   "Four Progressive Examples"
+  ],
+  "sourceFile": "day_12_graph_workflows.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-07-day-13-callbacks-all-8-types-chaining-38b86c",
+  "trackId": "agents",
+  "title": "07. Google ADK: Day 13 — Callbacks: All 8 Types & Chaining",
+  "summary": "Master every hook point in ADK's execution pipeline — guardrails, caching, audit, error recovery",
+  "order": 138,
+  "objectives": [
+   "Why Callbacks Matter",
+   "Core Concepts",
+   "Visual Diagram — Pipeline + Callback Hook Points",
+   "Day 13 Summary",
+   "Coming Up Next: Day 14",
+   "References"
+  ],
+  "sourceFile": "day_13_callbacks.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-07-day-14-adk-web-ui-a2a-protocol-mcp-server-mode-65c463",
+  "trackId": "agents",
+  "title": "07. Google ADK: Day 14 — ADK Web UI, A2A Protocol & MCP Server Mode",
+  "summary": "Run agents locally with a browser UI, expose them over HTTP, and connect agents across services",
+  "order": 139,
+  "objectives": [
+   "Why Web UI, A2A, and MCP Matter",
+   "Core Concepts",
+   "Visual Diagram — Web UI Stack",
+   "Mermaid — A2A Discovery & Invocation Flow",
+   "Visual Diagram — A2A & MCP Integration",
+   "Day 14 Summary"
+  ],
+  "sourceFile": "day_14_web_a2a_mcp.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-07-day-15-deployment-capstone-cloud-run-agent-engin-ee54ca",
+  "trackId": "agents",
+  "title": "07. Google ADK: Day 15 — Deployment & Capstone: Cloud Run, Agent Engine & Production",
+  "summary": "An agent that runs in your notebook is a demo. An agent that runs in production is a product — and the gap between the two is everything that happens between adk run and a public URL.",
+  "order": 140,
+  "objectives": [
+   "Why Deployment Matters",
+   "Core Concepts",
+   "Visual Diagram — Deployment Architecture",
+   "Visual Diagram — Deployment Options Matrix",
+   "Day 15 Summary",
+   "Course Complete — 15 Days Done"
+  ],
+  "sourceFile": "day_15_deployment_capstone.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-07-google-adk-course-overview-0efef3",
+  "trackId": "agents",
+  "title": "07. Google ADK: Google ADK course overview",
+  "summary": "Master Google's Agent Development Kit (ADK) v2.7.0 (August 2026 release) — from hello-world to production deployment in 15 days.",
+  "order": 141,
+  "objectives": [
+   "What's Inside",
+   "Quick Start",
+   "Course Phases",
+   "File Structure",
+   "ADK Version",
+   "References"
+  ],
+  "sourceFile": "intrview/README.md",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-07-guide-to-google-gemini-enterprise-agent-platform-ed1a1b",
+  "trackId": "agents",
+  "title": "07. Google ADK: Guide to Google Gemini Enterprise Agent Platform 1/3: Platform Overview & Evolution · Foundation Models …",
+  "summary": "Audience: Staff Engineers, AI Platform Architects, and Agentic AI Practitioners > Depth: Beginner → Enterprise Production > Last Updated: 2026",
+  "order": 142,
+  "objectives": [
+   "Platform Overview & Evolution",
+   "Foundation Models",
+   "Gemini Enterprise Agent Platform Core",
+   "Model Garden"
+  ],
+  "sourceFile": "gemini-enterprise-agent-platform-guide.md",
+  "labIds": [],
+  "series": "Gemini Enterprise Agent Platform"
+ },
+ {
+  "id": "ag-07-guide-to-google-gemini-enterprise-agent-platform-1f7a1b",
+  "trackId": "agents",
+  "title": "07. Google ADK: Guide to Google Gemini Enterprise Agent Platform 2/3: Embeddings & Vector Search · RAG Engine on Agent Platform …",
+  "summary": "(See §2.7 for the embedding model API.) For retrieval, the choice of embedding model and the choice of vector store are independent decisions.",
+  "order": 143,
+  "objectives": [
+   "Embeddings & Vector Search",
+   "RAG Engine on Agent Platform",
+   "Agent Search",
+   "Agentic AI on Agent Platform"
+  ],
+  "sourceFile": "gemini-enterprise-agent-platform-guide.md",
+  "labIds": [],
+  "series": "Gemini Enterprise Agent Platform"
+ },
+ {
+  "id": "ag-07-guide-to-google-gemini-enterprise-agent-platform-cf3159",
+  "trackId": "agents",
+  "title": "07. Google ADK: Guide to Google Gemini Enterprise Agent Platform 3/3: Deployment & MLOps · Evaluation …",
+  "summary": "Every deployable artifact on the platform is versioned as a revision. For agents, a revision captures:",
+  "order": 144,
+  "objectives": [
+   "Deployment & MLOps",
+   "Evaluation",
+   "Responsible AI & Security",
+   "Closing Notes"
+  ],
+  "sourceFile": "gemini-enterprise-agent-platform-guide.md",
+  "labIds": [],
+  "series": "Gemini Enterprise Agent Platform"
+ },
+ {
+  "id": "ag-08-module-11-advanced-patterns-mcp-rag-and-multi-ag-f4adb1",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: Module 11: Advanced Patterns — MCP, RAG, and Multi-Agent Systems",
+  "summary": "Goal: Master the three pillars of production-grade agent systems — Model Context Protocol for standardized tool integration, Retrieval Augmented Generation for grounded knowledge, and multi-agent architectures for complex task…",
+  "order": 145,
+  "objectives": [
+   "MCP (Model Context Protocol)",
+   "RAG (Retrieval Augmented Generation) for Agents",
+   "Multi-Agent Systems",
+   "Advanced Agent Patterns",
+   "Production Deployment Patterns"
+  ],
+  "sourceFile": "11-advanced-patterns-mcp-rag-multiagent.md",
+  "labIds": [],
+  "series": "Agentic AI Curriculum"
+ },
+ {
+  "id": "ag-08-03-multi-agent-systems-4ad98e",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: 03 — Multi-Agent Systems",
+  "summary": "Concepts Covered: Orchestrator vs Subagent | Supervisor Pattern | Peer-to-Peer Communication | Agent Handoff Protocols | Shared Memory & Context Passing | Conflict Resolution | Agent Specialization | Deadlock Resolution | Lost Subagent…",
+  "order": 146,
+  "objectives": [
+   "CONCEPT 1: Orchestrator vs Subagent Pattern",
+   "CONCEPT 2: Supervisor Agent Pattern",
+   "CONCEPT 3: Peer-to-Peer Multi-Agent Communication",
+   "CONCEPT 4: Agent Handoff Protocols",
+   "CONCEPT 5: Shared Memory & Context Passing",
+   "CONCEPT 6: Conflict Resolution When Agents Disagree"
+  ],
+  "sourceFile": "03_multi_agent_systems.md",
+  "labIds": [],
+  "series": "Senior Agent Engineering"
+ },
+ {
+  "id": "ag-08-12-agentic-design-patterns-7f0f77",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: 12 — Agentic Design Patterns",
+  "summary": "Concepts Covered: Plan-and-Execute | Reflexion (Self-Critique Loop) | MRKL / Tool-Augmented LLMs | Human-in-the-Loop (HITL) | Self-Play & Meta-Agents | ReAct | Toolformer | Building a Full Autonomous Research Agent",
+  "order": 147,
+  "objectives": [
+   "CONCEPT 1: Plan-and-Execute Pattern",
+   "CONCEPT 2: Reflexion (Self-Critique Loop)",
+   "CONCEPT 3: ReAct Pattern",
+   "CONCEPT 4: MRKL (Modular Reasoning, Knowledge & Language)",
+   "CONCEPT 5: Full Autonomous Research Agent"
+  ],
+  "sourceFile": "12_agentic_design_patterns.md",
+  "labIds": [],
+  "series": "Senior Agent Engineering"
+ },
+ {
+  "id": "ag-08-day-7-multi-agent-systems-and-production-275c14",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: Day 7 — Multi-Agent Systems and Production",
+  "summary": "You now have a single Pydantic AI agent that can call tools, validate outputs, stream responses, and connect to MCP servers. Real products rarely run one agent — they run teams.",
+  "order": 148,
+  "objectives": [
+   "Multi-Agent Patterns",
+   "Agent Delegation: One Agent Calls Another",
+   "FastAPI Integration",
+   "Observability with Logfire",
+   "Evals with pydantic-evals",
+   "Production Checklist"
+  ],
+  "sourceFile": "day-07-multi-agent-and-production.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-08-day-13-rag-agents-94b003",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: Day 13 — RAG Agents",
+  "summary": "Retrieval-augmented generation (RAG) is the pattern behind every \"chat with your docs\" product.",
+  "order": 149,
+  "objectives": [
+   "Common Pitfalls",
+   "Next: Day 14 — Streaming & UX"
+  ],
+  "sourceFile": "day-13-rag-agents.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-08-day-15-multi-agent-systems-51d72b",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: Day 15 — Multi-Agent Systems",
+  "summary": "By now you have built single-agent productivity tools in three frameworks. Today you graduate to multi-agent systems: graphs and pipelines where two or more specialized agents cooperate, each doing what it is best at.",
+  "order": 150,
+  "objectives": [
+   "Common Pitfalls",
+   "Next: Day 16 — Human-in-the-Loop"
+  ],
+  "sourceFile": "day-15-multi-agent-systems.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-08-agent-to-agent-protocol-a2a-1-2-what-is-a2a-a2a--c01a87",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: Agent-to-Agent Protocol (A2A) 1/2: What is A2A? · A2A vs MCP — Key Differences …",
+  "summary": "A2A is Google's open protocol (launched April 2025) that defines how AI agents communicate, collaborate, and delegate tasks to each other — regardless of which framework, vendor, or language they're built with.",
+  "order": 151,
+  "objectives": [
+   "What is A2A?",
+   "A2A vs MCP — Key Differences",
+   "A2A Core Concepts",
+   "A2A Communication Flow",
+   "Complete Project Structure",
+   "core/models.py — A2A Data Models"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Agent-to-Agent Protocol (A2A)"
+ },
+ {
+  "id": "ag-08-agent-to-agent-protocol-a2a-2-2-agent-3-code-age-5052fd",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: Agent-to-Agent Protocol (A2A) 2/2: Agent 3: Code Agent (LangGraph) · Agent 4: Math Agent (PydanticAI) …",
+  "summary": "Say \"add A2A + MCP together in one system\" or \"build A2A with human-in-the-loop\" for the next deep dive!",
+  "order": 152,
+  "objectives": [
+   "Agent 3: Code Agent (LangGraph)",
+   "Agent 4: Math Agent (PydanticAI)",
+   "Agent 5: Writer Agent (Semantic Kernel)",
+   "Agent 6: Critic Agent (AutoGen-style)",
+   "Scenario 1: Basic A2A — Two Agents",
+   "Scenario 2: Full Multi-Agent Orchestration"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Agent-to-Agent Protocol (A2A)"
+ },
+ {
+  "id": "ag-08-retrieval-online-every-request-9e2eb3",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: RETRIEVAL (Online — Every Request)",
+  "summary": "RETRIEVAL (Online — Every Request): explanations and runnable examples.",
+  "order": 153,
+  "objectives": [
+   "RETRIEVAL (Online — Every Request)"
+  ],
+  "sourceFile": "thu_may_28_2026_ai_agent_interview_preparation_guide.md",
+  "labIds": [],
+  "series": "Agentic AI Interview Prep Guide"
+ },
+ {
+  "id": "ag-08-agentic-ai-orchestration-dbb426",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: Agentic AI Orchestration",
+  "summary": "Before diving into frameworks, let's understand what orchestration is and all its patterns.",
+  "order": 154,
+  "objectives": [
+   "What is Agentic AI Orchestration?",
+   "All Orchestration Patterns",
+   "Framework Comparison",
+   "When to Use Which Framework",
+   "Complete Series — Everything Covered!"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Agentic AI Orchestration"
+ },
+ {
+  "id": "ag-08-agentic-rag-dbb426",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: Agentic RAG",
+  "summary": "Say \"implement Agentic RAG with LangGraph\" or \"build production RAG with Azure AI Search\" for specific deep dives!",
+  "order": 155,
+  "objectives": [
+   "Basic RAG vs Agentic RAG",
+   "Agentic RAG Patterns Landscape",
+   "Visual Architecture — Full Agentic RAG",
+   "Core Infrastructure",
+   "Pattern 1 — Routing RAG",
+   "Pattern 2 — Query Rewriting RAG"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Agentic RAG"
+ },
+ {
+  "id": "ag-08-all-remaining-ai-agent-patterns-1-6-complete-age-c01a87",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: All Remaining AI Agent Patterns 1/6: Complete Agent Patterns Landscape · Tool Use Agent …",
+  "summary": "You've already covered Reflection and ReAct. Here are all the remaining major agentic patterns:",
+  "order": 156,
+  "objectives": [
+   "Complete Agent Patterns Landscape",
+   "Tool Use Agent",
+   "Plan & Execute Agent (Planning Agent)",
+   "Multi-Agent (Orchestrator + Subagents)",
+   "RAG Agent (Retrieval Augmented Generation)",
+   "Self-Ask Agent"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "All Remaining AI Agent Patterns"
+ },
+ {
+  "id": "ag-08-all-remaining-ai-agent-patterns-2-6-full-impleme-5052fd",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: All Remaining AI Agent Patterns 2/6: Full Implementation · Sample Console Output …",
+  "summary": "Say \"continue\" to implement Pattern 5 — Multi-Agent Orchestrator!",
+  "order": 157,
+  "objectives": [
+   "Full Implementation",
+   "Sample Console Output",
+   "Full Architecture Recap",
+   "Key Concepts Summary",
+   "Progress Tracker",
+   "Visual — How It Works"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "All Remaining AI Agent Patterns"
+ },
+ {
+  "id": "ag-08-all-remaining-ai-agent-patterns-3-6-visual-how-i-47f5c3",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: All Remaining AI Agent Patterns 3/6: Visual — How It Works · RAG vs Standard LLM …",
+  "summary": "A Self-Ask Agent tackles complex, multi-hop questions by decomposing them into smaller follow-up questions, answering each one, and building up to the final answer.",
+  "order": 158,
+  "objectives": [
+   "Visual — How It Works",
+   "RAG vs Standard LLM",
+   "Full Implementation",
+   "Sample Console Output",
+   "Full RAG Pipeline Recap",
+   "Key Concepts Summary"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "All Remaining AI Agent Patterns"
+ },
+ {
+  "id": "ag-08-all-remaining-ai-agent-patterns-4-6-sample-conso-3298df",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: All Remaining AI Agent Patterns 4/6: Sample Console Output · Full Loop Architecture …",
+  "summary": "Say \"continue\" to implement Pattern 8 — Tree of Thoughts Agent!",
+  "order": 159,
+  "objectives": [
+   "Sample Console Output",
+   "Full Loop Architecture",
+   "Key Concepts Summary",
+   "Progress Tracker",
+   "Visual — How It Works",
+   "Tree Structure Explained"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "All Remaining AI Agent Patterns"
+ },
+ {
+  "id": "ag-08-all-remaining-ai-agent-patterns-5-6-full-impleme-e59f35",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: All Remaining AI Agent Patterns 5/6: Full Implementation · Sample Console Output …",
+  "summary": "Say \"continue\" to implement the final Pattern 10 — LATS Agent!",
+  "order": 160,
+  "objectives": [
+   "Full Implementation",
+   "Sample Console Output",
+   "Full Architecture Recap",
+   "Key Concepts Summary",
+   "Progress Tracker",
+   "Visual — How It Works"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "All Remaining AI Agent Patterns"
+ },
+ {
+  "id": "ag-08-all-remaining-ai-agent-patterns-6-6-full-impleme-ed14dd",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: All Remaining AI Agent Patterns 6/6: Full Implementation · Sample Console Output …",
+  "summary": "You now have a complete end-to-end implementation of all 10 major AI Agent patterns using Azure OpenAI + Python!",
+  "order": 161,
+  "objectives": [
+   "Full Implementation",
+   "Sample Console Output",
+   "Full Architecture Recap",
+   "Key Concepts Summary",
+   "Complete Series Summary",
+   "All 10 Agent Patterns Complete!"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "All Remaining AI Agent Patterns"
+ },
+ {
+  "id": "ag-08-retriever-metrics-125346",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: Retriever Metrics",
+  "summary": "What is a Retriever? > The component that fetches relevant documents from a database given a query. > Example: User asks \"What is RAG?\" → Retriever finds top 5 matching documents.",
+  "order": 162,
+  "objectives": [
+   "Precision@K",
+   "Recall@K",
+   "MRR (Mean Reciprocal Rank)",
+   "NDCG@K (Normalized Discounted Cumulative Gain)",
+   "MAP (Mean Average Precision)",
+   "Retriever Metrics Visual Summary"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Evaluation Metrics"
+ },
+ {
+  "id": "ag-08-rag-metrics-aa8ce0",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: RAG Metrics",
+  "summary": "What is RAG evaluation? > Evaluating the entire pipeline: retrieve documents → generate answer. > 3 components: Retrieval quality + Context quality + Generation quality",
+  "order": 163,
+  "objectives": [
+   "The RAG Evaluation Triangle",
+   "Faithfulness",
+   "Answer Relevance",
+   "Context Relevance",
+   "Token F1, ROUGE-L, Exact Match",
+   "Complete RAG Scorecard"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Evaluation Metrics"
+ },
+ {
+  "id": "ag-08-evaluation-metrics-agents-tools-retrievers-rag-1-c01a87",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: Evaluation Metrics — Agents, Tools, Retrievers & RAG 1/2: The Big Picture",
+  "summary": "Covers The Big Picture.",
+  "order": 164,
+  "objectives": [
+   "The Big Picture"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Evaluation Metrics — Agents, Tools, Retrievers & RAG"
+ },
+ {
+  "id": "ag-08-evaluation-metrics-agents-tools-retrievers-rag-2-5052fd",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: Evaluation Metrics — Agents, Tools, Retrievers & RAG 2/2: Complete Metrics Reference",
+  "summary": "Say \"integrate this eval framework with LangSmith\" or \"build a live eval dashboard\" for the next deep dive!",
+  "order": 165,
+  "objectives": [
+   "Complete Metrics Reference"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Evaluation Metrics — Agents, Tools, Retrievers & RAG"
+ },
+ {
+  "id": "ag-08-layer-7-advanced-rag-patterns-1-3-what-is-this-l-c01a87",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: Layer 7: Advanced RAG Patterns 1/3: What Is This Layer About? · The RAG Evolution — Why Basic RAG Fails …",
+  "summary": "After retrieving documents, CRAG grades each document for relevance. If docs are bad → it automatically triggers a web search fallback.",
+  "order": 166,
+  "objectives": [
+   "What Is This Layer About?",
+   "The RAG Evolution — Why Basic RAG Fails",
+   "All Advanced RAG Patterns Overview",
+   "What Is It?",
+   "How CRAG Works",
+   "How Self-RAG Works"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 7: Advanced RAG Patterns"
+ },
+ {
+  "id": "ag-08-layer-7-advanced-rag-patterns-2-3-part-2-5052fd",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: Layer 7: Advanced RAG Patterns 2/3: Part 2",
+  "summary": "Layer 7: Advanced RAG Patterns 2/3: Part 2: explanations and runnable examples.",
+  "order": 167,
+  "objectives": [
+   "Layer 7: Advanced RAG Patterns 2/3: Part 2"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 7: Advanced RAG Patterns"
+ },
+ {
+  "id": "ag-08-layer-7-advanced-rag-patterns-3-3-complete-layer-47f5c3",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: Layer 7: Advanced RAG Patterns 3/3: Complete Layer 7 Summary",
+  "summary": "Say \"explain Layer 10 Production & Operations\" for the next deep dive!",
+  "order": 168,
+  "objectives": [
+   "Complete Layer 7 Summary"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 7: Advanced RAG Patterns"
+ },
+ {
+  "id": "ag-08-llm-interview-questions-conceptual-scenario-base-a1d35c",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: LLM Interview Questions: Conceptual & Scenario-Based",
+  "summary": "A RAG system can fail at multiple points in the pipeline — not just the final LLM response. You need to evaluate each component separately.",
+  "order": 169,
+  "objectives": [
+   "SECTION 5: ADVANCED EVALUATION SCENARIOS",
+   "QUICK REFERENCE CHEAT SHEET"
+  ],
+  "sourceFile": "fri_may_29_2026_customer_support_bot_for_shop_co.md",
+  "labIds": [],
+  "series": "LLM Interview Questions: Conceptual & Scenario-Based"
+ },
+ {
+  "id": "ag-08-query-transformation-techniques-4fb4ab",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: QUERY TRANSFORMATION TECHNIQUES",
+  "summary": "Query transformation is the art of turning a raw user query into one or more optimized search queries BEFORE hitting the vector DB. > Users write queries the way they think. Vector DBs need queries that match how documents are written.",
+  "order": 170,
+  "objectives": [
+   "What Is Query Transformation?",
+   "All Query Transformation Techniques",
+   "Technique 1 — Query Expansion",
+   "Technique 2 — Query Rewriting",
+   "Technique 3 — HyDE (Hypothetical Document Embeddings)",
+   "Technique 4 — Step-Back Prompting"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Query Transformation + Chunking Strategies"
+ },
+ {
+  "id": "ag-08-chunking-strategies-part-1-of-3-68474d",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: CHUNKING STRATEGIES (Part 1 of 3)",
+  "summary": "Chunking is how you split documents into pieces before embedding and storing in a vector DB. It is the foundation of RAG quality — the WRONG chunk size or strategy can make retrieval fail even with perfect queries.",
+  "order": 171,
+  "objectives": [
+   "What Is Chunking?",
+   "Why Chunking Is Critical",
+   "All Chunking Strategies",
+   "Strategy 1 — Fixed-Size Chunking",
+   "Strategy 2 — Recursive Character Chunking",
+   "Strategy 3 — Semantic Chunking"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Query Transformation + Chunking Strategies"
+ },
+ {
+  "id": "ag-08-chunking-strategies-part-2-of-3-4c0f2f",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: CHUNKING STRATEGIES (Part 2 of 3)",
+  "summary": "Covers Strategy 8 — Late Chunking.",
+  "order": 172,
+  "objectives": [
+   "Strategy 8 — Late Chunking",
+   "Complete Code — Query Transformation + Chunking"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Query Transformation + Chunking Strategies"
+ },
+ {
+  "id": "ag-08-chunking-strategies-part-3-of-3-749a8b",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: CHUNKING STRATEGIES (Part 3 of 3)",
+  "summary": "Say \"explain Embedding Models Deep Dive\" or \"explain Vector Databases in depth\" for the next complete breakdown!",
+  "order": 173,
+  "objectives": [
+   "Complete Summary"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Query Transformation + Chunking Strategies"
+ },
+ {
+  "id": "ag-08-reflection-agent-using-azure-openai-dbb426",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: Reflection Agent using Azure OpenAI",
+  "summary": "A Reflection Agent is an AI design pattern where the agent generates a response, then critiques/reflects on it, and iteratively improves the output until it meets a quality threshold.",
+  "order": 174,
+  "objectives": [
+   "Architecture Breakdown",
+   "Step-by-Step Setup",
+   "Full Python Implementation",
+   "Detailed Flow Diagram (Per Iteration)",
+   "Key Components Summary",
+   "Advanced Extensions"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Reflection Agent using Azure OpenAI"
+ },
+ {
+  "id": "ag-08-reranking-dbb426",
+  "trackId": "agents",
+  "title": "08. Multi-Agent & Patterns: Reranking",
+  "summary": "Reranking is a second-pass scoring step that takes an initial set of retrieved documents and re-orders them by TRUE relevance to the query — going far beyond simple vector similarity. > It is the single highest-impact improvement you can…",
+  "order": 175,
+  "objectives": [
+   "What Is Reranking?",
+   "The Core Problem — Why Vector Search Alone Fails",
+   "The Complete Reranking Landscape",
+   "How Each Approach Works",
+   "The Two-Stage Retrieval Pipeline",
+   "Reranking Metrics — How to Measure Improvement"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Reranking"
+ },
+ {
+  "id": "ag-09-module-6-agent-evaluation-and-benchmarking-fe98fc",
+  "trackId": "agents",
+  "title": "09. Production & Safety: Module 6: Agent Evaluation and Benchmarking",
+  "summary": "Prerequisites: Modules 1–5 (agent architectures, tool use, multi-agent systems, memory, deployment). You should be comfortable building agents in Python and running them end-to-end.",
+  "order": 176,
+  "objectives": [
+   "Why Agent Evaluation Is Hard",
+   "Evaluation Dimensions",
+   "Evaluation Methods",
+   "Evaluation Frameworks & Tools",
+   "Building an Evaluation Pipeline",
+   "Benchmarking Against Standard Datasets"
+  ],
+  "sourceFile": "06-agent-evaluation-and-benchmarking.md",
+  "labIds": [],
+  "series": "Agentic AI Curriculum"
+ },
+ {
+  "id": "ag-09-module-7-tracing-monitoring-cost-observability-1-2a5b18",
+  "trackId": "agents",
+  "title": "09. Production & Safety: Module 7: Tracing, Monitoring, Cost & Observability 1/2: Why Observability Matters for Agents · Tracing …",
+  "summary": "Prerequisites: Modules 1–6 (agent architectures, LangChain/LangGraph, tool use, multi-agent systems, evaluation). You should be comfortable building agents in Python and running them end-to-end.",
+  "order": 177,
+  "objectives": [
+   "Why Observability Matters for Agents",
+   "Tracing",
+   "LangSmith (LangChain/LangGraph Native)",
+   "Langfuse (Open Source)",
+   "Arize Phoenix",
+   "OpenTelemetry for Custom Tracing"
+  ],
+  "sourceFile": "07-tracing-monitoring-cost-observability.md",
+  "labIds": [],
+  "series": "Agentic AI Curriculum"
+ },
+ {
+  "id": "ag-09-module-7-tracing-monitoring-cost-observability-2-5051f7",
+  "trackId": "agents",
+  "title": "09. Production & Safety: Module 7: Tracing, Monitoring, Cost & Observability 2/2: Cost Monitoring · Logging …",
+  "summary": "Understanding your cost starts with understanding token pricing. Here is a reference table (prices per 1M tokens, USD, as of late 2024):",
+  "order": 178,
+  "objectives": [
+   "Cost Monitoring",
+   "Logging",
+   "Alerting",
+   "Production Observability Stack"
+  ],
+  "sourceFile": "07-tracing-monitoring-cost-observability.md",
+  "labIds": [],
+  "series": "Agentic AI Curriculum"
+ },
+ {
+  "id": "ag-09-module-8-guardrails-safety-infinite-loops-1-2-wh-a21392",
+  "trackId": "agents",
+  "title": "09. Production & Safety: Module 8: Guardrails, Safety & Infinite Loops 1/2: Why Guardrails Matter · Types of Guardrails",
+  "summary": "Prerequisites: Modules 1–7 (agent architectures, LangChain/LangGraph, tool use, multi-agent systems, evaluation, observability). You should be comfortable building agents in Python and running them end-to-end.",
+  "order": 179,
+  "objectives": [
+   "Why Guardrails Matter",
+   "Types of Guardrails"
+  ],
+  "sourceFile": "08-guardrails-safety-infinite-loops.md",
+  "labIds": [],
+  "series": "Agentic AI Curriculum"
+ },
+ {
+  "id": "ag-09-module-8-guardrails-safety-infinite-loops-2-2-ha-ebdf3a",
+  "trackId": "agents",
+  "title": "09. Production & Safety: Module 8: Guardrails, Safety & Infinite Loops 2/2: Handling Infinite Loops (Deep Dive) · Guardrails Libraries …",
+  "summary": "Understanding why agents loop is essential for building effective defenses:",
+  "order": 180,
+  "objectives": [
+   "Handling Infinite Loops (Deep Dive)",
+   "Guardrails Libraries",
+   "Security Best Practices"
+  ],
+  "sourceFile": "08-guardrails-safety-infinite-loops.md",
+  "labIds": [],
+  "series": "Agentic AI Curriculum"
+ },
+ {
+  "id": "ag-09-07-cost-optimization-for-ai-agents-b40a30",
+  "trackId": "agents",
+  "title": "09. Production & Safety: 07 — Cost Optimization for AI Agents",
+  "summary": "Concepts Covered: Token Counting & Budgeting | Prompt Compression | Semantic Caching | Exact-Match Caching | Model Tiering | Response Pruning | Batch Processing | Streaming Tradeoffs | $500/day Cost Audit Fix | 50-Call Redundancy Fix",
+  "order": 181,
+  "objectives": [
+   "CONCEPT 1: Token Counting & Cost Budgeting",
+   "CONCEPT 2: Semantic Caching",
+   "CONCEPT 3: Exact-Match Caching",
+   "CONCEPT 4: Response Pruning",
+   "CONCEPT 5: Batch Processing"
+  ],
+  "sourceFile": "07_cost_optimization.md",
+  "labIds": [],
+  "series": "Senior Agent Engineering"
+ },
+ {
+  "id": "ag-09-08-performance-latency-optimization-a7b9fc",
+  "trackId": "agents",
+  "title": "09. Production & Safety: 08 — Performance & Latency Optimization",
+  "summary": "Concepts Covered: Async vs Sync Execution | Parallel Tool Calls | Streaming to UI | Reducing LLM Round-Trips | Step Caching | Pre-fetching | Latency Profiling | 45-Second Agent Fix | Blocking Tool Calls Async Refactor",
+  "order": 182,
+  "objectives": [
+   "CONCEPT 1: Async vs Sync Execution",
+   "CONCEPT 2: Streaming to UI",
+   "CONCEPT 3: Reducing LLM Round-Trips",
+   "CONCEPT 4: Step Caching & Memoization"
+  ],
+  "sourceFile": "08_performance_latency.md",
+  "labIds": [],
+  "series": "Senior Agent Engineering"
+ },
+ {
+  "id": "ag-09-09-reliability-error-handling-d1f0c8",
+  "trackId": "agents",
+  "title": "09. Production & Safety: 09 — Reliability & Error Handling",
+  "summary": "Concepts Covered: Retry with Exponential Backoff | Fallback Agents & Tools | Self-Correction (Critic-Reflector) | Hallucinated Argument Detection | Output Validation Guardrails | Graceful Degradation | Circuit Breakers",
+  "order": 183,
+  "objectives": [
+   "CONCEPT 1: Retry with Exponential Backoff",
+   "CONCEPT 2: Fallback Agents & Tools",
+   "CONCEPT 3: Self-Correction (Critic-Reflector Pattern)",
+   "CONCEPT 4: Hallucinated Argument Detection",
+   "CONCEPT 5: Output Validation Guardrails",
+   "CONCEPT 6: Graceful Degradation"
+  ],
+  "sourceFile": "09_reliability_error_handling.md",
+  "labIds": [],
+  "series": "Senior Agent Engineering"
+ },
+ {
+  "id": "ag-09-10-security-for-ai-agents-58d054",
+  "trackId": "agents",
+  "title": "09. Production & Safety: 10 — Security for AI Agents",
+  "summary": "Concepts Covered: Prompt Injection via Tool Outputs | Data Exfiltration Prevention | Privilege Escalation | Least-Privilege Scoping | PII Detection & Scrubbing | Sandboxed Tool Execution | Secret Management",
+  "order": 184,
+  "objectives": [
+   "CONCEPT 1: Prompt Injection via Tool Outputs",
+   "CONCEPT 2: Privilege Escalation Prevention",
+   "CONCEPT 3: PII Detection & Leakage Prevention",
+   "CONCEPT 4: Least-Privilege & Secret Management"
+  ],
+  "sourceFile": "10_security.md",
+  "labIds": [],
+  "series": "Senior Agent Engineering"
+ },
+ {
+  "id": "ag-09-11-observability-evaluation-c4faea",
+  "trackId": "agents",
+  "title": "09. Production & Safety: 11 — Observability & Evaluation",
+  "summary": "Concepts Covered: Structured Logging & Tracing | LangSmith Integration | Eval Metrics (Trajectory, Tool Selection) | HITL Checkpoints | A/B Testing Agent Architectures | Benchmarking & Regression Testing",
+  "order": 185,
+  "objectives": [
+   "CONCEPT 1: Structured Logging & Tracing",
+   "CONCEPT 2: Eval Metrics — Trajectory & Tool Selection Accuracy",
+   "CONCEPT 3: Human-in-the-Loop (HITL) Checkpoints",
+   "CONCEPT 4: A/B Testing Agent Architectures",
+   "CONCEPT 5: Regression Testing & Benchmarking"
+  ],
+  "sourceFile": "11_observability_evaluation.md",
+  "labIds": [],
+  "series": "Senior Agent Engineering"
+ },
+ {
+  "id": "ag-09-day-4-dependencies-and-testing-af0d5f",
+  "trackId": "agents",
+  "title": "09. Production & Safety: Day 4 — Dependencies and Testing",
+  "summary": "So far your agents have been stateless: same prompt, same model, same behavior. Real agents need context — who the user is, what database to talk to, which API token to use.",
+  "order": 186,
+  "objectives": [
+   "Why Dependency Injection Matters for Agents",
+   "Defining a Deps Container",
+   "RunContext[Deps] in Tools",
+   "Passing Deps at Runtime",
+   "Testing with TestModel",
+   "Testing with FunctionModel"
+  ],
+  "sourceFile": "day-04-dependencies-and-testing.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-09-day-19-production-grade-i-wrapping-agents-as-ser-a93ee1",
+  "trackId": "agents",
+  "title": "09. Production & Safety: Day 19 — Production-Grade I: Wrapping Agents as Services",
+  "summary": "You have spent eighteen days building agents that run in a script, print to stdout, and exit. Today we make them serve real traffic.",
+  "order": 187,
+  "objectives": [
+   "Common Pitfalls",
+   "Next: Day 20 — Production-Grade II"
+  ],
+  "sourceFile": "day-19-production-grade-i.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-09-day-20-production-grade-ii-graphs-and-streaming--0ba334",
+  "trackId": "agents",
+  "title": "09. Production & Safety: Day 20 — Production-Grade II: Graphs and Streaming RAG",
+  "summary": "Yesterday we wrapped two agents behind FastAPI. Today we go one layer up: a service whose internal logic is a LangGraph state machine, and a service whose response streams token-by-token to the client instead of arriving as one JSON blob.",
+  "order": 188,
+  "objectives": [
+   "Common Pitfalls"
+  ],
+  "sourceFile": "day-20-production-grade-ii.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-09-the-complete-production-agent-142c25",
+  "trackId": "agents",
+  "title": "09. Production & Safety: The Complete Production Agent",
+  "summary": "The Complete Production Agent: explanations and runnable examples.",
+  "order": 189,
+  "objectives": [
+   "The Complete Production Agent"
+  ],
+  "sourceFile": "sun_may_31_2026_building_an_ai_agent_without_frameworks.md",
+  "labIds": [],
+  "series": "Deep Dive: AI Agent from Scratch"
+ },
+ {
+  "id": "ag-09-agent-metrics-2aee2b",
+  "trackId": "agents",
+  "title": "09. Production & Safety: Agent Metrics",
+  "summary": "What are we evaluating? > How well an agent reasons, plans, selects tools, and completes tasks.",
+  "order": 190,
+  "objectives": [
+   "Task Completion Rate",
+   "Tool Selection Accuracy",
+   "Step Efficiency",
+   "Reasoning Quality",
+   "Agent Metrics Visual Summary"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Evaluation Metrics"
+ },
+ {
+  "id": "ag-09-tool-metrics-19b924",
+  "trackId": "agents",
+  "title": "09. Production & Safety: Tool Metrics",
+  "summary": "Covers Tool Selection + Argument Correctness, Tool Execution Success + Output Quality.",
+  "order": 191,
+  "objectives": [
+   "Tool Selection + Argument Correctness",
+   "Tool Execution Success + Output Quality"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Evaluation Metrics"
+ },
+ {
+  "id": "ag-09-end-to-end-system-metrics-869599",
+  "trackId": "agents",
+  "title": "09. Production & Safety: End-to-End System Metrics",
+  "summary": "Say \"build a live evaluation dashboard\" or \"integrate with LangSmith/Arize/RAGAS\" for the next deep dive!",
+  "order": 192,
+  "objectives": [
+   "LLM-as-Judge — How It Works",
+   "Which Metric to Use When?",
+   "Score Interpretation Guide"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Evaluation Metrics"
+ },
+ {
+  "id": "ag-09-distance-metrics-similarity-search-with-formulas-17d3a4",
+  "trackId": "agents",
+  "title": "09. Production & Safety: Distance Metrics & Similarity Search (With Formulas!)",
+  "summary": "Covers Metric 1: Cosine Similarity, Metric 2: Dot Product, Metric 3: Euclidean Distance, Metric 4: Manhattan Distance + Complete Comparison.",
+  "order": 193,
+  "objectives": [
+   "Metric 1: Cosine Similarity",
+   "Metric 2: Dot Product",
+   "Metric 3: Euclidean Distance",
+   "Metric 4: Manhattan Distance + Complete Comparison"
+  ],
+  "sourceFile": "ggggg.md",
+  "labIds": [],
+  "series": "Generative AI Teaching Material"
+ },
+ {
+  "id": "ag-09-observability-tracing-1a4cfc",
+  "trackId": "agents",
+  "title": "09. Production & Safety: Observability & Tracing",
+  "summary": "Observability = the ability to understand what your agent is doing at every step. Without it, debugging a production failure is like finding a needle in a haystack — blindfolded.",
+  "order": 194,
+  "objectives": [
+   "What Is It?",
+   "Observability Explained"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 10: Production & Operations"
+ },
+ {
+  "id": "ag-09-cost-tracking-budget-control-9a7fef",
+  "trackId": "agents",
+  "title": "09. Production & Safety: Cost Tracking & Budget Control",
+  "summary": "Every LLM call costs money. Without tracking, costs spiral out of control.",
+  "order": 195,
+  "objectives": [
+   "What Is It?",
+   "Cost Tracking Explained"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 10: Production & Operations"
+ },
+ {
+  "id": "ag-09-semantic-cache-322db6",
+  "trackId": "agents",
+  "title": "09. Production & Safety: Semantic Cache",
+  "summary": "Cache LLM responses so that similar questions get the cached answer instead of calling the LLM again. Not just exact matches — semantically similar queries hit the cache too.",
+  "order": 196,
+  "objectives": [
+   "What Is It?",
+   "Semantic Cache Explained"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 10: Production & Operations"
+ },
+ {
+  "id": "ag-09-rate-limiting-throttling-78cf83",
+  "trackId": "agents",
+  "title": "09. Production & Safety: Rate Limiting & Throttling",
+  "summary": "Rate limiting controls how many requests a user/service can make in a time window. Without it, one misbehaving client can exhaust your API quota, causing everyone to experience failures.",
+  "order": 197,
+  "objectives": [
+   "What Is It?",
+   "Rate Limiting Explained"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 10: Production & Operations"
+ },
+ {
+  "id": "ag-09-retry-logic-exponential-backoff-790693",
+  "trackId": "agents",
+  "title": "09. Production & Safety: Retry Logic & Exponential Backoff",
+  "summary": "APIs fail transiently — network hiccup, rate limit hit, server overload. Retry logic automatically retries failed calls with exponential backoff (increasing wait times) so temporary issues don't cause permanent failures.",
+  "order": 198,
+  "objectives": [
+   "What Is It?",
+   "Retry Logic Explained"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 10: Production & Operations"
+ },
+ {
+  "id": "ag-09-circuit-breaker-5a00aa",
+  "trackId": "agents",
+  "title": "09. Production & Safety: Circuit Breaker",
+  "summary": "When a downstream service is failing repeatedly, a circuit breaker opens (stops sending requests) to prevent cascade failures. After a timeout it half-opens (tests one request) and if successful, closes (resumes normal traffic).",
+  "order": 199,
+  "objectives": [
+   "What Is It?",
+   "Circuit Breaker Explained",
+   "Complete Layer 10 Summary"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 10: Production & Operations"
+ },
+ {
+  "id": "ag-09-prompt-injection-guard-bf010a",
+  "trackId": "agents",
+  "title": "09. Production & Safety: Prompt Injection Guard",
+  "summary": "Prompt injection = an attacker embeds malicious instructions inside content your agent processes (documents, web pages, user inputs). The LLM \"reads\" the hidden instructions and executes them.",
+  "order": 200,
+  "objectives": [
+   "What Is It?",
+   "How Prompt Injection Works & How to Stop It"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 11: Safety & Alignment"
+ },
+ {
+  "id": "ag-09-input-validation-3dfe45",
+  "trackId": "agents",
+  "title": "09. Production & Safety: Input Validation",
+  "summary": "Every user input must be validated before it reaches the LLM or any tool. Validation checks: length, content type, allowed characters, banned topics, and structural integrity.",
+  "order": 201,
+  "objectives": [
+   "What Is It?",
+   "Input Validation Explained"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 11: Safety & Alignment"
+ },
+ {
+  "id": "ag-09-output-guardrails-418a88",
+  "trackId": "agents",
+  "title": "09. Production & Safety: Output Guardrails",
+  "summary": "Even after validation, LLMs can generate harmful, biased, inaccurate, or off-brand content. Output guardrails check the LLM's response before sending it to the user.",
+  "order": 202,
+  "objectives": [
+   "What Is It?"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 11: Safety & Alignment"
+ },
+ {
+  "id": "ag-09-pii-detection-masking-958e1e",
+  "trackId": "agents",
+  "title": "09. Production & Safety: PII Detection & Masking",
+  "summary": "PII (Personally Identifiable Information) must never be stored in LLM context, logged, or returned to unauthorized users. PII detection finds it and masking anonymizes it.",
+  "order": 203,
+  "objectives": [
+   "What Is It?",
+   "PII Detection Explained"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 11: Safety & Alignment"
+ },
+ {
+  "id": "ag-09-tool-safety-controls-d5a217",
+  "trackId": "agents",
+  "title": "09. Production & Safety: Tool Safety Controls",
+  "summary": "Tools give agents real power — reading files, executing code, calling APIs, deleting records. This power must be constrained.",
+  "order": 204,
+  "objectives": [
+   "What Is It?",
+   "Tool Safety Explained"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 11: Safety & Alignment"
+ },
+ {
+  "id": "ag-09-jailbreak-detection-part-1-of-3-7f0c57",
+  "trackId": "agents",
+  "title": "09. Production & Safety: Jailbreak Detection (Part 1 of 3)",
+  "summary": "Jailbreaks are attempts to bypass safety restrictions through creative prompting — roleplay scenarios, fictional framing, hypothetical questions, or social engineering. Detection identifies these patterns and refuses them.",
+  "order": 205,
+  "objectives": [
+   "What Is It?"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 11: Safety & Alignment"
+ },
+ {
+  "id": "ag-09-jailbreak-detection-part-2-of-3-2ae9ce",
+  "trackId": "agents",
+  "title": "09. Production & Safety: Jailbreak Detection (Part 2 of 3)",
+  "summary": "Covers Jailbreak Patterns Explained.",
+  "order": 206,
+  "objectives": [
+   "Jailbreak Patterns Explained",
+   "Complete Code — All Safety & Alignment Topics"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 11: Safety & Alignment"
+ },
+ {
+  "id": "ag-09-jailbreak-detection-part-3-of-3-61a9df",
+  "trackId": "agents",
+  "title": "09. Production & Safety: Jailbreak Detection (Part 3 of 3)",
+  "summary": "Say \"give me the complete course roadmap\" to see all layers together and what to study next!",
+  "order": 207,
+  "objectives": [
+   "Complete Layer 11 Summary"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Layer 11: Safety & Alignment"
+ },
+ {
+  "id": "ag-10-day-1-adk-foundations-install-architecture-first-2034fc",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 1 — ADK Foundations: Install, Architecture & First Agent",
+  "summary": "Time to practice. Try each exercise before peeking at the solution.",
+  "order": 208,
+  "objectives": [
+   "Solve the Day 1 — ADK Foundations: Install, Architecture & First Agent exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day_01_adk_foundations.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-10-day-2-llmagent-deep-dive-parameters-instructions-83e418",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 2 — LlmAgent Deep Dive: Parameters, Instructions & Config",
+  "summary": "Try each exercise before peeking at the solution. They are progressive — Exercise 3 builds on patterns from Exercises 1 and 2.",
+  "order": 209,
+  "objectives": [
+   "Solve the Day 2 — LlmAgent Deep Dive: Parameters, Instructions & Config exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day_02_llm_agent_deep_dive.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-10-day-3-runner-sessions-events-the-invocation-flow-72a337",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 3 — Runner, Sessions & Events: The Invocation Flow",
+  "summary": "These four exercises build real debugging and orchestration skills. Do all of them — the patterns recur every day for the rest of the course.",
+  "order": 210,
+  "objectives": [
+   "Solve the Day 3 — Runner, Sessions & Events: The Invocation Flow exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day_03_runner_sessions_events.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-10-day-4-functiontool-basetool-building-custom-tool-ca6694",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 4 — FunctionTool & BaseTool: Building Custom Tools",
+  "summary": "These four exercises cover the patterns you'll use most: docstring fixing, async batching, custom BaseTool, and media-returning tools.",
+  "order": 211,
+  "objectives": [
+   "Solve the Day 4 — FunctionTool & BaseTool: Building Custom Tools exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day_04_functiontool_basetool.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-10-day-5-toolcontext-longrunningfunctiontool-state--b32baf",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 5 — ToolContext & LongRunningFunctionTool: State, Auth & HITL",
+  "summary": "These four exercises cover the most common ToolContext patterns. Do all of them — these recur constantly in real ADK codebases.",
+  "order": 212,
+  "objectives": [
+   "Solve the Day 5 — ToolContext & LongRunningFunctionTool: State, Auth & HITL exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day_05_toolcontext_longrunning.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-10-day-6-agenttool-mcptoolset-pre-built-tools-4b1782",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 6 — AgentTool, McpToolset & Pre-built Tools",
+  "summary": "Time to make these concepts yours. Try each exercise before peeking at the solution — the struggle is where the learning happens.",
+  "order": 213,
+  "objectives": [
+   "Solve the Day 6 — AgentTool, McpToolset & Pre-built Tools exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day_06_agenttool_mcp_prebuilt_tools.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-10-day-7-session-state-prefixes-scopes-eventactions-b1b85d",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 7 — Session State — Prefixes, Scopes & EventActions",
+  "summary": "These four exercises cover the four scopes end-to-end. Try them before peeking at the solutions — the patterns only stick after you have written them yourself.",
+  "order": 214,
+  "objectives": [
+   "Solve the Day 7 — Session State — Prefixes, Scopes & EventActions exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day_07_session_state_prefixes_scopes_eventactions.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-10-day-8-session-services-inmemory-database-vertexa-33c546",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 8 — Session Services — InMemory, Database & VertexAi",
+  "summary": "These exercises cover the operational patterns you will need in any real ADK deployment: migration, cleanup, multi-tenancy, and archival.",
+  "order": 215,
+  "objectives": [
+   "Solve the Day 8 — Session Services — InMemory, Database & VertexAi exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day_08_session_services_inmemory_database_vertexai.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-10-day-9-memory-service-artifacts-long-term-storage-8922f9",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 9 — Memory Service & Artifacts — Long-term Storage",
+  "summary": "Four exercises that combine Memory and Artifacts in realistic patterns. Try them before peeking at the solutions.",
+  "order": 216,
+  "objectives": [
+   "Solve the Day 9 — Memory Service & Artifacts — Long-term Storage exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day_09_memory_service_artifacts.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-10-day-10-multi-agent-basics-sub-agents-transfer-05c846",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 10 — Multi-Agent Basics: Sub-agents & Transfer",
+  "summary": "Try each exercise on your own before peeking at the solution. The solution cells are collapsed by default in JupyterLab — click to expand.",
+  "order": 217,
+  "objectives": [
+   "Solve the Day 10 — Multi-Agent Basics: Sub-agents & Transfer exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day_10_multi_agent_basics.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-10-day-11-workflow-agents-sequential-parallel-loop-246db2",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 11 — Workflow Agents: Sequential, Parallel & Loop",
+  "summary": "Try each exercise on your own before peeking at the solution. The solution cells are collapsed by default in JupyterLab — click to expand.",
+  "order": 218,
+  "objectives": [
+   "Solve the Day 11 — Workflow Agents: Sequential, Parallel & Loop exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day_11_workflow_agents.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-10-day-12-graph-workflows-collaborative-agents-adk--f2dee3",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 12 — Graph Workflows & Collaborative Agents (ADK 2.0)",
+  "summary": "Try each exercise on your own before peeking at the solution. The solution cells are collapsed by default in JupyterLab — click to expand.",
+  "order": 219,
+  "objectives": [
+   "Solve the Day 12 — Graph Workflows & Collaborative Agents (ADK 2.0) exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day_12_graph_workflows.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-10-day-13-callbacks-all-8-types-chaining-e35d88",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 13 — Callbacks: All 8 Types & Chaining",
+  "summary": "Time to practice. Each exercise builds a different production pattern.",
+  "order": 220,
+  "objectives": [
+   "Solve the Day 13 — Callbacks: All 8 Types & Chaining exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day_13_callbacks.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-10-day-14-adk-web-ui-a2a-protocol-mcp-server-mode-fe466b",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 14 — ADK Web UI, A2A Protocol & MCP Server Mode",
+  "summary": "Four exercises to internalize today's concepts. Try them yourself first — solutions are below each prompt.",
+  "order": 221,
+  "objectives": [
+   "Solve the Day 14 — ADK Web UI, A2A Protocol & MCP Server Mode exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day_14_web_a2a_mcp.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-10-day-15-deployment-capstone-cloud-run-agent-engin-b45a01",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 15 — Deployment & Capstone: Cloud Run, Agent Engine & Production",
+  "summary": "Four exercises to extend the capstone and solidify deployment concepts. Try them yourself first — solutions below.",
+  "order": 222,
+  "objectives": [
+   "Solve the Day 15 — Deployment & Capstone: Cloud Run, Agent Engine & Production exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day_15_deployment_capstone.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-10-langchain-langgraph-checkpointers-complete-expla-9615e8",
+  "trackId": "agents",
+  "title": "10. Exercises: LangChain / LangGraph Checkpointers: Complete Explanations and Examples",
+  "summary": "Exercise A — Memory: change the thread ID between the two message calls. Predict the final message count, then run it.",
+  "order": 223,
+  "objectives": [
+   "Solve the LangChain / LangGraph Checkpointers: Complete Explanations and Examples exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "7_checkpointers_complete.ipynb",
+  "labIds": [],
+  "series": "LangGraph Notebooks"
+ },
+ {
+  "id": "ag-10-day-1-introduction-to-pydantic-ai-and-your-first-ea2370",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 1 — Introduction to Pydantic AI and Your First Typed Agent",
+  "summary": "Extend Classification with a fourth category \"Spam\" and a confidence: float field. Print a warning when confidence is below 0.6.",
+  "order": 224,
+  "objectives": [
+   "Solve the Day 1 — Introduction to Pydantic AI and Your First Typed Agent exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day-01-intro-and-first-agent.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-10-day-2-model-providers-result-type-and-structured-6e9aaf",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 2 — Model Providers, result_type, and Structured Outputs",
+  "summary": "Add confidence: float (0.0 to 1.0) to MeetingNotes. Use Field(ge=0.0, le=1.0).",
+  "order": 225,
+  "objectives": [
+   "Solve the Day 2 — Model Providers, result_type, and Structured Outputs exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day-02-models-and-structured-outputs.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-10-day-3-tools-and-function-calling-ffe5ec",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 3 — Tools and Function Calling",
+  "summary": "Extend the Calendar Agent with update_event(event_id: int, title: str | None = None, start: str | None = None, end: str | None = None) that updates only the provided fields.",
+  "order": 226,
+  "objectives": [
+   "Solve the Day 3 — Tools and Function Calling exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day-03-tools-and-function-calling.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-10-day-4-dependencies-and-testing-48f65e",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 4 — Dependencies and Testing",
+  "summary": "Add a language: str field to EmailDeps (e.g., \"en\", \"es\", \"fr\"). Update draft_email so it prepends a localized greeting (Dear / Estimado / Cher).",
+  "order": 227,
+  "objectives": [
+   "Solve the Day 4 — Dependencies and Testing exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day-04-dependencies-and-testing.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-10-day-5-streaming-and-message-history-f65fa9",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 5 — Streaming and Message History",
+  "summary": "Modify live_email.py to also write each chunk to draft.txt as it arrives, so the file grows in real time. Verify with tail -f draft.txt in another terminal.",
+  "order": 228,
+  "objectives": [
+   "Solve the Day 5 — Streaming and Message History exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day-05-streaming-and-message-history.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-10-day-6-validation-retries-and-mcp-a9aa08",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 6 — Validation, Retries, and MCP",
+  "summary": "Modify the invoice parser so that after 3 retries the agent stops trying and returns needs_human_review=True with whatever it has, instead of raising UsageLimitExceeded.",
+  "order": 229,
+  "objectives": [
+   "Solve the Day 6 — Validation, Retries, and MCP exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day-06-validation-retries-and-mcp.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-10-day-7-multi-agent-systems-and-production-73bb8e",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 7 — Multi-Agent Systems and Production",
+  "summary": "Create a search_agent that has a web_search(query: str) tool (mock it — return a fake result). Add a search_web tool to the router that delegates to it.",
+  "order": 230,
+  "objectives": [
+   "Solve the Day 7 — Multi-Agent Systems and Production exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day-07-multi-agent-and-production.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-10-day-8-langchain-fundamentals-build-2-productivit-905ef3",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 8 — LangChain Fundamentals: Build 2 Productivity Agents",
+  "summary": "Add a fifth category Meeting-Invite and route calendar invites to it. Update both the Category enum and the system prompt.",
+  "order": 231,
+  "objectives": [
+   "Solve the Day 8 — LangChain Fundamentals: Build 2 Productivity Agents exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day-08-langchain-fundamentals.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-10-day-9-langgraph-fundamentals-build-2-productivit-492ea7",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 9 — LangGraph Fundamentals: Build 2 Productivity Agents",
+  "summary": "Add a fourth handler slack_handler for messages like \"post to #eng-channel\" and a fourth category slack. Update the classifier prompt, conditional mapping, and add the new node.",
+  "order": 232,
+  "objectives": [
+   "Solve the Day 9 — LangGraph Fundamentals: Build 2 Productivity Agents exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day-09-langgraph-fundamentals.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-10-day-10-pydantic-ai-fundamentals-projects-build-2-88e0e7",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 10 — Pydantic AI Fundamentals (Projects): Build 2 Productivity Agents",
+  "summary": "Add a category field to ActionItem (e.g., engineering, ops, communication) and a second validator that rejects any item whose category is not in the allowed enum.",
+  "order": 233,
+  "objectives": [
+   "Solve the Day 10 — Pydantic AI Fundamentals (Projects): Build 2 Productivity Agents exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day-10-pydantic-ai-fundamentals.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-10-day-11-tools-retrieval-7d45c9",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 11 — Tools & Retrieval",
+  "summary": "Exercise 1 — Delete and reschedule. Add a delete_event(date, time) tool to the Calendar Helper.",
+  "order": 234,
+  "objectives": [
+   "Solve the Day 11 — Tools & Retrieval exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day-11-tools-and-retrieval.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-10-day-12-memory-state-ccb3bc",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 12 — Memory & State",
+  "summary": "Exercise 1 — Add a \"review\" command. Add a conditional edge: if user_input starts with \"review\", skip the add_note node and go straight to a new summarize_node that prints a markdown-formatted summary of all categories.",
+  "order": 235,
+  "objectives": [
+   "Solve the Day 12 — Memory & State exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day-12-memory-and-state.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-10-day-13-rag-agents-8f7dd0",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 13 — RAG Agents",
+  "summary": "Exercise 1 — MMR retrieval. Change Project 1's retriever to use search_type=\"mmr\" with lambda=0.5.",
+  "order": 236,
+  "objectives": [
+   "Solve the Day 13 — RAG Agents exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day-13-rag-agents.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-10-day-14-streaming-ux-eabd20",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 14 — Streaming & UX",
+  "summary": "Exercise 1 — Cancellable drafter. Add a KeyboardInterrupt handler to the Live Email Drafter that, on Ctrl+C, stops streaming and prints whatever has been rendered so far as the final draft.",
+  "order": 237,
+  "objectives": [
+   "Solve the Day 14 — Streaming & UX exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day-14-streaming-and-ux.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-10-day-15-multi-agent-systems-ac04fd",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 15 — Multi-Agent Systems",
+  "summary": "Add review: str and review_iteration: int to DuoState. Insert reviewer between writer and END.",
+  "order": 238,
+  "objectives": [
+   "Solve the Day 15 — Multi-Agent Systems exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day-15-multi-agent-systems.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-10-day-16-human-in-the-loop-42616a",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 16 — Human-in-the-Loop",
+  "summary": "from langgraph.checkpoint.sqlite import SqliteSaver; import sqlite3; conn = sqlite3.connect(\"checkpoints.db\", check_same_thread=False); checkpointer = SqliteSaver(conn). Then use it like MemorySaver.",
+  "order": 239,
+  "objectives": [
+   "Solve the Day 16 — Human-in-the-Loop exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day-16-human-in-the-loop.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-10-day-17-advanced-workflows-178b0b",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 17 — Advanced Workflows",
+  "summary": "Add meetings to PlannerState. In schedule_node, before assigning a task to a slot, check that [start, end) does not overlap any meeting interval.",
+  "order": 240,
+  "objectives": [
+   "Solve the Day 17 — Advanced Workflows exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day-17-advanced-workflows.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-10-day-18-tool-ecosystems-b34daf",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 18 — Tool Ecosystems",
+  "summary": "Define @tool def categorize_email(email_id: str) -> str: that returns a category string based on heuristics (sender domain, subject keywords).",
+  "order": 241,
+  "objectives": [
+   "Solve the Day 18 — Tool Ecosystems exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day-18-tool-ecosystems.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-10-day-19-production-grade-i-wrapping-agents-as-ser-8289ce",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 19 — Production-Grade I: Wrapping Agents as Services",
+  "summary": "Hint Use a tiny Pydantic AI agent or llm.ainvoke(\"ping\") inside asyncio.wait_for. Health checks should never call the model — readiness checks should.",
+  "order": 242,
+  "objectives": [
+   "Solve the Day 19 — Production-Grade I: Wrapping Agents as Services exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day-19-production-grade-i.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-10-day-20-production-grade-ii-graphs-and-streaming--36c13a",
+  "trackId": "agents",
+  "title": "10. Exercises: Day 20 — Production-Grade II: Graphs and Streaming RAG",
+  "summary": "Hint Use collection.upsert(ids=..., documents=...). Validate with a Pydantic model and return {\"ingested\": N}.",
+  "order": 243,
+  "objectives": [
+   "Solve the Day 20 — Production-Grade II: Graphs and Streaming RAG exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "day-20-production-grade-ii.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-11-50-real-world-agentic-ai-project-ideas-part-1-2b38dc",
+  "trackId": "agents",
+  "title": "11. Projects: 50 Real-World Agentic AI Project Ideas (Part 1)",
+  "summary": "The single most effective way to master agentic AI is to build real projects.",
+  "order": 244,
+  "objectives": [
+   "Build the 50 Real-World Agentic AI Project Ideas projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "13-50-project-ideas.md",
+  "labIds": [],
+  "series": "Project Ideas"
+ },
+ {
+  "id": "ag-11-50-real-world-agentic-ai-project-ideas-part-2-c69c5a",
+  "trackId": "agents",
+  "title": "11. Projects: 50 Real-World Agentic AI Project Ideas (Part 2)",
+  "summary": "Building all 50 projects isn't necessary — nor is it the goal. The path below is designed to build skills progressively, with each stage reinforcing and extending what you've learned before.",
+  "order": 245,
+  "objectives": [
+   "Build the 50 Real-World Agentic AI Project Ideas projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "13-50-project-ideas.md",
+  "labIds": [],
+  "series": "Project Ideas"
+ },
+ {
+  "id": "ag-11-15-production-grade-agentic-ai-projects-aa085c",
+  "trackId": "agents",
+  "title": "11. Projects: 15 Production-Grade Agentic AI Projects",
+  "summary": "Audience: AI engineers with Python + LangChain + LangGraph foundation, ready to build a recruiter-ready portfolio. > Coverage: Agentic AI · RAG + MCP · Security · Observability · Context Engineering · Fine-tuning (LoRA / QLoRA) · Local…",
+  "order": 246,
+  "objectives": [
+   "Build the 15 Production-Grade Agentic AI Projects projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "15_Agentic_AI_Projects.md",
+  "labIds": [],
+  "series": "Project Ideas"
+ },
+ {
+  "id": "ag-11-day-15-deployment-capstone-cloud-run-agent-engin-19c816",
+  "trackId": "agents",
+  "title": "11. Projects: Day 15 — Deployment & Capstone: Cloud Run, Agent Engine & Production",
+  "summary": "Ship your agent to Google Cloud, wire observability, and build a full multi-agent travel planner",
+  "order": 247,
+  "objectives": [
+   "Build the Day 15 — Deployment & Capstone: Cloud Run, Agent Engine & Production projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "day_15_deployment_capstone.ipynb",
+  "labIds": [],
+  "series": "Google ADK 15-Day Course"
+ },
+ {
+  "id": "ag-11-day-8-langchain-fundamentals-build-2-productivit-339e22",
+  "trackId": "agents",
+  "title": "11. Projects: Day 8 — LangChain Fundamentals: Build 2 Productivity Agents",
+  "summary": "Goal: Given a list of raw emails, classify each into one of Urgent, FYI, Spam, or Action-Required, plus a one-line reason. Print a triage report to the console.",
+  "order": 248,
+  "objectives": [
+   "Build the Day 8 — LangChain Fundamentals: Build 2 Productivity Agents projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "day-08-langchain-fundamentals.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-11-day-9-langgraph-fundamentals-build-2-productivit-9127b3",
+  "trackId": "agents",
+  "title": "11. Projects: Day 9 — LangGraph Fundamentals: Build 2 Productivity Agents",
+  "summary": "Goal: Accept a free-text task, classify it as email, calendar, or notes, route to the matching handler node, and return a mock response.",
+  "order": 249,
+  "objectives": [
+   "Build the Day 9 — LangGraph Fundamentals: Build 2 Productivity Agents projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "day-09-langgraph-fundamentals.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-11-day-10-pydantic-ai-fundamentals-projects-build-2-e10575",
+  "trackId": "agents",
+  "title": "11. Projects: Day 10 — Pydantic AI Fundamentals (Projects): Build 2 Productivity Agents",
+  "summary": "Goal: Take a meeting transcript, return List[ActionItem] where each item has owner, task, due_date, and priority.",
+  "order": 250,
+  "objectives": [
+   "Build the Day 10 — Pydantic AI Fundamentals (Projects): Build 2 Productivity Agents projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "day-10-pydantic-ai-fundamentals.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-11-day-11-tools-retrieval-7e653a",
+  "trackId": "agents",
+  "title": "11. Projects: Day 11 — Tools & Retrieval",
+  "summary": "A personal assistant that manages an in-memory calendar. You ask \"Schedule a meeting tomorrow 2pm about Q3 planning\" and it calls add_event.",
+  "order": 251,
+  "objectives": [
+   "Build the Day 11 — Tools & Retrieval projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "day-11-tools-and-retrieval.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-11-day-12-memory-state-2c326b",
+  "trackId": "agents",
+  "title": "11. Projects: Day 12 — Memory & State",
+  "summary": "A \"Daily Reflection\" assistant designed for a morning check-in ritual. Every conversation starts with the assistant asking what you accomplished yesterday.",
+  "order": 252,
+  "objectives": [
+   "Build the Day 12 — Memory & State projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "day-12-memory-and-state.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-11-day-13-rag-agents-829f49",
+  "trackId": "agents",
+  "title": "11. Projects: Day 13 — RAG Agents",
+  "summary": "A question-answering system over three hardcoded text files: a quarterly report, an engineering handbook, and a pricing strategy doc.",
+  "order": 253,
+  "objectives": [
+   "Build the Day 13 — RAG Agents projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "day-13-rag-agents.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-11-day-14-streaming-ux-8480e2",
+  "trackId": "agents",
+  "title": "11. Projects: Day 14 — Streaming & UX",
+  "summary": "The user pastes an incoming email and a one-line intent (\"Agree to send rollback plan by Friday; no customer downtime expected\").",
+  "order": 254,
+  "objectives": [
+   "Build the Day 14 — Streaming & UX projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "day-14-streaming-and-ux.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-11-day-15-multi-agent-systems-dadfa8",
+  "trackId": "agents",
+  "title": "11. Projects: Day 15 — Multi-Agent Systems",
+  "summary": "Two agents share a single StateGraph. The researcher calls a mock web search tool, then summarizes raw results into bullet notes.",
+  "order": 255,
+  "objectives": [
+   "Build the Day 15 — Multi-Agent Systems projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "day-15-multi-agent-systems.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-11-day-16-human-in-the-loop-274200",
+  "trackId": "agents",
+  "title": "11. Projects: Day 16 — Human-in-the-Loop",
+  "summary": "A drafter agent writes an email from a request. The graph then pauses at a human_review node using interrupt() from langgraph.types.",
+  "order": 256,
+  "objectives": [
+   "Build the Day 16 — Human-in-the-Loop projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "day-16-human-in-the-loop.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-11-day-17-advanced-workflows-fcb3a6",
+  "trackId": "agents",
+  "title": "11. Projects: Day 17 — Advanced Workflows",
+  "summary": "The graph has five nodes: collect_tasks (deterministic), estimate_time (LLM), prioritize (deterministic heuristic), schedule (deterministic greedy fit), and output (LLM).",
+  "order": 257,
+  "objectives": [
+   "Build the Day 17 — Advanced Workflows projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "day-17-advanced-workflows.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-11-day-18-tool-ecosystems-c6f328",
+  "trackId": "agents",
+  "title": "11. Projects: Day 18 — Tool Ecosystems",
+  "summary": "A LangChain create_tool_calling_agent equipped with seven @tool-decorated functions: list_inbox, read_email, mark_read, archive, reply, forward, create_task. Each tool mutates a shared mock inbox.",
+  "order": 258,
+  "objectives": [
+   "Build the Day 18 — Tool Ecosystems projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "day-18-tool-ecosystems.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-11-day-19-production-grade-i-wrapping-agents-as-ser-322c20",
+  "trackId": "agents",
+  "title": "11. Projects: Day 19 — Production-Grade I: Wrapping Agents as Services",
+  "summary": "A single FastAPI app exposing three endpoints around one Pydantic AI agent:",
+  "order": 259,
+  "objectives": [
+   "Build the Day 19 — Production-Grade I: Wrapping Agents as Services projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "day-19-production-grade-i.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-11-day-20-production-grade-ii-graphs-and-streaming--e1716e",
+  "trackId": "agents",
+  "title": "11. Projects: Day 20 — Production-Grade II: Graphs and Streaming RAG",
+  "summary": "A POST /status endpoint that ingests a project identifier, fetches three mocked data sources (open PRs, Jira tickets, Slack messages), runs them through a four-node graph, and returns a typed status report.",
+  "order": 260,
+  "objectives": [
+   "Build the Day 20 — Production-Grade II: Graphs and Streaming RAG projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "day-20-production-grade-ii.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-11-day-21-capstone-three-frameworks-one-system-aeaac0",
+  "trackId": "agents",
+  "title": "11. Projects: Day 21 — Capstone: Three Frameworks, One System",
+  "summary": "You made it. Twenty-one days ago you wrote your first Pydantic AI agent; today you build two systems that combine all three frameworks — Pydantic AI, LangChain, and LangGraph — in a single Python file.",
+  "order": 261,
+  "objectives": [
+   "Build the Day 21 — Capstone: Three Frameworks, One System projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "day-21-capstone.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-11-agentic-rag-639f6f",
+  "trackId": "agents",
+  "title": "11. Projects: Agentic RAG",
+  "summary": "Projects for Agentic RAG.",
+  "order": 262,
+  "objectives": [
+   "Build the Agentic RAG projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Agentic RAG"
+ },
+ {
+  "id": "ag-11-all-remaining-ai-agent-patterns-639f6f",
+  "trackId": "agents",
+  "title": "11. Projects: All Remaining AI Agent Patterns",
+  "summary": "Projects for All Remaining AI Agent Patterns.",
+  "order": 263,
+  "objectives": [
+   "Build the All Remaining AI Agent Patterns projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "All Remaining AI Agent Patterns"
+ },
+ {
+  "id": "ag-11-evaluation-metrics-agents-tools-retrievers-rag-639f6f",
+  "trackId": "agents",
+  "title": "11. Projects: Evaluation Metrics — Agents, Tools, Retrievers & RAG",
+  "summary": "Projects for Evaluation Metrics — Agents, Tools, Retrievers & RAG.",
+  "order": 264,
+  "objectives": [
+   "Build the Evaluation Metrics — Agents, Tools, Retrievers & RAG projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Evaluation Metrics — Agents, Tools, Retrievers & RAG"
+ },
+ {
+  "id": "ag-11-memory-context-engineering-in-ai-agents-639f6f",
+  "trackId": "agents",
+  "title": "11. Projects: Memory & Context Engineering in AI Agents",
+  "summary": "Projects for Memory & Context Engineering in AI Agents.",
+  "order": 265,
+  "objectives": [
+   "Build the Memory & Context Engineering in AI Agents projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Memory & Context Engineering in AI Agents"
+ },
+ {
+  "id": "ag-11-part-1-production-mcp-server-with-http-transport-639f6f",
+  "trackId": "agents",
+  "title": "11. Projects: Part 1: Production MCP Server with HTTP Transport",
+  "summary": "Projects for Part 1: Production MCP Server with HTTP Transport.",
+  "order": 266,
+  "objectives": [
+   "Build the Part 1: Production MCP Server with HTTP Transport projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
+  "labIds": [],
+  "series": "Part 1: Production MCP Server with HTTP Transport"
+ },
+ {
+  "id": "ag-12-100-agentic-ai-interview-questions-part-1-7a0a83",
+  "trackId": "agents",
+  "title": "12. Interview: 100 Agentic AI Interview Questions (Part 1)",
+  "summary": "Interview Q&A for 100 Agentic AI Interview Questions — 32 questions with model answers (part 1 of 4).",
+  "order": 267,
+  "objectives": [
+   "Answer 32 100 Agentic AI Interview Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "12-interview-questions-100.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-100-agentic-ai-interview-questions-part-2-428e40",
+  "trackId": "agents",
+  "title": "12. Interview: 100 Agentic AI Interview Questions (Part 2)",
+  "summary": "Interview Q&A for 100 Agentic AI Interview Questions — 30 questions with model answers (part 2 of 4).",
+  "order": 268,
+  "objectives": [
+   "Answer 30 100 Agentic AI Interview Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "12-interview-questions-100.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-100-agentic-ai-interview-questions-part-3-26ccc8",
+  "trackId": "agents",
+  "title": "12. Interview: 100 Agentic AI Interview Questions (Part 3)",
+  "summary": "Interview Q&A for 100 Agentic AI Interview Questions — 24 questions with model answers (part 3 of 4).",
+  "order": 269,
+  "objectives": [
+   "Answer 24 100 Agentic AI Interview Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "12-interview-questions-100.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-100-agentic-ai-interview-questions-part-4-fa7172",
+  "trackId": "agents",
+  "title": "12. Interview: 100 Agentic AI Interview Questions (Part 4)",
+  "summary": "Interview Q&A for 100 Agentic AI Interview Questions — 14 questions with model answers (part 4 of 4).",
+  "order": 270,
+  "objectives": [
+   "Answer 14 100 Agentic AI Interview Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "12-interview-questions-100.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-tool-calling-interview-question-bank-part-1-babf5c",
+  "trackId": "agents",
+  "title": "12. Interview: Tool Calling Interview Question Bank (Part 1)",
+  "summary": "Interview Q&A for Tool Calling Interview Question Bank (part 1 of 4).",
+  "order": 271,
+  "objectives": [
+   "Answer the Tool Calling Interview Question Bank interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "fri_may_29_2026_security_risks_in_ai_agent_tool.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-tool-calling-interview-question-bank-part-2-684c55",
+  "trackId": "agents",
+  "title": "12. Interview: Tool Calling Interview Question Bank (Part 2)",
+  "summary": "Interview Q&A for Tool Calling Interview Question Bank (part 2 of 4).",
+  "order": 272,
+  "objectives": [
+   "Answer the Tool Calling Interview Question Bank interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "fri_may_29_2026_security_risks_in_ai_agent_tool.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-tool-calling-interview-question-bank-part-3-ebaa71",
+  "trackId": "agents",
+  "title": "12. Interview: Tool Calling Interview Question Bank (Part 3)",
+  "summary": "Interview Q&A for Tool Calling Interview Question Bank (part 3 of 4).",
+  "order": 273,
+  "objectives": [
+   "Answer the Tool Calling Interview Question Bank interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "fri_may_29_2026_security_risks_in_ai_agent_tool.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-tool-calling-interview-question-bank-part-4-9838c1",
+  "trackId": "agents",
+  "title": "12. Interview: Tool Calling Interview Question Bank (Part 4)",
+  "summary": "Interview Q&A for Tool Calling Interview Question Bank (part 4 of 4).",
+  "order": 274,
+  "objectives": [
+   "Answer the Tool Calling Interview Question Bank interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "fri_may_29_2026_security_risks_in_ai_agent_tool.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-llm-agentic-ai-playbook-300-questions-part-e3b69f",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI, LLM & Agentic AI Playbook — 300 Questions (Part 1)",
+  "summary": "Interview Q&A for GenAI, LLM & Agentic AI Playbook — 300 Questions (part 1 of 7).",
+  "order": 275,
+  "objectives": [
+   "Answer the GenAI, LLM & Agentic AI Playbook — 300 Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "Generative_AI_LLM_Agentic_AI_Interview_Playbook_300Q.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-llm-agentic-ai-playbook-300-questions-part-4afaf5",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI, LLM & Agentic AI Playbook — 300 Questions (Part 2)",
+  "summary": "Interview Q&A for GenAI, LLM & Agentic AI Playbook — 300 Questions (part 2 of 7).",
+  "order": 276,
+  "objectives": [
+   "Answer the GenAI, LLM & Agentic AI Playbook — 300 Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "Generative_AI_LLM_Agentic_AI_Interview_Playbook_300Q.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-llm-agentic-ai-playbook-300-questions-part-c30f5d",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI, LLM & Agentic AI Playbook — 300 Questions (Part 3)",
+  "summary": "Interview Q&A for GenAI, LLM & Agentic AI Playbook — 300 Questions (part 3 of 7).",
+  "order": 277,
+  "objectives": [
+   "Answer the GenAI, LLM & Agentic AI Playbook — 300 Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "Generative_AI_LLM_Agentic_AI_Interview_Playbook_300Q.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-llm-agentic-ai-playbook-300-questions-part-1a2cda",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI, LLM & Agentic AI Playbook — 300 Questions (Part 4)",
+  "summary": "Interview Q&A for GenAI, LLM & Agentic AI Playbook — 300 Questions (part 4 of 7).",
+  "order": 278,
+  "objectives": [
+   "Answer the GenAI, LLM & Agentic AI Playbook — 300 Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "Generative_AI_LLM_Agentic_AI_Interview_Playbook_300Q.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-llm-agentic-ai-playbook-300-questions-part-5f4e85",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI, LLM & Agentic AI Playbook — 300 Questions (Part 5)",
+  "summary": "Interview Q&A for GenAI, LLM & Agentic AI Playbook — 300 Questions (part 5 of 7).",
+  "order": 279,
+  "objectives": [
+   "Answer the GenAI, LLM & Agentic AI Playbook — 300 Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "Generative_AI_LLM_Agentic_AI_Interview_Playbook_300Q.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-llm-agentic-ai-playbook-300-questions-part-72885b",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI, LLM & Agentic AI Playbook — 300 Questions (Part 6)",
+  "summary": "Interview Q&A for GenAI, LLM & Agentic AI Playbook — 300 Questions (part 6 of 7).",
+  "order": 280,
+  "objectives": [
+   "Answer the GenAI, LLM & Agentic AI Playbook — 300 Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "Generative_AI_LLM_Agentic_AI_Interview_Playbook_300Q.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-llm-agentic-ai-playbook-300-questions-part-127461",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI, LLM & Agentic AI Playbook — 300 Questions (Part 7)",
+  "summary": "Interview Q&A for GenAI, LLM & Agentic AI Playbook — 300 Questions (part 7 of 7).",
+  "order": 281,
+  "objectives": [
+   "Answer the GenAI, LLM & Agentic AI Playbook — 300 Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "Generative_AI_LLM_Agentic_AI_Interview_Playbook_300Q.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-ad5d96",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 1)",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 1 of 26).",
+  "order": 282,
+  "objectives": [
+   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-dd6d4f",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 2)",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 2 of 26).",
+  "order": 283,
+  "objectives": [
+   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-60ec2d",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 3)",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 3 of 26).",
+  "order": 284,
+  "objectives": [
+   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-a42634",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 4)",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 4 of 26).",
+  "order": 285,
+  "objectives": [
+   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-6a5ab2",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 5)",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 5 of 26).",
+  "order": 286,
+  "objectives": [
+   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-4384d7",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 6)",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 6 of 26).",
+  "order": 287,
+  "objectives": [
+   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-7c0572",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 7)",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 7 of 26).",
+  "order": 288,
+  "objectives": [
+   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-f21d94",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 8)",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 8 of 26).",
+  "order": 289,
+  "objectives": [
+   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-849f52",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 9)",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 9 of 26).",
+  "order": 290,
+  "objectives": [
+   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-de6f03",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 10)",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 10 of 26).",
+  "order": 291,
+  "objectives": [
+   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-574cef",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 11)",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 11 of 26).",
+  "order": 292,
+  "objectives": [
+   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-0fc7bc",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 12)",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 12 of 26).",
+  "order": 293,
+  "objectives": [
+   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-d71615",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 13)",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 13 of 26).",
+  "order": 294,
+  "objectives": [
+   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-1d10b8",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 14)",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 14 of 26).",
+  "order": 295,
+  "objectives": [
+   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-563fec",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 15)",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 15 of 26).",
+  "order": 296,
+  "objectives": [
+   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-dc7e9e",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 16)",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 16 of 26).",
+  "order": 297,
+  "objectives": [
+   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-d148d3",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 17)",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 17 of 26).",
+  "order": 298,
+  "objectives": [
+   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-98a4e8",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 18)",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 18 of 26).",
+  "order": 299,
+  "objectives": [
+   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-ff36a7",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 19)",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 19 of 26).",
+  "order": 300,
+  "objectives": [
+   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-86fe66",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 20)",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 20 of 26).",
+  "order": 301,
+  "objectives": [
+   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-bae014",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 21)",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 21 of 26).",
+  "order": 302,
+  "objectives": [
+   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-454add",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 22)",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 22 of 26).",
+  "order": 303,
+  "objectives": [
+   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-dd9bed",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 23)",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 23 of 26).",
+  "order": 304,
+  "objectives": [
+   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-7e6856",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 24)",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 24 of 26).",
+  "order": 305,
+  "objectives": [
+   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-06be14",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 25)",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 25 of 26).",
+  "order": 306,
+  "objectives": [
+   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-12daf3",
+  "trackId": "agents",
+  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 26)",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 26 of 26).",
+  "order": 307,
+  "objectives": [
+   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "ag-12-senior-agent-engineering-879f2b",
+  "trackId": "agents",
+  "title": "12. Interview: Senior Agent Engineering",
+  "summary": "Interview Q&A for Senior Agent Engineering — 28 questions with model answers.",
+  "order": 308,
+  "objectives": [
+   "Answer 28 Senior Agent Engineering interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "01_agent_foundations.md",
+  "labIds": [],
+  "series": "Senior Agent Engineering"
+ },
+ {
+  "id": "ag-12-memory-in-langgraph-complete-beginner-s-guide-e16192",
+  "trackId": "agents",
+  "title": "12. Interview: Memory in LangGraph — Complete Beginner's Guide",
+  "summary": "Interview Q&A for Memory in LangGraph — Complete Beginner's Guide.",
+  "order": 309,
+  "objectives": [
+   "Answer the Memory in LangGraph — Complete Beginner's Guide interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "3_memory_complete.ipynb",
+  "labIds": [],
+  "series": "LangGraph Notebooks"
+ },
+ {
+  "id": "ag-12-langchain-langgraph-checkpointers-complete-expla-70d525",
+  "trackId": "agents",
+  "title": "12. Interview: LangChain / LangGraph Checkpointers: Complete Explanations and Examples",
+  "summary": "Interview Q&A for LangChain / LangGraph Checkpointers: Complete Explanations and Examples.",
+  "order": 310,
+  "objectives": [
+   "Answer the LangChain / LangGraph Checkpointers: Complete Explanations and Examples interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "7_checkpointers_complete.ipynb",
+  "labIds": [],
+  "series": "LangGraph Notebooks"
+ },
+ {
+  "id": "ag-12-day-10-pydantic-ai-fundamentals-projects-build-2-b8b7f5",
+  "trackId": "agents",
+  "title": "12. Interview: Day 10 — Pydantic AI Fundamentals (Projects): Build 2 Productivity Agents",
+  "summary": "Interview Q&A for Day 10 — Pydantic AI Fundamentals (Projects): Build 2 Productivity Agents.",
+  "order": 311,
+  "objectives": [
+   "Answer the Day 10 — Pydantic AI Fundamentals (Projects): Build 2 Productivity Agents interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "day-10-pydantic-ai-fundamentals.md",
+  "labIds": [],
+  "series": "21-Day Agent Bootcamp"
+ },
+ {
+  "id": "ag-12-the-complete-guide-to-google-gemini-enterprise-a-6221f8",
+  "trackId": "agents",
+  "title": "12. Interview: The Complete Guide to Google Gemini Enterprise Agent Platform (Part 1)",
+  "summary": "Interview Q&A for The Complete Guide to Google Gemini Enterprise Agent Platform — 70 questions with model answers (part 1 of 2).",
+  "order": 312,
+  "objectives": [
+   "Answer 70 The Complete Guide to Google Gemini Enterprise Agent Platform interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "gemini-enterprise-agent-platform-guide.md",
+  "labIds": [],
+  "series": "Gemini Enterprise Agent Platform"
+ },
+ {
+  "id": "ag-12-the-complete-guide-to-google-gemini-enterprise-a-efd34a",
+  "trackId": "agents",
+  "title": "12. Interview: The Complete Guide to Google Gemini Enterprise Agent Platform (Part 2)",
+  "summary": "Interview Q&A for The Complete Guide to Google Gemini Enterprise Agent Platform — 70 questions with model answers (part 2 of 2).",
+  "order": 313,
+  "objectives": [
+   "Answer 70 The Complete Guide to Google Gemini Enterprise Agent Platform interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "gemini-enterprise-agent-platform-guide.md",
+  "labIds": [],
+  "series": "Gemini Enterprise Agent Platform"
+ },
+ {
+  "id": "ag-12-llm-interview-questions-conceptual-scenario-base-ec2957",
+  "trackId": "agents",
+  "title": "12. Interview: LLM Interview Questions: Conceptual & Scenario-Based (Part 1)",
+  "summary": "Interview Q&A for LLM Interview Questions: Conceptual & Scenario-Based — 5 questions with model answers (part 1 of 2).",
+  "order": 314,
+  "objectives": [
+   "Answer 5 LLM Interview Questions: Conceptual & Scenario-Based interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "fri_may_29_2026_customer_support_bot_for_shop_co.md",
+  "labIds": [],
+  "series": "LLM Interview Questions: Conceptual & Scenario-Based"
+ },
+ {
+  "id": "ag-12-llm-interview-questions-conceptual-scenario-base-885032",
+  "trackId": "agents",
+  "title": "12. Interview: LLM Interview Questions: Conceptual & Scenario-Based (Part 2)",
+  "summary": "Interview Q&A for LLM Interview Questions: Conceptual & Scenario-Based — 1 questions with model answers (part 2 of 2).",
+  "order": 315,
+  "objectives": [
+   "Answer 1 LLM Interview Questions: Conceptual & Scenario-Based interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "fri_may_29_2026_customer_support_bot_for_shop_co.md",
+  "labIds": [],
+  "series": "LLM Interview Questions: Conceptual & Scenario-Based"
+ }
+]

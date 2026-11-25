@@ -300,7 +300,7 @@
 }
 
 .lesson-article .md-body {
-  max-width: var(--prose);
+  max-width: 100%;
 }
 
 .points-stack {
@@ -370,4 +370,57 @@
   .lesson-hero h1 {
     max-width: none;
   }
+}
+
+/* ---- Python / Async course lessons ---- */
+.series-line {
+  margin: -0.2rem 0 0.6rem;
+  color: var(--ink-muted);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.objectives-label {
+  margin: 0.2rem 0 0;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--focus);
+}
+
+.concept-visual {
+  margin: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--focus-mid);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 1rem 1.2rem 1.1rem;
+  min-width: 0;
+}
+
+.concept-visual figcaption h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.08rem;
+  color: var(--focus-deep);
+}
+
+.concept-visual .panel-label {
+  margin: 0 0 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--focus);
+}
+
+.concept-visual-text {
+  background: var(--paper);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 0.9rem 0.2rem;
+}
+
+.concept-visual-text .md-body {
+  max-width: 100%;
 }

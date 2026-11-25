@@ -1,0 +1,293 @@
+.dk-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.35rem clamp(1rem, 2vw, 1.5rem) 3rem;
+}
+
+.dk-hero {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.35rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.dk-hero h1 {
+  margin: 0.2rem 0 0.5rem;
+  color: var(--focus-deep);
+  max-width: 18ch;
+}
+
+.dk-kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--focus);
+}
+
+.dk-grid {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.dk-modules {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.2rem;
+}
+
+.dk-module-link,
+.dk-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.dk-module-link:hover {
+  border-color: var(--focus-soft);
+  background: var(--focus-tint);
+}
+
+.dk-module-link h2 {
+  margin: 0 0 0.3rem;
+  font-size: 1.15rem;
+}
+
+.dk-side {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.dk-pane {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.85rem 0.95rem;
+}
+
+.dk-pane h4 {
+  margin: 0 0 0.45rem;
+}
+
+.dk-pane ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.dk-flow {
+  background: #0b1220;
+  color: #f8fafc;
+  border-radius: var(--radius);
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(147, 197, 253, 0.28);
+}
+
+.dk-flow-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.dk-flow h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.05rem;
+}
+
+.dk-flow-controls {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.dk-flow-controls button,
+.dk-btn {
+  border: 0;
+  background: var(--focus-deep);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.dk-btn.soft {
+  background: var(--paper);
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+}
+
+.dk-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.dk-flow-controls button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(248, 250, 252, 0.25);
+}
+
+.dk-flow-nodes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.85rem 0;
+}
+
+.dk-node {
+  border: 1px solid rgba(248, 250, 252, 0.25);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.45rem 0.65rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.dk-node.active {
+  border-color: var(--reward);
+  background: rgba(249, 115, 22, 0.2);
+}
+
+.dk-flow-detail {
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(249, 115, 22, 0.35);
+  border-radius: 10px;
+  padding: 0.7rem 0.8rem;
+}
+
+.dk-flow-detail p {
+  margin: 0.35rem 0 0;
+  color: #f8fafc;
+}
+
+.dk-terms {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.dk-term {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 0.6rem;
+  padding: 0.55rem 0.65rem;
+  background: var(--paper);
+  border-radius: 10px;
+  border: 1px solid var(--line);
+}
+
+.dk-term strong {
+  color: var(--focus-deep);
+}
+
+.dk-pre {
+  background: #0b1220;
+  color: #e2e8f0;
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  overflow: auto;
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.dk-files {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.dk-file h4 {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--focus-deep);
+}
+
+.dk-practice {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.dk-choices {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0.6rem 0;
+}
+
+.dk-choice {
+  text-align: left;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+  cursor: pointer;
+  font-weight: 650;
+}
+
+.dk-choice.selected {
+  border-color: var(--focus-mid);
+  background: var(--focus-tint);
+}
+
+.dk-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 0.55rem 0;
+}
+
+.dk-ok {
+  color: var(--growth-deep);
+  font-weight: 700;
+}
+
+.dk-bad {
+  color: var(--danger);
+  font-weight: 700;
+}
+
+.dk-hint {
+  background: var(--reward-tint);
+  border-radius: 8px;
+  padding: 0.5rem 0.65rem;
+}
+
+.dk-muted {
+  color: var(--ink-muted);
+}
+
+.dk-strong {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.dk-lesson-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.dk-sim-tag {
+  display: inline-flex;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: var(--reward-tint);
+  color: var(--reward-deep);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+@media (max-width: 860px) {
+  .dk-side,
+  .dk-term {
+    grid-template-columns: 1fr;
+  }
+}

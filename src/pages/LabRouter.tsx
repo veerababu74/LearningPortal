@@ -6,6 +6,14 @@ import { InjectionLab } from './labs/InjectionLab'
 import { RateLimitLab } from './labs/RateLimitLab'
 import { AgentLoopLab } from './labs/AgentLoopLab'
 import { MultiAgentLab } from './labs/MultiAgentLab'
+import { AgentPlaygroundLab } from './labs/playground/AgentPlaygroundLab'
+import { ToolSelectionLab } from './labs/playground/ToolSelectionLab'
+import { GraphStateLab } from './labs/playground/GraphStateLab'
+import { ContextBudgetLab } from './labs/playground/ContextBudgetLab'
+import { GuardrailLab } from './labs/playground/GuardrailLab'
+import { MultiAgentPlannerLab } from './labs/playground/MultiAgentPlannerLab'
+import { ConcurrencyPlaygroundLab } from './labs/playground/ConcurrencyPlaygroundLab'
+import { HashTableLab } from './labs/playground/HashTableLab'
 
 const MAP = {
   chunking: ChunkingLab,
@@ -15,6 +23,14 @@ const MAP = {
   'rate-limit': RateLimitLab,
   'agent-loop': AgentLoopLab,
   'multi-agent': MultiAgentLab,
+  'agent-playground': AgentPlaygroundLab,
+  'tool-selection': ToolSelectionLab,
+  'graph-state': GraphStateLab,
+  'context-budget': ContextBudgetLab,
+  guardrails: GuardrailLab,
+  'multiagent-planner': MultiAgentPlannerLab,
+  'concurrency-playground': ConcurrencyPlaygroundLab,
+  'hash-table': HashTableLab,
 } as const
 
 export function LabRouter() {

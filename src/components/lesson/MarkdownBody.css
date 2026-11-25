@@ -1,7 +1,22 @@
 .md-body {
   line-height: 1.7;
   color: var(--ink-soft);
-  max-width: var(--prose);
+  max-width: 100%;
+  min-width: 0;
+}
+
+/* Text stays at a comfortable reading width; code, tables and diagrams use the full column. */
+.md-body > p,
+.md-body > ul,
+.md-body > ol,
+.md-body > blockquote,
+.md-body > h1,
+.md-body > h2,
+.md-body > h3,
+.md-body > h4,
+.md-body > h5,
+.md-body > h6 {
+  max-width: 78ch;
 }
 
 .md-body h1,
@@ -58,19 +73,38 @@
   font-size: 0.9em;
 }
 
-.md-body pre {
+.md-body pre,
+.md-body .md-code-block {
   background: #0b1220;
   color: #e2e8f0;
   padding: 0.95rem 1rem;
   border-radius: 12px;
   overflow: auto;
+  width: 100%;
   max-width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(147, 197, 253, 0.22);
 }
 
 .md-body pre code {
   background: transparent;
   padding: 0;
   color: inherit;
+}
+
+.md-body .tok-keyword { color: #c084fc; font-weight: 700; }
+.md-body .tok-builtin { color: #38bdf8; }
+.md-body .tok-string { color: #86efac; }
+.md-body .tok-number { color: #fdba74; }
+.md-body .tok-comment { color: #94a3b8; font-style: italic; }
+.md-body .tok-class { color: #f472b6; font-weight: 650; }
+.md-body .tok-ident { color: #e2e8f0; }
+.md-body .tok-punct { color: #cbd5e1; }
+.md-body .py-hl {
+  white-space: pre;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.88rem;
+  line-height: 1.55;
 }
 
 .md-body table {
@@ -108,4 +142,24 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--focus);
+}
+
+/* Hand-drawn ASCII diagrams from the notes: keep alignment, no syntax colouring. */
+.md-body .md-ascii {
+  background: #f8fafc;
+  color: #1e293b;
+  border: 1px dashed rgba(30, 58, 138, 0.25);
+  line-height: 1.3;
+  font-size: 0.86rem;
+  white-space: pre;
+}
+
+.md-body .md-plain {
+  white-space: pre;
+  font-size: 0.88rem;
+}
+
+.md-body pre code,
+.md-body .md-code-block code {
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
 }

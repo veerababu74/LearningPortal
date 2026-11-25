@@ -33,7 +33,18 @@ export function ProgressPage() {
                   <i style={{ width: `${pct}%` }} />
                 </div>
               </div>
-              <Link to={`/tracks/${track.id}`} className="btn soft">
+              <Link
+                to={
+                  track.id === 'python'
+                    ? '/python'
+                    : track.id === 'agents'
+                      ? '/agents'
+                      : track.id === 'asyncconcur'
+                      ? '/async'
+                      : `/tracks/${track.id}`
+                }
+                className="btn soft"
+              >
                 Open
               </Link>
             </article>

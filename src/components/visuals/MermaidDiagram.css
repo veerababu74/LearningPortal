@@ -34,3 +34,20 @@
   white-space: pre-wrap;
   font-size: 0.85rem;
 }
+
+/* Page typography must not override diagram label colours (labels are HTML inside the SVG). */
+.mermaid-wrap foreignObject div,
+.mermaid-wrap foreignObject span,
+.mermaid-wrap foreignObject p,
+.mermaid-wrap .nodeLabel,
+.mermaid-wrap .label {
+  color: #f8fafc !important;
+  font-weight: 600;
+}
+
+.mermaid-wrap .edgeLabel,
+.mermaid-wrap .edgeLabel span,
+.mermaid-wrap .edgeLabel p {
+  color: #fde68a !important;
+  background: #0b1220 !important;
+}

@@ -1,0 +1,553 @@
+.py-page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1.35rem clamp(1rem, 2vw, 1.5rem) 3rem;
+}
+
+.py-hero {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.35rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.py-hero h1 {
+  margin: 0.2rem 0 0.5rem;
+  color: var(--focus-deep);
+  max-width: 20ch;
+}
+
+.py-kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--focus);
+}
+
+.py-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0.65rem 0;
+}
+
+.py-btn {
+  border: 0;
+  background: var(--focus-deep);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.py-btn.soft {
+  background: var(--paper);
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+}
+
+.py-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.py-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.py-module-link {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  color: inherit;
+}
+
+.py-module-link:hover {
+  border-color: var(--focus-soft);
+  background: var(--focus-tint);
+}
+
+.py-modules {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.py-muted {
+  color: var(--ink-muted);
+}
+
+.py-strong {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.py-sim-tag {
+  display: inline-flex;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: var(--reward-tint);
+  color: var(--reward-deep);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.py-flow {
+  background: #0b1220;
+  color: #f8fafc;
+  border-radius: var(--radius);
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(147, 197, 253, 0.28);
+}
+
+.py-flow-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.py-flow h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.05rem;
+}
+
+.py-flow-controls {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.py-flow-controls button {
+  border: 1px solid rgba(248, 250, 252, 0.25);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.4rem 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.py-flow-stage {
+  margin-top: 0.85rem;
+  overflow-x: auto;
+}
+
+.py-flow-svg {
+  width: 100%;
+  min-height: 120px;
+  display: block;
+}
+
+.py-node-box {
+  fill: rgba(255, 255, 255, 0.06);
+  stroke: rgba(248, 250, 252, 0.28);
+  stroke-width: 1.5;
+}
+
+.py-node-box.active {
+  fill: rgba(249, 115, 22, 0.28);
+  stroke: #fb923c;
+}
+
+.py-edge {
+  stroke: rgba(148, 163, 184, 0.55);
+  stroke-width: 2;
+}
+
+.py-edge.active {
+  stroke: #fb923c;
+  stroke-width: 3;
+}
+
+.py-node-label {
+  fill: #f8fafc;
+  font-size: 11px;
+  font-weight: 700;
+  text-anchor: middle;
+}
+
+.py-narration {
+  margin-top: 0.75rem;
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(249, 115, 22, 0.35);
+  border-radius: 10px;
+  padding: 0.7rem 0.8rem;
+}
+
+.py-narration p {
+  margin: 0.35rem 0 0;
+  color: #f8fafc;
+}
+
+.py-progress {
+  width: 100%;
+  margin-top: 0.65rem;
+  accent-color: #fb923c;
+}
+
+.py-pre {
+  background: #0b1220;
+  color: #e2e8f0;
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  overflow: auto;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.py-pre .hl {
+  background: rgba(249, 115, 22, 0.28);
+  display: block;
+  margin: 0 -0.4rem;
+  padding: 0 0.4rem;
+  border-radius: 4px;
+}
+
+.py-code-tabs {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.55rem;
+}
+
+.py-terms {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.py-term {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 0.6rem;
+  padding: 0.55rem 0.65rem;
+  background: var(--paper);
+  border-radius: 10px;
+  border: 1px solid var(--line);
+}
+
+.py-term strong {
+  color: var(--focus-deep);
+}
+
+.py-choice {
+  text-align: left;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+  cursor: pointer;
+  font-weight: 650;
+  width: 100%;
+}
+
+.py-choice.selected {
+  border-color: var(--focus-mid);
+  background: var(--focus-tint);
+}
+
+.py-ok {
+  color: var(--growth-deep);
+  font-weight: 700;
+}
+
+.py-bad {
+  color: var(--danger);
+  font-weight: 700;
+}
+
+.py-warn {
+  color: var(--reward-deep);
+  font-weight: 700;
+}
+
+.py-hint {
+  background: var(--reward-tint);
+  border-radius: 8px;
+  padding: 0.5rem 0.65rem;
+}
+
+.py-lesson-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.py-lab-board {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.py-obj {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.75rem;
+  background: var(--paper);
+  min-height: 88px;
+}
+
+.py-obj.active {
+  border-color: var(--focus-mid);
+  box-shadow: 0 0 0 2px var(--focus-tint);
+}
+
+.py-search-wrap {
+  display: grid;
+  gap: 0.35rem;
+  margin: 1.1rem 0 0.25rem;
+}
+
+.py-search {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  padding: 0.75rem 0.95rem;
+  font-size: 1rem;
+  color: var(--ink);
+  box-shadow: var(--shadow-sm);
+}
+
+.py-search:focus {
+  outline: 2px solid rgba(31, 111, 235, 0.22);
+  border-color: var(--focus-mid);
+}
+
+.py-section {
+  margin-top: 1.35rem;
+}
+
+.py-section h2 {
+  margin: 0 0 0.7rem;
+  color: var(--focus-deep);
+  font-size: 1.2rem;
+}
+
+.py-section-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.35rem;
+}
+
+.py-section-row h2 {
+  margin: 0;
+}
+
+.py-count {
+  margin-left: 0.4rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(31, 111, 235, 0.1);
+  color: var(--focus-deep);
+  font-size: 0.75rem;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+.py-phase-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.py-phase-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  text-decoration: none;
+  color: inherit;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--phase-accent, var(--focus));
+  border-radius: var(--radius);
+  padding: 1.15rem 1.2rem;
+  box-shadow: var(--shadow-sm);
+  min-height: 150px;
+}
+
+.py-phase-card:hover {
+  background: var(--focus-tint);
+  border-color: var(--focus-soft);
+}
+
+.py-phase-card h2 {
+  margin: 0;
+  font-size: 1.55rem;
+  color: var(--focus-deep);
+}
+
+.py-phase-card > p {
+  margin: 0;
+  color: var(--ink-soft);
+  max-width: 36ch;
+}
+
+.py-phase-meta {
+  margin-top: auto;
+  padding-top: 0.55rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--phase-accent, var(--focus));
+}
+
+.py-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.75rem;
+}
+
+.py-card-grid-labs {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.py-browse-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  text-decoration: none;
+  color: inherit;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem 1.05rem;
+  box-shadow: var(--shadow-sm);
+  min-height: 132px;
+}
+
+.py-browse-card:hover {
+  border-color: var(--focus-soft);
+  background: var(--focus-tint);
+}
+
+.py-browse-card.done {
+  border-color: rgba(15, 118, 110, 0.35);
+  background: rgba(15, 118, 110, 0.06);
+}
+
+.py-browse-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--focus-deep);
+}
+
+.py-browse-card > p {
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: 0.9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.py-module-card {
+  min-height: 148px;
+}
+
+.py-crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: center;
+  margin-bottom: 0.85rem;
+  color: var(--ink-muted);
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.py-crumbs a {
+  color: var(--focus-deep);
+  text-decoration: none;
+}
+
+.py-crumbs a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 860px) {
+  .py-term {
+    grid-template-columns: 1fr;
+  }
+
+  .py-phase-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- lessons grouped by course / series ---- */
+.py-series-stack {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.py-series-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin: 0 0 0.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.py-series-head h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--ink);
+}
+
+.py-series {
+  scroll-margin-top: calc(var(--nav-h) + 0.75rem);
+}
+
+.py-series-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.py-series-jump a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.32rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--focus-deep);
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.py-series-jump a:hover {
+  background: var(--focus-tint);
+  border-color: var(--focus-soft);
+}
+
+.py-series-jump a span {
+  color: var(--ink-muted);
+  font-weight: 600;
+}

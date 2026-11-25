@@ -1,0 +1,124 @@
+import { useMemo, useState } from 'react'
+import { Link, Navigate, useParams } from 'react-router-dom'
+import {
+  AGENT_MODULE_INFO,
+  cleanPreview,
+  getModulesForPhase,
+  getPhase,
+  lessonTopic,
+  searchAgentLessons,
+} from '@/content/agents/catalog'
+import { useProgress } from '@/store/progress'
+import { SeriesCards } from '@/components/python/SeriesCards'
+import '@/components/python/python.css'
+import '@/components/agents/agents.css'
+
+export function AgentsPhasePage() {
+  const { phaseId = '' } = useParams()
+  const phase = getPhase(phaseId)
+  const completed = useProgress((s) => s.completedLessonIds)
+  const [q, setQ] = useState('')
+  const modules = useMemo(() => getModulesForPhase(phaseId), [phaseId])
+  const isLearn = phaseId === 'learn'
+  const hits = useMemo(() => searchAgentLessons(q, { phaseId }), [q, phaseId])
+  const searching = q.trim().length > 0
+
+  if (!phase) return <Navigate to="/agents" replace />
+
+  return (
+    <div className="py-page">
+      <nav className="py-crumbs" aria-label="Breadcrumb">
+        <Link to="/agents">VeeraAgents</Link>
+        <span>/</span>
+        <span>{phase.title}</span>
+      </nav>
+
+      <section className="py-hero" style={{ borderLeft: `5px solid ${phase.accent}` }}>
+        <p className="py-kicker" style={{ color: phase.accent }}>
+          {phase.title}
+        </p>
+        <h1>{isLearn ? 'Concept modules' : `${phase.title} by topic`}</h1>
+        <p>{phase.blurb}</p>
+        {phaseId === 'interview' ? (
+          <p className="py-muted">
+            Tip: answer out loud first — concept, then a small example, then the trade-off — before reading the model
+            answer.
+          </p>
+        ) : null}
+      </section>
+
+      <label className="py-search-wrap">
+        <span className="py-kicker">Search in {phase.title}</span>
+        <input
+          className="py-search"
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+          placeholder={`Filter ${phase.title.toLowerCase()}…`}
+          aria-label={`Search ${phase.title}`}
+        />
+      </label>
+
+      {searching ? (
+        <section className="py-section">
+          <h2>
+            Results <span className="py-count">{hits.length}</span>
+          </h2>
+          <div className="py-card-grid">
+            {hits.map((lesson) => (
+              <Link
+                key={lesson.id}
+                to={`/learn/agents/${lesson.id}`}
+                className={completed.includes(lesson.id) ? 'py-browse-card done' : 'py-browse-card'}
+              >
+                <h3>{cleanPreview(lessonTopic(lesson.title))}</h3>
+                <p>{cleanPreview(lesson.summary)}</p>
+              </Link>
+            ))}
+            {!hits.length ? <p className="py-muted">No matches.</p> : null}
+          </div>
+        </section>
+      ) : isLearn ? (
+        <section className="py-section">
+          <h2>
+            Modules <span className="py-count">{modules.length}</span>
+          </h2>
+          <div className="ag-roadmap">
+            {modules.map((mod) => {
+              const info = AGENT_MODULE_INFO[mod.id]
+              return (
+                <Link
+                  key={mod.id}
+                  to={`/agents/learn/${mod.id}`}
+                  className="ag-mod-card"
+                  style={{ ['--mod' as string]: info?.color || '#7c3aed' }}
+                >
+                  <span className="ag-mod-num">
+                    {info?.icon} Module {mod.id}
+                  </span>
+                  <h3>{mod.name}</h3>
+                  <p>{info?.blurb}</p>
+                  <div className="ag-mod-meta">
+                    <span>{mod.lessons.length} lessons</span>
+                  </div>
+                </Link>
+              )
+            })}
+          </div>
+        </section>
+      ) : (
+        <section className="py-section">
+          <h2>
+            Topics <span className="py-count">{modules[0]?.lessons.length || 0}</span>
+          </h2>
+          <SeriesCards
+            lessons={modules[0]?.lessons || []}
+            hrefBase="/learn/agents"
+            completed={completed}
+            topicOf={lessonTopic}
+            preview={cleanPreview}
+          />
+        </section>
+      )}
+    </div>
+  )
+}

@@ -1,0 +1,1579 @@
+[
+ {
+  "id": "ac-01-course-map-when-to-use-what-e2cf71",
+  "trackId": "asyncconcur",
+  "title": "01. Fundamentals: Course map: when to use what",
+  "summary": "Covers Complete Visual Learning Guide, Quick Reference: When to Use What.",
+  "order": 1,
+  "objectives": [
+   "Complete Visual Learning Guide",
+   "Quick Reference: When to Use What"
+  ],
+  "sourceFile": "concurrent/00_TABLE_OF_CONTENTS.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-01-fundamentals-of-concurrency-7255b0",
+  "trackId": "asyncconcur",
+  "title": "01. Fundamentals: Fundamentals of Concurrency",
+  "summary": "Concurrency is about _structure_—designing your program to handle multiple tasks that can make progress independently. Tasks don't necessarily run at the same instant but are managed so they don't block each other unnecessarily.",
+  "order": 2,
+  "objectives": [
+   "Concurrency vs Parallelism",
+   "Blocking vs Non-Blocking I/O",
+   "I/O-Bound vs CPU-Bound Workloads",
+   "The Python GIL (Global Interpreter Lock)",
+   "When to Use Threads, Processes, or Async",
+   "Pitfalls & Gotchas"
+  ],
+  "sourceFile": "concurrent/01_fundamentals.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-01-workshop-overview-9abc6c",
+  "trackId": "asyncconcur",
+  "title": "01. Fundamentals: Workshop overview",
+  "summary": "Each topic includes: - Detailed theoretical explanations - Multiple practical examples - 10 hands-on exercises - 5 project ideas with implementation guidelines - Industry-ready project examples",
+  "order": 3,
+  "objectives": [
+   "Topics Covered",
+   "Directory Structure",
+   "Learning Resources",
+   "Final Goal"
+  ],
+  "sourceFile": "concurrentprograming/README.md",
+  "labIds": [],
+  "series": "Hands-on Workshop"
+ },
+ {
+  "id": "ac-02-threading-basics-2b1f51",
+  "trackId": "asyncconcur",
+  "title": "02. Threading: Threading Basics",
+  "summary": "A thread is a lightweight unit of execution within a process. Multiple threads share the same memory space but can run concurrently.",
+  "order": 4,
+  "objectives": [
+   "Creating and Starting Threads",
+   "Thread Naming and Identification",
+   "Daemon Threads vs Non-Daemon Threads",
+   "Thread Join and Timeout",
+   "Thread Arguments and Return Values",
+   "Thread Local Storage"
+  ],
+  "sourceFile": "concurrent/02_threading_basics.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-02-thread-synchronization-462d15",
+  "trackId": "asyncconcur",
+  "title": "02. Threading: Thread Synchronization",
+  "summary": "The result depends on the unpredictable timing of thread execution, leading to bugs that are:",
+  "order": 5,
+  "objectives": [
+   "Race Conditions and the Need for Synchronization",
+   "Lock (Mutex)",
+   "RLock (Reentrant Lock)",
+   "Semaphore",
+   "Event",
+   "Condition"
+  ],
+  "sourceFile": "concurrent/03_threading_synchronization.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-02-threading-patterns-a03812",
+  "trackId": "asyncconcur",
+  "title": "02. Threading: Threading Patterns",
+  "summary": "Covers Producer-Consumer Pattern, Thread Pool Pattern (ThreadPoolExecutor), Worker Pool Pattern, Reader-Writer Lock Pattern, Double-Checked Locking (Singleton Pattern) and more.",
+  "order": 6,
+  "objectives": [
+   "Producer-Consumer Pattern",
+   "Thread Pool Pattern (ThreadPoolExecutor)",
+   "Worker Pool Pattern",
+   "Reader-Writer Lock Pattern",
+   "Double-Checked Locking (Singleton Pattern)",
+   "Future Pattern"
+  ],
+  "sourceFile": "concurrent/04_threading_patterns.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-02-day-1-threading-fundamentals-52a450",
+  "trackId": "asyncconcur",
+  "title": "02. Threading: Day 1 — Threading Fundamentals",
+  "summary": "Rule of thumb: - Network/disk heavy, many connections → asyncio - CPU heavy, few workers → multiprocessing - CPU heavy, needs shared state → multiprocessing.Manager - Legacy sync library you can't rewrite → threading (or run_in_executor in…",
+  "order": 7,
+  "objectives": [
+   "Explain what a thread is and how Python threads differ from OS threads.",
+   "Describe the Global Interpreter Lock (GIL) and predict when threading will and won't speed up code.",
+   "Walk through the full thread lifecycle: new → runnable → running → blocked → dead.",
+   "Spawn threads using both threading.Thread(target=...) and the Thread subclass pattern.",
+   "Diagnose a race condition and explain why shared mutable state breaks naive threading.",
+   "Use threading.local() to keep per-thread state isolated."
+  ],
+  "sourceFile": "async/day1-threading-fundamentals.md",
+  "labIds": [],
+  "series": "10-Day Bootcamp"
+ },
+ {
+  "id": "ac-02-day-2-advanced-threading-locks-pools-queues-9fab19",
+  "trackId": "asyncconcur",
+  "title": "02. Threading: Day 2 — Advanced Threading: Locks, Pools, Queues",
+  "summary": "RLock is needed when a function that holds the lock calls another function that also acquires it. The classic case: recursive functions and callbacks inside a locked region.",
+  "order": 8,
+  "objectives": [
+   "Use every threading synchronization primitive: Lock, RLock, Semaphore, BoundedSemaphore, Event, Condition, Barrier.",
+   "Convert the Day 1 race condition into a correct, locked counter.",
+   "Use concurrent.futures.ThreadPoolExecutor for clean submit / map / as_completed patterns.",
+   "Build a producer-consumer pipeline with queue.Queue and a sentinel-based shutdown.",
+   "Diagnose and avoid deadlocks (lock ordering, RLock for re-entrancy, timeouts).",
+   "Understand GIL release points and tune sys.setswitchinterval."
+  ],
+  "sourceFile": "async/day2-advanced-threading.md",
+  "labIds": [],
+  "series": "10-Day Bootcamp"
+ },
+ {
+  "id": "ac-02-topic-1-threading-fundamentals-in-python-71b296",
+  "trackId": "asyncconcur",
+  "title": "02. Threading: Topic 1: Threading Fundamentals in Python",
+  "summary": "A thread is the smallest unit of execution within a process. Threads share the same memory space and resources as their parent process, making them lightweight and efficient for concurrent operations.",
+  "order": 9,
+  "objectives": [
+   "What threads are and how they work in Python",
+   "How to create and manage threads",
+   "Thread synchronization mechanisms (locks, semaphores, barriers)",
+   "Thread communication and data sharing",
+   "Thread pools and executors",
+   "Common threading patterns and best practices"
+  ],
+  "sourceFile": "concurrentprograming/01_threading/README.md",
+  "labIds": [],
+  "series": "Hands-on Workshop"
+ },
+ {
+  "id": "ac-02-01-basic-threading-fc0e48",
+  "trackId": "asyncconcur",
+  "title": "02. Threading: 01 Basic Threading",
+  "summary": "Basic Threading Examples ======================== This file demonstrates fundamental threading concepts in Python: Creating threads using threading.Thread Thread lifecycle management Basic thread communication Thread naming and…",
+  "order": 10,
+  "objectives": [
+   "Read and run the 01 Basic Threading program",
+   "Predict the output before running each part",
+   "Change one line and explain the new behaviour"
+  ],
+  "sourceFile": "concurrentprograming/01_threading/examples/01_basic_threading.py",
+  "labIds": [],
+  "series": "Hands-on Workshop"
+ },
+ {
+  "id": "ac-02-02-thread-synchronization-aa4e57",
+  "trackId": "asyncconcur",
+  "title": "02. Threading: 02 Thread Synchronization",
+  "summary": "Thread Synchronization Examples ============================== This file demonstrates various thread synchronization mechanisms: Locks (Lock, RLock) Semaphores Barriers Events Conditions",
+  "order": 11,
+  "objectives": [
+   "Read and run the 02 Thread Synchronization program",
+   "Predict the output before running each part",
+   "Change one line and explain the new behaviour"
+  ],
+  "sourceFile": "concurrentprograming/01_threading/examples/02_thread_synchronization.py",
+  "labIds": [],
+  "series": "Hands-on Workshop"
+ },
+ {
+  "id": "ac-03-multiprocessing-basics-3731e6",
+  "trackId": "asyncconcur",
+  "title": "03. Multiprocessing: Multiprocessing Basics",
+  "summary": "Covers Why Multiprocessing?, Creating and Starting Processes, Fork vs Spawn (Start Methods), Process Arguments and Return Values, Daemon Processes.",
+  "order": 12,
+  "objectives": [
+   "Why Multiprocessing?",
+   "Creating and Starting Processes",
+   "Fork vs Spawn (Start Methods)",
+   "Process Arguments and Return Values",
+   "Daemon Processes",
+   "Pitfalls & Gotchas"
+  ],
+  "sourceFile": "concurrent/05_multiprocessing_basics.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-03-multiprocessing-communication-f0393d",
+  "trackId": "asyncconcur",
+  "title": "03. Multiprocessing: Multiprocessing Communication",
+  "summary": "Covers Inter-Process Communication (IPC) Overview, Queues, Pipes, Managers, Shared Memory (Value and Array).",
+  "order": 13,
+  "objectives": [
+   "Inter-Process Communication (IPC) Overview",
+   "Queues",
+   "Pipes",
+   "Managers",
+   "Shared Memory (Value and Array)",
+   "Pitfalls & Gotchas"
+  ],
+  "sourceFile": "concurrent/06_multiprocessing_communication.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-03-multiprocessing-pools-483f49",
+  "trackId": "asyncconcur",
+  "title": "03. Multiprocessing: Multiprocessing Pools",
+  "summary": "Covers Basic Pool Usage, Asynchronous Pool Methods, imap and imap_unordered, Pool Initialization, Error Handling in Pools and more.",
+  "order": 14,
+  "objectives": [
+   "Basic Pool Usage",
+   "Asynchronous Pool Methods",
+   "imap and imap_unordered",
+   "Pool Initialization",
+   "Error Handling in Pools",
+   "Advanced Pool Patterns"
+  ],
+  "sourceFile": "concurrent/07_multiprocessing_pools.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-03-day-3-multiprocessing-fundamentals-13ea1d",
+  "trackId": "asyncconcur",
+  "title": "03. Multiprocessing: Day 3 — Multiprocessing Fundamentals",
+  "summary": "Cost: spawning a process is ~10–50× slower than a thread and uses more memory. Benefit: true parallelism for CPU-bound work.",
+  "order": 15,
+  "objectives": [
+   "Explain why multiprocessing bypasses the GIL and how processes differ from threads.",
+   "Choose between fork, spawn, and forkserver start methods on each platform.",
+   "Spawn processes with Process(target=...) and the Process subclass pattern.",
+   "Use Pipe for 1:1 parent-child communication and Queue for multi-process messaging.",
+   "Identify what can and cannot cross a process boundary (pickling rules).",
+   "Diagnose the most common multiprocessing bugs: zombie processes, orphaned locks, fork-safety."
+  ],
+  "sourceFile": "async/day3-multiprocessing-fundamentals.md",
+  "labIds": [],
+  "series": "10-Day Bootcamp"
+ },
+ {
+  "id": "ac-03-day-4-advanced-multiprocessing-pools-shared-memo-e96e2e",
+  "trackId": "asyncconcur",
+  "title": "03. Multiprocessing: Day 4 — Advanced Multiprocessing: Pools & Shared Memory",
+  "summary": "When you call pool.map(fn, items), the pool doesn't ship one task at a time — it ships chunks of tasks to each worker to amortize IPC overhead.",
+  "order": 16,
+  "objectives": [
+   "Use multiprocessing.Pool for high-throughput parallel workloads.",
+   "Choose between map, starmap, apply_async, imap, and imap_unordered based on workload.",
+   "Use Value, Array, and Manager to share state across processes safely.",
+   "Configure callbacks and error handlers on async pool results.",
+   "Benchmark threads vs processes vs asyncio on real workloads and interpret the results.",
+   "Avoid the most common multiprocessing footguns: un-picklable args, fork-with-threads, leaked pools."
+  ],
+  "sourceFile": "async/day4-advanced-multiprocessing.md",
+  "labIds": [],
+  "series": "10-Day Bootcamp"
+ },
+ {
+  "id": "ac-03-topic-2-multiprocessing-in-python-ae9a01",
+  "trackId": "asyncconcur",
+  "title": "03. Multiprocessing: Topic 2: Multiprocessing in Python",
+  "summary": "Multiprocessing is a technique that uses multiple processes to execute tasks concurrently.",
+  "order": 17,
+  "objectives": [
+   "What multiprocessing is and how it differs from threading",
+   "How to create and manage processes in Python",
+   "Inter-process communication (IPC) mechanisms",
+   "Process pools and executors",
+   "Shared memory and data sharing between processes",
+   "Process synchronization and coordination"
+  ],
+  "sourceFile": "concurrentprograming/02_multiprocessing/README.md",
+  "labIds": [],
+  "series": "Hands-on Workshop"
+ },
+ {
+  "id": "ac-03-01-basic-multiprocessing-a258ca",
+  "trackId": "asyncconcur",
+  "title": "03. Multiprocessing: 01 Basic Multiprocessing",
+  "summary": "Basic Multiprocessing Examples ============================== This file demonstrates fundamental multiprocessing concepts in Python: Creating processes using multiprocessing.Process Process lifecycle management Basic inter-process…",
+  "order": 18,
+  "objectives": [
+   "Read and run the 01 Basic Multiprocessing program",
+   "Predict the output before running each part",
+   "Change one line and explain the new behaviour"
+  ],
+  "sourceFile": "concurrentprograming/02_multiprocessing/examples/01_basic_multiprocessing.py",
+  "labIds": [],
+  "series": "Hands-on Workshop"
+ },
+ {
+  "id": "ac-04-asyncio-basics-783e3c",
+  "trackId": "asyncconcur",
+  "title": "04. AsyncIO: AsyncIO Basics",
+  "summary": "Covers Coroutines and await, Creating and Managing Tasks, asyncio.gather() and asyncio.wait(), asyncio.sleep() and Timing, Running Async Code.",
+  "order": 19,
+  "objectives": [
+   "Coroutines and await",
+   "Creating and Managing Tasks",
+   "asyncio.gather() and asyncio.wait()",
+   "asyncio.sleep() and Timing",
+   "Running Async Code",
+   "Pitfalls & Gotchas"
+  ],
+  "sourceFile": "concurrent/08_asyncio_basics.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-04-asyncio-tasks-and-taskgroups-8ac3d4",
+  "trackId": "asyncconcur",
+  "title": "04. AsyncIO: AsyncIO Tasks and TaskGroups",
+  "summary": "Covers Deep Dive into Tasks, TaskGroups (Python 3.11+), Cancellation Handling, Advanced Task Patterns, Task Scheduling Patterns.",
+  "order": 20,
+  "objectives": [
+   "Deep Dive into Tasks",
+   "TaskGroups (Python 3.11+)",
+   "Cancellation Handling",
+   "Advanced Task Patterns",
+   "Task Scheduling Patterns",
+   "Pitfalls & Gotchas"
+  ],
+  "sourceFile": "concurrent/09_asyncio_tasks.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-04-asyncio-synchronization-2f6976",
+  "trackId": "asyncconcur",
+  "title": "04. AsyncIO: AsyncIO Synchronization",
+  "summary": "Covers Why Async Synchronization?, asyncio.Lock, asyncio.Semaphore, asyncio.Event, asyncio.Condition and more.",
+  "order": 21,
+  "objectives": [
+   "Why Async Synchronization?",
+   "asyncio.Lock",
+   "asyncio.Semaphore",
+   "asyncio.Event",
+   "asyncio.Condition",
+   "asyncio.Barrier"
+  ],
+  "sourceFile": "concurrent/10_asyncio_synchronization.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-04-advanced-asyncio-595a9b",
+  "trackId": "asyncconcur",
+  "title": "04. AsyncIO: Advanced AsyncIO",
+  "summary": "Covers Async Generators and Async Iterators, Async Context Managers, Running Blocking Code in Async, Debugging Asyncio, Async Patterns.",
+  "order": 22,
+  "objectives": [
+   "Async Generators and Async Iterators",
+   "Async Context Managers",
+   "Running Blocking Code in Async",
+   "Debugging Asyncio",
+   "Async Patterns",
+   "Pitfalls & Gotchas"
+  ],
+  "sourceFile": "concurrent/11_asyncio_advanced.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-04-async-i-o-libraries-7bee12",
+  "trackId": "asyncconcur",
+  "title": "04. AsyncIO: Async I/O Libraries",
+  "summary": "Covers aiohttp — Async HTTP Client/Server, aiofiles — Async File I/O, httpx — Modern Async HTTP, WebSockets with websockets, aiomysql and asyncpg — Async Databases and more.",
+  "order": 23,
+  "objectives": [
+   "aiohttp — Async HTTP Client/Server",
+   "aiofiles — Async File I/O",
+   "httpx — Modern Async HTTP",
+   "WebSockets with websockets",
+   "aiomysql and asyncpg — Async Databases",
+   "Redis with aioredis"
+  ],
+  "sourceFile": "concurrent/13_async_io_libraries.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-04-day-5-async-fundamentals-event-loop-coroutines-c68c27",
+  "trackId": "asyncconcur",
+  "title": "04. AsyncIO: Day 5 — Async Fundamentals: Event Loop & Coroutines",
+  "summary": "Threading and multiprocessing use preemption — the OS scheduler interrupts running code. asyncio uses cooperative multitasking — coroutines voluntarily yield control with await, and the event loop picks the next ready one.",
+  "order": 24,
+  "objectives": [
+   "Explain Python's async history: generators → yield from → async/await.",
+   "Describe what an event loop is and how it schedules coroutines on a single thread.",
+   "Distinguish coroutines, Tasks, and Futures.",
+   "Predict when asyncio will be faster than threading, and when it won't.",
+   "Identify the #1 footgun: calling blocking I/O inside async code freezes the loop.",
+   "Write your first async def, await, asyncio.run, and asyncio.create_task."
+  ],
+  "sourceFile": "async/day5-async-fundamentals.md",
+  "labIds": [],
+  "series": "10-Day Bootcamp"
+ },
+ {
+  "id": "ac-04-day-6-asyncio-task-management-gather-wait-timeou-480e29",
+  "trackId": "asyncconcur",
+  "title": "04. AsyncIO: Day 6 — asyncio Task Management: gather, wait, timeouts",
+  "summary": "task.cancel() sends a CancelledError into the task at its current await point.",
+  "order": 25,
+  "objectives": [
+   "Use asyncio.gather() correctly, including the return_exceptions flag.",
+   "Choose between gather, wait, and as_completed based on the workload.",
+   "Apply per-task timeouts with wait_for and the modern asyncio.timeout context manager.",
+   "Cancel tasks manually and handle CancelledError properly.",
+   "Use Python 3.11's TaskGroup for structured concurrency and exception groups.",
+   "Avoid the common cancellation pitfalls: shielding, partial results, leaked tasks."
+  ],
+  "sourceFile": "async/day6-asyncio-task-management.md",
+  "labIds": [],
+  "series": "10-Day Bootcamp"
+ },
+ {
+  "id": "ac-04-day-7-async-synchronization-primitives-80d881",
+  "trackId": "asyncconcur",
+  "title": "04. AsyncIO: Day 7 — Async Synchronization Primitives",
+  "summary": "Double-checked locking pattern: check without the lock first (fast path for hits), then re-check inside the lock to handle the race where two coroutines miss the cache simultaneously.",
+  "order": 26,
+  "objectives": [
+   "Explain why you cannot reuse threading.Lock in async code (it would block the event loop).",
+   "Use asyncio.Lock, Semaphore, BoundedSemaphore, Event, Condition, and Queue.",
+   "Build an async producer-consumer pipeline with asyncio.Queue.",
+   "Implement rate limiting with asyncio.Semaphore.",
+   "Build a bounded async DB connection pool.",
+   "Avoid the common async-lock pitfalls: holding a lock across await (usually fine, but be careful), unbounded queues (memory leaks)."
+  ],
+  "sourceFile": "async/day7-async-synchronization.md",
+  "labIds": [],
+  "series": "10-Day Bootcamp"
+ },
+ {
+  "id": "ac-04-day-8-real-world-async-i-o-dbdbf2",
+  "trackId": "asyncconcur",
+  "title": "04. AsyncIO: Day 8 — Real-world Async I/O",
+  "summary": "Why reuse matters: each new TCP connection does DNS lookup + TCP handshake + TLS handshake — easily 200ms on slow networks. A pooled ClientSession reuses connections via HTTP keep-alive.",
+  "order": 27,
+  "objectives": [
+   "Use aiohttp.ClientSession for high-performance async HTTP.",
+   "Use aiofiles for non-blocking file I/O.",
+   "Use aiosqlite for async database access.",
+   "Build an async web scraper with concurrency cap, retry with exponential backoff, and rate limiting.",
+   "Implement an async generator for streaming large files / responses.",
+   "Write async context managers for resource lifecycle."
+  ],
+  "sourceFile": "async/day8-real-world-async-io.md",
+  "labIds": [],
+  "series": "10-Day Bootcamp"
+ },
+ {
+  "id": "ac-04-topic-3-asynchronous-programming-in-python-4ae32a",
+  "trackId": "asyncconcur",
+  "title": "04. AsyncIO: Topic 3: Asynchronous Programming in Python",
+  "summary": "Asynchronous programming is a programming paradigm that allows non-blocking execution of code.",
+  "order": 28,
+  "objectives": [
+   "What asynchronous programming is and how it differs from threading/multiprocessing",
+   "How to use async/await syntax effectively",
+   "Event loops and coroutines",
+   "Async I/O operations and their benefits",
+   "Task scheduling and management",
+   "Concurrent async patterns and best practices"
+  ],
+  "sourceFile": "concurrentprograming/03_asynchronous/README.md",
+  "labIds": [],
+  "series": "Hands-on Workshop"
+ },
+ {
+  "id": "ac-04-01-basic-async-ad7673",
+  "trackId": "asyncconcur",
+  "title": "04. AsyncIO: 01 Basic Async",
+  "summary": "Runnable 01 Basic Async program, walked through function by function.",
+  "order": 29,
+  "objectives": [
+   "Read and run the 01 Basic Async program",
+   "Predict the output before running each part",
+   "Change one line and explain the new behaviour"
+  ],
+  "sourceFile": "concurrentprograming/03_asynchronous/examples/01_basic_async.py",
+  "labIds": [],
+  "series": "Hands-on Workshop"
+ },
+ {
+  "id": "ac-04-02-advanced-patterns-d259ec",
+  "trackId": "asyncconcur",
+  "title": "04. AsyncIO: 02 Advanced Patterns",
+  "summary": "Runnable 02 Advanced Patterns program, walked through function by function.",
+  "order": 30,
+  "objectives": [
+   "Read and run the 02 Advanced Patterns program",
+   "Predict the output before running each part",
+   "Change one line and explain the new behaviour"
+  ],
+  "sourceFile": "concurrentprograming/03_asynchronous/examples/02_advanced_patterns.py",
+  "labIds": [],
+  "series": "Hands-on Workshop"
+ },
+ {
+  "id": "ac-05-concurrent-futures-75a576",
+  "trackId": "asyncconcur",
+  "title": "05. Advanced Patterns: Concurrent.futures",
+  "summary": "Covers ThreadPoolExecutor, ProcessPoolExecutor, wait() and FIRST_COMPLETED, Practical Patterns.",
+  "order": 31,
+  "objectives": [
+   "ThreadPoolExecutor",
+   "ProcessPoolExecutor",
+   "wait() and FIRST_COMPLETED",
+   "Practical Patterns",
+   "Pitfalls & Gotchas",
+   "Performance Notes"
+  ],
+  "sourceFile": "concurrent/12_concurrent_futures.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-05-mixing-concurrency-models-adf8eb",
+  "trackId": "asyncconcur",
+  "title": "05. Advanced Patterns: Mixing Concurrency Models",
+  "summary": "Covers When to Mix Concurrency Models, Running Blocking Code in AsyncIO, Running AsyncIO from Threads, Hybrid Architecture Patterns, Complete Hybrid Application Example.",
+  "order": 32,
+  "objectives": [
+   "When to Mix Concurrency Models",
+   "Running Blocking Code in AsyncIO",
+   "Running AsyncIO from Threads",
+   "Hybrid Architecture Patterns",
+   "Complete Hybrid Application Example",
+   "Pitfalls & Gotchas"
+  ],
+  "sourceFile": "concurrent/14_mixing_concurrency.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-05-concurrency-design-patterns-2cd97b",
+  "trackId": "asyncconcur",
+  "title": "05. Advanced Patterns: Concurrency Design Patterns",
+  "summary": "Covers Producer-Consumer Pattern, Worker Pool Pattern, Pipeline Pattern, Fan-Out/Fan-In Pattern, Circuit Breaker Pattern and more.",
+  "order": 33,
+  "objectives": [
+   "Producer-Consumer Pattern",
+   "Worker Pool Pattern",
+   "Pipeline Pattern",
+   "Fan-Out/Fan-In Pattern",
+   "Circuit Breaker Pattern",
+   "Retry Pattern"
+  ],
+  "sourceFile": "concurrent/15_design_patterns.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-05-day-9-sync-async-bridge-advanced-patterns-460422",
+  "trackId": "asyncconcur",
+  "title": "05. Advanced Patterns: Day 9 — Sync → Async Bridge & Advanced Patterns",
+  "summary": "Async generators are syntax sugar for the async iterator protocol. They're the right choice ~90% of the time — only reach for a custom class when you need complex state or multiple coordinated coroutines.",
+  "order": 34,
+  "objectives": [
+   "Use loop.run_in_executor() to offload blocking calls from async code.",
+   "Mix ThreadPoolExecutor and ProcessPoolExecutor with asyncio correctly.",
+   "Implement async iterators (__aiter__ / __anext__) and async generators.",
+   "Build async context managers and use AsyncExitStack for dynamic cleanup.",
+   "Apply structured concurrency with TaskGroup (3.11+).",
+   "Cache async results with functools-style patterns."
+  ],
+  "sourceFile": "async/day9-sync-to-async-bridge.md",
+  "labIds": [],
+  "series": "10-Day Bootcamp"
+ },
+ {
+  "id": "ac-05-advanced-concurrent-patterns-ae1734",
+  "trackId": "asyncconcur",
+  "title": "05. Advanced Patterns: Advanced Concurrent Patterns",
+  "summary": "This section covers advanced concurrent programming patterns that combine threading, multiprocessing, and asynchronous programming to solve complex real-world problems.",
+  "order": 35,
+  "objectives": [
+   "Design and implement complex concurrent systems",
+   "Combine different concurrency models effectively",
+   "Build scalable and fault-tolerant applications",
+   "Optimize performance for high-load scenarios",
+   "Handle advanced synchronization and communication patterns"
+  ],
+  "sourceFile": "concurrentprograming/04_advanced_patterns/README.md",
+  "labIds": [],
+  "series": "Hands-on Workshop"
+ },
+ {
+  "id": "ac-05-01-hybrid-concurrency-80ff74",
+  "trackId": "asyncconcur",
+  "title": "05. Advanced Patterns: 01 Hybrid Concurrency",
+  "summary": "Runnable 01 Hybrid Concurrency program, walked through function by function.",
+  "order": 36,
+  "objectives": [
+   "Read and run the 01 Hybrid Concurrency program",
+   "Predict the output before running each part",
+   "Change one line and explain the new behaviour"
+  ],
+  "sourceFile": "concurrentprograming/04_advanced_patterns/examples/01_hybrid_concurrency.py",
+  "labIds": [],
+  "series": "Hands-on Workshop"
+ },
+ {
+  "id": "ac-05-02-high-performance-patterns-687e23",
+  "trackId": "asyncconcur",
+  "title": "05. Advanced Patterns: 02 High Performance Patterns",
+  "summary": "Runnable 02 High Performance Patterns program, walked through function by function.",
+  "order": 37,
+  "objectives": [
+   "Read and run the 02 High Performance Patterns program",
+   "Predict the output before running each part",
+   "Change one line and explain the new behaviour"
+  ],
+  "sourceFile": "concurrentprograming/04_advanced_patterns/examples/02_high_performance_patterns.py",
+  "labIds": [],
+  "series": "Hands-on Workshop"
+ },
+ {
+  "id": "ac-06-performance-optimization-a0bddd",
+  "trackId": "asyncconcur",
+  "title": "06. Production: Performance Optimization",
+  "summary": "Covers Profiling Concurrent Code, Common Bottlenecks, Optimization Techniques, AsyncIO Performance Tips.",
+  "order": 38,
+  "objectives": [
+   "Profiling Concurrent Code",
+   "Common Bottlenecks",
+   "Optimization Techniques",
+   "AsyncIO Performance Tips"
+  ],
+  "sourceFile": "concurrent/16_performance_optimization.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-06-debugging-concurrent-code-bedc0b",
+  "trackId": "asyncconcur",
+  "title": "06. Production: Debugging Concurrent Code",
+  "summary": "Covers Common Concurrency Bugs, Debugging Techniques, Debugging Tools, Reproducing Race Conditions, Debugging Checklist.",
+  "order": 39,
+  "objectives": [
+   "Common Concurrency Bugs",
+   "Debugging Techniques",
+   "Debugging Tools",
+   "Reproducing Race Conditions",
+   "Debugging Checklist"
+  ],
+  "sourceFile": "concurrent/17_debugging.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-06-testing-concurrent-code-454888",
+  "trackId": "asyncconcur",
+  "title": "06. Production: Testing Concurrent Code",
+  "summary": "Covers Testing Challenges, Testing AsyncIO Code, Testing Threading Code, Deterministic Testing, Stress Testing and more.",
+  "order": 40,
+  "objectives": [
+   "Testing Challenges",
+   "Testing AsyncIO Code",
+   "Testing Threading Code",
+   "Deterministic Testing",
+   "Stress Testing",
+   "Property-Based Testing for Concurrency"
+  ],
+  "sourceFile": "concurrent/18_testing.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-06-best-practices-and-summary-de9bfc",
+  "trackId": "asyncconcur",
+  "title": "06. Production: Best Practices and Summary",
+  "summary": "Covers Choosing the Right Concurrency Model, Best Practices Checklist, Common Pitfalls, Performance Guidelines, Testing Guidelines and more.",
+  "order": 41,
+  "objectives": [
+   "Choosing the Right Concurrency Model",
+   "Best Practices Checklist",
+   "Common Pitfalls",
+   "Performance Guidelines",
+   "Testing Guidelines",
+   "Quick Reference Card"
+  ],
+  "sourceFile": "concurrent/20_best_practices.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-06-day-10-async-frameworks-production-980850",
+  "trackId": "asyncconcur",
+  "title": "06. Production: Day 10 — Async Frameworks & Production",
+  "summary": "FastAPI is built on Starlette (ASGI toolkit) + Pydantic (validation). You write async endpoint functions; Starlette handles the HTTP plumbing; Pydantic validates request bodies and serializes responses.",
+  "order": 42,
+  "objectives": [
+   "Build a FastAPI app with async endpoints, Pydantic validation, and background tasks.",
+   "Build an aiohttp.web server with custom routes and middleware.",
+   "Write async tests with pytest-asyncio, including fixtures and parametrize.",
+   "Enable asyncio debug mode to detect slow callbacks and un-awaited coroutines.",
+   "Implement graceful shutdown with signal handlers and task cancellation.",
+   "Apply production patterns: circuit breakers, retry, observability."
+  ],
+  "sourceFile": "async/day10-async-frameworks-production.md",
+  "labIds": [],
+  "series": "10-Day Bootcamp"
+ },
+ {
+  "id": "ac-06-synchronous-vs-asynchronous-the-mental-model-14f638",
+  "trackId": "asyncconcur",
+  "title": "06. Production: Synchronous vs Asynchronous: The Mental Model",
+  "summary": "Before diving into coroutines, event loops, and FastAPI internals, you need a rock-solid mental model of what \"asynchronous\" actually means.",
+  "order": 43,
+  "objectives": [
+   "The Restaurant Waiter Analogy",
+   "Blocking vs Non-Blocking I/O",
+   "When Async Wins and When It Loses"
+  ],
+  "sourceFile": "async/Async_Programming_FastAPI_Interview_Guide.pdf",
+  "labIds": [],
+  "series": "FastAPI Async Interview Guide"
+ },
+ {
+  "id": "ac-06-the-event-loop-coroutines-tasks-and-futures-70fe3a",
+  "trackId": "asyncconcur",
+  "title": "06. Production: The Event Loop, Coroutines, Tasks, and Futures",
+  "summary": "The async stack in Python has four primitives that candidates routinely confuse: coroutines, tasks, futures, and the event loop itself.",
+  "order": 44,
+  "objectives": [
+   "The Event Loop",
+   "Coroutines: Functions vs Objects",
+   "Tasks: Scheduled Coroutines",
+   "asyncio.gather vs asyncio.wait vs asyncio.create_task",
+   "Futures: Low-Level Awaitables"
+  ],
+  "sourceFile": "async/Async_Programming_FastAPI_Interview_Guide.pdf",
+  "labIds": [],
+  "series": "FastAPI Async Interview Guide"
+ },
+ {
+  "id": "ac-06-async-await-syntax-demystified-618533",
+  "trackId": "asyncconcur",
+  "title": "06. Production: async/await Syntax Demystified",
+  "summary": "The async and await keywords were added in Python 3.5 to make coroutine code look sequential while behaving concurrently.",
+  "order": 45,
+  "objectives": [
+   "What async def Actually Does",
+   "What await Actually Does",
+   "Common async/await Mistakes"
+  ],
+  "sourceFile": "async/Async_Programming_FastAPI_Interview_Guide.pdf",
+  "labIds": [],
+  "series": "FastAPI Async Interview Guide"
+ },
+ {
+  "id": "ac-06-when-where-and-why-to-use-async-c74fbf",
+  "trackId": "asyncconcur",
+  "title": "06. Production: When, Where, and Why to Use Async",
+  "summary": "Knowing how async works is not enough. You must also know when to use it, when to avoid it, and when to combine it with threads or processes.",
+  "order": 46,
+  "objectives": [
+   "The Three Workload Types",
+   "asyncio vs Threads vs Multiprocessing vs Gevent",
+   "The Decision Tree"
+  ],
+  "sourceFile": "async/Async_Programming_FastAPI_Interview_Guide.pdf",
+  "labIds": [],
+  "series": "FastAPI Async Interview Guide"
+ },
+ {
+  "id": "ac-06-fastapi-async-internals-5246fc",
+  "trackId": "asyncconcur",
+  "title": "06. Production: FastAPI Async Internals",
+  "summary": "FastAPI is built on Starlette, which is built on the ASGI specification.",
+  "order": 47,
+  "objectives": [
+   "The ASGI Stack",
+   "async def vs def Routes",
+   "How Uvicorn Schedules Requests",
+   "Dependencies, Background Tasks, and Middleware"
+  ],
+  "sourceFile": "async/Async_Programming_FastAPI_Interview_Guide.pdf",
+  "labIds": [],
+  "series": "FastAPI Async Interview Guide"
+ },
+ {
+  "id": "ac-06-scaling-to-1-million-concurrent-users-559a21",
+  "trackId": "asyncconcur",
+  "title": "06. Production: Scaling to 1 Million Concurrent Users",
+  "summary": "The \"1 million concurrent users\" interview question is a classic. It is not really about FastAPI or asyncio - it is about distributed systems.",
+  "order": 48,
+  "objectives": [
+   "The Math: Little's Law",
+   "The Architecture",
+   "OS-Level Tuning",
+   "Connection Pool Sizing",
+   "The Gunicorn + Uvicorn Worker Pattern",
+   "Caching, Queueing, and Degradation"
+  ],
+  "sourceFile": "async/Async_Programming_FastAPI_Interview_Guide.pdf",
+  "labIds": [],
+  "series": "FastAPI Async Interview Guide"
+ },
+ {
+  "id": "ac-06-common-async-pitfalls-and-anti-patterns-c41622",
+  "trackId": "asyncconcur",
+  "title": "06. Production: Common Async Pitfalls and Anti-Patterns",
+  "summary": "Async code looks deceptively similar to sync code, which hides subtle bugs. This chapter catalogs the pitfalls that come up most often in code review and in interviews.",
+  "order": 49,
+  "objectives": [
+   "Blocking the Event Loop",
+   "Async Soup: Making Everything Async",
+   "Forgetting to Await gather() Result",
+   "Over-Subscription",
+   "Swallowing Exceptions in gather",
+   "Creating Tasks Without Tracking Them"
+  ],
+  "sourceFile": "async/Async_Programming_FastAPI_Interview_Guide.pdf",
+  "labIds": [],
+  "series": "FastAPI Async Interview Guide"
+ },
+ {
+  "id": "ac-07-topic-1-core-execution-how-python-runs-your-code-014756",
+  "trackId": "asyncconcur",
+  "title": "07. Python Internals: Topic 1 — Core Execution: How Python Runs Your Code",
+  "summary": "Python is compiled, not interpreted line-by-line. When you run a .py file, CPython goes through four stages:",
+  "order": 50,
+  "objectives": [
+   "Trace the full compilation pipeline: source → tokens → AST → code objects → bytecode.",
+   "Inspect a code object's anatomy (co_code, co_consts, co_names, co_varnames).",
+   "Explain the eval loop (ceval.c) and how it walks the bytecode.",
+   "Describe the frame stack and how function calls push/pop frames.",
+   "Predict which bytecode each Python statement compiles to (dis.dis).",
+   "Explain name binding and the LEGB scoping rule at the bytecode level."
+  ],
+  "sourceFile": "async/topic1-core-execution.md",
+  "labIds": [],
+  "series": "Python Internals Deep Dive"
+ },
+ {
+  "id": "ac-07-topic-2-object-model-pyobject-types-caches-50f4a9",
+  "trackId": "asyncconcur",
+  "title": "07. Python Internals: Topic 2 — Object Model: PyObject, Types, Caches",
+  "summary": "In CPython, every Python object — integers, strings, lists, functions, classes, modules, None — is a PyObject* in C. The C struct starts with two fields:",
+  "order": 51,
+  "objectives": [
+   "Explain that every Python object is a PyObject* in C with ob_refcnt and ob_type.",
+   "Describe the type system and why type is its own metaclass.",
+   "Predict when Python reuses objects via the small integer cache (-5 to 256) and string interning.",
+   "Distinguish identity (is) from equality (==) and know when each applies.",
+   "Use ctypes to inspect the raw memory of a PyObject.",
+   "Walk the MRO (Method Resolution Order) for multiple inheritance."
+  ],
+  "sourceFile": "async/topic2-object-model.md",
+  "labIds": [],
+  "series": "Python Internals Deep Dive"
+ },
+ {
+  "id": "ac-07-topic-3-dictionary-internals-from-hash-table-to--72267a",
+  "trackId": "asyncconcur",
+  "title": "07. Python Internals: Topic 3 — Dictionary Internals: From Hash Table to Compact Dict",
+  "summary": "Before 3.6, a dict was a single large array of (hash, key, value) entries. To keep lookups fast (O(1)), the table had to be at most 2/3 full — the remaining 1/3 was empty slots to terminate probe sequences.",
+  "order": 52,
+  "objectives": [
+   "Describe the pre-3.6 sparse hash table layout and its memory waste.",
+   "Explain the compact dict design (3.6+) — two arrays: sparse indices + dense entries.",
+   "Predict why dicts maintain insertion order (and why it's guaranteed since 3.7+).",
+   "Describe Python's hash function (SipHash-1-3), hash randomization (PYTHONHASHSEED), and why it matters.",
+   "Walk through open addressing with the perturbation probe sequence used on collision.",
+   "Explain the 2/3 load-factor threshold and the resize algorithm."
+  ],
+  "sourceFile": "async/topic3-dictionary-internals.md",
+  "labIds": [],
+  "series": "Python Internals Deep Dive"
+ },
+ {
+  "id": "ac-07-topic-4-set-internals-a-dict-without-values-65a0b0",
+  "trackId": "asyncconcur",
+  "title": "07. Python Internals: Topic 4 — Set Internals: A Dict Without Values",
+  "summary": "A set is essentially a dict where you only care about the keys — the \"value\" slot is removed. All the hash table mechanics (compact layout, perturbation probe, 2/3 load factor, hash randomization) are identical to dict.",
+  "order": 53,
+  "objectives": [
+   "Explain that a set is a hash table with keys but no values — same memory layout as dict.",
+   "Describe why frozenset exists (hashable → can be a set member or dict key).",
+   "Predict the time complexity of set operations: in, union, intersection, difference, symmetric_difference.",
+   "Explain why sets require hashable elements (same as dict keys).",
+   "Use sets for deduplication, membership testing, and set algebra.",
+   "Decide between set, dict (when you need values), and list (when you need order + duplicates)."
+  ],
+  "sourceFile": "async/topic4-set-internals.md",
+  "labIds": [],
+  "series": "Python Internals Deep Dive"
+ },
+ {
+  "id": "ac-07-topic-5-memory-management-refcount-gc-pymalloc-d28c4d",
+  "trackId": "asyncconcur",
+  "title": "07. Python Internals: Topic 5 — Memory Management: Refcount + GC + pymalloc",
+  "summary": "For objects 512 bytes or smaller, CPython uses its own allocator:",
+  "order": 54,
+  "objectives": [
+   "Explain the three layers of CPython memory management: refcount, cyclic GC, and pymalloc.",
+   "Describe how Py_INCREF / Py_DECREF work and why refcounting is the primary mechanism.",
+   "Identify reference cycles and explain why refcounting alone can't collect them.",
+   "Describe the generational garbage collector (3 generations, threshold tuning).",
+   "Use the gc module to inspect, tune, and disable garbage collection.",
+   "Explain pymalloc's arena / pool / block architecture and the 512-byte threshold."
+  ],
+  "sourceFile": "async/topic5-memory-management.md",
+  "labIds": [],
+  "series": "Python Internals Deep Dive"
+ },
+ {
+  "id": "ac-07-topic-6-gil-deep-dive-mechanics-tuning-and-the-n-d69eb4",
+  "trackId": "asyncconcur",
+  "title": "07. Python Internals: Topic 6 — GIL Deep Dive: Mechanics, Tuning, and the nogil Future",
+  "summary": "The Global Interpreter Lock is a single mutex (specifically a pthread_mutex_t or Windows critical section) defined in Python/ceval_gil.c. Every thread that wants to execute Python bytecode must hold this lock.",
+  "order": 55,
+  "objectives": [
+   "Explain what the GIL is, where it lives in CPython source, and why it exists.",
+   "Describe the eval breaker mechanism and sys.setswitchinterval (default 5ms).",
+   "Identify the exact conditions under which the GIL is released (I/O, C extensions, periodic check).",
+   "Predict when threading will and won't speed up Python code.",
+   "Explain why multiprocessing bypasses the GIL.",
+   "Use sys.setswitchinterval to tune GIL behavior for I/O-bound vs CPU-bound workloads."
+  ],
+  "sourceFile": "async/topic6-gil-deep-dive.md",
+  "labIds": [],
+  "series": "Python Internals Deep Dive"
+ },
+ {
+  "id": "ac-10-fundamentals-of-concurrency-bd43a6",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Fundamentals of Concurrency",
+  "summary": "Look at these tasks and classify them as I/O-bound or CPU-bound:",
+  "order": 56,
+  "objectives": [
+   "Solve the Fundamentals of Concurrency exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "concurrent/01_fundamentals.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-10-threading-basics-ce7a9b",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Threading Basics",
+  "summary": "Next: 03_threading_synchronization.md — Learn about locks, semaphores, and thread coordination →",
+  "order": 57,
+  "objectives": [
+   "Solve the Threading Basics exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "concurrent/02_threading_basics.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-10-thread-synchronization-0f74a2",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Thread Synchronization",
+  "summary": "Next: 04_threading_patterns.md — Learn producer-consumer, worker pools, and more →",
+  "order": 58,
+  "objectives": [
+   "Solve the Thread Synchronization exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "concurrent/03_threading_synchronization.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-10-threading-patterns-649f76",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Threading Patterns",
+  "summary": "Exercises for Threading Patterns.",
+  "order": 59,
+  "objectives": [
+   "Solve the Threading Patterns exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "concurrent/04_threading_patterns.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-10-multiprocessing-basics-db8fe3",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Multiprocessing Basics",
+  "summary": "Next: 06_multiprocessing_communication.md — Learn about Queues, Pipes, and shared memory →",
+  "order": 60,
+  "objectives": [
+   "Solve the Multiprocessing Basics exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "concurrent/05_multiprocessing_basics.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-10-multiprocessing-communication-d800ab",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Multiprocessing Communication",
+  "summary": "Next: 07_multiprocessing_pools.md — Learn about Process Pools and parallel execution →",
+  "order": 61,
+  "objectives": [
+   "Solve the Multiprocessing Communication exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "concurrent/06_multiprocessing_communication.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-10-multiprocessing-pools-5a4300",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Multiprocessing Pools",
+  "summary": "Convert this sequential code to parallel using both map and starmap:",
+  "order": 62,
+  "objectives": [
+   "Solve the Multiprocessing Pools exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "concurrent/07_multiprocessing_pools.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-10-asyncio-basics-1cbbcd",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: AsyncIO Basics",
+  "summary": "Next: 09_asyncio_tasks.md — Deep dive into task management and TaskGroups →",
+  "order": 63,
+  "objectives": [
+   "Solve the AsyncIO Basics exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "concurrent/08_asyncio_basics.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-10-asyncio-tasks-and-taskgroups-97f8c3",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: AsyncIO Tasks and TaskGroups",
+  "summary": "Next: 10_asyncio_synchronization.md — Learn about async-safe synchronization primitives →",
+  "order": 64,
+  "objectives": [
+   "Solve the AsyncIO Tasks and TaskGroups exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "concurrent/09_asyncio_tasks.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-10-asyncio-synchronization-c55dd1",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: AsyncIO Synchronization",
+  "summary": "Next: 11_asyncio_advanced.md — Advanced asyncio patterns and techniques →",
+  "order": 65,
+  "objectives": [
+   "Solve the AsyncIO Synchronization exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "concurrent/10_asyncio_synchronization.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-10-advanced-asyncio-0d64cc",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Advanced AsyncIO",
+  "summary": "Next: 12_concurrent_futures.md — Learn about the high-level concurrent.futures API →",
+  "order": 66,
+  "objectives": [
+   "Solve the Advanced AsyncIO exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "concurrent/11_asyncio_advanced.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-10-concurrent-futures-54b881",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Concurrent.futures",
+  "summary": "Next: 13_async_io_libraries.md — Explore async I/O libraries like aiohttp, aiofiles →",
+  "order": 67,
+  "objectives": [
+   "Solve the Concurrent.futures exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "concurrent/12_concurrent_futures.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-10-async-i-o-libraries-db88eb",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Async I/O Libraries",
+  "summary": "Next: 14_mixing_concurrency.md — Learn to mix threads, processes, and asyncio →",
+  "order": 68,
+  "objectives": [
+   "Solve the Async I/O Libraries exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "concurrent/13_async_io_libraries.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-10-mixing-concurrency-models-2e5f8e",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Mixing Concurrency Models",
+  "summary": "Next: 15_design_patterns.md — Learn concurrency design patterns →",
+  "order": 69,
+  "objectives": [
+   "Solve the Mixing Concurrency Models exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "concurrent/14_mixing_concurrency.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-10-concurrency-design-patterns-969b27",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Concurrency Design Patterns",
+  "summary": "Create circuit breaker that adjusts thresholds based on error rates.",
+  "order": 70,
+  "objectives": [
+   "Solve the Concurrency Design Patterns exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "concurrent/15_design_patterns.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-10-performance-optimization-6a9c47",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Performance Optimization",
+  "summary": "Implement request coalescing for duplicate concurrent requests.",
+  "order": 71,
+  "objectives": [
+   "Solve the Performance Optimization exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "concurrent/16_performance_optimization.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-10-debugging-concurrent-code-313141",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Debugging Concurrent Code",
+  "summary": "Create tool that finds potential deadlocks in code statically.",
+  "order": 72,
+  "objectives": [
+   "Solve the Debugging Concurrent Code exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "concurrent/17_debugging.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-10-testing-concurrent-code-59a9e5",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Testing Concurrent Code",
+  "summary": "Next: 19_real_world_projects.md — Build real-world concurrent applications →",
+  "order": 73,
+  "objectives": [
+   "Solve the Testing Concurrent Code exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "concurrent/18_testing.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-10-day-1-threading-fundamentals-4278ee",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Day 1 — Threading Fundamentals",
+  "summary": "Goal: Download 5 URLs in parallel using threads, time it, compare to sequential.",
+  "order": 74,
+  "objectives": [
+   "Solve the Day 1 — Threading Fundamentals exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "async/day1-threading-fundamentals.md",
+  "labIds": [],
+  "series": "10-Day Bootcamp"
+ },
+ {
+  "id": "ac-10-day-10-async-frameworks-production-dd5204",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Day 10 — Async Frameworks & Production",
+  "summary": "Goal: Build a FastAPI app for a \"todos\" resource with endpoints: POST /todos, GET /todos, GET /todos/{id}, PUT /todos/{id}, DELETE /todos/{id}. Use Pydantic for validation, in-memory dict for storage.",
+  "order": 75,
+  "objectives": [
+   "Solve the Day 10 — Async Frameworks & Production exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "async/day10-async-frameworks-production.md",
+  "labIds": [],
+  "series": "10-Day Bootcamp"
+ },
+ {
+  "id": "ac-10-day-2-advanced-threading-locks-pools-queues-d72c66",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Day 2 — Advanced Threading: Locks, Pools, Queues",
+  "summary": "Goal: Take the Counter class from Day 1 (which lost updates) and make it correct with a Lock. Benchmark the overhead vs the unsafe version.",
+  "order": 76,
+  "objectives": [
+   "Solve the Day 2 — Advanced Threading: Locks, Pools, Queues exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "async/day2-advanced-threading.md",
+  "labIds": [],
+  "series": "10-Day Bootcamp"
+ },
+ {
+  "id": "ac-10-day-3-multiprocessing-fundamentals-939776",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Day 3 — Multiprocessing Fundamentals",
+  "summary": "Goal: Time the same prime-counting workload single-process, 4-thread, and 4-process. Confirm only the 4-process version is ~4× faster.",
+  "order": 77,
+  "objectives": [
+   "Solve the Day 3 — Multiprocessing Fundamentals exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "async/day3-multiprocessing-fundamentals.md",
+  "labIds": [],
+  "series": "10-Day Bootcamp"
+ },
+ {
+  "id": "ac-10-day-4-advanced-multiprocessing-pools-shared-memo-e4708c",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Day 4 — Advanced Multiprocessing: Pools & Shared Memory",
+  "summary": "Goal: Compute the Mandelbrot escape-time for a 1000×1000 grid. Split rows across workers with pool.map(compute_row, range(1000), chunksize=...).",
+  "order": 78,
+  "objectives": [
+   "Solve the Day 4 — Advanced Multiprocessing: Pools & Shared Memory exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "async/day4-advanced-multiprocessing.md",
+  "labIds": [],
+  "series": "10-Day Bootcamp"
+ },
+ {
+  "id": "ac-10-day-5-async-fundamentals-event-loop-coroutines-b9c27c",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Day 5 — Async Fundamentals: Event Loop & Coroutines",
+  "summary": "Goal: Write two versions of a coroutine that \"sleeps 0.3s × 3\": one using await asyncio.sleep, one using time.sleep. Print timings.",
+  "order": 79,
+  "objectives": [
+   "Solve the Day 5 — Async Fundamentals: Event Loop & Coroutines exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "async/day5-async-fundamentals.md",
+  "labIds": [],
+  "series": "10-Day Bootcamp"
+ },
+ {
+  "id": "ac-10-day-6-asyncio-task-management-gather-wait-timeou-2f8c2e",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Day 6 — asyncio Task Management: gather, wait, timeouts",
+  "summary": "Goal: Call 8 \"endpoints\" (simulated with asyncio.sleep + random failures). Use gather(return_exceptions=True).",
+  "order": 80,
+  "objectives": [
+   "Solve the Day 6 — asyncio Task Management: gather, wait, timeouts exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "async/day6-asyncio-task-management.md",
+  "labIds": [],
+  "series": "10-Day Bootcamp"
+ },
+ {
+  "id": "ac-10-day-7-async-synchronization-primitives-52035f",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Day 7 — Async Synchronization Primitives",
+  "summary": "Goal: 10 coroutines each increment a shared counter 1000 times. Use asyncio.Lock to protect it.",
+  "order": 81,
+  "objectives": [
+   "Solve the Day 7 — Async Synchronization Primitives exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "async/day7-async-synchronization.md",
+  "labIds": [],
+  "series": "10-Day Bootcamp"
+ },
+ {
+  "id": "ac-10-day-8-real-world-async-i-o-e26b17",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Day 8 — Real-world Async I/O",
+  "summary": "Goal: Fetch 5 different endpoints concurrently. Each gets a 2s timeout.",
+  "order": 82,
+  "objectives": [
+   "Solve the Day 8 — Real-world Async I/O exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "async/day8-real-world-async-io.md",
+  "labIds": [],
+  "series": "10-Day Bootcamp"
+ },
+ {
+  "id": "ac-10-day-9-sync-async-bridge-advanced-patterns-0b327b",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Day 9 — Sync → Async Bridge & Advanced Patterns",
+  "summary": "Goal: You have a sync function slow_lib.compute(n) that takes 1s. Write an async wrapper async_compute(n) that runs it via run_in_executor.",
+  "order": 83,
+  "objectives": [
+   "Solve the Day 9 — Sync → Async Bridge & Advanced Patterns exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "async/day9-sync-to-async-bridge.md",
+  "labIds": [],
+  "series": "10-Day Bootcamp"
+ },
+ {
+  "id": "ac-10-threading-fundamentals-exercises-bcb910",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Threading Fundamentals - Exercises",
+  "summary": "This directory contains 10 progressive exercises to help you master threading concepts in Python. Each exercise builds upon the previous ones and focuses on practical applications.",
+  "order": 84,
+  "objectives": [
+   "Solve the Threading Fundamentals - Exercises exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "concurrentprograming/01_threading/exercises/README.md",
+  "labIds": [],
+  "series": "Hands-on Workshop"
+ },
+ {
+  "id": "ac-10-multiprocessing-exercises-e721bc",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Multiprocessing - Exercises",
+  "summary": "This directory contains 10 progressive exercises to help you master multiprocessing concepts in Python. Each exercise builds upon the previous ones and focuses on practical applications of process-based concurrency.",
+  "order": 85,
+  "objectives": [
+   "Solve the Multiprocessing - Exercises exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "concurrentprograming/02_multiprocessing/exercises/README.md",
+  "labIds": [],
+  "series": "Hands-on Workshop"
+ },
+ {
+  "id": "ac-10-asynchronous-programming-exercises-271714",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Asynchronous Programming Exercises",
+  "summary": "Difficulty: Topics: async/await, coroutines, basic task creation",
+  "order": 86,
+  "objectives": [
+   "Solve the Asynchronous Programming Exercises exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "concurrentprograming/03_asynchronous/exercises/README.md",
+  "labIds": [],
+  "series": "Hands-on Workshop"
+ },
+ {
+  "id": "ac-10-advanced-concurrent-patterns-exercises-3e19d7",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Advanced Concurrent Patterns - Exercises",
+  "summary": "These exercises build upon your knowledge of threading, multiprocessing, and asynchronous programming to create sophisticated concurrent applications.",
+  "order": 87,
+  "objectives": [
+   "Solve the Advanced Concurrent Patterns - Exercises exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "concurrentprograming/04_advanced_patterns/exercises/README.md",
+  "labIds": [],
+  "series": "Hands-on Workshop"
+ },
+ {
+  "id": "ac-10-fastapi-async-interview-guide-fad950",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: FastAPI Async Interview Guide",
+  "summary": "Theory only sticks if you write code. The following five tasks progress from converting a sync route to async, all the way to designing a websocket tier for 100k connections.",
+  "order": 88,
+  "objectives": [
+   "Solve the FastAPI Async Interview Guide exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "async/Async_Programming_FastAPI_Interview_Guide.pdf",
+  "labIds": [],
+  "series": "FastAPI Async Interview Guide"
+ },
+ {
+  "id": "ac-10-topic-1-core-execution-how-python-runs-your-code-d0f67d",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Topic 1 — Core Execution: How Python Runs Your Code",
+  "summary": "Goal: Determine experimentally which constant expressions CPython folds at compile time. Try 1 + 2, \"a\" + \"b\", [1, 2] + [3, 4], 1 < 2, \"x\" * 3.",
+  "order": 89,
+  "objectives": [
+   "Solve the Topic 1 — Core Execution: How Python Runs Your Code exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "async/topic1-core-execution.md",
+  "labIds": [],
+  "series": "Python Internals Deep Dive"
+ },
+ {
+  "id": "ac-10-topic-2-object-model-pyobject-types-caches-799c7f",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Topic 2 — Object Model: PyObject, Types, Caches",
+  "summary": "Goal: Determine the actual range of the small integer cache on your Python version by testing values from -10 to 260. Print which ones share identity when constructed at runtime via int(str(n)).",
+  "order": 90,
+  "objectives": [
+   "Solve the Topic 2 — Object Model: PyObject, Types, Caches exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "async/topic2-object-model.md",
+  "labIds": [],
+  "series": "Python Internals Deep Dive"
+ },
+ {
+  "id": "ac-10-topic-3-dictionary-internals-from-hash-table-to--1125d1",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Topic 3 — Dictionary Internals: From Hash Table to Compact Dict",
+  "summary": "Goal: Build a dict by inserting keys in random order. Iterate and confirm the iteration order matches insertion order, not sorted order, not hash order.",
+  "order": 91,
+  "objectives": [
+   "Solve the Topic 3 — Dictionary Internals: From Hash Table to Compact Dict exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "async/topic3-dictionary-internals.md",
+  "labIds": [],
+  "series": "Python Internals Deep Dive"
+ },
+ {
+  "id": "ac-10-topic-4-set-internals-a-dict-without-values-4ae650",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Topic 4 — Set Internals: A Dict Without Values",
+  "summary": "Goal: Write find_duplicates(items: list) -> list that returns the duplicates (each once, in first-occurrence order). Use a set for tracking.",
+  "order": 92,
+  "objectives": [
+   "Solve the Topic 4 — Set Internals: A Dict Without Values exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "async/topic4-set-internals.md",
+  "labIds": [],
+  "series": "Python Internals Deep Dive"
+ },
+ {
+  "id": "ac-10-topic-5-memory-management-refcount-gc-pymalloc-cca65f",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Topic 5 — Memory Management: Refcount + GC + pymalloc",
+  "summary": "Goal: Without running, predict the refcount after each operation. Then verify with sys.getrefcount.",
+  "order": 93,
+  "objectives": [
+   "Solve the Topic 5 — Memory Management: Refcount + GC + pymalloc exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "async/topic5-memory-management.md",
+  "labIds": [],
+  "series": "Python Internals Deep Dive"
+ },
+ {
+  "id": "ac-10-topic-6-gil-deep-dive-mechanics-tuning-and-the-n-4a2769",
+  "trackId": "asyncconcur",
+  "title": "10. Exercises: Topic 6 — GIL Deep Dive: Mechanics, Tuning, and the nogil Future",
+  "summary": "Goal: For each workload, predict whether threading will speed it up. Verify with timing.",
+  "order": 94,
+  "objectives": [
+   "Solve the Topic 6 — GIL Deep Dive: Mechanics, Tuning, and the nogil Future exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "async/topic6-gil-deep-dive.md",
+  "labIds": [],
+  "series": "Python Internals Deep Dive"
+ },
+ {
+  "id": "ac-11-real-world-projects-7b4ba8",
+  "trackId": "asyncconcur",
+  "title": "11. Projects: Real-World Projects",
+  "summary": "Next: 20_best_practices.md — Learn best practices for concurrent code →",
+  "order": 95,
+  "objectives": [
+   "Build the Real-World Projects projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "concurrent/19_real_world_projects.md",
+  "labIds": [],
+  "series": "Concurrency Course"
+ },
+ {
+  "id": "ac-11-threading-fundamentals-projects-cbbef6",
+  "trackId": "asyncconcur",
+  "title": "11. Projects: Threading Fundamentals - Projects",
+  "summary": "This directory contains 5 real-world project ideas that apply threading concepts to practical scenarios.",
+  "order": 96,
+  "objectives": [
+   "Build the Threading Fundamentals - Projects projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "concurrentprograming/01_threading/projects/README.md",
+  "labIds": [],
+  "series": "Hands-on Workshop"
+ },
+ {
+  "id": "ac-11-asynchronous-programming-projects-af956c",
+  "trackId": "asyncconcur",
+  "title": "11. Projects: Asynchronous Programming Projects",
+  "summary": "These projects will help you apply asynchronous programming concepts to solve real-world problems and build production-ready applications.",
+  "order": 97,
+  "objectives": [
+   "Build the Asynchronous Programming Projects projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "concurrentprograming/03_asynchronous/projects/README.md",
+  "labIds": [],
+  "series": "Hands-on Workshop"
+ },
+ {
+  "id": "ac-11-advanced-concurrent-patterns-projects-e25c26",
+  "trackId": "asyncconcur",
+  "title": "11. Projects: Advanced Concurrent Patterns - Projects",
+  "summary": "These projects combine all the advanced concurrent programming concepts you've learned to build sophisticated, real-world applications.",
+  "order": 98,
+  "objectives": [
+   "Build the Advanced Concurrent Patterns - Projects projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "concurrentprograming/04_advanced_patterns/projects/README.md",
+  "labIds": [],
+  "series": "Hands-on Workshop"
+ },
+ {
+  "id": "ac-11-industry-ready-concurrent-programming-projects-5e38e6",
+  "trackId": "asyncconcur",
+  "title": "11. Projects: Industry-Ready Concurrent Programming Projects",
+  "summary": "This section contains 10 industry-ready projects that combine all concurrent programming concepts: threading, multiprocessing, and asynchronous programming.",
+  "order": 99,
+  "objectives": [
+   "Build the Industry-Ready Concurrent Programming Projects projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "concurrentprograming/industry_projects/README.md",
+  "labIds": [],
+  "series": "Hands-on Workshop"
+ },
+ {
+  "id": "ac-12-fastapi-async-interview-guide-13a520",
+  "trackId": "asyncconcur",
+  "title": "12. Interview: FastAPI Async Interview Guide",
+  "summary": "Interview Q&A for FastAPI Async Interview Guide — 20 questions with model answers.",
+  "order": 100,
+  "objectives": [
+   "Answer 20 FastAPI Async Interview Guide interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "async/Async_Programming_FastAPI_Interview_Guide.pdf",
+  "labIds": [],
+  "series": "FastAPI Async Interview Guide"
+ }
+]
