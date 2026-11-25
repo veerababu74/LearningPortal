@@ -13,6 +13,6 @@ export default defineConfig({
     chunkSizeWarningLimit: 4000,
   },
   json: {
-    stringify: false,
+    stringify: true,
   },
 })
