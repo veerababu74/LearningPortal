@@ -1,0 +1,79 @@
+.code-panel {
+  background: #0b1220;
+  color: #e2e8f0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(147, 197, 253, 0.25);
+}
+
+.code-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 0.9rem 1rem 0.5rem;
+}
+
+.code-kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+  color: var(--focus-soft);
+  font-weight: 800;
+}
+
+.code-head h3 {
+  margin: 0.15rem 0 0;
+  color: #fff;
+  font-size: 1.05rem;
+}
+
+.copy-btn {
+  border: 1px solid rgba(249, 115, 22, 0.5);
+  background: rgba(249, 115, 22, 0.14);
+  color: #fdba74;
+  border-radius: 999px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font-weight: 750;
+  line-height: 1;
+  min-height: 2.1rem;
+}
+
+.framework-tabs {
+  display: flex;
+  gap: 0.35rem;
+  padding: 0 1rem 0.65rem;
+  flex-wrap: wrap;
+}
+
+.tab {
+  border: 0;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(226, 232, 240, 0.85);
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 650;
+  line-height: 1;
+}
+
+.tab.active {
+  background: var(--reward);
+  color: #1f1308;
+}
+
+.code-body {
+  margin: 0;
+  padding: 0 1rem 1rem;
+  overflow: auto;
+  max-height: 420px;
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+.code-body code {
+  white-space: pre;
+}

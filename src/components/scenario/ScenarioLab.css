@@ -1,0 +1,92 @@
+.scenario-lab {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem 1.15rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.scenario-kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+  color: var(--focus);
+  font-weight: 800;
+}
+
+.scenario-lab h3 {
+  margin: 0.25rem 0 0.55rem;
+  font-size: 1.15rem;
+  max-width: 28ch;
+}
+
+.situation {
+  color: var(--ink-soft);
+  max-width: var(--prose);
+}
+
+.choices {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.choice {
+  text-align: left;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 0.85rem;
+  cursor: pointer;
+  font-weight: 650;
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+
+.choice:hover {
+  border-color: var(--focus-soft);
+  background: var(--focus-tint);
+}
+
+.choice.selected.success {
+  border-color: var(--growth);
+  background: var(--growth-tint);
+}
+
+.choice.selected.warning {
+  border-color: var(--reward);
+  background: var(--reward-tint);
+}
+
+.choice.selected.failure {
+  border-color: var(--danger);
+  background: var(--danger-tint);
+}
+
+.outcome {
+  margin-top: 0.85rem;
+  border-radius: var(--radius-sm);
+  padding: 0.8rem 0.9rem;
+  max-width: var(--prose);
+}
+
+.outcome p {
+  margin: 0.35rem 0 0;
+}
+
+.outcome.success {
+  background: var(--growth-tint);
+}
+
+.outcome.warning {
+  background: var(--reward-tint);
+}
+
+.outcome.failure {
+  background: var(--danger-tint);
+}
+
+.hint {
+  margin: 0.85rem 0 0;
+  color: var(--ink-muted);
+}

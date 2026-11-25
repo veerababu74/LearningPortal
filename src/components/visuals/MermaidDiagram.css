@@ -1,0 +1,36 @@
+.mermaid-wrap {
+  width: 100%;
+  overflow-x: auto;
+  background: #0b1220;
+  border-radius: 12px;
+  padding: 0.85rem;
+  border: 1px solid rgba(147, 197, 253, 0.28);
+  margin: 0.75rem 0 1rem;
+}
+
+.mermaid-wrap svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.mermaid-fallback {
+  background: #0b2f2c;
+  color: #e8f2f0;
+  border-radius: 12px;
+  padding: 0.85rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.mermaid-error {
+  margin: 0 0 0.5rem;
+  color: #f0b429;
+  font-weight: 700;
+}
+
+.mermaid-fallback pre {
+  margin: 0;
+  white-space: pre-wrap;
+  font-size: 0.85rem;
+}
