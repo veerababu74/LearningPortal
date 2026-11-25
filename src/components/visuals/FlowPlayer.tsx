@@ -16,12 +16,13 @@ function shortTitle(title?: string) {
 
 export function FlowPlayer({ diagram, compact = false, onStepChange }: Props) {
   const [step, setStep] = useState(0)
-  const steps = diagram.steps?.length ? diagram.steps : []
+  const safeDiagram = diagram || { title: 'Flow', nodes: [], edges: [], steps: [] }
+  const steps = safeDiagram.steps?.length ? safeDiagram.steps : []
   const current = steps[step] || steps[0]
 
   useEffect(() => {
     setStep(0)
-  }, [diagram.title, diagram.nodes?.length])
+  }, [safeDiagram.title, safeDiagram.nodes?.length])
 
   useEffect(() => {
     if (current) onStepChange?.(step, current)
@@ -30,14 +31,14 @@ export function FlowPlayer({ diagram, compact = false, onStepChange }: Props) {
   const activeNodes = useMemo(() => new Set(current?.activeNodeIds || []), [current])
   const activeEdges = useMemo(() => new Set(current?.activeEdgeIds || []), [current])
 
-  const nodeCount = Math.max(diagram.nodes.length, 1)
+  const nodeCount = Math.max(safeDiagram.nodes?.length || 0, 1)
   const nodeW = 100
   const gap = 28
   const padX = 16
   const width = padX * 2 + nodeCount * nodeW + (nodeCount - 1) * gap
   const height = 100
 
-  if (!diagram.nodes?.length) return null
+  if (!safeDiagram.nodes?.length) return null
 
   function go(next: number) {
     const bounded = (next + steps.length) % steps.length
@@ -49,7 +50,7 @@ export function FlowPlayer({ diagram, compact = false, onStepChange }: Props) {
       <div className="flow-head">
         <div className="flow-title-wrap">
           <p className="flow-kicker">Flow diagram</p>
-          <h3 title={diagram.title}>{shortTitle(diagram.title)}</h3>
+          <h3 title={safeDiagram.title}>{shortTitle(safeDiagram.title)}</h3>
         </div>
         {steps.length > 1 ? (
           <div className="flow-controls">
@@ -71,12 +72,12 @@ export function FlowPlayer({ diagram, compact = false, onStepChange }: Props) {
           viewBox={`0 0 ${width} ${height}`}
           className="flow-svg"
           role="img"
-          aria-label={diagram.title || 'Flow diagram'}
+          aria-label={safeDiagram.title || 'Flow diagram'}
           preserveAspectRatio="xMidYMid meet"
         >
-          {diagram.edges.map((e, ei) => {
-            const sIdx = diagram.nodes.findIndex((n) => n.id === e.source)
-            const tIdx = diagram.nodes.findIndex((n) => n.id === e.target)
+          {(safeDiagram.edges || []).map((e, ei) => {
+            const sIdx = safeDiagram.nodes.findIndex((n) => n.id === e.source)
+            const tIdx = safeDiagram.nodes.findIndex((n) => n.id === e.target)
             if (sIdx < 0 || tIdx < 0) return null
             const x1 = padX + sIdx * (nodeW + gap) + nodeW
             const x2 = padX + tIdx * (nodeW + gap)
@@ -93,7 +94,7 @@ export function FlowPlayer({ diagram, compact = false, onStepChange }: Props) {
               />
             )
           })}
-          {diagram.nodes.map((n, i) => {
+          {safeDiagram.nodes.map((n, i) => {
             const active = activeNodes.has(n.id)
             const x = padX + i * (nodeW + gap)
             const label = n.label.length > 12 ? `${n.label.slice(0, 11)}…` : n.label

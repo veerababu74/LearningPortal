@@ -1,0 +1,98 @@
+import { getCurriculumIndex } from '@/content/loadCurriculum'
+
+export type Course = {
+  id: 'python' | 'async' | 'agents' | 'docker' | 'genai'
+  title: string
+  kicker: string
+  blurb: string
+  to: string
+  accent: string
+  icon: string
+  /** Curriculum track ids that belong to this course (Docker has its own static content). */
+  trackIds: string[]
+}
+
+/** Tracks that have their own course home (everything else is a GenAI track). */
+export const COURSE_TRACKS = new Set(['python', 'asyncconcur', 'agents'])
+
+export function genaiTrackIds() {
+  return getCurriculumIndex()
+    .tracks.map((t) => t.id)
+    .filter((id) => !COURSE_TRACKS.has(id))
+}
+
+export const COURSES: Course[] = [
+  {
+    id: 'python',
+    title: 'Python Mastery',
+    kicker: 'Core language',
+    blurb: 'Fundamentals to advanced Python: data structures, functions, OOP, decorators, typing, files and backend — with exercises, projects and interview answers.',
+    to: '/python',
+    accent: '#1f6feb',
+    icon: '🐍',
+    trackIds: ['python'],
+  },
+  {
+    id: 'async',
+    title: 'Async & Concurrency',
+    kicker: 'Threads · processes · asyncio',
+    blurb: 'Threading, multiprocessing, asyncio, CPython internals and production FastAPI, with a flow diagram for every core idea.',
+    to: '/async',
+    accent: '#0f766e',
+    icon: '⚡',
+    trackIds: ['asyncconcur'],
+  },
+  {
+    id: 'agents',
+    title: 'VeeraAgents',
+    kicker: 'AI agents · LangChain · LangGraph · ADK',
+    blurb: 'Tool calling, agents from scratch, LangChain, LangGraph, memory and human-in-the-loop, Google ADK, multi-agent patterns and guardrails.',
+    to: '/agents',
+    accent: '#7c3aed',
+    icon: '🤖',
+    trackIds: ['agents'],
+  },
+  {
+    id: 'genai',
+    title: 'Generative AI',
+    kicker: 'LLMs · RAG · security · production',
+    blurb: 'LLM concepts, RAG masterclass, agentic AI, multi-agent orchestration, LLM security, gateways and production failure modes.',
+    to: '/tracks',
+    accent: '#c026d3',
+    icon: '✨',
+    trackIds: [], // filled at runtime with genaiTrackIds()
+  },
+  {
+    id: 'docker',
+    title: 'Docker',
+    kicker: 'Containers',
+    blurb: 'Images, containers, volumes, networking, Compose and production deployment, with hands-on labs and a capstone.',
+    to: '/docker',
+    accent: '#0369a1',
+    icon: '🐳',
+    trackIds: [],
+  },
+]
+
+export function courseTrackIds(c: Course) {
+  return c.id === 'genai' ? genaiTrackIds() : c.trackIds
+}
+
+/** Where "back to the course" should go for a lesson's track. */
+export function courseHomeFor(trackId: string): { to: string; label: string } {
+  if (trackId === 'python') return { to: '/python', label: 'Python Mastery' }
+  if (trackId === 'asyncconcur') return { to: '/async', label: 'Async & Concurrency' }
+  if (trackId === 'agents') return { to: '/agents', label: 'VeeraAgents' }
+  const t = getCurriculumIndex().tracks.find((x) => x.id === trackId)
+  return t ? { to: `/tracks/${trackId}`, label: t.title } : { to: '/tracks', label: 'Generative AI tracks' }
+}
+
+/** The lesson the learner opened last, as a link. */
+export function continueLink(lastLessonId: string | null | undefined) {
+  if (!lastLessonId) return null
+  for (const [trackId, list] of Object.entries(getCurriculumIndex().lessonsByTrack)) {
+    const hit = list.find((l) => l.id === lastLessonId)
+    if (hit) return { to: `/learn/${trackId}/${lastLessonId}`, title: hit.title.replace(/^\d{2}\.\s*[^:]+:\s*/, ''), trackId }
+  }
+  return null
+}

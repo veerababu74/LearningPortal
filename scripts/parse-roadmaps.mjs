@@ -763,8 +763,8 @@ function main() {
 
   for (const [k, p] of Object.entries(files)) {
     if (!fs.existsSync(p)) {
-      console.error('Missing source file:', p)
-      process.exit(1)
+      console.log('Roadmap sources not found (.bin/roadmaps) — skipping, keeping the committed generated lessons.')
+      process.exit(0)
     }
   }
 

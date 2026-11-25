@@ -74,6 +74,56 @@
   line-height: 1.55;
 }
 
-.code-body code {
+.code-body code,
+.code-body .py-hl {
   white-space: pre;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.tok-keyword {
+  color: #c084fc;
+  font-weight: 700;
+}
+
+.tok-builtin {
+  color: #38bdf8;
+}
+
+.tok-string {
+  color: #86efac;
+}
+
+.tok-number {
+  color: #fdba74;
+}
+
+.tok-comment {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.tok-class {
+  color: #f472b6;
+  font-weight: 650;
+}
+
+.tok-ident {
+  color: #e2e8f0;
+}
+
+.tok-punct {
+  color: #cbd5e1;
+}
+
+.code-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  padding: 0 1rem 0.85rem;
+  font-size: 0.72rem;
+  opacity: 0.9;
+}
+
+.snippet-tabs {
+  padding-top: 0;
 }

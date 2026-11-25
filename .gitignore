@@ -7,9 +7,9 @@ dist
 !.env.example
 .vite
 
-# Large/binary source archives kept locally
-.bin/roadmaps/*.pdf
-.bin/scripts/
+# Local-only source material (agents, rag, roadmaps, Python copy, asyncconcur, PDFs…).
+# Never pushed: the site builds from the committed src/content/generated output.
+/.bin/
 
 # Editor / OS
 .idea

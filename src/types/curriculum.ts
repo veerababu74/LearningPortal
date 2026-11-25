@@ -1,4 +1,7 @@
 export type TrackId =
+  | 'python'
+  | 'asyncconcur'
+  | 'agents'
   | 'llm-concepts'
   | 'rag'
   | 'agentic-ai'
@@ -82,16 +85,27 @@ export type TeachingPoint = {
   diagram: FlowSpec
 }
 
+/** A curated Mermaid diagram with a short "how to read it" explanation. */
+export type ConceptDiagram = {
+  id: string
+  title: string
+  mermaid: string
+  explain: string
+}
+
 export type LessonSection = {
   id: string
   title: string
   body: string
   visualSummary?: string
   diagram?: FlowSpec
+  diagrams?: ConceptDiagram[]
   points?: TeachingPoint[]
   scenario?: ScenarioSpec
   code?: CodeSnippet[]
 }
+
+export type LessonKind = 'learn' | 'exercise' | 'project' | 'interview'
 
 export type Lesson = {
   id: string
@@ -105,6 +119,12 @@ export type Lesson = {
   relatedIds?: string[]
   sourceFile?: string
   labIds?: string[]
+  /** Course / guide this lesson belongs to (Python and Async tracks). */
+  series?: string
+  /** Position inside the series within its module (1-based). */
+  part?: number
+  partCount?: number
+  kind?: LessonKind
 }
 
 export type TrackMeta = {
@@ -119,5 +139,8 @@ export type TrackMeta = {
 export type CurriculumIndex = {
   generatedAt: string
   tracks: TrackMeta[]
-  lessonsByTrack: Record<TrackId, Array<Pick<Lesson, 'id' | 'title' | 'summary' | 'order'>>>
+  lessonsByTrack: Record<
+    TrackId,
+    Array<Pick<Lesson, 'id' | 'title' | 'summary' | 'order' | 'series' | 'part' | 'partCount'>>
+  >
 }

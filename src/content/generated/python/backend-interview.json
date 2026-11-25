@@ -1,0 +1,164 @@
+{
+  "questions": [
+    {
+      "id": "backend-q1",
+      "number": 1,
+      "question": "Your FastAPI endpoint that fetches user dashboards is taking 3-4 seconds to respond. Users are complaining. Walk me through your systematic approach to diagnose and fix the performance issue.",
+      "answer": "Profile first (never guess), then apply targeted fixes: database query optimization, caching, async I/O, and connection pooling.",
+      "detail": "Performance optimization should be data-driven. Start with profiling tools like cProfile, py-spy, or middleware-based timing. Common culprits: N+1 queries, synchronous I/O in async context, missing indexes, no caching, serialization overhead. Fix in order of impact: DB queries usually give the biggest win, then caching, then async refactoring.",
+      "code": ""
+    },
+    {
+      "id": "backend-q2",
+      "number": 2,
+      "question": "Design a caching strategy using Redis for a product catalog API that serves millions of requests daily. How do you handle cache invalidation, cache stampede, and partial cache updates?",
+      "answer": "Use a layered cache strategy: cache-aside pattern with TTL, implement cache warming, use Redis locks to prevent stampede, and use pub/sub or versioned keys for invalidation.",
+      "detail": "Cache-aside (lazy loading) is the most common pattern: check cache first, on miss fetch from DB and populate cache. Cache stampede (thundering herd) occurs when many requests miss simultaneously — solve with probabilistic early expiration or a distributed lock. For invalidation, use event-driven invalidation or versioned cache keys to avoid stale data.",
+      "code": ""
+    },
+    {
+      "id": "backend-q3",
+      "number": 3,
+      "question": "Your user search API returns results in 800ms. It queries a PostgreSQL table with 10 million users. The query does a LIKE search on email and filters by status and created_at. How do you optimize it?",
+      "answer": "Add composite indexes, switch LIKE to full-text search or trigram indexes (pg_trgm), use query explains, and consider materialized views for complex aggregations.",
+      "detail": "PostgreSQL query optimization hierarchy: 1) Use EXPLAIN ANALYZE to understand the query plan, 2) Add appropriate indexes (B-tree for equality/range, GIN/GiST for text search), 3) Rewrite the query to use indexes effectively (avoid leading wildcards in LIKE), 4) Use connection pooling (PgBouncer), 5) Consider read replicas for heavy read loads.",
+      "code": ""
+    },
+    {
+      "id": "backend-q4",
+      "number": 4,
+      "question": "Your API has 200 concurrent users hitting a PostgreSQL database. You're seeing 'too many connections' errors and connection timeouts. How do you implement and tune connection pooling?",
+      "answer": "Use SQLAlchemy's built-in pool with appropriate settings, deploy PgBouncer as an external pooler for production, and configure pool_size/max_overflow based on your PostgreSQL max_connections.",
+      "detail": "PostgreSQL has a hard limit on connections (default 100). Each connection uses ~5-10MB RAM. SQLAlchemy's pool manages connections at the application level. For production with multiple worker processes, PgBouncer (transaction-mode pooling) is essential — it multiplexes thousands of app connections to a few dozen DB connections.",
+      "code": ""
+    },
+    {
+      "id": "backend-q5",
+      "number": 5,
+      "question": "Your API endpoint processes images synchronously: resize, compress, upload to S3. This takes 5-10 seconds and blocks the response. How do you redesign this for non-blocking performance?",
+      "answer": "Return immediately with a job ID, process asynchronously using Celery + Redis/RabbitMQ as broker, and provide a status polling endpoint or WebSocket for completion notification.",
+      "detail": "Async processing decouples request acceptance from work completion. The API returns a 202 Accepted with a job ID. Celery workers process the image in background. Client polls /jobs/{id}/status or receives a webhook/WebSocket notification when done. This pattern handles spikes and prevents timeouts.",
+      "code": ""
+    },
+    {
+      "id": "backend-q6",
+      "number": 6,
+      "question": "You need to implement rate limiting for your public API: 100 requests/minute per IP for unauthenticated users, 1000/minute per API key for authenticated users. How do you implement this without a single point of failure?",
+      "answer": "Use Redis sliding window or token bucket algorithm via middleware. Use slowapi library for FastAPI. For distributed deployments, use Redis atomic Lua scripts to ensure accuracy across instances.",
+      "detail": "Rate limiting strategies: Fixed window (simple but bursting possible), Sliding window log (accurate), Token bucket (allows bursts), Leaky bucket (smooth output). For production, sliding window with Redis is the sweet spot. Use Lua scripts for atomicity since INCR+EXPIRE isn't atomic.",
+      "code": ""
+    },
+    {
+      "id": "backend-q7",
+      "number": 7,
+      "question": "Before going live with a new API, how do you load test it? Walk through your toolchain, what metrics you measure, and how you interpret the results to make optimization decisions.",
+      "answer": "Use locust or k6 for load testing, py-spy/cProfile for profiling, Prometheus + Grafana for metrics. Measure p50/p95/p99 latency, throughput (RPS), error rate, and resource utilization.",
+      "detail": "Load testing validates performance under realistic conditions. Key phases: smoke test (1-5 users), load test (expected peak), stress test (2-3x peak), spike test (sudden surge). p95/p99 latency matters more than average — the 99th percentile is what your worst 1% of users experience. Profile under load to find real bottlenecks, not synthetic ones.",
+      "code": ""
+    },
+    {
+      "id": "backend-q8",
+      "number": 8,
+      "question": "Explain how you would implement HTTP caching headers in your FastAPI API to reduce server load. When would you use ETag vs Cache-Control vs Last-Modified, and what are the tradeoffs?",
+      "answer": "Use Cache-Control for time-based caching, ETag for content-based validation, and Last-Modified for time-based validation. Combine them for optimal browser and CDN caching behavior.",
+      "detail": "HTTP caching works at multiple levels: browser cache, CDN, reverse proxy. Cache-Control: max-age tells clients how long to cache. ETag is a hash of the content; clients send If-None-Match to check freshness without downloading full response (304 Not Modified). Last-Modified + If-Modified-Since works similarly but uses timestamps. Use ETags for dynamic content, Cache-Control for static/semi-static data.",
+      "code": ""
+    },
+    {
+      "id": "backend-q9",
+      "number": 9,
+      "question": "Your product listing API uses OFFSET pagination and is slow for high page numbers (page 500+). The table has 5 million rows. How do you fix the pagination and implement efficient filtering?",
+      "answer": "Replace OFFSET with cursor-based (keyset) pagination using the last seen ID/timestamp. Add composite indexes to match filter + sort patterns. Use search-specific tools (Elasticsearch) for complex filtering.",
+      "detail": "OFFSET pagination requires scanning and discarding all preceding rows — OFFSET 10000 LIMIT 20 reads 10,020 rows. Cursor pagination uses WHERE id > last_seen_id LIMIT 20, which uses the index directly. The tradeoff: cursor pagination can't jump to arbitrary pages, but APIs rarely need that.",
+      "code": ""
+    },
+    {
+      "id": "backend-q10",
+      "number": 10,
+      "question": "Your API responses are large JSON payloads (500KB+). How do you implement compression to reduce bandwidth and improve response times? Compare gzip vs brotli and when to use each.",
+      "answer": "Add GZipMiddleware in FastAPI for gzip compression. Use Brotli for modern clients (better compression ratio). Only compress responses >1KB — small responses cost more CPU than bandwidth saved.",
+      "detail": "Brotli achieves 15-30% better compression than gzip but requires more CPU. Gzip is universally supported. Most CDNs handle compression at the edge, so you may not need it at the app layer. The Content-Encoding negotiation via Accept-Encoding header determines which algorithm to use.",
+      "code": ""
+    },
+    {
+      "id": "backend-q11",
+      "number": 11,
+      "question": "How do you set up monitoring to ensure your API meets response time SLAs (e.g., p95 < 200ms)? What tools, metrics, and alerting would you implement?",
+      "answer": "Use Prometheus for metrics collection, Grafana for dashboards, and AlertManager for alerting. Track p50/p95/p99 latency histograms, error rates, and throughput. Set alerts on SLA breaches.",
+      "detail": "The four golden signals for monitoring: Latency, Traffic (throughput), Errors, Saturation (resource usage). Histograms are preferred over averages because they capture the distribution. Apdex score (Application Performance Index) quantifies user satisfaction as a single number.",
+      "code": ""
+    },
+    {
+      "id": "backend-q12",
+      "number": 12,
+      "question": "When should you use async def vs def for FastAPI route handlers? What happens if you use async def with a blocking operation like synchronous SQLAlchemy?",
+      "answer": "Use async def for I/O-bound operations (database, HTTP calls, file I/O) with async libraries. Use def (sync) for CPU-bound work — FastAPI runs it in a thread pool automatically. Never use blocking I/O inside async def — it blocks the event loop.",
+      "detail": "FastAPI runs on uvicorn's asyncio event loop. async def handlers run on the event loop directly. def handlers run in a thread pool executor, so they don't block the event loop. A blocking call (time.sleep, synchronous psycopg2) inside async def freezes all other requests because it blocks the single event loop thread.",
+      "code": ""
+    },
+    {
+      "id": "backend-q13",
+      "number": 13,
+      "question": "Your Python microservice needs to call 5 other internal services to build a response. The sequential calls take 500ms total. How do you optimize this inter-service communication?",
+      "answer": "Use asyncio.gather() to make concurrent HTTP calls with httpx.AsyncClient. Implement circuit breakers, timeouts, retries, and connection reuse via persistent clients.",
+      "detail": "Sequential calls: 100ms x 5 = 500ms. Concurrent calls: max(100ms each) ≈ 100ms. httpx.AsyncClient should be reused (not created per request) for connection pooling. Add retries for transient failures, circuit breakers to prevent cascade failures, and fallbacks for degraded service behavior.",
+      "code": ""
+    },
+    {
+      "id": "backend-q14",
+      "number": 14,
+      "question": "Your API has been live for 2 years with clients depending on it. You need to make breaking changes (rename fields, change data types). How do you implement API versioning without breaking existing clients?",
+      "answer": "Use URL path versioning (/v1/, /v2/) for clarity. Maintain both versions with shared business logic but separate request/response models. Use deprecation headers to communicate sunset timelines.",
+      "detail": "Versioning strategies: URL path (/v1/users), query param (?version=1), header (API-Version: 1), content negotiation (Accept: application/vnd.myapi.v1+json). URL path is most explicit and cache-friendly. Never remove versions without adequate deprecation notice (6-12 months minimum). Keep business logic shared, only vary the serialization layer.",
+      "code": ""
+    },
+    {
+      "id": "backend-q15",
+      "number": 15,
+      "question": "Your API calls an external payment service that sometimes takes 10+ seconds or times out. How do you handle timeouts gracefully, implement retries with backoff, and prevent cascading failures?",
+      "answer": "Set explicit timeouts on all external calls, use exponential backoff with jitter for retries, implement circuit breakers, and return graceful degraded responses when the service is unavailable.",
+      "detail": "Retrying without backoff can overwhelm a struggling service (retry storm). Exponential backoff with jitter spreads retry attempts. The circuit breaker prevents retrying a known-down service. Idempotency keys are essential for payment retries to prevent double charges.",
+      "code": ""
+    },
+    {
+      "id": "backend-q16",
+      "number": 16,
+      "question": "How do you architect your FastAPI API to work effectively with a CDN like CloudFront or Cloudflare? What can be CDN-cached vs what must hit your origin server?",
+      "answer": "Cache static and semi-static API responses at CDN edges via appropriate Cache-Control headers. Use cache keys with query params. Purge CDN cache on data updates. Route dynamic/authenticated requests to origin, static public data to CDN.",
+      "detail": "CDN caches by URL + cache key. Public GET endpoints with Cache-Control: public can be cached globally. POST/PUT/DELETE and authenticated requests must reach origin. CDN edge caching reduces latency from ~100ms (cross-region) to ~5ms (nearby edge node) and protects origin from traffic spikes.",
+      "code": ""
+    },
+    {
+      "id": "backend-q17",
+      "number": 17,
+      "question": "A client team wants you to add a GraphQL endpoint alongside your REST API. When would you choose GraphQL over REST, and how do you implement it in a FastAPI service while avoiding N+1 query problems?",
+      "answer": "Use GraphQL when clients need flexible field selection and you have many client types with different data needs. Use Strawberry or Ariadne for FastAPI integration. Solve N+1 with DataLoader (batching + caching).",
+      "detail": "GraphQL shines when: multiple client types (mobile/web/3rd party) need different field subsets, you want to eliminate over-fetching, or schema evolution is needed without versioning. N+1 is the classic GraphQL pitfall — each list item resolver triggers a separate DB query. DataLoader batches these into a single query per batch cycle.",
+      "code": ""
+    },
+    {
+      "id": "backend-q18",
+      "number": 18,
+      "question": "Your team has inconsistent API responses — some endpoints return data directly, others wrap it, errors vary by endpoint. How do you standardize this across a FastAPI application?",
+      "answer": "Define a standard envelope schema with data/error/meta fields. Use custom exception handlers and a response wrapper utility. Implement RFC 7807 Problem Details for error responses.",
+      "detail": "Consistent API responses reduce client integration complexity. The envelope pattern adds metadata (pagination, version, request_id) alongside data. RFC 7807 (Problem Details) is the HTTP standard for error responses — use it instead of inventing your own error format.",
+      "code": ""
+    },
+    {
+      "id": "backend-q19",
+      "number": 19,
+      "question": "Profiling shows your API spends 40% of response time on JSON serialization of large Pydantic models. How do you speed up serialization in FastAPI?",
+      "answer": "Use orjson instead of the standard json library (3-10x faster), use model.model_dump() selectively, avoid extra Pydantic validation on responses, and use response_model_exclude_unset=True.",
+      "detail": "Python's json module is implemented in Python (slow). orjson is implemented in Rust and handles datetime, UUID, numpy arrays natively without custom encoders. Pydantic v2's model.model_dump() + orjson.dumps() is the fastest combination for large payloads.",
+      "code": ""
+    },
+    {
+      "id": "backend-q20",
+      "number": 20,
+      "question": "Your company has 10 microservices. Clients are hitting each service directly. How do you implement an API gateway using Python/FastAPI as a BFF (Backend for Frontend)?",
+      "answer": "Implement a FastAPI BFF that aggregates multiple microservice calls, handles auth centrally, transforms responses for each client type (mobile/web), and adds cross-cutting concerns.",
+      "detail": "The API Gateway/BFF pattern provides a single entry point that: authenticates requests, routes to appropriate services, aggregates multiple service responses into one, and tailors responses for specific client types. The BFF pattern creates separate gateways per client type (mobile BFF, web BFF) for optimized responses.",
+      "code": ""
+    }
+  ]
+}

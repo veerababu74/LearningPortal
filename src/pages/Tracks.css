@@ -15,6 +15,23 @@
   color: var(--focus-deep);
 }
 
+.coverage-note {
+  margin-top: 0.65rem;
+  color: var(--ink-muted);
+  font-weight: 650;
+  font-size: 0.92rem;
+}
+
+.module-block {
+  margin-top: 1.35rem;
+}
+
+.module-heading {
+  margin: 0 0 0.65rem;
+  font-size: 1.15rem;
+  color: var(--focus-deep);
+}
+
 .page-head p {
   color: var(--ink-soft);
   max-width: 60ch;
@@ -172,6 +189,66 @@
   border-color: var(--focus-mid);
 }
 
+.python-path {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.python-path-step {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.85rem 0.95rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow-sm);
+}
+
+.python-path-step strong {
+  color: var(--focus-deep);
+  font-size: 0.95rem;
+}
+
+.python-path-step span {
+  color: var(--ink-muted);
+  font-size: 0.82rem;
+  font-weight: 650;
+}
+
+.python-phase {
+  margin-top: 1.75rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid var(--line);
+}
+
+.python-phase-head h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.35rem;
+  color: var(--focus-deep);
+}
+
+.python-phase-head p {
+  margin: 0 0 0.35rem;
+  color: var(--ink-soft);
+  max-width: 62ch;
+}
+
+.module-count {
+  margin-left: 0.55rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(31, 111, 235, 0.1);
+  color: var(--focus-deep);
+  font-size: 0.75rem;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
 @media (max-width: 800px) {
   .track-row {
     grid-template-columns: 1fr;
@@ -180,4 +257,138 @@
   .page-head h1 {
     max-width: none;
   }
+
+  .python-path {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* breadcrumbs, track progress, search filters */
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  margin-bottom: 0.6rem;
+}
+
+.crumbs a {
+  color: var(--focus);
+  font-weight: 600;
+}
+
+.track-progress-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 0.9rem;
+}
+
+.track-progress {
+  flex: 1 1 200px;
+  max-width: 360px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--mist);
+  overflow: hidden;
+}
+
+.track-progress i {
+  display: block;
+  height: 100%;
+}
+
+.track-progress-row span {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.track-list-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-top: 1.5rem;
+}
+
+.track-list-head h2 {
+  margin: 0;
+}
+
+.track-filter {
+  max-width: 360px;
+  margin: 0;
+}
+
+.search-suggest,
+.search-filters,
+.search-sim-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.search-suggest span {
+  font-weight: 700;
+  color: var(--ink-muted);
+  font-size: 0.88rem;
+}
+
+.search-suggest button,
+.search-filters button {
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 650;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  min-height: 2.2rem;
+  cursor: pointer;
+  color: var(--ink-soft);
+}
+
+.search-filters button span {
+  color: var(--ink-muted);
+  font-size: 0.78rem;
+  margin-left: 0.2rem;
+}
+
+.search-filters button.on {
+  background: var(--focus-deep);
+  border-color: var(--focus-deep);
+  color: #fff;
+}
+
+.search-filters button.on span {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.search-sims {
+  margin-top: 1rem;
+}
+
+.search-sims h2 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+}
+
+.search-sim {
+  border: 1px solid #ddd6fe;
+  background: #f5f3ff;
+  color: #5b21b6;
+  border-radius: 999px;
+  padding: 0.3rem 0.8rem;
+  font-weight: 650;
+  font-size: 0.86rem;
+}
+
+.search-empty {
+  color: var(--ink-muted);
+  margin-top: 1rem;
 }

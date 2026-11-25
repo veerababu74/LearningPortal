@@ -1,26 +1,27 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { loadTrackLessons } from '@/content/loadCurriculum'
+import { getCurriculumIndex, loadLesson } from '@/content/loadCurriculum'
 import type { Lesson, TrackId } from '@/types/curriculum'
 import { LessonShell } from '@/components/lesson/LessonShell'
+import { courseHomeFor } from '@/content/courses'
 
 export function LessonPage() {
   const { trackId = '', lessonId = '' } = useParams()
   const [lesson, setLesson] = useState<Lesson | null>(null)
-  const [siblings, setSiblings] = useState<Lesson[]>([])
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(true)
+
+  // prev / next come from the small index — no need to download the whole track
+  const siblings = getCurriculumIndex().lessonsByTrack[trackId as TrackId] || []
 
   useEffect(() => {
     let alive = true
     setLoading(true)
     setError(null)
-    loadTrackLessons(trackId as TrackId)
-      .then((list) => {
+    loadLesson(trackId as TrackId, lessonId)
+      .then((found) => {
         if (!alive) return
-        setSiblings(list)
-        const found = list.find((l) => l.id === lessonId) || null
-        setLesson(found)
+        setLesson(found || null)
         if (!found) setError('Lesson not found')
       })
       .catch(() => {
@@ -36,17 +37,23 @@ export function LessonPage() {
 
   if (loading) {
     return (
-      <div className="track-page">
-        <p>Loading lesson…</p>
+      <div className="track-page" aria-busy="true">
+        <div className="page-loading">
+          <span className="spinner" aria-hidden />
+          Loading lesson…
+        </div>
       </div>
     )
   }
 
   if (error || !lesson) {
+    const home = courseHomeFor(trackId)
     return (
       <div className="track-page">
         <h1>{error || 'Lesson not found'}</h1>
-        <Link to={`/tracks/${trackId}`}>Back to track</Link>
+        <p>
+          <Link to={home.to}>← Back to {home.label}</Link>
+        </p>
       </div>
     )
   }
