@@ -13,8 +13,11 @@ import { getSim } from '@/content/agents/visualizer'
 import { AGENT_GALLERY as AGENT_SIMS } from '@/content/sims/registry'
 import { AgentSimPlayer } from '@/components/agents/AgentSimPlayer'
 import { useProgress } from '@/store/progress'
+import { AGENTS_PATH_COURSE } from '@/content/paths/courses'
+import { PathMap, PathProgressHero } from '@/pages/path/PathPages'
 import '@/components/python/python.css'
 import '@/components/agents/agents.css'
+import { tidyTitle } from '@/content/titles'
 
 export function AgentsHome() {
   const index = getCurriculumIndex()
@@ -27,38 +30,16 @@ export function AgentsHome() {
   const demo = getSim('react-loop')!
   const allIds = (index.lessonsByTrack.agents || []).map((l) => l.id)
   const doneCount = allIds.filter((id) => completed.includes(id)).length
+  const agentsPath = AGENTS_PATH_COURSE.getPath()
 
   return (
     <div className="py-page">
-      <section className="ag-hero">
-        <p className="py-kicker" style={{ color: '#7c3aed' }}>
-          VeeraAgents
-        </p>
-        <h1>Learn AI agents by watching them run</h1>
-        <p>
-          Agentic AI from first principles to production — tool calling, agents without frameworks, LangChain,
-          LangGraph, memory and human-in-the-loop, Google ADK, multi-agent patterns, guardrails and evaluation. Every
-          core idea has a diagram, an animated step-by-step simulation, real code and interview questions.
-        </p>
-        <div className="ag-hero-stats">
-          <span>{track?.lessonCount ?? 0} lessons</span>
-          <span>{learnModules.length} modules</span>
-          <span>{AGENT_SIMS.length} animated simulations</span>
-          <span>400+ interview questions</span>
-          {doneCount ? <span>{doneCount} completed</span> : null}
-        </div>
-        <div className="ag-hero-cta">
-          <Link className="ag-cta" to="/agents/learn/01">
-            Start with module 01 →
-          </Link>
-          <Link className="ag-cta soft" to="/agents/visualizer">
-            ▶ Agent Visualizer
-          </Link>
-          <Link className="ag-cta soft" to="/agents/interview">
-            🎯 Interview prep
-          </Link>
-        </div>
-      </section>
+      <PathProgressHero
+        course={AGENTS_PATH_COURSE}
+        heading="Learn AI agents by watching them run — in the right order"
+        text={`A guided path of ${agentsPath.topics.length} topics in ${agentsPath.stages.length} stages: LLM foundations, the agent loop and tool calling, frameworks, memory and humans, Google ADK, multi-agent patterns and production safety. Every topic has a simulation, labs and interview questions.`}
+        chips={[`${track?.lessonCount ?? 0} lessons`, `${agentsPath.topics.length} topics`, `${AGENT_SIMS.length} simulations`, `${doneCount} completed`]}
+      />
 
       <label className="py-search-wrap">
         <span className="py-kicker">Search</span>
@@ -84,7 +65,7 @@ export function AgentsHome() {
                 className={completed.includes(lesson.id) ? 'py-browse-card done' : 'py-browse-card'}
               >
                 <p className="py-kicker">{lesson.title.match(/^\d{2}\.\s*[^:]+/)?.[0] || 'Agents'}</p>
-                <h3>{cleanPreview(lessonTopic(lesson.title))}</h3>
+                <h3>{tidyTitle(cleanPreview(lessonTopic(lesson.title)))}</h3>
                 <p>{cleanPreview(lesson.summary)}</p>
               </Link>
             ))}
@@ -110,39 +91,13 @@ export function AgentsHome() {
           </section>
 
           <section className="py-section">
-            <h2>
-              Learning roadmap <span className="py-count">{learnModules.length}</span>
-            </h2>
-            <div className="ag-roadmap">
-              {learnModules.map((mod) => {
-                const info = AGENT_MODULE_INFO[mod.id]
-                const done = mod.lessons.filter((l) => completed.includes(l.id)).length
-                const pct = mod.lessons.length ? Math.round((done / mod.lessons.length) * 100) : 0
-                const sims = AGENT_SIMS.filter((s) => s.module === mod.id).length
-                return (
-                  <Link
-                    key={mod.id}
-                    to={`/agents/learn/${mod.id}`}
-                    className="ag-mod-card"
-                    style={{ ['--mod' as string]: info?.color || '#7c3aed' }}
-                  >
-                    <span className="ag-mod-num">
-                      {info?.icon} Module {mod.id}
-                    </span>
-                    <h3>{mod.name}</h3>
-                    <p>{info?.blurb}</p>
-                    <div className="ag-mod-meta">
-                      <span>{mod.lessons.length} lessons</span>
-                      {sims ? <span>{sims} simulations</span> : null}
-                      {pct ? <span>{pct}% done</span> : null}
-                    </div>
-                    <div className="ag-mod-progress" aria-label={`${pct}% complete`}>
-                      <i style={{ width: `${pct}%` }} />
-                    </div>
-                  </Link>
-                )
-              })}
+            <div className="py-section-row">
+              <h2>Your learning path</h2>
+              <Link to="/agents/learn" className="py-btn soft">
+                Browse by original module
+              </Link>
             </div>
+            <PathMap course={AGENTS_PATH_COURSE} />
           </section>
 
           <section className="py-section">

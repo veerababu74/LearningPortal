@@ -17,6 +17,7 @@ import { SeriesCards } from '@/components/python/SeriesCards'
 import { useProgress } from '@/store/progress'
 import '@/components/python/python.css'
 import '@/components/agents/agents.css'
+import { tidyTitle } from '@/content/titles'
 
 const href = (cfg: CourseConfig, id: string) => `/learn/${cfg.trackId}/${id}`
 
@@ -30,7 +31,7 @@ function SearchResults({ cfg, hits, completed }: { cfg: CourseConfig; hits: Retu
         {hits.slice(0, 30).map((lesson) => (
           <Link key={lesson.id} to={href(cfg, lesson.id)} className={completed.includes(lesson.id) ? 'py-browse-card done' : 'py-browse-card'}>
             <p className="py-kicker">{lesson.title.match(/^\d{2}\.\s*[^:]+/)?.[0] || cfg.title}</p>
-            <h3>{cleanPreview(lessonTopic(lesson.title))}</h3>
+            <h3>{tidyTitle(cleanPreview(lessonTopic(lesson.title)))}</h3>
             <p>{cleanPreview(lesson.summary)}</p>
           </Link>
         ))}

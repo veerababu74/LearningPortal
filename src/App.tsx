@@ -29,6 +29,10 @@ const DockerCapstone = page(() => import('@/pages/docker/DockerCapstone'), 'Dock
 
 const PythonHome = page(() => import('@/pages/python/PythonHome'), 'PythonHome')
 const PythonPhasePage = page(() => import('@/pages/python/PythonPhasePage'), 'PythonPhasePage')
+const PythonTopicPage = page(() => import('@/pages/python/PythonPath'), 'PythonTopicPage')
+const PythonInterviewHub = page(() => import('@/pages/python/PythonPath'), 'PythonInterviewHub')
+const AgentsTopicPage = page(() => import('@/pages/agents/AgentsPath'), 'AgentsTopicPage')
+const AgentsInterviewHub = page(() => import('@/pages/agents/AgentsPath'), 'AgentsInterviewHub')
 const PythonModuleBrowsePage = page(() => import('@/pages/python/PythonModuleBrowsePage'), 'PythonModuleBrowsePage')
 const PythonLabsIndex = page(() => import('@/pages/python/PythonLabsIndex'), 'PythonLabsIndex')
 const PythonLabRouter = page(() => import('@/pages/python/PythonLabRouter'), 'PythonLabRouter')
@@ -85,6 +89,9 @@ export default function App() {
           <Route path="python/interview-arena" element={<PythonInterviewArena />} />
           <Route path="python/library" element={<PythonLibraryIndex />} />
           <Route path="python/library/:topicId" element={<PythonLibraryTopic />} />
+          <Route path="python/path/:topicId" element={<PythonTopicPage />} />
+          <Route path="python/interview" element={<PythonInterviewHub />} />
+          <Route path="python/learn" element={<Navigate to="/python" replace />} />
           <Route path="python/learn/:moduleId" element={<PythonModuleBrowsePage />} />
           <Route path="python/:phaseId" element={<PythonPhasePage />} />
 
@@ -95,6 +102,8 @@ export default function App() {
           <Route path="agents" element={<AgentsHome />} />
           <Route path="agents/visualizer" element={<AgentVisualizerIndex />} />
           <Route path="agents/visualizer/:simId" element={<AgentVisualizerPage />} />
+          <Route path="agents/path/:topicId" element={<AgentsTopicPage />} />
+          <Route path="agents/interview" element={<AgentsInterviewHub />} />
           <Route path="agents/learn/:moduleId" element={<AgentsModuleBrowsePage />} />
           <Route path="agents/:phaseId" element={<AgentsPhasePage />} />
 

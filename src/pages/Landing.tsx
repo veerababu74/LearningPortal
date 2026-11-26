@@ -28,8 +28,8 @@ const PATHS = [
     title: 'Python developer',
     blurb: 'Solid language skills, then concurrency and shipping.',
     steps: [
-      { label: 'Python fundamentals', to: '/python/learn/01' },
-      { label: 'Functions & OOP', to: '/python/learn/03' },
+      { label: 'Python basics', to: '/python/path/getting-started' },
+      { label: 'Functions & OOP', to: '/python/path/functions' },
       { label: 'Async & concurrency', to: '/async' },
       { label: 'Docker', to: '/docker' },
     ],
@@ -38,10 +38,10 @@ const PATHS = [
     title: 'AI agent engineer',
     blurb: 'From one LLM call to production multi-agent systems.',
     steps: [
-      { label: 'Agent foundations', to: '/agents/learn/01' },
-      { label: 'Tool calling', to: '/agents/learn/02' },
-      { label: 'LangGraph', to: '/agents/learn/05' },
-      { label: 'Multi-agent & safety', to: '/agents/learn/08' },
+      { label: 'What is an AI agent', to: '/agents/path/what-is-agent' },
+      { label: 'Tool calling', to: '/agents/path/tool-calling' },
+      { label: 'LangGraph', to: '/agents/path/langgraph' },
+      { label: 'Multi-agent systems', to: '/agents/path/multi-agent' },
     ],
   },
   {

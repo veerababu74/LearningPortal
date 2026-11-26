@@ -1054,10 +1054,11 @@
   "id": "ag-02-fastmcp-servers-abda0d",
   "trackId": "agents",
   "title": "02. Tool Calling & MCP: FastMCP Servers",
-  "summary": "@mcp.prompt() def analysis_prompt(data: str, goal: str) -> str: \"\"\"Generate a data analysis prompt.\"\"\" return f\"\"\" Analyze the following data to achieve this goal: {goal}",
+  "summary": "Covers Basic FastMCP Server, Research MCP Server, Code Execution MCP Server.",
   "order": 71,
   "objectives": [
    "Basic FastMCP Server",
+   "Research MCP Server",
    "Code Execution MCP Server"
   ],
   "sourceFile": "sun_apr_19_2026_re_act_agent_implementation_guide.md",
@@ -4279,10 +4280,10 @@
   "id": "ag-12-genai-agentic-systems-experienced-developer-ques-ad5d96",
   "trackId": "agents",
   "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 1)",
-  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 1 of 26).",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 17 questions with model answers (part 1 of 25).",
   "order": 282,
   "objectives": [
-   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Answer 17 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
   ],
   "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
@@ -4293,10 +4294,10 @@
   "id": "ag-12-genai-agentic-systems-experienced-developer-ques-dd6d4f",
   "trackId": "agents",
   "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 2)",
-  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 2 of 26).",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 17 questions with model answers (part 2 of 25).",
   "order": 283,
   "objectives": [
-   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Answer 17 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
   ],
   "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
@@ -4307,10 +4308,10 @@
   "id": "ag-12-genai-agentic-systems-experienced-developer-ques-60ec2d",
   "trackId": "agents",
   "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 3)",
-  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 3 of 26).",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 17 questions with model answers (part 3 of 25).",
   "order": 284,
   "objectives": [
-   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Answer 17 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
   ],
   "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
@@ -4321,10 +4322,10 @@
   "id": "ag-12-genai-agentic-systems-experienced-developer-ques-a42634",
   "trackId": "agents",
   "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 4)",
-  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 4 of 26).",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 17 questions with model answers (part 4 of 25).",
   "order": 285,
   "objectives": [
-   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Answer 17 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
   ],
   "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
@@ -4335,10 +4336,10 @@
   "id": "ag-12-genai-agentic-systems-experienced-developer-ques-6a5ab2",
   "trackId": "agents",
   "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 5)",
-  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 5 of 26).",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 17 questions with model answers (part 5 of 25).",
   "order": 286,
   "objectives": [
-   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Answer 17 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
   ],
   "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
@@ -4349,10 +4350,10 @@
   "id": "ag-12-genai-agentic-systems-experienced-developer-ques-4384d7",
   "trackId": "agents",
   "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 6)",
-  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 6 of 26).",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 17 questions with model answers (part 6 of 25).",
   "order": 287,
   "objectives": [
-   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Answer 17 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
   ],
   "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
@@ -4363,10 +4364,10 @@
   "id": "ag-12-genai-agentic-systems-experienced-developer-ques-7c0572",
   "trackId": "agents",
   "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 7)",
-  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 7 of 26).",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 17 questions with model answers (part 7 of 25).",
   "order": 288,
   "objectives": [
-   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Answer 17 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
   ],
   "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
@@ -4377,10 +4378,10 @@
   "id": "ag-12-genai-agentic-systems-experienced-developer-ques-f21d94",
   "trackId": "agents",
   "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 8)",
-  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 8 of 26).",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 17 questions with model answers (part 8 of 25).",
   "order": 289,
   "objectives": [
-   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Answer 17 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
   ],
   "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
@@ -4391,10 +4392,10 @@
   "id": "ag-12-genai-agentic-systems-experienced-developer-ques-849f52",
   "trackId": "agents",
   "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 9)",
-  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 9 of 26).",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 17 questions with model answers (part 9 of 25).",
   "order": 290,
   "objectives": [
-   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Answer 17 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
   ],
   "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
@@ -4405,10 +4406,10 @@
   "id": "ag-12-genai-agentic-systems-experienced-developer-ques-de6f03",
   "trackId": "agents",
   "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 10)",
-  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 10 of 26).",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 17 questions with model answers (part 10 of 25).",
   "order": 291,
   "objectives": [
-   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Answer 17 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
   ],
   "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
@@ -4419,10 +4420,10 @@
   "id": "ag-12-genai-agentic-systems-experienced-developer-ques-574cef",
   "trackId": "agents",
   "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 11)",
-  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 11 of 26).",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 17 questions with model answers (part 11 of 25).",
   "order": 292,
   "objectives": [
-   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Answer 17 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
   ],
   "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
@@ -4433,10 +4434,10 @@
   "id": "ag-12-genai-agentic-systems-experienced-developer-ques-0fc7bc",
   "trackId": "agents",
   "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 12)",
-  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 12 of 26).",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 17 questions with model answers (part 12 of 25).",
   "order": 293,
   "objectives": [
-   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Answer 17 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
   ],
   "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
@@ -4447,10 +4448,10 @@
   "id": "ag-12-genai-agentic-systems-experienced-developer-ques-d71615",
   "trackId": "agents",
   "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 13)",
-  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 13 of 26).",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 17 questions with model answers (part 13 of 25).",
   "order": 294,
   "objectives": [
-   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Answer 17 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
   ],
   "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
@@ -4461,10 +4462,10 @@
   "id": "ag-12-genai-agentic-systems-experienced-developer-ques-1d10b8",
   "trackId": "agents",
   "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 14)",
-  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 14 of 26).",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 17 questions with model answers (part 14 of 25).",
   "order": 295,
   "objectives": [
-   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Answer 17 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
   ],
   "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
@@ -4475,10 +4476,10 @@
   "id": "ag-12-genai-agentic-systems-experienced-developer-ques-563fec",
   "trackId": "agents",
   "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 15)",
-  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 15 of 26).",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 17 questions with model answers (part 15 of 25).",
   "order": 296,
   "objectives": [
-   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Answer 17 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
   ],
   "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
@@ -4489,10 +4490,10 @@
   "id": "ag-12-genai-agentic-systems-experienced-developer-ques-dc7e9e",
   "trackId": "agents",
   "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 16)",
-  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 16 of 26).",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 17 questions with model answers (part 16 of 25).",
   "order": 297,
   "objectives": [
-   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Answer 17 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
   ],
   "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
@@ -4503,10 +4504,10 @@
   "id": "ag-12-genai-agentic-systems-experienced-developer-ques-d148d3",
   "trackId": "agents",
   "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 17)",
-  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 17 of 26).",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 17 questions with model answers (part 17 of 25).",
   "order": 298,
   "objectives": [
-   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Answer 17 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
   ],
   "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
@@ -4517,10 +4518,10 @@
   "id": "ag-12-genai-agentic-systems-experienced-developer-ques-98a4e8",
   "trackId": "agents",
   "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 18)",
-  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 18 of 26).",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 17 questions with model answers (part 18 of 25).",
   "order": 299,
   "objectives": [
-   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Answer 17 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
   ],
   "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
@@ -4531,10 +4532,10 @@
   "id": "ag-12-genai-agentic-systems-experienced-developer-ques-ff36a7",
   "trackId": "agents",
   "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 19)",
-  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 19 of 26).",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 17 questions with model answers (part 19 of 25).",
   "order": 300,
   "objectives": [
-   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Answer 17 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
   ],
   "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
@@ -4545,10 +4546,10 @@
   "id": "ag-12-genai-agentic-systems-experienced-developer-ques-86fe66",
   "trackId": "agents",
   "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 20)",
-  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 20 of 26).",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 17 questions with model answers (part 20 of 25).",
   "order": 301,
   "objectives": [
-   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Answer 17 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
   ],
   "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
@@ -4559,10 +4560,10 @@
   "id": "ag-12-genai-agentic-systems-experienced-developer-ques-bae014",
   "trackId": "agents",
   "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 21)",
-  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 21 of 26).",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 17 questions with model answers (part 21 of 25).",
   "order": 302,
   "objectives": [
-   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Answer 17 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
   ],
   "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
@@ -4573,10 +4574,10 @@
   "id": "ag-12-genai-agentic-systems-experienced-developer-ques-454add",
   "trackId": "agents",
   "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 22)",
-  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 22 of 26).",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 17 questions with model answers (part 22 of 25).",
   "order": 303,
   "objectives": [
-   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Answer 17 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
   ],
   "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
@@ -4587,10 +4588,10 @@
   "id": "ag-12-genai-agentic-systems-experienced-developer-ques-dd9bed",
   "trackId": "agents",
   "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 23)",
-  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 23 of 26).",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 17 questions with model answers (part 23 of 25).",
   "order": 304,
   "objectives": [
-   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Answer 17 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
   ],
   "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
@@ -4601,10 +4602,10 @@
   "id": "ag-12-genai-agentic-systems-experienced-developer-ques-7e6856",
   "trackId": "agents",
   "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 24)",
-  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 24 of 26).",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 17 questions with model answers (part 24 of 25).",
   "order": 305,
   "objectives": [
-   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Answer 17 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
   ],
   "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
@@ -4615,24 +4616,10 @@
   "id": "ag-12-genai-agentic-systems-experienced-developer-ques-06be14",
   "trackId": "agents",
   "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 25)",
-  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 25 of 26).",
+  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 17 questions with model answers (part 25 of 25).",
   "order": 306,
   "objectives": [
-   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
-   "Lead with the concept, then a small example, then a tradeoff"
-  ],
-  "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
-  "labIds": [],
-  "series": "Interview Banks"
- },
- {
-  "id": "ag-12-genai-agentic-systems-experienced-developer-ques-12daf3",
-  "trackId": "agents",
-  "title": "12. Interview: GenAI & Agentic Systems — Experienced Developer Questions (Part 26)",
-  "summary": "Interview Q&A for GenAI & Agentic Systems — Experienced Developer Questions — 6 questions with model answers (part 26 of 26).",
-  "order": 307,
-  "objectives": [
-   "Answer 6 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
+   "Answer 17 GenAI & Agentic Systems — Experienced Developer Questions interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
   ],
   "sourceFile": "wed_mar_18_2026_e_commerce_multi_agent_system_design.md",
@@ -4644,7 +4631,7 @@
   "trackId": "agents",
   "title": "12. Interview: Senior Agent Engineering",
   "summary": "Interview Q&A for Senior Agent Engineering — 28 questions with model answers.",
-  "order": 308,
+  "order": 307,
   "objectives": [
    "Answer 28 Senior Agent Engineering interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -4658,7 +4645,7 @@
   "trackId": "agents",
   "title": "12. Interview: Memory in LangGraph — Complete Beginner's Guide",
   "summary": "Interview Q&A for Memory in LangGraph — Complete Beginner's Guide.",
-  "order": 309,
+  "order": 308,
   "objectives": [
    "Answer the Memory in LangGraph — Complete Beginner's Guide interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -4672,7 +4659,7 @@
   "trackId": "agents",
   "title": "12. Interview: LangChain / LangGraph Checkpointers: Complete Explanations and Examples",
   "summary": "Interview Q&A for LangChain / LangGraph Checkpointers: Complete Explanations and Examples.",
-  "order": 310,
+  "order": 309,
   "objectives": [
    "Answer the LangChain / LangGraph Checkpointers: Complete Explanations and Examples interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -4686,7 +4673,7 @@
   "trackId": "agents",
   "title": "12. Interview: Day 10 — Pydantic AI Fundamentals (Projects): Build 2 Productivity Agents",
   "summary": "Interview Q&A for Day 10 — Pydantic AI Fundamentals (Projects): Build 2 Productivity Agents.",
-  "order": 311,
+  "order": 310,
   "objectives": [
    "Answer the Day 10 — Pydantic AI Fundamentals (Projects): Build 2 Productivity Agents interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -4700,7 +4687,7 @@
   "trackId": "agents",
   "title": "12. Interview: The Complete Guide to Google Gemini Enterprise Agent Platform (Part 1)",
   "summary": "Interview Q&A for The Complete Guide to Google Gemini Enterprise Agent Platform — 70 questions with model answers (part 1 of 2).",
-  "order": 312,
+  "order": 311,
   "objectives": [
    "Answer 70 The Complete Guide to Google Gemini Enterprise Agent Platform interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -4714,7 +4701,7 @@
   "trackId": "agents",
   "title": "12. Interview: The Complete Guide to Google Gemini Enterprise Agent Platform (Part 2)",
   "summary": "Interview Q&A for The Complete Guide to Google Gemini Enterprise Agent Platform — 70 questions with model answers (part 2 of 2).",
-  "order": 313,
+  "order": 312,
   "objectives": [
    "Answer 70 The Complete Guide to Google Gemini Enterprise Agent Platform interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -4728,7 +4715,7 @@
   "trackId": "agents",
   "title": "12. Interview: LLM Interview Questions: Conceptual & Scenario-Based (Part 1)",
   "summary": "Interview Q&A for LLM Interview Questions: Conceptual & Scenario-Based — 5 questions with model answers (part 1 of 2).",
-  "order": 314,
+  "order": 313,
   "objectives": [
    "Answer 5 LLM Interview Questions: Conceptual & Scenario-Based interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -4742,7 +4729,7 @@
   "trackId": "agents",
   "title": "12. Interview: LLM Interview Questions: Conceptual & Scenario-Based (Part 2)",
   "summary": "Interview Q&A for LLM Interview Questions: Conceptual & Scenario-Based — 1 questions with model answers (part 2 of 2).",
-  "order": 315,
+  "order": 314,
   "objectives": [
    "Answer 1 LLM Interview Questions: Conceptual & Scenario-Based interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"

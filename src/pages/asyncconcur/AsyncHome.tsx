@@ -10,6 +10,7 @@ import {
 } from '@/content/asyncconcur/catalog'
 import { useProgress } from '@/store/progress'
 import '@/components/python/python.css'
+import { tidyTitle } from '@/content/titles'
 
 export function AsyncHome() {
   const index = getCurriculumIndex()
@@ -57,7 +58,7 @@ export function AsyncHome() {
                 className={completed.includes(lesson.id) ? 'py-browse-card done' : 'py-browse-card'}
               >
                 <p className="py-kicker">{lesson.title.match(/^\d{2}\.\s*[^:]+/)?.[0] || 'Async'}</p>
-                <h3>{cleanPreview(lessonTopic(lesson.title))}</h3>
+                <h3>{tidyTitle(cleanPreview(lessonTopic(lesson.title)))}</h3>
                 <p>{cleanPreview(lesson.summary)}</p>
               </Link>
             ))}

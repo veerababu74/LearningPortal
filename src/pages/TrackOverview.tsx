@@ -7,6 +7,7 @@ import { useProgress } from '@/store/progress'
 import { simHref, simsForTrack } from '@/content/sims/registry'
 import './Tracks.css'
 import '@/components/agents/agents.css'
+import { tidyTitle } from '@/content/titles'
 
 function cleanPreview(text: string) {
   return String(text || '')
@@ -192,7 +193,7 @@ export function TrackOverview() {
                           <span className="num">{String(i + 1).padStart(2, '0')}</span>
                           <div>
                             <h3>
-                              {cleanPreview(lesson.title.replace(/^\d{2}\.\s*[^:]+:\s*/, ''))}
+                              {tidyTitle(cleanPreview(lesson.title.replace(/^\d{2}\.\s*[^:]+:\s*/, '')))}
                             </h3>
                             <p>{cleanPreview(lesson.summary)}</p>
                           </div>
@@ -228,7 +229,7 @@ export function TrackOverview() {
             >
               <span className="num">{String(lesson.order).padStart(2, '0')}</span>
               <div>
-                <h3>{cleanPreview(lesson.title)}</h3>
+                <h3>{tidyTitle(cleanPreview(lesson.title))}</h3>
                 <p>{cleanPreview(lesson.summary)}</p>
               </div>
             </Link>

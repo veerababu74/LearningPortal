@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-11-25T14:06:44.512Z",
- "topicCount": 553,
+ "generatedAt": "2026-11-26T12:45:39.444Z",
+ "topicCount": 551,
  "oopSubtopicCount": 65,
  "backendQuestionCount": 20,
  "topics": [
@@ -809,28 +809,10 @@
    "id": "py-02-comprehensions-with-enumerate-and-zip-aa988d",
    "title": "02. Data Structures: Comprehensions with enumerate() and zip()",
    "file": "sun_may_03_2026_gil_and_its_impact_on_python.md",
-   "summary": "logs = [] bad = [logs.append(x) for x in range(5)] # WRONG! Returns [None,None,None,None,None] for x in range(5): logs.append(x)",
+   "summary": "These are end-to-end real-world problems that combine ALL concepts",
    "conceptualCount": 0,
    "scenarioCount": 0,
-   "codeCount": 10
-  },
-  {
-   "id": "py-02-debugging-comprehensions-6f2ceb",
-   "title": "02. Data Structures: Debugging Comprehensions",
-   "file": "sun_may_03_2026_gil_and_its_impact_on_python.md",
-   "summary": "big_list = [x**2 for x in range(1_000_000)] print(f'List: {sys.getsizeof(big_list) / 1024 / 1024:.1f} MB') # ~8 MB",
-   "conceptualCount": 0,
-   "scenarioCount": 0,
-   "codeCount": 0
-  },
-  {
-   "id": "py-02-common-mistakes-anti-patterns-2e5387",
-   "title": "02. Data Structures: Common Mistakes & Anti-Patterns",
-   "file": "sun_may_03_2026_gil_and_its_impact_on_python.md",
-   "summary": "x = 10 result = [x for x in range(5)] # OK in Python 3 (scoped) print(x) # Still 10 in Python 3 (was 4 in Python 2!)",
-   "conceptualCount": 0,
-   "scenarioCount": 0,
-   "codeCount": 2
+   "codeCount": 12
   },
   {
    "id": "py-02-introduction-to-dictionaries-989818",
@@ -2465,7 +2447,7 @@
    "id": "py-05-abstract-syntax-tree-ast-metaprogramming-db1994",
    "title": "05. Advanced Python: ABSTRACT SYNTAX TREE (AST) & METAPROGRAMMING",
    "file": "sun_apr_19_2026_python_interview_preparation_and_improvement_plan/sun_apr_19_2026_python_interview_preparation_and_improvement_plan.md",
-   "summary": "config = Config() print(getattr(config, \"debug\")) # True print(getattr(config, \"missing\", \"default\")) # \"default\" setattr(config, \"host\", \"localhost\") print(hasattr(config, \"host\")) # True delattr(config, \"host\")",
+   "summary": "ABSTRACT SYNTAX TREE (AST) & METAPROGRAMMING: explanations and runnable examples.",
    "conceptualCount": 0,
    "scenarioCount": 0,
    "codeCount": 1
@@ -3455,7 +3437,7 @@
    "id": "py-08-pickle-shelve-serialization-b7e106",
    "title": "08. Files & Errors: PICKLE, SHELVE & SERIALIZATION",
    "file": "sun_apr_19_2026_python_interview_preparation_and_improvement_plan/sun_apr_19_2026_python_interview_preparation_and_improvement_plan.md",
-   "summary": "class Connection: def __init__(self, host): self.host = host self.socket = None # Can't pickle sockets!",
+   "summary": "PICKLE, SHELVE & SERIALIZATION: explanations and runnable examples.",
    "conceptualCount": 0,
    "scenarioCount": 0,
    "codeCount": 1

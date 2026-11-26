@@ -14,6 +14,8 @@ import { phaseForModule as asyncPhaseForModule } from '@/content/asyncconcur/cat
 import { phaseForModule as agentsPhaseForModule } from '@/content/agents/catalog'
 import { phaseForModule as coursePhaseForModule } from '@/content/courseKit'
 import { RAG_COURSE } from '@/content/rag/course'
+import { pathForTrack } from '@/content/paths/courses'
+import { shortTitle, tidyTitle } from '@/content/titles'
 import { simHref, simsForLesson } from '@/content/sims/registry'
 import { AgentSimPlayer } from '@/components/agents/AgentSimPlayer'
 import './LessonShell.css'
@@ -150,6 +152,8 @@ export function LessonShell({
   const isCourseTrack = ['python', 'asyncconcur', 'agents', 'veerarag'].includes(lesson.trackId)
   const COURSE_HOME: Record<string, [string, string]> = { python: ['/python', 'Python'], asyncconcur: ['/async', 'Async'], agents: ['/agents', 'VeeraAgents'], veerarag: ['/rag', 'VeeraRAG'] }
   const agentVisuals = simsForLesson(lesson.trackId, lesson.title, lesson.sourceFile || '')
+  const pathCourse = pathForTrack(lesson.trackId)
+  const pathSpot = pathCourse?.getPath().where.get(lesson.id)
   const coverage = [
     `${lesson.sections.length} ${lesson.sections.length === 1 ? 'section' : 'sections'}`,
     totalDiagrams ? `${totalDiagrams} ${totalDiagrams === 1 ? 'diagram' : 'diagrams'}` : '',
@@ -184,7 +188,7 @@ export function LessonShell({
               }}
             >
               <span>{i + 1}</span>
-              {cleanNavTitle(s.title)}
+              {shortTitle(cleanNavTitle(s.title))}
             </a>
           ))}
         </nav>
@@ -208,12 +212,18 @@ export function LessonShell({
             <p className="track-pill">
               <Link to={COURSE_HOME[lesson.trackId][0]}>{COURSE_HOME[lesson.trackId][1]}</Link>
               {' · '}
-              <Link to={cardBrowsePath(lesson.trackId, lesson.title)}>Back to cards</Link>
+              {pathSpot ? (
+                <Link to={`${pathCourse!.base}/path/${pathSpot.topic.id}`}>
+                  Topic {pathSpot.topic.number}: {pathSpot.topic.title} · step {pathSpot.index + 1} of {pathSpot.topic.lessons.length}
+                </Link>
+              ) : (
+                <Link to={cardBrowsePath(lesson.trackId, lesson.title)}>Back to cards</Link>
+              )}
             </p>
           ) : (
             <p className="track-pill">{lesson.trackId.replace(/-/g, ' ')}</p>
           )}
-          <h1>{lesson.title}</h1>
+          <h1>{tidyTitle(lesson.title)}</h1>
           {lesson.series ? (
             <p className="series-line">
               {lesson.series}
@@ -274,7 +284,7 @@ export function LessonShell({
               <p className="section-kicker">
                 Section {sIdx + 1} of {lesson.sections.length}
               </p>
-              <h2>{section.title}</h2>
+              <h2>{tidyTitle(section.title)}</h2>
               {section.visualSummary ? (
                 <p className="section-visual-summary">{section.visualSummary}</p>
               ) : null}

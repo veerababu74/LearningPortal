@@ -1,0 +1,254 @@
+.iv-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.iv-tabs > button {
+  font: inherit;
+  font-weight: 800;
+  font-size: 0.9rem;
+  min-height: 42px;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.iv-tabs > button.on {
+  background: var(--focus-deep);
+  border-color: var(--focus-deep);
+  color: #fff;
+}
+
+.iv-select {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  max-width: 100%;
+}
+
+.iv-select select {
+  font: inherit;
+  min-height: 42px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  padding: 0.3rem 0.5rem;
+  background: #fff;
+  max-width: min(100%, 360px);
+}
+
+.iv-browse {
+  display: grid;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.iv-stage h2 {
+  margin: 0 0 0.5rem;
+  padding-left: 0.6rem;
+  border-left: 5px solid var(--stage);
+  font-size: 1.15rem;
+}
+
+.iv-topic {
+  margin-bottom: 0.5rem;
+}
+
+.iv-topic > summary span:first-child {
+  overflow-wrap: anywhere;
+}
+
+.iv-count {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--ink-muted);
+  background: var(--paper);
+  border-radius: 999px;
+  padding: 0.1rem 0.55rem;
+  margin-left: 0.5rem;
+  white-space: nowrap;
+}
+
+.iv-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0.6rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.iv-list li {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  gap: 0.15rem 0.6rem;
+  align-items: start;
+  padding: 0.45rem 0.55rem;
+  border-radius: 10px;
+  background: var(--paper);
+}
+
+.iv-list li.known {
+  background: var(--growth-tint);
+}
+
+.iv-list li a {
+  color: var(--ink);
+  font-size: 0.92rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.iv-list li a:hover {
+  color: var(--focus-deep);
+}
+
+.iv-list li small {
+  grid-column: 2;
+  color: var(--ink-muted);
+  font-size: 0.74rem;
+}
+
+.iv-check {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 8px;
+  border: 2px solid var(--line);
+  background: #fff;
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.iv-list li.known .iv-check {
+  background: var(--growth);
+  border-color: var(--growth);
+}
+
+.iv-drill {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.iv-drill-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: center;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
+
+.iv-skip {
+  display: inline-flex;
+  gap: 0.35rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.iv-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 5px solid var(--focus-mid);
+  border-radius: var(--radius);
+  padding: clamp(1rem, 3vw, 1.5rem);
+  box-shadow: var(--shadow);
+  min-width: 0;
+}
+
+.iv-card.known {
+  border-top-color: var(--growth);
+}
+
+.iv-card h2 {
+  margin: 0.3rem 0 1rem;
+  font-size: clamp(1.15rem, 2.6vw, 1.45rem);
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.iv-answer {
+  background: var(--paper);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  max-height: 60vh;
+  overflow: auto;
+  margin-bottom: 0.4rem;
+}
+
+.iv-actions {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 640px) {
+  .iv-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.iv-btn {
+  font: inherit;
+  font-weight: 800;
+  font-size: 0.88rem;
+  min-height: 46px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.iv-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.iv-btn.knew {
+  background: var(--growth);
+  border-color: var(--growth);
+  color: #fff;
+}
+
+.iv-btn.review {
+  background: var(--reward-tint);
+  border-color: #fed7aa;
+  color: var(--reward-deep);
+}
+
+.iv-btn:focus-visible,
+.iv-check:focus-visible,
+.iv-tabs > button:focus-visible {
+  outline: 3px solid var(--focus-soft);
+  outline-offset: 2px;
+}
+
+.iv-open {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-weight: 700;
+  color: var(--focus);
+}
+
+@media (max-width: 640px) {
+  .iv-select {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+  .iv-select select {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: 100%;
+    max-width: none;
+  }
+}

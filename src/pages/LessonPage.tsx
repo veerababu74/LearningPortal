@@ -4,6 +4,7 @@ import { getCurriculumIndex, loadLesson } from '@/content/loadCurriculum'
 import type { Lesson, TrackId } from '@/types/curriculum'
 import { LessonShell } from '@/components/lesson/LessonShell'
 import { courseHomeFor } from '@/content/courses'
+import { pathForTrack } from '@/content/paths/courses'
 
 export function LessonPage() {
   const { trackId = '', lessonId = '' } = useParams()
@@ -58,9 +59,12 @@ export function LessonPage() {
     )
   }
 
-  const idx = siblings.findIndex((l) => l.id === lesson.id)
-  const prevId = idx > 0 ? siblings[idx - 1]?.id : undefined
-  const nextId = idx >= 0 && idx < siblings.length - 1 ? siblings[idx + 1]?.id : undefined
+  // Learn lessons of courses with a learning path follow the path order; everything else follows the index order
+  const pathOrder = pathForTrack(trackId)?.getPath().order ?? null
+  const ordered = pathOrder && pathOrder.includes(lesson.id) ? pathOrder.map((id) => ({ id })) : siblings
+  const idx = ordered.findIndex((l) => l.id === lesson.id)
+  const prevId = idx > 0 ? ordered[idx - 1]?.id : undefined
+  const nextId = idx >= 0 && idx < ordered.length - 1 ? ordered[idx + 1]?.id : undefined
 
   return <LessonShell lesson={lesson} prevId={prevId} nextId={nextId} />
 }

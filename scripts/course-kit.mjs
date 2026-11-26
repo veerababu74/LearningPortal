@@ -100,6 +100,9 @@ export function firstSentences(text, n = 1, max = 220) {
 
 const FENCE_RE = /^ {0,3}(`{3,}|~{3,})(.*)$/
 
+/** "### Scenario 16: …", "## Question 23: …", "### Example 3: …", "### Q4. …" — markdown, never code. */
+const QA_HEADING = /^#{2,4}\s+(\*\*)?(Scenario|Question|Example|Q|S|SQ|CQ)\s*\d+[a-z]?\s*[:.)—-]\s*\S/
+
 /** Heading that can only be a document heading (used to detect truncated code fences). */
 function looksLikeDocHeading(line) {
   if (!/^#{1,3}\s+\S/.test(line)) return false
@@ -118,9 +121,46 @@ export function repairFences(md, { aggressive = false } = {}) {
   const lines = String(md || '').replace(/\r\n?/g, '\n').split('\n')
   const out = []
   let open = null
-  for (const line of lines) {
+  // "# ✅ GOOD: …" inside Python is a comment, not a heading: if the next non-empty line looks
+  // like code, the fence is still open.
+  const CODE_LINE = /^\s{2,}\S|^\s*@\w|^\s*(def|class|for|while|if|elif|return|import|from|except|with|await|yield|raise|pass|assert|del|lambda|async|nonlocal|global)\b|^\s*(else:|try:|finally:|print\()|^[A-Za-z_][\w.\[\]'"]*\s*(=|\+=|-=|\(|:\s*\w)|^\s*[)\]}]/
+  const nextIsCode = (from) => {
+    for (let k = from + 1; k < lines.length; k++) {
+      const t = lines[k]
+      if (!t.trim()) continue
+      if (FENCE_RE.test(t)) return false
+      if (/^#(?!#)/.test(t)) continue // more comment lines ("# …", "#     commented code"): keep looking
+      return CODE_LINE.test(t)
+    }
+    return false
+  }
+  const closeOpen = () => {
+    out.push(open.ch.repeat(open.len), '')
+    open = null
+  }
+  for (let li = 0; li < lines.length; li++) {
+    const line = lines[li]
     const m = line.match(FENCE_RE)
     if (open) {
+      // A fence inside a string ("\`\`\`{language}" in a prompt template): upgrade the outer fence to
+      // four backticks so the inner one is plain text, then close the outer one with four as well.
+      if (m && open.ch === '\`' && open.len === 3 && m[1].length === 3 && /[{}"'$]/.test(m[2])) {
+        out[open.idx] = out[open.idx].replace(/\`{3}/, '\`\`\`\`')
+        open.len = 4
+        open.inner = 1
+        out.push(line)
+        continue
+      }
+      if (open.inner && m && m[1].length === 3 && !m[2].trim()) {
+        open.inner = 0 // closes the inner (string) fence
+        out.push(line)
+        continue
+      }
+      if (open.len === 4 && open.upgraded !== false && m && m[1].length === 3 && !m[2].trim() && open.inner === 0) {
+        out.push('\`\`\`\`')
+        open = null
+        continue
+      }
       if (m && m[1][0] === open.ch && m[1].length >= open.len && !m[2].trim()) {
         out.push(line)
         open = null
@@ -128,20 +168,26 @@ export function repairFences(md, { aggressive = false } = {}) {
       }
       if (aggressive && open.len === 3 && m && m[1].length === 3 && /^\w/.test(m[2].trim())) {
         out.push(open.ch.repeat(3))
-        open = { ch: m[1][0], len: 3 }
+        open = { ch: m[1][0], len: 3, idx: out.length }
         out.push(line)
         continue
       }
-      if (aggressive && looksLikeDocHeading(line) && !(out[out.length - 1] || '').trim()) {
-        out.push(open.ch.repeat(open.len), '')
-        open = null
+      // A numbered Q&A heading ("### Scenario 16:", "## Question 23:", "### Example 3:") can only be markdown:
+      // the fence before it was never closed in the source. Close it here (in every mode).
+      if (QA_HEADING.test(line) && !(out[out.length - 1] || '').trim() && !nextIsCode(li)) {
+        closeOpen()
+        out.push(line)
+        continue
+      }
+      if (aggressive && looksLikeDocHeading(line) && !(out[out.length - 1] || '').trim() && !nextIsCode(li)) {
+        closeOpen()
         out.push(line)
         continue
       }
       out.push(line)
       continue
     }
-    if (m) open = { ch: m[1][0], len: m[1].length }
+    if (m) open = { ch: m[1][0], len: m[1].length, idx: out.length }
     out.push(line)
   }
   if (open) out.push(open.ch.repeat(open.len))

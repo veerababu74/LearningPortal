@@ -265,11 +265,7 @@
   "order": 17,
   "objectives": [
    "What is __del__?",
-   "The Problem with __del__",
-   "FRAGILE: relying on __del__",
-   "ROBUST: context manager",
-   "Usage",
-   "Fragile way"
+   "The Problem with __del__"
   ],
   "sourceFile": "sun_may_03_2026_gil_and_its_impact_on_python.md",
   "labIds": [],
@@ -456,9 +452,7 @@
    "Key Characteristics of Python Strings",
    "Immutability — The Most Important Property!",
    "Real World Analogy",
-   "When to Use Strings?",
-   "This FAILS — strings are immutable",
-   "Error: 'str' object does not support item assignment"
+   "When to Use Strings?"
   ],
   "sourceFile": "sun_may_03_2026_accessing_dictionary_elements_in_python.md",
   "labIds": [],
@@ -473,10 +467,9 @@
   "objectives": [
    "All Creation Methods",
    "Escape Characters — Critical to Know!",
-   "WITH raw string — backslash is literal",
-   "Alternative with double backslash",
-   "Raw strings in regex patterns (covered in Chapter 13)",
-   "Without raw string — need double backslash"
+   "Raw string cannot END with odd number of backslashes",
+   "r\"path\\\" ← SyntaxError!",
+   "r\"path\\\\\" ← OK (two backslashes)"
   ],
   "sourceFile": "sun_may_03_2026_accessing_dictionary_elements_in_python.md",
   "labIds": [],
@@ -491,8 +484,7 @@
   "objectives": [
    "Indexing — Access a Single Character",
    "Slicing — Extract a Substring",
-   "Critical Rules",
-   "Out of range in SLICE — no error!"
+   "Critical Rules"
   ],
   "sourceFile": "sun_may_03_2026_accessing_dictionary_elements_in_python.md",
   "labIds": [],
@@ -506,9 +498,7 @@
   "order": 33,
   "objectives": [
    "String Operators",
-   "String Comparison — Lexicographic!",
-   "GOOD: Using join — O(n)",
-   "ALSO GOOD: list append + join"
+   "String Comparison — Lexicographic!"
   ],
   "sourceFile": "sun_may_03_2026_accessing_dictionary_elements_in_python.md",
   "labIds": [],
@@ -1372,48 +1362,13 @@
   "id": "py-02-comprehensions-with-enumerate-and-zip-aa988d",
   "trackId": "python",
   "title": "02. Data Structures: Comprehensions with enumerate() and zip()",
-  "summary": "logs = [] bad = [logs.append(x) for x in range(5)] # WRONG! Returns [None,None,None,None,None] for x in range(5): logs.append(x)",
+  "summary": "These are end-to-end real-world problems that combine ALL concepts",
   "order": 90,
   "objectives": [
    "CONCEPT 22: any() / all() with Comprehensions",
    "CONCEPT 23: Nested Dict/List Comprehensions (Real-World)",
-   "CONCEPTS 24–28: Performance & Best Practices"
-  ],
-  "sourceFile": "sun_may_03_2026_gil_and_its_impact_on_python.md",
-  "labIds": [],
-  "series": "Comprehensions Masterclass"
- },
- {
-  "id": "py-02-debugging-comprehensions-6f2ceb",
-  "trackId": "python",
-  "title": "02. Data Structures: Debugging Comprehensions",
-  "summary": "big_list = [x**2 for x in range(1_000_000)] print(f'List: {sys.getsizeof(big_list) / 1024 / 1024:.1f} MB') # ~8 MB",
-  "order": 91,
-  "objectives": [
-   "List: all in memory",
-   "Generator: O(1) memory",
-   "Rule: if consumed once → generator; if needed multiple times → list",
-   "Technique 1: Break into loop to add print statements",
-   "Debug this comprehension",
-   "Debugging version"
-  ],
-  "sourceFile": "sun_may_03_2026_gil_and_its_impact_on_python.md",
-  "labIds": [],
-  "series": "Comprehensions Masterclass"
- },
- {
-  "id": "py-02-common-mistakes-anti-patterns-2e5387",
-  "trackId": "python",
-  "title": "02. Data Structures: Common Mistakes & Anti-Patterns",
-  "summary": "x = 10 result = [x for x in range(5)] # OK in Python 3 (scoped) print(x) # Still 10 in Python 3 (was 4 in Python 2!)",
-  "order": 92,
-  "objectives": [
-   "Mistake 1: Variable name clash",
-   "Mistake 2: Modifying the list you're iterating",
-   "NEVER do this",
-   "for item in items",
-   "if item % 2 == 0: items.remove(item) # Skips items!",
-   "Correct way"
+   "CONCEPTS 24–28: Performance & Best Practices",
+   "CONCEPTS 29–35: Real-World Patterns"
   ],
   "sourceFile": "sun_may_03_2026_gil_and_its_impact_on_python.md",
   "labIds": [],
@@ -1424,7 +1379,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Introduction to Dictionaries",
   "summary": "Imagine you have a physical dictionary book. You look up a word (key) and get its meaning (value).",
-  "order": 93,
+  "order": 91,
   "objectives": [
    "Real World Analogy",
    "Key Characteristics",
@@ -1439,7 +1394,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Creating Dictionaries (All Ways)",
   "summary": "Python gives you multiple ways to create a dictionary. Knowing all of them makes you a better developer because different situations call for different approaches.",
-  "order": 94,
+  "order": 92,
   "objectives": [
    "Method 1: Curly Braces {} — Most Common",
    "Method 2: dict() Constructor — When keys are valid identifiers",
@@ -1457,14 +1412,11 @@
   "trackId": "python",
   "title": "02. Data Structures: Accessing Dictionary Elements",
   "summary": "You've created a dictionary — now how do you read the data from it? There are several ways, each with important differences.",
-  "order": 95,
+  "order": 93,
   "objectives": [
    "Ways to Access Values",
    "Accessing Keys, Values, Items",
-   "Live Views — Important Concept!",
-   "Square brackets — use when key MUST exist",
-   "Square bracket on missing key = CRASH!",
-   "print(employee[\"bonus\"]) # KeyError: 'bonus' — PROGRAM CRASHES!"
+   "Live Views — Important Concept!"
   ],
   "sourceFile": "sun_may_03_2026_accessing_dictionary_elements_in_python.md",
   "labIds": [],
@@ -1475,7 +1427,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Modifying Dictionaries (Add, Update, Delete)",
   "summary": "Dictionaries are mutable — you can change them after creation. This chapter covers all ways to add, update, and remove data.",
-  "order": 96,
+  "order": 94,
   "objectives": [
    "Adding / Updating",
    "Removing",
@@ -1490,7 +1442,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Dictionary Methods (Complete Reference)",
   "summary": "Python dictionaries have a rich set of built-in methods. Let me explain every single one clearly.",
-  "order": 97,
+  "order": 95,
   "objectives": [
    "Complete Method Reference",
    "Shallow Copy vs Deep Copy — Critical Concept!"
@@ -1506,14 +1458,10 @@
   "trackId": "python",
   "title": "02. Data Structures: Iterating Through Dictionaries",
   "summary": "Iterating means going through each element of a dictionary one by one. Python gives you several ways to loop through a dictionary, each useful in different scenarios.",
-  "order": 98,
+  "order": 96,
   "objectives": [
    "Ways to Iterate",
-   "Golden Rules of Dictionary Iteration",
-   "WRONG: Can't add/remove keys while iterating",
-   "for fruit, price in prices.items()",
-   "if price > 100",
-   "del prices[fruit] # RuntimeError!"
+   "Golden Rules of Dictionary Iteration"
   ],
   "sourceFile": "sun_may_03_2026_accessing_dictionary_elements_in_python.md",
   "labIds": [],
@@ -1524,7 +1472,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Nested Dictionaries",
   "summary": "A nested dictionary is a dictionary inside another dictionary. Think of it like folders inside folders on your computer.",
-  "order": 99,
+  "order": 97,
   "objectives": [
    "Understanding Levels",
    "Key Operations on Nested Dicts",
@@ -1539,7 +1487,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Dictionary Comprehensions",
   "summary": "Dictionary comprehension is a concise, elegant way to create a new dictionary from an existing iterable in a single line.",
-  "order": 100,
+  "order": 98,
   "objectives": [
    "Comparison — Loop vs Comprehension",
    "When to Use Comprehension"
@@ -1553,7 +1501,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Merging Dictionaries",
   "summary": "Merging dictionaries means combining two or more dictionaries into one. Python gives you multiple ways, each with different behavior for conflicting keys.",
-  "order": 101,
+  "order": 99,
   "objectives": [
    "All Merge Methods — Quick Reference",
    "Critical: Who Wins on Conflicts?",
@@ -1568,7 +1516,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Dictionaries with Other Data Types",
   "summary": "(Your third pain point — dict + list, dict + set, dict + tuple, dict + other dict)",
-  "order": 102,
+  "order": 100,
   "objectives": [
    "The Complete Combination Map"
   ],
@@ -1581,7 +1529,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Sorting Dictionaries",
   "summary": "Dictionaries maintain insertion order (Python 3.7+) but are NOT automatically sorted. To sort, you convert to a sorted sequence and optionally rebuild a dict.",
-  "order": 103,
+  "order": 101,
   "objectives": [
    "Sorting Methods"
   ],
@@ -1594,7 +1542,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Dictionary as Function Arguments (**kwargs)",
   "summary": "In Python, kwargs lets you pass a dictionary to a function as **named keyword arguments. This is one of the most powerful patterns in Python.",
-  "order": 104,
+  "order": 102,
   "objectives": [
    "Two Directions"
   ],
@@ -1607,7 +1555,7 @@
   "trackId": "python",
   "title": "02. Data Structures: collections Module",
   "summary": "Python's collections module has supercharged dictionary types that solve common problems more elegantly.",
-  "order": 105,
+  "order": 103,
   "objectives": [
    "The Three Key Classes"
   ],
@@ -1620,12 +1568,9 @@
   "trackId": "python",
   "title": "02. Data Structures: Real-World Patterns & Advanced Tricks",
   "summary": "This final chapter covers advanced patterns that experienced Python developers use in production. These are the tricks that separate junior from senior developers.",
-  "order": 106,
+  "order": 104,
   "objectives": [
-   "Patterns Covered",
-   "BAD: Long if-elif chain",
-   "GOOD: Function dispatch table",
-   "Real-world: HTTP method router"
+   "Patterns Covered"
   ],
   "sourceFile": "sun_may_03_2026_accessing_dictionary_elements_in_python.md",
   "labIds": [],
@@ -1636,14 +1581,9 @@
   "trackId": "python",
   "title": "02. Data Structures: All Comprehension Types",
   "summary": "Comprehensions are a compact, readable way to create collections (lists, dicts, sets) or generate values by transforming and/or filtering an existing iterable — all in ONE expression.",
-  "order": 107,
+  "order": 105,
   "objectives": [
-   "List comprehension — creates ALL 1M squares in memory",
-   "Generator expression — creates squares ONE AT A TIME",
-   "Use it just like any iterator",
-   "Generators work directly in function calls (no extra parens needed)",
-   "Chained generators (pipeline!)",
-   "Nothing is computed until list() consumes the pipeline!"
+   "All Comprehension Types"
   ],
   "sourceFile": "sun_may_03_2026_asynchronous_programming_concepts_in_python.md",
   "labIds": [],
@@ -1654,7 +1594,7 @@
   "trackId": "python",
   "title": "02. Data Structures: collections Module",
   "summary": "The collections module provides specialized container types that solve common programming problems more elegantly than plain dicts, lists, and tuples.",
-  "order": 108,
+  "order": 106,
   "objectives": [
    "Key Examples for Each"
   ],
@@ -1667,14 +1607,11 @@
   "trackId": "python",
   "title": "02. Data Structures: Introduction to Lists",
   "summary": "A list in Python is an ordered, mutable collection that can hold ANY type of data — numbers, strings, booleans, other lists, even mixed types!",
-  "order": 109,
+  "order": 107,
   "objectives": [
    "Key Characteristics of Python Lists",
    "List vs Other Collections",
-   "How Python Stores Lists in Memory",
-   "CRITICAL: Assignment creates REFERENCE, not copy!",
-   "To create independent copy",
-   "This gotcha causes bugs! Especially in functions"
+   "How Python Stores Lists in Memory"
   ],
   "sourceFile": "sun_may_03_2026_accessing_dictionary_elements_in_python.md",
   "labIds": [],
@@ -1685,13 +1622,9 @@
   "trackId": "python",
   "title": "02. Data Structures: Creating Lists — All Ways",
   "summary": "Python provides multiple ways to create lists. Knowing all of them helps you write cleaner, more Pythonic code.",
-  "order": 110,
+  "order": 108,
   "objectives": [
-   "All Creation Methods",
-   "WARNING: Multiplication with MUTABLE creates SHARED references!",
-   "All 3 rows point to THE SAME inner list!",
-   "CORRECT: Use list comprehension",
-   "Practical initialization patterns"
+   "All Creation Methods"
   ],
   "sourceFile": "sun_may_03_2026_accessing_dictionary_elements_in_python.md",
   "labIds": [],
@@ -1702,7 +1635,7 @@
   "trackId": "python",
   "title": "02. Data Structures: List Indexing & Slicing",
   "summary": "List indexing and slicing work exactly the same as strings — but with one major addition: you can assign to slices to modify the list!",
-  "order": 111,
+  "order": 109,
   "objectives": [
    "Slice Assignment — UNIQUE to Lists (Mutable)!"
   ],
@@ -1715,14 +1648,11 @@
   "trackId": "python",
   "title": "02. Data Structures: List Methods — Adding Elements",
   "summary": "Python lists have specific methods to add elements. Understanding each one — what it adds, WHERE it adds, and what it RETURNS — is critical for interviews.",
-  "order": 112,
+  "order": 110,
   "objectives": [
    "Complete \"Adding\" Methods Reference",
    "CRITICAL Differences",
-   "ALL THESE METHODS RETURN None!",
-   "DANGER: extend with a string adds CHARACTERS!",
-   "But append with string adds whole string",
-   "Real-world: combine results from multiple sources"
+   "ALL THESE METHODS RETURN None!"
   ],
   "sourceFile": "sun_may_03_2026_accessing_dictionary_elements_in_python.md",
   "labIds": [],
@@ -1733,12 +1663,10 @@
   "trackId": "python",
   "title": "02. Data Structures: List Methods — Removing Elements",
   "summary": "Python provides multiple ways to remove items from a list. Each has different behavior — knowing WHICH to use WHEN is critical.",
-  "order": 113,
+  "order": 111,
   "objectives": [
    "Complete \"Removing\" Methods Reference",
-   "CRITICAL Differences",
-   "Method 2: List comprehension (BEST)",
-   "Method 3: Reverse iteration with pop"
+   "CRITICAL Differences"
   ],
   "sourceFile": "sun_may_03_2026_accessing_dictionary_elements_in_python.md",
   "labIds": [],
@@ -1749,7 +1677,7 @@
   "trackId": "python",
   "title": "02. Data Structures: List Methods — Searching & Info",
   "summary": "These methods help you find items, count occurrences, and get information about a list.",
-  "order": 114,
+  "order": 112,
   "objectives": [
    "Complete Reference",
    "index() vs find()"
@@ -1763,7 +1691,7 @@
   "trackId": "python",
   "title": "02. Data Structures: List Methods — Sorting & Ordering",
   "summary": "Sorting is one of the most frequently used operations. Python provides two approaches: in-place and returning new sorted list.",
-  "order": 115,
+  "order": 113,
   "objectives": [
    "Complete Sorting Reference",
    "The Most Important Difference",
@@ -1778,14 +1706,10 @@
   "trackId": "python",
   "title": "02. Data Structures: List Methods — Copy & Other",
   "summary": "Understanding how to properly copy lists and use remaining utility methods.",
-  "order": 116,
+  "order": 114,
   "objectives": [
    "Copy Methods Reference",
-   "Other Important Methods",
-   "DANGER: multiplication with MUTABLE creates shared references!",
-   "Correct: use list comprehension",
-   "Practical initialization",
-   "Multiplication for patterns"
+   "Other Important Methods"
   ],
   "sourceFile": "sun_may_03_2026_accessing_dictionary_elements_in_python.md",
   "labIds": [],
@@ -1796,7 +1720,7 @@
   "trackId": "python",
   "title": "02. Data Structures: List Comprehensions",
   "summary": "List comprehensions are the most important Pythonic feature for lists. They let you create lists in one concise expression instead of multi-line loops.",
-  "order": 117,
+  "order": 115,
   "objectives": [
    "Visual Comparison",
    "When NOT to use comprehensions"
@@ -1810,7 +1734,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Nested Lists & 2D Lists",
   "summary": "A nested list is a list that contains other lists as elements. 2D lists (list of lists) represent matrices, grids, tables.",
-  "order": 118,
+  "order": 116,
   "objectives": [
    "CONCEPT"
   ],
@@ -1823,7 +1747,7 @@
   "trackId": "python",
   "title": "02. Data Structures: List as Stack, Queue, Deque",
   "summary": "Lists can implement classic data structures. Understanding WHEN to use which is key:",
-  "order": 119,
+  "order": 117,
   "objectives": [
    "CONCEPT",
    "KEY EXAMPLES"
@@ -1837,7 +1761,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Unpacking, *args, Spread",
   "summary": "Unpacking lets you extract values from lists into variables in one step.",
-  "order": 120,
+  "order": 118,
   "objectives": [
    "CONCEPT"
   ],
@@ -1850,7 +1774,7 @@
   "trackId": "python",
   "title": "02. Data Structures: List Performance & Advanced Patterns",
   "summary": "Understanding zip, enumerate, map, filter, reduce, and performance patterns.",
-  "order": 121,
+  "order": 119,
   "objectives": [
    "CONCEPT"
   ],
@@ -1863,11 +1787,10 @@
   "trackId": "python",
   "title": "02. Data Structures: Introduction to Tuples",
   "summary": "A tuple is an ordered, immutable sequence in Python. Think of it as a \"frozen list\" — once created, it cannot be changed.",
-  "order": 122,
+  "order": 120,
   "objectives": [
    "Why Use Tuples?",
-   "Key Differences — List vs Tuple",
-   "CRITICAL: Single item tuple requires trailing comma!"
+   "Key Differences — List vs Tuple"
   ],
   "sourceFile": "sun_may_03_2026_accessing_dictionary_elements_in_python.md",
   "labIds": [],
@@ -1878,7 +1801,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Tuple Methods — count(), index() + Built-ins",
   "summary": "Tuples have only 2 methods (vs 11 for lists). This is by design — immutability means no modifying methods!",
-  "order": 123,
+  "order": 121,
   "objectives": [
    "CONCEPT"
   ],
@@ -1891,7 +1814,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Tuple Packing & Unpacking",
   "summary": "Tuple packing and unpacking are Python's most elegant features. Multiple return values, swapping variables, parallel assignment — all powered by tuples!",
-  "order": 124,
+  "order": 122,
   "objectives": [
    "CONCEPT"
   ],
@@ -1904,7 +1827,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Named Tuples",
   "summary": "Named tuples give tuple positions names, making code self-documenting!",
-  "order": 125,
+  "order": 123,
   "objectives": [
    "CONCEPT"
   ],
@@ -1917,14 +1840,9 @@
   "trackId": "python",
   "title": "02. Data Structures: Tuples vs Lists — When to Use Which",
   "summary": "The decision between list and tuple is about intent and semantics, not just technical capability.",
-  "order": 126,
+  "order": 124,
   "objectives": [
-   "CONCEPT",
-   "These should be LISTS — variable, homogeneous collection",
-   "TUPLE for function return — multiple related values",
-   "LIST for accumulated results",
-   "TUPLE as dict key (list can't!)",
-   "LIST of TUPLES — common pattern for tabular data"
+   "CONCEPT"
   ],
   "sourceFile": "sun_may_03_2026_accessing_dictionary_elements_in_python.md",
   "labIds": [],
@@ -1935,14 +1853,9 @@
   "trackId": "python",
   "title": "02. Data Structures: Tuple Comprehensions? (Generator Expressions)",
   "summary": "There is NO tuple comprehension in Python. (x for x in ...) creates a generator, not a tuple!",
-  "order": 127,
+  "order": 125,
   "objectives": [
-   "CONCEPT",
-   "Generator is EXHAUSTED — cannot reuse!",
-   "Generator works perfectly in functions expecting iterables",
-   "Memory: ~128 bytes for generator vs ~8MB for list!",
-   "Compare memory",
-   "List: ~8,000,064 bytes | Generator: 112 bytes!!"
+   "CONCEPT"
   ],
   "sourceFile": "sun_may_03_2026_accessing_dictionary_elements_in_python.md",
   "labIds": [
@@ -1955,7 +1868,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Advanced Tuple Patterns",
   "summary": "Advanced real-world tuple patterns used in professional Python code.",
-  "order": 128,
+  "order": 126,
   "objectives": [
    "CONCEPT",
    "All Chapters Quick Reference",
@@ -1971,7 +1884,7 @@
   "trackId": "python",
   "title": "02. Data Structures: What is Recursion? (The Big Picture)",
   "summary": "Recursion is a technique where a function calls itself to solve a smaller version of the same problem, until it reaches a point where the answer is simple and obvious (no more self-calling needed).",
-  "order": 129,
+  "order": 127,
   "objectives": [
    "THEORETICAL EXPLANATION",
    "What is Recursion?",
@@ -1988,7 +1901,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Anatomy of Recursion — Base Case & Recursive Case",
   "summary": "Trust the recursion.\" Assume your function works correctly for smaller inputs. Your job is just to solve the CURRENT step using that assumption.",
-  "order": 130,
+  "order": 128,
   "objectives": [
    "THEORETICAL EXPLANATION",
    "The Golden Rule of Recursion",
@@ -2004,7 +1917,7 @@
   "trackId": "python",
   "title": "02. Data Structures: The Call Stack — How Python Handles Recursion",
   "summary": "The call stack is Python's internal mechanism for tracking which function is currently running and where to return when it finishes.",
-  "order": 131,
+  "order": 129,
   "objectives": [
    "THEORETICAL EXPLANATION",
    "What is the Call Stack?",
@@ -2021,7 +1934,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Recursion vs Iteration",
   "summary": "Covers THEORETICAL EXPLANATION, VISUAL COMPARISON.",
-  "order": 132,
+  "order": 130,
   "objectives": [
    "THEORETICAL EXPLANATION",
    "VISUAL COMPARISON"
@@ -2035,7 +1948,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Direct Recursion",
   "summary": "Direct Recursion = A function that calls itself directly by name.",
-  "order": 133,
+  "order": 131,
   "objectives": [
    "VISUAL"
   ],
@@ -2048,7 +1961,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Indirect / Mutual Recursion",
   "summary": "Indirect Recursion = Function A calls Function B, which calls Function A back (possibly through a chain).",
-  "order": 134,
+  "order": 132,
   "objectives": [
    "VISUAL",
    "Why Use It?"
@@ -2062,7 +1975,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Tail Recursion",
   "summary": "Tail Recursion = When the recursive call is the VERY LAST operation a function performs. Nothing happens AFTER the recursive call returns.",
-  "order": 135,
+  "order": 133,
   "objectives": [
    "VISUAL",
    "Why It Matters",
@@ -2078,7 +1991,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Head Recursion",
   "summary": "Head Recursion = The recursive call happens FIRST, BEFORE any processing.",
-  "order": 136,
+  "order": 134,
   "objectives": [
    "VISUAL",
    "Head vs Tail",
@@ -2093,7 +2006,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Tree Recursion (Multiple Recursive Calls)",
   "summary": "Tree Recursion = A function makes MORE THAN ONE recursive call at each level.",
-  "order": 137,
+  "order": 135,
   "objectives": [
    "VISUAL — Fibonacci Call Tree",
    "Why It's Called \"Tree Recursion\"",
@@ -2108,7 +2021,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Nested Recursion",
   "summary": "Nested Recursion = A recursive call where the argument itself is a recursive call.",
-  "order": 138,
+  "order": 136,
   "objectives": [
    "VISUAL",
    "Key Insight"
@@ -2122,7 +2035,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Linear Recursion on Arrays & Lists",
   "summary": "Linear Recursion on Arrays = Process one element at a time, recursing on the rest.",
-  "order": 139,
+  "order": 137,
   "objectives": [
    "VISUAL"
   ],
@@ -2135,7 +2048,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Divide and Conquer Recursion",
   "summary": "Divide and Conquer = Split the problem into independent subproblems, solve each recursively, then combine the results.",
-  "order": 140,
+  "order": 138,
   "objectives": [
    "VISUAL — Merge Sort",
    "Three Steps",
@@ -2151,7 +2064,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Backtracking",
   "summary": "Backtracking = Try a choice → recurse → if it fails, undo the choice and try the next one.",
-  "order": 141,
+  "order": 139,
   "objectives": [
    "VISUAL — N-Queens (4×4)",
    "The Backtracking Template",
@@ -2166,7 +2079,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Recursion on Strings",
   "summary": "Strings are naturally recursive — a string is either: - Empty (base case), or - First character + rest of string (recursive case)",
-  "order": 142,
+  "order": 140,
   "objectives": [
    "The Key Pattern"
   ],
@@ -2179,7 +2092,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Memoization (Top-Down DP)",
   "summary": "Memoization = Cache the result of recursive calls so you never compute the same subproblem twice.",
-  "order": 143,
+  "order": 141,
   "objectives": [
    "VISUAL",
    "Two Ways to Memoize in Python"
@@ -2193,12 +2106,10 @@
   "trackId": "python",
   "title": "02. Data Structures: What is a Set? (Creation & Basics)",
   "summary": "Imagine you have a bag of unique marbles . No matter how many times you put in the same colored marble, there's only ever ONE of each color inside.",
-  "order": 144,
+  "order": 142,
   "objectives": [
    "Ways to Create a Set",
-   "Key Properties Table",
-   "INVALID set elements — mutable/unhashable",
-   "TypeError: unhashable type: 'list'"
+   "Key Properties Table"
   ],
   "sourceFile": "sun_may_03_2026_concatenation_and_repetition_in_python_strings.md",
   "labIds": [],
@@ -2209,7 +2120,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Set Properties Deep Dive",
   "summary": "Sets have 4 core properties you must deeply understand. Let's go through each one:",
-  "order": 145,
+  "order": 143,
   "objectives": [
    "Property 1: UNORDERED",
    "Property 2: UNIQUE (No Duplicates)",
@@ -2225,7 +2136,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Adding Elements: add() & update()",
   "summary": "Think of add() as dropping one coin into a piggy bank, and update() as pouring a whole jar of coins into it. Either way, if that coin denomination already exists, nothing changes — still one of each.",
-  "order": 146,
+  "order": 144,
   "objectives": [
    "Adding Elements: add() & update()"
   ],
@@ -2238,7 +2149,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Removing Elements",
   "summary": "Python gives you 4 ways to remove from a set. Each behaves differently — especially when the element doesn't exist:",
-  "order": 147,
+  "order": 145,
   "objectives": [
    "Removing Elements"
   ],
@@ -2251,7 +2162,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Set Mathematical Operations",
   "summary": "This is the MOST asked topic in set interviews! Master this chapter!",
-  "order": 148,
+  "order": 146,
   "objectives": [
    "Two Ways to Do Each Operation"
   ],
@@ -2264,7 +2175,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Set Comparison Methods",
   "summary": "Python has 3 methods to compare the relationship between sets:",
-  "order": 149,
+  "order": 147,
   "objectives": [
    "All Comparison Operators"
   ],
@@ -2277,7 +2188,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Set Comprehension",
   "summary": "Set Comprehension is a short, elegant way to create a set in one line — similar to list comprehension but with {} instead of [], and the result is always a set (unique, unordered).",
-  "order": 150,
+  "order": 148,
   "objectives": [
    "Set Comprehension"
   ],
@@ -2290,7 +2201,7 @@
   "trackId": "python",
   "title": "02. Data Structures: frozenset (Immutable Sets)",
   "summary": "A frozenset is exactly like a regular set but FROZEN — you cannot add or remove elements after creation. It is immutable.",
-  "order": 151,
+  "order": 149,
   "objectives": [
    "Why frozenset exists"
   ],
@@ -2305,7 +2216,7 @@
   "trackId": "python",
   "title": "02. Data Structures: Set Copy Methods",
   "summary": "When you \"copy\" a set, there are two completely different behaviors:",
-  "order": 152,
+  "order": 150,
   "objectives": [
    "CHAPTER 12 — Set In-Place Update Operations",
    "CHAPTER 13 — Built-in Functions with Sets",
@@ -2320,7 +2231,7 @@
   "trackId": "python",
   "title": "02. Data Structures: 02 — Data Structures & Algorithms in Python (Deep Dive)",
   "summary": "DSA in interviews tests: time/space complexity, picking the right structure, clean code, edge cases, ability to talk while you code.",
-  "order": 153,
+  "order": 151,
   "objectives": [
    "Built-in containers — internals & complexity",
    "Lists / Arrays",
@@ -2338,7 +2249,7 @@
   "trackId": "python",
   "title": "02. Data Structures: 08 — Lists, Tuples, Dicts, Sets, collections (Deep Dive)",
   "summary": "Dynamic array, ordered, mutable, allows duplicates and mixed types.",
-  "order": 154,
+  "order": 152,
   "objectives": [
    "List — full reference",
    "Tuple",
@@ -2356,7 +2267,7 @@
   "trackId": "python",
   "title": "02. Data Structures: 09 — Comprehensions (Deep Dive)",
   "summary": "Comprehensions = compact, expressive way to build lists/dicts/sets/generators from iterables. They generate cleaner bytecode than explicit for + append and read like math.",
-  "order": 155,
+  "order": 153,
   "objectives": [
    "The four forms",
    "Anatomy",
@@ -2374,7 +2285,7 @@
   "trackId": "python",
   "title": "02. Data Structures: COLLECTIONS MODULE (Complete)",
   "summary": "COLLECTIONS MODULE (Complete): explanations and runnable examples.",
-  "order": 156,
+  "order": 154,
   "objectives": [
    "COLLECTIONS MODULE (Complete)"
   ],
@@ -2387,7 +2298,7 @@
   "trackId": "python",
   "title": "02. Data Structures: QUEUE, HEAPQ & PRIORITY STRUCTURES",
   "summary": "QUEUE, HEAPQ & PRIORITY STRUCTURES: explanations and runnable examples.",
-  "order": 157,
+  "order": 155,
   "objectives": [
    "QUEUE, HEAPQ & PRIORITY STRUCTURES"
   ],
@@ -2400,7 +2311,7 @@
   "trackId": "python",
   "title": "03. Functions: Python Functions 1/3: Function Basics · Parameters & Arguments …",
   "summary": "Interview Tip: Functions are asked in EVERY Python interview. Master this chapter to explain clearly: \"A function is a reusable block of code that takes inputs, processes them, and returns an output.",
-  "order": 158,
+  "order": 156,
   "objectives": [
    "Function Basics",
    "Parameters & Arguments",
@@ -2417,7 +2328,7 @@
   "trackId": "python",
   "title": "03. Functions: Python Functions 2/3: Closures · Lambda Functions …",
   "summary": "A closure is a function that remembers the variables from its enclosing scope, even after the enclosing function has finished executing.",
-  "order": 159,
+  "order": 157,
   "objectives": [
    "Closures",
    "Lambda Functions",
@@ -2434,7 +2345,7 @@
   "trackId": "python",
   "title": "03. Functions: Python Functions 3/3: First-Class Functions · Chapter Summary",
   "summary": "In Python, functions are first-class citizens — they are objects, just like integers and strings.",
-  "order": 160,
+  "order": 158,
   "objectives": [
    "First-Class Functions",
    "Chapter Summary"
@@ -2448,7 +2359,7 @@
   "trackId": "python",
   "title": "03. Functions: Lambda Functions",
   "summary": "Lambda functions, also known as anonymous functions, are small, single-expression functions that can be defined without a name. They are created using the lambda keyword and are perfect for simple operations that are used only once.",
-  "order": 161,
+  "order": 159,
   "objectives": [
    "Understand what lambda functions are and when to use them",
    "Master lambda function syntax and structure",
@@ -2465,7 +2376,7 @@
   "trackId": "python",
   "title": "03. Functions: Lambda Functions — Runnable Examples",
   "summary": "Runnable Lambda Functions — Runnable Examples program, walked through function by function.",
-  "order": 162,
+  "order": 160,
   "objectives": [
    "Read and run the Lambda Functions — Runnable Examples program",
    "Predict the output before running each part",
@@ -2480,7 +2391,7 @@
   "trackId": "python",
   "title": "03. Functions: Map Filter Reduce",
   "summary": "Map, Filter, and Reduce are three fundamental functions in functional programming that provide powerful ways to process data collections. They are built-in Python functions that work with iterables and are often used with lambda functions.",
-  "order": 163,
+  "order": 161,
   "objectives": [
    "Master the three fundamental functional programming concepts",
    "Understand when and how to use map(), filter(), and reduce()",
@@ -2497,7 +2408,7 @@
   "trackId": "python",
   "title": "03. Functions: Map Filter Reduce — Runnable Examples",
   "summary": "Runnable Map Filter Reduce — Runnable Examples program, walked through function by function.",
-  "order": 164,
+  "order": 162,
   "objectives": [
    "Read and run the Map Filter Reduce — Runnable Examples program",
    "Predict the output before running each part",
@@ -2512,7 +2423,7 @@
   "trackId": "python",
   "title": "03. Functions: Args Kwargs",
   "summary": "*args and **kwargs are powerful Python features that allow functions to accept variable numbers of arguments. This guide covers their usage, best practices, and real-world applications.",
-  "order": 165,
+  "order": 163,
   "objectives": [
    "Understand the difference between *args and **kwargs",
    "Master variable argument handling",
@@ -2530,7 +2441,7 @@
   "trackId": "python",
   "title": "03. Functions: Args Kwargs — Runnable Examples",
   "summary": "Runnable Args Kwargs — Runnable Examples program, walked through function by function.",
-  "order": 166,
+  "order": 164,
   "objectives": [
    "Read and run the Args Kwargs — Runnable Examples program",
    "Predict the output before running each part",
@@ -2545,10 +2456,9 @@
   "trackId": "python",
   "title": "03. Functions: Positional Arguments",
   "summary": "Positional arguments are the most basic way to pass data into a function. They are called \"positional\" because the order matters — the first value goes to the first parameter, the second value to the second parameter, and so on.",
-  "order": 167,
+  "order": 165,
   "objectives": [
-   "WRONG ORDER — Results are wrong but no error!",
-   "Name got 28, age got \"Alice\" — wrong!"
+   "Positional Arguments"
   ],
   "sourceFile": "sun_may_03_2026_asynchronous_programming_concepts_in_python.md",
   "labIds": [],
@@ -2559,7 +2469,7 @@
   "trackId": "python",
   "title": "03. Functions: Keyword Arguments",
   "summary": "Keyword arguments let you pass arguments by name instead of position. You explicitly say \"this value goes to THIS parameter\" by writing parameter_name=value.",
-  "order": 168,
+  "order": 166,
   "objectives": [
    "Keyword Arguments"
   ],
@@ -2572,13 +2482,9 @@
   "trackId": "python",
   "title": "03. Functions: Default Arguments",
   "summary": "Default arguments let you define a parameter with a pre-set value that is used when the caller doesn't provide that argument. They make parameters optional.",
-  "order": 169,
+  "order": 167,
   "objectives": [
-   "CORRECT — use None as default, create new list inside",
-   "RIGHT — None pattern",
-   "Same problem with dict and set",
-   "Wrong",
-   "Right"
+   "Default Arguments"
   ],
   "sourceFile": "sun_may_03_2026_asynchronous_programming_concepts_in_python.md",
   "labIds": [
@@ -2591,7 +2497,7 @@
   "trackId": "python",
   "title": "03. Functions: *args — Variable Positional Arguments",
   "summary": "args lets a function accept any number of positional arguments. The collects all extra positional arguments into a tuple.",
-  "order": 170,
+  "order": 168,
   "objectives": [
    "*args — Variable Positional Arguments"
   ],
@@ -2604,7 +2510,7 @@
   "trackId": "python",
   "title": "03. Functions: **kwargs — Variable Keyword Arguments",
   "summary": "kwargs lets a function accept **any number of keyword arguments. The collects all extra keyword arguments into a **dictionary.",
-  "order": 171,
+  "order": 169,
   "objectives": [
    "**kwargs — Variable Keyword Arguments"
   ],
@@ -2617,7 +2523,7 @@
   "trackId": "python",
   "title": "03. Functions: Keyword-Only Arguments",
   "summary": "Keyword-only arguments are parameters that can ONLY be passed using their name — you cannot pass them positionally. They are defined after a * or *args in the function signature.",
-  "order": 172,
+  "order": 170,
   "objectives": [
    "Keyword-Only Arguments"
   ],
@@ -2630,7 +2536,7 @@
   "trackId": "python",
   "title": "03. Functions: Positional-Only Arguments & Argument Order Rules",
   "summary": "Positional-Only Arguments (Python 3.8+) are parameters that can ONLY be passed positionally — using their name as a keyword argument raises a TypeError. Defined with / in the signature.",
-  "order": 173,
+  "order": 171,
   "objectives": [
    "Key Examples"
   ],
@@ -2643,7 +2549,7 @@
   "trackId": "python",
   "title": "03. Functions: Complete Packing & Unpacking",
   "summary": "Packing = collecting multiple values INTO one variable Unpacking = spreading one collection INTO multiple variables",
-  "order": 174,
+  "order": 172,
   "objectives": [
    "Complete Packing & Unpacking"
   ],
@@ -2656,7 +2562,7 @@
   "trackId": "python",
   "title": "03. Functions: Lambda Functions — Complete Guide",
   "summary": "A lambda is a small, anonymous (no name) function defined in ONE LINE. It's like a mini function that you create on the spot and use immediately — or pass to another function.",
-  "order": 175,
+  "order": 173,
   "objectives": [
    "Lambda Functions — Complete Guide"
   ],
@@ -2669,7 +2575,7 @@
   "trackId": "python",
   "title": "03. Functions: map()",
   "summary": "map() applies a function to every item in an iterable and returns an iterator of the results. Think of it like an assembly line — each item goes in, gets processed the same way, and comes out transformed.",
-  "order": 176,
+  "order": 174,
   "objectives": [
    "map()"
   ],
@@ -2682,7 +2588,7 @@
   "trackId": "python",
   "title": "03. Functions: filter()",
   "summary": "filter() takes a function and an iterable, and returns only the items where the function returns True. Think of it as a sieve or a bouncer at a club — only items that pass the test get through.",
-  "order": 177,
+  "order": 175,
   "objectives": [
    "filter()"
   ],
@@ -2695,7 +2601,7 @@
   "trackId": "python",
   "title": "03. Functions: reduce()",
   "summary": "reduce() from functools takes a function and an iterable, and reduces the entire collection to a SINGLE value by repeatedly applying the function.",
-  "order": 178,
+  "order": 176,
   "objectives": [
    "reduce()"
   ],
@@ -2708,7 +2614,7 @@
   "trackId": "python",
   "title": "03. Functions: zip(), enumerate(), sorted() with key",
   "summary": "zip() — combines multiple iterables into pairs (or n-tuples). Like a physical zipper — interleaves teeth from two sides.",
-  "order": 179,
+  "order": 177,
   "objectives": [
    "Quick Explanation",
    "Key Examples"
@@ -2722,7 +2628,7 @@
   "trackId": "python",
   "title": "03. Functions: All Key Built-in Functions",
   "summary": "Covers Quick Reference with Examples.",
-  "order": 180,
+  "order": 178,
   "objectives": [
    "Quick Reference with Examples"
   ],
@@ -2735,9 +2641,9 @@
   "trackId": "python",
   "title": "03. Functions: eval, exec, compile",
   "summary": "eval() — evaluates a single Python expression (like a calculator) and returns the result.",
-  "order": 181,
+  "order": 179,
   "objectives": [
-   "Dangerous code is REJECTED"
+   "eval, exec, compile"
   ],
   "sourceFile": "sun_may_03_2026_asynchronous_programming_concepts_in_python.md",
   "labIds": [],
@@ -2748,7 +2654,7 @@
   "trackId": "python",
   "title": "03. Functions: 11. *args, **kwargs & Functional Programming",
   "summary": "Master flexible function signatures, first-class functions, decorators, and the functools toolkit.",
-  "order": 182,
+  "order": 180,
   "objectives": [
    "Function Parameter Kinds (PEP 570)",
    "*args — Variable Positional Arguments",
@@ -2766,7 +2672,7 @@
   "trackId": "python",
   "title": "03. Functions: FUNCTIONS (In-Depth)",
   "summary": "Q1: What is the difference between *args and kwargs?** > *args collects extra positional arguments into a tuple. kwargs collects extra **keyword arguments into a dictionary.",
-  "order": 183,
+  "order": 181,
   "objectives": [
    "Functions, *args, **kwargs, Closures, Scope"
   ],
@@ -2779,7 +2685,7 @@
   "trackId": "python",
   "title": "03. Functions: MAP, FILTER, REDUCE (In-Depth)",
   "summary": "MAP, FILTER, REDUCE (In-Depth): explanations and runnable examples.",
-  "order": 184,
+  "order": 182,
   "objectives": [
    "MAP, FILTER, REDUCE (In-Depth)"
   ],
@@ -2792,7 +2698,7 @@
   "trackId": "python",
   "title": "03. Functions: IMPORTANT BUILT-IN FUNCTIONS",
   "summary": "IMPORTANT BUILT-IN FUNCTIONS: explanations and runnable examples.",
-  "order": 185,
+  "order": 183,
   "objectives": [
    "IMPORTANT BUILT-IN FUNCTIONS"
   ],
@@ -2805,7 +2711,7 @@
   "trackId": "python",
   "title": "04. OOP: Python OOP 1/3: Classes & Objects · The __init__ Method & self …",
   "summary": "Interview Tip: OOP is THE most asked topic. Be ready to explain: \"A class is a blueprint.",
-  "order": 186,
+  "order": 184,
   "objectives": [
    "Classes & Objects",
    "The __init__ Method & self",
@@ -2821,7 +2727,7 @@
   "trackId": "python",
   "title": "04. OOP: Python OOP 2/3: Inheritance · Polymorphism …",
   "summary": "Inheritance = A class (child) gets attributes and methods from another class (parent).",
-  "order": 187,
+  "order": 185,
   "objectives": [
    "Inheritance",
    "Polymorphism",
@@ -2839,7 +2745,7 @@
   "trackId": "python",
   "title": "04. OOP: Python OOP 3/3: Properties (@property) · Method Resolution Order (MRO) …",
   "summary": "@property lets you define methods that look like attributes.",
-  "order": 188,
+  "order": 186,
   "objectives": [
    "Properties (@property)",
    "Method Resolution Order (MRO)",
@@ -2858,7 +2764,7 @@
   "trackId": "python",
   "title": "04. OOP: Python Design Patterns & SOLID Principles — Complete Guide",
   "summary": "Interview Tip: Design patterns and SOLID are asked in senior interviews. Be ready to explain with real examples, not textbook definitions.",
-  "order": 189,
+  "order": 187,
   "objectives": [
    "SOLID Principles",
    "Singleton Pattern",
@@ -2876,7 +2782,7 @@
   "trackId": "python",
   "title": "04. OOP: Topic 1: Classes and Objects in Python",
   "summary": "Class: A class is a blueprint or template for creating objects. It defines the structure and behavior that objects of that class will have.",
-  "order": 190,
+  "order": 188,
   "objectives": [
    "What classes and objects are",
    "How to create classes and objects",
@@ -2894,7 +2800,7 @@
   "trackId": "python",
   "title": "04. OOP: Topic 2: Inheritance in Python",
   "summary": "Inheritance is a fundamental concept in Object-Oriented Programming that allows a class to inherit attributes and methods from another class.",
-  "order": 191,
+  "order": 189,
   "objectives": [
    "What inheritance is and why it's important",
    "Single inheritance concepts",
@@ -2914,7 +2820,7 @@
   "trackId": "python",
   "title": "04. OOP: Topic 3: Encapsulation in Python OOPs",
   "summary": "Encapsulation is one of the four fundamental principles of Object-Oriented Programming (OOPs).",
-  "order": 192,
+  "order": 190,
   "objectives": [
    "What is Encapsulation?",
    "Access Modifiers in Python",
@@ -2931,7 +2837,7 @@
   "trackId": "python",
   "title": "04. OOP: Topic 4: Polymorphism in Python OOPs",
   "summary": "Polymorphism is one of the four fundamental principles of Object-Oriented Programming (OOPs).",
-  "order": 193,
+  "order": 191,
   "objectives": [
    "What is Polymorphism?",
    "Types of Polymorphism",
@@ -2948,7 +2854,7 @@
   "trackId": "python",
   "title": "04. OOP: Topic 5: Abstraction in Python OOPs",
   "summary": "Abstraction is one of the four fundamental principles of Object-Oriented Programming (OOPs). It refers to the process of hiding complex implementation details and showing only the necessary features of an object.",
-  "order": 194,
+  "order": 192,
   "objectives": [
    "What is Abstraction?",
    "Types of Abstraction",
@@ -2965,7 +2871,7 @@
   "trackId": "python",
   "title": "04. OOP: Topic 6: Advanced OOPs Concepts in Python",
   "summary": "Advanced OOPs concepts in Python go beyond the basic principles of inheritance, encapsulation, polymorphism, and abstraction.",
-  "order": 195,
+  "order": 193,
   "objectives": [
    "What are Advanced OOPs Concepts?",
    "Class Methods vs Static Methods vs Instance Methods",
@@ -2982,7 +2888,7 @@
   "trackId": "python",
   "title": "04. OOP: Topic 7: Design Patterns in Python OOPs",
   "summary": "Design patterns are proven solutions to common software design problems. They provide reusable templates for solving recurring design issues and help create more maintainable, flexible, and scalable code.",
-  "order": 196,
+  "order": 194,
   "objectives": [
    "What are Design Patterns?",
    "Categories of Design Patterns",
@@ -2999,7 +2905,7 @@
   "trackId": "python",
   "title": "04. OOP: Topic 8: Python-Specific OOPs Features",
   "summary": "Python provides several unique and powerful OOPs features that go beyond the standard object-oriented programming concepts.",
-  "order": 197,
+  "order": 195,
   "objectives": [
    "What are Python-Specific OOPs Features?",
    "Dataclasses",
@@ -3017,7 +2923,7 @@
   "trackId": "python",
   "title": "04. OOP: Special Features — Runnable Examples",
   "summary": "Python-Specific OOPs Features Examples This file demonstrates various Python-specific OOPs features including: Dataclasses Type Hints Abstract Base Classes Protocols Slots Descriptors",
-  "order": 198,
+  "order": 196,
   "objectives": [
    "Read and run the Special Features — Runnable Examples program",
    "Predict the output before running each part",
@@ -3032,7 +2938,7 @@
   "trackId": "python",
   "title": "04. OOP: Classes & Objects",
   "summary": "Think of a Class like a blueprint of a house. The blueprint itself is NOT a house — it just describes what a house looks like: how many rooms, what colour, what size.",
-  "order": 199,
+  "order": 197,
   "objectives": [
    "Real World Analogy"
   ],
@@ -3045,7 +2951,7 @@
   "trackId": "python",
   "title": "04. OOP: __init__ Method (Constructor)",
   "summary": "In Concept 01, we were setting attributes manually AFTER creating objects:",
-  "order": 200,
+  "order": 198,
   "objectives": [
    "Real World Analogy"
   ],
@@ -3058,13 +2964,12 @@
   "trackId": "python",
   "title": "04. OOP: Instance Variables vs Class Variables",
   "summary": "Now that you know __init__, it's time to understand the TWO types of variables in a class.",
-  "order": 201,
+  "order": 199,
   "objectives": [
    "Type 1 — Instance Variables",
    "Type 2 — Class Variables",
    "Real World Analogy",
-   "Variable Lookup Order (LEGB-like for objects)",
-   "CORRECT — Instance variable in __init__"
+   "Variable Lookup Order (LEGB-like for objects)"
   ],
   "sourceFile": "sat_may_02_2026_animal_animal_if_isinstance_animal_animal/sat_may_02_2026_animal_animal_if_isinstance_animal_animal.md",
   "labIds": [],
@@ -3075,7 +2980,7 @@
   "trackId": "python",
   "title": "04. OOP: Instance Methods, Class Methods & Static Methods",
   "summary": "A class can have 3 types of methods. Think of them as 3 types of employees in a company:",
-  "order": 202,
+  "order": 200,
   "objectives": [
    "Instance Methods, Class Methods & Static Methods"
   ],
@@ -3088,14 +2993,12 @@
   "trackId": "python",
   "title": "04. OOP: Encapsulation",
   "summary": "Imagine you go to an ATM machine. You insert your card, enter your PIN, and withdraw money.",
-  "order": 203,
+  "order": 201,
   "objectives": [
    "Two Goals of Encapsulation",
    "Python's Access Modifiers",
    "Name Mangling",
-   "Why Encapsulation Matters",
-   "PUBLIC — works fine",
-   "PROTECTED — technically accessible, but shouldn't be used outside"
+   "Why Encapsulation Matters"
   ],
   "sourceFile": "sat_may_02_2026_animal_animal_if_isinstance_animal_animal/sat_may_02_2026_animal_animal_if_isinstance_animal_animal.md",
   "labIds": [],
@@ -3106,7 +3009,7 @@
   "trackId": "python",
   "title": "04. OOP: Abstraction",
   "summary": "When you drive a car, you use the steering wheel, accelerator, and brake. You don't know (or care) how the engine combustion works, how the fuel injection is timed, or how the ABS brake system calculates skid force.",
-  "order": 204,
+  "order": 202,
   "objectives": [
    "Abstraction vs Encapsulation — Clear Difference",
    "Abstraction in Python — Two Ways"
@@ -3120,7 +3023,7 @@
   "trackId": "python",
   "title": "04. OOP: Inheritance",
   "summary": "Imagine your father knows how to drive a car, cook food, and speak English. You are his child — you automatically inherit all those skills WITHOUT learning them from scratch.",
-  "order": 205,
+  "order": 203,
   "objectives": [
    "Types of Inheritance in Python"
   ],
@@ -3135,7 +3038,7 @@
   "trackId": "python",
   "title": "04. OOP: Polymorphism",
   "summary": "The word Polymorphism comes from Greek: \"poly\" = many, \"morph\" = forms. So Polymorphism literally means \"many forms\".",
-  "order": 206,
+  "order": 204,
   "objectives": [
    "Types of Polymorphism in Python",
    "Why Is This Powerful?"
@@ -3149,7 +3052,7 @@
   "trackId": "python",
   "title": "04. OOP: Magic / Dunder Methods",
   "summary": "Have you ever wondered how Python knows what to do when you write len(my_list), or obj1 + obj2, or print(obj)? How does with open(\"file.txt\") automatically close the file?",
-  "order": 207,
+  "order": 205,
   "objectives": [
    "Real World Analogy",
    "Categories of Dunder Methods"
@@ -3163,10 +3066,9 @@
   "trackId": "python",
   "title": "04. OOP: Properties (@property, @setter, @deleter)",
   "summary": "Imagine you have a thermostat on your wall. You can read the temperature, you can set a new temperature (but only between 16°C–30°C — it won't let you set 500°C!), and you can reset/delete the custom setting.",
-  "order": 208,
+  "order": 206,
   "objectives": [
-   "The Problem Properties Solve",
-   "GOOD — Property with validation"
+   "The Problem Properties Solve"
   ],
   "sourceFile": "sat_may_02_2026_animal_animal_if_isinstance_animal_animal/sat_may_02_2026_animal_animal_if_isinstance_animal_animal.md",
   "labIds": [],
@@ -3177,7 +3079,7 @@
   "trackId": "python",
   "title": "04. OOP: Decorators in OOP",
   "summary": "A Decorator is like a wrapper around a function or class that adds extra behaviour WITHOUT changing the original code.",
-  "order": 209,
+  "order": 207,
   "objectives": [
    "Types of Decorators in OOP",
    "How Decorators Work Internally"
@@ -3193,7 +3095,7 @@
   "trackId": "python",
   "title": "04. OOP: Abstract Classes & Interfaces (ABC Deep Dive)",
   "summary": "An Abstract Base Class (ABC) is like a job description posted by a company:",
-  "order": 210,
+  "order": 208,
   "objectives": [
    "Key Concepts",
    "Complete ABC Features"
@@ -3207,7 +3109,7 @@
   "trackId": "python",
   "title": "04. OOP: MRO (Method Resolution Order) Deep Dive",
   "summary": "When you have multiple inheritance and a method is defined in MULTIPLE places in the hierarchy, Python needs a rule to decide which version to call. That rule is called MRO — Method Resolution Order.",
-  "order": 211,
+  "order": 209,
   "objectives": [
    "Real World Analogy",
    "C3 Linearization Algorithm",
@@ -3224,10 +3126,11 @@
   "trackId": "python",
   "title": "04. OOP: Composition vs Inheritance",
   "summary": "This is one of the most debated topics in OOP. When should you inherit from a class vs use it as an attribute?",
-  "order": 212,
+  "order": 210,
   "objectives": [
    "The Classic Mistake",
-   "RIGHT — Composition"
+   "When to Use Each",
+   "Key Principle"
   ],
   "sourceFile": "sat_may_02_2026_animal_animal_if_isinstance_animal_animal/sat_may_02_2026_animal_animal_if_isinstance_animal_animal.md",
   "labIds": [
@@ -3240,7 +3143,7 @@
   "trackId": "python",
   "title": "04. OOP: Mixins",
   "summary": "A Mixin is a class designed to be mixed into other classes to add specific behaviour — without being a standalone object itself.",
-  "order": 213,
+  "order": 211,
   "objectives": [
    "Mixin Rules",
    "Mixin vs Inheritance vs Composition"
@@ -3254,7 +3157,7 @@
   "trackId": "python",
   "title": "04. OOP: __slots__",
   "summary": "By default, every Python object stores its attributes in a dictionary (__dict__). Dictionaries are flexible but memory-heavy. __slots__ replaces that dictionary with a fixed, compact memory structure.",
-  "order": 214,
+  "order": 212,
   "objectives": [
    "When to Use __slots__"
   ],
@@ -3267,7 +3170,7 @@
   "trackId": "python",
   "title": "04. OOP: Metaclasses",
   "summary": "In Python, everything is an object — including classes themselves. A Metaclass is the class of a class.",
-  "order": 215,
+  "order": 213,
   "objectives": [
    "Analogy"
   ],
@@ -3280,7 +3183,7 @@
   "trackId": "python",
   "title": "04. OOP: Descriptors",
   "summary": "A Descriptor is an object that defines how attribute access works. When Python sees obj.attr, it checks if attr is a descriptor on the class.",
-  "order": 216,
+  "order": 214,
   "objectives": [
    "Descriptors"
   ],
@@ -3293,7 +3196,7 @@
   "trackId": "python",
   "title": "04. OOP: __new__ vs __init__",
   "summary": "__new__ vs __init__: explanations and runnable examples.",
-  "order": 217,
+  "order": 215,
   "objectives": [
    "__new__ vs __init__"
   ],
@@ -3306,7 +3209,7 @@
   "trackId": "python",
   "title": "04. OOP: Data Classes",
   "summary": "Data Classes (@dataclass) automatically generate __init__, __repr__, __eq__ and more from class-level field declarations. They're Python's modern answer to boilerplate-heavy value objects.",
-  "order": 218,
+  "order": 216,
   "objectives": [
    "Data Classes"
   ],
@@ -3319,7 +3222,7 @@
   "trackId": "python",
   "title": "04. OOP: SOLID Principles (Mastery Level)",
   "summary": "SOLID is 5 design principles that make code maintainable, extensible, and testable. They were defined by Robert C.",
-  "order": 219,
+  "order": 217,
   "objectives": [
    "WHAT IS SOLID?",
    "S — Single Responsibility Principle (SRP)",
@@ -3337,7 +3240,7 @@
   "trackId": "python",
   "title": "04. OOP: The 6 Must-Know Design Patterns (Part 1 of 7)",
   "summary": "Covers WHAT ARE DESIGN PATTERNS?, PATTERN 1 — Singleton, PATTERN 2 — Factory Method, PATTERN 3 — Decorator Pattern, PATTERN 4 — Observer.",
-  "order": 220,
+  "order": 218,
   "objectives": [
    "WHAT ARE DESIGN PATTERNS?",
    "PATTERN 1 — Singleton",
@@ -3354,7 +3257,7 @@
   "trackId": "python",
   "title": "04. OOP: The 6 Must-Know Design Patterns (Part 2 of 7)",
   "summary": "Covers PATTERN 5 — Strategy, PATTERN 6 — Repository, THE REMAINING MUST-KNOW GoF PATTERNS, PATTERN 7 — Adapter.",
-  "order": 221,
+  "order": 219,
   "objectives": [
    "PATTERN 5 — Strategy",
    "PATTERN 6 — Repository",
@@ -3370,7 +3273,7 @@
   "trackId": "python",
   "title": "04. OOP: The 6 Must-Know Design Patterns (Part 3 of 7)",
   "summary": "Covers PATTERN 8 — Facade, PATTERN 9 — Proxy, PATTERN 10 — Command.",
-  "order": 222,
+  "order": 220,
   "objectives": [
    "PATTERN 8 — Facade",
    "PATTERN 9 — Proxy",
@@ -3385,7 +3288,7 @@
   "trackId": "python",
   "title": "04. OOP: The 6 Must-Know Design Patterns (Part 4 of 7)",
   "summary": "A-1: Build a NotificationAdapter system. Your interface: send(to, message, channel).",
-  "order": 223,
+  "order": 221,
   "objectives": [
    "PATTERN 11 — Chain of Responsibility",
    "PATTERN 12 — State",
@@ -3401,7 +3304,7 @@
   "trackId": "python",
   "title": "04. OOP: The 6 Must-Know Design Patterns (Part 5 of 7)",
   "summary": "Covers DDD BUILDING BLOCK 1 — Entity vs Value Object, DDD BUILDING BLOCK 2 — Aggregate & Domain Events.",
-  "order": 224,
+  "order": 222,
   "objectives": [
    "DDD BUILDING BLOCK 1 — Entity vs Value Object",
    "DDD BUILDING BLOCK 2 — Aggregate & Domain Events"
@@ -3415,7 +3318,7 @@
   "trackId": "python",
   "title": "04. OOP: The 6 Must-Know Design Patterns (Part 6 of 7)",
   "summary": "Covers DDD BUILDING BLOCK 3 — Domain Services + Repository + Full Example, ASYNC OOP — Classes that work asynchronously.",
-  "order": 225,
+  "order": 223,
   "objectives": [
    "DDD BUILDING BLOCK 3 — Domain Services + Repository + Full Example",
    "ASYNC OOP — Classes that work asynchronously"
@@ -3429,7 +3332,7 @@
   "trackId": "python",
   "title": "04. OOP: The 6 Must-Know Design Patterns (Part 7 of 7)",
   "summary": "Congratulations on completing the full Python OOP Mastery Course! > > You now have the knowledge of a Senior Python Engineer in OOP, Design Patterns, SOLID, and DDD.",
-  "order": 226,
+  "order": 224,
   "objectives": [
    "TYPE SYSTEM — Protocol, Generic, TypeVar",
    "WHAT TO DO NEXT"
@@ -3443,7 +3346,7 @@
   "trackId": "python",
   "title": "04. OOP: 01 — Object Oriented Programming in Python (Complete Deep Dive)",
   "summary": "Goal: After reading this, no OOP question — basic, tricky, or rare — should surprise you.",
-  "order": 227,
+  "order": 225,
   "objectives": [
    "The four pillars (with exact definitions)",
    "Class & Object — internals",
@@ -3461,7 +3364,7 @@
   "trackId": "python",
   "title": "04. OOP: 04 — Design Principles & Patterns (Deep Dive)",
   "summary": "A class should have one and only one reason to change. Smell: a class doing parsing + validation + DB save + email.",
-  "order": 228,
+  "order": 226,
   "objectives": [
    "SOLID — long form",
    "Other principles (each commonly asked)",
@@ -3479,7 +3382,7 @@
   "trackId": "python",
   "title": "04. OOP: Abstraction",
   "summary": "Abstraction is the OOP principle of hiding implementation complexity behind a simple, consistent interface.",
-  "order": 229,
+  "order": 227,
   "objectives": [
    "Concept (Deep Explanation)",
    "Quick Recap / Cheatsheet"
@@ -3493,7 +3396,7 @@
   "trackId": "python",
   "title": "04. OOP: Classes and Objects",
   "summary": "A class is a blueprint for creating objects — it defines the structure (attributes) and behaviour (methods) shared by all instances.",
-  "order": 230,
+  "order": 228,
   "objectives": [
    "Concept (Deep Explanation)",
    "Quick Recap / Cheatsheet"
@@ -3507,7 +3410,7 @@
   "trackId": "python",
   "title": "04. OOP: @classmethod and @staticmethod In Depth",
   "summary": "Python functions defined inside a class body are, by default, instance methods — their first parameter (self) is automatically bound to the instance when called.",
-  "order": 231,
+  "order": 229,
   "objectives": [
    "Concept (Deep Explanation)",
    "Quick Recap / Cheatsheet"
@@ -3521,7 +3424,7 @@
   "trackId": "python",
   "title": "04. OOP: Composition vs Inheritance",
   "summary": "Inheritance and composition are the two primary mechanisms for code reuse and relationship modelling in object-oriented programming.",
-  "order": 232,
+  "order": 230,
   "objectives": [
    "Concept (Deep Explanation)",
    "Quick Recap / Cheatsheet"
@@ -3537,7 +3440,7 @@
   "trackId": "python",
   "title": "04. OOP: Dataclasses and OOP Interplay",
   "summary": "@dataclass (introduced in Python 3.7, PEP 557) is a class decorator that inspects type annotations in a class body and auto-generates boilerplate special methods: primarily __init__, __repr__, and __eq__.",
-  "order": 233,
+  "order": 231,
   "objectives": [
    "Concept (Deep Explanation)",
    "Quick Recap / Cheatsheet"
@@ -3551,7 +3454,7 @@
   "trackId": "python",
   "title": "04. OOP: Dunder Methods Overview",
   "summary": "Dunder methods (double-underscore methods, also called magic methods or special methods) are methods with names surrounded by double underscores: __init__, __repr__, __add__, etc.",
-  "order": 234,
+  "order": 232,
   "objectives": [
    "Concept (Deep Explanation)",
    "Quick Recap / Cheatsheet"
@@ -3565,7 +3468,7 @@
   "trackId": "python",
   "title": "04. OOP: Encapsulation",
   "summary": "Encapsulation is the OOP principle of bundling data (attributes) and behaviour (methods) together into a single unit (the class) while controlling access to the internal state from outside code. It exists for several reasons:",
-  "order": 235,
+  "order": 233,
   "objectives": [
    "Concept (Deep Explanation)",
    "Quick Recap / Cheatsheet"
@@ -3579,7 +3482,7 @@
   "trackId": "python",
   "title": "04. OOP: Inheritance",
   "summary": "Inheritance allows a class (subclass / derived class) to acquire the attributes and methods of another class (superclass / base class / parent class). It serves two purposes:",
-  "order": 236,
+  "order": 234,
   "objectives": [
    "Concept (Deep Explanation)",
    "Quick Recap / Cheatsheet"
@@ -3595,7 +3498,7 @@
   "trackId": "python",
   "title": "04. OOP: __init__ and Constructors",
   "summary": "__init__ is the initialiser method called automatically after a new instance is created. It is not the constructor in the C++/Java sense — Python splits construction into two phases:",
-  "order": 237,
+  "order": 235,
   "objectives": [
    "Concept (Deep Explanation)",
    "Quick Recap / Cheatsheet"
@@ -3609,7 +3512,7 @@
   "trackId": "python",
   "title": "04. OOP: Instance, Class, and Static Methods",
   "summary": "Python methods come in three flavours, each serving a distinct purpose in object-oriented design:",
-  "order": 238,
+  "order": 236,
   "objectives": [
    "Concept (Deep Explanation)",
    "Quick Recap / Cheatsheet"
@@ -3623,7 +3526,7 @@
   "trackId": "python",
   "title": "04. OOP: Instance, Class, and Static Variables",
   "summary": "Python variables in a class fall into two fundamental categories:",
-  "order": 239,
+  "order": 237,
   "objectives": [
    "Concept (Deep Explanation)",
    "Quick Recap / Cheatsheet"
@@ -3637,7 +3540,7 @@
   "trackId": "python",
   "title": "04. OOP: Metaclasses (Introduction)",
   "summary": "In Python, everything is an object — including classes. A metaclass is the class of a class: it controls how classes are created, just as a class controls how instances are created.",
-  "order": 240,
+  "order": 238,
   "objectives": [
    "Concept (Deep Explanation)",
    "Quick Recap / Cheatsheet"
@@ -3651,7 +3554,7 @@
   "trackId": "python",
   "title": "04. OOP: Method Overloading",
   "summary": "In languages like C++ and Java, method overloading means defining multiple methods with the same name but different parameter signatures (number or type of parameters).",
-  "order": 241,
+  "order": 239,
   "objectives": [
    "Concept (Deep Explanation)",
    "Quick Recap / Cheatsheet"
@@ -3665,7 +3568,7 @@
   "trackId": "python",
   "title": "04. OOP: MRO and super()",
   "summary": "When Python looks up an attribute on an instance, it must search through the class hierarchy to find it. In a single-inheritance chain, this is trivial — search the class, then its parent, then the grandparent, etc.",
-  "order": 242,
+  "order": 240,
   "objectives": [
    "Concept (Deep Explanation)",
    "Quick Recap / Cheatsheet"
@@ -3681,7 +3584,7 @@
   "trackId": "python",
   "title": "04. OOP: Polymorphism",
   "summary": "Polymorphism (from Greek: poly = many, morphe = form) is the ability for objects of different types to respond to the same interface in type-specific ways. It is the third pillar of OOP (alongside encapsulation and inheritance).",
-  "order": 243,
+  "order": 241,
   "objectives": [
    "Concept (Deep Explanation)",
    "Quick Recap / Cheatsheet"
@@ -3695,7 +3598,7 @@
   "trackId": "python",
   "title": "04. OOP: Properties, Getters, and Setters",
   "summary": "Python's property built-in allows you to define methods that are accessed like attributes.",
-  "order": 244,
+  "order": 242,
   "objectives": [
    "Concept (Deep Explanation)",
    "Quick Recap / Cheatsheet"
@@ -3709,7 +3612,7 @@
   "trackId": "python",
   "title": "04. OOP: __slots__",
   "summary": "By default, every Python instance stores its attributes in a per-instance dictionary (__dict__).",
-  "order": 245,
+  "order": 243,
   "objectives": [
    "Concept (Deep Explanation)",
    "Quick Recap / Cheatsheet"
@@ -3723,7 +3626,7 @@
   "trackId": "python",
   "title": "04. OOP: SOLID Principles in Python",
   "summary": "A class should have only one reason to change. One class = one job.",
-  "order": 246,
+  "order": 244,
   "objectives": [
    "Concept (Deep Explanation)",
    "Quick Recap / Cheatsheet"
@@ -3737,7 +3640,7 @@
   "trackId": "python",
   "title": "04. OOP: OOP — OBJECT-ORIENTED PROGRAMMING",
   "summary": "Q1: What is the difference between a class and an object? > A class is a blueprint/template that defines attributes and methods. An object is a specific instance created from that class.",
-  "order": 247,
+  "order": 245,
   "objectives": [
    "Classes and Objects",
    "Four Pillars of OOP",
@@ -3753,7 +3656,7 @@
   "trackId": "python",
   "title": "04. OOP: SOLID PRINCIPLES",
   "summary": "SOLID PRINCIPLES: explanations and runnable examples.",
-  "order": 248,
+  "order": 246,
   "objectives": [
    "SOLID PRINCIPLES"
   ],
@@ -3766,7 +3669,7 @@
   "trackId": "python",
   "title": "04. OOP: DESIGN PATTERNS",
   "summary": "DESIGN PATTERNS: explanations and runnable examples.",
-  "order": 249,
+  "order": 247,
   "objectives": [
    "DESIGN PATTERNS"
   ],
@@ -3779,7 +3682,7 @@
   "trackId": "python",
   "title": "04. OOP: ABSTRACT BASE CLASSES & PROTOCOLS",
   "summary": "ABSTRACT BASE CLASSES & PROTOCOLS: explanations and runnable examples.",
-  "order": 250,
+  "order": 248,
   "objectives": [
    "ABSTRACT BASE CLASSES & PROTOCOLS"
   ],
@@ -3792,7 +3695,7 @@
   "trackId": "python",
   "title": "05. Advanced Python: Python Decorators, Generators & Iterators — Complete Guide",
   "summary": "Interview Tip: These three topics separate junior from senior developers. Be ready to implement a decorator from scratch and explain generator vs iterator.",
-  "order": 251,
+  "order": 249,
   "objectives": [
    "Iterators",
    "Generators",
@@ -3813,7 +3716,7 @@
   "trackId": "python",
   "title": "05. Advanced Python: Decorators",
   "summary": "Decorators are a powerful feature in Python that allows you to modify or enhance functions and classes without changing their source code. They provide a clean and elegant way to add functionality to existing code.",
-  "order": 252,
+  "order": 250,
   "objectives": [
    "What are Decorators?",
    "Function Decorators",
@@ -3833,7 +3736,7 @@
   "trackId": "python",
   "title": "05. Advanced Python: Advanced Concepts",
   "summary": "Advanced Python concepts build upon the foundational knowledge and introduce powerful features for writing more efficient, maintainable, and elegant code. These concepts are essential for professional Python development.",
-  "order": 253,
+  "order": 251,
   "objectives": [
    "Generators and Generator Expressions",
    "Iterators and Iterables",
@@ -3851,7 +3754,7 @@
   "trackId": "python",
   "title": "05. Advanced Python: Generators Iterators",
   "summary": "Iterators and Generators are fundamental concepts in Python for creating memory-efficient, lazy-evaluated sequences. They allow you to work with large datasets without loading everything into memory at once.",
-  "order": 254,
+  "order": 252,
   "objectives": [
    "Iterators",
    "Generators",
@@ -3871,7 +3774,7 @@
   "trackId": "python",
   "title": "05. Advanced Python: Generators Iterators — Runnable Examples",
   "summary": "Generators and Iterators - Comprehensive Examples ================================================== This module contains 7+ detailed examples demonstrating generators and iterators.",
-  "order": 255,
+  "order": 253,
   "objectives": [
    "Read and run the Generators Iterators — Runnable Examples program",
    "Predict the output before running each part",
@@ -3888,7 +3791,7 @@
   "trackId": "python",
   "title": "05. Advanced Python: Context Managers",
   "summary": "Context Managers are Python objects that define runtime context using the with statement. They ensure proper acquisition and release of resources, making code cleaner and more reliable.",
-  "order": 256,
+  "order": 254,
   "objectives": [
    "The with Statement",
    "Creating Context Managers",
@@ -3906,7 +3809,7 @@
   "trackId": "python",
   "title": "05. Advanced Python: Context Managers — Runnable Examples",
   "summary": "Context Managers - Comprehensive Examples ========================================== This module contains 7+ detailed examples demonstrating context managers.",
-  "order": 257,
+  "order": 255,
   "objectives": [
    "Read and run the Context Managers — Runnable Examples program",
    "Predict the output before running each part",
@@ -3921,7 +3824,7 @@
   "trackId": "python",
   "title": "05. Advanced Python: Match Case",
   "summary": "Structural Pattern Matching (match-case) was introduced in Python 3.10. It provides a powerful way to match complex data structures and execute code based on patterns.",
-  "order": 258,
+  "order": 256,
   "objectives": [
    "Pattern Types",
    "Advanced Patterns",
@@ -3938,7 +3841,7 @@
   "trackId": "python",
   "title": "05. Advanced Python: Match Case — Runnable Examples",
   "summary": "Match-Case (Structural Pattern Matching) - Examples and Exercises ================================================================= Python 3.10+ required",
-  "order": 259,
+  "order": 257,
   "objectives": [
    "Read and run the Match Case — Runnable Examples program",
    "Predict the output before running each part",
@@ -3953,7 +3856,7 @@
   "trackId": "python",
   "title": "05. Advanced Python: Itertools Functools",
   "summary": "itertools and functools are two powerful standard library modules that provide efficient tools for working with iterators and functions.",
-  "order": 260,
+  "order": 258,
   "objectives": [
    "Itertools - Infinite Iterators",
    "Itertools - Combinatorics",
@@ -3971,7 +3874,7 @@
   "trackId": "python",
   "title": "05. Advanced Python: Itertools Functools — Runnable Examples",
   "summary": "Itertools and Functools - Comprehensive Examples ===============================================",
-  "order": 261,
+  "order": 259,
   "objectives": [
    "Read and run the Itertools Functools — Runnable Examples program",
    "Predict the output before running each part",
@@ -3986,7 +3889,7 @@
   "trackId": "python",
   "title": "05. Advanced Python: Magic Methods",
   "summary": "Magic methods (also called dunder methods for \"double underscore\") allow you to define how objects behave with built-in Python operations. They enable operator overloading, context managers, iteration, and more.",
-  "order": 262,
+  "order": 260,
   "objectives": [
    "Naming Convention",
    "Categories of Magic Methods",
@@ -4003,7 +3906,7 @@
   "trackId": "python",
   "title": "05. Advanced Python: Magic Methods — Runnable Examples",
   "summary": "Magic Methods Examples Demonstrates various magic methods (dunder methods) in Python",
-  "order": 263,
+  "order": 261,
   "objectives": [
    "Read and run the Magic Methods — Runnable Examples program",
    "Predict the output before running each part",
@@ -4018,7 +3921,7 @@
   "trackId": "python",
   "title": "05. Advanced Python: itertools, functools, operator",
   "summary": "Covers Key Examples.",
-  "order": 264,
+  "order": 262,
   "objectives": [
    "Key Examples"
   ],
@@ -4031,7 +3934,7 @@
   "trackId": "python",
   "title": "05. Advanced Python: 06 — Context Managers (Deep Dive)",
   "summary": "A context manager guarantees setup + teardown around a block. Pattern: acquire resource → use → release, no matter what (success, exception, return, break).",
-  "order": 265,
+  "order": 263,
   "objectives": [
    "What & Why",
    "The protocol",
@@ -4049,7 +3952,7 @@
   "trackId": "python",
   "title": "05. Advanced Python: 12. Generators & Iterators",
   "summary": "Master lazy evaluation, the iteration protocol, generator coroutines, and the itertools toolbox.",
-  "order": 266,
+  "order": 264,
   "objectives": [
    "The Iteration Protocol",
    "Custom Iterator Class",
@@ -4069,7 +3972,7 @@
   "trackId": "python",
   "title": "05. Advanced Python: 17. Magic (Dunder) Methods — Complete Catalog",
   "summary": "Dunder (\"double underscore\") methods let your classes integrate with Python's built-in protocols: arithmetic, iteration, context management, attribute access, and more.",
-  "order": 267,
+  "order": 265,
   "objectives": [
    "The Big Picture",
    "Construction & Lifecycle",
@@ -4087,7 +3990,7 @@
   "trackId": "python",
   "title": "05. Advanced Python: 18. Bonus — Decorators (Deep), typing, logging, pytest, Packaging, match/case, Version Notes",
   "summary": "A grab-bag of essentials that round out an interview prep pack.",
-  "order": 268,
+  "order": 266,
   "objectives": [
    "A. Decorators — Deep Dive",
    "B. Closures — Recap with Pitfalls",
@@ -4107,7 +4010,7 @@
   "trackId": "python",
   "title": "05. Advanced Python: DECORATORS",
   "summary": "DECORATORS: explanations and runnable examples.",
-  "order": 269,
+  "order": 267,
   "objectives": [
    "DECORATORS"
   ],
@@ -4122,7 +4025,7 @@
   "trackId": "python",
   "title": "05. Advanced Python: GENERATORS & ITERATORS",
   "summary": "GENERATORS & ITERATORS: explanations and runnable examples.",
-  "order": 270,
+  "order": 268,
   "objectives": [
    "GENERATORS & ITERATORS"
   ],
@@ -4137,7 +4040,7 @@
   "trackId": "python",
   "title": "05. Advanced Python: CONTEXT MANAGERS",
   "summary": "CONTEXT MANAGERS: explanations and runnable examples.",
-  "order": 271,
+  "order": 269,
   "objectives": [
    "CONTEXT MANAGERS"
   ],
@@ -4150,7 +4053,7 @@
   "trackId": "python",
   "title": "05. Advanced Python: FUNCTOOLS MODULE (Complete)",
   "summary": "FUNCTOOLS MODULE (Complete): explanations and runnable examples.",
-  "order": 272,
+  "order": 270,
   "objectives": [
    "FUNCTOOLS MODULE (Complete)"
   ],
@@ -4163,7 +4066,7 @@
   "trackId": "python",
   "title": "05. Advanced Python: ITERTOOLS MODULE (Complete)",
   "summary": "ITERTOOLS MODULE (Complete): explanations and runnable examples.",
-  "order": 273,
+  "order": 271,
   "objectives": [
    "ITERTOOLS MODULE (Complete)"
   ],
@@ -4175,11 +4078,10 @@
   "id": "py-05-abstract-syntax-tree-ast-metaprogramming-db1994",
   "trackId": "python",
   "title": "05. Advanced Python: ABSTRACT SYNTAX TREE (AST) & METAPROGRAMMING",
-  "summary": "config = Config() print(getattr(config, \"debug\")) # True print(getattr(config, \"missing\", \"default\")) # \"default\" setattr(config, \"host\", \"localhost\") print(hasattr(config, \"host\")) # True delattr(config, \"host\")",
-  "order": 274,
+  "summary": "ABSTRACT SYNTAX TREE (AST) & METAPROGRAMMING: explanations and runnable examples.",
+  "order": 272,
   "objectives": [
-   "NEVER use eval/exec with user input! Security risk!",
-   "getattr, setattr, hasattr, delattr"
+   "ABSTRACT SYNTAX TREE (AST) & METAPROGRAMMING"
   ],
   "sourceFile": "sun_apr_19_2026_python_interview_preparation_and_improvement_plan/sun_apr_19_2026_python_interview_preparation_and_improvement_plan.md",
   "labIds": [],
@@ -4190,7 +4092,7 @@
   "trackId": "python",
   "title": "05. Advanced Python: ADVANCED PATTERNS & RECIPES",
   "summary": "ADVANCED PATTERNS & RECIPES: explanations and runnable examples.",
-  "order": 275,
+  "order": 273,
   "objectives": [
    "ADVANCED PATTERNS & RECIPES"
   ],
@@ -4203,7 +4105,7 @@
   "trackId": "python",
   "title": "05. Advanced Python: Example2 Shadow Effect",
   "summary": "Runnable Example2 Shadow Effect program, walked through function by function.",
-  "order": 276,
+  "order": 274,
   "objectives": [
    "Read and run the Example2 Shadow Effect program",
    "Predict the output before running each part",
@@ -4218,7 +4120,7 @@
   "trackId": "python",
   "title": "05. Advanced Python: Example4 Type Identity",
   "summary": "Runnable Example4 Type Identity program, walked through function by function.",
-  "order": 277,
+  "order": 275,
   "objectives": [
    "Read and run the Example4 Type Identity program",
    "Predict the output before running each part",
@@ -4235,7 +4137,7 @@
   "trackId": "python",
   "title": "06. Typing & Models: Python Pydantic & Advanced Topics — Complete Guide",
   "summary": "Interview Tip: Pydantic, type hints, and advanced patterns are what separate mid-level from senior developers. FastAPI is built on Pydantic — know it deeply.",
-  "order": 278,
+  "order": 276,
   "objectives": [
    "Type Hints Deep Dive",
    "Pydantic v2 — Models & Validation",
@@ -4253,7 +4155,7 @@
   "trackId": "python",
   "title": "06. Typing & Models: Pydantic Dataclasses",
   "summary": "Dataclasses (Python 3.7+) and Pydantic are tools for creating classes that primarily store data with automatic generation of special methods.",
-  "order": 279,
+  "order": 277,
   "objectives": [
    "Dataclasses",
    "Pydantic",
@@ -4271,7 +4173,7 @@
   "trackId": "python",
   "title": "06. Typing & Models: Pydantic Dataclasses — Runnable Examples",
   "summary": "Dataclasses and Pydantic - Comprehensive Examples ==================================================",
-  "order": 280,
+  "order": 278,
   "objectives": [
    "Read and run the Pydantic Dataclasses — Runnable Examples program",
    "Predict the output before running each part",
@@ -4286,7 +4188,7 @@
   "trackId": "python",
   "title": "06. Typing & Models: Typing Module",
   "summary": "The typing module provides runtime support for type hints, enabling static type checking with tools like mypy.",
-  "order": 281,
+  "order": 279,
   "objectives": [
    "Basic Type Hints",
    "Generic Types",
@@ -4304,7 +4206,7 @@
   "trackId": "python",
   "title": "06. Typing & Models: Typing Module — Runnable Examples",
   "summary": "Typing Module - Comprehensive Examples =====================================",
-  "order": 282,
+  "order": 280,
   "objectives": [
    "Read and run the Typing Module — Runnable Examples program",
    "Predict the output before running each part",
@@ -4319,12 +4221,9 @@
   "trackId": "python",
   "title": "06. Typing & Models: What is a Dataclass?",
   "summary": "Imagine you need to represent a Student in Python. The traditional way:",
-  "order": 283,
+  "order": 281,
   "objectives": [
-   "What Gets Auto-Generated",
-   "BEFORE dataclasses (regular class)",
-   "AFTER dataclasses (same functionality, 3 lines!)",
-   "Both work identically"
+   "What Gets Auto-Generated"
   ],
   "sourceFile": "sun_may_03_2026_concatenation_and_repetition_in_python_strings.md",
   "labIds": [],
@@ -4335,11 +4234,10 @@
   "trackId": "python",
   "title": "06. Typing & Models: Field Definitions & the field() Function",
   "summary": "In a dataclass, every class-level annotation becomes a field. But sometimes you need more control over how a field behaves — that's where field() comes in.",
-  "order": 284,
+  "order": 282,
   "objectives": [
    "The field() Function — All Parameters",
-   "The Mutable Default TRAP",
-   "CORRECT — creates NEW list for EACH instance"
+   "The Mutable Default TRAP"
   ],
   "sourceFile": "sun_may_03_2026_concatenation_and_repetition_in_python_strings.md",
   "labIds": [],
@@ -4350,7 +4248,7 @@
   "trackId": "python",
   "title": "06. Typing & Models: Dataclass Parameters",
   "summary": "The @dataclass decorator itself accepts parameters that control the overall behavior of the entire class — not just individual fields.",
-  "order": 285,
+  "order": 283,
   "objectives": [
    "The Most Important Ones"
   ],
@@ -4363,7 +4261,7 @@
   "trackId": "python",
   "title": "06. Typing & Models: Special Methods: __post_init__, InitVar, ClassVar",
   "summary": "When @dataclass generates __init__, at the very end it automatically calls __post_init__() if you define it. This is your chance to:",
-  "order": 286,
+  "order": 284,
   "objectives": [
    "__post_init__() — The Validator Hook",
    "InitVar — Init-Only Fields",
@@ -4378,14 +4276,10 @@
   "trackId": "python",
   "title": "06. Typing & Models: Inheritance in Dataclasses",
   "summary": "Dataclasses support inheritance just like regular Python classes. A child dataclass inherits all fields from the parent AND adds its own fields.",
-  "order": 287,
+  "order": 285,
   "objectives": [
    "Key Rules for Inheritance",
-   "The \"Default After Non-Default\" Problem",
-   "PROBLEM — this fails!",
-   "@dataclass",
-   "class Parent",
-   "name: str # no default"
+   "The \"Default After Non-Default\" Problem"
   ],
   "sourceFile": "sun_may_03_2026_concatenation_and_repetition_in_python_strings.md",
   "labIds": [
@@ -4398,7 +4292,7 @@
   "trackId": "python",
   "title": "06. Typing & Models: Advanced Dataclass Features",
   "summary": "Python's dataclasses module provides several powerful utility functions that work WITH your dataclasses:",
-  "order": 288,
+  "order": 286,
   "objectives": [
    "Advanced Dataclass Features"
   ],
@@ -4411,12 +4305,10 @@
   "trackId": "python",
   "title": "06. Typing & Models: What is Enum?",
   "summary": "Enum (Enumeration) is a way to define a fixed set of named constants. Instead of using magic strings or numbers scattered through your code, you group them under a meaningful name.",
-  "order": 289,
+  "order": 287,
   "objectives": [
    "The Problem Enums Solve",
-   "BAD — magic numbers",
-   "Where is the documentation? What are valid values?",
-   "GOOD — Enum: self-documenting, typo-proof, IDE-supported"
+   "Enum Anatomy"
   ],
   "sourceFile": "sun_may_03_2026_concatenation_and_repetition_in_python_strings.md",
   "labIds": [],
@@ -4427,7 +4319,7 @@
   "trackId": "python",
   "title": "06. Typing & Models: Enum Types",
   "summary": "Python provides several specialized Enum types for different use cases:",
-  "order": 290,
+  "order": 288,
   "objectives": [
    "Enum Types"
   ],
@@ -4440,11 +4332,9 @@
   "trackId": "python",
   "title": "06. Typing & Models: What is Pydantic?",
   "summary": "Pydantic is like a strict bouncer at a club. Dataclasses = anyone can walk in",
-  "order": 291,
+  "order": 289,
   "objectives": [
-   "Pydantic v1 vs v2 — Key Differences",
-   "AUTO TYPE COERCION — Pydantic converts compatible types!",
-   "INVALID data — raises ValidationError with details"
+   "Pydantic v1 vs v2 — Key Differences"
   ],
   "sourceFile": "sun_may_03_2026_concatenation_and_repetition_in_python_strings.md",
   "labIds": [],
@@ -4455,7 +4345,7 @@
   "trackId": "python",
   "title": "06. Typing & Models: Field Types & Validation",
   "summary": "Pydantic's Field() function is like attaching rules and constraints to each field:",
-  "order": 292,
+  "order": 290,
   "objectives": [
    "Field Constraints Reference"
   ],
@@ -4468,7 +4358,7 @@
   "trackId": "python",
   "title": "06. Typing & Models: Model Configuration",
   "summary": "model_config controls how the entire model behaves — not just individual fields. It's the settings panel for the whole class.",
-  "order": 293,
+  "order": 291,
   "objectives": [
    "Model Configuration"
   ],
@@ -4481,7 +4371,7 @@
   "trackId": "python",
   "title": "06. Typing & Models: Validators",
   "summary": "Pydantic validators are custom functions that run during validation to add your own business rules:",
-  "order": 294,
+  "order": 292,
   "objectives": [
    "Validator Modes"
   ],
@@ -4494,7 +4384,7 @@
   "trackId": "python",
   "title": "06. Typing & Models: Pydantic Advanced Features",
   "summary": "These are the power tools of Pydantic. You need them for complex real-world scenarios.",
-  "order": 295,
+  "order": 293,
   "objectives": [
    "Pydantic Advanced Features"
   ],
@@ -4507,7 +4397,7 @@
   "trackId": "python",
   "title": "06. Typing & Models: Pydantic with Real World",
   "summary": "This chapter is where everything comes together — the real production patterns that senior developers use daily.",
-  "order": 296,
+  "order": 294,
   "objectives": [
    "Pydantic with Real World"
   ],
@@ -4520,7 +4410,7 @@
   "trackId": "python",
   "title": "06. Typing & Models: 10 — Dataclasses & Enums (Deep Dive)",
   "summary": "Replace boilerplate __init__/__repr__/__eq__ with one decorator. They keep classes light, type-hinted, and IDE-friendly.",
-  "order": 297,
+  "order": 295,
   "objectives": [
    "Part A — Dataclasses",
    "Part B — Enums"
@@ -4534,7 +4424,7 @@
   "trackId": "python",
   "title": "06. Typing & Models: 16. Pydantic (v1 & v2) — Data Validation & Settings",
   "summary": "Pydantic is the de-facto Python library for runtime data validation, parsing, and settings, powering FastAPI and many modern frameworks.",
-  "order": 298,
+  "order": 296,
   "objectives": [
    "Why Pydantic?",
    "v1 vs v2 — The Cheat Sheet",
@@ -4552,7 +4442,7 @@
   "trackId": "python",
   "title": "06. Typing & Models: PYDANTIC",
   "summary": "PYDANTIC: explanations and runnable examples.",
-  "order": 299,
+  "order": 297,
   "objectives": [
    "PYDANTIC"
   ],
@@ -4565,7 +4455,7 @@
   "trackId": "python",
   "title": "06. Typing & Models: DATACLASS ALTERNATIVES — attrs & NamedTuple",
   "summary": "DATACLASS ALTERNATIVES — attrs & NamedTuple: explanations and runnable examples.",
-  "order": 300,
+  "order": 298,
   "objectives": [
    "DATACLASS ALTERNATIVES — attrs & NamedTuple"
   ],
@@ -4578,7 +4468,7 @@
   "trackId": "python",
   "title": "06. Typing & Models: TYPING MODULE (Complete)",
   "summary": "TYPING MODULE (Complete): explanations and runnable examples.",
-  "order": 301,
+  "order": 299,
   "objectives": [
    "TYPING MODULE (Complete)"
   ],
@@ -4591,7 +4481,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Python Concurrency & Threading — Complete Guide",
   "summary": "Interview Tip: Concurrency is a top-tier senior Python topic. Know the GIL, when to use threading vs multiprocessing vs asyncio, and the practical tradeoffs.",
-  "order": 302,
+  "order": 300,
   "objectives": [
    "Concurrency Concepts & GIL",
    "Threading",
@@ -4611,7 +4501,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Synchronous vs Asynchronous vs Multithreading vs Multiprocessing",
   "summary": "You take Order from Table 1 → You go to kitchen → You STAND THERE AND WAIT until food is ready → You bring food → Then go to Table 2.",
-  "order": 303,
+  "order": 301,
   "objectives": [
    "When to Use What?"
   ],
@@ -4626,7 +4516,7 @@
   "trackId": "python",
   "title": "07. Concurrency: The Event Loop",
   "summary": "The Event Loop is the engine of all async Python. Think of it like a traffic controller at a busy intersection.",
-  "order": 304,
+  "order": 302,
   "objectives": [
    "The Event Loop"
   ],
@@ -4639,7 +4529,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Coroutines: async def & await",
   "summary": "A coroutine is a special function that can pause and resume its execution. It's the core building block of all async Python.",
-  "order": 305,
+  "order": 303,
   "objectives": [
    "Coroutines: async def & await"
   ],
@@ -4652,7 +4542,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Futures",
   "summary": "A Future is like an empty box with a promise — \"this box will contain a value in the future\". You can pass the box around, check if it has a value yet, and set a callback for when it gets filled.",
-  "order": 306,
+  "order": 304,
   "objectives": [
    "Futures"
   ],
@@ -4665,13 +4555,9 @@
   "trackId": "python",
   "title": "07. Concurrency: asyncio.run()",
   "summary": "asyncio.run() is the main entry point for running async code. Think of it as the \"on switch\" for your async program.",
-  "order": 307,
+  "order": 305,
   "objectives": [
-   "Only ONE asyncio.run() at the very top level",
-   "Common mistake in Jupyter notebooks",
-   "Jupyter already has a running event loop!",
-   "Solution: use await directly in Jupyter cells, or",
-   "import nest_asyncio; nest_asyncio.apply()"
+   "asyncio.run()"
   ],
   "sourceFile": "sun_may_03_2026_asynchronous_programming_concepts_in_python.md",
   "labIds": [
@@ -4684,7 +4570,7 @@
   "trackId": "python",
   "title": "07. Concurrency: asyncio.create_task()",
   "summary": "You already saw Tasks in Module 2.3. Now let's go deep into create_task() specifically.",
-  "order": 308,
+  "order": 306,
   "objectives": [
    "asyncio.create_task()"
   ],
@@ -4699,7 +4585,7 @@
   "trackId": "python",
   "title": "07. Concurrency: asyncio.gather()",
   "summary": "asyncio.gather() is the most-used async tool in real projects. It runs multiple coroutines/tasks concurrently and waits for ALL of them to complete, returning their results as a list.",
-  "order": 309,
+  "order": 307,
   "objectives": [
    "asyncio.gather()"
   ],
@@ -4714,7 +4600,7 @@
   "trackId": "python",
   "title": "07. Concurrency: asyncio.wait()",
   "summary": "asyncio.wait() gives you more control than gather(). Instead of waiting for ALL tasks and getting results, it returns tasks split into two groups:",
-  "order": 310,
+  "order": 308,
   "objectives": [
    "asyncio.wait()"
   ],
@@ -4729,7 +4615,7 @@
   "trackId": "python",
   "title": "07. Concurrency: asyncio.wait_for() — Timeouts",
   "summary": "asyncio.wait_for() gives a coroutine or task a deadline. If it doesn't finish within the time limit, it's automatically cancelled and raises asyncio.TimeoutError.",
-  "order": 311,
+  "order": 309,
   "objectives": [
    "asyncio.wait_for() — Timeouts"
   ],
@@ -4744,7 +4630,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Async Context Managers (async with)",
   "summary": "A context manager is a block of code that automatically sets up and tears down resources. You already know the sync version:",
-  "order": 312,
+  "order": 310,
   "objectives": [
    "Async Context Managers (async with)"
   ],
@@ -4757,7 +4643,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Async Iterators & Generators (async for)",
   "summary": "Async iterators let you iterate over data sources that need async I/O to fetch each item — like a database cursor that fetches one row at a time from the network.",
-  "order": 313,
+  "order": 311,
   "objectives": [
    "Async Iterators & Generators (async for)"
   ],
@@ -4772,7 +4658,7 @@
   "trackId": "python",
   "title": "07. Concurrency: asyncio.Lock",
   "summary": "A Lock is a tool that ensures only one coroutine can access a shared resource at a time. It prevents race conditions where two coroutines try to modify the same data simultaneously.",
-  "order": 314,
+  "order": 312,
   "objectives": [
    "Quick Explanation of Each",
    "Key Examples for Each"
@@ -4788,7 +4674,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Exception Handling in Coroutines",
   "summary": "Exception handling in async follows the same try/except/finally syntax, but there are important nuances: 1. Exceptions in tasks don't automatically propagate — you must await the task 2. finally blocks ALWAYS run — even on cancellation 3.",
-  "order": 315,
+  "order": 313,
   "objectives": [
    "Exception Handling in Coroutines"
   ],
@@ -4801,7 +4687,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Task Cancellation & CancelledError",
   "summary": "Task cancellation is how asyncio stops running tasks. When you call task.cancel(), it injects CancelledError at the next await point.",
-  "order": 316,
+  "order": 314,
   "objectives": [
    "Key Examples"
   ],
@@ -4814,7 +4700,7 @@
   "trackId": "python",
   "title": "07. Concurrency: run_in_executor — Running Blocking Code",
   "summary": "run_in_executor() is the bridge between the sync world and async world. It lets you run blocking (sync) code in a thread pool or process pool WITHOUT blocking the event loop.",
-  "order": 317,
+  "order": 315,
   "objectives": [
    "run_in_executor — Running Blocking Code"
   ],
@@ -4827,7 +4713,7 @@
   "trackId": "python",
   "title": "07. Concurrency: aiohttp — Async HTTP Requests",
   "summary": "aiohttp is the standard library for making async HTTP requests and building async HTTP servers. It's what you use instead of requests in async code.",
-  "order": 318,
+  "order": 316,
   "objectives": [
    "aiohttp — Async HTTP Requests"
   ],
@@ -4840,7 +4726,7 @@
   "trackId": "python",
   "title": "07. Concurrency: aiofiles — Async File I/O",
   "summary": "Regular file operations (open, read, write) are blocking — they pause the event loop while the OS fetches data from disk. aiofiles wraps these operations to run in a thread pool, making them non-blocking from the event loop's perspective.",
-  "order": 319,
+  "order": 317,
   "objectives": [
    "Key Examples"
   ],
@@ -4853,7 +4739,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Producer-Consumer Pattern",
   "summary": "The Producer-Consumer pattern decouples data generation from data processing using a queue as a buffer. Producers create work items; consumers process them.",
-  "order": 320,
+  "order": 318,
   "objectives": [
    "Full Production Example"
   ],
@@ -4866,7 +4752,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Rate Limiting with Semaphore",
   "summary": "Covers Production Rate Limiter.",
-  "order": 321,
+  "order": 319,
   "objectives": [
    "Production Rate Limiter"
   ],
@@ -4879,7 +4765,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Async Retry Pattern",
   "summary": "Covers Production Retry Decorator.",
-  "order": 322,
+  "order": 320,
   "objectives": [
    "Production Retry Decorator"
   ],
@@ -4892,7 +4778,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Debugging Async Code",
   "summary": "Covers The Most Common Async Bugs (With Fixes), Debugging Tools.",
-  "order": 323,
+  "order": 321,
   "objectives": [
    "The Most Common Async Bugs (With Fixes)",
    "Debugging Tools"
@@ -4906,7 +4792,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Best Practices Cheatsheet",
   "summary": "Best Practices Cheatsheet: explanations and runnable examples.",
-  "order": 324,
+  "order": 322,
   "objectives": [
    "Best Practices Cheatsheet"
   ],
@@ -4919,7 +4805,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Process vs Thread — The Big Picture",
   "summary": "Process vs Thread — The Big Picture: explanations and runnable examples.",
-  "order": 325,
+  "order": 323,
   "objectives": [
    "Process = Entire Office Floor",
    "Thread = Employee on That Floor",
@@ -4937,7 +4823,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Concurrency vs Parallelism",
   "summary": "This is one of the most misunderstood concepts in interviews. Let's make it crystal clear.",
-  "order": 326,
+  "order": 324,
   "objectives": [
    "The Pizza Restaurant Analogy",
    "Visual Representation",
@@ -4953,7 +4839,7 @@
   "trackId": "python",
   "title": "07. Concurrency: GIL — Global Interpreter Lock",
   "summary": "The GIL (Global Interpreter Lock) is a mutex (lock) that protects access to Python objects. It ensures that only one thread executes Python bytecode at a time, even on a multi-core CPU.",
-  "order": 327,
+  "order": 325,
   "objectives": [
    "What is the GIL?",
    "Why Does Python Have a GIL?",
@@ -4972,7 +4858,7 @@
   "trackId": "python",
   "title": "07. Concurrency: threading Module — Basics & Creating Threads",
   "summary": "The threading module is Python's built-in library for working with threads. It gives you everything you need to: - Create threads - Start and stop them - Control how they interact - Synchronize their access to shared data",
-  "order": 328,
+  "order": 326,
   "objectives": [
    "What is the threading Module?",
    "Three Ways to Create a Thread",
@@ -4990,7 +4876,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Thread Lifecycle (States)",
   "summary": "Every thread goes through a series of states from birth to death. Understanding these states helps you debug threading issues and write better concurrent code.",
-  "order": 329,
+  "order": 327,
   "objectives": [
    "Thread Lifecycle Diagram",
    "Thread States Explained"
@@ -5006,7 +4892,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Daemon Threads",
   "summary": "Think of daemon threads like the janitors in an office building.",
-  "order": 330,
+  "order": 328,
   "objectives": [
    "What is a Daemon Thread?",
    "Technical Definition",
@@ -5025,7 +4911,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Thread Synchronization — Lock & RLock",
   "summary": "This is a Race Condition — two threads modify shared data simultaneously, causing data corruption. The solution is a Lock — ensuring only one cashier can access the drawer at a time.",
-  "order": 331,
+  "order": 329,
   "objectives": [
    "Why Do We Need Synchronization?",
    "threading.Lock — The Basic Lock",
@@ -5043,7 +4929,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Semaphore & BoundedSemaphore",
   "summary": "Think of a nightclub with limited capacity: - The club allows maximum 50 people inside at once. - A bouncer (Semaphore) has 50 tokens (tickets). - Each person entering takes 1 token from the bouncer. - When tokens run out, new arrivals…",
-  "order": 332,
+  "order": 330,
   "objectives": [
    "What is a Semaphore?",
    "Semaphore vs Lock",
@@ -5059,7 +4945,7 @@
   "trackId": "python",
   "title": "07. Concurrency: threading.Event",
   "summary": "threading.Event is a simple thread communication mechanism: - One thread sets the event (signals \"go!\") - One or more threads wait for the event (block until \"go!\")",
-  "order": 333,
+  "order": 331,
   "objectives": [
    "What is an Event?",
    "Event API",
@@ -5077,7 +4963,7 @@
   "trackId": "python",
   "title": "07. Concurrency: threading.Condition",
   "summary": "Note: Due to the depth we've covered so far, let me give you the complete structured coverage for the remaining threading concepts, then we'll move into Multiprocessing with the same depth.",
-  "order": 334,
+  "order": 332,
   "objectives": [
    "Key Examples",
    "Golden Rule: ALWAYS use while not if with condition.wait()"
@@ -5093,7 +4979,7 @@
   "trackId": "python",
   "title": "07. Concurrency: threading.Barrier",
   "summary": "Imagine a relay race where each team must have ALL runners at the starting line before the race begins. No one can start until EVERYONE is ready.",
-  "order": 335,
+  "order": 333,
   "objectives": [
    "What is a Barrier?",
    "Barrier API",
@@ -5110,7 +4996,7 @@
   "trackId": "python",
   "title": "07. Concurrency: threading.Timer",
   "summary": "A threading.Timer is a thread that waits for a specified delay then executes a function — exactly like setTimeout() in JavaScript or a delayed callback.",
-  "order": 336,
+  "order": 334,
   "objectives": [
    "Key Examples",
    "What is a Timer Thread?",
@@ -5127,7 +5013,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Thread-Local Data",
   "summary": "Imagine each thread has its own private locker at a gym: - Each person (thread) has the SAME locker number on their key - But each locker contains DIFFERENT contents per person - Person A's locker has their gym bag, Person B's has…",
-  "order": 337,
+  "order": 335,
   "objectives": [
    "Key Examples",
    "What is Thread-Local Data?",
@@ -5144,7 +5030,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Thread Communication — queue.Queue",
   "summary": "Think of a post office mailbox system: - Multiple senders (producers) drop letters (data) into a mailbox (Queue) - Multiple receivers (consumers) pick up letters when they arrive - The post office handles all the ordering and ensures no…",
-  "order": 338,
+  "order": 336,
   "objectives": [
    "What is Queue?",
    "Queue Types",
@@ -5161,7 +5047,7 @@
   "trackId": "python",
   "title": "07. Concurrency: ThreadPoolExecutor (concurrent.futures)",
   "summary": "Instead of creating individual threads, ThreadPoolExecutor manages a pool of worker threads:",
-  "order": 339,
+  "order": 337,
   "objectives": [
    "What is ThreadPoolExecutor?",
    "Key Advantages",
@@ -5178,7 +5064,7 @@
   "trackId": "python",
   "title": "07. Concurrency: multiprocessing Module — Basics & Creating Processes",
   "summary": "multiprocessing gives you the same API as threading, but creates full OS processes instead of threads — each with its own Python interpreter and memory space.",
-  "order": 340,
+  "order": 338,
   "objectives": [
    "What is the multiprocessing Module?",
    "Key Differences from threading",
@@ -5194,7 +5080,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Inter-Process Communication — Pipe",
   "summary": "A Pipe is a direct two-way communication channel between exactly two processes — like a telephone call between two people.",
-  "order": 341,
+  "order": 339,
   "objectives": [
    "Key Examples",
    "What is a Pipe?",
@@ -5209,7 +5095,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Shared Memory — Value & Array",
   "summary": "Instead of sending data through Pipes/Queues (copy by value), Shared Memory allows processes to access the exact same memory location — zero-copy, maximum speed.",
-  "order": 342,
+  "order": 340,
   "objectives": [
    "Key Examples",
    "What is Shared Memory?",
@@ -5224,7 +5110,7 @@
   "trackId": "python",
   "title": "07. Concurrency: multiprocessing.Pool — Full Deep Dive",
   "summary": "multiprocessing.Pool creates a fixed pool of worker processes and provides high-level methods to distribute work across them.",
-  "order": 343,
+  "order": 341,
   "objectives": [
    "What is Pool?",
    "Method Comparison"
@@ -5238,7 +5124,7 @@
   "trackId": "python",
   "title": "07. Concurrency: ProcessPoolExecutor (concurrent.futures)",
   "summary": "ProcessPoolExecutor is the higher-level, more Pythonic API for multiprocessing — same as ThreadPoolExecutor but uses processes.",
-  "order": 344,
+  "order": 342,
   "objectives": [
    "Key Examples",
    "ProcessPoolExecutor vs multiprocessing.Pool"
@@ -5252,7 +5138,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Race Condition — What & How to Fix",
   "summary": "A race condition occurs when the program's behavior depends on the unpredictable order of thread/process execution.",
-  "order": 345,
+  "order": 343,
   "objectives": [
    "Key Examples",
    "What is a Race Condition?",
@@ -5267,7 +5153,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Deadlock, Starvation & Livelock",
   "summary": "Covers Key Examples.",
-  "order": 346,
+  "order": 344,
   "objectives": [
    "Key Examples",
    "Deadlock — Four Necessary Conditions (Coffman Conditions)",
@@ -5283,7 +5169,7 @@
   "trackId": "python",
   "title": "07. Concurrency: The GIL — What It Is, Why It Exists, When It Matters",
   "summary": "The Global Interpreter Lock is a mutex (lock) that protects access to Python objects — it prevents multiple threads from executing Python bytecode simultaneously.",
-  "order": 347,
+  "order": 345,
   "objectives": [
    "What is the GIL?",
    "Why Does the GIL Exist?",
@@ -5301,7 +5187,7 @@
   "trackId": "python",
   "title": "07. Concurrency: async/await and asyncio",
   "summary": "Instead of threads (OS-managed, preemptive), asyncio uses a single-threaded event loop with cooperative multitasking — tasks voluntarily yield at await points.",
-  "order": 348,
+  "order": 346,
   "objectives": [
    "What is asyncio?",
    "Core Concepts",
@@ -5318,7 +5204,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Thread Safety Patterns",
   "summary": "Covers Key Examples.",
-  "order": 349,
+  "order": 347,
   "objectives": [
    "Key Examples",
    "Seven Core Thread Safety Patterns"
@@ -5334,7 +5220,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Performance and Benchmarking Concurrency",
   "summary": "Covers Key Examples.",
-  "order": 350,
+  "order": 348,
   "objectives": [
    "Key Examples",
    "Key Metrics for Concurrent Programs"
@@ -5348,7 +5234,7 @@
   "trackId": "python",
   "title": "07. Concurrency: Real-World Patterns — Producer-Consumer, Thread Pool, Worker Queue",
   "summary": "Covers Final Integration Examples, Final Integration Challenges, All 35 Concepts Covered.",
-  "order": 351,
+  "order": 349,
   "objectives": [
    "Final Integration Examples",
    "Final Integration Challenges",
@@ -5365,7 +5251,7 @@
   "trackId": "python",
   "title": "07. Concurrency: 07 — Threading, Multiprocessing, Async, GIL (Deep Dive)",
   "summary": "ex.map(fn, iter) returns results in order; as_completed returns as they finish.",
-  "order": 352,
+  "order": 350,
   "objectives": [
    "The GIL (Global Interpreter Lock)",
    "Threading",
@@ -5385,7 +5271,7 @@
   "trackId": "python",
   "title": "07. Concurrency: CONCURRENCY — Threading, Multiprocessing, AsyncIO",
   "summary": "CONCURRENCY — Threading, Multiprocessing, AsyncIO: explanations and runnable examples.",
-  "order": 353,
+  "order": 351,
   "objectives": [
    "CONCURRENCY — Threading, Multiprocessing, AsyncIO"
   ],
@@ -5400,7 +5286,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: Python Exception Handling & File I/O 1/3: Exception Handling Basics · Exception Hierarchy & Built-in Exceptions …",
   "summary": "Interview Tip: Error handling and file operations are daily-use skills. Know the try/except/else/finally flow, custom exceptions, and file handling with context managers.",
-  "order": 354,
+  "order": 352,
   "objectives": [
    "Exception Handling Basics",
    "Exception Hierarchy & Built-in Exceptions",
@@ -5418,7 +5304,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: Python Exception Handling & File I/O 2/3: ExceptionGroup & except* (Python 3.11+) · warnings Module …",
   "summary": "ExceptionGroup = A single exception that wraps multiple exceptions. Introduced to handle concurrent errors (e.g., multiple tasks fail simultaneously in asyncio).",
-  "order": 355,
+  "order": 353,
   "objectives": [
    "ExceptionGroup & except* (Python 3.11+)",
    "warnings Module",
@@ -5436,7 +5322,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: Python Exception Handling & File I/O 3/3: map, filter, reduce · Chapter Summary",
   "summary": "Functional programming tools that transform collections without explicit loops:",
-  "order": 356,
+  "order": 354,
   "objectives": [
    "map, filter, reduce",
    "Chapter Summary"
@@ -5450,7 +5336,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: File Handling",
   "summary": "File handling is a crucial skill in Python programming that allows you to read from and write to files. This guide covers all aspects of file operations including different modes, error handling, and best practices.",
-  "order": 357,
+  "order": 355,
   "objectives": [
    "Understand file modes and their purposes",
    "Master reading and writing text files",
@@ -5468,7 +5354,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: File Handling — Runnable Examples",
   "summary": "Runnable File Handling — Runnable Examples program, walked through function by function.",
-  "order": 358,
+  "order": 356,
   "objectives": [
    "Read and run the File Handling — Runnable Examples program",
    "Predict the output before running each part",
@@ -5483,7 +5369,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: Os Module",
   "summary": "The os module in Python provides a portable way of using operating system dependent functionality.",
-  "order": 359,
+  "order": 357,
   "objectives": [
    "What is the OS Module?",
    "Key Features",
@@ -5500,7 +5386,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: Os Module — Runnable Examples",
   "summary": "Runnable Os Module — Runnable Examples program, walked through function by function.",
-  "order": 360,
+  "order": 358,
   "objectives": [
    "Read and run the Os Module — Runnable Examples program",
    "Predict the output before running each part",
@@ -5515,7 +5401,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: Exception Handling",
   "summary": "Exception handling is a critical programming concept that allows you to gracefully handle errors and unexpected situations in your code. It helps create robust applications that can recover from errors instead of crashing.",
-  "order": 361,
+  "order": 359,
   "objectives": [
    "Understanding Exceptions",
    "Basic Exception Handling",
@@ -5533,7 +5419,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: Exception Handling — Runnable Examples",
   "summary": "Exception Handling - Practical Examples ===================================== This file contains practical examples demonstrating various exception handling techniques in Python.",
-  "order": 362,
+  "order": 360,
   "objectives": [
    "Read and run the Exception Handling — Runnable Examples program",
    "Predict the output before running each part",
@@ -5548,7 +5434,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: Datetime Module",
   "summary": "The datetime module provides classes for working with dates, times, and time intervals. It's essential for handling temporal data, scheduling, logging, and any application that needs to work with time.",
-  "order": 363,
+  "order": 361,
   "objectives": [
    "Key Components",
    "datetime Class",
@@ -5566,7 +5452,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: Datetime Module — Runnable Examples",
   "summary": "Datetime Module - Comprehensive Examples ========================================",
-  "order": 364,
+  "order": 362,
   "objectives": [
    "Read and run the Datetime Module — Runnable Examples program",
    "Predict the output before running each part",
@@ -5581,7 +5467,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: Requests Module",
   "summary": "The requests library is the de facto standard for making HTTP requests in Python. It provides a simple, elegant API for interacting with web services, APIs, and web scraping.",
-  "order": 365,
+  "order": 363,
   "objectives": [
    "Basic Usage",
    "HTTP Methods",
@@ -5599,7 +5485,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: Requests Module — Runnable Examples",
   "summary": "Requests Module - Comprehensive Examples ======================================== NOTE: These examples use a free public API for demonstration. Replace URLs with actual APIs you want to work with.",
-  "order": 366,
+  "order": 364,
   "objectives": [
    "Read and run the Requests Module — Runnable Examples program",
    "Predict the output before running each part",
@@ -5614,14 +5500,12 @@
   "trackId": "python",
   "title": "08. Files & Errors: File Handling Basics",
   "summary": "Imagine a file like a physical notebook . To read it, you need to:",
-  "order": 367,
+  "order": 365,
   "objectives": [
    "The open() Function",
    "All File Modes",
    "TWO WAYS to Open Files",
-   "BEST WAY — context manager (with statement)",
-   "File AUTOMATICALLY closed when block exits — even if error occurs!",
-   "f is automatically closed here — always!"
+   "File Object Attributes"
   ],
   "sourceFile": "sun_may_03_2026_concatenation_and_repetition_in_python_strings.md",
   "labIds": [],
@@ -5632,7 +5516,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: Reading & Writing Text Files",
   "summary": "Key Rule: write() does NOT add \\n automatically. You must add it yourself! print() adds \\n automatically.",
-  "order": 368,
+  "order": 366,
   "objectives": [
    "Reading Methods",
    "Writing Methods"
@@ -5646,7 +5530,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: OS Module — Complete Guide",
   "summary": "The os module is Python's bridge to the operating system. Think of it as your file system remote control — it lets you create folders, delete files, rename, check if things exist, navigate directories, and much more.",
-  "order": 369,
+  "order": 367,
   "objectives": [
    "Key os Sub-Modules"
   ],
@@ -5659,7 +5543,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: CSV Files — Complete Guide",
   "summary": "CSV (Comma-Separated Values) is the universal language of spreadsheets . Every database, Excel, and data tool can read/write CSV.",
-  "order": 370,
+  "order": 368,
   "objectives": [
    "Four Core CSV Tools"
   ],
@@ -5672,7 +5556,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: JSON Files — Complete Guide",
   "summary": "JSON (JavaScript Object Notation) is the language of APIs and web services . It's human-readable and maps directly to Python data types:",
-  "order": 371,
+  "order": 369,
   "objectives": [
    "Core Functions"
   ],
@@ -5685,7 +5569,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: Log Files — Complete Guide",
   "summary": "Logging is like a flight data recorder for your application. When something goes wrong, logs tell you WHAT happened, WHEN, WHERE, and sometimes WHY.",
-  "order": 372,
+  "order": 370,
   "objectives": [
    "Log Levels (Severity Order)",
    "Basic Logging Setup"
@@ -5699,7 +5583,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: Error Handling in File Operations",
   "summary": "File operations are risky — files might not exist, you might not have permission, the disk might be full. Python gives you specific exceptions for each failure case so you can handle them gracefully.",
-  "order": 373,
+  "order": 371,
   "objectives": [
    "File Exception Hierarchy",
    "Pattern — try/except/else/finally"
@@ -5713,7 +5597,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: try / except / else / finally",
   "summary": "Python's exception handling lets you gracefully deal with errors instead of crashing. The four clauses work together:",
-  "order": 374,
+  "order": 372,
   "objectives": [
    "try / except / else / finally"
   ],
@@ -5726,7 +5610,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: Custom Exceptions",
   "summary": "Custom exceptions are exception classes you define yourself. They let you create domain-specific errors that are meaningful in your application's context — instead of using generic ValueError or RuntimeError everywhere.",
-  "order": 375,
+  "order": 373,
   "objectives": [
    "Key Examples"
   ],
@@ -5739,7 +5623,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: 03 — File Handling: Text, JSON, CSV, Binary, Pathlib (Deep Dive)",
   "summary": "Format chars: b/B byte, h/H short, i/I int, q/Q long long, f float, d double, s string. Prefix big-endian.",
-  "order": 376,
+  "order": 374,
   "objectives": [
    "The open() builtin",
    "Read & write methods",
@@ -5757,7 +5641,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: 05 — Exception Handling (Deep Dive)",
   "summary": "Never except: or except BaseException: — you'd swallow Ctrl+C and SystemExit.",
-  "order": 377,
+  "order": 375,
   "objectives": [
    "Hierarchy",
    "try / except / else / finally",
@@ -5775,7 +5659,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: 15. os, sys, subprocess, pathlib, shutil & friends",
   "summary": "The standard-library toolkit for filesystems, processes, and the runtime environment.",
-  "order": 378,
+  "order": 376,
   "objectives": [
    "os — Operating System Interface",
    "sys — Interpreter Hooks",
@@ -5793,7 +5677,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: EXCEPTION HANDLING",
   "summary": "EXCEPTION HANDLING: explanations and runnable examples.",
-  "order": 379,
+  "order": 377,
   "objectives": [
    "EXCEPTION HANDLING"
   ],
@@ -5806,7 +5690,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: FILE HANDLING & OS MODULE",
   "summary": "FILE HANDLING & OS MODULE: explanations and runnable examples.",
-  "order": 380,
+  "order": 378,
   "objectives": [
    "FILE HANDLING & OS MODULE"
   ],
@@ -5819,7 +5703,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: LOGGING",
   "summary": "LOGGING: explanations and runnable examples.",
-  "order": 381,
+  "order": 379,
   "objectives": [
    "LOGGING"
   ],
@@ -5832,7 +5716,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: SUBPROCESS & SYSTEM INTERACTION",
   "summary": "SUBPROCESS & SYSTEM INTERACTION: explanations and runnable examples.",
-  "order": 382,
+  "order": 380,
   "objectives": [
    "SUBPROCESS & SYSTEM INTERACTION"
   ],
@@ -5845,7 +5729,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: HASHLIB, SECRETS, CRYPTOGRAPHY",
   "summary": "HASHLIB, SECRETS, CRYPTOGRAPHY: explanations and runnable examples.",
-  "order": 383,
+  "order": 381,
   "objectives": [
    "HASHLIB, SECRETS, CRYPTOGRAPHY"
   ],
@@ -5857,15 +5741,10 @@
   "id": "py-08-pickle-shelve-serialization-b7e106",
   "trackId": "python",
   "title": "08. Files & Errors: PICKLE, SHELVE & SERIALIZATION",
-  "summary": "class Connection: def __init__(self, host): self.host = host self.socket = None # Can't pickle sockets!",
-  "order": 384,
+  "summary": "PICKLE, SHELVE & SERIALIZATION: explanations and runnable examples.",
+  "order": 382,
   "objectives": [
-   "SECURITY WARNING: Never unpickle untrusted data!",
-   "pickle.loads() can execute arbitrary code.",
-   "Custom pickling",
-   "SHELVE — Persistent dictionary (uses pickle internally)",
-   "JSON vs PICKLE comparison",
-   "JSON"
+   "PICKLE, SHELVE & SERIALIZATION"
   ],
   "sourceFile": "sun_apr_19_2026_python_interview_preparation_and_improvement_plan/sun_apr_19_2026_python_interview_preparation_and_improvement_plan.md",
   "labIds": [],
@@ -5876,7 +5755,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: ARGUMENT PARSING & CLI",
   "summary": "ARGUMENT PARSING & CLI: explanations and runnable examples.",
-  "order": 385,
+  "order": 383,
   "objectives": [
    "ARGUMENT PARSING & CLI"
   ],
@@ -5889,7 +5768,7 @@
   "trackId": "python",
   "title": "08. Files & Errors: STRUCT, ARRAY & BINARY DATA",
   "summary": "STRUCT, ARRAY & BINARY DATA: explanations and runnable examples.",
-  "order": 386,
+  "order": 384,
   "objectives": [
    "STRUCT, ARRAY & BINARY DATA"
   ],
@@ -5902,7 +5781,7 @@
   "trackId": "python",
   "title": "09. Backend Python: Complete System Design Roadmap to Crack Top Product-Based Companies",
   "summary": "This roadmap will take you from a beginner to an expert in System Design. Each topic includes 20 carefully curated problems (5 Easy, 10 Medium, 5 Hard) to ensure mastery.",
-  "order": 387,
+  "order": 385,
   "objectives": [
    "Topic 1: Networking Basics",
    "Topic 2: Client-Server Architecture",
@@ -5920,7 +5799,7 @@
   "trackId": "python",
   "title": "09. Backend Python: TESTING",
   "summary": "TESTING: explanations and runnable examples.",
-  "order": 388,
+  "order": 386,
   "objectives": [
    "TESTING"
   ],
@@ -5933,7 +5812,7 @@
   "trackId": "python",
   "title": "09. Backend Python: SOCKET PROGRAMMING",
   "summary": "SOCKET PROGRAMMING: explanations and runnable examples.",
-  "order": 389,
+  "order": 387,
   "objectives": [
    "SOCKET PROGRAMMING"
   ],
@@ -5946,7 +5825,7 @@
   "trackId": "python",
   "title": "09. Backend Python: FASTAPI (Complete)",
   "summary": "Q1: What is FastAPI and how is it different from Flask/Django? > FastAPI is an async Python web framework built on Starlette (ASGI) and Pydantic. vs Flask: FastAPI has automatic validation, auto-generated docs, async support, and type…",
-  "order": 390,
+  "order": 388,
   "objectives": [
    "FastAPI Project Structure (Production)"
   ],
@@ -5959,7 +5838,7 @@
   "trackId": "python",
   "title": "09. Backend Python: SQL (Complete for Python Developers)",
   "summary": "SQL (Complete for Python Developers): explanations and runnable examples.",
-  "order": 391,
+  "order": 389,
   "objectives": [
    "SQL (Complete for Python Developers)"
   ],
@@ -5972,7 +5851,7 @@
   "trackId": "python",
   "title": "09. Backend Python: JWT AUTHENTICATION",
   "summary": "JWT AUTHENTICATION: explanations and runnable examples.",
-  "order": 392,
+  "order": 390,
   "objectives": [
    "JWT AUTHENTICATION"
   ],
@@ -5985,7 +5864,7 @@
   "trackId": "python",
   "title": "09. Backend Python: DOCKER FOR PYTHON DEVELOPERS",
   "summary": "DOCKER FOR PYTHON DEVELOPERS: explanations and runnable examples.",
-  "order": 393,
+  "order": 391,
   "objectives": [
    "DOCKER FOR PYTHON DEVELOPERS"
   ],
@@ -5998,7 +5877,7 @@
   "trackId": "python",
   "title": "09. Backend Python: GIT FOR DEVELOPERS",
   "summary": "GIT FOR DEVELOPERS: explanations and runnable examples.",
-  "order": 394,
+  "order": 392,
   "objectives": [
    "GIT FOR DEVELOPERS"
   ],
@@ -6011,7 +5890,7 @@
   "trackId": "python",
   "title": "09. Backend Python: REST API DESIGN BEST PRACTICES",
   "summary": "REST API DESIGN BEST PRACTICES: explanations and runnable examples.",
-  "order": 395,
+  "order": 393,
   "objectives": [
    "REST API DESIGN BEST PRACTICES"
   ],
@@ -6024,7 +5903,7 @@
   "trackId": "python",
   "title": "09. Backend Python: CACHING (Redis)",
   "summary": "CACHING (Redis): explanations and runnable examples.",
-  "order": 396,
+  "order": 394,
   "objectives": [
    "CACHING (Redis)"
   ],
@@ -6037,7 +5916,7 @@
   "trackId": "python",
   "title": "09. Backend Python: ALEMBIC — Database Migrations",
   "summary": "ALEMBIC — Database Migrations: explanations and runnable examples.",
-  "order": 397,
+  "order": 395,
   "objectives": [
    "ALEMBIC — Database Migrations"
   ],
@@ -6050,7 +5929,7 @@
   "trackId": "python",
   "title": "09. Backend Python: CODE QUALITY TOOLS",
   "summary": "CODE QUALITY TOOLS: explanations and runnable examples.",
-  "order": 398,
+  "order": 396,
   "objectives": [
    "CODE QUALITY TOOLS"
   ],
@@ -6063,7 +5942,7 @@
   "trackId": "python",
   "title": "09. Backend Python: ENVIRONMENT VARIABLES & .env",
   "summary": "ENVIRONMENT VARIABLES & .env: explanations and runnable examples.",
-  "order": 399,
+  "order": 397,
   "objectives": [
    "ENVIRONMENT VARIABLES & .env"
   ],
@@ -6076,7 +5955,7 @@
   "trackId": "python",
   "title": "09. Backend Python: CLEAN ARCHITECTURE & PROJECT PATTERNS",
   "summary": "Part 1 (Modules 1-49): Python Core — DONE Part 2 (Modules 50-60): Practical/Interview — DONE",
-  "order": 400,
+  "order": 398,
   "objectives": [
    "FINAL COMPLETE TOPIC CHECKLIST (All 60 Modules)",
    "YOUR 45-DAY INTERVIEW PREPARATION PLAN"
@@ -6090,7 +5969,7 @@
   "trackId": "python",
   "title": "10. Exercises: Python Dictionaries - Complete Mastery Guide",
   "summary": "Remember: Practice these concepts regularly, and try to use dictionaries in your real projects to master them completely!",
-  "order": 401,
+  "order": 399,
   "objectives": [
    "Solve the Python Dictionaries - Complete Mastery Guide exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6104,7 +5983,7 @@
   "trackId": "python",
   "title": "10. Exercises: Python Lists - Complete Mastery Guide",
   "summary": "Remember: Practice these concepts regularly and try to use lists efficiently in your real projects. Understanding when to use lists versus other data structures (sets, dictionaries, deques) is crucial for writing efficient Python code!",
-  "order": 402,
+  "order": 400,
   "objectives": [
    "Solve the Python Lists - Complete Mastery Guide exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6118,7 +5997,7 @@
   "trackId": "python",
   "title": "10. Exercises: Topic 1: Classes and Objects - Exercises",
   "summary": "Complete all 10 exercises below. Each exercise builds upon the concepts learned in Topic 1.",
-  "order": 403,
+  "order": 401,
   "objectives": [
    "Solve the Topic 1: Classes and Objects - Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6132,7 +6011,7 @@
   "trackId": "python",
   "title": "10. Exercises: Topic 2: Inheritance - Exercises",
   "summary": "Complete all 10 exercises below. Each exercise builds upon the concepts learned in Topic 2.",
-  "order": 404,
+  "order": 402,
   "objectives": [
    "Solve the Topic 2: Inheritance - Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6148,7 +6027,7 @@
   "trackId": "python",
   "title": "10. Exercises: Topic 3: Encapsulation - Exercises",
   "summary": "Create a Student class with encapsulated attributes for name, student_id, and grades.",
-  "order": 405,
+  "order": 403,
   "objectives": [
    "Solve the Topic 3: Encapsulation - Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6162,7 +6041,7 @@
   "trackId": "python",
   "title": "10. Exercises: Topic 4: Polymorphism - Exercises",
   "summary": "Create a vehicle hierarchy with base class Vehicle and subclasses Car, Motorcycle, and Truck.",
-  "order": 406,
+  "order": 404,
   "objectives": [
    "Solve the Topic 4: Polymorphism - Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6176,7 +6055,7 @@
   "trackId": "python",
   "title": "10. Exercises: Topic 5: Abstraction - Exercises",
   "summary": "Create an abstract Vehicle class with abstract methods for start_engine(), stop_engine(), and get_fuel_efficiency().",
-  "order": 407,
+  "order": 405,
   "objectives": [
    "Solve the Topic 5: Abstraction - Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6190,7 +6069,7 @@
   "trackId": "python",
   "title": "10. Exercises: Topic 6: Advanced OOPs Concepts - Exercises",
   "summary": "Create a DateTime class with: - Class methods for creating instances from different formats (string, timestamp, ISO format) - Static methods for date validation and utility functions - Magic methods for date arithmetic and comparison -…",
-  "order": 408,
+  "order": 406,
   "objectives": [
    "Solve the Topic 6: Advanced OOPs Concepts - Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6204,7 +6083,7 @@
   "trackId": "python",
   "title": "10. Exercises: Topic 7: Design Patterns - Exercises",
   "summary": "Create a Logger class using the Singleton pattern with: - Thread-safe singleton implementation - Logging methods (info, warning, error, debug) - Log rotation and file management - Configuration options (log level, file path, format) -…",
-  "order": 409,
+  "order": 407,
   "objectives": [
    "Solve the Topic 7: Design Patterns - Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6218,7 +6097,7 @@
   "trackId": "python",
   "title": "10. Exercises: Topic 8: Python-Specific OOPs Features - Exercises",
   "summary": "Create a comprehensive dataclass system for a library management application: - Book dataclass with validation and computed properties - Author dataclass with relationship management - Library dataclass with collection management - Member…",
-  "order": 410,
+  "order": 408,
   "objectives": [
    "Solve the Topic 8: Python-Specific OOPs Features - Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6232,7 +6111,7 @@
   "trackId": "python",
   "title": "10. Exercises: OOP Masterclass",
   "summary": "Try these yourself — No answers provided. These are your practice exercises!",
-  "order": 411,
+  "order": 409,
   "objectives": [
    "Solve the OOP Masterclass exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6246,7 +6125,7 @@
   "trackId": "python",
   "title": "10. Exercises: OOP Masterclass",
   "summary": "Challenge 1: Build a complete decorator library: @log_calls (logs args + return), @count_calls (counts invocations, accessible via func.call_count), @once (runs only the first call, returns cached result after), @deprecated(msg),…",
-  "order": 412,
+  "order": 410,
   "objectives": [
    "Solve the OOP Masterclass exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6260,7 +6139,7 @@
   "trackId": "python",
   "title": "10. Exercises: OOP Masterclass",
   "summary": "SRP-1: Take this UserController class that: validates input, saves to DB, sends email, logs activity, generates PDF report, updates cache. Refactor it so each responsibility is in its own class.",
-  "order": 413,
+  "order": 411,
   "objectives": [
    "Solve the OOP Masterclass exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6274,7 +6153,7 @@
   "trackId": "python",
   "title": "10. Exercises: Lambda Functions — Exercises",
   "summary": "Exercises for Lambda Functions — Exercises.",
-  "order": 414,
+  "order": 412,
   "objectives": [
    "Solve the Lambda Functions — Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6288,7 +6167,7 @@
   "trackId": "python",
   "title": "10. Exercises: Map Filter Reduce — Exercises",
   "summary": "Exercises for Map Filter Reduce — Exercises.",
-  "order": 415,
+  "order": 413,
   "objectives": [
    "Solve the Map Filter Reduce — Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6302,7 +6181,7 @@
   "trackId": "python",
   "title": "10. Exercises: File Handling — Exercises",
   "summary": "Read the entire content of a file and return it as a string.",
-  "order": 416,
+  "order": 414,
   "objectives": [
    "Solve the File Handling — Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6316,7 +6195,7 @@
   "trackId": "python",
   "title": "10. Exercises: Args Kwargs — Exercises",
   "summary": "Test: exercise_1_sum_all(1, 2, 3, 4, 5) should return 15 exercise_1_sum_all(10, 20, 30) should return 60 exercise_1_sum_all() should return 0",
-  "order": 417,
+  "order": 415,
   "objectives": [
    "Solve the Args Kwargs — Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6330,7 +6209,7 @@
   "trackId": "python",
   "title": "10. Exercises: Data Structures — Advanced",
   "summary": "Exercises for Data Structures — Advanced.",
-  "order": 418,
+  "order": 416,
   "objectives": [
    "Solve the Data Structures — Advanced exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6344,7 +6223,7 @@
   "trackId": "python",
   "title": "10. Exercises: Data Structures — Exercises",
   "summary": "Test: exercise_1_list_operations([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) should return { 'sum': 55, 'average': 5.5, 'max': 10, 'min': 1, 'even_count': 5, 'odd_count': 5 }",
-  "order": 419,
+  "order": 417,
   "objectives": [
    "Solve the Data Structures — Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6358,7 +6237,7 @@
   "trackId": "python",
   "title": "10. Exercises: Comprehensions — Exercises",
   "summary": "Python Comprehensions - Exercises =================================",
-  "order": 420,
+  "order": 418,
   "objectives": [
    "Solve the Comprehensions — Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6372,7 +6251,7 @@
   "trackId": "python",
   "title": "10. Exercises: Decorators — Exercises",
   "summary": "This file contains 10 exercises to practice Python decorators. Complete each function according to the requirements.",
-  "order": 421,
+  "order": 419,
   "objectives": [
    "Solve the Decorators — Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6388,7 +6267,7 @@
   "trackId": "python",
   "title": "10. Exercises: Advanced Concepts — Exercises",
   "summary": "Python Advanced Concepts - Exercises ====================================",
-  "order": 422,
+  "order": 420,
   "objectives": [
    "Solve the Advanced Concepts — Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6402,7 +6281,7 @@
   "trackId": "python",
   "title": "10. Exercises: Os Module — Exercises",
   "summary": "Exercises for Os Module — Exercises.",
-  "order": 423,
+  "order": 421,
   "objectives": [
    "Solve the Os Module — Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6416,7 +6295,7 @@
   "trackId": "python",
   "title": "10. Exercises: Exception Handling — Exercises",
   "summary": "Exception Handling - Exercises =============================",
-  "order": 424,
+  "order": 422,
   "objectives": [
    "Solve the Exception Handling — Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6430,7 +6309,7 @@
   "trackId": "python",
   "title": "10. Exercises: Generators Iterators — Exercises",
   "summary": "Generators and Iterators - Practice Exercises ============================================== Complete these 10 exercises to master generators and iterators.",
-  "order": 425,
+  "order": 423,
   "objectives": [
    "Solve the Generators Iterators — Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6446,7 +6325,7 @@
   "trackId": "python",
   "title": "10. Exercises: Context Managers — Exercises",
   "summary": "Context Managers - Practice Exercises ====================================== Complete these 10 exercises to master context managers.",
-  "order": 426,
+  "order": 424,
   "objectives": [
    "Solve the Context Managers — Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6460,7 +6339,7 @@
   "trackId": "python",
   "title": "10. Exercises: Match Case — Exercises",
   "summary": "Match-Case - Practice Exercises ================================ Python 3.10+ required",
-  "order": 427,
+  "order": 425,
   "objectives": [
    "Solve the Match Case — Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6474,7 +6353,7 @@
   "trackId": "python",
   "title": "10. Exercises: Pydantic Dataclasses — Exercises",
   "summary": "Dataclasses and Pydantic - Exercises with Solutions ===================================================",
-  "order": 428,
+  "order": 426,
   "objectives": [
    "Solve the Pydantic Dataclasses — Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6488,7 +6367,7 @@
   "trackId": "python",
   "title": "10. Exercises: Collections Module — Exercises",
   "summary": "Collections Module - Exercises with Solutions ============================================",
-  "order": 429,
+  "order": 427,
   "objectives": [
    "Solve the Collections Module — Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6502,7 +6381,7 @@
   "trackId": "python",
   "title": "10. Exercises: Itertools Functools — Exercises",
   "summary": "Itertools and Functools - Exercises with Solutions =================================================",
-  "order": 430,
+  "order": 428,
   "objectives": [
    "Solve the Itertools Functools — Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6516,7 +6395,7 @@
   "trackId": "python",
   "title": "10. Exercises: Typing Module — Exercises",
   "summary": "Typing Module - Exercises with Solutions =======================================",
-  "order": 431,
+  "order": 429,
   "objectives": [
    "Solve the Typing Module — Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6530,7 +6409,7 @@
   "trackId": "python",
   "title": "10. Exercises: Datetime Module — Exercises",
   "summary": "Datetime Module - Exercises with Solutions ==========================================",
-  "order": 432,
+  "order": 430,
   "objectives": [
    "Solve the Datetime Module — Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6544,7 +6423,7 @@
   "trackId": "python",
   "title": "10. Exercises: Requests Module — Exercises",
   "summary": "Requests Module - Exercises with Solutions ==========================================",
-  "order": 433,
+  "order": 431,
   "objectives": [
    "Solve the Requests Module — Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6558,7 +6437,7 @@
   "trackId": "python",
   "title": "10. Exercises: Memory Management — Exercises",
   "summary": "Memory Management - Exercises with Solutions ============================================",
-  "order": 434,
+  "order": 432,
   "objectives": [
    "Solve the Memory Management — Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6572,7 +6451,7 @@
   "trackId": "python",
   "title": "10. Exercises: Magic Methods — Exercises",
   "summary": "Magic Methods Exercises Practice implementing various magic methods",
-  "order": 435,
+  "order": 433,
   "objectives": [
    "Solve the Magic Methods — Exercises exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6586,7 +6465,7 @@
   "trackId": "python",
   "title": "10. Exercises: Async Programming Masterclass (Part 1)",
   "summary": "A Task is a wrapper around a coroutine that schedules it to run on the event loop concurrently with other tasks.",
-  "order": 436,
+  "order": 434,
   "objectives": [
    "Solve the Async Programming Masterclass exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6600,7 +6479,7 @@
   "trackId": "python",
   "title": "10. Exercises: Async Programming Masterclass (Part 2)",
   "summary": "You now have a complete, structured Python Async Programming curriculum! > Work through each module in order, complete the coding challenges yourself (no peeking at answers — build the muscle memory!), and practice the interview answers…",
-  "order": 437,
+  "order": 435,
   "objectives": [
    "Solve the Async Programming Masterclass exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6614,7 +6493,7 @@
   "trackId": "python",
   "title": "10. Exercises: Binary Search Tree Masterclass",
   "summary": "Exercises for Binary Search Tree Masterclass.",
-  "order": 438,
+  "order": 436,
   "objectives": [
    "Solve the Binary Search Tree Masterclass exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6628,7 +6507,7 @@
   "trackId": "python",
   "title": "10. Exercises: Comprehensions Masterclass",
   "summary": "These advanced topics follow the same learning pattern. Here is the structured summary of each with their key patterns — apply the same framework: explain → examples → interview Qs → challenges.",
-  "order": 439,
+  "order": 437,
   "objectives": [
    "Solve the Comprehensions Masterclass exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6642,7 +6521,7 @@
   "trackId": "python",
   "title": "10. Exercises: Dataclasses, Enum & Pydantic Masterclass",
   "summary": "You now have COMPLETE mastery of Python Dataclasses, Enum, and Pydantic!",
-  "order": 440,
+  "order": 438,
   "objectives": [
    "Solve the Dataclasses, Enum & Pydantic Masterclass exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6656,7 +6535,7 @@
   "trackId": "python",
   "title": "10. Exercises: Dictionaries Masterclass",
   "summary": "Exercises for Dictionaries Masterclass.",
-  "order": 441,
+  "order": 439,
   "objectives": [
    "Solve the Dictionaries Masterclass exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6670,7 +6549,7 @@
   "trackId": "python",
   "title": "10. Exercises: File Handling Masterclass",
   "summary": "CONGRATULATIONS — You now have Complete Python File Handling Mastery!",
-  "order": 442,
+  "order": 440,
   "objectives": [
    "Solve the File Handling Masterclass exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6684,7 +6563,7 @@
   "trackId": "python",
   "title": "10. Exercises: Functions & Built-ins Masterclass",
   "summary": "You now have a complete, interview-ready Python Core Concepts guide! > Work through the challenges for each module — the muscle memory from writing code is what makes interviews easy. Good luck!",
-  "order": 443,
+  "order": 441,
   "objectives": [
    "Solve the Functions & Built-ins Masterclass exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6698,7 +6577,7 @@
   "trackId": "python",
   "title": "10. Exercises: Lists & Tuples Masterclass (Part 1)",
   "summary": "Due to space, remaining chapters are covered in condensed format with key concepts, critical examples, all interview Q&A, and full coding challenges.",
-  "order": 444,
+  "order": 442,
   "objectives": [
    "Solve the Lists & Tuples Masterclass exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6712,7 +6591,7 @@
   "trackId": "python",
   "title": "10. Exercises: Lists & Tuples Masterclass (Part 2)",
   "summary": "Exercises for Lists & Tuples Masterclass.",
-  "order": 445,
+  "order": 443,
   "objectives": [
    "Solve the Lists & Tuples Masterclass exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6726,7 +6605,7 @@
   "trackId": "python",
   "title": "10. Exercises: Memory Management Masterclass (Part 1)",
   "summary": "Exercises for Memory Management Masterclass.",
-  "order": 446,
+  "order": 444,
   "objectives": [
    "Solve the Memory Management Masterclass exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6740,7 +6619,7 @@
   "trackId": "python",
   "title": "10. Exercises: Memory Management Masterclass (Part 2)",
   "summary": "Exercises for Memory Management Masterclass.",
-  "order": 447,
+  "order": 445,
   "objectives": [
    "Solve the Memory Management Masterclass exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6754,7 +6633,7 @@
   "trackId": "python",
   "title": "10. Exercises: Recursion Masterclass (Part 1)",
   "summary": "Exercises for Recursion Masterclass.",
-  "order": 448,
+  "order": 446,
   "objectives": [
    "Solve the Recursion Masterclass exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6768,7 +6647,7 @@
   "trackId": "python",
   "title": "10. Exercises: Recursion Masterclass (Part 2)",
   "summary": "You now have the COMPLETE recursion mastery guide! > Follow the 10-day plan, solve all 50 problems in order, and > review the reference card daily.",
-  "order": 449,
+  "order": 447,
   "objectives": [
    "Solve the Recursion Masterclass exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6782,7 +6661,7 @@
   "trackId": "python",
   "title": "10. Exercises: Sets Masterclass",
   "summary": "Most Asked in Interviews (Priority Order): > 1. remove() vs discard() — asked in 80% of interviews > 2. in operator time complexity — asked in 75% > 3.",
-  "order": 450,
+  "order": 448,
   "objectives": [
    "Solve the Sets Masterclass exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6796,7 +6675,7 @@
   "trackId": "python",
   "title": "10. Exercises: Strings Masterclass",
   "summary": "Exercises for Strings Masterclass.",
-  "order": 451,
+  "order": 449,
   "objectives": [
    "Solve the Strings Masterclass exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6810,7 +6689,7 @@
   "trackId": "python",
   "title": "10. Exercises: Threading & Multiprocessing Masterclass (Part 1)",
   "summary": "Due to scope, the following concepts are covered with the same structured format. Each follows: Explanation → 5 Examples → 5 Q&A → 3 Scenarios → 7 Challenges.",
-  "order": 452,
+  "order": 450,
   "objectives": [
    "Solve the Threading & Multiprocessing Masterclass exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6826,7 +6705,7 @@
   "trackId": "python",
   "title": "10. Exercises: Threading & Multiprocessing Masterclass (Part 2)",
   "summary": "Exercises for Threading & Multiprocessing Masterclass.",
-  "order": 453,
+  "order": 451,
   "objectives": [
    "Solve the Threading & Multiprocessing Masterclass exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6842,7 +6721,7 @@
   "trackId": "python",
   "title": "10. Exercises: 19 — 15 Coding Challenges (No Answers)",
   "summary": "Time-box yourself: 30–45 minutes per challenge. Write tests for each.",
-  "order": 454,
+  "order": 452,
   "objectives": [
    "Solve the 19 — 15 Coding Challenges (No Answers) exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -6856,7 +6735,7 @@
   "trackId": "python",
   "title": "11. Projects: Industry-Ready Python OOPs Projects",
   "summary": "These 10 industry-ready projects combine all the OOPs concepts you've learned throughout the course. Each project represents real-world applications that you might encounter in professional development.",
-  "order": 455,
+  "order": 453,
   "objectives": [
    "Build the Industry-Ready Python OOPs Projects projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -6870,7 +6749,7 @@
   "trackId": "python",
   "title": "11. Projects: Topic 1: Classes and Objects - Projects",
   "summary": "Complete all 5 projects below. Each project should be built using the concepts learned in Topic 1.",
-  "order": 456,
+  "order": 454,
   "objectives": [
    "Build the Topic 1: Classes and Objects - Projects projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -6884,7 +6763,7 @@
   "trackId": "python",
   "title": "11. Projects: Topic 2: Inheritance - Projects",
   "summary": "Complete all 5 projects below. Each project should be built using the concepts learned in Topic 2.",
-  "order": 457,
+  "order": 455,
   "objectives": [
    "Build the Topic 2: Inheritance - Projects projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -6900,7 +6779,7 @@
   "trackId": "python",
   "title": "11. Projects: Topic 3: Encapsulation - Projects",
   "summary": "Build a comprehensive banking system that demonstrates advanced encapsulation principles with multiple account types, transaction security, and audit trails.",
-  "order": 458,
+  "order": 456,
   "objectives": [
    "Build the Topic 3: Encapsulation - Projects projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -6914,7 +6793,7 @@
   "trackId": "python",
   "title": "11. Projects: Topic 4: Polymorphism - Projects",
   "summary": "Build a comprehensive document processing system that can handle multiple file formats (PDF, DOCX, TXT, HTML) using polymorphism and duck typing principles.",
-  "order": 459,
+  "order": 457,
   "objectives": [
    "Build the Topic 4: Polymorphism - Projects projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -6928,7 +6807,7 @@
   "trackId": "python",
   "title": "11. Projects: Topic 5: Abstraction - Projects",
   "summary": "Build a comprehensive application framework that supports multiple platforms (Desktop, Web, Mobile) using abstraction to handle platform-specific implementations while maintaining a unified API.",
-  "order": 460,
+  "order": 458,
   "objectives": [
    "Build the Topic 5: Abstraction - Projects projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -6942,7 +6821,7 @@
   "trackId": "python",
   "title": "11. Projects: Topic 6: Advanced OOPs Concepts - Projects",
   "summary": "Build a web framework that uses advanced OOPs concepts including metaclasses, descriptors, and magic methods to provide a powerful and flexible web development experience.",
-  "order": 461,
+  "order": 459,
   "objectives": [
    "Build the Topic 6: Advanced OOPs Concepts - Projects projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -6956,7 +6835,7 @@
   "trackId": "python",
   "title": "11. Projects: Topic 7: Design Patterns - Projects",
   "summary": "Build a comprehensive e-commerce platform that demonstrates the integration of multiple design patterns to create a scalable and maintainable system.",
-  "order": 462,
+  "order": 460,
   "objectives": [
    "Build the Topic 7: Design Patterns - Projects projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -6970,7 +6849,7 @@
   "trackId": "python",
   "title": "11. Projects: Topic 8: Python-Specific OOPs Features - Projects",
   "summary": "Build a comprehensive microservices framework that leverages Python-specific OOPs features to provide type safety, performance, and maintainability across distributed services.",
-  "order": 463,
+  "order": 461,
   "objectives": [
    "Build the Topic 8: Python-Specific OOPs Features - Projects projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -6984,7 +6863,7 @@
   "trackId": "python",
   "title": "11. Projects: Lambda Functions",
   "summary": "Complete these 5 mini-projects to apply your lambda function knowledge in real-world scenarios. Each project builds upon the concepts you've learned and prepares you for more complex applications.",
-  "order": 464,
+  "order": 462,
   "objectives": [
    "Build the Lambda Functions projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -6998,7 +6877,7 @@
   "trackId": "python",
   "title": "11. Projects: Map Filter Reduce",
   "summary": "Complete these 5 mini-projects to apply your map, filter, and reduce knowledge in real-world scenarios. Each project builds upon the functional programming concepts you've learned and prepares you for more complex applications.",
-  "order": 465,
+  "order": 463,
   "objectives": [
    "Build the Map Filter Reduce projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -7012,7 +6891,7 @@
   "trackId": "python",
   "title": "11. Projects: File Handling",
   "summary": "These mini-projects will help you apply file handling concepts in real-world scenarios. Each project focuses on different aspects of file operations and data processing.",
-  "order": 466,
+  "order": 464,
   "objectives": [
    "Build the File Handling projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -7026,7 +6905,7 @@
   "trackId": "python",
   "title": "11. Projects: Args Kwargs",
   "summary": "These mini-projects will help you master the use of *args and **kwargs in real-world scenarios. Each project focuses on creating flexible and reusable code patterns.",
-  "order": 467,
+  "order": 465,
   "objectives": [
    "Build the Args Kwargs projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -7040,7 +6919,7 @@
   "trackId": "python",
   "title": "11. Projects: Data Structures",
   "summary": "Create a comprehensive system to manage student grades using different data structures.",
-  "order": 468,
+  "order": 466,
   "objectives": [
    "Build the Data Structures projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -7054,7 +6933,7 @@
   "trackId": "python",
   "title": "11. Projects: Comprehensions",
   "summary": "Create a comprehensive data analysis pipeline using various types of comprehensions to process and analyze datasets.",
-  "order": 469,
+  "order": 467,
   "objectives": [
    "Build the Comprehensions projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -7068,7 +6947,7 @@
   "trackId": "python",
   "title": "11. Projects: Decorators",
   "summary": "Create a simple web API framework using decorators to handle routing, authentication, and request/response processing.",
-  "order": 470,
+  "order": 468,
   "objectives": [
    "Build the Decorators projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -7084,7 +6963,7 @@
   "trackId": "python",
   "title": "11. Projects: Advanced Concepts",
   "summary": "Build a comprehensive data processing pipeline using generators, iterators, and context managers to handle large datasets efficiently.",
-  "order": 471,
+  "order": 469,
   "objectives": [
    "Build the Advanced Concepts projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -7098,7 +6977,7 @@
   "trackId": "python",
   "title": "11. Projects: Os Module",
   "summary": "These mini projects will help you apply your knowledge of the os module in practical scenarios.",
-  "order": 472,
+  "order": 470,
   "objectives": [
    "Build the Os Module projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -7112,7 +6991,7 @@
   "trackId": "python",
   "title": "11. Projects: Exception Handling",
   "summary": "This document outlines 5 mini-projects to practice exception handling in real-world scenarios. Each project builds upon the concepts learned and demonstrates practical applications.",
-  "order": 473,
+  "order": 471,
   "objectives": [
    "Build the Exception Handling projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -7126,7 +7005,7 @@
   "trackId": "python",
   "title": "11. Projects: Generators Iterators",
   "summary": "Create a memory-efficient log file analyzer using generators to process large log files without loading them entirely into memory.",
-  "order": 474,
+  "order": 472,
   "objectives": [
    "Build the Generators Iterators projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -7142,7 +7021,7 @@
   "trackId": "python",
   "title": "11. Projects: Context Managers",
   "summary": "Create a robust database transaction manager that handles commits, rollbacks, and connection pooling.",
-  "order": 475,
+  "order": 473,
   "objectives": [
    "Build the Context Managers projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -7156,7 +7035,7 @@
   "trackId": "python",
   "title": "11. Projects: Match Case",
   "summary": "Build a command-line shell with command parsing and routing using match-case.",
-  "order": 476,
+  "order": 474,
   "objectives": [
    "Build the Match Case projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -7170,7 +7049,7 @@
   "trackId": "python",
   "title": "11. Projects: Pydantic Dataclasses",
   "summary": "Create a comprehensive user management system using Pydantic models.",
-  "order": 477,
+  "order": 475,
   "objectives": [
    "Build the Pydantic Dataclasses projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -7184,7 +7063,7 @@
   "trackId": "python",
   "title": "11. Projects: Collections Module",
   "summary": "Build a log file analysis tool using Counter and defaultdict.",
-  "order": 478,
+  "order": 476,
   "objectives": [
    "Build the Collections Module projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -7198,7 +7077,7 @@
   "trackId": "python",
   "title": "11. Projects: Itertools Functools",
   "summary": "Create a job scheduling system with priorities and dependencies.",
-  "order": 479,
+  "order": 477,
   "objectives": [
    "Build the Itertools Functools projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -7212,7 +7091,7 @@
   "trackId": "python",
   "title": "11. Projects: Typing Module",
   "summary": "Build a type-safe HTTP client with proper type hints for all endpoints.",
-  "order": 480,
+  "order": 478,
   "objectives": [
    "Build the Typing Module projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -7226,7 +7105,7 @@
   "trackId": "python",
   "title": "11. Projects: Datetime Module",
   "summary": "Build a system to manage and remind users of upcoming events.",
-  "order": 481,
+  "order": 479,
   "objectives": [
    "Build the Datetime Module projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -7240,7 +7119,7 @@
   "trackId": "python",
   "title": "11. Projects: Requests Module",
   "summary": "Projects for Requests Module.",
-  "order": 482,
+  "order": 480,
   "objectives": [
    "Build the Requests Module projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -7254,7 +7133,7 @@
   "trackId": "python",
   "title": "11. Projects: Memory Management",
   "summary": "Build a tool to profile memory usage of Python applications.",
-  "order": 483,
+  "order": 481,
   "objectives": [
    "Build the Memory Management projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -7268,7 +7147,7 @@
   "trackId": "python",
   "title": "11. Projects: Magic Methods",
   "summary": "Create a base class for an Object-Relational Mapping (ORM) system using descriptors and magic methods to map Python objects to database records.",
-  "order": 484,
+  "order": 482,
   "objectives": [
    "Build the Magic Methods projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -7282,7 +7161,7 @@
   "trackId": "python",
   "title": "11. Projects: Memory Management Masterclass",
   "summary": "Projects for Memory Management Masterclass.",
-  "order": 485,
+  "order": 483,
   "objectives": [
    "Build the Memory Management Masterclass projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -7296,7 +7175,7 @@
   "trackId": "python",
   "title": "12. Interview: Complete System Design Roadmap to Crack Top Product-Based Companies",
   "summary": "Interview Q&A for Complete System Design Roadmap to Crack Top Product-Based Companies.",
-  "order": 486,
+  "order": 484,
   "objectives": [
    "Answer the Complete System Design Roadmap to Crack Top Product-Based Companies interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7310,7 +7189,7 @@
   "trackId": "python",
   "title": "12. Interview: OOP Masterclass (Part 1)",
   "summary": "Interview Q&A for OOP Masterclass — 70 questions with model answers (part 1 of 3).",
-  "order": 487,
+  "order": 485,
   "objectives": [
    "Answer 70 OOP Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7324,7 +7203,7 @@
   "trackId": "python",
   "title": "12. Interview: OOP Masterclass (Part 2)",
   "summary": "Interview Q&A for OOP Masterclass — 70 questions with model answers (part 2 of 3).",
-  "order": 488,
+  "order": 486,
   "objectives": [
    "Answer 70 OOP Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7338,7 +7217,7 @@
   "trackId": "python",
   "title": "12. Interview: OOP Masterclass (Part 3)",
   "summary": "Interview Q&A for OOP Masterclass — 70 questions with model answers (part 3 of 3).",
-  "order": 489,
+  "order": 487,
   "objectives": [
    "Answer 70 OOP Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7352,7 +7231,7 @@
   "trackId": "python",
   "title": "12. Interview: OOP Masterclass",
   "summary": "Interview Q&A for OOP Masterclass — 35 questions with model answers.",
-  "order": 490,
+  "order": 488,
   "objectives": [
    "Answer 35 OOP Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7366,7 +7245,7 @@
   "trackId": "python",
   "title": "12. Interview: OOP Masterclass",
   "summary": "Interview Q&A for OOP Masterclass — 26 questions with model answers.",
-  "order": 491,
+  "order": 489,
   "objectives": [
    "Answer 26 OOP Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7380,7 +7259,7 @@
   "trackId": "python",
   "title": "12. Interview: Async Programming Masterclass (Part 1)",
   "summary": "Interview Q&A for Async Programming Masterclass — 66 questions with model answers (part 1 of 3).",
-  "order": 492,
+  "order": 490,
   "objectives": [
    "Answer 66 Async Programming Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7394,7 +7273,7 @@
   "trackId": "python",
   "title": "12. Interview: Async Programming Masterclass (Part 2)",
   "summary": "Interview Q&A for Async Programming Masterclass — 66 questions with model answers (part 2 of 3).",
-  "order": 493,
+  "order": 491,
   "objectives": [
    "Answer 66 Async Programming Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7408,7 +7287,7 @@
   "trackId": "python",
   "title": "12. Interview: Async Programming Masterclass (Part 3)",
   "summary": "Interview Q&A for Async Programming Masterclass — 66 questions with model answers (part 3 of 3).",
-  "order": 494,
+  "order": 492,
   "objectives": [
    "Answer 66 Async Programming Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7422,7 +7301,7 @@
   "trackId": "python",
   "title": "12. Interview: Binary Search Tree Masterclass",
   "summary": "Interview Q&A for Binary Search Tree Masterclass — 42 questions with model answers.",
-  "order": 495,
+  "order": 493,
   "objectives": [
    "Answer 42 Binary Search Tree Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7436,7 +7315,7 @@
   "trackId": "python",
   "title": "12. Interview: Comprehensions Masterclass (Part 1)",
   "summary": "Interview Q&A for Comprehensions Masterclass — 57 questions with model answers (part 1 of 3).",
-  "order": 496,
+  "order": 494,
   "objectives": [
    "Answer 57 Comprehensions Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7450,7 +7329,7 @@
   "trackId": "python",
   "title": "12. Interview: Comprehensions Masterclass (Part 2)",
   "summary": "Interview Q&A for Comprehensions Masterclass — 57 questions with model answers (part 2 of 3).",
-  "order": 497,
+  "order": 495,
   "objectives": [
    "Answer 57 Comprehensions Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7464,7 +7343,7 @@
   "trackId": "python",
   "title": "12. Interview: Comprehensions Masterclass (Part 3)",
   "summary": "Interview Q&A for Comprehensions Masterclass — 57 questions with model answers (part 3 of 3).",
-  "order": 498,
+  "order": 496,
   "objectives": [
    "Answer 57 Comprehensions Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7478,7 +7357,7 @@
   "trackId": "python",
   "title": "12. Interview: Dataclasses, Enum & Pydantic Masterclass (Part 1)",
   "summary": "Interview Q&A for Dataclasses, Enum & Pydantic Masterclass — 70 questions with model answers (part 1 of 3).",
-  "order": 499,
+  "order": 497,
   "objectives": [
    "Answer 70 Dataclasses, Enum & Pydantic Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7492,7 +7371,7 @@
   "trackId": "python",
   "title": "12. Interview: Dataclasses, Enum & Pydantic Masterclass (Part 2)",
   "summary": "Interview Q&A for Dataclasses, Enum & Pydantic Masterclass — 70 questions with model answers (part 2 of 3).",
-  "order": 500,
+  "order": 498,
   "objectives": [
    "Answer 70 Dataclasses, Enum & Pydantic Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7506,7 +7385,7 @@
   "trackId": "python",
   "title": "12. Interview: Dataclasses, Enum & Pydantic Masterclass (Part 3)",
   "summary": "Interview Q&A for Dataclasses, Enum & Pydantic Masterclass — 70 questions with model answers (part 3 of 3).",
-  "order": 501,
+  "order": 499,
   "objectives": [
    "Answer 70 Dataclasses, Enum & Pydantic Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7520,7 +7399,7 @@
   "trackId": "python",
   "title": "12. Interview: Dictionaries Masterclass (Part 1)",
   "summary": "Interview Q&A for Dictionaries Masterclass — 86 questions with model answers (part 1 of 3).",
-  "order": 502,
+  "order": 500,
   "objectives": [
    "Answer 86 Dictionaries Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7534,7 +7413,7 @@
   "trackId": "python",
   "title": "12. Interview: Dictionaries Masterclass (Part 2)",
   "summary": "Interview Q&A for Dictionaries Masterclass — 86 questions with model answers (part 2 of 3).",
-  "order": 503,
+  "order": 501,
   "objectives": [
    "Answer 86 Dictionaries Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7548,7 +7427,7 @@
   "trackId": "python",
   "title": "12. Interview: Dictionaries Masterclass (Part 3)",
   "summary": "Interview Q&A for Dictionaries Masterclass — 86 questions with model answers (part 3 of 3).",
-  "order": 504,
+  "order": 502,
   "objectives": [
    "Answer 86 Dictionaries Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7562,7 +7441,7 @@
   "trackId": "python",
   "title": "12. Interview: File Handling Masterclass (Part 1)",
   "summary": "Interview Q&A for File Handling Masterclass — 48 questions with model answers (part 1 of 3).",
-  "order": 505,
+  "order": 503,
   "objectives": [
    "Answer 48 File Handling Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7576,7 +7455,7 @@
   "trackId": "python",
   "title": "12. Interview: File Handling Masterclass (Part 2)",
   "summary": "Interview Q&A for File Handling Masterclass — 48 questions with model answers (part 2 of 3).",
-  "order": 506,
+  "order": 504,
   "objectives": [
    "Answer 48 File Handling Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7590,7 +7469,7 @@
   "trackId": "python",
   "title": "12. Interview: File Handling Masterclass (Part 3)",
   "summary": "Interview Q&A for File Handling Masterclass — 48 questions with model answers (part 3 of 3).",
-  "order": 507,
+  "order": 505,
   "objectives": [
    "Answer 48 File Handling Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7604,7 +7483,7 @@
   "trackId": "python",
   "title": "12. Interview: Functions & Built-ins Masterclass (Part 1)",
   "summary": "Interview Q&A for Functions & Built-ins Masterclass — 56 questions with model answers (part 1 of 2).",
-  "order": 508,
+  "order": 506,
   "objectives": [
    "Answer 56 Functions & Built-ins Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7618,7 +7497,7 @@
   "trackId": "python",
   "title": "12. Interview: Functions & Built-ins Masterclass (Part 2)",
   "summary": "Interview Q&A for Functions & Built-ins Masterclass — 56 questions with model answers (part 2 of 2).",
-  "order": 509,
+  "order": 507,
   "objectives": [
    "Answer 56 Functions & Built-ins Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7632,7 +7511,7 @@
   "trackId": "python",
   "title": "12. Interview: Lists & Tuples Masterclass (Part 1)",
   "summary": "Interview Q&A for Lists & Tuples Masterclass — 100 questions with model answers (part 1 of 4).",
-  "order": 510,
+  "order": 508,
   "objectives": [
    "Answer 100 Lists & Tuples Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7646,7 +7525,7 @@
   "trackId": "python",
   "title": "12. Interview: Lists & Tuples Masterclass (Part 2)",
   "summary": "Interview Q&A for Lists & Tuples Masterclass — 100 questions with model answers (part 2 of 4).",
-  "order": 511,
+  "order": 509,
   "objectives": [
    "Answer 100 Lists & Tuples Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7660,7 +7539,7 @@
   "trackId": "python",
   "title": "12. Interview: Lists & Tuples Masterclass (Part 3)",
   "summary": "Interview Q&A for Lists & Tuples Masterclass — 100 questions with model answers (part 3 of 4).",
-  "order": 512,
+  "order": 510,
   "objectives": [
    "Answer 100 Lists & Tuples Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7674,7 +7553,7 @@
   "trackId": "python",
   "title": "12. Interview: Lists & Tuples Masterclass (Part 4)",
   "summary": "Interview Q&A for Lists & Tuples Masterclass — 100 questions with model answers (part 4 of 4).",
-  "order": 513,
+  "order": 511,
   "objectives": [
    "Answer 100 Lists & Tuples Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7688,7 +7567,7 @@
   "trackId": "python",
   "title": "12. Interview: Memory Management Masterclass (Part 1)",
   "summary": "Interview Q&A for Memory Management Masterclass — 118 questions with model answers (part 1 of 4).",
-  "order": 514,
+  "order": 512,
   "objectives": [
    "Answer 118 Memory Management Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7702,7 +7581,7 @@
   "trackId": "python",
   "title": "12. Interview: Memory Management Masterclass (Part 2)",
   "summary": "Interview Q&A for Memory Management Masterclass — 118 questions with model answers (part 2 of 4).",
-  "order": 515,
+  "order": 513,
   "objectives": [
    "Answer 118 Memory Management Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7716,7 +7595,7 @@
   "trackId": "python",
   "title": "12. Interview: Memory Management Masterclass (Part 3)",
   "summary": "Interview Q&A for Memory Management Masterclass — 118 questions with model answers (part 3 of 4).",
-  "order": 516,
+  "order": 514,
   "objectives": [
    "Answer 118 Memory Management Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7730,7 +7609,7 @@
   "trackId": "python",
   "title": "12. Interview: Memory Management Masterclass (Part 4)",
   "summary": "Interview Q&A for Memory Management Masterclass — 118 questions with model answers (part 4 of 4).",
-  "order": 517,
+  "order": 515,
   "objectives": [
    "Answer 118 Memory Management Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7744,7 +7623,7 @@
   "trackId": "python",
   "title": "12. Interview: Recursion Masterclass (Part 1)",
   "summary": "Interview Q&A for Recursion Masterclass — 75 questions with model answers (part 1 of 2).",
-  "order": 518,
+  "order": 516,
   "objectives": [
    "Answer 75 Recursion Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7758,7 +7637,7 @@
   "trackId": "python",
   "title": "12. Interview: Recursion Masterclass (Part 2)",
   "summary": "Interview Q&A for Recursion Masterclass — 75 questions with model answers (part 2 of 2).",
-  "order": 519,
+  "order": 517,
   "objectives": [
    "Answer 75 Recursion Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7772,7 +7651,7 @@
   "trackId": "python",
   "title": "12. Interview: Sets Masterclass (Part 1)",
   "summary": "Interview Q&A for Sets Masterclass — 30 questions with model answers (part 1 of 3).",
-  "order": 520,
+  "order": 518,
   "objectives": [
    "Answer 30 Sets Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7786,7 +7665,7 @@
   "trackId": "python",
   "title": "12. Interview: Sets Masterclass (Part 2)",
   "summary": "Interview Q&A for Sets Masterclass — 30 questions with model answers (part 2 of 3).",
-  "order": 521,
+  "order": 519,
   "objectives": [
    "Answer 30 Sets Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7800,7 +7679,7 @@
   "trackId": "python",
   "title": "12. Interview: Sets Masterclass (Part 3)",
   "summary": "Interview Q&A for Sets Masterclass — 30 questions with model answers (part 3 of 3).",
-  "order": 522,
+  "order": 520,
   "objectives": [
    "Answer 30 Sets Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7814,7 +7693,7 @@
   "trackId": "python",
   "title": "12. Interview: Strings Masterclass (Part 1)",
   "summary": "Interview Q&A for Strings Masterclass — 70 questions with model answers (part 1 of 3).",
-  "order": 523,
+  "order": 521,
   "objectives": [
    "Answer 70 Strings Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7828,7 +7707,7 @@
   "trackId": "python",
   "title": "12. Interview: Strings Masterclass (Part 2)",
   "summary": "Interview Q&A for Strings Masterclass — 70 questions with model answers (part 2 of 3).",
-  "order": 524,
+  "order": 522,
   "objectives": [
    "Answer 70 Strings Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7842,7 +7721,7 @@
   "trackId": "python",
   "title": "12. Interview: Strings Masterclass (Part 3)",
   "summary": "Interview Q&A for Strings Masterclass — 70 questions with model answers (part 3 of 3).",
-  "order": 525,
+  "order": 523,
   "objectives": [
    "Answer 70 Strings Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7856,7 +7735,7 @@
   "trackId": "python",
   "title": "12. Interview: Threading & Multiprocessing Masterclass (Part 1)",
   "summary": "Interview Q&A for Threading & Multiprocessing Masterclass — 134 questions with model answers (part 1 of 4).",
-  "order": 526,
+  "order": 524,
   "objectives": [
    "Answer 134 Threading & Multiprocessing Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7872,7 +7751,7 @@
   "trackId": "python",
   "title": "12. Interview: Threading & Multiprocessing Masterclass (Part 2)",
   "summary": "Interview Q&A for Threading & Multiprocessing Masterclass — 134 questions with model answers (part 2 of 4).",
-  "order": 527,
+  "order": 525,
   "objectives": [
    "Answer 134 Threading & Multiprocessing Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7888,7 +7767,7 @@
   "trackId": "python",
   "title": "12. Interview: Threading & Multiprocessing Masterclass (Part 3)",
   "summary": "Interview Q&A for Threading & Multiprocessing Masterclass — 134 questions with model answers (part 3 of 4).",
-  "order": 528,
+  "order": 526,
   "objectives": [
    "Answer 134 Threading & Multiprocessing Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7904,7 +7783,7 @@
   "trackId": "python",
   "title": "12. Interview: Threading & Multiprocessing Masterclass (Part 4)",
   "summary": "Interview Q&A for Threading & Multiprocessing Masterclass — 134 questions with model answers (part 4 of 4).",
-  "order": 529,
+  "order": 527,
   "objectives": [
    "Answer 134 Threading & Multiprocessing Masterclass interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7920,7 +7799,7 @@
   "trackId": "python",
   "title": "12. Interview: Deep-Dive Notes — question bank",
   "summary": "Practice questions from Deep-Dive Notes (40 topics).",
-  "order": 530,
+  "order": 528,
   "objectives": [
    "Answer the 01 — Object Oriented Programming in Python (Complete Deep Dive) interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7934,7 +7813,7 @@
   "trackId": "python",
   "title": "12. Interview: Abstraction",
   "summary": "Interview Q&A for Abstraction — 15 questions with model answers.",
-  "order": 531,
+  "order": 529,
   "objectives": [
    "Answer 15 Abstraction interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7948,7 +7827,7 @@
   "trackId": "python",
   "title": "12. Interview: Classes and Objects",
   "summary": "Interview Q&A for Classes and Objects — 20 questions with model answers.",
-  "order": 532,
+  "order": 530,
   "objectives": [
    "Answer 20 Classes and Objects interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7962,7 +7841,7 @@
   "trackId": "python",
   "title": "12. Interview: @classmethod and @staticmethod In Depth",
   "summary": "Interview Q&A for @classmethod and @staticmethod In Depth — 10 questions with model answers.",
-  "order": 533,
+  "order": 531,
   "objectives": [
    "Answer 10 @classmethod and @staticmethod In Depth interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7976,7 +7855,7 @@
   "trackId": "python",
   "title": "12. Interview: Composition vs Inheritance",
   "summary": "Interview Q&A for Composition vs Inheritance — 10 questions with model answers.",
-  "order": 534,
+  "order": 532,
   "objectives": [
    "Answer 10 Composition vs Inheritance interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -7992,7 +7871,7 @@
   "trackId": "python",
   "title": "12. Interview: Dataclasses and OOP Interplay",
   "summary": "Interview Q&A for Dataclasses and OOP Interplay — 10 questions with model answers.",
-  "order": 535,
+  "order": 533,
   "objectives": [
    "Answer 10 Dataclasses and OOP Interplay interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -8006,7 +7885,7 @@
   "trackId": "python",
   "title": "12. Interview: Dunder Methods Overview",
   "summary": "Interview Q&A for Dunder Methods Overview — 10 questions with model answers.",
-  "order": 536,
+  "order": 534,
   "objectives": [
    "Answer 10 Dunder Methods Overview interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -8020,7 +7899,7 @@
   "trackId": "python",
   "title": "12. Interview: Encapsulation",
   "summary": "Interview Q&A for Encapsulation — 15 questions with model answers.",
-  "order": 537,
+  "order": 535,
   "objectives": [
    "Answer 15 Encapsulation interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -8034,7 +7913,7 @@
   "trackId": "python",
   "title": "12. Interview: Inheritance",
   "summary": "Interview Q&A for Inheritance — 14 questions with model answers.",
-  "order": 538,
+  "order": 536,
   "objectives": [
    "Answer 14 Inheritance interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -8050,7 +7929,7 @@
   "trackId": "python",
   "title": "12. Interview: __init__ and Constructors",
   "summary": "Interview Q&A for __init__ and Constructors — 18 questions with model answers.",
-  "order": 539,
+  "order": 537,
   "objectives": [
    "Answer 18 __init__ and Constructors interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -8064,7 +7943,7 @@
   "trackId": "python",
   "title": "12. Interview: Instance, Class, and Static Methods",
   "summary": "Interview Q&A for Instance, Class, and Static Methods — 20 questions with model answers.",
-  "order": 540,
+  "order": 538,
   "objectives": [
    "Answer 20 Instance, Class, and Static Methods interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -8078,7 +7957,7 @@
   "trackId": "python",
   "title": "12. Interview: Instance, Class, and Static Variables",
   "summary": "Interview Q&A for Instance, Class, and Static Variables — 16 questions with model answers.",
-  "order": 541,
+  "order": 539,
   "objectives": [
    "Answer 16 Instance, Class, and Static Variables interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -8092,7 +7971,7 @@
   "trackId": "python",
   "title": "12. Interview: Metaclasses (Introduction)",
   "summary": "Interview Q&A for Metaclasses (Introduction) — 10 questions with model answers.",
-  "order": 542,
+  "order": 540,
   "objectives": [
    "Answer 10 Metaclasses (Introduction) interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -8106,7 +7985,7 @@
   "trackId": "python",
   "title": "12. Interview: Method Overloading",
   "summary": "Interview Q&A for Method Overloading — 11 questions with model answers.",
-  "order": 543,
+  "order": 541,
   "objectives": [
    "Answer 11 Method Overloading interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -8120,7 +7999,7 @@
   "trackId": "python",
   "title": "12. Interview: MRO and super()",
   "summary": "Interview Q&A for MRO and super() — 15 questions with model answers.",
-  "order": 544,
+  "order": 542,
   "objectives": [
    "Answer 15 MRO and super() interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -8136,7 +8015,7 @@
   "trackId": "python",
   "title": "12. Interview: Polymorphism",
   "summary": "Interview Q&A for Polymorphism — 12 questions with model answers.",
-  "order": 545,
+  "order": 543,
   "objectives": [
    "Answer 12 Polymorphism interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -8150,7 +8029,7 @@
   "trackId": "python",
   "title": "12. Interview: Properties, Getters, and Setters",
   "summary": "Interview Q&A for Properties, Getters, and Setters — 9 questions with model answers.",
-  "order": 546,
+  "order": 544,
   "objectives": [
    "Answer 9 Properties, Getters, and Setters interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -8164,7 +8043,7 @@
   "trackId": "python",
   "title": "12. Interview: __slots__",
   "summary": "Interview Q&A for __slots__ — 10 questions with model answers.",
-  "order": 547,
+  "order": 545,
   "objectives": [
    "Answer 10 __slots__ interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -8178,7 +8057,7 @@
   "trackId": "python",
   "title": "12. Interview: SOLID Principles in Python",
   "summary": "Interview Q&A for SOLID Principles in Python — 9 questions with model answers.",
-  "order": 548,
+  "order": 546,
   "objectives": [
    "Answer 9 SOLID Principles in Python interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -8192,7 +8071,7 @@
   "trackId": "python",
   "title": "12. Interview: Interview Rebuild Plan",
   "summary": "Interview Q&A for Interview Rebuild Plan — 73 questions with model answers.",
-  "order": 549,
+  "order": 547,
   "objectives": [
    "Answer 73 Interview Rebuild Plan interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -8206,7 +8085,7 @@
   "trackId": "python",
   "title": "12. Interview: Advanced Python Topics",
   "summary": "Interview Q&A for Advanced Python Topics — 28 questions with model answers.",
-  "order": 550,
+  "order": 548,
   "objectives": [
    "Answer 28 Advanced Python Topics interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -8220,7 +8099,7 @@
   "trackId": "python",
   "title": "12. Interview: Backend Essentials",
   "summary": "Interview Q&A for Backend Essentials — 7 questions with model answers.",
-  "order": 551,
+  "order": 549,
   "objectives": [
    "Answer 7 Backend Essentials interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -8234,7 +8113,7 @@
   "trackId": "python",
   "title": "12. Interview: Python Backend Interview Guide (Part 1)",
   "summary": "Interview Q&A for Python Backend Interview Guide — 15 questions with model answers (part 1 of 2).",
-  "order": 552,
+  "order": 550,
   "objectives": [
    "Answer 15 Python Backend Interview Guide interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -8248,7 +8127,7 @@
   "trackId": "python",
   "title": "12. Interview: Python Backend Interview Guide (Part 2)",
   "summary": "Interview Q&A for Python Backend Interview Guide — 5 questions with model answers (part 2 of 2).",
-  "order": 553,
+  "order": 551,
   "objectives": [
    "Answer 5 Python Backend Interview Guide interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"

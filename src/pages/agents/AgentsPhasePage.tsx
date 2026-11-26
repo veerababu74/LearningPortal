@@ -12,6 +12,7 @@ import { useProgress } from '@/store/progress'
 import { SeriesCards } from '@/components/python/SeriesCards'
 import '@/components/python/python.css'
 import '@/components/agents/agents.css'
+import { tidyTitle } from '@/content/titles'
 
 export function AgentsPhasePage() {
   const { phaseId = '' } = useParams()
@@ -70,7 +71,7 @@ export function AgentsPhasePage() {
                 to={`/learn/agents/${lesson.id}`}
                 className={completed.includes(lesson.id) ? 'py-browse-card done' : 'py-browse-card'}
               >
-                <h3>{cleanPreview(lessonTopic(lesson.title))}</h3>
+                <h3>{tidyTitle(cleanPreview(lessonTopic(lesson.title)))}</h3>
                 <p>{cleanPreview(lesson.summary)}</p>
               </Link>
             ))}

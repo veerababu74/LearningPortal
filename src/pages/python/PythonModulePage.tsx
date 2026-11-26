@@ -2,6 +2,7 @@ import { Link, useParams } from 'react-router-dom'
 import { getPyModule } from '@/content/python/modules'
 import { usePythonProgress } from '@/store/pythonProgress'
 import '@/components/python/python.css'
+import { tidyTitle } from '@/content/titles'
 
 export function PythonModulePage() {
   const { moduleId = '' } = useParams()
@@ -33,7 +34,7 @@ export function PythonModulePage() {
                 Lesson {i + 1} · {lesson.duration}
                 {done ? ' · done' : ''}
               </span>
-              <h2 style={{ margin: '0.25rem 0', fontSize: '1.15rem' }}>{lesson.title}</h2>
+              <h2 style={{ margin: '0.25rem 0', fontSize: '1.15rem' }}>{tidyTitle(lesson.title)}</h2>
               <p className="py-muted">{lesson.story.title}</p>
             </Link>
           )
