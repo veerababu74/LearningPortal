@@ -56,6 +56,16 @@ const RagVisualizerPage = page(() => import('@/pages/agents/AgentVisualizer'), '
 const RagHome = page(() => import('@/pages/rag/RagPages'), 'RagHome')
 const RagPhasePage = page(() => import('@/pages/rag/RagPages'), 'RagPhasePage')
 const RagModulePage = page(() => import('@/pages/rag/RagPages'), 'RagModulePage')
+const RagTopicPage = page(() => import('@/pages/rag/RagPages'), 'RagTopicPage')
+const RagInterviewHub = page(() => import('@/pages/rag/RagPages'), 'RagInterviewHub')
+
+const ProjectVisualizerIndex = page(() => import('@/pages/agents/AgentVisualizer'), 'ProjectVisualizerIndex')
+const ProjectVisualizerPage = page(() => import('@/pages/agents/AgentVisualizer'), 'ProjectVisualizerPage')
+const ProjectHome = page(() => import('@/pages/project/ProjectPages'), 'ProjectHome')
+const ProjectPhasePage = page(() => import('@/pages/project/ProjectPages'), 'ProjectPhasePage')
+const ProjectModulePage = page(() => import('@/pages/project/ProjectPages'), 'ProjectModulePage')
+const ProjectTopicPage = page(() => import('@/pages/project/ProjectPages'), 'ProjectTopicPage')
+const ProjectInterviewHub = page(() => import('@/pages/project/ProjectPages'), 'ProjectInterviewHub')
 
 function NotFound() {
   return (
@@ -110,8 +120,18 @@ export default function App() {
           <Route path="rag" element={<RagHome />} />
           <Route path="rag/visualizer" element={<RagVisualizerIndex />} />
           <Route path="rag/visualizer/:simId" element={<RagVisualizerPage />} />
+          <Route path="rag/path/:topicId" element={<RagTopicPage />} />
+          <Route path="rag/interview" element={<RagInterviewHub />} />
           <Route path="rag/learn/:moduleId" element={<RagModulePage />} />
           <Route path="rag/:phaseId" element={<RagPhasePage />} />
+
+          <Route path="project" element={<ProjectHome />} />
+          <Route path="project/visualizer" element={<ProjectVisualizerIndex />} />
+          <Route path="project/visualizer/:simId" element={<ProjectVisualizerPage />} />
+          <Route path="project/path/:topicId" element={<ProjectTopicPage />} />
+          <Route path="project/interview" element={<ProjectInterviewHub />} />
+          <Route path="project/learn/:moduleId" element={<ProjectModulePage />} />
+          <Route path="project/:phaseId" element={<ProjectPhasePage />} />
 
           <Route path="docker" element={<DockerHome />} />
           <Route path="docker/labs" element={<DockerLabsIndex />} />
@@ -125,6 +145,7 @@ export default function App() {
           <Route path="tracks/asyncconcur" element={<Navigate to="/async" replace />} />
           <Route path="tracks/agents" element={<Navigate to="/agents" replace />} />
           <Route path="tracks/veerarag" element={<Navigate to="/rag" replace />} />
+          <Route path="tracks/veeraproject" element={<Navigate to="/project" replace />} />
           <Route path="tracks/:trackId" element={<TrackOverview />} />
           <Route path="learn/:trackId/:lessonId" element={<LessonPage />} />
           <Route path="labs" element={<LabsIndex />} />

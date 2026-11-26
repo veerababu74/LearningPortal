@@ -173,9 +173,12 @@ export function AppShell() {
         <div className="foot-col">
           <h2>Practice</h2>
           <Link to="/labs">Labs & playgrounds</Link>
+          <Link to="/project/visualizer">Project Visualizer</Link>
+          <Link to="/rag/visualizer">RAG Visualizer</Link>
           <Link to="/agents/visualizer">Agent Visualizer</Link>
           <Link to="/python/visualizer">Python Visualizer</Link>
-          <Link to="/agents/interview">Interview prep</Link>
+          <Link to="/project/interview">VeeraProject Interview</Link>
+          <Link to="/rag/interview">VeeraRAG Interview</Link>
         </div>
         <div className="foot-col">
           <h2>You</h2>

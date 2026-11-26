@@ -2,12 +2,12 @@ import { useMemo, useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { AGENT_MODULE_INFO } from '@/content/agents/catalog'
 import type { AgentSim } from '@/content/agents/visualizer'
-import { AGENT_GALLERY, PYTHON_GALLERY, RAG_GALLERY, simGroup, simLessonsHref } from '@/content/sims/registry'
+import { AGENT_GALLERY, PROJECT_GALLERY, PYTHON_GALLERY, RAG_GALLERY, simGroup, simLessonsHref } from '@/content/sims/registry'
 import { AgentSimPlayer } from '@/components/agents/AgentSimPlayer'
 import '@/components/python/python.css'
 import '@/components/agents/agents.css'
 
-type Kind = 'agents' | 'python' | 'rag'
+type Kind = 'agents' | 'python' | 'rag' | 'project'
 
 const GALLERIES: Record<
   Kind,
@@ -43,10 +43,20 @@ const GALLERIES: Record<
     intro:
       'Frames being pushed and popped, names pointing at objects, generators pausing at yield, the event loop switching tasks, threads fighting over the GIL. Play each one, predict the next step, and watch the highlighted line run.',
   },
+  project: {
+    sims: PROJECT_GALLERY,
+    base: '/project/visualizer',
+    home: '/project',
+    homeLabel: 'VeeraProject',
+    kicker: 'Full-Stack & AI Visualizer',
+    title: 'Watch JS, TypeScript, Playwright, REST & FastAPI execute step by step',
+    intro:
+      'Microtasks vs macrotasks, Zod runtime validation, Playwright auto-wait & page.route() 429 mocks, Playwright MCP + HITL, HTTP Keep-Alive, BOLA ownership checks, Token Bucket caching, SSE token streams, and FastAPI ASGI + Pydantic V2 — animated line by line with predict-the-next-step prompts.',
+  },
 }
 
 function moduleLabel(sim: AgentSim, kind: Kind) {
-  if (kind === 'python') return `Module ${sim.module}`
+  if (kind === 'python' || kind === 'project') return `Module ${sim.module}`
   if (kind === 'rag') return `Module ${sim.ragModule || '—'}`
   const info = AGENT_MODULE_INFO[sim.module]
   return `${info?.icon || ''} Module ${sim.module}`
@@ -190,4 +200,12 @@ export function RagVisualizerIndex() {
 
 export function RagVisualizerPage() {
   return <SimPage kind="rag" />
+}
+
+export function ProjectVisualizerIndex() {
+  return <SimGallery kind="project" />
+}
+
+export function ProjectVisualizerPage() {
+  return <SimPage kind="project" />
 }

@@ -7,7 +7,7 @@
  */
 
 export type Role = 'core' | 'practice' | 'deeper'
-export type Rule = { s?: RegExp; t: RegExp; role?: Role }
+export type Rule = { m?: RegExp; s?: RegExp; t: RegExp; role?: Role }
 export type PathLink = { to: string; title: string }
 export type TopicDef = {
   id: string
@@ -48,6 +48,7 @@ export function resolvePath(all: LessonRef[], defs: StageDef[]): ResolvedPath {
       for (const rule of tp.rules) {
         for (const l of all) {
           if (taken.has(l.id)) continue
+          if (rule.m && !rule.m.test(l.title.slice(0, 2))) continue
           if (rule.s && !rule.s.test(l.series || '')) continue
           const title = topicOf(l.title)
           if (!rule.t.test(title)) continue

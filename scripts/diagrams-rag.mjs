@@ -516,4 +516,31 @@ flowchart LR
   CACHE -- "hit" --> API`,
     explain: `Separate **ingestion** (async workers) from **serving**. The serving path adds a semantic cache in front, a reranker service, and an LLM gateway for routing, retries and fallbacks. Everything emits traces and metrics so quality and cost stay visible.`,
   },
+  {
+    id: 'rag-eval-ragas-loop',
+    where: { topic: /RAG Evaluation: Retrieval, Generation/i, section: /Metrics|RAGAS|Core/i, fallbackFirst: true },
+    title: 'RAGAS 4-Metric Diagnostic Matrix (Retriever vs Generator)',
+    mermaid: `
+flowchart TB
+  Q["Question + Ground Truth"] --> RET["Context Precision & Context Recall"]
+  Q --> GEN["Faithfulness & Answer Relevance"]
+  RET -->|"Low Recall"| FIXR["Fix chunking, k, hybrid search or embeddings"]
+  RET -->|"Low Precision"| FIXP["Fix reranker cutoff & metadata filtering"]
+  GEN -->|"Low Faithfulness"| FIXF["Fix grounding prompt, temperature or model"]
+  GEN -->|"Low Relevance"| FIXA["Fix query rewrite & answer synthesis"]`,
+    explain: `Separate **retrieval diagnostics** (Context Recall and Precision) from **generation diagnostics** (Faithfulness and Relevance) so every drop immediately tells you *which half of the RAG pipeline* regressed.`,
+  },
+  {
+    id: 'rag-otel-continuous-loop',
+    where: { topic: /Production Monitoring: Drift/i, section: /Alert|Observability|Continuous/i, fallbackFirst: true },
+    title: 'Continuous Production Monitoring -> Sampling -> Golden Dataset Loop',
+    mermaid: `
+flowchart LR
+  TRAFFIC["Live Production RAG Traffic"] --> OTEL["OpenTelemetry Spans (latency, tokens, cost)"]
+  OTEL --> SAMP["Sample 5% of queries + 100% of Thumbs-Down"]
+  SAMP --> JUDGE["Async Online Judge (Faithfulness & Relevance)"]
+  JUDGE -->|"Drift / SLO Breach"| ALERT["Pager / Slack Alert + Trace Link"]
+  JUDGE -->|"Verified Failure Case"| GD["Promote to Regression Golden Dataset"]`,
+    explain: `Production monitoring turns live failures into permanent test cases: OpenTelemetry captures every span, online LLM judges score sampled traffic and user-flagged errors, and confirmed failures promote straight into your regression golden dataset.`,
+  },
 ]

@@ -1,12 +1,12 @@
 import { useMemo } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { getCurriculumIndex, searchLessons } from '@/content/loadCurriculum'
-import { AGENT_GALLERY, PYTHON_GALLERY, simHref } from '@/content/sims/registry'
+import { AGENT_GALLERY, PYTHON_GALLERY, RAG_GALLERY, PROJECT_GALLERY, simHref } from '@/content/sims/registry'
 import { Pager, usePaged } from '@/components/common/Pager'
 import { courseHomeFor } from '@/content/courses'
 import './Tracks.css'
 
-const SUGGESTIONS = ['prompt injection', 'chunking', 'langgraph reducer', 'decorator', 'asyncio gather', 'rag evaluation', 'checkpointer', 'GIL']
+const SUGGESTIONS = ['prompt injection', 'event loop', 'playwright route', 'pydantic v2', 'bm25', 'langgraph reducer', 'rag evaluation', 'fastapi asgi']
 
 function clean(text: string) {
   return String(text || '')
@@ -42,7 +42,9 @@ export function SearchPage() {
   const sims = useMemo(() => {
     const words = q.trim().toLowerCase().split(/\s+/).filter(Boolean)
     if (!words.length) return []
-    return [...AGENT_GALLERY, ...PYTHON_GALLERY].filter((s) => words.every((w) => `${s.title} ${s.summary} ${s.framework}`.toLowerCase().includes(w))).slice(0, 6)
+    return [...AGENT_GALLERY, ...PYTHON_GALLERY, ...RAG_GALLERY, ...PROJECT_GALLERY]
+      .filter((s) => words.every((w) => `${s.title} ${s.summary} ${s.framework}`.toLowerCase().includes(w)))
+      .slice(0, 6)
   }, [q])
 
   const trackTitle = (id: string) => index.tracks.find((t) => t.id === id)?.title || id

@@ -39,11 +39,13 @@ export function ProgressPage() {
                     ? '/python'
                     : track.id === 'veerarag'
                       ? '/rag'
-                      : track.id === 'agents'
-                      ? '/agents'
-                      : track.id === 'asyncconcur'
-                      ? '/async'
-                      : `/tracks/${track.id}`
+                      : track.id === 'veeraproject'
+                        ? '/project'
+                        : track.id === 'agents'
+                          ? '/agents'
+                          : track.id === 'asyncconcur'
+                            ? '/async'
+                            : `/tracks/${track.id}`
                 }
                 className="btn soft"
               >

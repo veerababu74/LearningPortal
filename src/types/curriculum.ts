@@ -3,6 +3,7 @@ export type TrackId =
   | 'asyncconcur'
   | 'agents'
   | 'veerarag'
+  | 'veeraproject'
   | 'llm-concepts'
   | 'rag'
   | 'agentic-ai'
@@ -64,7 +65,7 @@ export type ScenarioSpec = {
 export type CodeSnippet = {
   id: string
   title: string
-  language: 'python' | 'sql' | 'bash' | 'text'
+  language: 'python' | 'typescript' | 'javascript' | 'http' | 'gherkin' | 'json' | 'yaml' | 'sql' | 'bash' | 'text'
   framework: FrameworkTag
   code: string
 }

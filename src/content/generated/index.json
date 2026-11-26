@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T12:45:55.153Z",
+  "generatedAt": "2026-11-26T14:15:09.774Z",
   "tracks": [
     {
       "id": "python",
@@ -10,12 +10,20 @@
       "lessonCount": 551
     },
     {
+      "id": "veeraproject",
+      "title": "VeeraProject",
+      "tagline": "Full-Stack AI Engineering — JS, TS, Playwright, REST APIs, FastAPI & Capstone",
+      "description": "Production-grade JavaScript, TypeScript, Playwright (Python & TS), BDD, Agentic Browser MCP, REST APIs, Security, SSE Streaming, FastAPI & Pydantic V2 — with SVG & Mermaid diagrams, interactive labs, step-by-step simulations, worked exercises, and 500+ interview questions.",
+      "accent": "#2563eb",
+      "lessonCount": 171
+    },
+    {
       "id": "veerarag",
       "title": "VeeraRAG",
       "tagline": "Retrieval-Augmented Generation — Learn → Visualize → Practice → Evaluate → Interview",
       "description": "RAG from first principles to production: ingestion and chunking, embeddings and vector databases, BM25, hybrid retrieval and reranking, query transformation, advanced and agentic RAG, GraphRAG, evaluation, observability and monitoring, failure modes, performance and security.",
       "accent": "#0d9488",
-      "lessonCount": 247
+      "lessonCount": 257
     },
     {
       "id": "agents",
@@ -13742,7 +13750,7 @@
         "order": 163,
         "series": "RAG Core Course",
         "part": 1,
-        "partCount": 4
+        "partCount": 5
       },
       {
         "id": "rg-11-security-governance-6dc77a",
@@ -13751,7 +13759,7 @@
         "order": 164,
         "series": "RAG Core Course",
         "part": 2,
-        "partCount": 4
+        "partCount": 5
       },
       {
         "id": "rg-11-langchain-rag-patterns-retrievalqa-vs-lcel-9c969f",
@@ -13760,7 +13768,7 @@
         "order": 165,
         "series": "RAG Core Course",
         "part": 3,
-        "partCount": 4
+        "partCount": 5
       },
       {
         "id": "rg-11-complete-production-rag-reference-architecture-d1943b",
@@ -13769,13 +13777,22 @@
         "order": 166,
         "series": "RAG Core Course",
         "part": 4,
-        "partCount": 4
+        "partCount": 5
+      },
+      {
+        "id": "rg-11-performance-scalability-35caa2",
+        "title": "11. Production: Failures, Scale & Security: Performance & Scalability",
+        "summary": "Production RAG systems must meet strict latency SLAs — typically P95 < 2 seconds.",
+        "order": 167,
+        "series": "RAG Core Course",
+        "part": 5,
+        "partCount": 5
       },
       {
         "id": "rg-11-performance-and-scalability-eb3651",
         "title": "11. Production: Failures, Scale & Security: Performance and Scalability",
         "summary": "BM25 query latency depends on corpus size, posting list lengths, and early termination. For a corpus of N documents with vocabulary V, the worst-case cost is O(Σ df(q_i)) per query — summing posting list lengths over all query terms.",
-        "order": 167,
+        "order": 168,
         "series": "BM25 & Sparse Retrieval",
         "part": 1,
         "partCount": 1
@@ -13784,7 +13801,7 @@
         "id": "rg-11-failure-modes-debugging-2dda86",
         "title": "11. Production: Failures, Scale & Security: Failure Modes & Debugging",
         "summary": "Graph RAG systems have failure modes that span three layers: knowledge graph construction (bad extraction, missed entities), retrieval (wrong graph traversal, poor vector search), and generation (hallucination, context overflow).",
-        "order": 168,
+        "order": 169,
         "series": "GraphRAG Course",
         "part": 1,
         "partCount": 3
@@ -13793,7 +13810,7 @@
         "id": "rg-11-scalability-performance-ad6a52",
         "title": "11. Production: Failures, Scale & Security: Scalability & Performance",
         "summary": "Scaling Graph RAG from a 10,000-entity prototype to a 10M+ entity production system requires addressing three bottlenecks independently: indexing throughput (parallel LLM extraction, batched embeddings, distributed chunking), graph storage…",
-        "order": 169,
+        "order": 170,
         "series": "GraphRAG Course",
         "part": 2,
         "partCount": 3
@@ -13802,7 +13819,7 @@
         "id": "rg-11-infrastructure-tools-173c5c",
         "title": "11. Production: Failures, Scale & Security: Infrastructure & Tools",
         "summary": "The Graph RAG ecosystem has converged around four major infrastructure pillars: Microsoft GraphRAG (CLI-driven pipeline producing Parquet artifacts with community reports, best for structured enterprise corpora), LightRAG-HKU (dual-level…",
-        "order": 170,
+        "order": 171,
         "series": "GraphRAG Course",
         "part": 3,
         "partCount": 3
@@ -13811,7 +13828,7 @@
         "id": "rg-11-production-graphrag-systems-6c3b9d",
         "title": "11. Production: Failures, Scale & Security: Production GraphRAG Systems",
         "summary": "Learning Path: Beginner → Intermediate → Advanced → Production → FAANG",
-        "order": 171,
+        "order": 172,
         "series": "GraphRAG + BM25 Interview Guide",
         "part": 1,
         "partCount": 2
@@ -13820,7 +13837,7 @@
         "id": "rg-11-security-in-graphrag-systems-c9f1da",
         "title": "11. Production: Failures, Scale & Security: Security in GraphRAG Systems",
         "summary": "Learning Path: Beginner → Intermediate → Advanced → Production → FAANG",
-        "order": 172,
+        "order": 173,
         "series": "GraphRAG + BM25 Interview Guide",
         "part": 2,
         "partCount": 2
@@ -13829,7 +13846,7 @@
         "id": "rg-11-bm25-with-elasticsearch-production-scale-search-18c59d",
         "title": "11. Production: Failures, Scale & Security: BM25 with Elasticsearch (Production-Scale Search)",
         "summary": "rank-bm25 is like a home kitchen blender — perfect for personal use, maybe up to a few thousand documents.",
-        "order": 173,
+        "order": 174,
         "series": "BM25 & Sparse Retrieval for Beginners",
         "part": 1,
         "partCount": 1
@@ -13838,7 +13855,7 @@
         "id": "rg-11-advanced-production-patterns-27ba6b",
         "title": "11. Production: Failures, Scale & Security: ADVANCED PRODUCTION PATTERNS",
         "summary": "This completes the full Advanced Master Course on GraphRAG + BM25. > > You now have mastery over: > - BM25 family (BM25, BM25+, BM25L, SPLADE) > - GraphRAG (local, global, relational query modes) > - Community detection (Louvain,…",
-        "order": 174,
+        "order": 175,
         "series": "GraphRAG + BM25 Master Course",
         "part": 1,
         "partCount": 1
@@ -13847,7 +13864,7 @@
         "id": "rg-11-mcp-security-basics-for-beginners-c44857",
         "title": "11. Production: Failures, Scale & Security: MCP Security Basics for Beginners",
         "summary": "In the last lessons we connected MCP to four different frameworks. Today we learn something critically important — keeping your MCP server secure.",
-        "order": 175,
+        "order": 176,
         "series": "MCP (Model Context Protocol)",
         "part": 1,
         "partCount": 2
@@ -13856,7 +13873,7 @@
         "id": "rg-11-debugging-and-testing-mcp-servers-fda15c",
         "title": "11. Production: Failures, Scale & Security: Debugging and Testing MCP Servers",
         "summary": "This is the final lesson! We pull together everything and learn how to find and fix problems confidently.",
-        "order": 176,
+        "order": 177,
         "series": "MCP (Model Context Protocol)",
         "part": 2,
         "partCount": 2
@@ -13865,7 +13882,7 @@
         "id": "rg-20-multi-agent-system-evaluation-coordination-commu-0e78eb",
         "title": "20. Exercises: Multi-Agent System Evaluation: Coordination, Communication, and Emergent Behavior",
         "summary": "When the final answer is wrong in a single-agent system, you trace the trajectory: which step went sideways? One agent, one trajectory, one blame target.",
-        "order": 177,
+        "order": 178,
         "series": "AI Evaluation & Observability",
         "part": 1,
         "partCount": 1
@@ -13874,7 +13891,7 @@
         "id": "rg-20-bm25-sparse-retrieval-for-beginners-145382",
         "title": "20. Exercises: BM25 & Sparse Retrieval for Beginners",
         "summary": "Task: Add a 6th document \"Deep learning is a subset of machine learning\" to our document collection, re-build the inverted index, and search for \"deep learning\". Print the ranked results.",
-        "order": 178,
+        "order": 179,
         "series": "BM25 & Sparse Retrieval for Beginners",
         "part": 1,
         "partCount": 1
@@ -13883,7 +13900,7 @@
         "id": "rg-20-mcp-model-context-protocol-37dcb2",
         "title": "20. Exercises: MCP (Model Context Protocol)",
         "summary": "Exercise: Answer these 5 questions in your own words. No looking at notes!",
-        "order": 179,
+        "order": 180,
         "series": "MCP (Model Context Protocol)",
         "part": 1,
         "partCount": 1
@@ -13892,7 +13909,7 @@
         "id": "rg-21-build-a-rag-app-with-langchain-b2f51c",
         "title": "21. Projects: Build a RAG App with LangChain",
         "summary": "Projects for Build a RAG App with LangChain.",
-        "order": 180,
+        "order": 181,
         "series": "Build a RAG App with LangChain",
         "part": 1,
         "partCount": 1
@@ -13901,7 +13918,7 @@
         "id": "rg-21-graphrag-bm25-master-course-784914",
         "title": "21. Projects: GraphRAG + BM25 Master Course",
         "summary": "Projects for GraphRAG + BM25 Master Course.",
-        "order": 181,
+        "order": 182,
         "series": "GraphRAG + BM25 Master Course",
         "part": 1,
         "partCount": 1
@@ -13910,259 +13927,340 @@
         "id": "rg-22-master-interview-bank-evaluation-tracing-monitor-72aec3",
         "title": "22. Interview: Master Interview Bank: Evaluation, Tracing & Monitoring (Part 1)",
         "summary": "Interview Q&A for Master Interview Bank: Evaluation, Tracing & Monitoring (part 1 of 2).",
-        "order": 182,
+        "order": 183,
         "series": "Interview Banks",
         "part": 1,
-        "partCount": 13
+        "partCount": 21
       },
       {
         "id": "rg-22-master-interview-bank-evaluation-tracing-monitor-08ced4",
         "title": "22. Interview: Master Interview Bank: Evaluation, Tracing & Monitoring (Part 2)",
         "summary": "Interview Q&A for Master Interview Bank: Evaluation, Tracing & Monitoring (part 2 of 2).",
-        "order": 183,
+        "order": 184,
         "series": "Interview Banks",
         "part": 2,
-        "partCount": 13
+        "partCount": 21
       },
       {
         "id": "rg-22-ai-agents-rag-mcp-interview-checklist-a45193",
         "title": "22. Interview: AI Agents, RAG & MCP Interview Checklist",
         "summary": "Interview Q&A for AI Agents, RAG & MCP Interview Checklist.",
-        "order": 184,
+        "order": 185,
         "series": "Interview Banks",
         "part": 3,
-        "partCount": 13
+        "partCount": 21
       },
       {
         "id": "rg-22-rag-interview-bible-senior-level-part-1-10fd3c",
         "title": "22. Interview: RAG Interview Bible (senior level) (Part 1)",
         "summary": "Interview Q&A for RAG Interview Bible (senior level) — 20 questions with model answers (part 1 of 5).",
-        "order": 185,
+        "order": 186,
         "series": "Interview Banks",
         "part": 4,
-        "partCount": 13
+        "partCount": 21
       },
       {
         "id": "rg-22-rag-interview-bible-senior-level-part-2-0e7eb9",
         "title": "22. Interview: RAG Interview Bible (senior level) (Part 2)",
         "summary": "Interview Q&A for RAG Interview Bible (senior level) — 20 questions with model answers (part 2 of 5).",
-        "order": 186,
+        "order": 187,
         "series": "Interview Banks",
         "part": 5,
-        "partCount": 13
+        "partCount": 21
       },
       {
         "id": "rg-22-rag-interview-bible-senior-level-part-3-0cb789",
         "title": "22. Interview: RAG Interview Bible (senior level) (Part 3)",
         "summary": "Interview Q&A for RAG Interview Bible (senior level) — 20 questions with model answers (part 3 of 5).",
-        "order": 187,
+        "order": 188,
         "series": "Interview Banks",
         "part": 6,
-        "partCount": 13
+        "partCount": 21
       },
       {
         "id": "rg-22-rag-interview-bible-senior-level-part-4-b7e877",
         "title": "22. Interview: RAG Interview Bible (senior level) (Part 4)",
         "summary": "Interview Q&A for RAG Interview Bible (senior level) — 20 questions with model answers (part 4 of 5).",
-        "order": 188,
+        "order": 189,
         "series": "Interview Banks",
         "part": 7,
-        "partCount": 13
+        "partCount": 21
       },
       {
         "id": "rg-22-rag-interview-bible-senior-level-part-5-74e2b8",
         "title": "22. Interview: RAG Interview Bible (senior level) (Part 5)",
         "summary": "Interview Q&A for RAG Interview Bible (senior level) — 20 questions with model answers (part 5 of 5).",
-        "order": 189,
+        "order": 190,
         "series": "Interview Banks",
         "part": 8,
-        "partCount": 13
+        "partCount": 21
       },
       {
         "id": "rg-22-rag-interview-prep-system-part-1-e67aa8",
         "title": "22. Interview: RAG Interview Prep System (Part 1)",
         "summary": "Interview Q&A for RAG Interview Prep System — 5 questions with model answers (part 1 of 4).",
-        "order": 190,
+        "order": 191,
         "series": "Interview Banks",
         "part": 9,
-        "partCount": 13
+        "partCount": 21
       },
       {
         "id": "rg-22-rag-interview-prep-system-part-2-678bff",
         "title": "22. Interview: RAG Interview Prep System (Part 2)",
         "summary": "Interview Q&A for RAG Interview Prep System — 5 questions with model answers (part 2 of 4).",
-        "order": 191,
+        "order": 192,
         "series": "Interview Banks",
         "part": 10,
-        "partCount": 13
+        "partCount": 21
       },
       {
         "id": "rg-22-rag-interview-prep-system-part-3-b0d96f",
         "title": "22. Interview: RAG Interview Prep System (Part 3)",
         "summary": "Interview Q&A for RAG Interview Prep System — 5 questions with model answers (part 3 of 4).",
-        "order": 192,
+        "order": 193,
         "series": "Interview Banks",
         "part": 11,
-        "partCount": 13
+        "partCount": 21
       },
       {
         "id": "rg-22-rag-interview-prep-system-part-4-c94eca",
         "title": "22. Interview: RAG Interview Prep System (Part 4)",
         "summary": "Interview Q&A for RAG Interview Prep System — 5 questions with model answers (part 4 of 4).",
-        "order": 193,
+        "order": 194,
         "series": "Interview Banks",
         "part": 12,
-        "partCount": 13
+        "partCount": 21
       },
       {
         "id": "rg-22-graphrag-bm25-coding-interview-3ab155",
         "title": "22. Interview: GraphRAG & BM25 Coding Interview",
         "summary": "Interview Q&A for GraphRAG & BM25 Coding Interview.",
-        "order": 194,
+        "order": 195,
         "series": "Interview Banks",
         "part": 13,
-        "partCount": 13
+        "partCount": 21
+      },
+      {
+        "id": "rg-22-cloud-deployment-production-rag-scenarios-part-1-036385",
+        "title": "22. Interview: Cloud, Deployment & Production RAG Scenarios (Part 1)",
+        "summary": "Interview Q&A for Cloud, Deployment & Production RAG Scenarios — 30 questions with model answers (part 1 of 2).",
+        "order": 196,
+        "series": "Interview Banks",
+        "part": 14,
+        "partCount": 21
+      },
+      {
+        "id": "rg-22-cloud-deployment-production-rag-scenarios-part-2-aef2d5",
+        "title": "22. Interview: Cloud, Deployment & Production RAG Scenarios (Part 2)",
+        "summary": "Interview Q&A for Cloud, Deployment & Production RAG Scenarios — 20 questions with model answers (part 2 of 2).",
+        "order": 197,
+        "series": "Interview Banks",
+        "part": 15,
+        "partCount": 21
+      },
+      {
+        "id": "rg-22-ml-agentic-ai-llm-scenarios-part-1-953fc9",
+        "title": "22. Interview: ML, Agentic AI & LLM Scenarios (Part 1)",
+        "summary": "Interview Q&A for ML, Agentic AI & LLM Scenarios — 30 questions with model answers (part 1 of 2).",
+        "order": 198,
+        "series": "Interview Banks",
+        "part": 16,
+        "partCount": 21
+      },
+      {
+        "id": "rg-22-ml-agentic-ai-llm-scenarios-part-2-ce8407",
+        "title": "22. Interview: ML, Agentic AI & LLM Scenarios (Part 2)",
+        "summary": "Interview Q&A for ML, Agentic AI & LLM Scenarios — 20 questions with model answers (part 2 of 2).",
+        "order": 199,
+        "series": "Interview Banks",
+        "part": 17,
+        "partCount": 21
+      },
+      {
+        "id": "rg-22-senior-rag-system-design-interview-bank-part-1-p-554a73",
+        "title": "22. Interview: Senior RAG & System Design Interview Bank (Part 1) (Part 1)",
+        "summary": "Interview Q&A for Senior RAG & System Design Interview Bank (Part 1) — 27 questions with model answers (part 1 of 2).",
+        "order": 200,
+        "series": "Interview Banks",
+        "part": 18,
+        "partCount": 21
+      },
+      {
+        "id": "rg-22-senior-rag-system-design-interview-bank-part-1-p-d53500",
+        "title": "22. Interview: Senior RAG & System Design Interview Bank (Part 1) (Part 2)",
+        "summary": "Interview Q&A for Senior RAG & System Design Interview Bank (Part 1) — 23 questions with model answers (part 2 of 2).",
+        "order": 201,
+        "series": "Interview Banks",
+        "part": 19,
+        "partCount": 21
+      },
+      {
+        "id": "rg-22-senior-system-design-rag-scenarios-part-2-part-1-22a3fc",
+        "title": "22. Interview: Senior System Design & RAG Scenarios (Part 2) (Part 1)",
+        "summary": "Interview Q&A for Senior System Design & RAG Scenarios (Part 2) — 32 questions with model answers (part 1 of 2).",
+        "order": 202,
+        "series": "Interview Banks",
+        "part": 20,
+        "partCount": 21
+      },
+      {
+        "id": "rg-22-senior-system-design-rag-scenarios-part-2-part-2-36dd7b",
+        "title": "22. Interview: Senior System Design & RAG Scenarios (Part 2) (Part 2)",
+        "summary": "Interview Q&A for Senior System Design & RAG Scenarios (Part 2) — 18 questions with model answers (part 2 of 2).",
+        "order": 203,
+        "series": "Interview Banks",
+        "part": 21,
+        "partCount": 21
       },
       {
         "id": "rg-22-rag-core-course-526faa",
         "title": "22. Interview: RAG Core Course",
         "summary": "Interview Q&A for RAG Core Course — 32 questions with model answers.",
-        "order": 195,
+        "order": 204,
         "series": "RAG Core Course",
         "part": 1,
-        "partCount": 15
+        "partCount": 16
       },
       {
         "id": "rg-22-rag-core-course-9990a3",
         "title": "22. Interview: RAG Core Course",
         "summary": "Interview Q&A for RAG Core Course — 7 questions with model answers.",
-        "order": 196,
+        "order": 205,
         "series": "RAG Core Course",
         "part": 2,
-        "partCount": 15
+        "partCount": 16
       },
       {
         "id": "rg-22-rag-core-course-1837d9",
         "title": "22. Interview: RAG Core Course",
         "summary": "Interview Q&A for RAG Core Course — 5 questions with model answers.",
-        "order": 197,
+        "order": 206,
         "series": "RAG Core Course",
         "part": 3,
-        "partCount": 15
+        "partCount": 16
       },
       {
         "id": "rg-22-rag-core-course-bb8830",
         "title": "22. Interview: RAG Core Course",
         "summary": "Interview Q&A for RAG Core Course — 7 questions with model answers.",
-        "order": 198,
+        "order": 207,
         "series": "RAG Core Course",
         "part": 4,
-        "partCount": 15
+        "partCount": 16
       },
       {
         "id": "rg-22-rag-core-course-f81714",
         "title": "22. Interview: RAG Core Course",
         "summary": "Interview Q&A for RAG Core Course — 11 questions with model answers.",
-        "order": 199,
+        "order": 208,
         "series": "RAG Core Course",
         "part": 5,
-        "partCount": 15
+        "partCount": 16
       },
       {
         "id": "rg-22-rag-core-course-b0a032",
         "title": "22. Interview: RAG Core Course",
         "summary": "Interview Q&A for RAG Core Course — 10 questions with model answers.",
-        "order": 200,
+        "order": 209,
         "series": "RAG Core Course",
         "part": 6,
-        "partCount": 15
+        "partCount": 16
       },
       {
         "id": "rg-22-rag-core-course-fd1d08",
         "title": "22. Interview: RAG Core Course",
         "summary": "Interview Q&A for RAG Core Course — 10 questions with model answers.",
-        "order": 201,
+        "order": 210,
         "series": "RAG Core Course",
         "part": 7,
-        "partCount": 15
+        "partCount": 16
       },
       {
         "id": "rg-22-rag-core-course-b4cdf6",
         "title": "22. Interview: RAG Core Course",
         "summary": "Interview Q&A for RAG Core Course — 10 questions with model answers.",
-        "order": 202,
+        "order": 211,
         "series": "RAG Core Course",
         "part": 8,
-        "partCount": 15
+        "partCount": 16
       },
       {
         "id": "rg-22-rag-core-course-415104",
         "title": "22. Interview: RAG Core Course",
         "summary": "Interview Q&A for RAG Core Course — 10 questions with model answers.",
-        "order": 203,
+        "order": 212,
         "series": "RAG Core Course",
         "part": 9,
-        "partCount": 15
+        "partCount": 16
       },
       {
         "id": "rg-22-rag-core-course-part-1-0cdf6a",
         "title": "22. Interview: RAG Core Course (Part 1)",
         "summary": "Interview Q&A for RAG Core Course — 37 questions with model answers (part 1 of 2).",
-        "order": 204,
+        "order": 213,
         "series": "RAG Core Course",
         "part": 10,
-        "partCount": 15
+        "partCount": 16
       },
       {
         "id": "rg-22-rag-core-course-part-2-8a43c0",
         "title": "22. Interview: RAG Core Course (Part 2)",
         "summary": "Interview Q&A for RAG Core Course — 37 questions with model answers (part 2 of 2).",
-        "order": 205,
+        "order": 214,
         "series": "RAG Core Course",
         "part": 11,
-        "partCount": 15
+        "partCount": 16
       },
       {
         "id": "rg-22-evaluation-metrics-9946db",
         "title": "22. Interview: Evaluation & Metrics",
         "summary": "Interview Q&A for Evaluation & Metrics — 9 questions with model answers.",
-        "order": 206,
+        "order": 215,
         "series": "RAG Core Course",
         "part": 12,
-        "partCount": 15
+        "partCount": 16
       },
       {
         "id": "rg-22-rag-failure-modes-debugging-41a45d",
         "title": "22. Interview: RAG Failure Modes & Debugging",
         "summary": "Interview Q&A for RAG Failure Modes & Debugging — 10 questions with model answers.",
-        "order": 207,
+        "order": 216,
         "series": "RAG Core Course",
         "part": 13,
-        "partCount": 15
+        "partCount": 16
       },
       {
         "id": "rg-22-security-governance-7bda98",
         "title": "22. Interview: Security & Governance",
         "summary": "Interview Q&A for Security & Governance — 10 questions with model answers.",
-        "order": 208,
+        "order": 217,
         "series": "RAG Core Course",
         "part": 14,
-        "partCount": 15
+        "partCount": 16
       },
       {
         "id": "rg-22-rag-core-course-6b0819",
         "title": "22. Interview: RAG Core Course",
         "summary": "Interview Q&A for RAG Core Course — 8 questions with model answers.",
-        "order": 209,
+        "order": 218,
         "series": "RAG Core Course",
         "part": 15,
-        "partCount": 15
+        "partCount": 16
+      },
+      {
+        "id": "rg-22-performance-scalability-dac4dd",
+        "title": "22. Interview: Performance & Scalability",
+        "summary": "Interview Q&A for Performance & Scalability — 10 questions with model answers.",
+        "order": 219,
+        "series": "RAG Core Course",
+        "part": 16,
+        "partCount": 16
       },
       {
         "id": "rg-22-llm-evaluation-metrics-methods-and-llm-as-a-judg-c7a410",
         "title": "22. Interview: LLM Evaluation: Metrics, Methods, and LLM-as-a-Judge",
         "summary": "Interview Q&A for LLM Evaluation: Metrics, Methods, and LLM-as-a-Judge.",
-        "order": 210,
+        "order": 220,
         "series": "AI Evaluation & Observability",
         "part": 1,
         "partCount": 10
@@ -14171,7 +14269,7 @@
         "id": "rg-22-rag-evaluation-retrieval-generation-and-end-to-e-83e279",
         "title": "22. Interview: RAG Evaluation: Retrieval, Generation, and End-to-End Metrics",
         "summary": "Interview Q&A for RAG Evaluation: Retrieval, Generation, and End-to-End Metrics — 10 questions with model answers.",
-        "order": 211,
+        "order": 221,
         "series": "AI Evaluation & Observability",
         "part": 2,
         "partCount": 10
@@ -14180,7 +14278,7 @@
         "id": "rg-22-advanced-rag-graph-rag-agentic-rag-self-rag-corr-e8315c",
         "title": "22. Interview: Advanced RAG: Graph RAG, Agentic RAG, Self-RAG & Corrective RAG Evaluation",
         "summary": "Interview Q&A for Advanced RAG: Graph RAG, Agentic RAG, Self-RAG & Corrective RAG Evaluation — 10 questions with model answers.",
-        "order": 212,
+        "order": 222,
         "series": "AI Evaluation & Observability",
         "part": 3,
         "partCount": 10
@@ -14189,7 +14287,7 @@
         "id": "rg-22-ai-agent-evaluation-tasks-tools-and-trajectories-153f78",
         "title": "22. Interview: AI Agent Evaluation: Tasks, Tools, and Trajectories",
         "summary": "Interview Q&A for AI Agent Evaluation: Tasks, Tools, and Trajectories.",
-        "order": 213,
+        "order": 223,
         "series": "AI Evaluation & Observability",
         "part": 4,
         "partCount": 10
@@ -14198,7 +14296,7 @@
         "id": "rg-22-multi-agent-system-evaluation-coordination-commu-375b74",
         "title": "22. Interview: Multi-Agent System Evaluation: Coordination, Communication, and Emergent Behavior",
         "summary": "Interview Q&A for Multi-Agent System Evaluation: Coordination, Communication, and Emergent Behavior — 10 questions with model answers.",
-        "order": 214,
+        "order": 224,
         "series": "AI Evaluation & Observability",
         "part": 5,
         "partCount": 10
@@ -14207,7 +14305,7 @@
         "id": "rg-22-agentic-ai-evaluation-autonomy-safety-and-long-h-4a56b6",
         "title": "22. Interview: Agentic AI Evaluation: Autonomy, Safety, and Long-Horizon Tasks",
         "summary": "Interview Q&A for Agentic AI Evaluation: Autonomy, Safety, and Long-Horizon Tasks.",
-        "order": 215,
+        "order": 225,
         "series": "AI Evaluation & Observability",
         "part": 6,
         "partCount": 10
@@ -14216,7 +14314,7 @@
         "id": "rg-22-mcp-tool-calling-concepts-implementation-and-eva-d239a4",
         "title": "22. Interview: MCP & Tool Calling: Concepts, Implementation, and Evaluation",
         "summary": "Interview Q&A for MCP & Tool Calling: Concepts, Implementation, and Evaluation.",
-        "order": 216,
+        "order": 226,
         "series": "AI Evaluation & Observability",
         "part": 7,
         "partCount": 10
@@ -14225,7 +14323,7 @@
         "id": "rg-22-tracing-spans-traces-and-observability-for-ai-sy-a2558b",
         "title": "22. Interview: Tracing: Spans, Traces, and Observability for AI Systems",
         "summary": "Interview Q&A for Tracing: Spans, Traces, and Observability for AI Systems — 10 questions with model answers.",
-        "order": 217,
+        "order": 227,
         "series": "AI Evaluation & Observability",
         "part": 8,
         "partCount": 10
@@ -14234,7 +14332,7 @@
         "id": "rg-22-production-monitoring-drift-latency-cost-and-ale-a83ed3",
         "title": "22. Interview: Production Monitoring: Drift, Latency, Cost, and Alerts for AI Systems",
         "summary": "Interview Q&A for Production Monitoring: Drift, Latency, Cost, and Alerts for AI Systems — 10 questions with model answers.",
-        "order": 218,
+        "order": 228,
         "series": "AI Evaluation & Observability",
         "part": 9,
         "partCount": 10
@@ -14243,7 +14341,7 @@
         "id": "rg-22-golden-datasets-the-foundation-of-trustworthy-ai-335d18",
         "title": "22. Interview: Golden Datasets: The Foundation of Trustworthy AI Evaluation",
         "summary": "Interview Q&A for Golden Datasets: The Foundation of Trustworthy AI Evaluation — 10 questions with model answers.",
-        "order": 219,
+        "order": 229,
         "series": "AI Evaluation & Observability",
         "part": 10,
         "partCount": 10
@@ -14252,7 +14350,7 @@
         "id": "rg-22-bm25-sparse-retrieval-2480ae",
         "title": "22. Interview: BM25 & Sparse Retrieval",
         "summary": "Interview Q&A for BM25 & Sparse Retrieval — 57 questions with model answers.",
-        "order": 220,
+        "order": 230,
         "series": "BM25 & Sparse Retrieval",
         "part": 1,
         "partCount": 1
@@ -14261,7 +14359,7 @@
         "id": "rg-22-graph-rag-foundations-e7e57b",
         "title": "22. Interview: Graph RAG Foundations",
         "summary": "Interview Q&A for Graph RAG Foundations — 10 questions with model answers.",
-        "order": 221,
+        "order": 231,
         "series": "GraphRAG Course",
         "part": 1,
         "partCount": 14
@@ -14270,7 +14368,7 @@
         "id": "rg-22-knowledge-graph-construction-1af63c",
         "title": "22. Interview: Knowledge Graph Construction",
         "summary": "Interview Q&A for Knowledge Graph Construction — 10 questions with model answers.",
-        "order": 222,
+        "order": 232,
         "series": "GraphRAG Course",
         "part": 2,
         "partCount": 14
@@ -14279,7 +14377,7 @@
         "id": "rg-22-graph-data-structures-for-rag-9552bf",
         "title": "22. Interview: Graph Data Structures for RAG",
         "summary": "Interview Q&A for Graph Data Structures for RAG — 9 questions with model answers.",
-        "order": 223,
+        "order": 233,
         "series": "GraphRAG Course",
         "part": 3,
         "partCount": 14
@@ -14288,7 +14386,7 @@
         "id": "rg-22-graph-databases-for-graph-rag-9de6a4",
         "title": "22. Interview: Graph Databases for Graph RAG",
         "summary": "Interview Q&A for Graph Databases for Graph RAG — 6 questions with model answers.",
-        "order": 224,
+        "order": 234,
         "series": "GraphRAG Course",
         "part": 4,
         "partCount": 14
@@ -14297,7 +14395,7 @@
         "id": "rg-22-community-detection-algorithms-7feb25",
         "title": "22. Interview: Community Detection Algorithms",
         "summary": "Interview Q&A for Community Detection Algorithms — 8 questions with model answers.",
-        "order": 225,
+        "order": 235,
         "series": "GraphRAG Course",
         "part": 5,
         "partCount": 14
@@ -14306,7 +14404,7 @@
         "id": "rg-22-graph-traversal-retrieval-aaeb1e",
         "title": "22. Interview: Graph Traversal & Retrieval",
         "summary": "Interview Q&A for Graph Traversal & Retrieval — 6 questions with model answers.",
-        "order": 226,
+        "order": 236,
         "series": "GraphRAG Course",
         "part": 6,
         "partCount": 14
@@ -14315,7 +14413,7 @@
         "id": "rg-22-hybrid-graph-vector-retrieval-119b79",
         "title": "22. Interview: Hybrid Graph-Vector Retrieval",
         "summary": "Interview Q&A for Hybrid Graph-Vector Retrieval — 6 questions with model answers.",
-        "order": 227,
+        "order": 237,
         "series": "GraphRAG Course",
         "part": 7,
         "partCount": 14
@@ -14324,7 +14422,7 @@
         "id": "rg-22-entity-linking-disambiguation-f09489",
         "title": "22. Interview: Entity Linking & Disambiguation",
         "summary": "Interview Q&A for Entity Linking & Disambiguation — 5 questions with model answers.",
-        "order": 228,
+        "order": 238,
         "series": "GraphRAG Course",
         "part": 8,
         "partCount": 14
@@ -14333,7 +14431,7 @@
         "id": "rg-22-graph-query-languages-a46909",
         "title": "22. Interview: Graph Query Languages",
         "summary": "Interview Q&A for Graph Query Languages — 2 questions with model answers.",
-        "order": 229,
+        "order": 239,
         "series": "GraphRAG Course",
         "part": 9,
         "partCount": 14
@@ -14342,7 +14440,7 @@
         "id": "rg-22-microsoft-graphrag-deep-dive-d9c53c",
         "title": "22. Interview: Microsoft GraphRAG Deep Dive",
         "summary": "Interview Q&A for Microsoft GraphRAG Deep Dive — 1 questions with model answers.",
-        "order": 230,
+        "order": 240,
         "series": "GraphRAG Course",
         "part": 10,
         "partCount": 14
@@ -14351,7 +14449,7 @@
         "id": "rg-22-graph-rag-evaluation-f6aadf",
         "title": "22. Interview: Graph RAG Evaluation",
         "summary": "Interview Q&A for Graph RAG Evaluation — 1 questions with model answers.",
-        "order": 231,
+        "order": 241,
         "series": "GraphRAG Course",
         "part": 11,
         "partCount": 14
@@ -14360,7 +14458,7 @@
         "id": "rg-22-failure-modes-debugging-6a16c4",
         "title": "22. Interview: Failure Modes & Debugging",
         "summary": "Interview Q&A for Failure Modes & Debugging — 1 questions with model answers.",
-        "order": 232,
+        "order": 242,
         "series": "GraphRAG Course",
         "part": 12,
         "partCount": 14
@@ -14369,7 +14467,7 @@
         "id": "rg-22-scalability-performance-8f55e9",
         "title": "22. Interview: Scalability & Performance",
         "summary": "Interview Q&A for Scalability & Performance — 1 questions with model answers.",
-        "order": 233,
+        "order": 243,
         "series": "GraphRAG Course",
         "part": 13,
         "partCount": 14
@@ -14378,7 +14476,7 @@
         "id": "rg-22-infrastructure-tools-0c505b",
         "title": "22. Interview: Infrastructure & Tools",
         "summary": "Interview Q&A for Infrastructure & Tools — 1 questions with model answers.",
-        "order": 234,
+        "order": 244,
         "series": "GraphRAG Course",
         "part": 14,
         "partCount": 14
@@ -14387,7 +14485,7 @@
         "id": "rg-22-bm25-fundamentals-edc55a",
         "title": "22. Interview: BM25 Fundamentals",
         "summary": "Interview Q&A for BM25 Fundamentals — 6 questions with model answers.",
-        "order": 235,
+        "order": 245,
         "series": "GraphRAG + BM25 Interview Guide",
         "part": 1,
         "partCount": 9
@@ -14396,7 +14494,7 @@
         "id": "rg-22-hybrid-search-ee5426",
         "title": "22. Interview: Hybrid Search",
         "summary": "Interview Q&A for Hybrid Search — 7 questions with model answers.",
-        "order": 236,
+        "order": 246,
         "series": "GraphRAG + BM25 Interview Guide",
         "part": 2,
         "partCount": 9
@@ -14405,7 +14503,7 @@
         "id": "rg-22-graphrag-fundamentals-40af6a",
         "title": "22. Interview: GraphRAG Fundamentals",
         "summary": "Interview Q&A for GraphRAG Fundamentals — 5 questions with model answers.",
-        "order": 237,
+        "order": 247,
         "series": "GraphRAG + BM25 Interview Guide",
         "part": 3,
         "partCount": 9
@@ -14414,7 +14512,7 @@
         "id": "rg-22-knowledge-graphs-bc54a5",
         "title": "22. Interview: Knowledge Graphs",
         "summary": "Interview Q&A for Knowledge Graphs — 5 questions with model answers.",
-        "order": 238,
+        "order": 248,
         "series": "GraphRAG + BM25 Interview Guide",
         "part": 4,
         "partCount": 9
@@ -14423,7 +14521,7 @@
         "id": "rg-22-graphrag-pipeline-b93214",
         "title": "22. Interview: GraphRAG Pipeline",
         "summary": "Interview Q&A for GraphRAG Pipeline — 5 questions with model answers.",
-        "order": 239,
+        "order": 249,
         "series": "GraphRAG + BM25 Interview Guide",
         "part": 5,
         "partCount": 9
@@ -14432,7 +14530,7 @@
         "id": "rg-22-graphrag-vs-normal-rag-555980",
         "title": "22. Interview: GraphRAG vs Normal RAG",
         "summary": "Interview Q&A for GraphRAG vs Normal RAG — 5 questions with model answers.",
-        "order": 240,
+        "order": 250,
         "series": "GraphRAG + BM25 Interview Guide",
         "part": 6,
         "partCount": 9
@@ -14441,7 +14539,7 @@
         "id": "rg-22-graphrag-evaluation-26d6f8",
         "title": "22. Interview: GraphRAG Evaluation",
         "summary": "Interview Q&A for GraphRAG Evaluation — 5 questions with model answers.",
-        "order": 241,
+        "order": 251,
         "series": "GraphRAG + BM25 Interview Guide",
         "part": 7,
         "partCount": 9
@@ -14450,7 +14548,7 @@
         "id": "rg-22-production-graphrag-systems-8b9637",
         "title": "22. Interview: Production GraphRAG Systems",
         "summary": "Interview Q&A for Production GraphRAG Systems — 5 questions with model answers.",
-        "order": 242,
+        "order": 252,
         "series": "GraphRAG + BM25 Interview Guide",
         "part": 8,
         "partCount": 9
@@ -14459,7 +14557,7 @@
         "id": "rg-22-security-in-graphrag-systems-a1953d",
         "title": "22. Interview: Security in GraphRAG Systems",
         "summary": "Interview Q&A for Security in GraphRAG Systems — 5 questions with model answers.",
-        "order": 243,
+        "order": 253,
         "series": "GraphRAG + BM25 Interview Guide",
         "part": 9,
         "partCount": 9
@@ -14468,7 +14566,7 @@
         "id": "rg-22-complete-mcp-model-context-protocol-masterclass--a05a46",
         "title": "22. Interview: Complete MCP (Model Context Protocol) Masterclass 2026",
         "summary": "Interview Q&A for Complete MCP (Model Context Protocol) Masterclass 2026 — 11 questions with model answers.",
-        "order": 244,
+        "order": 254,
         "series": "Complete MCP (Model Context Protocol) Masterclass 2026",
         "part": 1,
         "partCount": 1
@@ -14477,7 +14575,7 @@
         "id": "rg-22-rag-evaluation-techniques-5a0649",
         "title": "22. Interview: RAG Evaluation Techniques",
         "summary": "Interview Q&A for RAG Evaluation Techniques.",
-        "order": 245,
+        "order": 255,
         "series": "RAG Evaluation Techniques",
         "part": 1,
         "partCount": 1
@@ -14486,7 +14584,7 @@
         "id": "rg-22-complete-rag-indexing-techniques-master-guide-20-17ced8",
         "title": "22. Interview: Complete RAG Indexing Techniques — Master Guide 2026",
         "summary": "Interview Q&A for Complete RAG Indexing Techniques — Master Guide 2026 — 1 questions with model answers.",
-        "order": 246,
+        "order": 256,
         "series": "RAG Indexing Techniques",
         "part": 1,
         "partCount": 1
@@ -14495,8 +14593,1549 @@
         "id": "rg-22-rag-search-filtering-techniques-7889e4",
         "title": "22. Interview: RAG Search & Filtering Techniques",
         "summary": "Interview Q&A for RAG Search & Filtering Techniques — 28 questions with model answers.",
-        "order": 247,
+        "order": 257,
         "series": "RAG Search & Filtering Techniques",
+        "part": 1,
+        "partCount": 1
+      }
+    ],
+    "veeraproject": [
+      {
+        "id": "vp-01-hour-full-stack-ai-engineering-roadmap-capst-e22e19",
+        "title": "01. JavaScript Core & Objects: -Hour Full-Stack AI Engineering Roadmap & Capstone Overview & Phase 4: FastAPI — 4 hours",
+        "summary": "3-Day AI Engineer Interview Preparation – Intensive Masterclass Your interview requires a combination of Generative AI, Agentic AI, backend engineering, TypeScript, test automation, and production-grade system design.…",
+        "order": 1,
+        "series": "00. Roadmap & Platform Overview",
+        "part": 1,
+        "partCount": 3
+      },
+      {
+        "id": "vp-01-phase-5-langchain-llm-application-developmen-cf9531",
+        "title": "01. JavaScript Core & Objects: Phase 5: LangChain, LLM application development and RAG — 4 hours & Three-day execution sche",
+        "summary": "Concepts covered: LLM parameters, context windows, token budgets, prompt templates, few-shot prompting, structured outputs, JSON Schema, Pydantic validation, function calling, tool execution, LCEL, runnables, chains,…",
+        "order": 2,
+        "series": "00. Roadmap & Platform Overview",
+        "part": 2,
+        "partCount": 3
+      },
+      {
+        "id": "vp-01-types-of-interview-questions-we-will-prepare-f57e23",
+        "title": "01. JavaScript Core & Objects: Types of interview questions we will prepare & Start learning",
+        "summary": "For each module, we will target three practical examples, five coding exercises, conceptual questions, scenario-based questions and production-grade interview questions with explanations.",
+        "order": 3,
+        "series": "00. Roadmap & Platform Overview",
+        "part": 3,
+        "partCount": 3
+      },
+      {
+        "id": "vp-01-runtime-variables-var-let-const-types-coerci-f31483",
+        "title": "01. JavaScript Core & Objects: Runtime, Variables (var/let/const), Types, Coercion & Array Pipelines",
+        "summary": "The Restaurant Kitchen Analogy Think of the V8 JavaScript engine as the head chef who only knows how to execute JavaScript calculations and manage memory (Call Stack + Heap). In the Browser, the chef works inside a…",
+        "order": 4,
+        "series": "JS-1: JavaScript Fundamentals",
+        "part": 1,
+        "partCount": 3
+      },
+      {
+        "id": "vp-01-js-1-javascript-fundamentals-part-2-destruct-58e3b8",
+        "title": "01. JavaScript Core & Objects: JS-1: JavaScript Fundamentals — Part 2 & Destructuring, spread and rest operators",
+        "summary": "JS-1: JavaScript Fundamentals — Part 2 We have completed JavaScript runtime, variables, hoisting, scope, data types, memory management, operators, conditions, loops and array methods. Now we will complete the remaining…",
+        "order": 5,
+        "series": "JS-1: JavaScript Fundamentals",
+        "part": 2,
+        "partCount": 3
+      },
+      {
+        "id": "vp-01-functions-and-callbacks-next-module-js-2-asy-18cba5",
+        "title": "01. JavaScript Core & Objects: Functions and callbacks & Next module: JS-2 — Asynchronous JavaScript",
+        "summary": "This is arguably the most important foundation before learning asynchronous JavaScript. 9.1 Storytelling: Building an AI agent factory Imagine your application performs four operations: Retrieve relevant documents.…",
+        "order": 6,
+        "series": "JS-1: JavaScript Fundamentals",
+        "part": 3,
+        "partCount": 3
+      },
+      {
+        "id": "vp-02-js-2-asynchronous-javascript-interview-maste-02a44a",
+        "title": "02. Async JS & Event Loop: JS-2: Asynchronous JavaScript — Interview Masterclass & Promises — The foundation of async J",
+        "summary": "JS-2: Asynchronous JavaScript — Interview Masterclass (Duration: 2 hours) (Critical interview topic) (Python asyncio comparisons) Asynchronous programming is one of the most important JavaScript concepts for your…",
+        "order": 7,
+        "series": "JS-2: Asynchronous JavaScript",
+        "part": 1,
+        "partCount": 7
+      },
+      {
+        "id": "vp-02-js-2-revision-js-2-asynchronous-javascript-a-8a7936",
+        "title": "02. Async JS & Event Loop: JS-2 Revision: JS-2: Asynchronous JavaScript — Advanced Revision and Practical Labs & Promis",
+        "summary": "JS-2: Asynchronous JavaScript — Advanced Revision and Practical Labs We have already covered the complete JS-2 theoretical syllabus in the previous lesson. Since your interview is approaching, we will reinforce those…",
+        "order": 8,
+        "series": "JS-2: Asynchronous JavaScript",
+        "part": 2,
+        "partCount": 7
+      },
+      {
+        "id": "vp-02-async-and-await-promise-combinators-multi-ag-0fc201",
+        "title": "02. Async JS & Event Loop: Async and await & Promise combinators — Multi-agent orchestration",
+        "summary": "5.1 Storytelling Imagine reading the instructions for our AI pipeline: Retrieve documents, then generate an answer, then evaluate it and finally return the result. We want our code to read exactly like these…",
+        "order": 9,
+        "series": "JS-2: Asynchronous JavaScript",
+        "part": 3,
+        "partCount": 7
+      },
+      {
+        "id": "vp-02-js-2-revision-fetch-api-and-error-handling-r-f025f5",
+        "title": "02. Async JS & Event Loop: JS-2 Revision: Fetch API and error handling & Race conditions",
+        "summary": "Practical lab: JavaScript client and Python FastAPI JavaScript / TypeScript client HTTP POST + JSON FastAPI endpoint LLM / RAG service Structured JSON response Example 1: FastAPI backend Example 2: JavaScript API client…",
+        "order": 10,
+        "series": "JS-2: Asynchronous JavaScript",
+        "part": 4,
+        "partCount": 7
+      },
+      {
+        "id": "vp-02-fetch-api-and-asynchronous-rest-api-integrat-313201",
+        "title": "02. Async JS & Event Loop: Fetch API and asynchronous REST API integration & Retry mechanisms and exponential backoff",
+        "summary": "7.1 Storytelling Imagine your Python FastAPI backend exposes an endpoint for generating AI answers. Your TypeScript application sends a question to the backend and receives the answer.",
+        "order": 11,
+        "series": "JS-2: Asynchronous JavaScript",
+        "part": 5,
+        "partCount": 7
+      },
+      {
+        "id": "vp-02-js-2-revision-production-grade-asynchronous--001a27",
+        "title": "02. Async JS & Event Loop: JS-2 Revision: Production-grade asynchronous AI system design & TS-1: TypeScript Fundamental",
+        "summary": "Interview problem: Design a multi-agent platform that retrieves source code, generates Playwright tests, executes them and evaluates the results. A strong interview answer should explain the trade-offs, not merely name…",
+        "order": 12,
+        "series": "JS-2: Asynchronous JavaScript",
+        "part": 6,
+        "partCount": 7
+      },
+      {
+        "id": "vp-02-timeouts-deadlines-and-cancellation-next-mod-6548bc",
+        "title": "02. Async JS & Event Loop: Timeouts, deadlines and cancellation & Next module — TS-1: TypeScript fundamentals",
+        "summary": "10.1 Storytelling Imagine a user submits an AI request. Your research agent waits for an external API indefinitely.",
+        "order": 13,
+        "series": "JS-2: Asynchronous JavaScript",
+        "part": 7,
+        "partCount": 7
+      },
+      {
+        "id": "vp-03-why-typescript-compiler-tsc-tsconfig-core-ty-340fc4",
+        "title": "03. TypeScript Core & Functions: Why TypeScript, Compiler (tsc/tsconfig), Core Types, Narrowing & Strict Nulls",
+        "summary": "TypeScript is a Compile-Time Contract Layer JavaScript runs everywhere, but a typo like response.choices[0].mesage only crashes at runtime — maybe 20 minutes into a CI suite or after an LLM call costs money. TypeScript…",
+        "order": 14,
+        "series": "TS-1: TypeScript Fundamentals",
+        "part": 1,
+        "partCount": 3
+      },
+      {
+        "id": "vp-03-ts-1-typescript-fundamentals-part-2-type-saf-95aa01",
+        "title": "03. TypeScript Core & Functions: TS-1: TypeScript Fundamentals — Part 2 & Type-safe error handling",
+        "summary": "TS-1: TypeScript Fundamentals — Part 2 We have already covered the TypeScript compiler, project setup, type inference, primitive types, arrays, tuples, object types, any, unknown, never, void, strict mode, nullability…",
+        "order": 15,
+        "series": "TS-1: TypeScript Fundamentals",
+        "part": 2,
+        "partCount": 3
+      },
+      {
+        "id": "vp-03-typescript-fundamentals-rapid-revision-cheat-0f10af",
+        "title": "03. TypeScript Core & Functions: TypeScript fundamentals — rapid revision cheat sheet & Next module: TypeScript functions",
+        "summary": "Most important concepts for your interview Recommended preparation priorities for your job description, not measured interview probabilities.",
+        "order": 16,
+        "series": "TS-1: TypeScript Fundamentals",
+        "part": 3,
+        "partCount": 3
+      },
+      {
+        "id": "vp-03-ts-2-typescript-functions-interview-mastercl-e08c18",
+        "title": "03. TypeScript Core & Functions: TS-2: TypeScript Functions — Interview Masterclass & Optional, default and rest parameters",
+        "summary": "TS-2: TypeScript Functions — Interview Masterclass (Beginner to advanced) (AI engineering) (Playwright automation) In TS-1, we learned how TypeScript provides static type safety, runtime schema validation, type…",
+        "order": 17,
+        "series": "TS-2: TypeScript Functions",
+        "part": 1,
+        "partCount": 4
+      },
+      {
+        "id": "vp-03-function-overloading-typed-callbacks-6015f2",
+        "title": "03. TypeScript Core & Functions: Function overloading & Typed callbacks",
+        "summary": "This is one of the most frequently discussed TypeScript-specific function concepts. 4.1 Storytelling: One retrieval service, different inputs Imagine an AI document service.",
+        "order": 18,
+        "series": "TS-2: TypeScript Functions",
+        "part": 2,
+        "partCount": 4
+      },
+      {
+        "id": "vp-03-higher-order-functions-closures-and-lexical--b578eb",
+        "title": "03. TypeScript Core & Functions: Higher-order functions & Closures and lexical environments",
+        "summary": "6.1 Storytelling: Adding capabilities without changing business logic Imagine your company has several AI services. Every service needs logging, performance measurement, retry handling and authorization.",
+        "order": 19,
+        "series": "TS-2: TypeScript Functions",
+        "part": 3,
+        "partCount": 4
+      },
+      {
+        "id": "vp-03-typed-asynchronous-callbacks-578495",
+        "title": "03. TypeScript Core & Functions: Typed asynchronous callbacks",
+        "summary": "This is an exceptionally important concept for Playwright, agent orchestration and production-grade TypeScript services. 8.1 Storytelling: The supervisor must wait for its worker Imagine a research agent finishes…",
+        "order": 20,
+        "series": "TS-2: TypeScript Functions",
+        "part": 4,
+        "partCount": 4
+      },
+      {
+        "id": "vp-04-ts-3-interfaces-type-aliases-and-object-cont-ba12cc",
+        "title": "04. TypeScript Types, Generics & OOP: TS-3: Interfaces, Type Aliases and Object Contracts — Interview Masterclass & Union types",
+        "summary": "TS-3: Interfaces, Type Aliases and Object Contracts — Interview Masterclass (Intermediate TypeScript) (AI engineering) (Playwright automation) Until now, we have learned JavaScript, asynchronous programming, TypeScript…",
+        "order": 21,
+        "series": "TS-3: Interfaces & Type Contracts",
+        "part": 1,
+        "partCount": 4
+      },
+      {
+        "id": "vp-04-intersection-types-structural-typing-967beb",
+        "title": "04. TypeScript Types, Generics & OOP: Intersection types & Structural typing",
+        "summary": "5.1 Storytelling: Combining capabilities Imagine a coding agent must possess two capabilities: It must be an authenticated agent with an identifier, and it must have permission to generate code. An intersection combines…",
+        "order": 22,
+        "series": "TS-3: Interfaces & Type Contracts",
+        "part": 2,
+        "partCount": 4
+      },
+      {
+        "id": "vp-04-excess-property-checking-interface-extension-f5ffd5",
+        "title": "04. TypeScript Types, Generics & OOP: Excess property checking & Interface extension and declaration merging",
+        "summary": "10.1 Storytelling: Detecting incorrect configuration keys Imagine your AI application expects this configuration: A developer accidentally writes: The property name is misspelled. TypeScript applies excess property…",
+        "order": 23,
+        "series": "TS-3: Interfaces & Type Contracts",
+        "part": 3,
+        "partCount": 4
+      },
+      {
+        "id": "vp-04-rapid-revision-cheat-sheet-next-module-ts-4--ed585a",
+        "title": "04. TypeScript Types, Generics & OOP: Rapid revision cheat sheet & Next module: TS-4 — Advanced types and generics",
+        "summary": "Interview preparation priorities Recommended study priorities for your AI engineering and Playwright interview, not measured interview probabilities.",
+        "order": 24,
+        "series": "TS-3: Interfaces & Type Contracts",
+        "part": 4,
+        "partCount": 4
+      },
+      {
+        "id": "vp-04-ts-4-advanced-typescript-types-and-generics--a7eb9e",
+        "title": "04. TypeScript Types, Generics & OOP: TS-4: Advanced TypeScript Types and Generics — Interview Masterclass & Generic constraints",
+        "summary": "TS-4: Advanced TypeScript Types and Generics — Interview Masterclass (Intermediate to advanced) (AI engineering) (Playwright automation) Until now, we have covered JavaScript fundamentals, asynchronous programming,…",
+        "order": 25,
+        "series": "TS-4: Generics & Type-Level Programming",
+        "part": 1,
+        "partCount": 5
+      },
+      {
+        "id": "vp-04-keyof-typeof-and-indexed-access-types-return-fb0933",
+        "title": "04. TypeScript Types, Generics & OOP: keyof, typeof and indexed access types & ReturnType, Parameters and Awaited",
+        "summary": "These three concepts work together and form the foundation of many advanced TypeScript utilities. 5.1 Storytelling: A dynamic agent configuration reader Imagine an AI application has this configuration: You want a…",
+        "order": 26,
+        "series": "TS-4: Generics & Type-Level Programming",
+        "part": 2,
+        "partCount": 5
+      },
+      {
+        "id": "vp-04-exclude-extract-and-nonnullable-the-infer-ke-1f08cf",
+        "title": "04. TypeScript Types, Generics & OOP: Exclude, Extract and NonNullable & The infer keyword",
+        "summary": "These utilities operate primarily on unions. 10.1 Storytelling: Selecting permitted workflow states Suppose an AI workflow supports these states: Your retry scheduler should only process specific terminal failures.",
+        "order": 27,
+        "series": "TS-4: Generics & Type-Level Programming",
+        "part": 3,
+        "partCount": 5
+      },
+      {
+        "id": "vp-04-branded-types-simulating-nominal-type-safety-8cfb22",
+        "title": "04. TypeScript Types, Generics & OOP: Branded types — Simulating nominal type safety & Advanced TypeScript rapid revision cheat sh",
+        "summary": "14.1 Storytelling: Preventing cross-tenant identifier mistakes Suppose your enterprise AI application uses these identifiers: These aliases appear to represent different concepts. However: TypeScript accepts this…",
+        "order": 28,
+        "series": "TS-4: Generics & Type-Level Programming",
+        "part": 4,
+        "partCount": 5
+      },
+      {
+        "id": "vp-04-next-module-ts-5-object-oriented-programming-7d746c",
+        "title": "04. TypeScript Types, Generics & OOP: Next module: TS-5 — Object-oriented programming and modular architecture",
+        "summary": "Since you already know Python, we can accelerate OOP concepts and focus on differences that matter in TypeScript. We will cover classes, constructors, access modifiers, getters and setters, inheritance, polymorphism,…",
+        "order": 29,
+        "series": "TS-4: Generics & Type-Level Programming",
+        "part": 5,
+        "partCount": 5
+      },
+      {
+        "id": "vp-04-ts-5-object-oriented-programming-and-modular-ffbc6c",
+        "title": "04. TypeScript Types, Generics & OOP: TS-5: Object-Oriented Programming and Modular Architecture & Getters and setters",
+        "summary": "TS-5: Object-Oriented Programming and Modular Architecture TypeScript Masterclass · AI Engineering · Playwright · Interview Preparation We have now completed the core TypeScript type system, including generics,…",
+        "order": 30,
+        "series": "TS-5: OOP, SOLID & Architecture",
+        "part": 1,
+        "partCount": 4
+      },
+      {
+        "id": "vp-04-inheritance-dependency-injection-0275bf",
+        "title": "04. TypeScript Types, Generics & OOP: Inheritance & Dependency injection",
+        "summary": "5.1 Storytelling: Different agents, shared characteristics Imagine your AI platform has research, coding and testing agents. Every agent has an ID and a name.",
+        "order": 31,
+        "series": "TS-5: OOP, SOLID & Architecture",
+        "part": 2,
+        "partCount": 4
+      },
+      {
+        "id": "vp-04-static-members-playwright-page-object-model--1f1ff9",
+        "title": "04. TypeScript Types, Generics & OOP: Static members & Playwright Page Object Model (POM)",
+        "summary": "10.1 Storytelling: Company-level vs employee-level information Every employee has a personal name. However, all employees may share the same company name.",
+        "order": 32,
+        "series": "TS-5: OOP, SOLID & Architecture",
+        "part": 3,
+        "partCount": 4
+      },
+      {
+        "id": "vp-04-advanced-playwright-architecture-fixtures-an-6dac87",
+        "title": "04. TypeScript Types, Generics & OOP: Advanced Playwright architecture: Fixtures and dependency injection & Next module: TS-6 — Pr",
+        "summary": "Creating page objects manually in every test is acceptable for small projects. In larger test frameworks, custom fixtures can automatically create and inject the required page objects.",
+        "order": 33,
+        "series": "TS-5: OOP, SOLID & Architecture",
+        "part": 4,
+        "partCount": 4
+      },
+      {
+        "id": "vp-05-ts-6-production-grade-typescript-and-intervi-0f7531",
+        "title": "05. Production TypeScript & Resilience: TS-6: Production-Grade TypeScript and Interview Revision & Custom errors and structured erro",
+        "summary": "TS-6: Production-Grade TypeScript and Interview Revision Final TypeScript Module · AI Engineering · Backend Development · Playwright Automation Until now, we have learned how to write TypeScript applications. Today, we…",
+        "order": 34,
+        "series": "TS-6: Production TypeScript & Resilience",
+        "part": 1,
+        "partCount": 8
+      },
+      {
+        "id": "vp-05-ts-6-revision-ts-6-production-grade-typescri-8d285d",
+        "title": "05. Production TypeScript & Resilience: TS-6 Revision: TS-6: Production-Grade TypeScript — Advanced Revision and Practical Labs & Cu",
+        "summary": "TS-6: Production-Grade TypeScript — Advanced Revision and Practical Labs We have already covered the TS-6 concepts in the previous lesson. This time, we will reinforce them through implementation, debugging scenarios,…",
+        "order": 35,
+        "series": "TS-6: Production TypeScript & Resilience",
+        "part": 2,
+        "partCount": 8
+      },
+      {
+        "id": "vp-05-structured-logging-correlation-ids-and-obser-4ba80f",
+        "title": "05. Production TypeScript & Resilience: Structured logging, correlation IDs and observability & Timeouts, deadlines and cancellation",
+        "summary": "5.1 Storytelling: Investigating a failed multi-agent workflow A customer submits a requirement: The request passes through an API service, research agent, vector database, LLM provider, browser worker and evaluation…",
+        "order": 36,
+        "series": "TS-6: Production TypeScript & Resilience",
+        "part": 3,
+        "partCount": 8
+      },
+      {
+        "id": "vp-05-ts-6-revision-logging-correlation-ids-and-di-2ff64c",
+        "title": "05. Production TypeScript & Resilience: TS-6 Revision: Logging, correlation IDs and distributed tracing & Security and LLM structure",
+        "summary": "5.1 Storytelling: Tracking a parcel A parcel travels through warehouses, delivery vehicles and distribution centers. Its tracking number allows you to identify its complete journey.",
+        "order": 37,
+        "series": "TS-6: Production TypeScript & Resilience",
+        "part": 4,
+        "partCount": 8
+      },
+      {
+        "id": "vp-05-circuit-breaker-pattern-unit-testing-integra-16abdd",
+        "title": "05. Production TypeScript & Resilience: Circuit breaker pattern & Unit testing, integration testing and mocking",
+        "summary": "9.1 Storytelling: An electrical safety switch When an electrical circuit repeatedly overloads, a circuit breaker disconnects it to prevent further damage. A software circuit breaker behaves similarly.",
+        "order": 38,
+        "series": "TS-6: Production TypeScript & Resilience",
+        "part": 5,
+        "partCount": 8
+      },
+      {
+        "id": "vp-05-ts-6-revision-unit-testing-and-mocking-next--d5109e",
+        "title": "05. Production TypeScript & Resilience: TS-6 Revision: Unit testing and mocking & Next phase: Playwright Masterclass",
+        "summary": "10.1 Deterministic software vs probabilistic AI Suppose you have an AI-generated test-plan service. There are two distinct questions: Does the software invoke the correct provider and validate the response?",
+        "order": 39,
+        "series": "TS-6: Production TypeScript & Resilience",
+        "part": 6,
+        "partCount": 8
+      },
+      {
+        "id": "vp-05-production-typescript-compiler-configuration-98f7f9",
+        "title": "05. Production TypeScript & Resilience: Production TypeScript compiler configuration & Integrated production lab: Reliable AI servic",
+        "summary": "13.1 Why strict TypeScript matters TypeScript is most valuable when the compiler is configured to detect meaningful mistakes. An application using any everywhere and disabling strict checking gains little protection…",
+        "order": 40,
+        "series": "TS-6: Production TypeScript & Resilience",
+        "part": 7,
+        "partCount": 8
+      },
+      {
+        "id": "vp-05-production-grade-typescript-rapid-revision-c-930189",
+        "title": "05. Production TypeScript & Resilience: Production-grade TypeScript rapid revision cheat sheet & Next phase: Playwright Python and T",
+        "summary": "We will now start our dedicated 12-hour Playwright preparation from absolute zero and progress toward production-grade automation and AI-driven testing. Since you have learned TypeScript and already know Python, we can…",
+        "order": 41,
+        "series": "TS-6: Production TypeScript & Resilience",
+        "part": 8,
+        "partCount": 8
+      },
+      {
+        "id": "vp-06-pw-1-playwright-fundamentals-from-absolute-z-a02fe8",
+        "title": "06. Playwright Basics, Locators & Waiting: PW-1: Playwright Fundamentals from Absolute Zero & What is Playwright?",
+        "summary": "PW-1: Playwright Fundamentals from Absolute Zero Playwright Masterclass · Python + TypeScript · AI Engineering · Interview Preparation We have completed our JavaScript and TypeScript curriculum. Now we will begin the…",
+        "order": 42,
+        "series": "PW-1: Playwright Fundamentals",
+        "part": 1,
+        "partCount": 5
+      },
+      {
+        "id": "vp-06-playwright-vs-selenium-vs-webdriverio-playwr-3300ef",
+        "title": "06. Playwright Basics, Locators & Waiting: Playwright vs Selenium vs WebdriverIO & Playwright installation and project setup",
+        "summary": "You should be able to explain all three frameworks during your interview. 5.1 Selenium is an established browser automation ecosystem with support for multiple programming languages, browser drivers and distributed…",
+        "order": 43,
+        "series": "PW-1: Playwright Fundamentals",
+        "part": 2,
+        "partCount": 5
+      },
+      {
+        "id": "vp-06-python-synchronous-vs-asynchronous-playwrigh-1dcd5d",
+        "title": "06. Playwright Basics, Locators & Waiting: Python synchronous vs asynchronous Playwright APIs & Automation script vs automated test",
+        "summary": "You already learned asynchronous execution in Python and JavaScript. Now apply that knowledge to browser automation.",
+        "order": 44,
+        "series": "PW-1: Playwright Fundamentals",
+        "part": 3,
+        "partCount": 5
+      },
+      {
+        "id": "vp-06-pytest-vs-playwright-test-integrated-practic-86760b",
+        "title": "06. Playwright Basics, Locators & Waiting: pytest vs Playwright Test & Integrated practical lab — Testing a Generative AI FastAPI appli",
+        "summary": "15.1 Comparison 15.2 Python configuration pytest.ini: Install parallel execution support when needed: Run four worker processes: 15.3 TypeScript configuration playwright.config.ts: Install all required browser engines…",
+        "order": 45,
+        "series": "PW-1: Playwright Fundamentals",
+        "part": 4,
+        "partCount": 5
+      },
+      {
+        "id": "vp-06-practical-ai-use-cases-for-playwright-next-m-711987",
+        "title": "06. Playwright Basics, Locators & Waiting: Practical AI use cases for Playwright & Next module: PW-2 — DOM, Locators, Selectors and Ele",
+        "summary": "20.1 RAG application testing Playwright can verify that a RAG application allows users to upload documents, submit questions, receive answers and open citations. A browser test can check whether citation links are…",
+        "order": 46,
+        "series": "PW-1: Playwright Fundamentals",
+        "part": 5,
+        "partCount": 5
+      },
+      {
+        "id": "vp-06-pw-2-playwright-dom-locators-selectors-and-e-711450",
+        "title": "06. Playwright Basics, Locators & Waiting: PW-2: Playwright DOM, Locators, Selectors and Element Interactions & XPath selectors",
+        "summary": "PW-2: Playwright DOM, Locators, Selectors and Element Interactions Playwright Masterclass · Python + TypeScript · Generative AI · Interview Preparation In PW-1, we learned how Playwright launches browsers, creates…",
+        "order": 47,
+        "series": "PW-2: DOM, Locators & Interactions",
+        "part": 1,
+        "partCount": 5
+      },
+      {
+        "id": "vp-06-playwright-locators-getbyplaceholder-getbyte-6f38fb",
+        "title": "06. Playwright Basics, Locators & Waiting: Playwright locators & getByPlaceholder(), getByTestId(), getByAltText() and getByTitle()",
+        "summary": "5.1 Storytelling: A permanent address versus a live search instruction Imagine you need to contact the current manager of a department. One approach is to save the current manager's phone number.",
+        "order": 48,
+        "series": "PW-2: DOM, Locators & Interactions",
+        "part": 2,
+        "partCount": 5
+      },
+      {
+        "id": "vp-06-locator-chaining-and-filtering-text-inputs-f-22a012",
+        "title": "06. Playwright Basics, Locators & Waiting: Locator chaining and filtering & Text inputs: fill(), clear(), press() and pressSequentially",
+        "summary": "This is one of the most important interview topics in PW-2. 10.1 Storytelling: Finding the correct document in a knowledge base Imagine a RAG knowledge base displaying multiple documents.",
+        "order": 49,
+        "series": "PW-2: DOM, Locators & Interactions",
+        "part": 3,
+        "partCount": 5
+      },
+      {
+        "id": "vp-06-keyboard-operations-reading-element-informat-3cae32",
+        "title": "06. Playwright Basics, Locators & Waiting: Keyboard operations & Reading element information",
+        "summary": "Use a locator-specific keyboard operation when the target element is known. Use page-level keyboard operations when interacting with the currently focused control or simulating broader keyboard sequences.",
+        "order": 50,
+        "series": "PW-2: DOM, Locators & Interactions",
+        "part": 4,
+        "partCount": 5
+      },
+      {
+        "id": "vp-06-dynamic-elements-and-modern-frontend-applica-e2b649",
+        "title": "06. Playwright Basics, Locators & Waiting: Dynamic elements and modern frontend applications & Next module: PW-3 — Auto-waiting, assert",
+        "summary": "20.1 Storytelling: A shop whose products arrive gradually Imagine entering a shop while employees are still arranging products. If you immediately count the products, you may get an incomplete result.",
+        "order": 51,
+        "series": "PW-2: DOM, Locators & Interactions",
+        "part": 5,
+        "partCount": 5
+      },
+      {
+        "id": "vp-06-pw-3-playwright-auto-waiting-assertions-and--f7fc31",
+        "title": "06. Playwright Basics, Locators & Waiting: PW-3: Playwright Auto-Waiting, Assertions and Synchronization & Web-first assertions",
+        "summary": "PW-3: Playwright Auto-Waiting, Assertions and Synchronization Playwright Masterclass · Python + TypeScript · Production Automation · Generative AI · Interview Preparation In PW-2, we learned how to identify elements and…",
+        "order": 52,
+        "series": "PW-3: Auto-Waiting & Assertions",
+        "part": 1,
+        "partCount": 4
+      },
+      {
+        "id": "vp-06-hard-assertions-vs-soft-assertions-waitforre-cd891e",
+        "title": "06. Playwright Basics, Locators & Waiting: Hard assertions vs soft assertions & waitForResponse() and waitForRequest()",
+        "summary": "5.1 Storytelling: Checking a car before delivery Suppose you are inspecting a new car. If the brakes do not work, you should stop the driving test immediately.",
+        "order": 53,
+        "series": "PW-3: Auto-Waiting & Assertions",
+        "part": 2,
+        "partCount": 4
+      },
+      {
+        "id": "vp-06-race-conditions-synchronization-with-streami-d8b642",
+        "title": "06. Playwright Basics, Locators & Waiting: Race conditions & Synchronization with streaming LLM responses",
+        "summary": "10.1 Storytelling: Registering for a notification after it was sent Suppose a railway station sends you a notification when your train arrives. If you register for that notification only after the train has arrived, you…",
+        "order": 54,
+        "series": "PW-3: Auto-Waiting & Assertions",
+        "part": 3,
+        "partCount": 4
+      },
+      {
+        "id": "vp-06-integrated-practical-lab-testing-a-streaming-95798d",
+        "title": "06. Playwright Basics, Locators & Waiting: Integrated practical lab — Testing a streaming AI FastAPI application & Next module: PW-4 — ",
+        "summary": "Now we will build a small streaming chatbot and test its synchronization behavior using both Python and TypeScript. This lab demonstrates delayed responses, network events, dynamic rendering, terminal-state assertions…",
+        "order": 55,
+        "series": "PW-3: Auto-Waiting & Assertions",
+        "part": 4,
+        "partCount": 4
+      },
+      {
+        "id": "vp-07-pw-4-advanced-playwright-browser-operations--f9a553",
+        "title": "07. Playwright Ops & Test Architecture: PW-4: Advanced Playwright Browser Operations & Iframes and nested frames",
+        "summary": "PW-4: Advanced Playwright Browser Operations Playwright Masterclass · Python + TypeScript · AI Engineering · Production Automation Until now, we have learned browser architecture, locators, element interactions,…",
+        "order": 56,
+        "series": "PW-4: Advanced Browser Operations",
+        "part": 1,
+        "partCount": 5
+      },
+      {
+        "id": "vp-07-javascript-dialogs-alerts-confirms-and-promp-985fe7",
+        "title": "07. Playwright Ops & Test Architecture: JavaScript dialogs: Alerts, confirms and prompts & Screenshots and video recordings",
+        "summary": "5.1 Storytelling: Deleting a document from a knowledge base Imagine that an administrator clicks Delete on a document in a RAG application. The browser displays a confirmation: The administrator must accept or cancel…",
+        "order": 57,
+        "series": "PW-4: Advanced Browser Operations",
+        "part": 2,
+        "partCount": 5
+      },
+      {
+        "id": "vp-07-cookies-localstorage-and-sessionstorage-brow-1db3c7",
+        "title": "07. Playwright Ops & Test Architecture: Cookies, localStorage and sessionStorage & Browser permissions",
+        "summary": "Understanding browser storage is essential for authentication testing. 10.1 Storytelling: A hotel access card When you check into a hotel, the receptionist gives you an access card.",
+        "order": 58,
+        "series": "PW-4: Advanced Browser Operations",
+        "part": 3,
+        "partCount": 5
+      },
+      {
+        "id": "vp-07-device-emulation-integrated-practical-lab-ra-4e10b5",
+        "title": "07. Playwright Ops & Test Architecture: Device emulation & Integrated practical lab — RAG document upload and AI report download",
+        "summary": "15.1 Storytelling: Testing one application on many devices Your AI chatbot works correctly on a desktop browser. However, on a mobile-sized screen: The Send button may disappear.",
+        "order": 59,
+        "series": "PW-4: Advanced Browser Operations",
+        "part": 4,
+        "partCount": 5
+      },
+      {
+        "id": "vp-07-production-grade-browser-security-for-agenti-2e0222",
+        "title": "07. Playwright Ops & Test Architecture: Production-grade browser security for agentic AI & PW-5: Playwright Framework Architecture, ",
+        "summary": "This is especially important for your interview because a conventional automated test follows predefined instructions, while an AI browser agent may decide which action to take based on untrusted content. 18.1…",
+        "order": 60,
+        "series": "PW-4: Advanced Browser Operations",
+        "part": 5,
+        "partCount": 5
+      },
+      {
+        "id": "vp-07-pw-5-production-grade-playwright-test-framew-330290",
+        "title": "07. Playwright Ops & Test Architecture: PW-5: Production-Grade Playwright Test Framework Architecture & Custom fixtures in Python us",
+        "summary": "PW-5: Production-Grade Playwright Test Framework Architecture Playwright Masterclass · Python + TypeScript · Enterprise Architecture · Generative AI · Interview Preparation Until PW-4, we learned how to write individual…",
+        "order": 61,
+        "series": "PW-5: Test Framework Architecture",
+        "part": 1,
+        "partCount": 7
+      },
+      {
+        "id": "vp-07-custom-typescript-fixtures-using-test-extend-533202",
+        "title": "07. Playwright Ops & Test Architecture: Custom TypeScript fixtures using test.extend() & Lifecycle hooks: beforeEach, afterEach, bef",
+        "summary": "5.1 Storytelling: Extending a standard toolkit Imagine a company provides every engineer with a standard toolkit. AI engineers receive additional equipment for model evaluation.",
+        "order": 62,
+        "series": "PW-5: Test Framework Architecture",
+        "part": 2,
+        "partCount": 7
+      },
+      {
+        "id": "vp-07-page-object-model-pom-test-data-factories-071e09",
+        "title": "07. Playwright Ops & Test Architecture: Page Object Model (POM) & Test data factories",
+        "summary": "This is arguably the most frequently discussed test design pattern in Playwright interviews. 10.1 Storytelling: The remote control Imagine operating a television.",
+        "order": 63,
+        "series": "PW-5: Test Framework Architecture",
+        "part": 3,
+        "partCount": 7
+      },
+      {
+        "id": "vp-07-parameterization-and-data-driven-testing-sha-22fa7d",
+        "title": "07. Playwright Ops & Test Architecture: Parameterization and data-driven testing & Sharding and distributed execution",
+        "summary": "15.1 Storytelling: Testing different questions in an AI chatbot Suppose your chatbot must answer questions about RAG, LangGraph, FastAPI and Docker. Without parameterization, you might write four nearly identical tests.…",
+        "order": 64,
+        "series": "PW-5: Test Framework Architecture",
+        "part": 4,
+        "partCount": 7
+      },
+      {
+        "id": "vp-07-tags-markers-and-annotations-integrated-prac-9300f7",
+        "title": "07. Playwright Ops & Test Architecture: Tags, markers and annotations & Integrated practical lab — Build a modular AI testing framew",
+        "summary": "20.1 Storytelling: Classifying books in a library A library categorizes books into programming, science, history and other subjects. When a reader needs a programming book, the librarian does not inspect every book…",
+        "order": 65,
+        "series": "PW-5: Test Framework Architecture",
+        "part": 5,
+        "partCount": 7
+      },
+      {
+        "id": "vp-07-build-the-python-testing-framework-interacti-a82824",
+        "title": "07. Playwright Ops & Test Architecture: Build the Python testing framework & Interactive enterprise test-framework designer",
+        "summary": "25.1 Minimal project structure 25.2 Citation component components/citation_panel.py: 25.3 ChatPage object pages/chat_page.py: The Page Object encapsulates browser behavior. The test decides what constitutes a correct…",
+        "order": 66,
+        "series": "PW-5: Test Framework Architecture",
+        "part": 6,
+        "partCount": 7
+      },
+      {
+        "id": "vp-07-python-vs-typescript-rapid-revision-cheat-sh-85f632",
+        "title": "07. Playwright Ops & Test Architecture: Python vs TypeScript rapid revision cheat sheet & PW-6: API Testing and Network Mocking",
+        "summary": "PW-5 readiness % of objectives completed The fixture, runner, project, authentication and parallelism explanations were checked against official documentation. The code examples have not been compiled or executed…",
+        "order": 67,
+        "series": "PW-5: Test Framework Architecture",
+        "part": 7,
+        "partCount": 7
+      },
+      {
+        "id": "vp-08-combining-ui-api-llm-contract-testing-archit-9b506d",
+        "title": "08. Playwright API Mocking, BDD & CI/CD: Combining UI, API & LLM Contract Testing (Architecture Overview)",
+        "summary": "Pure E2E browser tests that hit real LLMs for every button click are slow, expensive, and flaky. Senior engineers combine three Playwright tools: APIRequestContext (request.post('/v1/rag/ingest')) — seed test documents,…",
+        "order": 68,
+        "series": "PW-6: API Testing & Network Interception",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-08-pw-6-api-testing-network-interception-and-mo-34aa76",
+        "title": "08. Playwright API Mocking, BDD & CI/CD: PW-6: API Testing, Network Interception and Mocking — Continued & Authentication, bearer tok",
+        "summary": "PW-6: API Testing, Network Interception and Mocking — Continued We have already introduced the difference between UI testing, API testing and AI quality evaluation. Now we will move directly into implementation,…",
+        "order": 69,
+        "series": "PW-6: API Testing & Network Mocking",
+        "part": 1,
+        "partCount": 5
+      },
+      {
+        "id": "vp-08-api-response-assertions-and-contract-validat-f2b50b",
+        "title": "08. Playwright API Mocking, BDD & CI/CD: API response assertions and contract validation & HAR recording and replay",
+        "summary": "6.1 Why HTTP 200 is insufficient Suppose your RAG API returns: The HTTP status is 200. Does this mean the application is working correctly?",
+        "order": 70,
+        "series": "PW-6: API Testing & Network Mocking",
+        "part": 2,
+        "partCount": 5
+      },
+      {
+        "id": "vp-08-mocking-fastapi-vs-mocking-llm-providers-cir-fc3ba6",
+        "title": "08. Playwright API Mocking, BDD & CI/CD: Mocking FastAPI vs mocking LLM providers & Circuit breaker testing",
+        "summary": "This distinction is particularly important in your interview. 11.1 Where should we introduce the mock?",
+        "order": 71,
+        "series": "PW-6: API Testing & Network Mocking",
+        "part": 3,
+        "partCount": 5
+      },
+      {
+        "id": "vp-08-integrated-practical-lab-fastapi-playwright--43a14c",
+        "title": "08. Playwright API Mocking, BDD & CI/CD: Integrated practical lab — FastAPI, Playwright and AI resilience & Python vs TypeScript rapi",
+        "summary": "We will now combine API testing, deterministic LLM simulation, response validation, network mocking and retry testing into a single local application. 15.1 Architecture 15.2 Create the backend Install: Create app.py:…",
+        "order": 72,
+        "series": "PW-6: API Testing & Network Mocking",
+        "part": 4,
+        "partCount": 5
+      },
+      {
+        "id": "vp-08-pw-6-completion-checklist-pw-7-behavior-driv-2de0d1",
+        "title": "08. Playwright API Mocking, BDD & CI/CD: PW-6 completion checklist & PW-7: Behavior-Driven Development",
+        "summary": "PW-6 readiness % of objectives completed The Playwright networking and API descriptions were checked against official documentation. The code examples have not been compiled or executed against a live browser…",
+        "order": 73,
+        "series": "PW-6: API Testing & Network Mocking",
+        "part": 5,
+        "partCount": 5
+      },
+      {
+        "id": "vp-08-pw-7-behavior-driven-development-cucumber-an-b9b4ea",
+        "title": "08. Playwright API Mocking, BDD & CI/CD: PW-7: Behavior-Driven Development, Cucumber and Gherkin & Gherkin fundamentals",
+        "summary": "PW-7: Behavior-Driven Development, Cucumber and Gherkin Playwright Masterclass · Python + TypeScript · BDD · Generative AI · Agentic AI · Interview Preparation Until PW-6, we learned browser automation, production-grade…",
+        "order": 74,
+        "series": "PW-7: BDD, Cucumber & Gherkin",
+        "part": 1,
+        "partCount": 6
+      },
+      {
+        "id": "vp-08-given-when-then-and-and-but-data-tables-and--b80c55",
+        "title": "08. Playwright API Mocking, BDD & CI/CD: Given, When, Then, And and But & Data Tables and Doc Strings",
+        "summary": "5.1 Storytelling: Testing a secure AI research assistant Suppose a researcher wants to access a confidential company document. We need to describe three things: the existing situation, the action performed and the…",
+        "order": 75,
+        "series": "PW-7: BDD, Cucumber & Gherkin",
+        "part": 2,
+        "partCount": 6
+      },
+      {
+        "id": "vp-08-step-definitions-integrated-practical-lab-fa-615a79",
+        "title": "08. Playwright API Mocking, BDD & CI/CD: Step definitions & Integrated practical lab — FastAPI + BDD + Playwright",
+        "summary": "10.1 Storytelling: Translating natural language into instructions Imagine a user tells an AI agent: \"Open the knowledge base and ask a question about RAG.\" A browser automation tool needs exact executable instructions.…",
+        "order": 76,
+        "series": "PW-7: BDD, Cucumber & Gherkin",
+        "part": 3,
+        "partCount": 6
+      },
+      {
+        "id": "vp-08-typescript-cucumber-js-with-playwright-testi-acd3e7",
+        "title": "08. Playwright API Mocking, BDD & CI/CD: TypeScript Cucumber.js with Playwright & Testing AI failures through BDD",
+        "summary": "15.1 Installation Use a dedicated TypeScript project with a supported Node.js version. We will use: Cucumber.js as the test runner.",
+        "order": 77,
+        "series": "PW-7: BDD, Cucumber & Gherkin",
+        "part": 4,
+        "partCount": 6
+      },
+      {
+        "id": "vp-08-parallel-execution-and-bdd-reporting-pw-7-co-484d3e",
+        "title": "08. Playwright API Mocking, BDD & CI/CD: Parallel execution and BDD reporting & PW-7 completion checklist",
+        "summary": "20.1 Cucumber.js parallel execution Cucumber.js manages parallel scenario execution through worker infrastructure. Each scenario must have independent state and appropriate resource ownership.",
+        "order": 78,
+        "series": "PW-7: BDD, Cucumber & Gherkin",
+        "part": 5,
+        "partCount": 6
+      },
+      {
+        "id": "vp-08-next-module-pw-8-production-grade-playwright-b7c8f4",
+        "title": "08. Playwright API Mocking, BDD & CI/CD: Next module: PW-8 — Production-grade Playwright & PW-8: Production Playwright, Docker, CI/CD",
+        "summary": "We have now learned how to write automated tests, construct maintainable frameworks, mock network failures and implement business-readable BDD scenarios. Next, we will learn how to deploy and operate these testing…",
+        "order": 79,
+        "series": "PW-7: BDD, Cucumber & Gherkin",
+        "part": 6,
+        "partCount": 6
+      },
+      {
+        "id": "vp-08-pw-8-production-grade-playwright-docker-ci-c-d1ed39",
+        "title": "08. Playwright API Mocking, BDD & CI/CD: PW-8: Production-Grade Playwright, Docker, CI/CD and Observability & Headless execution in L",
+        "summary": "PW-8: Production-Grade Playwright, Docker, CI/CD and Observability Playwright Masterclass · Python + TypeScript · DevOps · FastAPI · Agentic AI · Interview Preparation Until PW-7, we learned how to write automated…",
+        "order": 80,
+        "series": "PW-8: Docker, CI/CD & Observability",
+        "part": 1,
+        "partCount": 6
+      },
+      {
+        "id": "vp-08-docker-compose-fastapi-and-playwright-integr-7538f4",
+        "title": "08. Playwright API Mocking, BDD & CI/CD: Docker Compose — FastAPI and Playwright integration & CI/CD quality gates",
+        "summary": "5.1 Storytelling: Connecting multiple teams Imagine your AI application consists of several services: FastAPI handles requests. A vector database stores document embeddings.",
+        "order": 81,
+        "series": "PW-8: Docker, CI/CD & Observability",
+        "part": 2,
+        "partCount": 6
+      },
+      {
+        "id": "vp-08-distributed-execution-workers-shards-and-bro-7d45b8",
+        "title": "08. Playwright API Mocking, BDD & CI/CD: Distributed execution: Workers, shards and browser pools & Trace Viewer",
+        "summary": "10.1 Three different scalability concepts We introduced workers and shards during PW-5. Now we will examine their infrastructure implications.",
+        "order": 82,
+        "series": "PW-8: Docker, CI/CD & Observability",
+        "part": 3,
+        "partCount": 6
+      },
+      {
+        "id": "vp-08-playwright-inspector-and-debugging-multi-ten-1cfc9b",
+        "title": "08. Playwright API Mocking, BDD & CI/CD: Playwright Inspector and debugging & Multi-tenant isolation",
+        "summary": "15.1 Inspector vs Trace Viewer 15.2 TypeScript debugging commands Debug a particular test: Open Playwright Test UI mode: Launch code generation: 15.3 Python debugging commands On Windows PowerShell: On Linux: Pause…",
+        "order": 83,
+        "series": "PW-8: Docker, CI/CD & Observability",
+        "part": 4,
+        "partCount": 6
+      },
+      {
+        "id": "vp-08-browser-sandboxing-and-network-restrictions--fb9c4e",
+        "title": "08. Playwright API Mocking, BDD & CI/CD: Browser sandboxing and network restrictions & Rapid revision cheat sheet",
+        "summary": "20.1 Storytelling: An AI browser agent visits an external website Suppose a browser agent is asked to research public documentation. The webpage contains untrusted instructions telling the agent to access internal…",
+        "order": 84,
+        "series": "PW-8: Docker, CI/CD & Observability",
+        "part": 5,
+        "partCount": 6
+      },
+      {
+        "id": "vp-08-pw-8-completion-checklist-pw-9-building-prod-4b627d",
+        "title": "08. Playwright API Mocking, BDD & CI/CD: PW-8 completion checklist & PW-9: Building Production-Grade AI Browser Agents",
+        "summary": "PW-8 readiness % of objectives completed Implementation notes and official documentation I checked the relevant Docker, Playwright CI, reporting and tracing documentation. I have not built the Docker images, compiled…",
+        "order": 85,
+        "series": "PW-8: Docker, CI/CD & Observability",
+        "part": 6,
+        "partCount": 6
+      },
+      {
+        "id": "vp-09-pw-9-agentic-ai-with-playwright-building-pro-1d36dd",
+        "title": "09. Agentic AI Browser Automation (MCP): PW-9: Agentic AI with Playwright — Building Production-Grade AI Browser Agents & Structured ",
+        "summary": "PW-9: Agentic AI with Playwright — Building Production-Grade AI Browser Agents Playwright Masterclass · Generative AI · Python + TypeScript · LangGraph · Google ADK · MCP · Interview Preparation Until PW-8, we learned…",
+        "order": 86,
+        "series": "PW-9: Agentic AI Browser Automation",
+        "part": 1,
+        "partCount": 5
+      },
+      {
+        "id": "vp-09-tool-registries-and-deterministic-browser-ex-beb879",
+        "title": "09. Agentic AI Browser Automation (MCP): Tool registries and deterministic browser execution & Planning agents vs execution agents",
+        "summary": "5.1 What is a tool registry? A tool registry is a controlled mapping between approved tool names and executable implementations.",
+        "order": 87,
+        "series": "PW-9: Agentic AI Browser Automation",
+        "part": 2,
+        "partCount": 5
+      },
+      {
+        "id": "vp-09-self-healing-locators-and-their-limitations--fb1b0b",
+        "title": "09. Agentic AI Browser Automation (MCP): Self-healing locators and their limitations & AI-generated Playwright tests and Gherkin scen",
+        "summary": "10.1 Storytelling: A restaurant changes its menu layout Suppose your automation script identifies a Submit button using: After a frontend release, the element ID becomes submit-v2. The old selector fails even though the…",
+        "order": 88,
+        "series": "PW-9: Agentic AI Browser Automation",
+        "part": 3,
+        "partCount": 5
+      },
+      {
+        "id": "vp-09-prompt-injection-in-ai-browser-agents-browse-a62b22",
+        "title": "09. Agentic AI Browser Automation (MCP): Prompt injection in AI browser agents & Browser-agent evaluation",
+        "summary": "This is a critical interview topic. 14.1 Storytelling: A misleading sign in an office Imagine an employee is authorized to inspect a company's knowledge base.",
+        "order": 89,
+        "series": "PW-9: Agentic AI Browser Automation",
+        "part": 4,
+        "partCount": 5
+      },
+      {
+        "id": "vp-09-integrated-fastapi-browser-agent-service-pw--67583d",
+        "title": "09. Agentic AI Browser Automation (MCP): Integrated FastAPI browser-agent service & PW-9 completion checklist",
+        "summary": "We will now design a small service combining FastAPI, Pydantic, Playwright, deterministic execution, permission checking and a bounded workflow. Unlike an unrestricted browser agent, this service accepts only an…",
+        "order": 90,
+        "series": "PW-9: Agentic AI Browser Automation",
+        "part": 5,
+        "partCount": 5
+      },
+      {
+        "id": "vp-10-rest-1-http-and-rest-api-fundamentals-zero-t-b72c69",
+        "title": "10. REST APIs, Design & Security: REST-1: HTTP and REST API Fundamentals — Zero to Interview Level & DNS — Domain Name System",
+        "summary": "REST-1: HTTP and REST API Fundamentals — Zero to Interview Level REST API Masterclass · Python Backend Development · FastAPI · Generative AI · Production Engineering We have completed the JavaScript, TypeScript and…",
+        "order": 91,
+        "series": "REST-1: HTTP & REST Fundamentals",
+        "part": 1,
+        "partCount": 5
+      },
+      {
+        "id": "vp-10-tcp-transmission-control-protocol-url-struct-dea459",
+        "title": "10. REST APIs, Design & Security: TCP — Transmission Control Protocol & URL structure, path parameters and query parameters",
+        "summary": "5.1 Storytelling: Sending important documents Imagine sending ten pages of a signed contract. You want the receiver to receive all ten pages in the correct order, even if some parts need to be retransmitted.",
+        "order": 92,
+        "series": "REST-1: HTTP & REST Fundamentals",
+        "part": 2,
+        "partCount": 5
+      },
+      {
+        "id": "vp-10-http-headers-what-is-rest-83500d",
+        "title": "10. REST APIs, Design & Security: HTTP headers & What is REST?",
+        "summary": "10.1 Storytelling: A courier envelope The document inside a parcel represents its content. The address, tracking number and handling instructions outside the parcel represent metadata.",
+        "order": 93,
+        "series": "REST-1: HTTP & REST Fundamentals",
+        "part": 3,
+        "partCount": 5
+      },
+      {
+        "id": "vp-10-statelessness-vs-stateful-applications-pytho-975a4f",
+        "title": "10. REST APIs, Design & Security: Statelessness vs stateful applications & Python Requests vs HTTPX",
+        "summary": "15.1 Storytelling: Two restaurant ordering systems Restaurant A remembers you solely because you previously spoke to a particular waiter. If another waiter arrives, that waiter has no information about your previous…",
+        "order": 94,
+        "series": "REST-1: HTTP & REST Fundamentals",
+        "part": 4,
+        "partCount": 5
+      },
+      {
+        "id": "vp-10-integrated-practical-lab-fastapi-rest-api-fo-1528ca",
+        "title": "10. REST APIs, Design & Security: Integrated practical lab — FastAPI REST API for an AI agent platform & REST-1 completion che",
+        "summary": "Now we will combine HTTP methods, resource design, status codes, headers, path parameters, query parameters and runtime validation into a single practical application. 19.1 Business requirements Build an API that…",
+        "order": 95,
+        "series": "REST-1: HTTP & REST Fundamentals",
+        "part": 5,
+        "partCount": 5
+      },
+      {
+        "id": "vp-10-rest-2-professional-rest-api-design-enterpri-17dc56",
+        "title": "10. REST APIs, Design & Security: REST-2: Professional REST API Design — Enterprise and Generative AI Masterclass & Profession",
+        "summary": "REST-2: Professional REST API Design — Enterprise and Generative AI Masterclass Python · FastAPI · API Contracts · Distributed Systems · RAG · Agentic AI · Interview Preparation In REST-1, we learned how HTTP works, how…",
+        "order": 96,
+        "series": "REST-2: Enterprise REST Design",
+        "part": 1,
+        "partCount": 5
+      },
+      {
+        "id": "vp-10-request-schemas-response-schemas-and-data-co-507547",
+        "title": "10. REST APIs, Design & Security: Request schemas, response schemas and data contracts & Filtering, sorting, searching and fie",
+        "summary": "5.1 Storytelling: A company recruitment form Imagine a candidate submits a job application. The company collects the candidate's name, email address and resume.",
+        "order": 97,
+        "series": "REST-2: Enterprise REST Design",
+        "part": 2,
+        "partCount": 5
+      },
+      {
+        "id": "vp-10-api-versioning-and-backward-compatibility-op-ddea9c",
+        "title": "10. REST APIs, Design & Security: API versioning and backward compatibility & Optimistic concurrency control",
+        "summary": "10.1 Storytelling: Updating a mobile banking application Imagine a bank changes its backend response from: to: Existing mobile applications still expect balance. They may stop working even though the backend considers…",
+        "order": 98,
+        "series": "REST-2: Enterprise REST Design",
+        "part": 3,
+        "partCount": 5
+      },
+      {
+        "id": "vp-10-etag-if-match-and-if-none-match-bulk-api-ope-b1ae0e",
+        "title": "10. REST APIs, Design & Security: ETag, If-Match and If-None-Match & Bulk API operations",
+        "summary": "These HTTP features allow us to implement conditional requests without inventing an entirely custom concurrency protocol. 15.1 What is an ETag?",
+        "order": 99,
+        "series": "REST-2: Enterprise REST Design",
+        "part": 4,
+        "partCount": 5
+      },
+      {
+        "id": "vp-10-integrated-practical-lab-enterprise-rag-docu-445947",
+        "title": "10. REST APIs, Design & Security: Integrated practical lab — Enterprise RAG document API & REST-2 completion checklist",
+        "summary": "Now we will combine the most important REST-2 concepts into one coherent FastAPI application. 18.1 Business requirements The API should support document creation, cursor-based pagination, filtering, field-safe…",
+        "order": 100,
+        "series": "REST-2: Enterprise REST Design",
+        "part": 5,
+        "partCount": 5
+      },
+      {
+        "id": "vp-10-authn-vs-authz-jwt-hs256-vs-rs256-refresh-ro-13fc26",
+        "title": "10. REST APIs, Design & Security: AuthN vs AuthZ, JWT (HS256 vs RS256), Refresh Rotation, OAuth 2.0 PKCE, OIDC & RBAC/ABAC",
+        "summary": "Authentication vs Authorization Authentication (AuthN = 401 Unauthorized): Passport control proves who you are. Authorization (AuthZ = 403 Forbidden): The boarding gate checks whether you have a seat on THIS flight /…",
+        "order": 101,
+        "series": "REST-3: Production API Security",
+        "part": 1,
+        "partCount": 5
+      },
+      {
+        "id": "vp-10-rest-3-production-grade-api-security-part-3--823d1c",
+        "title": "10. REST APIs, Design & Security: REST-3: Production-Grade API Security — Part 3 & HTTPS, TLS and mutual TLS",
+        "summary": "REST-3: Production-Grade API Security — Part 3 We have completed authentication, JWT, OAuth 2.0, OpenID Connect, token management, RBAC and ABAC. Now we will focus on the remaining security concepts, particularly…",
+        "order": 102,
+        "series": "REST-3: Production API Security",
+        "part": 2,
+        "partCount": 5
+      },
+      {
+        "id": "vp-10-owasp-api-security-top-10-api-gateway-securi-d9fdce",
+        "title": "10. REST APIs, Design & Security: OWASP API Security Top 10 & API gateway security",
+        "summary": "OWASP provides a widely used security-risk reference for API development. We will use its 2023 API Security Top 10 edition.",
+        "order": 103,
+        "series": "REST-3: Production API Security",
+        "part": 3,
+        "partCount": 5
+      },
+      {
+        "id": "vp-10-multi-tenant-rag-security-integrated-practic-332b06",
+        "title": "10. REST APIs, Design & Security: Multi-tenant RAG security & Integrated practical lab — Secure FastAPI RAG service",
+        "summary": "This is one of the most important security concepts for a Generative AI engineer. 25.1 Storytelling: A shared library with private collections Imagine a library used by three companies.",
+        "order": 104,
+        "series": "REST-3: Production API Security",
+        "part": 4,
+        "partCount": 5
+      },
+      {
+        "id": "vp-10-automated-api-security-testing-rest-3-comple-a5a8d6",
+        "title": "10. REST APIs, Design & Security: Automated API security testing & REST-3 completion checklist",
+        "summary": "This connects REST security directly to the Playwright and API testing curriculum we completed. 28.1 Security test matrix 28.2 pytest security regression tests test_security.py: Test cross-tenant access: Test…",
+        "order": 105,
+        "series": "REST-3: Production API Security",
+        "part": 5,
+        "partCount": 5
+      },
+      {
+        "id": "vp-11-rest-4-production-grade-rest-api-architectur-375f74",
+        "title": "11. Scalable APIs & GenAI Streaming: REST-4: Production-Grade REST API Architecture & Caching and Redis",
+        "summary": "REST-4: Production-Grade REST API Architecture FastAPI · Redis · Distributed Systems · Scalability · Reliability · LLM Infrastructure · Interview Preparation In REST-1, we learned HTTP fundamentals. In REST-2, we…",
+        "order": 106,
+        "series": "REST-4: Scalable API Architecture",
+        "part": 1,
+        "partCount": 2
+      },
+      {
+        "id": "vp-11-caching-strategies-rate-limiting-algorithms-48c99e",
+        "title": "11. Scalable APIs & GenAI Streaming: Caching strategies & Rate-limiting algorithms",
+        "summary": "5.1 Cache-aside — lazy loading This is a common default for read-heavy applications. Python example This assumes every authorized reader receives the same cached document representation.",
+        "order": 107,
+        "series": "REST-4: Scalable API Architecture",
+        "part": 2,
+        "partCount": 2
+      },
+      {
+        "id": "vp-11-rest-5-production-grade-generative-ai-api-ar-9aff40",
+        "title": "11. Scalable APIs & GenAI Streaming: REST-5: Production-Grade Generative AI API Architecture & Server-Sent Events — SSE",
+        "summary": "REST-5: Production-Grade Generative AI API Architecture FastAPI · LLM Streaming · SSE · WebSockets · Celery · RabbitMQ · Azure Service Bus · RAG · LangGraph · Google ADK Until now, we have learned how to design, secure,…",
+        "order": 108,
+        "series": "REST-5: Generative AI API Architecture",
+        "part": 1,
+        "partCount": 5
+      },
+      {
+        "id": "vp-11-sse-reconnection-event-replay-and-streaming--429878",
+        "title": "11. Scalable APIs & GenAI Streaming: SSE reconnection, event replay and streaming failures & LLM streaming performance metrics",
+        "summary": "5.1 Why reconnection matters Imagine a multi-agent workflow takes five minutes. After two minutes, the user's internet connection disconnects.",
+        "order": 109,
+        "series": "REST-5: Generative AI API Architecture",
+        "part": 2,
+        "partCount": 5
+      },
+      {
+        "id": "vp-11-message-queues-and-background-workers-acknow-ac3366",
+        "title": "11. Scalable APIs & GenAI Streaming: Message queues and background workers & Acknowledgments, redelivery and dead-letter queues",
+        "summary": "10.1 Storytelling: Orders in a restaurant kitchen A waiter does not need to remain beside the chef until every order is cooked. The waiter submits the order.",
+        "order": 110,
+        "series": "REST-5: Generative AI API Architecture",
+        "part": 3,
+        "partCount": 5
+      },
+      {
+        "id": "vp-11-durable-job-state-and-transactional-outbox-i-fad61f",
+        "title": "11. Scalable APIs & GenAI Streaming: Durable job state and transactional outbox & Integrated practical laboratory — FastAPI strea",
+        "summary": "We introduced the transactional outbox in REST-2. It becomes particularly important for asynchronous AI APIs.",
+        "order": 111,
+        "series": "REST-5: Generative AI API Architecture",
+        "part": 4,
+        "partCount": 5
+      },
+      {
+        "id": "vp-11-rapid-revision-cheat-sheet-89dc92",
+        "title": "11. Scalable APIs & GenAI Streaming: Rapid revision cheat sheet",
+        "summary": "Official learning references Implementation notes: The code examples have not been executed here. I deliberately used deterministic mock inference, synthetic documents and in-memory job state in the integrated…",
+        "order": 112,
+        "series": "REST-5: Generative AI API Architecture",
+        "part": 5,
+        "partCount": 5
+      },
+      {
+        "id": "vp-12-fastapi-vs-flask-vs-django-wsgi-vs-asgi-scop-b08952",
+        "title": "12. FastAPI, Pydantic V2 & Capstone: FastAPI vs Flask vs Django, WSGI vs ASGI (scope, receive, send), Sync vs Async & Depends()",
+        "summary": "Why WSGI Chokes on LLM Streaming & Concurrency WSGI (classic Flask / Django) handles one request per worker thread synchronously. While waiting 4 seconds for an LLM API response, that thread sits idle — and long SSE…",
+        "order": 113,
+        "series": "FA-1: FastAPI Fundamentals & Internals",
+        "part": 1,
+        "partCount": 2
+      },
+      {
+        "id": "vp-12-fa-1-fastapi-fundamentals-and-internal-archi-bc93cb",
+        "title": "12. FastAPI, Pydantic V2 & Capstone: FA-1: FastAPI Fundamentals and Internal Architecture — Part 2 & Routing and path operations",
+        "summary": "FA-1: FastAPI Fundamentals and Internal Architecture — Part 2 We have already covered FastAPI vs Flask vs Django, WSGI vs ASGI, and the low-level ASGI interface involving scope, receive and send. Now we will continue…",
+        "order": 114,
+        "series": "FA-1: FastAPI Fundamentals & Internals",
+        "part": 2,
+        "partCount": 2
+      },
+      {
+        "id": "vp-12-complete-resume-schema-fastapi-playwright-ve-5705ae",
+        "title": "12. FastAPI, Pydantic V2 & Capstone: Complete Resume Schema, FastAPI + Playwright Verification & Full 8-Phase AI Testing Capstone",
+        "summary": "Remember how FA-2 Section 26 ended right inside YearMonth? Here is the complete, production-ready Pydantic V2 contract preserving external JSON keys \"from\" and \"to\" (reserved/awkward in Python) via Field(alias=...) +…",
+        "order": 115,
+        "series": "FA-2: Pydantic V2 & Capstone Architecture",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-12-fa-2-pydantic-v2-data-validation-and-structu-7ec77c",
+        "title": "12. FastAPI, Pydantic V2 & Capstone: FA-2: Pydantic V2 — Data Validation and Structured LLM Outputs & How Pydantic works internal",
+        "summary": "FA-2: Pydantic V2 — Data Validation and Structured LLM Outputs Python · FastAPI · Pydantic V2 · Structured Outputs · Resume Extraction · RAG · Agent Tool Contracts In FA-1, we learned FastAPI's internal architecture,…",
+        "order": 116,
+        "series": "FA-2: Pydantic V2 & Structured LLM Outputs",
+        "part": 1,
+        "partCount": 5
+      },
+      {
+        "id": "vp-12-field-constraints-nested-models-lists-and-di-7b5dcf",
+        "title": "12. FastAPI, Pydantic V2 & Capstone: Field constraints & Nested models, lists and dictionaries",
+        "summary": "5.1 Storytelling: Rules for entering an examination A student may be required to have a valid registration number, be within an eligible age range and complete mandatory information. Similarly, your AI application needs…",
+        "order": 117,
+        "series": "FA-2: Pydantic V2 & Structured LLM Outputs",
+        "part": 2,
+        "partCount": 5
+      },
+      {
+        "id": "vp-12-enum-literal-and-union-types-custom-validati-112e34",
+        "title": "12. FastAPI, Pydantic V2 & Capstone: Enum, Literal and union types & Custom validation with field_validator",
+        "summary": "10.1 Literal Use Literal when only specific values should be accepted. This prevents unsupported modes from entering the application.",
+        "order": 118,
+        "series": "FA-2: Pydantic V2 & Structured LLM Outputs",
+        "part": 3,
+        "partCount": 5
+      },
+      {
+        "id": "vp-12-model-validator-cross-field-business-rules-s-ca765f",
+        "title": "12. FastAPI, Pydantic V2 & Capstone: model_validator — Cross-field business rules & Serialization and deserialization",
+        "summary": "15.1 Storytelling: Comparing two travel dates A booking application receives a departure date and a return date. Both dates might be individually valid, but the return date must not be earlier than the departure date.…",
+        "order": 119,
+        "series": "FA-2: Pydantic V2 & Structured LLM Outputs",
+        "part": 4,
+        "partCount": 5
+      },
+      {
+        "id": "vp-12-model-copy-and-model-construct-structured-ll-210d20",
+        "title": "12. FastAPI, Pydantic V2 & Capstone: model_copy and model_construct & Structured LLM outputs — Production-grade architecture",
+        "summary": "These two methods are important because they can bypass normal validation. 21.1 model_copy() Creates a new model instance.",
+        "order": 120,
+        "series": "FA-2: Pydantic V2 & Structured LLM Outputs",
+        "part": 5,
+        "partCount": 5
+      },
+      {
+        "id": "vp-20-pw-3-auto-waiting-assertions-practice-exerci-420ecd",
+        "title": "20. Exercises: PW-3: Auto-Waiting & Assertions — Practice Exercises",
+        "summary": "Complete each exercise in Python and TypeScript. Attempt the implementation before revealing the solution.",
+        "order": 121,
+        "series": "PW-3: Auto-Waiting & Assertions",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-20-pw-4-advanced-browser-operations-practice-ex-b1343c",
+        "title": "20. Exercises: PW-4: Advanced Browser Operations — Practice Exercises",
+        "summary": "Attempt the exercises in both Python and TypeScript. These cover the most interview-relevant advanced browser operations.",
+        "order": 122,
+        "series": "PW-4: Advanced Browser Operations",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-20-pw-5-test-framework-architecture-practice-ex-d7b519",
+        "title": "20. Exercises: PW-5: Test Framework Architecture — Practice Exercises",
+        "summary": "Complete each exercise in both Python and TypeScript. Try solving it without revealing the solution first.",
+        "order": 123,
+        "series": "PW-5: Test Framework Architecture",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-20-pw-7-bdd-cucumber-gherkin-practice-exercises-d2c9df",
+        "title": "20. Exercises: PW-7: BDD, Cucumber & Gherkin — Practice Exercises",
+        "summary": "Complete each exercise before revealing the solution. These cover Gherkin writing, parameterization, step implementation, dependency injection and AI resilience.",
+        "order": 124,
+        "series": "PW-7: BDD, Cucumber & Gherkin",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-20-rest-2-enterprise-rest-design-practice-exerc-b18cd9",
+        "title": "20. Exercises: REST-2: Enterprise REST Design — Practice Exercises",
+        "summary": "Try implementing these without looking at the solutions. They cover the highest-value coding topics from REST-2.",
+        "order": 125,
+        "series": "REST-2: Enterprise REST Design",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-20-javascript-typescript-worked-exercises-js-1--50b9da",
+        "title": "20. Exercises: JavaScript & TypeScript Worked Exercises (JS-1 to TS-6)",
+        "summary": "Exercise 1: Fix the Shared Agent Configuration Bug Task: Write createAgentConfig(overrides) so mutating one agent's tools array or temperature never mutates BASE_CONFIG or sibling agents. Exercise 2: Bounded Concurrency…",
+        "order": 126,
+        "series": "VeeraProject Coding Exercises",
+        "part": 1,
+        "partCount": 2
+      },
+      {
+        "id": "vp-20-playwright-python-ts-bdd-rest-security-fasta-a74944",
+        "title": "20. Exercises: Playwright (Python & TS), BDD, REST Security & FastAPI/Pydantic V2 Worked Exercises",
+        "summary": "Exercise 1 (Playwright Python + TS): Semantic Role & Table Filtering with set_content Task: Locate the \"Delete\" button strictly inside the row belonging to \"rag-policy.pdf\" without fragile XPath indexes. Exercise 2:…",
+        "order": 127,
+        "series": "VeeraProject Coding Exercises",
+        "part": 2,
+        "partCount": 2
+      },
+      {
+        "id": "vp-21-00-roadmap-platform-overview-integrated-lab-2ce6e4",
+        "title": "21. Projects & Labs: 00. Roadmap & Platform Overview — Integrated Lab",
+        "summary": "Instead of learning unrelated examples, we will connect all eight subjects through a common project. AI-powered software testing and code analysis platform The platform will: Accept software requirements and source…",
+        "order": 128,
+        "series": "00. Roadmap & Platform Overview",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-21-fa-2-pydantic-v2-structured-llm-outputs-inte-56d99c",
+        "title": "21. Projects & Labs: FA-2: Pydantic V2 & Structured LLM Outputs — Integrated Lab",
+        "summary": "For your resume-processing use case, we can build a structured contract using education records, employment dates, contact information and skills. We'll preserve \"from\" and \"to\" as external JSON fields while using valid…",
+        "order": 129,
+        "series": "FA-2: Pydantic V2 & Structured LLM Outputs",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-21-pw-2-dom-locators-interactions-integrated-la-201ee2",
+        "title": "21. Projects & Labs: PW-2: DOM, Locators & Interactions — Integrated Lab",
+        "summary": "Now we will combine everything from PW-2 into one project. This lab does not require an actual LLM API.",
+        "order": 130,
+        "series": "PW-2: DOM, Locators & Interactions",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-21-ts-1-typescript-fundamentals-integrated-lab-96deae",
+        "title": "21. Projects & Labs: TS-1: TypeScript Fundamentals — Integrated Lab",
+        "summary": "Now combine the TypeScript concepts into a single practical application. Project: Type-safe AI chatbot API 15.1 Project structure 15.2 Python FastAPI backend backend/main.py Install and run: Execute the command from the…",
+        "order": 131,
+        "series": "TS-1: TypeScript Fundamentals",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-21-ts-2-typescript-functions-integrated-lab-998d20",
+        "title": "21. Projects & Labs: TS-2: TypeScript Functions — Integrated Lab",
+        "summary": "Project: Type-safe AI tool execution pipeline with Playwright Business problem Build a reusable TypeScript service that receives LLM-generated browser tool arguments, validates them, checks authorization, executes an…",
+        "order": 132,
+        "series": "TS-2: TypeScript Functions",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-21-ts-3-interfaces-type-contracts-integrated-la-6a304e",
+        "title": "21. Projects & Labs: TS-3: Interfaces & Type Contracts — Integrated Lab",
+        "summary": "Project: Type-safe multi-agent Playwright testing platform Now we will combine the major concepts from this lesson into a practical AI engineering project. Business problem Build a service where an LLM generates…",
+        "order": 133,
+        "series": "TS-3: Interfaces & Type Contracts",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-21-ts-5-oop-solid-architecture-integrated-lab-d471f4",
+        "title": "21. Projects & Labs: TS-5: OOP, SOLID & Architecture — Integrated Lab",
+        "summary": "Now we will combine classes, abstraction, interfaces, composition, dependency injection, SOLID and modules in a practical implementation. 14.1 Business problem Your AI platform must support multiple LLM providers.",
+        "order": 134,
+        "series": "TS-5: OOP, SOLID & Architecture",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-21-ts-6-revision-ts-6-production-typescript-res-a5c2f3",
+        "title": "21. Projects & Labs: TS-6 Revision: TS-6: Production TypeScript & Resilience — Integrated Lab",
+        "summary": "Now we will combine TypeScript, Zod, dependency injection, structured output, security and Playwright in one small project. 12.1 Project objective Build a service that accepts an LLM-generated login test plan, validates…",
+        "order": 135,
+        "series": "TS-6: Production TypeScript & Resilience",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-21-capstone-project-ai-software-testing-rag-eva-3f559c",
+        "title": "21. Projects & Labs: Capstone Project: AI Software Testing, RAG & Evaluation Platform (Phases 1–8)",
+        "summary": "What You Build in the Capstone FastAPI + Pydantic V2 Control Service (api/): JWT RS256 + Tenant ABAC guard POST /v1/test-runs (HTTP 202 + Idempotency-Key + RabbitMQ queue) GET /v1/test-runs/{id}/stream (SSE progress &…",
+        "order": 136,
+        "series": "VeeraProject Integrated Projects",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-22-fa-2-pydantic-v2-structured-llm-outputs-inte-afa7e3",
+        "title": "22. Interview: FA-2: Pydantic V2 & Structured LLM Outputs — Interview Q&A",
+        "summary": "Suppose a user wants to update an agent configuration without replacing every property. Create a dedicated PATCH schema: Extract explicitly supplied changes: Output: This differs from: Output: An explicitly provided…",
+        "order": 137,
+        "series": "FA-2: Pydantic V2 & Structured LLM Outputs",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-22-js-1-javascript-fundamentals-interview-q-a-1a801b",
+        "title": "22. Interview: JS-1: JavaScript Fundamentals — Interview Q&A",
+        "summary": "These questions are particularly important for an experienced Python and Generative AI engineer transitioning into JavaScript and TypeScript. Scenario 1: Agent configuration unexpectedly changes Interviewer: Multiple…",
+        "order": 138,
+        "series": "JS-1: JavaScript Fundamentals",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-22-js-2-asynchronous-javascript-interview-q-a-a77d72",
+        "title": "22. Interview: JS-2: Asynchronous JavaScript — Interview Q&A",
+        "summary": "Practice explaining these answers aloud in 30–60 seconds each. Scenario 1: Your AI service receives 10,000 concurrent requests.",
+        "order": 139,
+        "series": "JS-2: Asynchronous JavaScript",
+        "part": 1,
+        "partCount": 2
+      },
+      {
+        "id": "vp-22-js-2-revision-js-2-asynchronous-javascript-i-ba7587",
+        "title": "22. Interview: JS-2 Revision: JS-2: Asynchronous JavaScript — Interview Q&A",
+        "summary": "Conceptual questions Q1: Is JavaScript single-threaded? Normally one main execution thread per context; runtime facilities and workers provide additional concurrency.",
+        "order": 140,
+        "series": "JS-2: Asynchronous JavaScript",
+        "part": 2,
+        "partCount": 2
+      },
+      {
+        "id": "vp-22-pw-1-playwright-fundamentals-interview-q-a-33df51",
+        "title": "22. Interview: PW-1: Playwright Fundamentals — Interview Q&A",
+        "summary": "22.1 Basic concepts 22.2 Architecture concepts 22.3 Testing and implementation",
+        "order": 141,
+        "series": "PW-1: Playwright Fundamentals",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-22-pw-10-playwright-final-mock-interview-interv-3f994b",
+        "title": "22. Interview: PW-10: Playwright Final Mock Interview — Interview Q&A (Part 1 of 5)",
+        "summary": "PW-10: Complete Playwright Masterclass — Final Interview Preparation Python + TypeScript · Playwright · BDD · FastAPI · Generative AI · Agentic AI · Production System Design We have now covered all nine technical…",
+        "order": 142,
+        "series": "PW-10: Playwright Final Mock Interview",
+        "part": 1,
+        "partCount": 5
+      },
+      {
+        "id": "vp-22-pw-10-playwright-final-mock-interview-interv-90b6c0",
+        "title": "22. Interview: PW-10: Playwright Final Mock Interview — Interview Q&A (Part 2 of 5)",
+        "summary": "4.1 Advanced browser operations rapid revision Q1: How do you handle a new tab or popup? Register a page/popup event waiter before the triggering action.",
+        "order": 143,
+        "series": "PW-10: Playwright Final Mock Interview",
+        "part": 2,
+        "partCount": 5
+      },
+      {
+        "id": "vp-22-pw-10-playwright-final-mock-interview-interv-a0dc49",
+        "title": "22. Interview: PW-10: Playwright Final Mock Interview — Interview Q&A (Part 3 of 5)",
+        "summary": "This is the most role-specific part of your interview preparation. 8.1 Revision architecture 8.2 Most important AI browser-agent interview questions Q1: What is an AI browser agent?",
+        "order": 144,
+        "series": "PW-10: Playwright Final Mock Interview",
+        "part": 3,
+        "partCount": 5
+      },
+      {
+        "id": "vp-22-pw-10-playwright-final-mock-interview-interv-f5e173",
+        "title": "22. Interview: PW-10: Playwright Final Mock Interview — Interview Q&A (Part 4 of 5)",
+        "summary": "Interview problem Design an enterprise AI-powered software testing platform that accepts natural-language requirements and source code, generates test cases using LLMs, executes them using Playwright, and produces…",
+        "order": 145,
+        "series": "PW-10: Playwright Final Mock Interview",
+        "part": 4,
+        "partCount": 5
+      },
+      {
+        "id": "vp-22-pw-10-playwright-final-mock-interview-interv-665d90",
+        "title": "22. Interview: PW-10: Playwright Final Mock Interview — Interview Q&A (Part 5 of 5)",
+        "summary": "From this point, I will act as a senior technical interviewer hiring a Python and Generative AI engineer with 4–5 years of experience. We will conduct the interview one question at a time.",
+        "order": 146,
+        "series": "PW-10: Playwright Final Mock Interview",
+        "part": 5,
+        "partCount": 5
+      },
+      {
+        "id": "vp-22-pw-2-dom-locators-interactions-interview-q-a-d22e61",
+        "title": "22. Interview: PW-2: DOM, Locators & Interactions — Interview Q&A",
+        "summary": "HTML, DOM and selectors Playwright locators Element interactions",
+        "order": 147,
+        "series": "PW-2: DOM, Locators & Interactions",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-22-pw-3-auto-waiting-assertions-interview-q-a-745b9e",
+        "title": "22. Interview: PW-3: Auto-Waiting & Assertions — Interview Q&A",
+        "summary": "18.1 Automatic waiting and actionability 18.2 Assertions and explicit waits 18.3 Navigation and network synchronization 18.4 Production synchronization",
+        "order": 148,
+        "series": "PW-3: Auto-Waiting & Assertions",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-22-pw-4-advanced-browser-operations-interview-q-eaf06d",
+        "title": "22. Interview: PW-4: Advanced Browser Operations — Interview Q&A",
+        "summary": "20.1 Multiple pages, events and frames 20.2 Dialogs, uploads and downloads 20.3 Authentication, storage and advanced capabilities",
+        "order": 149,
+        "series": "PW-4: Advanced Browser Operations",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-22-pw-5-test-framework-architecture-interview-q-47ce4b",
+        "title": "22. Interview: PW-5: Test Framework Architecture — Interview Q&A",
+        "summary": "31.1 Fixtures and lifecycle 31.2 Design patterns and test data 31.3 Parallelism and production execution",
+        "order": 150,
+        "series": "PW-5: Test Framework Architecture",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-22-pw-6-api-testing-network-mocking-interview-q-c5ab13",
+        "title": "22. Interview: PW-6: API Testing & Network Mocking — Interview Q&A",
+        "summary": "API testing fundamentals Authentication and contracts Network interception AI resilience and production engineering",
+        "order": 151,
+        "series": "PW-6: API Testing & Network Mocking",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-22-pw-7-bdd-cucumber-gherkin-interview-q-a-3c77f3",
+        "title": "22. Interview: PW-7: BDD, Cucumber & Gherkin — Interview Q&A",
+        "summary": "24.1 BDD fundamentals 24.2 Gherkin syntax 24.3 Implementation and production architecture",
+        "order": 152,
+        "series": "PW-7: BDD, Cucumber & Gherkin",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-22-pw-8-docker-ci-cd-observability-interview-q--16e868",
+        "title": "22. Interview: PW-8: Docker, CI/CD & Observability — Interview Q&A",
+        "summary": "Docker and CI/CD Scalability and debugging Observability and security",
+        "order": 153,
+        "series": "PW-8: Docker, CI/CD & Observability",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-22-pw-9-agentic-ai-browser-automation-interview-691e34",
+        "title": "22. Interview: PW-9: Agentic AI Browser Automation — Interview Q&A",
+        "summary": "AI browser agents and tools Observation, MCP and orchestration Security, reliability and evaluation",
+        "order": 154,
+        "series": "PW-9: Agentic AI Browser Automation",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-22-rest-1-http-rest-fundamentals-interview-q-a-23d6fa",
+        "title": "22. Interview: REST-1: HTTP & REST Fundamentals — Interview Q&A",
+        "summary": "22.1 Networking and HTTP fundamentals 22.2 HTTP methods and request structure 22.3 Status codes and reliability 22.4 REST architecture and Python",
+        "order": 155,
+        "series": "REST-1: HTTP & REST Fundamentals",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-22-rest-2-enterprise-rest-design-interview-q-a-af0a19",
+        "title": "22. Interview: REST-2: Enterprise REST Design — Interview Q&A",
+        "summary": "Resource design and contracts Pagination and contract evolution Reliability and concurrency API specifications and batch processing",
+        "order": 156,
+        "series": "REST-2: Enterprise REST Design",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-22-rest-3-production-api-security-interview-q-a-a14c8f",
+        "title": "22. Interview: REST-3: Production API Security — Interview Q&A",
+        "summary": "Authentication and JWT OAuth and token management Authorization, browser security and vulnerabilities Generative AI security",
+        "order": 157,
+        "series": "REST-3: Production API Security",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-22-rest-5-generative-ai-api-architecture-interv-46a0c3",
+        "title": "22. Interview: REST-5: Generative AI API Architecture — Interview Q&A",
+        "summary": "Question 1: Blocking an asynchronous generator Problem: time.sleep() blocks the event-loop thread. Use await asyncio.sleep(1) for asynchronous waiting.",
+        "order": 158,
+        "series": "REST-5: Generative AI API Architecture",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-22-rest-6-rest-api-final-interview-masterclass--ad87d4",
+        "title": "22. Interview: REST-6: REST API Final Interview Masterclass — Interview Q&A (Part 1 of 5)",
+        "summary": "REST-6: Complete REST API Interview Masterclass Final revision · Coding interviews · Production debugging · System design · Live mock interview We have completed all five REST API learning modules, from HTTP…",
+        "order": 159,
+        "series": "REST-6: REST API Final Interview Masterclass",
+        "part": 1,
+        "partCount": 5
+      },
+      {
+        "id": "vp-22-rest-6-rest-api-final-interview-masterclass--62331b",
+        "title": "22. Interview: REST-6: REST API Final Interview Masterclass — Interview Q&A (Part 2 of 5)",
+        "summary": "4.1 Complete security architecture 4.2 Essential comparisons 4.3 HS256 vs RS256 HS256 Shared secret Same secret used to sign and verify. RS256 Private and public keys Private key signs.",
+        "order": 160,
+        "series": "REST-6: REST API Final Interview Masterclass",
+        "part": 2,
+        "partCount": 5
+      },
+      {
+        "id": "vp-22-rest-6-rest-api-final-interview-masterclass--e48d55",
+        "title": "22. Interview: REST-6: REST API Final Interview Masterclass — Interview Q&A (Part 3 of 5)",
+        "summary": "These are practical problems that an interviewer could ask you to implement during a backend engineering interview. Problem 1: Implement an asynchronous API client Requirements: Use HTTPX, reuse the client, handle HTTP…",
+        "order": 161,
+        "series": "REST-6: REST API Final Interview Masterclass",
+        "part": 3,
+        "partCount": 5
+      },
+      {
+        "id": "vp-22-rest-6-rest-api-final-interview-masterclass--7052ae",
+        "title": "22. Interview: REST-6: REST API Final Interview Masterclass — Interview Q&A (Part 4 of 5)",
+        "summary": "This is the most important practical section because it combines your JavaScript, TypeScript, Playwright, REST, Python and Generative AI preparation into one interview scenario. 13.1 Interview question Design an…",
+        "order": 162,
+        "series": "REST-6: REST API Final Interview Masterclass",
+        "part": 4,
+        "partCount": 5
+      },
+      {
+        "id": "vp-22-rest-6-rest-api-final-interview-masterclass--c93f6d",
+        "title": "22. Interview: REST-6: REST API Final Interview Masterclass — Interview Q&A (Part 5 of 5)",
+        "summary": "Before moving to LangChain, LangGraph and Google ADK, we will strengthen the Python backend implementation layer. We will concentrate on implementation details rather than unnecessarily repeating the REST theory we have…",
+        "order": 163,
+        "series": "REST-6: REST API Final Interview Masterclass",
+        "part": 5,
+        "partCount": 5
+      },
+      {
+        "id": "vp-22-ts-1-typescript-fundamentals-interview-q-a-302b3e",
+        "title": "22. Interview: TS-1: TypeScript Fundamentals — Interview Q&A",
+        "summary": "These are high-priority questions for your TypeScript and Playwright interview. Q1: 1.",
+        "order": 164,
+        "series": "TS-1: TypeScript Fundamentals",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-22-ts-2-typescript-functions-interview-q-a-b28a9c",
+        "title": "22. Interview: TS-2: TypeScript Functions — Interview Q&A",
+        "summary": "These concepts are not necessary for every beginner program, but they are useful for experienced engineering interviews. 9.1 Function type compatibility Consider: This is valid: A function that ignores extra parameters…",
+        "order": 165,
+        "series": "TS-2: TypeScript Functions",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-22-ts-3-interfaces-type-contracts-interview-q-a-c327bc",
+        "title": "22. Interview: TS-3: Interfaces & Type Contracts — Interview Q&A",
+        "summary": "Q1: 1. What is an interface?",
+        "order": 166,
+        "series": "TS-3: Interfaces & Type Contracts",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-22-ts-4-generics-type-level-programming-intervi-a0a78b",
+        "title": "22. Interview: TS-4: Generics & Type-Level Programming — Interview Q&A",
+        "summary": "Q1: 1. What are generics?",
+        "order": 167,
+        "series": "TS-4: Generics & Type-Level Programming",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-22-ts-5-oop-solid-architecture-interview-q-a-1415bf",
+        "title": "22. Interview: TS-5: OOP, SOLID & Architecture — Interview Q&A",
+        "summary": "These are suitable for rapid revision before your interview.",
+        "order": 168,
+        "series": "TS-5: OOP, SOLID & Architecture",
+        "part": 1,
+        "partCount": 1
+      },
+      {
+        "id": "vp-22-ts-6-production-typescript-resilience-interv-3c9a3e",
+        "title": "22. Interview: TS-6: Production TypeScript & Resilience — Interview Q&A",
+        "summary": "We have now covered the complete JavaScript and TypeScript portion of our accelerated curriculum. Use these questions to revise the concepts from JS-1 through TS-6.",
+        "order": 169,
+        "series": "TS-6: Production TypeScript & Resilience",
+        "part": 1,
+        "partCount": 2
+      },
+      {
+        "id": "vp-22-ts-6-revision-ts-6-production-typescript-res-bea643",
+        "title": "22. Interview: TS-6 Revision: TS-6: Production TypeScript & Resilience — Interview Q&A",
+        "summary": "14.1 JavaScript — Critical concepts 14.2 TypeScript — Critical concepts 14.3 Production TypeScript — Critical concepts",
+        "order": 170,
+        "series": "TS-6: Production TypeScript & Resilience",
+        "part": 2,
+        "partCount": 2
+      },
+      {
+        "id": "vp-22-playwright-dom-ops-rest-caching-rate-limitin-6dd548",
+        "title": "22. Interview: Playwright DOM/Ops, REST Caching/Rate-Limiting, Auth/JWT/OAuth2, FastAPI & Output-Prediction Q&As",
+        "summary": "Q1: What is the exact console output of this Event Loop snippet? Expected answer: 1, 4, 6, 3, 5, 2.",
+        "order": 171,
+        "series": "VeeraProject Supplemental Interview Banks",
         "part": 1,
         "partCount": 1
       }

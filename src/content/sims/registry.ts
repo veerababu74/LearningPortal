@@ -6,6 +6,7 @@ import { PATTERN_SIMS } from './patterns'
 import { RAG_SIMS } from './rag'
 import { RAG_ADVANCED_SIMS } from './rag-advanced'
 import { PYTHON_SIMS } from './python'
+import { PROJECT_SIMS } from './project'
 
 /** Gallery at /agents/visualizer: agents and multi-agent patterns. */
 export const AGENT_GALLERY: AgentSim[] = [...AGENT_SIMS, ...PATTERN_SIMS]
@@ -15,10 +16,13 @@ export const RAG_GALLERY: AgentSim[] = [...RAG_SIMS, ...RAG_ADVANCED_SIMS].sort(
 )
 /** Gallery at /python/visualizer. */
 export const PYTHON_GALLERY: AgentSim[] = PYTHON_SIMS
+/** Gallery at /project/visualizer. */
+export const PROJECT_GALLERY: AgentSim[] = PROJECT_SIMS
 
 const PY_IDS = new Set(PYTHON_SIMS.map((s) => s.id))
 const RAG_IDS = new Set(RAG_GALLERY.map((s) => s.id))
-const byId = (id: string) => [...AGENT_GALLERY, ...RAG_GALLERY, ...PYTHON_GALLERY].find((s) => s.id === id)
+const PROJ_IDS = new Set(PROJECT_GALLERY.map((s) => s.id))
+const byId = (id: string) => [...AGENT_GALLERY, ...RAG_GALLERY, ...PYTHON_GALLERY, ...PROJECT_GALLERY].find((s) => s.id === id)
 
 export function getAnySim(id: string) {
   return byId(id)
@@ -31,6 +35,7 @@ export function isPythonSim(sim: AgentSim) {
 export function simHref(sim: AgentSim) {
   if (isPythonSim(sim)) return `/python/visualizer/${sim.id}`
   if (RAG_IDS.has(sim.id)) return `/rag/visualizer/${sim.id}`
+  if (PROJ_IDS.has(sim.id)) return `/project/visualizer/${sim.id}`
   return `/agents/visualizer/${sim.id}`
 }
 
@@ -69,6 +74,8 @@ function poolFor(trackId: string): Pool | null {
       return { sims: PYTHON_SIMS }
     case 'asyncconcur':
       return { sims: PYTHON_SIMS.filter((s) => s.group === 'Concurrency' || s.id === 'py-generator' || s.id === 'py-exceptions') }
+    case 'veeraproject':
+      return { sims: PROJECT_GALLERY, fallback: 'proj-capstone-e2e' }
     default:
       return null
   }
@@ -81,7 +88,7 @@ export function simsForLesson(trackId: string, title: string, sourceFile = ''): 
   const mod = title.match(/^(\d{2})\./)?.[1]
   // course tracks: no simulations on exercise / project / interview lessons
   if (mod && Number(mod) >= 10 && ['agents', 'python', 'asyncconcur'].includes(trackId)) return []
-  if (mod && Number(mod) >= 20 && trackId === 'veerarag') return []
+  if (mod && Number(mod) >= 20 && ['veerarag', 'veeraproject'].includes(trackId)) return []
   const topic = title.replace(/^\d{2}\.\s*[^:]+:\s*/, '').replace(/^(Part|Module)( overview)?\s*—\s*/, '')
   const hits = pool.sims.filter((s) => s.match.test(topic) || (sourceFile && s.match.test(sourceFile)))
   if (hits.length) {
@@ -89,7 +96,10 @@ export function simsForLesson(trackId: string, title: string, sourceFile = ''): 
     const own = (s: AgentSim) => (trackId === 'veerarag' ? s.ragModule === mod : s.module === mod)
     return [...hits].sort((a, b) => Number(own(b)) - Number(own(a))).slice(0, 3)
   }
-  if (trackId === 'agents' && mod) return pool.sims.filter((s) => s.module === mod && !s.home).slice(0, 1)
+  if ((trackId === 'agents' || trackId === 'veeraproject') && mod) {
+    const own = pool.sims.filter((s) => s.module === mod)
+    if (own.length) return own.slice(0, 1)
+  }
   if (trackId === 'veerarag' && mod) {
     const own = pool.sims.filter((s) => s.ragModule === mod)
     if (own.length) return own.slice(0, 1)

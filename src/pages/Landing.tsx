@@ -2,18 +2,18 @@ import { Link } from 'react-router-dom'
 import { getCurriculumIndex } from '@/content/loadCurriculum'
 import { COURSES, continueLink, courseTrackIds } from '@/content/courses'
 import { DOCKER_MODULES } from '@/content/docker/modules'
-import { AGENT_GALLERY, PYTHON_GALLERY, getAnySim, simHref } from '@/content/sims/registry'
+import { AGENT_GALLERY, PYTHON_GALLERY, RAG_GALLERY, PROJECT_GALLERY, getAnySim, simHref } from '@/content/sims/registry'
 import { useProgress } from '@/store/progress'
 import { useDockerProgress } from '@/store/dockerProgress'
 import './Landing.css'
 
-const FEATURED_SIMS = ['react-loop', 'langgraph-agent', 'hitl-interrupt', 'rag-query', 'supervisor', 'py-event-loop']
+const FEATURED_SIMS = ['proj-js-event-loop', 'proj-pw-agent-mcp', 'react-loop', 'langgraph-agent', 'rag-eval-gate', 'proj-fastapi-asgi-pydantic']
 
 const PLAYGROUNDS = [
-  { to: '/labs/agent-playground', icon: '🧪', title: 'Agent Loop Playground', text: 'Inject timeouts and loops, switch guards on and off, read the cost.' },
-  { to: '/labs/guardrails', icon: '🛡️', title: 'Guardrail Tester', text: 'Fire prompt injections at layered defenses and see what stops them.' },
-  { to: '/labs/concurrency-playground', icon: '⏱️', title: 'Concurrency Playground', text: 'Threads vs asyncio vs processes on your own task mix.' },
-  { to: '/labs/context-budget', icon: '📏', title: 'Context Window Budget', text: 'Fit prompts, tools, history and RAG chunks into the window.' },
+  { to: '/labs/js-event-loop', icon: '🌀', title: 'JS Event Loop Lab', text: 'Step through Call Stack, Microtasks, Macrotasks & closure traps.' },
+  { to: '/labs/playwright-lab', icon: '🎭', title: 'Playwright & Route Lab', text: 'Test accessibility locators, actionability checks & LLM 429 mocks.' },
+  { to: '/labs/fastapi-pydantic', icon: '⚡', title: 'FastAPI ASGI Lab', text: 'Benchmark event-loop blocking, Pydantic PATCH & SSE disconnect.' },
+  { to: '/labs/capstone-evaluator', icon: '🚀', title: 'Capstone Quality Gate', text: 'Run Hybrid RAG + Zod/Pydantic + Playwright MCP eval release gates.' },
 ]
 
 const STEPS = [
@@ -46,12 +46,22 @@ const PATHS = [
   },
   {
     title: 'RAG & GenAI engineer',
-    blurb: 'Retrieval, evaluation, security and production operations.',
+    blurb: 'Retrieval, hybrid BM25, evaluation, observability and production security.',
     steps: [
-      { label: 'LLM concepts', to: '/tracks/llm-concepts' },
-      { label: 'RAG masterclass', to: '/tracks/rag' },
-      { label: 'LLM security', to: '/tracks/llm-security' },
-      { label: 'Production failures', to: '/tracks/production-failures' },
+      { label: 'VeeraRAG Foundations', to: '/rag/path/rag-basics' },
+      { label: 'BM25 & Hybrid Search', to: '/rag/path/hybrid-rerank' },
+      { label: 'Evaluation & RAGAS', to: '/rag/path/rag-evaluation' },
+      { label: 'Tracing & Observability', to: '/rag/path/rag-observability' },
+    ],
+  },
+  {
+    title: 'Full-Stack AI & QA engineer',
+    blurb: 'JS/TS + Zod, Playwright MCP, Enterprise REST & FastAPI ASGI.',
+    steps: [
+      { label: 'JS Event Loop & TS', to: '/project/path/js-async' },
+      { label: 'Playwright & MCP Agents', to: '/project/path/pw-agentic-mcp' },
+      { label: 'REST Security & SSE', to: '/project/path/rest-security' },
+      { label: 'FastAPI & Capstone', to: '/project/path/fastapi-pydantic' },
     ],
   },
 ]
@@ -97,7 +107,7 @@ export function Landing() {
   const lessonIds = (ids: string[]) => ids.flatMap((id) => (index.lessonsByTrack[id as keyof typeof index.lessonsByTrack] || []).map((l) => l.id))
   const dockerIds = DOCKER_MODULES.flatMap((m) => m.lessons.map((l) => `${m.id}/${l.id}`))
   const totalLessons = index.tracks.reduce((n, t) => n + t.lessonCount, 0) + dockerIds.length
-  const sims = AGENT_GALLERY.length + PYTHON_GALLERY.length
+  const sims = AGENT_GALLERY.length + PYTHON_GALLERY.length + RAG_GALLERY.length + PROJECT_GALLERY.length
   const doneTotal = completed.length + dockerDone.length
 
   const courseStats = (id: string, trackIds: string[]) => {

@@ -14,6 +14,7 @@ import { phaseForModule as asyncPhaseForModule } from '@/content/asyncconcur/cat
 import { phaseForModule as agentsPhaseForModule } from '@/content/agents/catalog'
 import { phaseForModule as coursePhaseForModule } from '@/content/courseKit'
 import { RAG_COURSE } from '@/content/rag/course'
+import { PROJECT_COURSE } from '@/content/project/course'
 import { pathForTrack } from '@/content/paths/courses'
 import { shortTitle, tidyTitle } from '@/content/titles'
 import { simHref, simsForLesson } from '@/content/sims/registry'
@@ -45,6 +46,12 @@ function cardBrowsePath(trackId: string, title: string) {
     const phase = coursePhaseForModule(RAG_COURSE, m[1])
     if (!phase) return '/rag'
     return phase === 'learn' ? `/rag/learn/${m[1]}` : `/rag/${phase}`
+  }
+  if (trackId === 'veeraproject') {
+    if (!m) return '/project'
+    const phase = coursePhaseForModule(PROJECT_COURSE, m[1])
+    if (!phase) return '/project'
+    return phase === 'learn' ? `/project/learn/${m[1]}` : `/project/${phase}`
   }
   return `/tracks/${trackId}`
 }
@@ -103,6 +110,17 @@ const LAB_LINKS: Record<string, { path: string; label: string }> = {
   'rate-limit': { path: '/labs/rate-limit', label: 'Token bucket lab' },
   'agent-loop': { path: '/labs/agent-loop', label: 'Agent loop animator' },
   'multi-agent': { path: '/labs/multi-agent', label: 'Multi-agent handoff lab' },
+  bm25: { path: '/labs/bm25', label: 'BM25 scoring lab' },
+  'chunking-strategy': { path: '/labs/chunking-strategy', label: 'Chunking strategy lab' },
+  'hybrid-retrieval': { path: '/labs/hybrid-retrieval', label: 'Hybrid retrieval lab' },
+  'rag-eval': { path: '/labs/rag-eval', label: 'RAG evaluation metrics lab' },
+  'rag-observability': { path: '/labs/rag-observability', label: 'RAG observability lab' },
+  'js-event-loop': { path: '/labs/js-event-loop', label: 'JS Event Loop & Closure lab' },
+  'ts-contract': { path: '/labs/ts-contract', label: 'TypeScript & Zod contract lab' },
+  'playwright-lab': { path: '/labs/playwright-lab', label: 'Playwright locator & mock lab' },
+  'http-lifecycle': { path: '/labs/http-lifecycle', label: 'HTTP & rate-limit lab' },
+  'fastapi-pydantic': { path: '/labs/fastapi-pydantic', label: 'FastAPI ASGI & Pydantic lab' },
+  'capstone-evaluator': { path: '/labs/capstone-evaluator', label: 'Capstone quality gate lab' },
   'name-vs-object': { path: '/python/labs/name-vs-object', label: 'Name vs object lab' },
   'mutable-trap': { path: '/python/labs/mutable-trap', label: 'Mutable default trap' },
   'decorator-unwrap': { path: '/python/labs/decorator-unwrap', label: 'Decorator unwrap lab' },
@@ -149,8 +167,14 @@ export function LessonShell({
       ),
     [lesson.sections],
   )
-  const isCourseTrack = ['python', 'asyncconcur', 'agents', 'veerarag'].includes(lesson.trackId)
-  const COURSE_HOME: Record<string, [string, string]> = { python: ['/python', 'Python'], asyncconcur: ['/async', 'Async'], agents: ['/agents', 'VeeraAgents'], veerarag: ['/rag', 'VeeraRAG'] }
+  const isCourseTrack = ['python', 'asyncconcur', 'agents', 'veerarag', 'veeraproject'].includes(lesson.trackId)
+  const COURSE_HOME: Record<string, [string, string]> = {
+    python: ['/python', 'Python'],
+    asyncconcur: ['/async', 'Async'],
+    agents: ['/agents', 'VeeraAgents'],
+    veerarag: ['/rag', 'VeeraRAG'],
+    veeraproject: ['/project', 'VeeraProject'],
+  }
   const agentVisuals = simsForLesson(lesson.trackId, lesson.title, lesson.sourceFile || '')
   const pathCourse = pathForTrack(lesson.trackId)
   const pathSpot = pathCourse?.getPath().where.get(lesson.id)

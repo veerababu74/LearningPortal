@@ -1,0 +1,2940 @@
+[
+ {
+  "id": "vp-01-hour-full-stack-ai-engineering-roadmap-capst-e22e19",
+  "trackId": "veeraproject",
+  "title": "01. JavaScript Core & Objects: -Hour Full-Stack AI Engineering Roadmap & Capstone Overview & Phase 4: FastAPI — 4 hours",
+  "summary": "3-Day AI Engineer Interview Preparation – Intensive Masterclass Your interview requires a combination of Generative AI, Agentic AI, backend engineering, TypeScript, test automation, and production-grade system design.…",
+  "order": 1,
+  "objectives": [
+   "Hour Full-Stack AI Engineering Roadmap & Capstone Overview",
+   "Phase 1: JavaScript and TypeScript — 12 hours",
+   "Phase 2: Playwright with Python and TypeScript — 12 hours",
+   "Phase 3: REST API and modular service design — 4 hours",
+   "Phase 4: FastAPI — 4 hours"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "js-event-loop"
+  ],
+  "series": "00. Roadmap & Platform Overview"
+ },
+ {
+  "id": "vp-01-phase-5-langchain-llm-application-developmen-cf9531",
+  "trackId": "veeraproject",
+  "title": "01. JavaScript Core & Objects: Phase 5: LangChain, LLM application development and RAG — 4 hours & Three-day execution sche",
+  "summary": "Concepts covered: LLM parameters, context windows, token budgets, prompt templates, few-shot prompting, structured outputs, JSON Schema, Pydantic validation, function calling, tool execution, LCEL, runnables, chains,…",
+  "order": 2,
+  "objectives": [
+   "Phase 5: LangChain, LLM application development and RAG — 4 hours",
+   "Phase 6: LangGraph and agent orchestration — 4 hours",
+   "Phase 7: Google ADK and agent framework comparisons — 4 hours",
+   "Phase 8: LLM and agent output evaluation — 4 hours",
+   "Three-day execution schedule"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "js-event-loop"
+  ],
+  "series": "00. Roadmap & Platform Overview"
+ },
+ {
+  "id": "vp-01-types-of-interview-questions-we-will-prepare-f57e23",
+  "trackId": "veeraproject",
+  "title": "01. JavaScript Core & Objects: Types of interview questions we will prepare & Start learning",
+  "summary": "For each module, we will target three practical examples, five coding exercises, conceptual questions, scenario-based questions and production-grade interview questions with explanations.",
+  "order": 3,
+  "objectives": [
+   "Types of interview questions we will prepare",
+   "Start learning"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "js-event-loop"
+  ],
+  "series": "00. Roadmap & Platform Overview"
+ },
+ {
+  "id": "vp-01-runtime-variables-var-let-const-types-coerci-f31483",
+  "trackId": "veeraproject",
+  "title": "01. JavaScript Core & Objects: Runtime, Variables (var/let/const), Types, Coercion & Array Pipelines",
+  "summary": "The Restaurant Kitchen Analogy Think of the V8 JavaScript engine as the head chef who only knows how to execute JavaScript calculations and manage memory (Call Stack + Heap). In the Browser, the chef works inside a…",
+  "order": 4,
+  "objectives": [
+   "Explain how V8 executes JavaScript in Chrome vs Node.js and compare JS, TypeScript, and Python",
+   "Distinguish var, let, and const across scope, hoisting, Temporal Dead Zone (TDZ), and object mutability",
+   "Avoid == coercion traps using ===, nullish coalescing (??), and optional chaining (?.)",
+   "Transform LLM and test payloads immutably using map, filter, reduce, find, some, and every"
+  ],
+  "sourceFile": "scripts/project-supplement.mjs",
+  "labIds": [
+   "js-event-loop"
+  ],
+  "series": "JS-1: JavaScript Fundamentals"
+ },
+ {
+  "id": "vp-01-js-1-javascript-fundamentals-part-2-destruct-58e3b8",
+  "trackId": "veeraproject",
+  "title": "01. JavaScript Core & Objects: JS-1: JavaScript Fundamentals — Part 2 & Destructuring, spread and rest operators",
+  "summary": "JS-1: JavaScript Fundamentals — Part 2 We have completed JavaScript runtime, variables, hoisting, scope, data types, memory management, operators, conditions, loops and array methods. Now we will complete the remaining…",
+  "order": 5,
+  "objectives": [
+   "JS-1: JavaScript Fundamentals — Part 2",
+   "Objects and JSON",
+   "Destructuring, spread and rest operators"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "js-event-loop"
+  ],
+  "series": "JS-1: JavaScript Fundamentals"
+ },
+ {
+  "id": "vp-01-functions-and-callbacks-next-module-js-2-asy-18cba5",
+  "trackId": "veeraproject",
+  "title": "01. JavaScript Core & Objects: Functions and callbacks & Next module: JS-2 — Asynchronous JavaScript",
+  "summary": "This is arguably the most important foundation before learning asynchronous JavaScript. 9.1 Storytelling: Building an AI agent factory Imagine your application performs four operations: Retrieve relevant documents.…",
+  "order": 6,
+  "objectives": [
+   "Functions and callbacks",
+   "Next module: JS-2 — Asynchronous JavaScript"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "js-event-loop"
+  ],
+  "series": "JS-1: JavaScript Fundamentals"
+ },
+ {
+  "id": "vp-02-js-2-asynchronous-javascript-interview-maste-02a44a",
+  "trackId": "veeraproject",
+  "title": "02. Async JS & Event Loop: JS-2: Asynchronous JavaScript — Interview Masterclass & Promises — The foundation of async J",
+  "summary": "JS-2: Asynchronous JavaScript — Interview Masterclass (Duration: 2 hours) (Critical interview topic) (Python asyncio comparisons) Asynchronous programming is one of the most important JavaScript concepts for your…",
+  "order": 7,
+  "objectives": [
+   "JS-2: Asynchronous JavaScript — Interview Masterclass",
+   "Synchronous vs asynchronous programming",
+   "Call stack, heap and event loop",
+   "Callbacks and callback hell",
+   "Promises — The foundation of async JavaScript"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "js-event-loop"
+  ],
+  "series": "JS-2: Asynchronous JavaScript"
+ },
+ {
+  "id": "vp-02-js-2-revision-js-2-asynchronous-javascript-a-8a7936",
+  "trackId": "veeraproject",
+  "title": "02. Async JS & Event Loop: JS-2 Revision: JS-2: Asynchronous JavaScript — Advanced Revision and Practical Labs & Promis",
+  "summary": "JS-2: Asynchronous JavaScript — Advanced Revision and Practical Labs We have already covered the complete JS-2 theoretical syllabus in the previous lesson. Since your interview is approaching, we will reinforce those…",
+  "order": 8,
+  "objectives": [
+   "JS-2: Asynchronous JavaScript — Advanced Revision and Practical Labs",
+   "Synchronous, asynchronous, concurrent and parallel execution",
+   "Event loop, call stack, microtasks and macrotasks",
+   "Callbacks, Promises and async/await",
+   "Promise combinators — Agent orchestration"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "js-event-loop"
+  ],
+  "series": "JS-2: Asynchronous JavaScript"
+ },
+ {
+  "id": "vp-02-async-and-await-promise-combinators-multi-ag-0fc201",
+  "trackId": "veeraproject",
+  "title": "02. Async JS & Event Loop: Async and await & Promise combinators — Multi-agent orchestration",
+  "summary": "5.1 Storytelling Imagine reading the instructions for our AI pipeline: Retrieve documents, then generate an answer, then evaluate it and finally return the result. We want our code to read exactly like these…",
+  "order": 9,
+  "objectives": [
+   "Async and await",
+   "Promise combinators — Multi-agent orchestration"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "js-event-loop"
+  ],
+  "series": "JS-2: Asynchronous JavaScript"
+ },
+ {
+  "id": "vp-02-js-2-revision-fetch-api-and-error-handling-r-f025f5",
+  "trackId": "veeraproject",
+  "title": "02. Async JS & Event Loop: JS-2 Revision: Fetch API and error handling & Race conditions",
+  "summary": "Practical lab: JavaScript client and Python FastAPI JavaScript / TypeScript client HTTP POST + JSON FastAPI endpoint LLM / RAG service Structured JSON response Example 1: FastAPI backend Example 2: JavaScript API client…",
+  "order": 10,
+  "objectives": [
+   "Fetch API and error handling",
+   "Retry, exponential backoff and jitter",
+   "Timeouts and cancellation",
+   "Concurrency limiting and backpressure",
+   "Race conditions"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "js-event-loop"
+  ],
+  "series": "JS-2: Asynchronous JavaScript"
+ },
+ {
+  "id": "vp-02-fetch-api-and-asynchronous-rest-api-integrat-313201",
+  "trackId": "veeraproject",
+  "title": "02. Async JS & Event Loop: Fetch API and asynchronous REST API integration & Retry mechanisms and exponential backoff",
+  "summary": "7.1 Storytelling Imagine your Python FastAPI backend exposes an endpoint for generating AI answers. Your TypeScript application sends a question to the backend and receives the answer.",
+  "order": 11,
+  "objectives": [
+   "Fetch API and asynchronous REST API integration",
+   "Error handling in asynchronous applications",
+   "Retry mechanisms and exponential backoff"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "js-event-loop"
+  ],
+  "series": "JS-2: Asynchronous JavaScript"
+ },
+ {
+  "id": "vp-02-js-2-revision-production-grade-asynchronous--001a27",
+  "trackId": "veeraproject",
+  "title": "02. Async JS & Event Loop: JS-2 Revision: Production-grade asynchronous AI system design & TS-1: TypeScript Fundamental",
+  "summary": "Interview problem: Design a multi-agent platform that retrieves source code, generates Playwright tests, executes them and evaluates the results. A strong interview answer should explain the trade-offs, not merely name…",
+  "order": 12,
+  "objectives": [
+   "Production-grade asynchronous AI system design",
+   "TS-1: TypeScript Fundamentals"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "js-event-loop"
+  ],
+  "series": "JS-2: Asynchronous JavaScript"
+ },
+ {
+  "id": "vp-02-timeouts-deadlines-and-cancellation-next-mod-6548bc",
+  "trackId": "veeraproject",
+  "title": "02. Async JS & Event Loop: Timeouts, deadlines and cancellation & Next module — TS-1: TypeScript fundamentals",
+  "summary": "10.1 Storytelling Imagine a user submits an AI request. Your research agent waits for an external API indefinitely.",
+  "order": 13,
+  "objectives": [
+   "Timeouts, deadlines and cancellation",
+   "Concurrency limiting and backpressure",
+   "Race conditions",
+   "Integrated production-grade asynchronous AI architecture",
+   "Next module — TS-1: TypeScript fundamentals"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "js-event-loop"
+  ],
+  "series": "JS-2: Asynchronous JavaScript"
+ },
+ {
+  "id": "vp-03-why-typescript-compiler-tsc-tsconfig-core-ty-340fc4",
+  "trackId": "veeraproject",
+  "title": "03. TypeScript Core & Functions: Why TypeScript, Compiler (tsc/tsconfig), Core Types, Narrowing & Strict Nulls",
+  "summary": "TypeScript is a Compile-Time Contract Layer JavaScript runs everywhere, but a typo like response.choices[0].mesage only crashes at runtime — maybe 20 minutes into a CI suite or after an LLM call costs money. TypeScript…",
+  "order": 14,
+  "objectives": [
+   "Explain type erasure, transpilation, and why tsc catches bugs before Playwright or API servers run",
+   "Configure tsconfig.json strict flags (strict, noUncheckedIndexedAccess, exactOptionalPropertyTypes)",
+   "Contrast any vs unknown vs never vs void and narrow unknown values safely",
+   "Use arrays, tuples, unions, and strict null checking for LLM tool payloads"
+  ],
+  "sourceFile": "scripts/project-supplement.mjs",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-1: TypeScript Fundamentals"
+ },
+ {
+  "id": "vp-03-ts-1-typescript-fundamentals-part-2-type-saf-95aa01",
+  "trackId": "veeraproject",
+  "title": "03. TypeScript Core & Functions: TS-1: TypeScript Fundamentals — Part 2 & Type-safe error handling",
+  "summary": "TS-1: TypeScript Fundamentals — Part 2 We have already covered the TypeScript compiler, project setup, type inference, primitive types, arrays, tuples, object types, any, unknown, never, void, strict mode, nullability…",
+  "order": 15,
+  "objectives": [
+   "TS-1: TypeScript Fundamentals — Part 2",
+   "Compile-time vs runtime errors",
+   "Runtime validation using Zod",
+   "Typed asynchronous functions",
+   "Type-safe error handling"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-1: TypeScript Fundamentals"
+ },
+ {
+  "id": "vp-03-typescript-fundamentals-rapid-revision-cheat-0f10af",
+  "trackId": "veeraproject",
+  "title": "03. TypeScript Core & Functions: TypeScript fundamentals — rapid revision cheat sheet & Next module: TypeScript functions",
+  "summary": "Most important concepts for your interview Recommended preparation priorities for your job description, not measured interview probabilities.",
+  "order": 16,
+  "objectives": [
+   "TypeScript fundamentals — rapid revision cheat sheet",
+   "Next module: TypeScript functions"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-1: TypeScript Fundamentals"
+ },
+ {
+  "id": "vp-03-ts-2-typescript-functions-interview-mastercl-e08c18",
+  "trackId": "veeraproject",
+  "title": "03. TypeScript Core & Functions: TS-2: TypeScript Functions — Interview Masterclass & Optional, default and rest parameters",
+  "summary": "TS-2: TypeScript Functions — Interview Masterclass (Beginner to advanced) (AI engineering) (Playwright automation) In TS-1, we learned how TypeScript provides static type safety, runtime schema validation, type…",
+  "order": 17,
+  "objectives": [
+   "TS-2: TypeScript Functions — Interview Masterclass",
+   "Function declarations, expressions and arrow functions",
+   "Function types and function signatures",
+   "Optional, default and rest parameters"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-2: TypeScript Functions"
+ },
+ {
+  "id": "vp-03-function-overloading-typed-callbacks-6015f2",
+  "trackId": "veeraproject",
+  "title": "03. TypeScript Core & Functions: Function overloading & Typed callbacks",
+  "summary": "This is one of the most frequently discussed TypeScript-specific function concepts. 4.1 Storytelling: One retrieval service, different inputs Imagine an AI document service.",
+  "order": 18,
+  "objectives": [
+   "Function overloading",
+   "Typed callbacks"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-2: TypeScript Functions"
+ },
+ {
+  "id": "vp-03-higher-order-functions-closures-and-lexical--b578eb",
+  "trackId": "veeraproject",
+  "title": "03. TypeScript Core & Functions: Higher-order functions & Closures and lexical environments",
+  "summary": "6.1 Storytelling: Adding capabilities without changing business logic Imagine your company has several AI services. Every service needs logging, performance measurement, retry handling and authorization.",
+  "order": 19,
+  "objectives": [
+   "Higher-order functions",
+   "Closures and lexical environments"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-2: TypeScript Functions"
+ },
+ {
+  "id": "vp-03-typed-asynchronous-callbacks-578495",
+  "trackId": "veeraproject",
+  "title": "03. TypeScript Core & Functions: Typed asynchronous callbacks",
+  "summary": "This is an exceptionally important concept for Playwright, agent orchestration and production-grade TypeScript services. 8.1 Storytelling: The supervisor must wait for its worker Imagine a research agent finishes…",
+  "order": 20,
+  "objectives": [
+   "Typed asynchronous callbacks"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-2: TypeScript Functions"
+ },
+ {
+  "id": "vp-04-ts-3-interfaces-type-aliases-and-object-cont-ba12cc",
+  "trackId": "veeraproject",
+  "title": "04. TypeScript Types, Generics & OOP: TS-3: Interfaces, Type Aliases and Object Contracts — Interview Masterclass & Union types",
+  "summary": "TS-3: Interfaces, Type Aliases and Object Contracts — Interview Masterclass (Intermediate TypeScript) (AI engineering) (Playwright automation) Until now, we have learned JavaScript, asynchronous programming, TypeScript…",
+  "order": 21,
+  "objectives": [
+   "TS-3: Interfaces, Type Aliases and Object Contracts — Interview Masterclass",
+   "Interfaces",
+   "Type aliases",
+   "Interface vs type alias",
+   "Union types"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-3: Interfaces & Type Contracts"
+ },
+ {
+  "id": "vp-04-intersection-types-structural-typing-967beb",
+  "trackId": "veeraproject",
+  "title": "04. TypeScript Types, Generics & OOP: Intersection types & Structural typing",
+  "summary": "5.1 Storytelling: Combining capabilities Imagine a coding agent must possess two capabilities: It must be an authenticated agent with an identifier, and it must have permission to generate code. An intersection combines…",
+  "order": 22,
+  "objectives": [
+   "Intersection types",
+   "Literal types",
+   "Enums",
+   "Optional and readonly properties",
+   "Structural typing"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-3: Interfaces & Type Contracts"
+ },
+ {
+  "id": "vp-04-excess-property-checking-interface-extension-f5ffd5",
+  "trackId": "veeraproject",
+  "title": "04. TypeScript Types, Generics & OOP: Excess property checking & Interface extension and declaration merging",
+  "summary": "10.1 Storytelling: Detecting incorrect configuration keys Imagine your AI application expects this configuration: A developer accidentally writes: The property name is misspelled. TypeScript applies excess property…",
+  "order": 23,
+  "objectives": [
+   "Excess property checking",
+   "Discriminated unions — Critical for agent orchestration",
+   "Index signatures and dynamic object keys",
+   "Interface extension and declaration merging"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-3: Interfaces & Type Contracts"
+ },
+ {
+  "id": "vp-04-rapid-revision-cheat-sheet-next-module-ts-4--ed585a",
+  "trackId": "veeraproject",
+  "title": "04. TypeScript Types, Generics & OOP: Rapid revision cheat sheet & Next module: TS-4 — Advanced types and generics",
+  "summary": "Interview preparation priorities Recommended study priorities for your AI engineering and Playwright interview, not measured interview probabilities.",
+  "order": 24,
+  "objectives": [
+   "Rapid revision cheat sheet",
+   "Next module: TS-4 — Advanced types and generics"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-3: Interfaces & Type Contracts"
+ },
+ {
+  "id": "vp-04-ts-4-advanced-typescript-types-and-generics--a7eb9e",
+  "trackId": "veeraproject",
+  "title": "04. TypeScript Types, Generics & OOP: TS-4: Advanced TypeScript Types and Generics — Interview Masterclass & Generic constraints",
+  "summary": "TS-4: Advanced TypeScript Types and Generics — Interview Masterclass (Intermediate to advanced) (AI engineering) (Playwright automation) Until now, we have covered JavaScript fundamentals, asynchronous programming,…",
+  "order": 25,
+  "objectives": [
+   "TS-4: Advanced TypeScript Types and Generics — Interview Masterclass",
+   "Generics — Understanding from absolute zero",
+   "Generic functions",
+   "Generic interfaces and generic classes",
+   "Generic constraints"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-4: Generics & Type-Level Programming"
+ },
+ {
+  "id": "vp-04-keyof-typeof-and-indexed-access-types-return-fb0933",
+  "trackId": "veeraproject",
+  "title": "04. TypeScript Types, Generics & OOP: keyof, typeof and indexed access types & ReturnType, Parameters and Awaited",
+  "summary": "These three concepts work together and form the foundation of many advanced TypeScript utilities. 5.1 Storytelling: A dynamic agent configuration reader Imagine an AI application has this configuration: You want a…",
+  "order": 26,
+  "objectives": [
+   "keyof, typeof and indexed access types",
+   "Utility types — Transform existing types instead of rewriting them",
+   "Partial, Required and Readonly",
+   "Pick, Omit and Record",
+   "ReturnType, Parameters and Awaited"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-4: Generics & Type-Level Programming"
+ },
+ {
+  "id": "vp-04-exclude-extract-and-nonnullable-the-infer-ke-1f08cf",
+  "trackId": "veeraproject",
+  "title": "04. TypeScript Types, Generics & OOP: Exclude, Extract and NonNullable & The infer keyword",
+  "summary": "These utilities operate primarily on unions. 10.1 Storytelling: Selecting permitted workflow states Suppose an AI workflow supports these states: Your retry scheduler should only process specific terminal failures.",
+  "order": 27,
+  "objectives": [
+   "Exclude, Extract and NonNullable",
+   "Conditional types",
+   "Mapped types",
+   "The infer keyword"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-4: Generics & Type-Level Programming"
+ },
+ {
+  "id": "vp-04-branded-types-simulating-nominal-type-safety-8cfb22",
+  "trackId": "veeraproject",
+  "title": "04. TypeScript Types, Generics & OOP: Branded types — Simulating nominal type safety & Advanced TypeScript rapid revision cheat sh",
+  "summary": "14.1 Storytelling: Preventing cross-tenant identifier mistakes Suppose your enterprise AI application uses these identifiers: These aliases appear to represent different concepts. However: TypeScript accepts this…",
+  "order": 28,
+  "objectives": [
+   "Branded types — Simulating nominal type safety",
+   "Integrated production lab: Fully typed LLM tool registry",
+   "Advanced TypeScript rapid revision cheat sheet"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-4: Generics & Type-Level Programming"
+ },
+ {
+  "id": "vp-04-next-module-ts-5-object-oriented-programming-7d746c",
+  "trackId": "veeraproject",
+  "title": "04. TypeScript Types, Generics & OOP: Next module: TS-5 — Object-oriented programming and modular architecture",
+  "summary": "Since you already know Python, we can accelerate OOP concepts and focus on differences that matter in TypeScript. We will cover classes, constructors, access modifiers, getters and setters, inheritance, polymorphism,…",
+  "order": 29,
+  "objectives": [
+   "Next module: TS-5 — Object-oriented programming and modular architecture"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-4: Generics & Type-Level Programming"
+ },
+ {
+  "id": "vp-04-ts-5-object-oriented-programming-and-modular-ffbc6c",
+  "trackId": "veeraproject",
+  "title": "04. TypeScript Types, Generics & OOP: TS-5: Object-Oriented Programming and Modular Architecture & Getters and setters",
+  "summary": "TS-5: Object-Oriented Programming and Modular Architecture TypeScript Masterclass · AI Engineering · Playwright · Interview Preparation We have now completed the core TypeScript type system, including generics,…",
+  "order": 30,
+  "objectives": [
+   "TS-5: Object-Oriented Programming and Modular Architecture",
+   "What is object-oriented programming?",
+   "Classes, objects and constructors",
+   "Encapsulation and access modifiers",
+   "Getters and setters"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-5: OOP, SOLID & Architecture"
+ },
+ {
+  "id": "vp-04-inheritance-dependency-injection-0275bf",
+  "trackId": "veeraproject",
+  "title": "04. TypeScript Types, Generics & OOP: Inheritance & Dependency injection",
+  "summary": "5.1 Storytelling: Different agents, shared characteristics Imagine your AI platform has research, coding and testing agents. Every agent has an ID and a name.",
+  "order": 31,
+  "objectives": [
+   "Inheritance",
+   "Polymorphism",
+   "Abstraction, abstract classes and interfaces",
+   "Composition vs inheritance",
+   "Dependency injection"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-5: OOP, SOLID & Architecture"
+ },
+ {
+  "id": "vp-04-static-members-playwright-page-object-model--1f1ff9",
+  "trackId": "veeraproject",
+  "title": "04. TypeScript Types, Generics & OOP: Static members & Playwright Page Object Model (POM)",
+  "summary": "10.1 Storytelling: Company-level vs employee-level information Every employee has a personal name. However, all employees may share the same company name.",
+  "order": 32,
+  "objectives": [
+   "Static members",
+   "SOLID principles — Production-grade software architecture",
+   "Modules, imports and exports",
+   "Modular production service architecture",
+   "Playwright Page Object Model (POM)"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-5: OOP, SOLID & Architecture"
+ },
+ {
+  "id": "vp-04-advanced-playwright-architecture-fixtures-an-6dac87",
+  "trackId": "veeraproject",
+  "title": "04. TypeScript Types, Generics & OOP: Advanced Playwright architecture: Fixtures and dependency injection & Next module: TS-6 — Pr",
+  "summary": "Creating page objects manually in every test is acceptable for small projects. In larger test frameworks, custom fixtures can automatically create and inject the required page objects.",
+  "order": 33,
+  "objectives": [
+   "Advanced Playwright architecture: Fixtures and dependency injection",
+   "Production architecture: Combining AI agents and Playwright",
+   "Rapid revision cheat sheet",
+   "TS-5 completion checklist",
+   "Next module: TS-6 — Production-grade TypeScript"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-5: OOP, SOLID & Architecture"
+ },
+ {
+  "id": "vp-05-ts-6-production-grade-typescript-and-intervi-0f7531",
+  "trackId": "veeraproject",
+  "title": "05. Production TypeScript & Resilience: TS-6: Production-Grade TypeScript and Interview Revision & Custom errors and structured erro",
+  "summary": "TS-6: Production-Grade TypeScript and Interview Revision Final TypeScript Module · AI Engineering · Backend Development · Playwright Automation Until now, we have learned how to write TypeScript applications. Today, we…",
+  "order": 34,
+  "objectives": [
+   "TS-6: Production-Grade TypeScript and Interview Revision",
+   "What makes an application production-grade?",
+   "Runtime validation with Zod",
+   "Environment configuration and secret management",
+   "Custom errors and structured error handling"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-6: Production TypeScript & Resilience"
+ },
+ {
+  "id": "vp-05-ts-6-revision-ts-6-production-grade-typescri-8d285d",
+  "trackId": "veeraproject",
+  "title": "05. Production TypeScript & Resilience: TS-6 Revision: TS-6: Production-Grade TypeScript — Advanced Revision and Practical Labs & Cu",
+  "summary": "TS-6: Production-Grade TypeScript — Advanced Revision and Practical Labs We have already covered the TS-6 concepts in the previous lesson. This time, we will reinforce them through implementation, debugging scenarios,…",
+  "order": 35,
+  "objectives": [
+   "TS-6: Production-Grade TypeScript — Advanced Revision and Practical Labs",
+   "Production architecture: The complete picture",
+   "Zod runtime validation — Advanced practical concepts",
+   "Production environment configuration",
+   "Custom errors and structured error handling"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-6: Production TypeScript & Resilience"
+ },
+ {
+  "id": "vp-05-structured-logging-correlation-ids-and-obser-4ba80f",
+  "trackId": "veeraproject",
+  "title": "05. Production TypeScript & Resilience: Structured logging, correlation IDs and observability & Timeouts, deadlines and cancellation",
+  "summary": "5.1 Storytelling: Investigating a failed multi-agent workflow A customer submits a requirement: The request passes through an API service, research agent, vector database, LLM provider, browser worker and evaluation…",
+  "order": 36,
+  "objectives": [
+   "Structured logging, correlation IDs and observability",
+   "Reusable typed API clients",
+   "Retries and exponential backoff",
+   "Timeouts, deadlines and cancellation"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-6: Production TypeScript & Resilience"
+ },
+ {
+  "id": "vp-05-ts-6-revision-logging-correlation-ids-and-di-2ff64c",
+  "trackId": "veeraproject",
+  "title": "05. Production TypeScript & Resilience: TS-6 Revision: Logging, correlation IDs and distributed tracing & Security and LLM structure",
+  "summary": "5.1 Storytelling: Tracking a parcel A parcel travels through warehouses, delivery vehicles and distribution centers. Its tracking number allows you to identify its complete journey.",
+  "order": 37,
+  "objectives": [
+   "Logging, correlation IDs and distributed tracing",
+   "Reusable typed API clients",
+   "Retries, exponential backoff and jitter",
+   "Timeouts, cancellation and circuit breakers",
+   "Security and LLM structured outputs"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-6: Production TypeScript & Resilience"
+ },
+ {
+  "id": "vp-05-circuit-breaker-pattern-unit-testing-integra-16abdd",
+  "trackId": "veeraproject",
+  "title": "05. Production TypeScript & Resilience: Circuit breaker pattern & Unit testing, integration testing and mocking",
+  "summary": "9.1 Storytelling: An electrical safety switch When an electrical circuit repeatedly overloads, a circuit breaker disconnects it to prevent further damage. A software circuit breaker behaves similarly.",
+  "order": 38,
+  "objectives": [
+   "Circuit breaker pattern",
+   "Production security for TypeScript and AI applications",
+   "LLM structured outputs",
+   "Unit testing, integration testing and mocking"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-6: Production TypeScript & Resilience"
+ },
+ {
+  "id": "vp-05-ts-6-revision-unit-testing-and-mocking-next--d5109e",
+  "trackId": "veeraproject",
+  "title": "05. Production TypeScript & Resilience: TS-6 Revision: Unit testing and mocking & Next phase: Playwright Masterclass",
+  "summary": "10.1 Deterministic software vs probabilistic AI Suppose you have an AI-generated test-plan service. There are two distinct questions: Does the software invoke the correct provider and validate the response?",
+  "order": 39,
+  "objectives": [
+   "Unit testing and mocking",
+   "ESLint, strict TypeScript and CI/CD",
+   "Next phase: Playwright Masterclass"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-6: Production TypeScript & Resilience"
+ },
+ {
+  "id": "vp-05-production-typescript-compiler-configuration-98f7f9",
+  "trackId": "veeraproject",
+  "title": "05. Production TypeScript & Resilience: Production TypeScript compiler configuration & Integrated production lab: Reliable AI servic",
+  "summary": "13.1 Why strict TypeScript matters TypeScript is most valuable when the compiler is configured to detect meaningful mistakes. An application using any everywhere and disabling strict checking gains little protection…",
+  "order": 40,
+  "objectives": [
+   "Production TypeScript compiler configuration",
+   "ESLint and code quality",
+   "CI/CD for TypeScript and Playwright",
+   "Integrated production lab: Reliable AI service with TypeScript"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-6: Production TypeScript & Resilience"
+ },
+ {
+  "id": "vp-05-production-grade-typescript-rapid-revision-c-930189",
+  "trackId": "veeraproject",
+  "title": "05. Production TypeScript & Resilience: Production-grade TypeScript rapid revision cheat sheet & Next phase: Playwright Python and T",
+  "summary": "We will now start our dedicated 12-hour Playwright preparation from absolute zero and progress toward production-grade automation and AI-driven testing. Since you have learned TypeScript and already know Python, we can…",
+  "order": 41,
+  "objectives": [
+   "Production-grade TypeScript rapid revision cheat sheet",
+   "Next phase: Playwright Python and TypeScript Masterclass"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "ts-contract"
+  ],
+  "series": "TS-6: Production TypeScript & Resilience"
+ },
+ {
+  "id": "vp-06-pw-1-playwright-fundamentals-from-absolute-z-a02fe8",
+  "trackId": "veeraproject",
+  "title": "06. Playwright Basics, Locators & Waiting: PW-1: Playwright Fundamentals from Absolute Zero & What is Playwright?",
+  "summary": "PW-1: Playwright Fundamentals from Absolute Zero Playwright Masterclass · Python + TypeScript · AI Engineering · Interview Preparation We have completed our JavaScript and TypeScript curriculum. Now we will begin the…",
+  "order": 42,
+  "objectives": [
+   "PW-1: Playwright Fundamentals from Absolute Zero",
+   "Software testing fundamentals",
+   "Manual testing vs automation testing",
+   "Unit testing vs integration testing vs end-to-end testing",
+   "What is Playwright?"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-1: Playwright Fundamentals"
+ },
+ {
+  "id": "vp-06-playwright-vs-selenium-vs-webdriverio-playwr-3300ef",
+  "trackId": "veeraproject",
+  "title": "06. Playwright Basics, Locators & Waiting: Playwright vs Selenium vs WebdriverIO & Playwright installation and project setup",
+  "summary": "You should be able to explain all three frameworks during your interview. 5.1 Selenium is an established browser automation ecosystem with support for multiple programming languages, browser drivers and distributed…",
+  "order": 43,
+  "objectives": [
+   "Playwright vs Selenium vs WebdriverIO",
+   "Playwright internal architecture",
+   "Browser, BrowserContext and Page",
+   "Browser engines",
+   "Playwright installation and project setup"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-1: Playwright Fundamentals"
+ },
+ {
+  "id": "vp-06-python-synchronous-vs-asynchronous-playwrigh-1dcd5d",
+  "trackId": "veeraproject",
+  "title": "06. Playwright Basics, Locators & Waiting: Python synchronous vs asynchronous Playwright APIs & Automation script vs automated test",
+  "summary": "You already learned asynchronous execution in Python and JavaScript. Now apply that knowledge to browser automation.",
+  "order": 44,
+  "objectives": [
+   "Python synchronous vs asynchronous Playwright APIs",
+   "Headed vs headless execution",
+   "Browser lifecycle and resource cleanup",
+   "Your first complete browser automation script",
+   "Automation script vs automated test"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-1: Playwright Fundamentals"
+ },
+ {
+  "id": "vp-06-pytest-vs-playwright-test-integrated-practic-86760b",
+  "trackId": "veeraproject",
+  "title": "06. Playwright Basics, Locators & Waiting: pytest vs Playwright Test & Integrated practical lab — Testing a Generative AI FastAPI appli",
+  "summary": "15.1 Comparison 15.2 Python configuration pytest.ini: Install parallel execution support when needed: Run four worker processes: 15.3 TypeScript configuration playwright.config.ts: Install all required browser engines…",
+  "order": 45,
+  "objectives": [
+   "pytest vs Playwright Test",
+   "Navigation fundamentals",
+   "Screenshots and visual evidence",
+   "Assertions — The heart of automated testing",
+   "Integrated practical lab — Testing a Generative AI FastAPI application"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-1: Playwright Fundamentals"
+ },
+ {
+  "id": "vp-06-practical-ai-use-cases-for-playwright-next-m-711987",
+  "trackId": "veeraproject",
+  "title": "06. Playwright Basics, Locators & Waiting: Practical AI use cases for Playwright & Next module: PW-2 — DOM, Locators, Selectors and Ele",
+  "summary": "20.1 RAG application testing Playwright can verify that a RAG application allows users to upload documents, submit questions, receive answers and open citations. A browser test can check whether citation links are…",
+  "order": 46,
+  "objectives": [
+   "Practical AI use cases for Playwright",
+   "Python vs TypeScript Playwright rapid revision cheat sheet",
+   "PW-1 completion checklist",
+   "Next module: PW-2 — DOM, Locators, Selectors and Element Interactions"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-1: Playwright Fundamentals"
+ },
+ {
+  "id": "vp-06-pw-2-playwright-dom-locators-selectors-and-e-711450",
+  "trackId": "veeraproject",
+  "title": "06. Playwright Basics, Locators & Waiting: PW-2: Playwright DOM, Locators, Selectors and Element Interactions & XPath selectors",
+  "summary": "PW-2: Playwright DOM, Locators, Selectors and Element Interactions Playwright Masterclass · Python + TypeScript · Generative AI · Interview Preparation In PW-1, we learned how Playwright launches browsers, creates…",
+  "order": 47,
+  "objectives": [
+   "PW-2: Playwright DOM, Locators, Selectors and Element Interactions",
+   "Understanding HTML and the DOM",
+   "Accessibility tree",
+   "CSS selectors",
+   "XPath selectors"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-2: DOM, Locators & Interactions"
+ },
+ {
+  "id": "vp-06-playwright-locators-getbyplaceholder-getbyte-6f38fb",
+  "trackId": "veeraproject",
+  "title": "06. Playwright Basics, Locators & Waiting: Playwright locators & getByPlaceholder(), getByTestId(), getByAltText() and getByTitle()",
+  "summary": "5.1 Storytelling: A permanent address versus a live search instruction Imagine you need to contact the current manager of a department. One approach is to save the current manager's phone number.",
+  "order": 48,
+  "objectives": [
+   "Playwright locators",
+   "getByRole() — The most important locator",
+   "getByText()",
+   "getByLabel()",
+   "getByPlaceholder(), getByTestId(), getByAltText() and getByTitle()"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-2: DOM, Locators & Interactions"
+ },
+ {
+  "id": "vp-06-locator-chaining-and-filtering-text-inputs-f-22a012",
+  "trackId": "veeraproject",
+  "title": "06. Playwright Basics, Locators & Waiting: Locator chaining and filtering & Text inputs: fill(), clear(), press() and pressSequentially",
+  "summary": "This is one of the most important interview topics in PW-2. 10.1 Storytelling: Finding the correct document in a knowledge base Imagine a RAG knowledge base displaying multiple documents.",
+  "order": 49,
+  "objectives": [
+   "Locator chaining and filtering",
+   "first(), last(), nth() and locator strictness",
+   "Locator vs ElementHandle",
+   "Element interactions: click, double-click, hover and focus",
+   "Text inputs: fill(), clear(), press() and pressSequentially()"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-2: DOM, Locators & Interactions"
+ },
+ {
+  "id": "vp-06-keyboard-operations-reading-element-informat-3cae32",
+  "trackId": "veeraproject",
+  "title": "06. Playwright Basics, Locators & Waiting: Keyboard operations & Reading element information",
+  "summary": "Use a locator-specific keyboard operation when the target element is known. Use page-level keyboard operations when interacting with the currently focused control or simulating broader keyboard sequences.",
+  "order": 50,
+  "objectives": [
+   "Keyboard operations",
+   "Mouse operations",
+   "Checkboxes and radio buttons",
+   "Dropdowns — Native vs custom dropdowns",
+   "Reading element information"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-2: DOM, Locators & Interactions"
+ },
+ {
+  "id": "vp-06-dynamic-elements-and-modern-frontend-applica-e2b649",
+  "trackId": "veeraproject",
+  "title": "06. Playwright Basics, Locators & Waiting: Dynamic elements and modern frontend applications & Next module: PW-3 — Auto-waiting, assert",
+  "summary": "20.1 Storytelling: A shop whose products arrive gradually Imagine entering a shop while employees are still arranging products. If you immediately count the products, you may get an incomplete result.",
+  "order": 51,
+  "objectives": [
+   "Dynamic elements and modern frontend applications",
+   "Production-grade AI browser agents",
+   "Python vs TypeScript rapid revision cheat sheet",
+   "PW-2 completion checklist",
+   "Next module: PW-3 — Auto-waiting, assertions and synchronization"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-2: DOM, Locators & Interactions"
+ },
+ {
+  "id": "vp-06-pw-3-playwright-auto-waiting-assertions-and--f7fc31",
+  "trackId": "veeraproject",
+  "title": "06. Playwright Basics, Locators & Waiting: PW-3: Playwright Auto-Waiting, Assertions and Synchronization & Web-first assertions",
+  "summary": "PW-3: Playwright Auto-Waiting, Assertions and Synchronization Playwright Masterclass · Python + TypeScript · Production Automation · Generative AI · Interview Preparation In PW-2, we learned how to identify elements and…",
+  "order": 52,
+  "objectives": [
+   "PW-3: Playwright Auto-Waiting, Assertions and Synchronization",
+   "Understanding synchronization",
+   "Playwright automatic waiting",
+   "Complete Playwright actionability matrix",
+   "Web-first assertions"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-3: Auto-Waiting & Assertions"
+ },
+ {
+  "id": "vp-06-hard-assertions-vs-soft-assertions-waitforre-cd891e",
+  "trackId": "veeraproject",
+  "title": "06. Playwright Basics, Locators & Waiting: Hard assertions vs soft assertions & waitForResponse() and waitForRequest()",
+  "summary": "5.1 Storytelling: Checking a car before delivery Suppose you are inspecting a new car. If the brakes do not work, you should stop the driving test immediately.",
+  "order": 53,
+  "objectives": [
+   "Hard assertions vs soft assertions",
+   "expect.poll() and custom polling",
+   "Explicit waits",
+   "Navigation lifecycle",
+   "waitForResponse() and waitForRequest()"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-3: Auto-Waiting & Assertions"
+ },
+ {
+  "id": "vp-06-race-conditions-synchronization-with-streami-d8b642",
+  "trackId": "veeraproject",
+  "title": "06. Playwright Basics, Locators & Waiting: Race conditions & Synchronization with streaming LLM responses",
+  "summary": "10.1 Storytelling: Registering for a notification after it was sent Suppose a railway station sends you a notification when your train arrives. If you register for that notification only after the train has arrived, you…",
+  "order": 54,
+  "objectives": [
+   "Race conditions",
+   "Timeout hierarchy",
+   "React hydration and browser synchronization",
+   "Flaky tests and test retries",
+   "Synchronization with streaming LLM responses"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-3: Auto-Waiting & Assertions"
+ },
+ {
+  "id": "vp-06-integrated-practical-lab-testing-a-streaming-95798d",
+  "trackId": "veeraproject",
+  "title": "06. Playwright Basics, Locators & Waiting: Integrated practical lab — Testing a streaming AI FastAPI application & Next module: PW-4 — ",
+  "summary": "Now we will build a small streaming chatbot and test its synchronization behavior using both Python and TypeScript. This lab demonstrates delayed responses, network events, dynamic rendering, terminal-state assertions…",
+  "order": 55,
+  "objectives": [
+   "Integrated practical lab — Testing a streaming AI FastAPI application",
+   "Production-grade synchronization architecture for AI systems",
+   "Python vs TypeScript rapid revision cheat sheet",
+   "PW-3 completion checklist",
+   "Next module: PW-4 — Advanced browser operations"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-3: Auto-Waiting & Assertions"
+ },
+ {
+  "id": "vp-07-pw-4-advanced-playwright-browser-operations--f9a553",
+  "trackId": "veeraproject",
+  "title": "07. Playwright Ops & Test Architecture: PW-4: Advanced Playwright Browser Operations & Iframes and nested frames",
+  "summary": "PW-4: Advanced Playwright Browser Operations Playwright Masterclass · Python + TypeScript · AI Engineering · Production Automation Until now, we have learned browser architecture, locators, element interactions,…",
+  "order": 56,
+  "objectives": [
+   "PW-4: Advanced Playwright Browser Operations",
+   "Multiple tabs and pages",
+   "Popups and new browser tabs",
+   "Browser events",
+   "Iframes and nested frames"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-4: Advanced Browser Operations"
+ },
+ {
+  "id": "vp-07-javascript-dialogs-alerts-confirms-and-promp-985fe7",
+  "trackId": "veeraproject",
+  "title": "07. Playwright Ops & Test Architecture: JavaScript dialogs: Alerts, confirms and prompts & Screenshots and video recordings",
+  "summary": "5.1 Storytelling: Deleting a document from a knowledge base Imagine that an administrator clicks Delete on a document in a RAG application. The browser displays a confirmation: The administrator must accept or cancel…",
+  "order": 57,
+  "objectives": [
+   "JavaScript dialogs: Alerts, confirms and prompts",
+   "File uploads",
+   "File chooser events",
+   "File downloads",
+   "Screenshots and video recordings"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-4: Advanced Browser Operations"
+ },
+ {
+  "id": "vp-07-cookies-localstorage-and-sessionstorage-brow-1db3c7",
+  "trackId": "veeraproject",
+  "title": "07. Playwright Ops & Test Architecture: Cookies, localStorage and sessionStorage & Browser permissions",
+  "summary": "Understanding browser storage is essential for authentication testing. 10.1 Storytelling: A hotel access card When you check into a hotel, the receptionist gives you an access card.",
+  "order": 58,
+  "objectives": [
+   "Cookies, localStorage and sessionStorage",
+   "localStorage and sessionStorage",
+   "storageState and authentication state reuse",
+   "Persistent browser contexts",
+   "Browser permissions"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-4: Advanced Browser Operations"
+ },
+ {
+  "id": "vp-07-device-emulation-integrated-practical-lab-ra-4e10b5",
+  "trackId": "veeraproject",
+  "title": "07. Playwright Ops & Test Architecture: Device emulation & Integrated practical lab — RAG document upload and AI report download",
+  "summary": "15.1 Storytelling: Testing one application on many devices Your AI chatbot works correctly on a desktop browser. However, on a mobile-sized screen: The Send button may disappear.",
+  "order": 59,
+  "objectives": [
+   "Device emulation",
+   "Shadow DOM",
+   "Integrated practical lab — RAG document upload and AI report download"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-4: Advanced Browser Operations"
+ },
+ {
+  "id": "vp-07-production-grade-browser-security-for-agenti-2e0222",
+  "trackId": "veeraproject",
+  "title": "07. Playwright Ops & Test Architecture: Production-grade browser security for agentic AI & PW-5: Playwright Framework Architecture, ",
+  "summary": "This is especially important for your interview because a conventional automated test follows predefined instructions, while an AI browser agent may decide which action to take based on untrusted content. 18.1…",
+  "order": 60,
+  "objectives": [
+   "Production-grade browser security for agentic AI",
+   "Python vs TypeScript rapid revision cheat sheet",
+   "PW-4 completion checklist",
+   "Next module: PW-5 — Production-grade Playwright test framework architecture",
+   "PW-5: Playwright Framework Architecture, Fixtures and Page Object Models"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-4: Advanced Browser Operations"
+ },
+ {
+  "id": "vp-07-pw-5-production-grade-playwright-test-framew-330290",
+  "trackId": "veeraproject",
+  "title": "07. Playwright Ops & Test Architecture: PW-5: Production-Grade Playwright Test Framework Architecture & Custom fixtures in Python us",
+  "summary": "PW-5: Production-Grade Playwright Test Framework Architecture Playwright Masterclass · Python + TypeScript · Enterprise Architecture · Generative AI · Interview Preparation Until PW-4, we learned how to write individual…",
+  "order": 61,
+  "objectives": [
+   "PW-5: Production-Grade Playwright Test Framework Architecture",
+   "Understanding test framework architecture",
+   "Understanding test runners: pytest vs Playwright Test",
+   "Fixtures — The foundation of test framework architecture",
+   "Custom fixtures in Python using conftest.py"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-5: Test Framework Architecture"
+ },
+ {
+  "id": "vp-07-custom-typescript-fixtures-using-test-extend-533202",
+  "trackId": "veeraproject",
+  "title": "07. Playwright Ops & Test Architecture: Custom TypeScript fixtures using test.extend() & Lifecycle hooks: beforeEach, afterEach, bef",
+  "summary": "5.1 Storytelling: Extending a standard toolkit Imagine a company provides every engineer with a standard toolkit. AI engineers receive additional equipment for model evaluation.",
+  "order": 62,
+  "objectives": [
+   "Custom TypeScript fixtures using test.extend()",
+   "Fixture dependency injection",
+   "Fixture scopes: Test-scoped vs worker-scoped fixtures",
+   "Automatic fixtures and lifecycle ordering",
+   "Lifecycle hooks: beforeEach, afterEach, beforeAll and afterAll"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-5: Test Framework Architecture"
+ },
+ {
+  "id": "vp-07-page-object-model-pom-test-data-factories-071e09",
+  "trackId": "veeraproject",
+  "title": "07. Playwright Ops & Test Architecture: Page Object Model (POM) & Test data factories",
+  "summary": "This is arguably the most frequently discussed test design pattern in Playwright interviews. 10.1 Storytelling: The remote control Imagine operating a television.",
+  "order": 63,
+  "objectives": [
+   "Page Object Model (POM)",
+   "Component Object Model",
+   "SOLID principles in Playwright frameworks",
+   "Reusable base classes — Composition vs inheritance",
+   "Test data factories"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-5: Test Framework Architecture"
+ },
+ {
+  "id": "vp-07-parameterization-and-data-driven-testing-sha-22fa7d",
+  "trackId": "veeraproject",
+  "title": "07. Playwright Ops & Test Architecture: Parameterization and data-driven testing & Sharding and distributed execution",
+  "summary": "15.1 Storytelling: Testing different questions in an AI chatbot Suppose your chatbot must answer questions about RAG, LangGraph, FastAPI and Docker. Without parameterization, you might write four nearly identical tests.…",
+  "order": 64,
+  "objectives": [
+   "Parameterization and data-driven testing",
+   "Parallel execution and worker processes",
+   "fullyParallel, parallel mode and serial execution",
+   "Playwright projects",
+   "Sharding and distributed execution"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-5: Test Framework Architecture"
+ },
+ {
+  "id": "vp-07-tags-markers-and-annotations-integrated-prac-9300f7",
+  "trackId": "veeraproject",
+  "title": "07. Playwright Ops & Test Architecture: Tags, markers and annotations & Integrated practical lab — Build a modular AI testing framew",
+  "summary": "20.1 Storytelling: Classifying books in a library A library categorizes books into programming, science, history and other subjects. When a reader needs a programming book, the librarian does not inspect every book…",
+  "order": 65,
+  "objectives": [
+   "Tags, markers and annotations",
+   "Authentication fixtures for enterprise testing",
+   "Environment configuration and secret management",
+   "Enterprise folder structure",
+   "Integrated practical lab — Build a modular AI testing framework"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-5: Test Framework Architecture"
+ },
+ {
+  "id": "vp-07-build-the-python-testing-framework-interacti-a82824",
+  "trackId": "veeraproject",
+  "title": "07. Playwright Ops & Test Architecture: Build the Python testing framework & Interactive enterprise test-framework designer",
+  "summary": "25.1 Minimal project structure 25.2 Citation component components/citation_panel.py: 25.3 ChatPage object pages/chat_page.py: The Page Object encapsulates browser behavior. The test decides what constitutes a correct…",
+  "order": 66,
+  "objectives": [
+   "Build the Python testing framework",
+   "Build the TypeScript testing framework",
+   "Production-grade RAG and agentic AI testing architecture",
+   "CI/CD execution strategy",
+   "Interactive enterprise test-framework designer"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-5: Test Framework Architecture"
+ },
+ {
+  "id": "vp-07-python-vs-typescript-rapid-revision-cheat-sh-85f632",
+  "trackId": "veeraproject",
+  "title": "07. Playwright Ops & Test Architecture: Python vs TypeScript rapid revision cheat sheet & PW-6: API Testing and Network Mocking",
+  "summary": "PW-5 readiness % of objectives completed The fixture, runner, project, authentication and parallelism explanations were checked against official documentation. The code examples have not been compiled or executed…",
+  "order": 67,
+  "objectives": [
+   "Python vs TypeScript rapid revision cheat sheet",
+   "PW-5 completion checklist",
+   "PW-6: API Testing and Network Mocking"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-5: Test Framework Architecture"
+ },
+ {
+  "id": "vp-08-combining-ui-api-llm-contract-testing-archit-9b506d",
+  "trackId": "veeraproject",
+  "title": "08. Playwright API Mocking, BDD & CI/CD: Combining UI, API & LLM Contract Testing (Architecture Overview)",
+  "summary": "Pure E2E browser tests that hit real LLMs for every button click are slow, expensive, and flaky. Senior engineers combine three Playwright tools: APIRequestContext (request.post('/v1/rag/ingest')) — seed test documents,…",
+  "order": 68,
+  "objectives": [
+   "Design a 3-layer test pyramid combining APIRequestContext, page.route() mocks, and real Playwright UI assertions",
+   "Know when to hit a real FastAPI backend vs mock slow or non-deterministic LLM responses"
+  ],
+  "sourceFile": "scripts/project-supplement.mjs",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-6: API Testing & Network Interception"
+ },
+ {
+  "id": "vp-08-pw-6-api-testing-network-interception-and-mo-34aa76",
+  "trackId": "veeraproject",
+  "title": "08. Playwright API Mocking, BDD & CI/CD: PW-6: API Testing, Network Interception and Mocking — Continued & Authentication, bearer tok",
+  "summary": "PW-6: API Testing, Network Interception and Mocking — Continued We have already introduced the difference between UI testing, API testing and AI quality evaluation. Now we will move directly into implementation,…",
+  "order": 69,
+  "objectives": [
+   "PW-6: API Testing, Network Interception and Mocking — Continued",
+   "APIRequestContext",
+   "HTTP methods — GET, POST, PUT, PATCH and DELETE",
+   "Request headers, parameters and request bodies",
+   "Authentication, bearer tokens and cookies"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-6: API Testing & Network Mocking"
+ },
+ {
+  "id": "vp-08-api-response-assertions-and-contract-validat-f2b50b",
+  "trackId": "veeraproject",
+  "title": "08. Playwright API Mocking, BDD & CI/CD: API response assertions and contract validation & HAR recording and replay",
+  "summary": "6.1 Why HTTP 200 is insufficient Suppose your RAG API returns: The HTTP status is 200. Does this mean the application is working correctly?",
+  "order": 70,
+  "objectives": [
+   "API response assertions and contract validation",
+   "Network interception",
+   "Request modification and response modification",
+   "Network events and diagnostics",
+   "HAR recording and replay"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-6: API Testing & Network Mocking"
+ },
+ {
+  "id": "vp-08-mocking-fastapi-vs-mocking-llm-providers-cir-fc3ba6",
+  "trackId": "veeraproject",
+  "title": "08. Playwright API Mocking, BDD & CI/CD: Mocking FastAPI vs mocking LLM providers & Circuit breaker testing",
+  "summary": "This distinction is particularly important in your interview. 11.1 Where should we introduce the mock?",
+  "order": 71,
+  "objectives": [
+   "Mocking FastAPI vs mocking LLM providers",
+   "HTTP 429, 5xx, slow responses and network failures",
+   "Retry testing",
+   "Circuit breaker testing"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-6: API Testing & Network Mocking"
+ },
+ {
+  "id": "vp-08-integrated-practical-lab-fastapi-playwright--43a14c",
+  "trackId": "veeraproject",
+  "title": "08. Playwright API Mocking, BDD & CI/CD: Integrated practical lab — FastAPI, Playwright and AI resilience & Python vs TypeScript rapi",
+  "summary": "We will now combine API testing, deterministic LLM simulation, response validation, network mocking and retry testing into a single local application. 15.1 Architecture 15.2 Create the backend Install: Create app.py:…",
+  "order": 72,
+  "objectives": [
+   "Integrated practical lab — FastAPI, Playwright and AI resilience",
+   "Complete Python Playwright test suite",
+   "Complete TypeScript Playwright test suite",
+   "Production-grade AI network testing strategy",
+   "Python vs TypeScript rapid revision cheat sheet"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-6: API Testing & Network Mocking"
+ },
+ {
+  "id": "vp-08-pw-6-completion-checklist-pw-7-behavior-driv-2de0d1",
+  "trackId": "veeraproject",
+  "title": "08. Playwright API Mocking, BDD & CI/CD: PW-6 completion checklist & PW-7: Behavior-Driven Development",
+  "summary": "PW-6 readiness % of objectives completed The Playwright networking and API descriptions were checked against official documentation. The code examples have not been compiled or executed against a live browser…",
+  "order": 73,
+  "objectives": [
+   "PW-6 completion checklist",
+   "PW-7: Behavior-Driven Development"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-6: API Testing & Network Mocking"
+ },
+ {
+  "id": "vp-08-pw-7-behavior-driven-development-cucumber-an-b9b4ea",
+  "trackId": "veeraproject",
+  "title": "08. Playwright API Mocking, BDD & CI/CD: PW-7: Behavior-Driven Development, Cucumber and Gherkin & Gherkin fundamentals",
+  "summary": "PW-7: Behavior-Driven Development, Cucumber and Gherkin Playwright Masterclass · Python + TypeScript · BDD · Generative AI · Agentic AI · Interview Preparation Until PW-6, we learned browser automation, production-grade…",
+  "order": 74,
+  "objectives": [
+   "PW-7: Behavior-Driven Development, Cucumber and Gherkin",
+   "Behavior-Driven Development (BDD)",
+   "BDD vs TDD vs ATDD",
+   "Cucumber vs Gherkin vs Playwright",
+   "Gherkin fundamentals"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-7: BDD, Cucumber & Gherkin"
+ },
+ {
+  "id": "vp-08-given-when-then-and-and-but-data-tables-and--b80c55",
+  "trackId": "veeraproject",
+  "title": "08. Playwright API Mocking, BDD & CI/CD: Given, When, Then, And and But & Data Tables and Doc Strings",
+  "summary": "5.1 Storytelling: Testing a secure AI research assistant Suppose a researcher wants to access a confidential company document. We need to describe three things: the existing situation, the action performed and the…",
+  "order": 75,
+  "objectives": [
+   "Given, When, Then, And and But",
+   "Feature, Rule and Scenario",
+   "Background",
+   "Scenario Outline and Examples",
+   "Data Tables and Doc Strings"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-7: BDD, Cucumber & Gherkin"
+ },
+ {
+  "id": "vp-08-step-definitions-integrated-practical-lab-fa-615a79",
+  "trackId": "veeraproject",
+  "title": "08. Playwright API Mocking, BDD & CI/CD: Step definitions & Integrated practical lab — FastAPI + BDD + Playwright",
+  "summary": "10.1 Storytelling: Translating natural language into instructions Imagine a user tells an AI agent: \"Open the knowledge base and ask a question about RAG.\" A browser automation tool needs exact executable instructions.…",
+  "order": 76,
+  "objectives": [
+   "Step definitions",
+   "Cucumber expressions vs regular expressions",
+   "Hooks, World objects and scenario context",
+   "Tags and conditional hooks",
+   "Integrated practical lab — FastAPI + BDD + Playwright"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-7: BDD, Cucumber & Gherkin"
+ },
+ {
+  "id": "vp-08-typescript-cucumber-js-with-playwright-testi-acd3e7",
+  "trackId": "veeraproject",
+  "title": "08. Playwright API Mocking, BDD & CI/CD: TypeScript Cucumber.js with Playwright & Testing AI failures through BDD",
+  "summary": "15.1 Installation Use a dedicated TypeScript project with a supported Node.js version. We will use: Cucumber.js as the test runner.",
+  "order": 77,
+  "objectives": [
+   "TypeScript Cucumber.js with Playwright",
+   "Python Behave with Playwright",
+   "Python pytest-bdd with Playwright",
+   "API testing using Gherkin",
+   "Testing AI failures through BDD"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-7: BDD, Cucumber & Gherkin"
+ },
+ {
+  "id": "vp-08-parallel-execution-and-bdd-reporting-pw-7-co-484d3e",
+  "trackId": "veeraproject",
+  "title": "08. Playwright API Mocking, BDD & CI/CD: Parallel execution and BDD reporting & PW-7 completion checklist",
+  "summary": "20.1 Cucumber.js parallel execution Cucumber.js manages parallel scenario execution through worker infrastructure. Each scenario must have independent state and appropriate resource ownership.",
+  "order": 78,
+  "objectives": [
+   "Parallel execution and BDD reporting",
+   "Production-grade AI-generated Gherkin scenarios",
+   "Production-grade RAG and agentic AI BDD scenarios",
+   "Python vs TypeScript rapid revision cheat sheet",
+   "PW-7 completion checklist"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-7: BDD, Cucumber & Gherkin"
+ },
+ {
+  "id": "vp-08-next-module-pw-8-production-grade-playwright-b7c8f4",
+  "trackId": "veeraproject",
+  "title": "08. Playwright API Mocking, BDD & CI/CD: Next module: PW-8 — Production-grade Playwright & PW-8: Production Playwright, Docker, CI/CD",
+  "summary": "We have now learned how to write automated tests, construct maintainable frameworks, mock network failures and implement business-readable BDD scenarios. Next, we will learn how to deploy and operate these testing…",
+  "order": 79,
+  "objectives": [
+   "Next module: PW-8 — Production-grade Playwright",
+   "PW-8: Production Playwright, Docker, CI/CD and Observability"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-7: BDD, Cucumber & Gherkin"
+ },
+ {
+  "id": "vp-08-pw-8-production-grade-playwright-docker-ci-c-d1ed39",
+  "trackId": "veeraproject",
+  "title": "08. Playwright API Mocking, BDD & CI/CD: PW-8: Production-Grade Playwright, Docker, CI/CD and Observability & Headless execution in L",
+  "summary": "PW-8: Production-Grade Playwright, Docker, CI/CD and Observability Playwright Masterclass · Python + TypeScript · DevOps · FastAPI · Agentic AI · Interview Preparation Until PW-7, we learned how to write automated…",
+  "order": 80,
+  "objectives": [
+   "PW-8: Production-Grade Playwright, Docker, CI/CD and Observability",
+   "Understanding production testing infrastructure",
+   "Docker fundamentals for Playwright",
+   "Official Playwright Docker images",
+   "Headless execution in Linux"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-8: Docker, CI/CD & Observability"
+ },
+ {
+  "id": "vp-08-docker-compose-fastapi-and-playwright-integr-7538f4",
+  "trackId": "veeraproject",
+  "title": "08. Playwright API Mocking, BDD & CI/CD: Docker Compose — FastAPI and Playwright integration & CI/CD quality gates",
+  "summary": "5.1 Storytelling: Connecting multiple teams Imagine your AI application consists of several services: FastAPI handles requests. A vector database stores document embeddings.",
+  "order": 81,
+  "objectives": [
+   "Docker Compose — FastAPI and Playwright integration",
+   "Continuous Integration and Continuous Delivery",
+   "GitHub Actions with Playwright",
+   "Azure DevOps pipelines",
+   "CI/CD quality gates"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-8: Docker, CI/CD & Observability"
+ },
+ {
+  "id": "vp-08-distributed-execution-workers-shards-and-bro-7d45b8",
+  "trackId": "veeraproject",
+  "title": "08. Playwright API Mocking, BDD & CI/CD: Distributed execution: Workers, shards and browser pools & Trace Viewer",
+  "summary": "10.1 Three different scalability concepts We introduced workers and shards during PW-5. Now we will examine their infrastructure implications.",
+  "order": 82,
+  "objectives": [
+   "Distributed execution: Workers, shards and browser pools",
+   "Remote browser connections",
+   "Test reports — HTML, JUnit and JSON",
+   "Screenshots, videos and tracing",
+   "Trace Viewer"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-8: Docker, CI/CD & Observability"
+ },
+ {
+  "id": "vp-08-playwright-inspector-and-debugging-multi-ten-1cfc9b",
+  "trackId": "veeraproject",
+  "title": "08. Playwright API Mocking, BDD & CI/CD: Playwright Inspector and debugging & Multi-tenant isolation",
+  "summary": "15.1 Inspector vs Trace Viewer 15.2 TypeScript debugging commands Debug a particular test: Open Playwright Test UI mode: Launch code generation: 15.3 Python debugging commands On Windows PowerShell: On Linux: Pause…",
+  "order": 83,
+  "objectives": [
+   "Playwright Inspector and debugging",
+   "Flaky tests and retry analysis",
+   "Structured logging, correlation IDs and observability",
+   "Secret management and authentication security",
+   "Multi-tenant isolation"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-8: Docker, CI/CD & Observability"
+ },
+ {
+  "id": "vp-08-browser-sandboxing-and-network-restrictions--fb9c4e",
+  "trackId": "veeraproject",
+  "title": "08. Playwright API Mocking, BDD & CI/CD: Browser sandboxing and network restrictions & Rapid revision cheat sheet",
+  "summary": "20.1 Storytelling: An AI browser agent visits an external website Suppose a browser agent is asked to research public documentation. The webpage contains untrusted instructions telling the agent to access internal…",
+  "order": 84,
+  "objectives": [
+   "Browser sandboxing and network restrictions",
+   "Test data cleanup and resource lifecycle",
+   "Production-grade agentic AI testing infrastructure",
+   "Production Playwright configuration — Rapid reference",
+   "Rapid revision cheat sheet"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-8: Docker, CI/CD & Observability"
+ },
+ {
+  "id": "vp-08-pw-8-completion-checklist-pw-9-building-prod-4b627d",
+  "trackId": "veeraproject",
+  "title": "08. Playwright API Mocking, BDD & CI/CD: PW-8 completion checklist & PW-9: Building Production-Grade AI Browser Agents",
+  "summary": "PW-8 readiness % of objectives completed Implementation notes and official documentation I checked the relevant Docker, Playwright CI, reporting and tracing documentation. I have not built the Docker images, compiled…",
+  "order": 85,
+  "objectives": [
+   "PW-8 completion checklist",
+   "PW-9: Building Production-Grade AI Browser Agents"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-8: Docker, CI/CD & Observability"
+ },
+ {
+  "id": "vp-09-pw-9-agentic-ai-with-playwright-building-pro-1d36dd",
+  "trackId": "veeraproject",
+  "title": "09. Agentic AI Browser Automation (MCP): PW-9: Agentic AI with Playwright — Building Production-Grade AI Browser Agents & Structured ",
+  "summary": "PW-9: Agentic AI with Playwright — Building Production-Grade AI Browser Agents Playwright Masterclass · Generative AI · Python + TypeScript · LangGraph · Google ADK · MCP · Interview Preparation Until PW-8, we learned…",
+  "order": 86,
+  "objectives": [
+   "PW-9: Agentic AI with Playwright — Building Production-Grade AI Browser Agents",
+   "What is an AI browser agent?",
+   "Traditional automation vs agentic automation",
+   "Natural-language browser control and LLM tool calling",
+   "Structured browser action schemas"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-9: Agentic AI Browser Automation"
+ },
+ {
+  "id": "vp-09-tool-registries-and-deterministic-browser-ex-beb879",
+  "trackId": "veeraproject",
+  "title": "09. Agentic AI Browser Automation (MCP): Tool registries and deterministic browser execution & Planning agents vs execution agents",
+  "summary": "5.1 What is a tool registry? A tool registry is a controlled mapping between approved tool names and executable implementations.",
+  "order": 87,
+  "objectives": [
+   "Tool registries and deterministic browser execution",
+   "DOM-based, accessibility-based and vision-based browser agents",
+   "Playwright MCP — Model Context Protocol",
+   "ReAct — Observe, reason, act and verify",
+   "Planning agents vs execution agents"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-9: Agentic AI Browser Automation"
+ },
+ {
+  "id": "vp-09-self-healing-locators-and-their-limitations--fb1b0b",
+  "trackId": "veeraproject",
+  "title": "09. Agentic AI Browser Automation (MCP): Self-healing locators and their limitations & AI-generated Playwright tests and Gherkin scen",
+  "summary": "10.1 Storytelling: A restaurant changes its menu layout Suppose your automation script identifies a Submit button using: After a frontend release, the element ID becomes submit-v2. The old selector fails even though the…",
+  "order": 88,
+  "objectives": [
+   "Self-healing locators and their limitations",
+   "LangGraph integration with Playwright",
+   "Google ADK integration with Playwright",
+   "AI-generated Playwright tests and Gherkin scenarios"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-9: Agentic AI Browser Automation"
+ },
+ {
+  "id": "vp-09-prompt-injection-in-ai-browser-agents-browse-a62b22",
+  "trackId": "veeraproject",
+  "title": "09. Agentic AI Browser Automation (MCP): Prompt injection in AI browser agents & Browser-agent evaluation",
+  "summary": "This is a critical interview topic. 14.1 Storytelling: A misleading sign in an office Imagine an employee is authorized to inspect a company's knowledge base.",
+  "order": 89,
+  "objectives": [
+   "Prompt injection in AI browser agents",
+   "Tool permissions and human-in-the-loop approval",
+   "Token budgets, execution budgets and loop termination",
+   "Browser-agent observability",
+   "Browser-agent evaluation"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-9: Agentic AI Browser Automation"
+ },
+ {
+  "id": "vp-09-integrated-fastapi-browser-agent-service-pw--67583d",
+  "trackId": "veeraproject",
+  "title": "09. Agentic AI Browser Automation (MCP): Integrated FastAPI browser-agent service & PW-9 completion checklist",
+  "summary": "We will now design a small service combining FastAPI, Pydantic, Playwright, deterministic execution, permission checking and a bounded workflow. Unlike an unrestricted browser agent, this service accepts only an…",
+  "order": 90,
+  "objectives": [
+   "Integrated FastAPI browser-agent service",
+   "Production-grade multi-agent software testing architecture",
+   "Agentic AI and Playwright rapid revision cheat sheet",
+   "PW-9 completion checklist"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "playwright-lab"
+  ],
+  "series": "PW-9: Agentic AI Browser Automation"
+ },
+ {
+  "id": "vp-10-rest-1-http-and-rest-api-fundamentals-zero-t-b72c69",
+  "trackId": "veeraproject",
+  "title": "10. REST APIs, Design & Security: REST-1: HTTP and REST API Fundamentals — Zero to Interview Level & DNS — Domain Name System",
+  "summary": "REST-1: HTTP and REST API Fundamentals — Zero to Interview Level REST API Masterclass · Python Backend Development · FastAPI · Generative AI · Production Engineering We have completed the JavaScript, TypeScript and…",
+  "order": 91,
+  "objectives": [
+   "REST-1: HTTP and REST API Fundamentals — Zero to Interview Level",
+   "What is an API?",
+   "Client-server architecture",
+   "HTTP request and response lifecycle",
+   "DNS — Domain Name System"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "http-lifecycle"
+  ],
+  "series": "REST-1: HTTP & REST Fundamentals"
+ },
+ {
+  "id": "vp-10-tcp-transmission-control-protocol-url-struct-dea459",
+  "trackId": "veeraproject",
+  "title": "10. REST APIs, Design & Security: TCP — Transmission Control Protocol & URL structure, path parameters and query parameters",
+  "summary": "5.1 Storytelling: Sending important documents Imagine sending ten pages of a signed contract. You want the receiver to receive all ten pages in the correct order, even if some parts need to be retransmitted.",
+  "order": 92,
+  "objectives": [
+   "TCP — Transmission Control Protocol",
+   "TLS, HTTP and HTTPS",
+   "Interactive HTTP lifecycle laboratory",
+   "Anatomy of an HTTP request and response",
+   "URL structure, path parameters and query parameters"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "http-lifecycle"
+  ],
+  "series": "REST-1: HTTP & REST Fundamentals"
+ },
+ {
+  "id": "vp-10-http-headers-what-is-rest-83500d",
+  "trackId": "veeraproject",
+  "title": "10. REST APIs, Design & Security: HTTP headers & What is REST?",
+  "summary": "10.1 Storytelling: A courier envelope The document inside a parcel represents its content. The address, tracking number and handling instructions outside the parcel represent metadata.",
+  "order": 93,
+  "objectives": [
+   "HTTP headers",
+   "HTTP methods — GET, POST, PUT, PATCH, DELETE and others",
+   "Safe methods and idempotent methods",
+   "HTTP status codes",
+   "What is REST?"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "http-lifecycle"
+  ],
+  "series": "REST-1: HTTP & REST Fundamentals"
+ },
+ {
+  "id": "vp-10-statelessness-vs-stateful-applications-pytho-975a4f",
+  "trackId": "veeraproject",
+  "title": "10. REST APIs, Design & Security: Statelessness vs stateful applications & Python Requests vs HTTPX",
+  "summary": "15.1 Storytelling: Two restaurant ordering systems Restaurant A remembers you solely because you previously spoke to a particular waiter. If another waiter arrives, that waiter has no information about your previous…",
+  "order": 94,
+  "objectives": [
+   "Statelessness vs stateful applications",
+   "Resource-oriented API design",
+   "REST vs SOAP vs GraphQL vs gRPC",
+   "Python Requests vs HTTPX"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "http-lifecycle"
+  ],
+  "series": "REST-1: HTTP & REST Fundamentals"
+ },
+ {
+  "id": "vp-10-integrated-practical-lab-fastapi-rest-api-fo-1528ca",
+  "trackId": "veeraproject",
+  "title": "10. REST APIs, Design & Security: Integrated practical lab — FastAPI REST API for an AI agent platform & REST-1 completion che",
+  "summary": "Now we will combine HTTP methods, resource design, status codes, headers, path parameters, query parameters and runtime validation into a single practical application. 19.1 Business requirements Build an API that…",
+  "order": 95,
+  "objectives": [
+   "Integrated practical lab — FastAPI REST API for an AI agent platform",
+   "Production-grade REST API failure scenarios",
+   "REST API rapid revision cheat sheet",
+   "REST-1 completion checklist"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "http-lifecycle"
+  ],
+  "series": "REST-1: HTTP & REST Fundamentals"
+ },
+ {
+  "id": "vp-10-rest-2-professional-rest-api-design-enterpri-17dc56",
+  "trackId": "veeraproject",
+  "title": "10. REST APIs, Design & Security: REST-2: Professional REST API Design — Enterprise and Generative AI Masterclass & Profession",
+  "summary": "REST-2: Professional REST API Design — Enterprise and Generative AI Masterclass Python · FastAPI · API Contracts · Distributed Systems · RAG · Agentic AI · Interview Preparation In REST-1, we learned how HTTP works, how…",
+  "order": 96,
+  "objectives": [
+   "REST-2: Professional REST API Design — Enterprise and Generative AI Masterclass",
+   "Resource modeling",
+   "Endpoint naming conventions",
+   "Nested resources",
+   "Professional CRUD design and resource lifecycle"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "http-lifecycle"
+  ],
+  "series": "REST-2: Enterprise REST Design"
+ },
+ {
+  "id": "vp-10-request-schemas-response-schemas-and-data-co-507547",
+  "trackId": "veeraproject",
+  "title": "10. REST APIs, Design & Security: Request schemas, response schemas and data contracts & Filtering, sorting, searching and fie",
+  "summary": "5.1 Storytelling: A company recruitment form Imagine a candidate submits a job application. The company collects the candidate's name, email address and resume.",
+  "order": 97,
+  "objectives": [
+   "Request schemas, response schemas and data contracts",
+   "Response envelopes",
+   "Structured errors — RFC 9457 Problem Details",
+   "Pagination — Offset, cursor and keyset pagination",
+   "Filtering, sorting, searching and field selection"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "http-lifecycle"
+  ],
+  "series": "REST-2: Enterprise REST Design"
+ },
+ {
+  "id": "vp-10-api-versioning-and-backward-compatibility-op-ddea9c",
+  "trackId": "veeraproject",
+  "title": "10. REST APIs, Design & Security: API versioning and backward compatibility & Optimistic concurrency control",
+  "summary": "10.1 Storytelling: Updating a mobile banking application Imagine a bank changes its backend response from: to: Existing mobile applications still expect balance. They may stop working even though the backend considers…",
+  "order": 98,
+  "objectives": [
+   "API versioning and backward compatibility",
+   "API deprecation and sunset management",
+   "Idempotency keys and duplicate-request protection",
+   "Atomic duplicate detection and concurrent requests",
+   "Optimistic concurrency control"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "http-lifecycle"
+  ],
+  "series": "REST-2: Enterprise REST Design"
+ },
+ {
+  "id": "vp-10-etag-if-match-and-if-none-match-bulk-api-ope-b1ae0e",
+  "trackId": "veeraproject",
+  "title": "10. REST APIs, Design & Security: ETag, If-Match and If-None-Match & Bulk API operations",
+  "summary": "These HTTP features allow us to implement conditional requests without inventing an entirely custom concurrency protocol. 15.1 What is an ETag?",
+  "order": 99,
+  "objectives": [
+   "ETag, If-Match and If-None-Match",
+   "API contracts, OpenAPI and JSON Schema",
+   "Bulk API operations"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "http-lifecycle"
+  ],
+  "series": "REST-2: Enterprise REST Design"
+ },
+ {
+  "id": "vp-10-integrated-practical-lab-enterprise-rag-docu-445947",
+  "trackId": "veeraproject",
+  "title": "10. REST APIs, Design & Security: Integrated practical lab — Enterprise RAG document API & REST-2 completion checklist",
+  "summary": "Now we will combine the most important REST-2 concepts into one coherent FastAPI application. 18.1 Business requirements The API should support document creation, cursor-based pagination, filtering, field-safe…",
+  "order": 100,
+  "objectives": [
+   "Integrated practical lab — Enterprise RAG document API",
+   "Production-grade REST architecture for RAG and agentic AI",
+   "REST-2 rapid revision cheat sheet",
+   "REST-2 completion checklist"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "http-lifecycle"
+  ],
+  "series": "REST-2: Enterprise REST Design"
+ },
+ {
+  "id": "vp-10-authn-vs-authz-jwt-hs256-vs-rs256-refresh-ro-13fc26",
+  "trackId": "veeraproject",
+  "title": "10. REST APIs, Design & Security: AuthN vs AuthZ, JWT (HS256 vs RS256), Refresh Rotation, OAuth 2.0 PKCE, OIDC & RBAC/ABAC",
+  "summary": "Authentication vs Authorization Authentication (AuthN = 401 Unauthorized): Passport control proves who you are. Authorization (AuthZ = 403 Forbidden): The boarding gate checks whether you have a seat on THIS flight /…",
+  "order": 101,
+  "objectives": [
+   "Separate Authentication (who you are) from Authorization (what you can do)",
+   "Compare Basic Auth, API Keys, Sessions/Cookies, and stateless JWT Bearer tokens",
+   "Explain JWT Header.Payload.Signature, HS256 vs RS256, refresh token rotation, and reuse detection",
+   "Trace OAuth 2.0 Authorization Code + PKCE vs Client Credentials vs OpenID Connect (OIDC)",
+   "Combine RBAC and ABAC for multi-tenant RAG and FastAPI services"
+  ],
+  "sourceFile": "scripts/project-supplement.mjs",
+  "labIds": [
+   "http-lifecycle"
+  ],
+  "series": "REST-3: Production API Security"
+ },
+ {
+  "id": "vp-10-rest-3-production-grade-api-security-part-3--823d1c",
+  "trackId": "veeraproject",
+  "title": "10. REST APIs, Design & Security: REST-3: Production-Grade API Security — Part 3 & HTTPS, TLS and mutual TLS",
+  "summary": "REST-3: Production-Grade API Security — Part 3 We have completed authentication, JWT, OAuth 2.0, OpenID Connect, token management, RBAC and ABAC. Now we will focus on the remaining security concepts, particularly…",
+  "order": 102,
+  "objectives": [
+   "REST-3: Production-Grade API Security — Part 3",
+   "Resource-level authorization and BOLA",
+   "CORS — Cross-Origin Resource Sharing",
+   "CSRF — Cross-Site Request Forgery",
+   "HTTPS, TLS and mutual TLS"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "http-lifecycle"
+  ],
+  "series": "REST-3: Production API Security"
+ },
+ {
+  "id": "vp-10-owasp-api-security-top-10-api-gateway-securi-d9fdce",
+  "trackId": "veeraproject",
+  "title": "10. REST APIs, Design & Security: OWASP API Security Top 10 & API gateway security",
+  "summary": "OWASP provides a widely used security-risk reference for API development. We will use its 2023 API Security Top 10 edition.",
+  "order": 103,
+  "objectives": [
+   "OWASP API Security Top 10",
+   "SQL injection and mass assignment",
+   "SSRF — Server-Side Request Forgery",
+   "Secret management",
+   "API gateway security"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "http-lifecycle"
+  ],
+  "series": "REST-3: Production API Security"
+ },
+ {
+  "id": "vp-10-multi-tenant-rag-security-integrated-practic-332b06",
+  "trackId": "veeraproject",
+  "title": "10. REST APIs, Design & Security: Multi-tenant RAG security & Integrated practical lab — Secure FastAPI RAG service",
+  "summary": "This is one of the most important security concepts for a Generative AI engineer. 25.1 Storytelling: A shared library with private collections Imagine a library used by three companies.",
+  "order": 104,
+  "objectives": [
+   "Multi-tenant RAG security",
+   "Prompt injection and agent tool authorization",
+   "Integrated practical lab — Secure FastAPI RAG service"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "http-lifecycle"
+  ],
+  "series": "REST-3: Production API Security"
+ },
+ {
+  "id": "vp-10-automated-api-security-testing-rest-3-comple-a5a8d6",
+  "trackId": "veeraproject",
+  "title": "10. REST APIs, Design & Security: Automated API security testing & REST-3 completion checklist",
+  "summary": "This connects REST security directly to the Playwright and API testing curriculum we completed. 28.1 Security test matrix 28.2 pytest security regression tests test_security.py: Test cross-tenant access: Test…",
+  "order": 105,
+  "objectives": [
+   "Automated API security testing",
+   "REST-3 rapid revision cheat sheet",
+   "REST-3 completion checklist"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "http-lifecycle"
+  ],
+  "series": "REST-3: Production API Security"
+ },
+ {
+  "id": "vp-11-rest-4-production-grade-rest-api-architectur-375f74",
+  "trackId": "veeraproject",
+  "title": "11. Scalable APIs & GenAI Streaming: REST-4: Production-Grade REST API Architecture & Caching and Redis",
+  "summary": "REST-4: Production-Grade REST API Architecture FastAPI · Redis · Distributed Systems · Scalability · Reliability · LLM Infrastructure · Interview Preparation In REST-1, we learned HTTP fundamentals. In REST-2, we…",
+  "order": 106,
+  "objectives": [
+   "REST-4: Production-Grade REST API Architecture",
+   "Why do we need production-grade architecture?",
+   "Reverse proxy, API gateway and load balancer",
+   "Horizontal vs vertical scaling",
+   "Caching and Redis"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "http-lifecycle"
+  ],
+  "series": "REST-4: Scalable API Architecture"
+ },
+ {
+  "id": "vp-11-caching-strategies-rate-limiting-algorithms-48c99e",
+  "trackId": "veeraproject",
+  "title": "11. Scalable APIs & GenAI Streaming: Caching strategies & Rate-limiting algorithms",
+  "summary": "5.1 Cache-aside — lazy loading This is a common default for read-heavy applications. Python example This assumes every authorized reader receives the same cached document representation.",
+  "order": 107,
+  "objectives": [
+   "Caching strategies",
+   "TTL, cache invalidation and consistency",
+   "Cache stampede, penetration and avalanche",
+   "Distributed rate limiting",
+   "Rate-limiting algorithms"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "http-lifecycle"
+  ],
+  "series": "REST-4: Scalable API Architecture"
+ },
+ {
+  "id": "vp-11-rest-5-production-grade-generative-ai-api-ar-9aff40",
+  "trackId": "veeraproject",
+  "title": "11. Scalable APIs & GenAI Streaming: REST-5: Production-Grade Generative AI API Architecture & Server-Sent Events — SSE",
+  "summary": "REST-5: Production-Grade Generative AI API Architecture FastAPI · LLM Streaming · SSE · WebSockets · Celery · RabbitMQ · Azure Service Bus · RAG · LangGraph · Google ADK Until now, we have learned how to design, secure,…",
+  "order": 108,
+  "objectives": [
+   "REST-5: Production-Grade Generative AI API Architecture",
+   "Synchronous vs asynchronous API architecture",
+   "HTTP 202 Accepted and asynchronous job submission",
+   "LLM streaming and HTTP streaming",
+   "Server-Sent Events — SSE"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "http-lifecycle"
+  ],
+  "series": "REST-5: Generative AI API Architecture"
+ },
+ {
+  "id": "vp-11-sse-reconnection-event-replay-and-streaming--429878",
+  "trackId": "veeraproject",
+  "title": "11. Scalable APIs & GenAI Streaming: SSE reconnection, event replay and streaming failures & LLM streaming performance metrics",
+  "summary": "5.1 Why reconnection matters Imagine a multi-agent workflow takes five minutes. After two minutes, the user's internet connection disconnects.",
+  "order": 109,
+  "objectives": [
+   "SSE reconnection, event replay and streaming failures",
+   "WebSockets",
+   "Webhooks and webhook signature verification",
+   "Cancellation and client disconnects",
+   "LLM streaming performance metrics"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "http-lifecycle"
+  ],
+  "series": "REST-5: Generative AI API Architecture"
+ },
+ {
+  "id": "vp-11-message-queues-and-background-workers-acknow-ac3366",
+  "trackId": "veeraproject",
+  "title": "11. Scalable APIs & GenAI Streaming: Message queues and background workers & Acknowledgments, redelivery and dead-letter queues",
+  "summary": "10.1 Storytelling: Orders in a restaurant kitchen A waiter does not need to remain beside the chef until every order is cooked. The waiter submits the order.",
+  "order": 110,
+  "objectives": [
+   "Message queues and background workers",
+   "FastAPI BackgroundTasks vs Celery",
+   "Celery with RabbitMQ and Redis",
+   "RabbitMQ and Azure Service Bus",
+   "Acknowledgments, redelivery and dead-letter queues"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "http-lifecycle"
+  ],
+  "series": "REST-5: Generative AI API Architecture"
+ },
+ {
+  "id": "vp-11-durable-job-state-and-transactional-outbox-i-fad61f",
+  "trackId": "veeraproject",
+  "title": "11. Scalable APIs & GenAI Streaming: Durable job state and transactional outbox & Integrated practical laboratory — FastAPI strea",
+  "summary": "We introduced the transactional outbox in REST-2. It becomes particularly important for asynchronous AI APIs.",
+  "order": 111,
+  "objectives": [
+   "Durable job state and transactional outbox",
+   "Production-grade RAG document ingestion architecture",
+   "LangGraph and Google ADK execution APIs",
+   "Human-in-the-loop approval APIs",
+   "Integrated practical laboratory — FastAPI streaming and asynchronous AI jobs"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "http-lifecycle"
+  ],
+  "series": "REST-5: Generative AI API Architecture"
+ },
+ {
+  "id": "vp-11-rapid-revision-cheat-sheet-89dc92",
+  "trackId": "veeraproject",
+  "title": "11. Scalable APIs & GenAI Streaming: Rapid revision cheat sheet",
+  "summary": "Official learning references Implementation notes: The code examples have not been executed here. I deliberately used deterministic mock inference, synthetic documents and in-memory job state in the integrated…",
+  "order": 112,
+  "objectives": [
+   "Rapid revision cheat sheet"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "http-lifecycle"
+  ],
+  "series": "REST-5: Generative AI API Architecture"
+ },
+ {
+  "id": "vp-12-fastapi-vs-flask-vs-django-wsgi-vs-asgi-scop-b08952",
+  "trackId": "veeraproject",
+  "title": "12. FastAPI, Pydantic V2 & Capstone: FastAPI vs Flask vs Django, WSGI vs ASGI (scope, receive, send), Sync vs Async & Depends()",
+  "summary": "Why WSGI Chokes on LLM Streaming & Concurrency WSGI (classic Flask / Django) handles one request per worker thread synchronously. While waiting 4 seconds for an LLM API response, that thread sits idle — and long SSE…",
+  "order": 113,
+  "objectives": [
+   "Compare FastAPI, Flask, and Django and explain why ASGI replaced WSGI for streaming and concurrent LLM workloads",
+   "Explain the 3 ASGI callables: scope, receive, and send",
+   "Trace what happens inside FastAPI when you write def vs async def (AnyIO threadpool vs event loop)",
+   "Build clean Dependency Injection (Depends) pipelines with sub-dependencies and yield cleanup"
+  ],
+  "sourceFile": "scripts/project-supplement.mjs",
+  "labIds": [
+   "fastapi-pydantic",
+   "capstone-evaluator"
+  ],
+  "series": "FA-1: FastAPI Fundamentals & Internals"
+ },
+ {
+  "id": "vp-12-fa-1-fastapi-fundamentals-and-internal-archi-bc93cb",
+  "trackId": "veeraproject",
+  "title": "12. FastAPI, Pydantic V2 & Capstone: FA-1: FastAPI Fundamentals and Internal Architecture — Part 2 & Routing and path operations",
+  "summary": "FA-1: FastAPI Fundamentals and Internal Architecture — Part 2 We have already covered FastAPI vs Flask vs Django, WSGI vs ASGI, and the low-level ASGI interface involving scope, receive and send. Now we will continue…",
+  "order": 114,
+  "objectives": [
+   "FA-1: FastAPI Fundamentals and Internal Architecture — Part 2",
+   "Uvicorn, Gunicorn, Starlette and Pydantic",
+   "FastAPI internal HTTP request lifecycle",
+   "Routing and path operations"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "fastapi-pydantic",
+   "capstone-evaluator"
+  ],
+  "series": "FA-1: FastAPI Fundamentals & Internals"
+ },
+ {
+  "id": "vp-12-complete-resume-schema-fastapi-playwright-ve-5705ae",
+  "trackId": "veeraproject",
+  "title": "12. FastAPI, Pydantic V2 & Capstone: Complete Resume Schema, FastAPI + Playwright Verification & Full 8-Phase AI Testing Capstone",
+  "summary": "Remember how FA-2 Section 26 ended right inside YearMonth? Here is the complete, production-ready Pydantic V2 contract preserving external JSON keys \"from\" and \"to\" (reserved/awkward in Python) via Field(alias=...) +…",
+  "order": 115,
+  "objectives": [
+   "Complete a strict Pydantic V2 nested ResumeExtraction schema with external field aliases (\"from\" / \"to\") and cross-field date validation",
+   "Combine FastAPI, Pydantic V2, TypeScript/Zod, Playwright, RAG, LangGraph/ADK, Evaluation, and OpenTelemetry into the integrated Capstone platform"
+  ],
+  "sourceFile": "scripts/project-supplement.mjs",
+  "labIds": [
+   "fastapi-pydantic",
+   "capstone-evaluator"
+  ],
+  "series": "FA-2: Pydantic V2 & Capstone Architecture"
+ },
+ {
+  "id": "vp-12-fa-2-pydantic-v2-data-validation-and-structu-7ec77c",
+  "trackId": "veeraproject",
+  "title": "12. FastAPI, Pydantic V2 & Capstone: FA-2: Pydantic V2 — Data Validation and Structured LLM Outputs & How Pydantic works internal",
+  "summary": "FA-2: Pydantic V2 — Data Validation and Structured LLM Outputs Python · FastAPI · Pydantic V2 · Structured Outputs · Resume Extraction · RAG · Agent Tool Contracts In FA-1, we learned FastAPI's internal architecture,…",
+  "order": 116,
+  "objectives": [
+   "FA-2: Pydantic V2 — Data Validation and Structured LLM Outputs",
+   "What is Pydantic?",
+   "Python type hints vs runtime validation",
+   "BaseModel fundamentals",
+   "How Pydantic works internally"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "fastapi-pydantic",
+   "capstone-evaluator"
+  ],
+  "series": "FA-2: Pydantic V2 & Structured LLM Outputs"
+ },
+ {
+  "id": "vp-12-field-constraints-nested-models-lists-and-di-7b5dcf",
+  "trackId": "veeraproject",
+  "title": "12. FastAPI, Pydantic V2 & Capstone: Field constraints & Nested models, lists and dictionaries",
+  "summary": "5.1 Storytelling: Rules for entering an examination A student may be required to have a valid registration number, be within an eligible age range and complete mandatory information. Similarly, your AI application needs…",
+  "order": 117,
+  "objectives": [
+   "Field constraints",
+   "Required, optional and nullable fields",
+   "Default values and default_factory",
+   "Type coercion and strict mode",
+   "Nested models, lists and dictionaries"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "fastapi-pydantic",
+   "capstone-evaluator"
+  ],
+  "series": "FA-2: Pydantic V2 & Structured LLM Outputs"
+ },
+ {
+  "id": "vp-12-enum-literal-and-union-types-custom-validati-112e34",
+  "trackId": "veeraproject",
+  "title": "12. FastAPI, Pydantic V2 & Capstone: Enum, Literal and union types & Custom validation with field_validator",
+  "summary": "10.1 Literal Use Literal when only specific values should be accepted. This prevents unsupported modes from entering the application.",
+  "order": 118,
+  "objectives": [
+   "Enum, Literal and union types",
+   "Discriminated unions — Essential for agent tool calling",
+   "Generic Pydantic models",
+   "Annotated and reusable constrained types",
+   "Custom validation with field_validator"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "fastapi-pydantic",
+   "capstone-evaluator"
+  ],
+  "series": "FA-2: Pydantic V2 & Structured LLM Outputs"
+ },
+ {
+  "id": "vp-12-model-validator-cross-field-business-rules-s-ca765f",
+  "trackId": "veeraproject",
+  "title": "12. FastAPI, Pydantic V2 & Capstone: model_validator — Cross-field business rules & Serialization and deserialization",
+  "summary": "15.1 Storytelling: Comparing two travel dates A booking application receives a departure date and a return date. Both dates might be individually valid, but the return date must not be earlier than the departure date.…",
+  "order": 119,
+  "objectives": [
+   "model_validator — Cross-field business rules",
+   "computed_field",
+   "ConfigDict — Model-level configuration",
+   "Aliases and serialization aliases",
+   "Serialization and deserialization"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "fastapi-pydantic",
+   "capstone-evaluator"
+  ],
+  "series": "FA-2: Pydantic V2 & Structured LLM Outputs"
+ },
+ {
+  "id": "vp-12-model-copy-and-model-construct-structured-ll-210d20",
+  "trackId": "veeraproject",
+  "title": "12. FastAPI, Pydantic V2 & Capstone: model_copy and model_construct & Structured LLM outputs — Production-grade architecture",
+  "summary": "These two methods are important because they can bypass normal validation. 21.1 model_copy() Creates a new model instance.",
+  "order": 120,
+  "objectives": [
+   "model_copy and model_construct",
+   "TypeAdapter and JSON Schema",
+   "ValidationError and professional error handling",
+   "Structured LLM outputs — Production-grade architecture"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [
+   "fastapi-pydantic",
+   "capstone-evaluator"
+  ],
+  "series": "FA-2: Pydantic V2 & Structured LLM Outputs"
+ },
+ {
+  "id": "vp-20-pw-3-auto-waiting-assertions-practice-exerci-420ecd",
+  "trackId": "veeraproject",
+  "title": "20. Exercises: PW-3: Auto-Waiting & Assertions — Practice Exercises",
+  "summary": "Complete each exercise in Python and TypeScript. Attempt the implementation before revealing the solution.",
+  "order": 121,
+  "objectives": [
+   "Five hands-on coding exercises"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "PW-3: Auto-Waiting & Assertions"
+ },
+ {
+  "id": "vp-20-pw-4-advanced-browser-operations-practice-ex-b1343c",
+  "trackId": "veeraproject",
+  "title": "20. Exercises: PW-4: Advanced Browser Operations — Practice Exercises",
+  "summary": "Attempt the exercises in both Python and TypeScript. These cover the most interview-relevant advanced browser operations.",
+  "order": 122,
+  "objectives": [
+   "Five hands-on coding exercises"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "PW-4: Advanced Browser Operations"
+ },
+ {
+  "id": "vp-20-pw-5-test-framework-architecture-practice-ex-d7b519",
+  "trackId": "veeraproject",
+  "title": "20. Exercises: PW-5: Test Framework Architecture — Practice Exercises",
+  "summary": "Complete each exercise in both Python and TypeScript. Try solving it without revealing the solution first.",
+  "order": 123,
+  "objectives": [
+   "Five hands-on coding exercises"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "PW-5: Test Framework Architecture"
+ },
+ {
+  "id": "vp-20-pw-7-bdd-cucumber-gherkin-practice-exercises-d2c9df",
+  "trackId": "veeraproject",
+  "title": "20. Exercises: PW-7: BDD, Cucumber & Gherkin — Practice Exercises",
+  "summary": "Complete each exercise before revealing the solution. These cover Gherkin writing, parameterization, step implementation, dependency injection and AI resilience.",
+  "order": 124,
+  "objectives": [
+   "Five hands-on coding exercises"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "PW-7: BDD, Cucumber & Gherkin"
+ },
+ {
+  "id": "vp-20-rest-2-enterprise-rest-design-practice-exerc-b18cd9",
+  "trackId": "veeraproject",
+  "title": "20. Exercises: REST-2: Enterprise REST Design — Practice Exercises",
+  "summary": "Try implementing these without looking at the solutions. They cover the highest-value coding topics from REST-2.",
+  "order": 125,
+  "objectives": [
+   "Five hands-on coding exercises"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "REST-2: Enterprise REST Design"
+ },
+ {
+  "id": "vp-20-javascript-typescript-worked-exercises-js-1--50b9da",
+  "trackId": "veeraproject",
+  "title": "20. Exercises: JavaScript & TypeScript Worked Exercises (JS-1 to TS-6)",
+  "summary": "Exercise 1: Fix the Shared Agent Configuration Bug Task: Write createAgentConfig(overrides) so mutating one agent's tools array or temperature never mutates BASE_CONFIG or sibling agents. Exercise 2: Bounded Concurrency…",
+  "order": 126,
+  "objectives": [
+   "Fix shared-state mutation and var-vs-let loop closure bugs in JavaScript",
+   "Implement bounded async concurrency, jittered retry with AbortController, and exhaustive TS discriminated unions",
+   "Build a generic TypeScript + Zod LLM Tool Registry that catches malformed runtime payloads"
+  ],
+  "sourceFile": "scripts/project-supplement.mjs",
+  "labIds": [],
+  "series": "VeeraProject Coding Exercises"
+ },
+ {
+  "id": "vp-20-playwright-python-ts-bdd-rest-security-fasta-a74944",
+  "trackId": "veeraproject",
+  "title": "20. Exercises: Playwright (Python & TS), BDD, REST Security & FastAPI/Pydantic V2 Worked Exercises",
+  "summary": "Exercise 1 (Playwright Python + TS): Semantic Role & Table Filtering with set_content Task: Locate the \"Delete\" button strictly inside the row belonging to \"rag-policy.pdf\" without fragile XPath indexes. Exercise 2:…",
+  "order": 127,
+  "objectives": [
+   "Write semantic Playwright locators, iframe/Shadow DOM tests, and web-first assertions in Python & TypeScript",
+   "Mock LLM HTTP 429/500 flows with page.route() and express BDD rules cleanly in Gherkin",
+   "Implement FastAPI idempotency keys, Redis token-bucket checks, and Pydantic V2 PATCH contracts"
+  ],
+  "sourceFile": "scripts/project-supplement.mjs",
+  "labIds": [],
+  "series": "VeeraProject Coding Exercises"
+ },
+ {
+  "id": "vp-21-00-roadmap-platform-overview-integrated-lab-2ce6e4",
+  "trackId": "veeraproject",
+  "title": "21. Projects & Labs: 00. Roadmap & Platform Overview — Integrated Lab",
+  "summary": "Instead of learning unrelated examples, we will connect all eight subjects through a common project. AI-powered software testing and code analysis platform The platform will: Accept software requirements and source…",
+  "order": 128,
+  "objectives": [
+   "Integrated production-grade capstone project"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "00. Roadmap & Platform Overview"
+ },
+ {
+  "id": "vp-21-fa-2-pydantic-v2-structured-llm-outputs-inte-56d99c",
+  "trackId": "veeraproject",
+  "title": "21. Projects & Labs: FA-2: Pydantic V2 & Structured LLM Outputs — Integrated Lab",
+  "summary": "For your resume-processing use case, we can build a structured contract using education records, employment dates, contact information and skills. We'll preserve \"from\" and \"to\" as external JSON fields while using valid…",
+  "order": 129,
+  "objectives": [
+   "Practical project 1 — Structured resume extraction"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "FA-2: Pydantic V2 & Structured LLM Outputs"
+ },
+ {
+  "id": "vp-21-pw-2-dom-locators-interactions-integrated-la-201ee2",
+  "trackId": "veeraproject",
+  "title": "21. Projects & Labs: PW-2: DOM, Locators & Interactions — Integrated Lab",
+  "summary": "Now we will combine everything from PW-2 into one project. This lab does not require an actual LLM API.",
+  "order": 130,
+  "objectives": [
+   "Integrated practical lab: AI Agent Configuration Platform"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "PW-2: DOM, Locators & Interactions"
+ },
+ {
+  "id": "vp-21-ts-1-typescript-fundamentals-integrated-lab-96deae",
+  "trackId": "veeraproject",
+  "title": "21. Projects & Labs: TS-1: TypeScript Fundamentals — Integrated Lab",
+  "summary": "Now combine the TypeScript concepts into a single practical application. Project: Type-safe AI chatbot API 15.1 Project structure 15.2 Python FastAPI backend backend/main.py Install and run: Execute the command from the…",
+  "order": 131,
+  "objectives": [
+   "Integrated lab: Python FastAPI + TypeScript + Zod + Playwright"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "TS-1: TypeScript Fundamentals"
+ },
+ {
+  "id": "vp-21-ts-2-typescript-functions-integrated-lab-998d20",
+  "trackId": "veeraproject",
+  "title": "21. Projects & Labs: TS-2: TypeScript Functions — Integrated Lab",
+  "summary": "Project: Type-safe AI tool execution pipeline with Playwright Business problem Build a reusable TypeScript service that receives LLM-generated browser tool arguments, validates them, checks authorization, executes an…",
+  "order": 132,
+  "objectives": [
+   "Integrated production-grade lab"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "TS-2: TypeScript Functions"
+ },
+ {
+  "id": "vp-21-ts-3-interfaces-type-contracts-integrated-la-6a304e",
+  "trackId": "veeraproject",
+  "title": "21. Projects & Labs: TS-3: Interfaces & Type Contracts — Integrated Lab",
+  "summary": "Project: Type-safe multi-agent Playwright testing platform Now we will combine the major concepts from this lesson into a practical AI engineering project. Business problem Build a service where an LLM generates…",
+  "order": 133,
+  "objectives": [
+   "Integrated production-grade lab"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "TS-3: Interfaces & Type Contracts"
+ },
+ {
+  "id": "vp-21-ts-5-oop-solid-architecture-integrated-lab-d471f4",
+  "trackId": "veeraproject",
+  "title": "21. Projects & Labs: TS-5: OOP, SOLID & Architecture — Integrated Lab",
+  "summary": "Now we will combine classes, abstraction, interfaces, composition, dependency injection, SOLID and modules in a practical implementation. 14.1 Business problem Your AI platform must support multiple LLM providers.",
+  "order": 134,
+  "objectives": [
+   "Integrated lab: Modular LLM provider adapters"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "TS-5: OOP, SOLID & Architecture"
+ },
+ {
+  "id": "vp-21-ts-6-revision-ts-6-production-typescript-res-a5c2f3",
+  "trackId": "veeraproject",
+  "title": "21. Projects & Labs: TS-6 Revision: TS-6: Production TypeScript & Resilience — Integrated Lab",
+  "summary": "Now we will combine TypeScript, Zod, dependency injection, structured output, security and Playwright in one small project. 12.1 Project objective Build a service that accepts an LLM-generated login test plan, validates…",
+  "order": 135,
+  "objectives": [
+   "Integrated practical lab: Production AI test-plan executor"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "TS-6: Production TypeScript & Resilience"
+ },
+ {
+  "id": "vp-21-capstone-project-ai-software-testing-rag-eva-3f559c",
+  "trackId": "veeraproject",
+  "title": "21. Projects & Labs: Capstone Project: AI Software Testing, RAG & Evaluation Platform (Phases 1–8)",
+  "summary": "What You Build in the Capstone FastAPI + Pydantic V2 Control Service (api/): JWT RS256 + Tenant ABAC guard POST /v1/test-runs (HTTP 202 + Idempotency-Key + RabbitMQ queue) GET /v1/test-runs/{id}/stream (SSE progress &…",
+  "order": 136,
+  "objectives": [
+   "Architect and wire the full 8-phase capstone linking TypeScript, Playwright, FastAPI, Pydantic V2, RAG, LangGraph/ADK, and Evaluation",
+   "Enforce tenant isolation, Zod/Pydantic schema boundaries, trace IDs, and release evaluation gates"
+  ],
+  "sourceFile": "scripts/project-supplement.mjs",
+  "labIds": [],
+  "series": "VeeraProject Integrated Projects"
+ },
+ {
+  "id": "vp-22-fa-2-pydantic-v2-structured-llm-outputs-inte-afa7e3",
+  "trackId": "veeraproject",
+  "title": "22. Interview: FA-2: Pydantic V2 & Structured LLM Outputs — Interview Q&A",
+  "summary": "Suppose a user wants to update an agent configuration without replacing every property. Create a dedicated PATCH schema: Extract explicitly supplied changes: Output: This differs from: Output: An explicitly provided…",
+  "order": 137,
+  "objectives": [
+   "PATCH schemas — A frequently asked production interview topic",
+   "Pydantic V1 vs V2 — Migration interview questions"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "FA-2: Pydantic V2 & Structured LLM Outputs"
+ },
+ {
+  "id": "vp-22-js-1-javascript-fundamentals-interview-q-a-1a801b",
+  "trackId": "veeraproject",
+  "title": "22. Interview: JS-1: JavaScript Fundamentals — Interview Q&A",
+  "summary": "These questions are particularly important for an experienced Python and Generative AI engineer transitioning into JavaScript and TypeScript. Scenario 1: Agent configuration unexpectedly changes Interviewer: Multiple…",
+  "order": 138,
+  "objectives": [
+   "Production-grade scenario-based interview questions",
+   "JavaScript fundamentals — interview cheat sheet"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "JS-1: JavaScript Fundamentals"
+ },
+ {
+  "id": "vp-22-js-2-asynchronous-javascript-interview-q-a-a77d72",
+  "trackId": "veeraproject",
+  "title": "22. Interview: JS-2: Asynchronous JavaScript — Interview Q&A",
+  "summary": "Practice explaining these answers aloud in 30–60 seconds each. Scenario 1: Your AI service receives 10,000 concurrent requests.",
+  "order": 139,
+  "objectives": [
+   "Production-grade scenario-based interview questions",
+   "Asynchronous JavaScript — interview cheat sheet"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "JS-2: Asynchronous JavaScript"
+ },
+ {
+  "id": "vp-22-js-2-revision-js-2-asynchronous-javascript-i-ba7587",
+  "trackId": "veeraproject",
+  "title": "22. Interview: JS-2 Revision: JS-2: Asynchronous JavaScript — Interview Q&A",
+  "summary": "Conceptual questions Q1: Is JavaScript single-threaded? Normally one main execution thread per context; runtime facilities and workers provide additional concurrency.",
+  "order": 140,
+  "objectives": [
+   "Top 20 interview questions and answers",
+   "Next step in your interview preparation"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "JS-2: Asynchronous JavaScript"
+ },
+ {
+  "id": "vp-22-pw-1-playwright-fundamentals-interview-q-a-33df51",
+  "trackId": "veeraproject",
+  "title": "22. Interview: PW-1: Playwright Fundamentals — Interview Q&A",
+  "summary": "22.1 Basic concepts 22.2 Architecture concepts 22.3 Testing and implementation",
+  "order": 141,
+  "objectives": [
+   "Top 40 Playwright fundamental interview questions",
+   "Production-grade scenario-based interview questions"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "PW-1: Playwright Fundamentals"
+ },
+ {
+  "id": "vp-22-pw-10-playwright-final-mock-interview-interv-3f994b",
+  "trackId": "veeraproject",
+  "title": "22. Interview: PW-10: Playwright Final Mock Interview — Interview Q&A (Part 1 of 5)",
+  "summary": "PW-10: Complete Playwright Masterclass — Final Interview Preparation Python + TypeScript · Playwright · BDD · FastAPI · Generative AI · Agentic AI · Production System Design We have now covered all nine technical…",
+  "order": 142,
+  "objectives": [
+   "PW-10: Complete Playwright Masterclass — Final Interview Preparation",
+   "Complete Playwright visual revision map",
+   "Round 1 — Playwright fundamentals",
+   "Round 2 — Locators, actions and synchronization"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "PW-10: Playwright Final Mock Interview"
+ },
+ {
+  "id": "vp-22-pw-10-playwright-final-mock-interview-interv-90b6c0",
+  "trackId": "veeraproject",
+  "title": "22. Interview: PW-10: Playwright Final Mock Interview — Interview Q&A (Part 2 of 5)",
+  "summary": "4.1 Advanced browser operations rapid revision Q1: How do you handle a new tab or popup? Register a page/popup event waiter before the triggering action.",
+  "order": 143,
+  "objectives": [
+   "Round 3 — Advanced browser operations and test framework architecture",
+   "Round 4 — API testing, network interception and resilience",
+   "Round 5 — BDD, Cucumber and Gherkin",
+   "Round 6 — Docker, CI/CD and production debugging"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "PW-10: Playwright Final Mock Interview"
+ },
+ {
+  "id": "vp-22-pw-10-playwright-final-mock-interview-interv-a0dc49",
+  "trackId": "veeraproject",
+  "title": "22. Interview: PW-10: Playwright Final Mock Interview — Interview Q&A (Part 3 of 5)",
+  "summary": "This is the most role-specific part of your interview preparation. 8.1 Revision architecture 8.2 Most important AI browser-agent interview questions Q1: What is an AI browser agent?",
+  "order": 144,
+  "objectives": [
+   "Round 7 — Agentic AI, MCP, RAG and AI evaluation",
+   "Ten common interview traps",
+   "Production debugging challenge",
+   "Twenty senior-level production scenario questions"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "PW-10: Playwright Final Mock Interview"
+ },
+ {
+  "id": "vp-22-pw-10-playwright-final-mock-interview-interv-f5e173",
+  "trackId": "veeraproject",
+  "title": "22. Interview: PW-10: Playwright Final Mock Interview — Interview Q&A (Part 4 of 5)",
+  "summary": "Interview problem Design an enterprise AI-powered software testing platform that accepts natural-language requirements and source code, generates test cases using LLMs, executes them using Playwright, and produces…",
+  "order": 145,
+  "objectives": [
+   "Production-grade system design interview",
+   "The interview answer you should be able to deliver confidently",
+   "Final Playwright interview cheat sheet",
+   "Complete Playwright masterclass progress"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "PW-10: Playwright Final Mock Interview"
+ },
+ {
+  "id": "vp-22-pw-10-playwright-final-mock-interview-interv-665d90",
+  "trackId": "veeraproject",
+  "title": "22. Interview: PW-10: Playwright Final Mock Interview — Interview Q&A (Part 5 of 5)",
+  "summary": "From this point, I will act as a senior technical interviewer hiring a Python and Generative AI engineer with 4–5 years of experience. We will conduct the interview one question at a time.",
+  "order": 146,
+  "objectives": [
+   "Live mock interview — Let's begin",
+   "Can you explain what Playwright is, how it differs from Selenium, and why you would choose…"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "PW-10: Playwright Final Mock Interview"
+ },
+ {
+  "id": "vp-22-pw-2-dom-locators-interactions-interview-q-a-d22e61",
+  "trackId": "veeraproject",
+  "title": "22. Interview: PW-2: DOM, Locators & Interactions — Interview Q&A",
+  "summary": "HTML, DOM and selectors Playwright locators Element interactions",
+  "order": 147,
+  "objectives": [
+   "Top 45 conceptual interview questions",
+   "Production-grade scenario-based interview questions"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "PW-2: DOM, Locators & Interactions"
+ },
+ {
+  "id": "vp-22-pw-3-auto-waiting-assertions-interview-q-a-745b9e",
+  "trackId": "veeraproject",
+  "title": "22. Interview: PW-3: Auto-Waiting & Assertions — Interview Q&A",
+  "summary": "18.1 Automatic waiting and actionability 18.2 Assertions and explicit waits 18.3 Navigation and network synchronization 18.4 Production synchronization",
+  "order": 148,
+  "objectives": [
+   "Top 40 conceptual Playwright interview questions",
+   "Production-grade scenario-based interview questions",
+   "Most important interview preparation priorities"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "PW-3: Auto-Waiting & Assertions"
+ },
+ {
+  "id": "vp-22-pw-4-advanced-browser-operations-interview-q-eaf06d",
+  "trackId": "veeraproject",
+  "title": "22. Interview: PW-4: Advanced Browser Operations — Interview Q&A",
+  "summary": "20.1 Multiple pages, events and frames 20.2 Dialogs, uploads and downloads 20.3 Authentication, storage and advanced capabilities",
+  "order": 149,
+  "objectives": [
+   "Top 40 conceptual interview questions",
+   "Production-grade scenario-based interview questions",
+   "Interview preparation priorities"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "PW-4: Advanced Browser Operations"
+ },
+ {
+  "id": "vp-22-pw-5-test-framework-architecture-interview-q-47ce4b",
+  "trackId": "veeraproject",
+  "title": "22. Interview: PW-5: Test Framework Architecture — Interview Q&A",
+  "summary": "31.1 Fixtures and lifecycle 31.2 Design patterns and test data 31.3 Parallelism and production execution",
+  "order": 150,
+  "objectives": [
+   "Top 50 conceptual interview questions",
+   "Production-grade scenario-based interview questions",
+   "Coding interview — Predict the behavior",
+   "Interview preparation priorities"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "PW-5: Test Framework Architecture"
+ },
+ {
+  "id": "vp-22-pw-6-api-testing-network-mocking-interview-q-c5ab13",
+  "trackId": "veeraproject",
+  "title": "22. Interview: PW-6: API Testing & Network Mocking — Interview Q&A",
+  "summary": "API testing fundamentals Authentication and contracts Network interception AI resilience and production engineering",
+  "order": 151,
+  "objectives": [
+   "Top 40 conceptual interview questions",
+   "Production-grade scenario-based interview questions",
+   "Most important interview preparation priorities"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "PW-6: API Testing & Network Mocking"
+ },
+ {
+  "id": "vp-22-pw-7-bdd-cucumber-gherkin-interview-q-a-3c77f3",
+  "trackId": "veeraproject",
+  "title": "22. Interview: PW-7: BDD, Cucumber & Gherkin — Interview Q&A",
+  "summary": "24.1 BDD fundamentals 24.2 Gherkin syntax 24.3 Implementation and production architecture",
+  "order": 152,
+  "objectives": [
+   "Top 40 conceptual interview questions",
+   "Coding interview — Predict the behavior",
+   "Production-grade scenario-based interview questions",
+   "Most important interview preparation priorities"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "PW-7: BDD, Cucumber & Gherkin"
+ },
+ {
+  "id": "vp-22-pw-8-docker-ci-cd-observability-interview-q--16e868",
+  "trackId": "veeraproject",
+  "title": "22. Interview: PW-8: Docker, CI/CD & Observability — Interview Q&A",
+  "summary": "Docker and CI/CD Scalability and debugging Observability and security",
+  "order": 153,
+  "objectives": [
+   "Top 40 conceptual interview questions",
+   "Production-grade scenario-based interview questions",
+   "Coding interview — Predict the behavior",
+   "Interview preparation priorities"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "PW-8: Docker, CI/CD & Observability"
+ },
+ {
+  "id": "vp-22-pw-9-agentic-ai-browser-automation-interview-691e34",
+  "trackId": "veeraproject",
+  "title": "22. Interview: PW-9: Agentic AI Browser Automation — Interview Q&A",
+  "summary": "AI browser agents and tools Observation, MCP and orchestration Security, reliability and evaluation",
+  "order": 154,
+  "objectives": [
+   "Top 40 conceptual interview questions",
+   "Production-grade scenario-based interview questions",
+   "Coding interview — Find the problem",
+   "Most important interview preparation priorities"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "PW-9: Agentic AI Browser Automation"
+ },
+ {
+  "id": "vp-22-rest-1-http-rest-fundamentals-interview-q-a-23d6fa",
+  "trackId": "veeraproject",
+  "title": "22. Interview: REST-1: HTTP & REST Fundamentals — Interview Q&A",
+  "summary": "22.1 Networking and HTTP fundamentals 22.2 HTTP methods and request structure 22.3 Status codes and reliability 22.4 REST architecture and Python",
+  "order": 155,
+  "objectives": [
+   "Top 50 conceptual interview questions with answers",
+   "Coding interview — Predict the output or identify the problem",
+   "Fifteen production-grade scenario-based interview questions"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "REST-1: HTTP & REST Fundamentals"
+ },
+ {
+  "id": "vp-22-rest-2-enterprise-rest-design-interview-q-a-af0a19",
+  "trackId": "veeraproject",
+  "title": "22. Interview: REST-2: Enterprise REST Design — Interview Q&A",
+  "summary": "Resource design and contracts Pagination and contract evolution Reliability and concurrency API specifications and batch processing",
+  "order": 156,
+  "objectives": [
+   "Top 40 conceptual interview questions",
+   "Coding interview — Predict the behavior",
+   "Fifteen production-grade scenario interview questions",
+   "Professional 90-second interview answer"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "REST-2: Enterprise REST Design"
+ },
+ {
+  "id": "vp-22-rest-3-production-api-security-interview-q-a-a14c8f",
+  "trackId": "veeraproject",
+  "title": "22. Interview: REST-3: Production API Security — Interview Q&A",
+  "summary": "Authentication and JWT OAuth and token management Authorization, browser security and vulnerabilities Generative AI security",
+  "order": 157,
+  "objectives": [
+   "Top 50 conceptual interview questions with answers",
+   "Coding interview — Identify the security problem",
+   "Fifteen production-grade scenario-based interview questions",
+   "Professional 90-second interview answer"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "REST-3: Production API Security"
+ },
+ {
+  "id": "vp-22-rest-5-generative-ai-api-architecture-interv-46a0c3",
+  "trackId": "veeraproject",
+  "title": "22. Interview: REST-5: Generative AI API Architecture — Interview Q&A",
+  "summary": "Question 1: Blocking an asynchronous generator Problem: time.sleep() blocks the event-loop thread. Use await asyncio.sleep(1) for asynchronous waiting.",
+  "order": 158,
+  "objectives": [
+   "Top 40 conceptual interview questions",
+   "Coding interview — Identify the problem",
+   "Fifteen production-grade scenario questions",
+   "Professional 90-second interview answer"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "REST-5: Generative AI API Architecture"
+ },
+ {
+  "id": "vp-22-rest-6-rest-api-final-interview-masterclass--ad87d4",
+  "trackId": "veeraproject",
+  "title": "22. Interview: REST-6: REST API Final Interview Masterclass — Interview Q&A (Part 1 of 5)",
+  "summary": "REST-6: Complete REST API Interview Masterclass Final revision · Coding interviews · Production debugging · System design · Live mock interview We have completed all five REST API learning modules, from HTTP…",
+  "order": 159,
+  "objectives": [
+   "REST-6: Complete REST API Interview Masterclass",
+   "Complete REST API visual knowledge map",
+   "REST-1 rapid revision — HTTP fundamentals",
+   "REST-2 rapid revision — Professional API design"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "REST-6: REST API Final Interview Masterclass"
+ },
+ {
+  "id": "vp-22-rest-6-rest-api-final-interview-masterclass--62331b",
+  "trackId": "veeraproject",
+  "title": "22. Interview: REST-6: REST API Final Interview Masterclass — Interview Q&A (Part 2 of 5)",
+  "summary": "4.1 Complete security architecture 4.2 Essential comparisons 4.3 HS256 vs RS256 HS256 Shared secret Same secret used to sign and verify. RS256 Private and public keys Private key signs.",
+  "order": 160,
+  "objectives": [
+   "REST-3 rapid revision — Authentication and security",
+   "REST-4 rapid revision — Scalability and resilience",
+   "REST-5 rapid revision — Generative AI API architecture",
+   "Top 100 REST API conceptual interview questions with answers"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "REST-6: REST API Final Interview Masterclass"
+ },
+ {
+  "id": "vp-22-rest-6-rest-api-final-interview-masterclass--e48d55",
+  "trackId": "veeraproject",
+  "title": "22. Interview: REST-6: REST API Final Interview Masterclass — Interview Q&A (Part 3 of 5)",
+  "summary": "These are practical problems that an interviewer could ask you to implement during a backend engineering interview. Problem 1: Implement an asynchronous API client Requirements: Use HTTPX, reuse the client, handle HTTP…",
+  "order": 161,
+  "objectives": [
+   "Python coding interview problems",
+   "Production debugging interview exercises",
+   "Interactive production incident laboratory",
+   "Top 25 production-grade scenario questions"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "REST-6: REST API Final Interview Masterclass"
+ },
+ {
+  "id": "vp-22-rest-6-rest-api-final-interview-masterclass--7052ae",
+  "trackId": "veeraproject",
+  "title": "22. Interview: REST-6: REST API Final Interview Masterclass — Interview Q&A (Part 4 of 5)",
+  "summary": "This is the most important practical section because it combines your JavaScript, TypeScript, Playwright, REST, Python and Generative AI preparation into one interview scenario. 13.1 Interview question Design an…",
+  "order": 162,
+  "objectives": [
+   "Complete system design interview — Enterprise AI-powered software testing platform",
+   "Professional system design interview answer",
+   "Final REST API masterclass completion checklist",
+   "%"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "REST-6: REST API Final Interview Masterclass"
+ },
+ {
+  "id": "vp-22-rest-6-rest-api-final-interview-masterclass--c93f6d",
+  "trackId": "veeraproject",
+  "title": "22. Interview: REST-6: REST API Final Interview Masterclass — Interview Q&A (Part 5 of 5)",
+  "summary": "Before moving to LangChain, LangGraph and Google ADK, we will strengthen the Python backend implementation layer. We will concentrate on implementation details rather than unnecessarily repeating the REST theory we have…",
+  "order": 163,
+  "objectives": [
+   "Upcoming FastAPI masterclass roadmap",
+   "Live REST API mock interview",
+   "Designing a long-running Generative AI API"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "REST-6: REST API Final Interview Masterclass"
+ },
+ {
+  "id": "vp-22-ts-1-typescript-fundamentals-interview-q-a-302b3e",
+  "trackId": "veeraproject",
+  "title": "22. Interview: TS-1: TypeScript Fundamentals — Interview Q&A",
+  "summary": "These are high-priority questions for your TypeScript and Playwright interview. Q1: 1.",
+  "order": 164,
+  "objectives": [
+   "Top 20 conceptual interview questions",
+   "Production-grade scenario-based interview questions"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "TS-1: TypeScript Fundamentals"
+ },
+ {
+  "id": "vp-22-ts-2-typescript-functions-interview-q-a-b28a9c",
+  "trackId": "veeraproject",
+  "title": "22. Interview: TS-2: TypeScript Functions — Interview Q&A",
+  "summary": "These concepts are not necessary for every beginner program, but they are useful for experienced engineering interviews. 9.1 Function type compatibility Consider: This is valid: A function that ignores extra parameters…",
+  "order": 165,
+  "objectives": [
+   "Advanced function typing — important interview extras",
+   "Top 25 conceptual interview questions"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "TS-2: TypeScript Functions"
+ },
+ {
+  "id": "vp-22-ts-3-interfaces-type-contracts-interview-q-a-c327bc",
+  "trackId": "veeraproject",
+  "title": "22. Interview: TS-3: Interfaces & Type Contracts — Interview Q&A",
+  "summary": "Q1: 1. What is an interface?",
+  "order": 166,
+  "objectives": [
+   "Top 25 conceptual interview questions",
+   "Production-grade scenario-based interview questions"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "TS-3: Interfaces & Type Contracts"
+ },
+ {
+  "id": "vp-22-ts-4-generics-type-level-programming-intervi-a0a78b",
+  "trackId": "veeraproject",
+  "title": "22. Interview: TS-4: Generics & Type-Level Programming — Interview Q&A",
+  "summary": "Q1: 1. What are generics?",
+  "order": 167,
+  "objectives": [
+   "Top 30 conceptual interview questions",
+   "Production-grade scenario-based interview questions",
+   "Overall interview preparation progress"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "TS-4: Generics & Type-Level Programming"
+ },
+ {
+  "id": "vp-22-ts-5-oop-solid-architecture-interview-q-a-1415bf",
+  "trackId": "veeraproject",
+  "title": "22. Interview: TS-5: OOP, SOLID & Architecture — Interview Q&A",
+  "summary": "These are suitable for rapid revision before your interview.",
+  "order": 168,
+  "objectives": [
+   "Top 35 conceptual interview questions",
+   "Production-grade scenario-based interview questions"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "TS-5: OOP, SOLID & Architecture"
+ },
+ {
+  "id": "vp-22-ts-6-production-typescript-resilience-interv-3c9a3e",
+  "trackId": "veeraproject",
+  "title": "22. Interview: TS-6: Production TypeScript & Resilience — Interview Q&A",
+  "summary": "We have now covered the complete JavaScript and TypeScript portion of our accelerated curriculum. Use these questions to revise the concepts from JS-1 through TS-6.",
+  "order": 169,
+  "objectives": [
+   "Comprehensive JavaScript and TypeScript interview revision",
+   "Top 15 production-grade scenario-based interview questions"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "TS-6: Production TypeScript & Resilience"
+ },
+ {
+  "id": "vp-22-ts-6-revision-ts-6-production-typescript-res-bea643",
+  "trackId": "veeraproject",
+  "title": "22. Interview: TS-6 Revision: TS-6: Production TypeScript & Resilience — Interview Q&A",
+  "summary": "14.1 JavaScript — Critical concepts 14.2 TypeScript — Critical concepts 14.3 Production TypeScript — Critical concepts",
+  "order": 170,
+  "objectives": [
+   "Comprehensive JavaScript and TypeScript interview revision",
+   "Production-grade scenario-based interview questions",
+   "Final interview preparation priorities"
+  ],
+  "sourceFile": "Interview preparation plan.md",
+  "labIds": [],
+  "series": "TS-6: Production TypeScript & Resilience"
+ },
+ {
+  "id": "vp-22-playwright-dom-ops-rest-caching-rate-limitin-6dd548",
+  "trackId": "veeraproject",
+  "title": "22. Interview: Playwright DOM/Ops, REST Caching/Rate-Limiting, Auth/JWT/OAuth2, FastAPI & Output-Prediction Q&As",
+  "summary": "Q1: What is the exact console output of this Event Loop snippet? Expected answer: 1, 4, 6, 3, 5, 2.",
+  "order": 171,
+  "objectives": [
+   "Answer JavaScript output-prediction and event-loop ordering traps accurately out loud",
+   "Master Playwright locator, frame, Shadow DOM, auth, JWT/PKCE, Redis caching, and FastAPI ASGI interview questions"
+  ],
+  "sourceFile": "scripts/project-supplement.mjs",
+  "labIds": [],
+  "series": "VeeraProject Supplemental Interview Banks"
+ }
+]

@@ -86,6 +86,10 @@ const ROUTES = [
   [/^11-interview-questions/, '22', SERIES.interview, { kind: 'interview', title: 'Master Interview Bank: Evaluation, Tracing & Monitoring' }],
   [/^section10_coding_interview/, '22', SERIES.interview, { kind: 'interview', title: 'GraphRAG & BM25 Coding Interview' }],
   [/interview_preparation_for_ai_agents_and/, '22', SERIES.interview, { kind: 'interview', title: 'AI Agents, RAG & MCP Interview Checklist' }],
+  [/^system_design_interview_questions_part1/, '22', SERIES.interview, { kind: 'interview', title: 'Senior RAG & System Design Interview Bank (Part 1)' }],
+  [/^system_design_part2_and_rag_scenarios/, '22', SERIES.interview, { kind: 'interview', title: 'Senior System Design & RAG Scenarios (Part 2)' }],
+  [/^cloud_deployment_production_scenarios/, '22', SERIES.interview, { kind: 'interview', title: 'Cloud, Deployment & Production RAG Scenarios' }],
+  [/^ml_agentic_llm_scenarios/, '22', SERIES.interview, { kind: 'interview', title: 'ML, Agentic AI & LLM Scenarios' }],
 
   // RAG core course (📘 Module NN — Title)
   [/^01_RAG_Foundations/, '01', SERIES.core],
@@ -100,6 +104,7 @@ const ROUTES = [
   [/^10_Advanced_RAG_Architectures/, '07', SERIES.core],
   [/^11_Evaluation_Metrics/, '09', SERIES.core],
   [/^12_RAG_Failure_Modes_Debugging/, '11', SERIES.core],
+  [/^13_Performance_Scalability/, '11', SERIES.core],
   [/^14_Security_Governance/, '11', SERIES.core],
   [/^15_RAG_Infrastructure_Tools/, '11', SERIES.core],
 
@@ -277,7 +282,16 @@ function main() {
     process.exit(0)
   }
   // prefer the clean file name (fri_ over thu_, no "(1)") when contents are identical
-  const files = walk(srcRoot).sort((a, b) => Number(isCopyName(rel(a))) - Number(isCopyName(rel(b))) || a.localeCompare(b))
+  const extraFiles = [
+    path.join(root, '.bin', 'rag', '13_Performance_Scalability.md'),
+    path.join(root, '.bin', 'rag', 'system_design_interview_questions_part1.md'),
+    path.join(root, '.bin', 'rag', 'system_design_part2_and_rag_scenarios.md'),
+    path.join(root, '.bin', 'rag', 'cloud_deployment_production_scenarios.md'),
+    path.join(root, '.bin', 'rag', 'ml_agentic_llm_scenarios.md'),
+  ].filter((f) => fs.existsSync(f))
+  const files = [...walk(srcRoot), ...extraFiles].sort(
+    (a, b) => Number(isCopyName(rel(a))) - Number(isCopyName(rel(b))) || a.localeCompare(b),
+  )
 
   const track = createTrack({
     trackId: 'veerarag',

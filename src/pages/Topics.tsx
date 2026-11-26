@@ -2,8 +2,9 @@ import { Link } from 'react-router-dom'
 import { getCurriculumIndex } from '@/content/loadCurriculum'
 import { DOCKER_LABS, DOCKER_MODULES } from '@/content/docker/modules'
 import { PYTHON_LABS } from '@/content/python/modules'
-import { AGENT_GALLERY as AGENT_SIMS, PYTHON_GALLERY, RAG_GALLERY } from '@/content/sims/registry'
+import { AGENT_GALLERY as AGENT_SIMS, PYTHON_GALLERY, RAG_GALLERY, PROJECT_GALLERY } from '@/content/sims/registry'
 import { RAG_LABS } from '@/content/rag/course'
+import { PROJECT_LABS } from '@/content/project/course'
 import { useProgress } from '@/store/progress'
 import { useDockerProgress } from '@/store/dockerProgress'
 import './Topics.css'
@@ -19,7 +20,7 @@ type TopicCard = {
   pct: number
 }
 
-const COURSE_TRACKS = new Set(['python', 'asyncconcur', 'agents', 'veerarag'])
+const COURSE_TRACKS = new Set(['python', 'asyncconcur', 'agents', 'veerarag', 'veeraproject'])
 
 function pctOf(ids: string[], done: string[]) {
   if (!ids.length) return 0
@@ -85,6 +86,17 @@ export function Topics() {
       accent: track('veerarag')?.accent || '#0d9488',
       stats: [`${track('veerarag')?.lessonCount ?? 0} lessons`, `${RAG_GALLERY.length} simulations`, `${RAG_LABS.length} labs`],
       pct: pctOf(lessonIds('veerarag'), completed),
+    },
+    {
+      key: 'project',
+      title: 'VeeraProject',
+      kicker: 'JS · TS · Playwright · REST · FastAPI',
+      blurb:
+        'Full-Stack AI & QA Engineering: JS event loop, TypeScript + Zod, Playwright Python & TS, BDD, Agentic MCP, JWT/OAuth2/BOLA, Redis/SSE, FastAPI ASGI, Pydantic V2 and 600+ interview answers.',
+      to: '/project',
+      accent: track('veeraproject')?.accent || '#2563eb',
+      stats: [`${track('veeraproject')?.lessonCount ?? 0} lessons`, `${PROJECT_GALLERY.length} simulations`, `${PROJECT_LABS.length} labs`],
+      pct: pctOf(lessonIds('veeraproject'), completed),
     },
     {
       key: 'docker',

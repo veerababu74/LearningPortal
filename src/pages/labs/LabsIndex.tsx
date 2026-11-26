@@ -1,14 +1,26 @@
 import { Link, useSearchParams } from 'react-router-dom'
 import { PYTHON_LABS } from '@/content/python/modules'
 import { DOCKER_LABS } from '@/content/docker/modules'
-import { AGENT_GALLERY, PYTHON_GALLERY, RAG_GALLERY, simGroup, simHref } from '@/content/sims/registry'
+import { AGENT_GALLERY, PYTHON_GALLERY, RAG_GALLERY, PROJECT_GALLERY, simGroup, simHref } from '@/content/sims/registry'
 import { RAG_LABS } from '@/content/rag/course'
+import { PROJECT_LABS } from '@/content/project/course'
 import type { AgentSim } from '@/content/agents/visualizer'
 import './LabsIndex.css'
 
 type LabKind = 'playground' | 'simulator' | 'lab'
 type Lab = { id: string; title: string; blurb: string; to: string; kind: LabKind; tags?: string[]; sub?: string }
-type GroupId = 'agent-labs' | 'agent-sims' | 'rag-labs' | 'rag-sims' | 'python-sims' | 'python' | 'async' | 'docker' | 'genai'
+type GroupId =
+  | 'project-labs'
+  | 'project-sims'
+  | 'agent-labs'
+  | 'agent-sims'
+  | 'rag-labs'
+  | 'rag-sims'
+  | 'python-sims'
+  | 'python'
+  | 'async'
+  | 'docker'
+  | 'genai'
 type Group = {
   id: GroupId
   title: string
@@ -91,6 +103,31 @@ const GENAI_LABS: Lab[] = [
 ]
 
 const GROUPS: Group[] = [
+  {
+    id: 'project-labs',
+    title: 'Full-Stack AI & QA playgrounds',
+    blurb: 'JS event loop, Zod runtime contracts, Playwright locators & route mocks, HTTP/Token Bucket rate-limits, FastAPI ASGI and Capstone Release Gates.',
+    accent: '#2563eb',
+    course: { to: '/project', label: 'VeeraProject course' },
+    labs: PROJECT_LABS.map((l) => ({
+      id: l.to.split('/').pop() as string,
+      title: l.title,
+      blurb: l.text,
+      to: l.to,
+      kind: 'playground' as const,
+      tags: ['JS/TS', 'Playwright', 'FastAPI'],
+    })),
+    isNew: true,
+  },
+  {
+    id: 'project-sims',
+    title: 'JS / TS / Playwright / API simulators',
+    blurb: 'Animated step-by-step execution of Promises, Zod, Playwright auto-wait & MCP, JWT/BOLA, SSE jobs, FastAPI ASGI and the 8-Phase Capstone.',
+    accent: '#1d4ed8',
+    course: { to: '/project/visualizer', label: 'Project Visualizer gallery' },
+    labs: PROJECT_GALLERY.map(fromSim),
+    isNew: true,
+  },
   {
     id: 'agent-labs',
     title: 'AI Agent playgrounds',
@@ -222,7 +259,7 @@ export function LabsIndex() {
   const active = GROUPS.find((g) => g.id === params.get('topic'))?.id ?? 'all'
   const shown = active === 'all' ? GROUPS : GROUPS.filter((g) => g.id === active)
   const total = GROUPS.reduce((n, g) => n + g.labs.length, 0)
-  const sims = AGENT_GALLERY.length + PYTHON_GALLERY.length
+  const sims = AGENT_GALLERY.length + PYTHON_GALLERY.length + RAG_GALLERY.length + PROJECT_GALLERY.length
   const playgrounds = GROUPS.flatMap((g) => g.labs).filter((l) => l.kind === 'playground').length
 
   const select = (id: string) => {

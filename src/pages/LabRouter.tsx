@@ -19,6 +19,12 @@ import { ChunkingStrategyLab } from './labs/playground/rag/ChunkingStrategyLab'
 import { HybridRetrievalLab } from './labs/playground/rag/HybridRetrievalLab'
 import { RagEvalLab } from './labs/playground/rag/RagEvalLab'
 import { RagObservabilityLab } from './labs/playground/rag/RagObservabilityLab'
+import { JsEventLoopLab } from './labs/playground/project/JsEventLoopLab'
+import { TsContractLab } from './labs/playground/project/TsContractLab'
+import { PlaywrightLab } from './labs/playground/project/PlaywrightLab'
+import { HttpLifecycleLab } from './labs/playground/project/HttpLifecycleLab'
+import { FastApiPydanticLab } from './labs/playground/project/FastApiPydanticLab'
+import { CapstoneEvaluatorLab } from './labs/playground/project/CapstoneEvaluatorLab'
 
 const MAP = {
   chunking: ChunkingLab,
@@ -41,6 +47,12 @@ const MAP = {
   'hybrid-retrieval': HybridRetrievalLab,
   'rag-eval': RagEvalLab,
   'rag-observability': RagObservabilityLab,
+  'js-event-loop': JsEventLoopLab,
+  'ts-contract': TsContractLab,
+  'playwright-lab': PlaywrightLab,
+  'http-lifecycle': HttpLifecycleLab,
+  'fastapi-pydantic': FastApiPydanticLab,
+  'capstone-evaluator': CapstoneEvaluatorLab,
 } as const
 
 export function LabRouter() {

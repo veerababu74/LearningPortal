@@ -2634,11 +2634,25 @@
   "series": "RAG Core Course"
  },
  {
+  "id": "rg-11-performance-scalability-35caa2",
+  "trackId": "veerarag",
+  "title": "11. Production: Failures, Scale & Security: Performance & Scalability",
+  "summary": "Production RAG systems must meet strict latency SLAs — typically P95 < 2 seconds.",
+  "order": 167,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "../rag/13_Performance_Scalability.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
   "id": "rg-11-performance-and-scalability-eb3651",
   "trackId": "veerarag",
   "title": "11. Production: Failures, Scale & Security: Performance and Scalability",
   "summary": "BM25 query latency depends on corpus size, posting list lengths, and early termination. For a corpus of N documents with vocabulary V, the worst-case cost is O(Σ df(q_i)) per query — summing posting list lengths over all query terms.",
-  "order": 167,
+  "order": 168,
   "objectives": [
    "CONCEPT 1: BM25 Latency at Scale",
    "① Concept Explanation",
@@ -2655,7 +2669,7 @@
   "trackId": "veerarag",
   "title": "11. Production: Failures, Scale & Security: Failure Modes & Debugging",
   "summary": "Graph RAG systems have failure modes that span three layers: knowledge graph construction (bad extraction, missed entities), retrieval (wrong graph traversal, poor vector search), and generation (hallucination, context overflow).",
-  "order": 168,
+  "order": 169,
   "objectives": [
    "① Concept Explanation",
    "④ Visual Explanation"
@@ -2669,7 +2683,7 @@
   "trackId": "veerarag",
   "title": "11. Production: Failures, Scale & Security: Scalability & Performance",
   "summary": "Scaling Graph RAG from a 10,000-entity prototype to a 10M+ entity production system requires addressing three bottlenecks independently: indexing throughput (parallel LLM extraction, batched embeddings, distributed chunking), graph storage…",
-  "order": 169,
+  "order": 170,
   "objectives": [
    "① Concept Explanation",
    "④ Visual Explanation"
@@ -2683,7 +2697,7 @@
   "trackId": "veerarag",
   "title": "11. Production: Failures, Scale & Security: Infrastructure & Tools",
   "summary": "The Graph RAG ecosystem has converged around four major infrastructure pillars: Microsoft GraphRAG (CLI-driven pipeline producing Parquet artifacts with community reports, best for structured enterprise corpora), LightRAG-HKU (dual-level…",
-  "order": 170,
+  "order": 171,
   "objectives": [
    "① Concept Explanation",
    "④ Visual Explanation"
@@ -2697,7 +2711,7 @@
   "trackId": "veerarag",
   "title": "11. Production: Failures, Scale & Security: Production GraphRAG Systems",
   "summary": "Learning Path: Beginner → Intermediate → Advanced → Production → FAANG",
-  "order": 171,
+  "order": 172,
   "objectives": [
    "STEP 1 — SIMPLE & INTUITIVE EXPLANATION",
    "STEP 2 — INTERNAL WORKING",
@@ -2715,7 +2729,7 @@
   "trackId": "veerarag",
   "title": "11. Production: Failures, Scale & Security: Security in GraphRAG Systems",
   "summary": "Learning Path: Beginner → Intermediate → Advanced → Production → FAANG",
-  "order": 172,
+  "order": 173,
   "objectives": [
    "STEP 1 — SIMPLE & INTUITIVE EXPLANATION",
    "STEP 2 — INTERNAL WORKING",
@@ -2733,7 +2747,7 @@
   "trackId": "veerarag",
   "title": "11. Production: Failures, Scale & Security: BM25 with Elasticsearch (Production-Scale Search)",
   "summary": "rank-bm25 is like a home kitchen blender — perfect for personal use, maybe up to a few thousand documents.",
-  "order": 173,
+  "order": 174,
   "objectives": [
    "① Real-World Analogy",
    "② Plain English Explanation",
@@ -2751,7 +2765,7 @@
   "trackId": "veerarag",
   "title": "11. Production: Failures, Scale & Security: ADVANCED PRODUCTION PATTERNS",
   "summary": "This completes the full Advanced Master Course on GraphRAG + BM25. > > You now have mastery over: > - BM25 family (BM25, BM25+, BM25L, SPLADE) > - GraphRAG (local, global, relational query modes) > - Community detection (Louvain,…",
-  "order": 174,
+  "order": 175,
   "objectives": [
    "Streaming GraphRAG with Async",
    "GraphRAG Observability Stack",
@@ -2769,7 +2783,7 @@
   "trackId": "veerarag",
   "title": "11. Production: Failures, Scale & Security: MCP Security Basics for Beginners",
   "summary": "In the last lessons we connected MCP to four different frameworks. Today we learn something critically important — keeping your MCP server secure.",
-  "order": 175,
+  "order": 176,
   "objectives": [
    "① Real-World Analogy — The Security Guard",
    "② Why Security Matters So Much for MCP",
@@ -2785,7 +2799,7 @@
   "trackId": "veerarag",
   "title": "11. Production: Failures, Scale & Security: Debugging and Testing MCP Servers",
   "summary": "This is the final lesson! We pull together everything and learn how to find and fix problems confidently.",
-  "order": 176,
+  "order": 177,
   "objectives": [
    "① The MCP Inspector — Your Best Friend",
    "② Complete Testing Suite",
@@ -2800,7 +2814,7 @@
   "trackId": "veerarag",
   "title": "20. Exercises: Multi-Agent System Evaluation: Coordination, Communication, and Emergent Behavior",
   "summary": "When the final answer is wrong in a single-agent system, you trace the trajectory: which step went sideways? One agent, one trajectory, one blame target.",
-  "order": 177,
+  "order": 178,
   "objectives": [
    "Solve the Multi-Agent System Evaluation: Coordination, Communication, and Emergent Behavior exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -2814,7 +2828,7 @@
   "trackId": "veerarag",
   "title": "20. Exercises: BM25 & Sparse Retrieval for Beginners",
   "summary": "Task: Add a 6th document \"Deep learning is a subset of machine learning\" to our document collection, re-build the inverted index, and search for \"deep learning\". Print the ranked results.",
-  "order": 178,
+  "order": 179,
   "objectives": [
    "Solve the BM25 & Sparse Retrieval for Beginners exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -2828,7 +2842,7 @@
   "trackId": "veerarag",
   "title": "20. Exercises: MCP (Model Context Protocol)",
   "summary": "Exercise: Answer these 5 questions in your own words. No looking at notes!",
-  "order": 179,
+  "order": 180,
   "objectives": [
    "Solve the MCP (Model Context Protocol) exercises without looking at the lesson",
    "Test edge cases and explain your approach"
@@ -2842,7 +2856,7 @@
   "trackId": "veerarag",
   "title": "21. Projects: Build a RAG App with LangChain",
   "summary": "Projects for Build a RAG App with LangChain.",
-  "order": 180,
+  "order": 181,
   "objectives": [
    "Build the Build a RAG App with LangChain projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -2856,7 +2870,7 @@
   "trackId": "veerarag",
   "title": "21. Projects: GraphRAG + BM25 Master Course",
   "summary": "Projects for GraphRAG + BM25 Master Course.",
-  "order": 181,
+  "order": 182,
   "objectives": [
    "Build the GraphRAG + BM25 Master Course projects end to end",
    "Keep a short README with assumptions and tradeoffs"
@@ -2870,7 +2884,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Master Interview Bank: Evaluation, Tracing & Monitoring (Part 1)",
   "summary": "Interview Q&A for Master Interview Bank: Evaluation, Tracing & Monitoring (part 1 of 2).",
-  "order": 182,
+  "order": 183,
   "objectives": [
    "Answer the Master Interview Bank: Evaluation, Tracing & Monitoring interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -2884,7 +2898,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Master Interview Bank: Evaluation, Tracing & Monitoring (Part 2)",
   "summary": "Interview Q&A for Master Interview Bank: Evaluation, Tracing & Monitoring (part 2 of 2).",
-  "order": 183,
+  "order": 184,
   "objectives": [
    "Answer the Master Interview Bank: Evaluation, Tracing & Monitoring interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -2898,7 +2912,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: AI Agents, RAG & MCP Interview Checklist",
   "summary": "Interview Q&A for AI Agents, RAG & MCP Interview Checklist.",
-  "order": 184,
+  "order": 185,
   "objectives": [
    "Answer the AI Agents, RAG & MCP Interview Checklist interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -2912,7 +2926,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: RAG Interview Bible (senior level) (Part 1)",
   "summary": "Interview Q&A for RAG Interview Bible (senior level) — 20 questions with model answers (part 1 of 5).",
-  "order": 185,
+  "order": 186,
   "objectives": [
    "Answer 20 RAG Interview Bible (senior level) interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -2926,7 +2940,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: RAG Interview Bible (senior level) (Part 2)",
   "summary": "Interview Q&A for RAG Interview Bible (senior level) — 20 questions with model answers (part 2 of 5).",
-  "order": 186,
+  "order": 187,
   "objectives": [
    "Answer 20 RAG Interview Bible (senior level) interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -2940,7 +2954,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: RAG Interview Bible (senior level) (Part 3)",
   "summary": "Interview Q&A for RAG Interview Bible (senior level) — 20 questions with model answers (part 3 of 5).",
-  "order": 187,
+  "order": 188,
   "objectives": [
    "Answer 20 RAG Interview Bible (senior level) interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -2954,7 +2968,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: RAG Interview Bible (senior level) (Part 4)",
   "summary": "Interview Q&A for RAG Interview Bible (senior level) — 20 questions with model answers (part 4 of 5).",
-  "order": 188,
+  "order": 189,
   "objectives": [
    "Answer 20 RAG Interview Bible (senior level) interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -2968,7 +2982,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: RAG Interview Bible (senior level) (Part 5)",
   "summary": "Interview Q&A for RAG Interview Bible (senior level) — 20 questions with model answers (part 5 of 5).",
-  "order": 189,
+  "order": 190,
   "objectives": [
    "Answer 20 RAG Interview Bible (senior level) interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -2982,7 +2996,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: RAG Interview Prep System (Part 1)",
   "summary": "Interview Q&A for RAG Interview Prep System — 5 questions with model answers (part 1 of 4).",
-  "order": 190,
+  "order": 191,
   "objectives": [
    "Answer 5 RAG Interview Prep System interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -2996,7 +3010,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: RAG Interview Prep System (Part 2)",
   "summary": "Interview Q&A for RAG Interview Prep System — 5 questions with model answers (part 2 of 4).",
-  "order": 191,
+  "order": 192,
   "objectives": [
    "Answer 5 RAG Interview Prep System interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3010,7 +3024,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: RAG Interview Prep System (Part 3)",
   "summary": "Interview Q&A for RAG Interview Prep System — 5 questions with model answers (part 3 of 4).",
-  "order": 192,
+  "order": 193,
   "objectives": [
    "Answer 5 RAG Interview Prep System interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3024,7 +3038,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: RAG Interview Prep System (Part 4)",
   "summary": "Interview Q&A for RAG Interview Prep System — 5 questions with model answers (part 4 of 4).",
-  "order": 193,
+  "order": 194,
   "objectives": [
    "Answer 5 RAG Interview Prep System interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3038,7 +3052,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: GraphRAG & BM25 Coding Interview",
   "summary": "Interview Q&A for GraphRAG & BM25 Coding Interview.",
-  "order": 194,
+  "order": 195,
   "objectives": [
    "Answer the GraphRAG & BM25 Coding Interview interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3048,11 +3062,123 @@
   "series": "Interview Banks"
  },
  {
+  "id": "rg-22-cloud-deployment-production-rag-scenarios-part-1-036385",
+  "trackId": "veerarag",
+  "title": "22. Interview: Cloud, Deployment & Production RAG Scenarios (Part 1)",
+  "summary": "Interview Q&A for Cloud, Deployment & Production RAG Scenarios — 30 questions with model answers (part 1 of 2).",
+  "order": 196,
+  "objectives": [
+   "Answer 30 Cloud, Deployment & Production RAG Scenarios interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "../rag/cloud_deployment_production_scenarios.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "rg-22-cloud-deployment-production-rag-scenarios-part-2-aef2d5",
+  "trackId": "veerarag",
+  "title": "22. Interview: Cloud, Deployment & Production RAG Scenarios (Part 2)",
+  "summary": "Interview Q&A for Cloud, Deployment & Production RAG Scenarios — 20 questions with model answers (part 2 of 2).",
+  "order": 197,
+  "objectives": [
+   "Answer 20 Cloud, Deployment & Production RAG Scenarios interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "../rag/cloud_deployment_production_scenarios.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "rg-22-ml-agentic-ai-llm-scenarios-part-1-953fc9",
+  "trackId": "veerarag",
+  "title": "22. Interview: ML, Agentic AI & LLM Scenarios (Part 1)",
+  "summary": "Interview Q&A for ML, Agentic AI & LLM Scenarios — 30 questions with model answers (part 1 of 2).",
+  "order": 198,
+  "objectives": [
+   "Answer 30 ML, Agentic AI & LLM Scenarios interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "../rag/ml_agentic_llm_scenarios.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "rg-22-ml-agentic-ai-llm-scenarios-part-2-ce8407",
+  "trackId": "veerarag",
+  "title": "22. Interview: ML, Agentic AI & LLM Scenarios (Part 2)",
+  "summary": "Interview Q&A for ML, Agentic AI & LLM Scenarios — 20 questions with model answers (part 2 of 2).",
+  "order": 199,
+  "objectives": [
+   "Answer 20 ML, Agentic AI & LLM Scenarios interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "../rag/ml_agentic_llm_scenarios.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "rg-22-senior-rag-system-design-interview-bank-part-1-p-554a73",
+  "trackId": "veerarag",
+  "title": "22. Interview: Senior RAG & System Design Interview Bank (Part 1) (Part 1)",
+  "summary": "Interview Q&A for Senior RAG & System Design Interview Bank (Part 1) — 27 questions with model answers (part 1 of 2).",
+  "order": 200,
+  "objectives": [
+   "Answer 27 Senior RAG & System Design Interview Bank (Part 1) interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "../rag/system_design_interview_questions_part1.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "rg-22-senior-rag-system-design-interview-bank-part-1-p-d53500",
+  "trackId": "veerarag",
+  "title": "22. Interview: Senior RAG & System Design Interview Bank (Part 1) (Part 2)",
+  "summary": "Interview Q&A for Senior RAG & System Design Interview Bank (Part 1) — 23 questions with model answers (part 2 of 2).",
+  "order": 201,
+  "objectives": [
+   "Answer 23 Senior RAG & System Design Interview Bank (Part 1) interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "../rag/system_design_interview_questions_part1.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "rg-22-senior-system-design-rag-scenarios-part-2-part-1-22a3fc",
+  "trackId": "veerarag",
+  "title": "22. Interview: Senior System Design & RAG Scenarios (Part 2) (Part 1)",
+  "summary": "Interview Q&A for Senior System Design & RAG Scenarios (Part 2) — 32 questions with model answers (part 1 of 2).",
+  "order": 202,
+  "objectives": [
+   "Answer 32 Senior System Design & RAG Scenarios (Part 2) interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "../rag/system_design_part2_and_rag_scenarios.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "rg-22-senior-system-design-rag-scenarios-part-2-part-2-36dd7b",
+  "trackId": "veerarag",
+  "title": "22. Interview: Senior System Design & RAG Scenarios (Part 2) (Part 2)",
+  "summary": "Interview Q&A for Senior System Design & RAG Scenarios (Part 2) — 18 questions with model answers (part 2 of 2).",
+  "order": 203,
+  "objectives": [
+   "Answer 18 Senior System Design & RAG Scenarios (Part 2) interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "../rag/system_design_part2_and_rag_scenarios.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
   "id": "rg-22-rag-core-course-526faa",
   "trackId": "veerarag",
   "title": "22. Interview: RAG Core Course",
   "summary": "Interview Q&A for RAG Core Course — 32 questions with model answers.",
-  "order": 195,
+  "order": 204,
   "objectives": [
    "Answer 32 RAG Core Course interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3066,7 +3192,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: RAG Core Course",
   "summary": "Interview Q&A for RAG Core Course — 7 questions with model answers.",
-  "order": 196,
+  "order": 205,
   "objectives": [
    "Answer 7 RAG Core Course interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3080,7 +3206,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: RAG Core Course",
   "summary": "Interview Q&A for RAG Core Course — 5 questions with model answers.",
-  "order": 197,
+  "order": 206,
   "objectives": [
    "Answer 5 RAG Core Course interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3094,7 +3220,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: RAG Core Course",
   "summary": "Interview Q&A for RAG Core Course — 7 questions with model answers.",
-  "order": 198,
+  "order": 207,
   "objectives": [
    "Answer 7 RAG Core Course interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3108,7 +3234,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: RAG Core Course",
   "summary": "Interview Q&A for RAG Core Course — 11 questions with model answers.",
-  "order": 199,
+  "order": 208,
   "objectives": [
    "Answer 11 RAG Core Course interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3122,7 +3248,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: RAG Core Course",
   "summary": "Interview Q&A for RAG Core Course — 10 questions with model answers.",
-  "order": 200,
+  "order": 209,
   "objectives": [
    "Answer 10 RAG Core Course interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3136,7 +3262,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: RAG Core Course",
   "summary": "Interview Q&A for RAG Core Course — 10 questions with model answers.",
-  "order": 201,
+  "order": 210,
   "objectives": [
    "Answer 10 RAG Core Course interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3150,7 +3276,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: RAG Core Course",
   "summary": "Interview Q&A for RAG Core Course — 10 questions with model answers.",
-  "order": 202,
+  "order": 211,
   "objectives": [
    "Answer 10 RAG Core Course interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3164,7 +3290,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: RAG Core Course",
   "summary": "Interview Q&A for RAG Core Course — 10 questions with model answers.",
-  "order": 203,
+  "order": 212,
   "objectives": [
    "Answer 10 RAG Core Course interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3178,7 +3304,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: RAG Core Course (Part 1)",
   "summary": "Interview Q&A for RAG Core Course — 37 questions with model answers (part 1 of 2).",
-  "order": 204,
+  "order": 213,
   "objectives": [
    "Answer 37 RAG Core Course interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3192,7 +3318,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: RAG Core Course (Part 2)",
   "summary": "Interview Q&A for RAG Core Course — 37 questions with model answers (part 2 of 2).",
-  "order": 205,
+  "order": 214,
   "objectives": [
    "Answer 37 RAG Core Course interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3206,7 +3332,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Evaluation & Metrics",
   "summary": "Interview Q&A for Evaluation & Metrics — 9 questions with model answers.",
-  "order": 206,
+  "order": 215,
   "objectives": [
    "Answer 9 Evaluation & Metrics interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3220,7 +3346,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: RAG Failure Modes & Debugging",
   "summary": "Interview Q&A for RAG Failure Modes & Debugging — 10 questions with model answers.",
-  "order": 207,
+  "order": 216,
   "objectives": [
    "Answer 10 RAG Failure Modes & Debugging interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3234,7 +3360,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Security & Governance",
   "summary": "Interview Q&A for Security & Governance — 10 questions with model answers.",
-  "order": 208,
+  "order": 217,
   "objectives": [
    "Answer 10 Security & Governance interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3248,7 +3374,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: RAG Core Course",
   "summary": "Interview Q&A for RAG Core Course — 8 questions with model answers.",
-  "order": 209,
+  "order": 218,
   "objectives": [
    "Answer 8 RAG Core Course interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3258,11 +3384,25 @@
   "series": "RAG Core Course"
  },
  {
+  "id": "rg-22-performance-scalability-dac4dd",
+  "trackId": "veerarag",
+  "title": "22. Interview: Performance & Scalability",
+  "summary": "Interview Q&A for Performance & Scalability — 10 questions with model answers.",
+  "order": 219,
+  "objectives": [
+   "Answer 10 Performance & Scalability interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "../rag/13_Performance_Scalability.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
   "id": "rg-22-llm-evaluation-metrics-methods-and-llm-as-a-judg-c7a410",
   "trackId": "veerarag",
   "title": "22. Interview: LLM Evaluation: Metrics, Methods, and LLM-as-a-Judge",
   "summary": "Interview Q&A for LLM Evaluation: Metrics, Methods, and LLM-as-a-Judge.",
-  "order": 210,
+  "order": 220,
   "objectives": [
    "Answer the LLM Evaluation: Metrics, Methods, and LLM-as-a-Judge interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3276,7 +3416,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: RAG Evaluation: Retrieval, Generation, and End-to-End Metrics",
   "summary": "Interview Q&A for RAG Evaluation: Retrieval, Generation, and End-to-End Metrics — 10 questions with model answers.",
-  "order": 211,
+  "order": 221,
   "objectives": [
    "Answer 10 RAG Evaluation: Retrieval, Generation, and End-to-End Metrics interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3290,7 +3430,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Advanced RAG: Graph RAG, Agentic RAG, Self-RAG & Corrective RAG Evaluation",
   "summary": "Interview Q&A for Advanced RAG: Graph RAG, Agentic RAG, Self-RAG & Corrective RAG Evaluation — 10 questions with model answers.",
-  "order": 212,
+  "order": 222,
   "objectives": [
    "Answer 10 Advanced RAG: Graph RAG, Agentic RAG, Self-RAG & Corrective RAG Evaluation interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3304,7 +3444,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: AI Agent Evaluation: Tasks, Tools, and Trajectories",
   "summary": "Interview Q&A for AI Agent Evaluation: Tasks, Tools, and Trajectories.",
-  "order": 213,
+  "order": 223,
   "objectives": [
    "Answer the AI Agent Evaluation: Tasks, Tools, and Trajectories interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3318,7 +3458,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Multi-Agent System Evaluation: Coordination, Communication, and Emergent Behavior",
   "summary": "Interview Q&A for Multi-Agent System Evaluation: Coordination, Communication, and Emergent Behavior — 10 questions with model answers.",
-  "order": 214,
+  "order": 224,
   "objectives": [
    "Answer 10 Multi-Agent System Evaluation: Coordination, Communication, and Emergent Behavior interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3332,7 +3472,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Agentic AI Evaluation: Autonomy, Safety, and Long-Horizon Tasks",
   "summary": "Interview Q&A for Agentic AI Evaluation: Autonomy, Safety, and Long-Horizon Tasks.",
-  "order": 215,
+  "order": 225,
   "objectives": [
    "Answer the Agentic AI Evaluation: Autonomy, Safety, and Long-Horizon Tasks interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3346,7 +3486,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: MCP & Tool Calling: Concepts, Implementation, and Evaluation",
   "summary": "Interview Q&A for MCP & Tool Calling: Concepts, Implementation, and Evaluation.",
-  "order": 216,
+  "order": 226,
   "objectives": [
    "Answer the MCP & Tool Calling: Concepts, Implementation, and Evaluation interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3360,7 +3500,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Tracing: Spans, Traces, and Observability for AI Systems",
   "summary": "Interview Q&A for Tracing: Spans, Traces, and Observability for AI Systems — 10 questions with model answers.",
-  "order": 217,
+  "order": 227,
   "objectives": [
    "Answer 10 Tracing: Spans, Traces, and Observability for AI Systems interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3374,7 +3514,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Production Monitoring: Drift, Latency, Cost, and Alerts for AI Systems",
   "summary": "Interview Q&A for Production Monitoring: Drift, Latency, Cost, and Alerts for AI Systems — 10 questions with model answers.",
-  "order": 218,
+  "order": 228,
   "objectives": [
    "Answer 10 Production Monitoring: Drift, Latency, Cost, and Alerts for AI Systems interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3388,7 +3528,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Golden Datasets: The Foundation of Trustworthy AI Evaluation",
   "summary": "Interview Q&A for Golden Datasets: The Foundation of Trustworthy AI Evaluation — 10 questions with model answers.",
-  "order": 219,
+  "order": 229,
   "objectives": [
    "Answer 10 Golden Datasets: The Foundation of Trustworthy AI Evaluation interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3402,7 +3542,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: BM25 & Sparse Retrieval",
   "summary": "Interview Q&A for BM25 & Sparse Retrieval — 57 questions with model answers.",
-  "order": 220,
+  "order": 230,
   "objectives": [
    "Answer 57 BM25 & Sparse Retrieval interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3416,7 +3556,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Graph RAG Foundations",
   "summary": "Interview Q&A for Graph RAG Foundations — 10 questions with model answers.",
-  "order": 221,
+  "order": 231,
   "objectives": [
    "Answer 10 Graph RAG Foundations interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3430,7 +3570,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Knowledge Graph Construction",
   "summary": "Interview Q&A for Knowledge Graph Construction — 10 questions with model answers.",
-  "order": 222,
+  "order": 232,
   "objectives": [
    "Answer 10 Knowledge Graph Construction interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3444,7 +3584,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Graph Data Structures for RAG",
   "summary": "Interview Q&A for Graph Data Structures for RAG — 9 questions with model answers.",
-  "order": 223,
+  "order": 233,
   "objectives": [
    "Answer 9 Graph Data Structures for RAG interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3458,7 +3598,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Graph Databases for Graph RAG",
   "summary": "Interview Q&A for Graph Databases for Graph RAG — 6 questions with model answers.",
-  "order": 224,
+  "order": 234,
   "objectives": [
    "Answer 6 Graph Databases for Graph RAG interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3472,7 +3612,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Community Detection Algorithms",
   "summary": "Interview Q&A for Community Detection Algorithms — 8 questions with model answers.",
-  "order": 225,
+  "order": 235,
   "objectives": [
    "Answer 8 Community Detection Algorithms interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3486,7 +3626,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Graph Traversal & Retrieval",
   "summary": "Interview Q&A for Graph Traversal & Retrieval — 6 questions with model answers.",
-  "order": 226,
+  "order": 236,
   "objectives": [
    "Answer 6 Graph Traversal & Retrieval interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3500,7 +3640,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Hybrid Graph-Vector Retrieval",
   "summary": "Interview Q&A for Hybrid Graph-Vector Retrieval — 6 questions with model answers.",
-  "order": 227,
+  "order": 237,
   "objectives": [
    "Answer 6 Hybrid Graph-Vector Retrieval interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3514,7 +3654,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Entity Linking & Disambiguation",
   "summary": "Interview Q&A for Entity Linking & Disambiguation — 5 questions with model answers.",
-  "order": 228,
+  "order": 238,
   "objectives": [
    "Answer 5 Entity Linking & Disambiguation interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3528,7 +3668,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Graph Query Languages",
   "summary": "Interview Q&A for Graph Query Languages — 2 questions with model answers.",
-  "order": 229,
+  "order": 239,
   "objectives": [
    "Answer 2 Graph Query Languages interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3542,7 +3682,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Microsoft GraphRAG Deep Dive",
   "summary": "Interview Q&A for Microsoft GraphRAG Deep Dive — 1 questions with model answers.",
-  "order": 230,
+  "order": 240,
   "objectives": [
    "Answer 1 Microsoft GraphRAG Deep Dive interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3556,7 +3696,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Graph RAG Evaluation",
   "summary": "Interview Q&A for Graph RAG Evaluation — 1 questions with model answers.",
-  "order": 231,
+  "order": 241,
   "objectives": [
    "Answer 1 Graph RAG Evaluation interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3570,7 +3710,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Failure Modes & Debugging",
   "summary": "Interview Q&A for Failure Modes & Debugging — 1 questions with model answers.",
-  "order": 232,
+  "order": 242,
   "objectives": [
    "Answer 1 Failure Modes & Debugging interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3584,7 +3724,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Scalability & Performance",
   "summary": "Interview Q&A for Scalability & Performance — 1 questions with model answers.",
-  "order": 233,
+  "order": 243,
   "objectives": [
    "Answer 1 Scalability & Performance interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3598,7 +3738,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Infrastructure & Tools",
   "summary": "Interview Q&A for Infrastructure & Tools — 1 questions with model answers.",
-  "order": 234,
+  "order": 244,
   "objectives": [
    "Answer 1 Infrastructure & Tools interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3612,7 +3752,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: BM25 Fundamentals",
   "summary": "Interview Q&A for BM25 Fundamentals — 6 questions with model answers.",
-  "order": 235,
+  "order": 245,
   "objectives": [
    "Answer 6 BM25 Fundamentals interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3626,7 +3766,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Hybrid Search",
   "summary": "Interview Q&A for Hybrid Search — 7 questions with model answers.",
-  "order": 236,
+  "order": 246,
   "objectives": [
    "Answer 7 Hybrid Search interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3640,7 +3780,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: GraphRAG Fundamentals",
   "summary": "Interview Q&A for GraphRAG Fundamentals — 5 questions with model answers.",
-  "order": 237,
+  "order": 247,
   "objectives": [
    "Answer 5 GraphRAG Fundamentals interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3654,7 +3794,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Knowledge Graphs",
   "summary": "Interview Q&A for Knowledge Graphs — 5 questions with model answers.",
-  "order": 238,
+  "order": 248,
   "objectives": [
    "Answer 5 Knowledge Graphs interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3668,7 +3808,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: GraphRAG Pipeline",
   "summary": "Interview Q&A for GraphRAG Pipeline — 5 questions with model answers.",
-  "order": 239,
+  "order": 249,
   "objectives": [
    "Answer 5 GraphRAG Pipeline interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3682,7 +3822,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: GraphRAG vs Normal RAG",
   "summary": "Interview Q&A for GraphRAG vs Normal RAG — 5 questions with model answers.",
-  "order": 240,
+  "order": 250,
   "objectives": [
    "Answer 5 GraphRAG vs Normal RAG interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3696,7 +3836,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: GraphRAG Evaluation",
   "summary": "Interview Q&A for GraphRAG Evaluation — 5 questions with model answers.",
-  "order": 241,
+  "order": 251,
   "objectives": [
    "Answer 5 GraphRAG Evaluation interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3710,7 +3850,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Production GraphRAG Systems",
   "summary": "Interview Q&A for Production GraphRAG Systems — 5 questions with model answers.",
-  "order": 242,
+  "order": 252,
   "objectives": [
    "Answer 5 Production GraphRAG Systems interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3724,7 +3864,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Security in GraphRAG Systems",
   "summary": "Interview Q&A for Security in GraphRAG Systems — 5 questions with model answers.",
-  "order": 243,
+  "order": 253,
   "objectives": [
    "Answer 5 Security in GraphRAG Systems interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3738,7 +3878,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Complete MCP (Model Context Protocol) Masterclass 2026",
   "summary": "Interview Q&A for Complete MCP (Model Context Protocol) Masterclass 2026 — 11 questions with model answers.",
-  "order": 244,
+  "order": 254,
   "objectives": [
    "Answer 11 Complete MCP (Model Context Protocol) Masterclass 2026 interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3752,7 +3892,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: RAG Evaluation Techniques",
   "summary": "Interview Q&A for RAG Evaluation Techniques.",
-  "order": 245,
+  "order": 255,
   "objectives": [
    "Answer the RAG Evaluation Techniques interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3766,7 +3906,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: Complete RAG Indexing Techniques — Master Guide 2026",
   "summary": "Interview Q&A for Complete RAG Indexing Techniques — Master Guide 2026 — 1 questions with model answers.",
-  "order": 246,
+  "order": 256,
   "objectives": [
    "Answer 1 Complete RAG Indexing Techniques — Master Guide 2026 interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"
@@ -3780,7 +3920,7 @@
   "trackId": "veerarag",
   "title": "22. Interview: RAG Search & Filtering Techniques",
   "summary": "Interview Q&A for RAG Search & Filtering Techniques — 28 questions with model answers.",
-  "order": 247,
+  "order": 257,
   "objectives": [
    "Answer 28 RAG Search & Filtering Techniques interview questions out loud",
    "Lead with the concept, then a small example, then a tradeoff"

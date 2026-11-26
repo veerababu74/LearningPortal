@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import type { CodeSnippet, FrameworkTag } from '@/types/curriculum'
-import { PythonHighlight } from './PythonHighlight'
+import { CodeHighlight, resolveHighlightLang } from './CodeHighlight'
 import './CodePanel.css'
 
 const LABELS: Record<FrameworkTag, string> = {
@@ -34,7 +34,7 @@ export function CodePanel({ snippets }: { snippets: CodeSnippet[] }) {
     window.setTimeout(() => setCopied(false), 1200)
   }
 
-  const isPython = !active?.language || active.language === 'python'
+  const lang = active?.language || 'python'
 
   return (
     <div className="code-panel">
@@ -81,7 +81,7 @@ export function CodePanel({ snippets }: { snippets: CodeSnippet[] }) {
         </div>
       ) : null}
       <pre className="code-body">
-        {isPython ? <PythonHighlight code={active.code} /> : <code>{active.code}</code>}
+        {resolveHighlightLang(lang) !== 'plain' ? <CodeHighlight code={active.code} language={lang} /> : <code>{active.code}</code>}
       </pre>
       <div className="code-legend" aria-hidden>
         <span className="tok-keyword">keyword</span>

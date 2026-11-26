@@ -144,6 +144,30 @@
   color: var(--focus);
 }
 
+.md-svg-figure {
+  margin: 0.9rem 0 1.2rem;
+}
+
+.md-svg-diagram {
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  max-width: 680px;
+  overflow-x: auto;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+}
+
+.md-svg-diagram svg {
+  display: block;
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+  margin: 0 auto;
+  font-family: inherit;
+}
+
 /* Hand-drawn ASCII diagrams from the notes: keep alignment, no syntax colouring. */
 .md-body .md-ascii {
   background: #f8fafc;

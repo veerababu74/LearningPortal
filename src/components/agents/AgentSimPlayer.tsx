@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import type { AgentSim, SimEdge, SimNode, SimNodeKind } from '@/content/agents/visualizer'
-import { PythonHighlight } from '@/components/code/PythonHighlight'
+import { CodeHighlight } from '@/components/code/CodeHighlight'
 import '@/components/code/CodePanel.css'
 import './agents.css'
 
@@ -442,7 +442,7 @@ export function AgentSimPlayer({ sim, compact = false }: Props) {
             {codeLines.map((line, i) => (
               <div key={i} data-line={i} className={hlLines.has(i) ? 'agsim-line on' : 'agsim-line'}>
                 <span className="agsim-ln">{i + 1}</span>
-                <PythonHighlight code={line || ' '} />
+                <CodeHighlight code={line || ' '} language={sim.framework} />
               </div>
             ))}
           </div>
