@@ -1,0 +1,3792 @@
+[
+ {
+  "id": "rg-01-what-is-rag-definition-motivation-architecture-o-0f19e1",
+  "trackId": "veerarag",
+  "title": "01. RAG Foundations: What is RAG — Definition, Motivation, Architecture Overview",
+  "summary": "Retrieval-Augmented Generation (RAG) is a hybrid AI architecture that combines a retrieval system (which fetches relevant documents from a knowledge base) with a generative language model (which synthesizes the retrieved content into a…",
+  "order": 1,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "01_RAG_Foundations.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-01-rag-vs-fine-tuning-vs-prompt-stuffing-when-to-us-73e422",
+  "trackId": "veerarag",
+  "title": "01. RAG Foundations: RAG vs Fine-tuning vs Prompt Stuffing — When to Use Which",
+  "summary": "Three primary techniques exist for grounding LLMs with domain knowledge: RAG (dynamic retrieval at inference time), Fine-tuning (baking knowledge into model weights), and Prompt Stuffing (inserting all relevant text directly into the…",
+  "order": 2,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "01_RAG_Foundations.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-01-naive-rag-vs-advanced-rag-vs-modular-rag-042e96",
+  "trackId": "veerarag",
+  "title": "01. RAG Foundations: Naive RAG vs Advanced RAG vs Modular RAG",
+  "summary": "RAG has evolved through three generations. Naive RAG (2020-2022) is the basic retrieve-then-read pipeline: embed query → ANN search → stuff top-K chunks into prompt → generate.",
+  "order": 3,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "01_RAG_Foundations.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-01-the-retrieve-read-pipeline-basic-flow-87c3ea",
+  "trackId": "veerarag",
+  "title": "01. RAG Foundations: The Retrieve-Read Pipeline (Basic Flow)",
+  "summary": "The Retrieve-Read pipeline is the fundamental execution pattern of RAG: given a user query, retrieve relevant documents, then read (generate) an answer conditioned on those documents.",
+  "order": 4,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "01_RAG_Foundations.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-01-grounding-vs-hallucination-how-rag-reduces-hallu-b86617",
+  "trackId": "veerarag",
+  "title": "01. RAG Foundations: Grounding vs Hallucination — How RAG Reduces Hallucination",
+  "summary": "Hallucination in LLMs occurs when the model generates plausible-sounding but factually incorrect content from its parametric memory — weights trained on internet data that may be outdated, biased, or simply wrong for your domain.",
+  "order": 5,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "01_RAG_Foundations.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-01-rag-evaluation-overview-faithfulness-relevance-g-115c01",
+  "trackId": "veerarag",
+  "title": "01. RAG Foundations: RAG Evaluation Overview (Faithfulness, Relevance, Groundedness)",
+  "summary": "RAG evaluation requires measuring three distinct dimensions: Faithfulness (is the generated answer factually consistent with the retrieved context — detecting hallucination within the generation stage?), Answer Relevance (does the answer…",
+  "order": 6,
+  "objectives": [
+   "① Concept Explanation",
+   "② Code: RAGAS Evaluation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "01_RAG_Foundations.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-01-llm-rag-ai-agents-mcp-complete-tutorial-guide-adc49b",
+  "trackId": "veerarag",
+  "title": "01. RAG Foundations: LLM, RAG, AI Agents & MCP — Complete Tutorial Guide",
+  "summary": "Goal: Understand how LLMs, RAG, AI Agents, and MCP fit together to build real production AI systems — not just demos.",
+  "order": 7,
+  "objectives": [
+   "The Big Picture",
+   "LLM (Large Language Model) — The Brain",
+   "RAG (Retrieval-Augmented Generation) — The Memory",
+   "AI Agents — The Hands & Goals",
+   "MCP (Model Context Protocol) — The Standard",
+   "MCP Evaluation & Benchmarking"
+  ],
+  "sourceFile": "LLM_RAG_Agents_MCP_Tutorial.md",
+  "labIds": [],
+  "series": "LLM, RAG, Agents & MCP Tutorial"
+ },
+ {
+  "id": "rg-02-document-loaders-pdf-docx-html-csv-web-scraping-5ec2c7",
+  "trackId": "veerarag",
+  "title": "02. Ingestion & Chunking: Document Loaders (PDF, DOCX, HTML, CSV, Web Scraping)",
+  "summary": "Document loaders are the entry point of every RAG ingestion pipeline.",
+  "order": 8,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "02_Document_Processing_Ingestion.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-02-document-cleaning-and-preprocessing-70844c",
+  "trackId": "veerarag",
+  "title": "02. Ingestion & Chunking: Document Cleaning and Preprocessing",
+  "summary": "Raw documents contain significant noise that degrades embedding quality and retrieval accuracy: boilerplate headers/footers, repeated navigation text, HTML artifacts, OCR errors, special characters, and duplicate content.",
+  "order": 9,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Code",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "02_Document_Processing_Ingestion.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-02-metadata-extraction-and-storage-ea0f26",
+  "trackId": "veerarag",
+  "title": "02. Ingestion & Chunking: Metadata Extraction and Storage",
+  "summary": "Metadata is the structured information about a document that enables filtering, faceting, access control, and hybrid search in a vector database.",
+  "order": 10,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Code",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "02_Document_Processing_Ingestion.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-02-handling-multi-modal-documents-text-tables-image-25bc30",
+  "trackId": "veerarag",
+  "title": "02. Ingestion & Chunking: Handling Multi-Modal Documents (Text + Tables + Images)",
+  "summary": "Real-world documents are multi-modal: a financial report contains text paragraphs, data tables, and charts; a technical manual has diagrams and numbered figures.",
+  "order": 11,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Code",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "02_Document_Processing_Ingestion.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-02-document-versioning-and-incremental-updates-f96276",
+  "trackId": "veerarag",
+  "title": "02. Ingestion & Chunking: Document Versioning and Incremental Updates",
+  "summary": "In production RAG systems, documents are living artifacts — policies get updated, contracts are amended, knowledge bases evolve.",
+  "order": 12,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Code",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "02_Document_Processing_Ingestion.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-02-fixed-size-chunking-character-and-token-based-8489bd",
+  "trackId": "veerarag",
+  "title": "02. Ingestion & Chunking: Fixed-Size Chunking (Character and Token-Based)",
+  "summary": "Fixed-size chunking splits documents into segments of a predetermined size — either by character count or token count — with an optional overlap between consecutive chunks.",
+  "order": 13,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "03_Chunking_Strategies.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-02-recursive-character-text-splitting-52dc5c",
+  "trackId": "veerarag",
+  "title": "02. Ingestion & Chunking: Recursive Character Text Splitting",
+  "summary": "Recursive Character Text Splitting is LangChain's most versatile and production-recommended chunking strategy.",
+  "order": 14,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Code",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "03_Chunking_Strategies.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-02-sentence-level-chunking-88c3ab",
+  "trackId": "veerarag",
+  "title": "02. Ingestion & Chunking: Sentence-Level Chunking",
+  "summary": "Sentence-level chunking uses NLP sentence boundary detection to split documents exactly at sentence boundaries, then groups sentences into chunks that fit within a size limit.",
+  "order": 15,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Code",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "03_Chunking_Strategies.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-02-semantic-chunking-embedding-based-boundary-detec-8493e2",
+  "trackId": "veerarag",
+  "title": "02. Ingestion & Chunking: Semantic Chunking (Embedding-Based Boundary Detection)",
+  "summary": "Semantic chunking is an advanced technique that uses embedding models to detect topical shifts in a document — rather than splitting at fixed sizes or sentence counts, it groups sentences that are semantically similar and creates…",
+  "order": 16,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Code",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "03_Chunking_Strategies.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-02-hierarchical-chunking-parent-child-chunks-6eac49",
+  "trackId": "veerarag",
+  "title": "02. Ingestion & Chunking: Hierarchical Chunking (Parent-Child Chunks)",
+  "summary": "Hierarchical chunking creates a two-level chunk structure: large parent chunks (1024-4096 tokens) that preserve broad context, and small child chunks (128-512 tokens) derived from the parents.",
+  "order": 17,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Code",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "03_Chunking_Strategies.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-02-sliding-window-chunking-08ba9a",
+  "trackId": "veerarag",
+  "title": "02. Ingestion & Chunking: Sliding Window Chunking",
+  "summary": "Sliding window chunking creates chunks with significant overlap by sliding a fixed-size window across the document at a configurable step size.",
+  "order": 18,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Code",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "03_Chunking_Strategies.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-02-chunk-size-selection-tradeoffs-9e2a15",
+  "trackId": "veerarag",
+  "title": "02. Ingestion & Chunking: Chunk Size Selection — Tradeoffs",
+  "summary": "Chunk size is the single most impactful hyperparameter in RAG systems — more impactful than the choice of vector database or even the embedding model.",
+  "order": 19,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Code: Empirical Chunk Size Selection",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "03_Chunking_Strategies.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-02-chunking-strategies-for-real-world-documents-0f9115",
+  "trackId": "veerarag",
+  "title": "02. Ingestion & Chunking: Chunking strategies for real-world documents",
+  "summary": "Audience: AI engineers building RAG pipelines over PDF / DOCX / TXT corpora where documents contain tables, images, and cross-page references. > Companion artifacts: notebook_1_tables.ipynb, notebook_2_cross_page_references.ipynb,…",
+  "order": 20,
+  "objectives": [
+   "Why Naive Chunking Breaks on Real Documents",
+   "Core Strategy: Structure-Aware Chunking with Unstructured.io",
+   "Scenario 1 — Tables That Span Multiple Pages",
+   "Scenario 2 — Cross-Page References in Legal & Medical Docs",
+   "Scenario 3 — Mixed Content: Images, Tables, and Text",
+   "Embedding & Vector Store Integration"
+  ],
+  "sourceFile": "rag-chunking-strategies.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-02-parsing-tables-from-documents-513fcb",
+  "trackId": "veerarag",
+  "title": "02. Ingestion & Chunking: Parsing tables from documents",
+  "summary": "Scenario from the user: A PDF/DOCX contains a table. A naive RecursiveCharacterTextSplitter cuts the table mid-row, losing the header context.",
+  "order": 21,
+  "objectives": [
+   "Step 1 — Generate a Synthetic PDF with a Cross-Page Table",
+   "Step 2 — Partition with hi_res + infer_table_structure",
+   "Step 3 — Detect Cross-Page Table Continuation",
+   "Step 4 — Merge the Cross-Page Tables",
+   "Step 5 — Chunk with chunk_by_title",
+   "Step 6 — Build a ChromaDB Collection"
+  ],
+  "sourceFile": "notebook_1_tables.ipynb",
+  "labIds": [],
+  "series": "Document Parsing Notebooks"
+ },
+ {
+  "id": "rg-02-cross-page-references-43401c",
+  "trackId": "veerarag",
+  "title": "02. Ingestion & Chunking: Cross-page references",
+  "summary": "Scenario from the user: A legal or medical document has clauses that reference other sections. Example: \"The obligations set forth in Section 4.1 shall survive termination.\" Section 4.1 may be 30 pages away.",
+  "order": 22,
+  "objectives": [
+   "Step 1 — Generate a Synthetic 10-Section Contract",
+   "Step 2 — Section-Aware Chunking",
+   "Step 3 — Optional Sub-Chunking for Better Retrieval",
+   "Step 4 — Build the Reference Graph",
+   "Step 5 — Index Both Parents and Children in ChromaDB",
+   "Step 6 — Retrieval with Reference Expansion"
+  ],
+  "sourceFile": "notebook_2_cross_page_references.ipynb",
+  "labIds": [],
+  "series": "Document Parsing Notebooks"
+ },
+ {
+  "id": "rg-02-images-and-mixed-content-eae5da",
+  "trackId": "veerarag",
+  "title": "02. Ingestion & Chunking: Images and mixed content",
+  "summary": "Scenario from the user: A PDF/DOCX contains a mix of prose paragraphs, data tables, and embedded images (charts, diagrams, photos).",
+  "order": 23,
+  "objectives": [
+   "Step 1 — Generate a Synthetic PDF with Image + Table + Prose",
+   "Step 2 — Partition with Image Extraction",
+   "Step 3 — Generate a Text Description for Each Image",
+   "Step 4 — Chunk and Index",
+   "Step 5 — Retrieval Test",
+   "Step 6 — Returning the Original Image to the LLM"
+  ],
+  "sourceFile": "notebook_3_images_mixed_content.ipynb",
+  "labIds": [],
+  "series": "Document Parsing Notebooks"
+ },
+ {
+  "id": "rg-02-page-references-and-citations-5d8cd2",
+  "trackId": "veerarag",
+  "title": "02. Ingestion & Chunking: Page references and citations",
+  "summary": "The documents have referencing one to another like 1st page of PDF referencing 7th page. > Mostly this type of thing is happening in legal and medical documents. How to handle?",
+  "order": 24,
+  "objectives": [
+   "Step 1 — Generate a Synthetic 12-Page Legal Brief with Page Cross-References",
+   "Step 2 — Partition with hi_res",
+   "Step 3 — Build the Printed-Page → PDF-Page Map",
+   "Step 4 — Chunk with chunk_by_title",
+   "Step 5 — Detect Page References in Every Chunk",
+   "Step 6 — Build the Bidirectional Reference Graph"
+  ],
+  "sourceFile": "notebook_4_page_references.ipynb",
+  "labIds": [],
+  "series": "Document Parsing Notebooks"
+ },
+ {
+  "id": "rg-03-what-are-embeddings-vector-representation-of-tex-aeb83c",
+  "trackId": "veerarag",
+  "title": "03. Embeddings & Vector DBs: What Are Embeddings — Vector Representation of Text",
+  "summary": "Embeddings are dense, fixed-dimensional numerical vectors that represent the semantic meaning of text in a continuous geometric space.",
+  "order": 25,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "04_Embedding_Models.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-03-embedding-model-selection-3b3dd2",
+  "trackId": "veerarag",
+  "title": "03. Embeddings & Vector DBs: Embedding Model Selection",
+  "summary": "Selecting the right embedding model is a critical architectural decision that affects retrieval quality, cost, latency, and maintenance burden.",
+  "order": 26,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Code"
+  ],
+  "sourceFile": "04_Embedding_Models.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-03-dense-vs-sparse-embeddings-082c05",
+  "trackId": "veerarag",
+  "title": "03. Embeddings & Vector DBs: Dense vs Sparse Embeddings",
+  "summary": "Dense embeddings (BERT-style, neural) represent text as a continuous vector where every dimension contributes to meaning — high-dimensional but compact, capturing semantic similarity even without lexical overlap.",
+  "order": 27,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Code",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "04_Embedding_Models.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-03-bi-encoder-vs-cross-encoder-eb63e3",
+  "trackId": "veerarag",
+  "title": "03. Embeddings & Vector DBs: Bi-Encoder vs Cross-Encoder",
+  "summary": "Bi-encoders encode query and document independently, producing separate vectors that are compared via dot product or cosine similarity.",
+  "order": 28,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Code",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "04_Embedding_Models.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-03-domain-specific-embedding-fine-tuning-51f31e",
+  "trackId": "veerarag",
+  "title": "03. Embeddings & Vector DBs: Domain-Specific Embedding Fine-Tuning",
+  "summary": "General embedding models are trained on internet text and perform well on general queries but struggle with specialized domains: medical terminology (ICD codes, drug names), legal jargon (Latin terms, specific statute references),…",
+  "order": 29,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Code",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "04_Embedding_Models.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-03-embedding-model-versioning-what-happens-when-you-636c50",
+  "trackId": "veerarag",
+  "title": "03. Embeddings & Vector DBs: Embedding Model Versioning — What Happens When You Upgrade",
+  "summary": "Embedding models evolve — OpenAI releases text-embedding-3 to replace text-embedding-ada-002, BGE releases new versions, sentence-transformers updates model weights.",
+  "order": 30,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Code",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "04_Embedding_Models.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-03-vector-db-fundamentals-collections-namespaces-di-4f747c",
+  "trackId": "veerarag",
+  "title": "03. Embeddings & Vector DBs: Vector DB Fundamentals — Collections, Namespaces, Distance Metrics",
+  "summary": "A vector database is a specialized storage engine designed to store, index, and query dense numerical vectors at scale with sub-millisecond latency.",
+  "order": 31,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "05_Vector_Databases.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-03-ann-algorithms-hnsw-ivf-product-quantization-263a5c",
+  "trackId": "veerarag",
+  "title": "03. Embeddings & Vector DBs: ANN Algorithms — HNSW, IVF, Product Quantization",
+  "summary": "Approximate Nearest Neighbor (ANN) algorithms solve the problem of finding vectors similar to a query vector in a large dataset without checking every single vector (which would be O(n) per query). Three main algorithmic families: 1.",
+  "order": 32,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Code",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "05_Vector_Databases.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-03-vector-database-options-comparison-3ae3aa",
+  "trackId": "veerarag",
+  "title": "03. Embeddings & Vector DBs: Vector Database Options Comparison",
+  "summary": "Choosing the right vector database depends on: dataset scale, latency requirements, infrastructure preferences (managed vs self-hosted), filtering complexity, multi-modal requirements, and cost.",
+  "order": 33,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Code",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "05_Vector_Databases.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-03-hybrid-search-combining-dense-and-sparse-retriev-fa23bc",
+  "trackId": "veerarag",
+  "title": "03. Embeddings & Vector DBs: Hybrid Search — Combining Dense and Sparse Retrieval",
+  "summary": "Hybrid search combines dense vector retrieval (semantic similarity via embeddings) with sparse retrieval (keyword matching via BM25/SPLADE) to get the best of both approaches.",
+  "order": 34,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Code",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "05_Vector_Databases.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-03-scaling-sharding-and-replication-751b2e",
+  "trackId": "veerarag",
+  "title": "03. Embeddings & Vector DBs: Scaling — Sharding and Replication",
+  "summary": "As vector datasets grow beyond single-node capacity (typically >50M vectors at 1536d), horizontal scaling becomes necessary.",
+  "order": 35,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Code",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "05_Vector_Databases.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-03-what-is-chromadb-af394f",
+  "trackId": "veerarag",
+  "title": "03. Embeddings & Vector DBs: What is ChromaDB?",
+  "summary": "What is ChromaDB?: explanations and runnable examples.",
+  "order": 36,
+  "objectives": [
+   "What is ChromaDB?"
+  ],
+  "sourceFile": "fri_may_29_2026_creating_rag_application_with_lang_chain_and.md",
+  "labIds": [],
+  "series": "Complete ChromaDB Masterclass"
+ },
+ {
+  "id": "rg-03-chromadb-without-langchain-native-client-99142a",
+  "trackId": "veerarag",
+  "title": "03. Embeddings & Vector DBs: ChromaDB WITHOUT LangChain (Native Client)",
+  "summary": "ChromaDB WITHOUT LangChain (Native Client): explanations and runnable examples.",
+  "order": 37,
+  "objectives": [
+   "ChromaDB WITHOUT LangChain (Native Client)"
+  ],
+  "sourceFile": "fri_may_29_2026_creating_rag_application_with_lang_chain_and.md",
+  "labIds": [],
+  "series": "Complete ChromaDB Masterclass"
+ },
+ {
+  "id": "rg-03-chromadb-with-langchain-1085b8",
+  "trackId": "veerarag",
+  "title": "03. Embeddings & Vector DBs: ChromaDB WITH LangChain",
+  "summary": "ChromaDB WITH LangChain: explanations and runnable examples.",
+  "order": 38,
+  "objectives": [
+   "ChromaDB WITH LangChain"
+  ],
+  "sourceFile": "fri_may_29_2026_creating_rag_application_with_lang_chain_and.md",
+  "labIds": [],
+  "series": "Complete ChromaDB Masterclass"
+ },
+ {
+  "id": "rg-03-complete-rag-indexing-techniques-master-guide-20-00cb97",
+  "trackId": "veerarag",
+  "title": "03. Embeddings & Vector DBs: Complete RAG Indexing Techniques — Master Guide 2026",
+  "summary": "Core Idea: Convert documents → vectors → store in index → when query comes, find nearest vectors → feed to LLM",
+  "order": 39,
+  "objectives": [
+   "FOUNDATION — What is RAG Indexing?"
+  ],
+  "sourceFile": "fri_may_29_2026_rag_indexing_techniques_explained_with_examples.md",
+  "labIds": [],
+  "series": "RAG Indexing Techniques"
+ },
+ {
+  "id": "rg-04-what-is-information-retrieval-ir-3bb33a",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: What Is Information Retrieval (IR)",
+  "summary": "Information Retrieval (IR) is the science of finding material — typically documents — that satisfies an information need from within large collections.",
+  "order": 40,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "01_ir_foundations.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval"
+ },
+ {
+  "id": "rg-04-boolean-retrieval-model-fc4634",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: Boolean Retrieval Model",
+  "summary": "The Boolean retrieval model matches documents against Boolean expressions of query terms using AND, OR, NOT operators. A document is either relevant (1) or not (0) — no ranking.",
+  "order": 41,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "01_ir_foundations.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval"
+ },
+ {
+  "id": "rg-04-vector-space-model-tf-idf-cosine-similarity-169917",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: Vector Space Model — TF-IDF & Cosine Similarity",
+  "summary": "The Vector Space Model (VSM) represents documents and queries as vectors in a high-dimensional term space (one dimension per unique vocabulary term). Each dimension's value is the TF-IDF weight of the corresponding term.",
+  "order": 42,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "01_ir_foundations.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval"
+ },
+ {
+  "id": "rg-04-probabilistic-retrieval-model-fd80dc",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: Probabilistic Retrieval Model",
+  "summary": "The probabilistic retrieval model formalises relevance as a probability. Given query Q, the goal is to estimate P(R=1 | D, Q) — the probability that document D is relevant to query Q.",
+  "order": 43,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "01_ir_foundations.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval"
+ },
+ {
+  "id": "rg-04-language-model-for-ir-query-likelihood-4f2614",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: Language Model for IR — Query Likelihood",
+  "summary": "The Language Model (LM) approach to IR treats each document as a probability distribution over words — a language model θ_D.",
+  "order": 44,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "01_ir_foundations.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval"
+ },
+ {
+  "id": "rg-04-bag-of-words-assumption-2adc30",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: Bag-of-Words Assumption",
+  "summary": "The bag-of-words (BoW) assumption treats a document as an unordered multiset of terms — word order and grammatical structure are discarded.",
+  "order": 45,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "01_ir_foundations.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval"
+ },
+ {
+  "id": "rg-04-ir-evaluation-framework-773c4a",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: IR Evaluation Framework",
+  "summary": "IR evaluation requires a test collection: a document corpus, a set of queries (topics), and relevance judgements (qrels) — human-annotated labels indicating which documents are relevant to each query.",
+  "order": 46,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Formulas",
+   "③ Implementation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "01_ir_foundations.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval"
+ },
+ {
+  "id": "rg-04-tf-idf-deep-dive-7325e9",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: TF-IDF — Deep Dive",
+  "summary": "Term Frequency (TF) measures how often a query term appears in a document. The intuition: a document that mentions \"machine learning\" 10 times is more likely about machine learning than one that mentions it once.",
+  "order": 47,
+  "objectives": [
+   "CONCEPT 1: Term Frequency (TF)",
+   "CONCEPT 2: Inverse Document Frequency (IDF)",
+   "CONCEPT 3: TF-IDF Combined Score",
+   "CONCEPT 4: TF-IDF Variants",
+   "CONCEPT 5: TF-IDF as a Sparse Vector",
+   "CONCEPT 6: TF-IDF Limitations — Why BM25 Was Developed"
+  ],
+  "sourceFile": "02_tfidf.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval"
+ },
+ {
+  "id": "rg-04-bm25-mathematical-foundations-71d159",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: BM25 — Mathematical Foundations",
+  "summary": "BM25 (Best Match 25) is the dominant classical retrieval function, derived from the Probabilistic Relevance Framework. Given a query Q = {q₁, q₂, ..., qₙ} and a document D, BM25 sums per-term scores.",
+  "order": 48,
+  "objectives": [
+   "CONCEPT 1: BM25 Full Formula — Every Term Explained",
+   "CONCEPT 2: k1 Parameter — TF Saturation",
+   "CONCEPT 3: b Parameter — Document Length Normalisation",
+   "CONCEPT 4: avgdl — Average Document Length",
+   "CONCEPT 5: Why BM25 Is Better Than TF-IDF",
+   "CONCEPT 6: BM25 IDF Variants"
+  ],
+  "sourceFile": "03_bm25_math.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval"
+ },
+ {
+  "id": "rg-04-bm25-variants-and-extensions-00aa6c",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: BM25 Variants and Extensions",
+  "summary": "BM25F (BM25 with Field weights) extends BM25 to multi-field documents (e.g., title, body, anchor text, URL).",
+  "order": 49,
+  "objectives": [
+   "CONCEPT 1: BM25F — Field-Weighted BM25",
+   "CONCEPT 2: BM25 with Query Expansion",
+   "CONCEPT 3: Positional BM25 — Term Proximity",
+   "CONCEPT 4: BM25-Adpt — Adaptive k1 Per Term",
+   "CONCEPT 5: BM25 with Pseudo-Relevance Feedback (RM3)"
+  ],
+  "sourceFile": "04_bm25_variants.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval"
+ },
+ {
+  "id": "rg-04-inverted-index-797e92",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: Inverted Index",
+  "summary": "An inverted index is the core data structure of every text search system. It maps terms (vocabulary entries) to the list of documents where they appear, optionally with frequency and position information.",
+  "order": 50,
+  "objectives": [
+   "CONCEPT 1: What Is an Inverted Index",
+   "CONCEPT 2: Index Construction Pipeline",
+   "CONCEPT 3: Posting List Compression",
+   "CONCEPT 4: Index Sharding and Replication"
+  ],
+  "sourceFile": "05_inverted_index.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval"
+ },
+ {
+  "id": "rg-04-tokenisation-and-text-preprocessing-f4f9d9",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: Tokenisation and Text Preprocessing",
+  "summary": "Tokenisation converts raw text into a sequence of discrete tokens that the inverted index can index and BM25 can score.",
+  "order": 51,
+  "objectives": [
+   "CONCEPT 1: Tokenisation Strategies",
+   "CONCEPT 2: Lowercasing and Stopword Removal",
+   "CONCEPT 3: Stemming vs Lemmatisation",
+   "CONCEPT 4: Stopword Removal — Advanced",
+   "CONCEPT 5: Punctuation and Special Character Handling",
+   "CONCEPT 6: Domain-Specific Tokenisation"
+  ],
+  "sourceFile": "06_tokenisation.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval"
+ },
+ {
+  "id": "rg-04-bm25-implementations-4966b8",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: BM25 Implementations",
+  "summary": "rank-bm25 is the most widely used pure-Python BM25 library. It provides three variants: BM25Okapi (standard BM25 with Robertson IDF), BM25Plus (BM25+ with δ lower bound on TF weight), and BM25L (normalised TF variant).",
+  "order": 52,
+  "objectives": [
+   "CONCEPT 1: rank-bm25 — Python Native BM25",
+   "CONCEPT 2: Elasticsearch BM25",
+   "CONCEPT 3: Pyserini — Anserini/Lucene Wrapper",
+   "CONCEPT 4: OpenSearch BM25",
+   "CONCEPT 5: Whoosh — Pure-Python Production Index"
+  ],
+  "sourceFile": "07_bm25_implementations.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval"
+ },
+ {
+  "id": "rg-04-sparse-vector-representations-015b8b",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: Sparse Vector Representations",
+  "summary": "Text retrieval requires representing documents and queries as comparable vectors. Sparse vectors have dimensionality equal to the vocabulary size (|V| ~ 100K–1M+) but only a small fraction of dimensions are non-zero.",
+  "order": 53,
+  "objectives": [
+   "CONCEPT 1: Sparse vs Dense Vectors",
+   "CONCEPT 2: SPLADE — Sparse Lexical and Expansion Model",
+   "CONCEPT 3: uniCOIL — Uniform COIL",
+   "CONCEPT 4: DeepCT — Deep Context-Aware Term Weighting"
+  ],
+  "sourceFile": "08_sparse_vectors.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval"
+ },
+ {
+  "id": "rg-04-bm25-fundamentals-41deae",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: BM25 Fundamentals",
+  "summary": "Learning Path: Beginner → Intermediate → Advanced → Production → FAANG",
+  "order": 54,
+  "objectives": [
+   "STEP 1 — SIMPLE & INTUITIVE EXPLANATION",
+   "STEP 2 — INTERNAL WORKING",
+   "STEP 3 — ARCHITECTURE EXPLANATION",
+   "STEP 4 — PRODUCTION USAGE",
+   "STEP 5 — COMMON FAILURES & PRODUCTION ISSUES",
+   "STEP 6 — DEBUGGING STRATEGY"
+  ],
+  "sourceFile": "section1_bm25_fundamentals.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Interview Guide"
+ },
+ {
+  "id": "rg-04-what-is-an-inverted-index-51f887",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: What is an Inverted Index?",
+  "summary": "Open any textbook and flip to the very last pages. You'll find an index like this: > > > > It maps words → page numbers.",
+  "order": 55,
+  "objectives": [
+   "① Real-World Analogy",
+   "② Plain English Explanation",
+   "③ Why Does This Matter?",
+   "④ Step-by-Step Technical Explanation",
+   "⑤ Beginner-Friendly Code Example",
+   "⑥ Common Beginner Mistakes"
+  ],
+  "sourceFile": "fri_may_29_2026_idf_and_its_importance_in_search.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval for Beginners"
+ },
+ {
+  "id": "rg-04-term-frequency-tf-how-often-a-word-appears-ff0e13",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: Term Frequency (TF) — How Often a Word Appears",
+  "summary": "Imagine you're reading job applications for a Python developer position. Candidate A mentions \"Python\" 15 times in their resume.",
+  "order": 56,
+  "objectives": [
+   "① Real-World Analogy",
+   "② Plain English Explanation",
+   "③ Why Does This Matter?",
+   "④ Step-by-Step Technical Explanation",
+   "⑤ Beginner-Friendly Code Example",
+   "⑥ Common Beginner Mistakes"
+  ],
+  "sourceFile": "fri_may_29_2026_idf_and_its_importance_in_search.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval for Beginners"
+ },
+ {
+  "id": "rg-04-inverse-document-frequency-idf-how-rare-a-word-i-348e18",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: Inverse Document Frequency (IDF) — How Rare a Word Is",
+  "summary": "Imagine you're an art detective trying to figure out which artist painted a mystery painting by looking at the colours used. > > - Blue is used by every artist in the 18th century.",
+  "order": 57,
+  "objectives": [
+   "① Real-World Analogy",
+   "② Plain English Explanation",
+   "③ Why Does This Matter?",
+   "④ Step-by-Step Technical Explanation",
+   "⑤ Beginner-Friendly Code Example",
+   "⑥ Common Beginner Mistakes"
+  ],
+  "sourceFile": "fri_may_29_2026_idf_and_its_importance_in_search.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval for Beginners"
+ },
+ {
+  "id": "rg-04-tf-idf-combining-tf-and-idf-17a115",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: TF-IDF — Combining TF and IDF",
+  "summary": "You're a chef creating a dish. Two ingredients determine how much of each spice to use: > > 1.",
+  "order": 58,
+  "objectives": [
+   "① Real-World Analogy",
+   "② Plain English Explanation",
+   "③ Why Does This Matter?",
+   "④ Step-by-Step Technical Explanation",
+   "⑤ Beginner-Friendly Code Example",
+   "⑥ Common Beginner Mistakes"
+  ],
+  "sourceFile": "fri_may_29_2026_idf_and_its_importance_in_search.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval for Beginners"
+ },
+ {
+  "id": "rg-04-bm25-the-better-scoring-formula-the-concept-b8b547",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: BM25: The Better Scoring Formula (The Concept)",
+  "summary": "Imagine you're reviewing resumes. Candidate A mentions \"Python\" 50 times (literally every sentence).",
+  "order": 59,
+  "objectives": [
+   "① Real-World Analogy",
+   "② Plain English Explanation",
+   "③ Why Does This Matter?",
+   "④ Step-by-Step Technical Explanation",
+   "⑤ Beginner-Friendly Code Example",
+   "⑥ Common Beginner Mistakes"
+  ],
+  "sourceFile": "fri_may_29_2026_idf_and_its_importance_in_search.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval for Beginners"
+ },
+ {
+  "id": "rg-04-the-bm25-formula-symbol-by-symbol-6a8253",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: The BM25 Formula: Symbol by Symbol",
+  "summary": "Think of the BM25 formula like a recipe for a dish. At first glance, a recipe looks intimidating: \"Combine 2 cups flour, 1 tsp baking powder, adjust for altitude...\".",
+  "order": 60,
+  "objectives": [
+   "① Real-World Analogy",
+   "② Plain English Explanation",
+   "③ Why Does This Matter?",
+   "④ Step-by-Step Technical Explanation",
+   "⑤ Beginner-Friendly Code Example",
+   "⑥ Common Beginner Mistakes"
+  ],
+  "sourceFile": "fri_may_29_2026_idf_and_its_importance_in_search.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval for Beginners"
+ },
+ {
+  "id": "rg-04-the-k1-and-b-parameters-tuning-bm25-399818",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: The k1 and b Parameters: Tuning BM25",
+  "summary": "Think of BM25 like a professional camera with two dials: > > - k1 dial = \"How much does word frequency matter?\" (like ISO sensitivity) > - Turn it to 0: frequency doesn't matter at all — a word present even once is counted > - Turn it up…",
+  "order": 61,
+  "objectives": [
+   "① Real-World Analogy",
+   "② Plain English Explanation",
+   "③ Why Does This Matter?",
+   "④ Step-by-Step Technical Explanation",
+   "⑤ Beginner-Friendly Code Example",
+   "⑥ Common Beginner Mistakes"
+  ],
+  "sourceFile": "fri_may_29_2026_idf_and_its_importance_in_search.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval for Beginners"
+ },
+ {
+  "id": "rg-04-implementing-bm25-from-scratch-in-python-44bbd9",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: Implementing BM25 from Scratch in Python",
+  "summary": "Building BM25 from scratch is like building your own bicycle before buying one at a shop. You learn every component: the wheels (inverted index), the gears (IDF weighting), the brakes (saturation), the frame (length normalisation).",
+  "order": 62,
+  "objectives": [
+   "① Real-World Analogy",
+   "② Plain English Explanation",
+   "③ Why Does This Matter?",
+   "⑤ Full BM25 Implementation from Scratch",
+   "⑥ Common Beginner Mistakes",
+   "⑦ Quick Recap"
+  ],
+  "sourceFile": "fri_may_29_2026_idf_and_its_importance_in_search.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval for Beginners"
+ },
+ {
+  "id": "rg-04-using-the-rank-bm25-library-2cf554",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: Using the rank-bm25 Library",
+  "summary": "In Lesson 9, you built a bicycle from scratch. Now you're buying a professional bicycle from a trusted shop.",
+  "order": 63,
+  "objectives": [
+   "① Real-World Analogy",
+   "② Plain English Explanation",
+   "③ Why Does This Matter?",
+   "⑤ Beginner-Friendly Code Example",
+   "⑥ Common Beginner Mistakes",
+   "⑦ Quick Recap"
+  ],
+  "sourceFile": "fri_may_29_2026_idf_and_its_importance_in_search.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval for Beginners"
+ },
+ {
+  "id": "rg-04-tokenisation-and-text-preprocessing-for-bm25-750e88",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: Tokenisation and Text Preprocessing for BM25",
+  "summary": "Before a chef can cook, they must prep the ingredients — washing, chopping, removing inedible parts. Raw ingredients can't go straight into the pot. > > BM25 is the chef.",
+  "order": 64,
+  "objectives": [
+   "① Real-World Analogy",
+   "② Plain English Explanation",
+   "③ Why Does This Matter?",
+   "⑤ Beginner-Friendly Code Example",
+   "⑥ Common Beginner Mistakes",
+   "⑦ Quick Recap"
+  ],
+  "sourceFile": "fri_may_29_2026_idf_and_its_importance_in_search.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval for Beginners"
+ },
+ {
+  "id": "rg-04-bm25-in-langchain-plugging-into-rag-44453c",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: BM25 in LangChain (Plugging Into RAG)",
+  "summary": "LangChain is like a kitchen with all appliances already set up. BM25Retriever is one of those appliances — a high-powered blender.",
+  "order": 65,
+  "objectives": [
+   "① Real-World Analogy",
+   "② Plain English Explanation",
+   "③ Why Does This Matter?",
+   "⑤ Beginner-Friendly Code Example",
+   "⑥ Common Beginner Mistakes",
+   "⑦ Quick Recap"
+  ],
+  "sourceFile": "fri_may_29_2026_idf_and_its_importance_in_search.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval for Beginners"
+ },
+ {
+  "id": "rg-04-bm25-complete-mathematical-understanding-f0e86d",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: BM25 — Complete Mathematical Understanding",
+  "summary": "BM25 = Best Match 25 — it is a probabilistic ranking function used by search engines to rank documents based on how relevant they are to a search query.",
+  "order": 66,
+  "objectives": [
+   "What is BM25?",
+   "TF-IDF — The Foundation",
+   "The BM25 Formula — Complete Breakdown",
+   "Understanding Parameters k1 and b",
+   "BM25 — Python Implementation from Scratch",
+   "VISUAL 1: BM25 Complete Architecture"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Master Course"
+ },
+ {
+  "id": "rg-04-advanced-bm25-variants-deep-tuning-4cca57",
+  "trackId": "veerarag",
+  "title": "04. BM25 & Lexical Search: Advanced BM25 Variants & Deep Tuning",
+  "summary": "Problem with standard BM25: When a query term appears in ALL documents, its IDF becomes:",
+  "order": 67,
+  "objectives": [
+   "BM25 Family — All Variants Explained",
+   "BM25+ — Fixing the Lower-Bound Problem",
+   "BM25L — Long Document Fix",
+   "SPLADE — Neural Sparse Retrieval (Modern BM25 Successor)",
+   "VISUAL 8: BM25 vs SPLADE Comparison",
+   "BM25 Parameter Tuning — Scientific Approach"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Master Course"
+ },
+ {
+  "id": "rg-05-top-k-retrieval-and-similarity-thresholds-9ea69e",
+  "trackId": "veerarag",
+  "title": "05. Retrieval, Hybrid & Reranking: Top-K Retrieval and Similarity Thresholds",
+  "summary": "The most fundamental retrieval mechanism in RAG is top-K — returning the K most similar documents to a query vector.",
+  "order": 68,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "06_Retrieval_Strategies.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-05-hyde-hypothetical-document-embeddings-6996cd",
+  "trackId": "veerarag",
+  "title": "05. Retrieval, Hybrid & Reranking: HyDE — Hypothetical Document Embeddings",
+  "summary": "HyDE (Hypothetical Document Embeddings) is a retrieval technique that inverts the typical query-document matching approach.",
+  "order": 69,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Code",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "06_Retrieval_Strategies.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-05-multi-query-and-query-expansion-56f8ef",
+  "trackId": "veerarag",
+  "title": "05. Retrieval, Hybrid & Reranking: Multi-Query and Query Expansion",
+  "summary": "Multi-query retrieval addresses the vocabulary mismatch problem — a query phrased one way may not semantically match documents phrased differently, even when talking about the same topic.",
+  "order": 70,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Code",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "06_Retrieval_Strategies.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-05-contextual-compression-ce75c3",
+  "trackId": "veerarag",
+  "title": "05. Retrieval, Hybrid & Reranking: Contextual Compression",
+  "summary": "Contextual compression solves the noise problem in RAG: a retrieved 512-token chunk may contain only 2-3 relevant sentences and 400+ tokens of irrelevant context.",
+  "order": 71,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Code",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "06_Retrieval_Strategies.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-05-why-reranking-is-needed-9ef4d3",
+  "trackId": "veerarag",
+  "title": "05. Retrieval, Hybrid & Reranking: Why Reranking Is Needed",
+  "summary": "ANN (Approximate Nearest Neighbor) retrieval with bi-encoder embeddings is fast and scalable, but imprecise: the top-K results are approximately sorted by semantic similarity, and rank 1 is not always truly the most relevant document.",
+  "order": 72,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "07_Reranking.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-05-production-reranking-architecture-e72147",
+  "trackId": "veerarag",
+  "title": "05. Retrieval, Hybrid & Reranking: Production Reranking Architecture",
+  "summary": "A production reranking system must handle: high query volumes (1000+ QPS), latency SLAs (< 500ms total RAG pipeline), model serving infrastructure, and graceful degradation.",
+  "order": 73,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Code",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "07_Reranking.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-05-hybrid-search-fd6c19",
+  "trackId": "veerarag",
+  "title": "05. Retrieval, Hybrid & Reranking: Hybrid Search",
+  "summary": "Hybrid search combines BM25 (sparse/lexical) retrieval with dense (neural) retrieval to exploit their complementary strengths. BM25 excels at exact-match queries (product codes, proper nouns, technical terms) and is always interpretable.",
+  "order": 74,
+  "objectives": [
+   "CONCEPT 1: Why Hybrid Search Outperforms Either Alone",
+   "CONCEPT 2: Elasticsearch Hybrid Search",
+   "CONCEPT 3: LangChain EnsembleRetriever"
+  ],
+  "sourceFile": "09_hybrid_search.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval"
+ },
+ {
+  "id": "rg-05-bm25-in-rag-pipelines-1ad0d6",
+  "trackId": "veerarag",
+  "title": "05. Retrieval, Hybrid & Reranking: BM25 in RAG Pipelines",
+  "summary": "Retrieval-Augmented Generation (RAG) pipelines use a retriever to fetch relevant document chunks, then pass them to an LLM as context.",
+  "order": 75,
+  "objectives": [
+   "CONCEPT 1: BM25 as Retriever in RAG Architecture",
+   "① Concept Explanation",
+   "② 10 Conceptual Questions & Answers",
+   "③ 10 Scenario-Based Questions & Answers",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "10_bm25_rag.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval"
+ },
+ {
+  "id": "rg-05-bm25-vs-neural-retrieval-32cd52",
+  "trackId": "veerarag",
+  "title": "05. Retrieval, Hybrid & Reranking: BM25 vs Neural Retrieval",
+  "summary": "BM25 is a term-based probabilistic model that scores documents using exact token overlap, IDF weighting, and length normalisation.",
+  "order": 76,
+  "objectives": [
+   "CONCEPT 1: BM25 vs Dense Retrieval — Strengths and Weaknesses",
+   "① Concept Explanation",
+   "② 10 Conceptual Questions & Answers",
+   "③ 10 Scenario-Based Questions & Answers",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "14_bm25_vs_neural.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval"
+ },
+ {
+  "id": "rg-05-hybrid-search-01b3ba",
+  "trackId": "veerarag",
+  "title": "05. Retrieval, Hybrid & Reranking: Hybrid Search",
+  "summary": "Learning Path: Beginner → Intermediate → Advanced → Production → FAANG",
+  "order": 77,
+  "objectives": [
+   "STEP 1 — SIMPLE & INTUITIVE EXPLANATION",
+   "STEP 2 — INTERNAL WORKING",
+   "STEP 3 — ARCHITECTURE EXPLANATION",
+   "STEP 4 — PRODUCTION USAGE",
+   "STEP 5 — COMMON FAILURES & PRODUCTION ISSUES",
+   "STEP 6 — DEBUGGING STRATEGY"
+  ],
+  "sourceFile": "section2_hybrid_search.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Interview Guide"
+ },
+ {
+  "id": "rg-05-how-does-a-search-engine-actually-work-5d25a3",
+  "trackId": "veerarag",
+  "title": "05. Retrieval, Hybrid & Reranking: How Does a Search Engine Actually Work?",
+  "summary": "Imagine you walk into a massive library with 1 million books. You ask the librarian: \"Find me every book that talks about 'black holes'.\" > > A bad librarian opens every book, reads every page, and checks if \"black holes\" appears.",
+  "order": 78,
+  "objectives": [
+   "① Real-World Analogy",
+   "② Plain English Explanation",
+   "③ Why Does This Matter?",
+   "④ Step-by-Step Technical Explanation",
+   "⑤ Beginner-Friendly Code Example",
+   "⑥ Common Beginner Mistakes"
+  ],
+  "sourceFile": "fri_may_29_2026_idf_and_its_importance_in_search.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval for Beginners"
+ },
+ {
+  "id": "rg-05-bm25-vs-dense-vector-retrieval-08f920",
+  "trackId": "veerarag",
+  "title": "05. Retrieval, Hybrid & Reranking: BM25 vs Dense (Vector) Retrieval",
+  "summary": "Imagine two librarians helping you find books: > > - BM25 librarian (lexical): \"I search for the exact words you said. If you say 'automobile', I find books containing 'automobile'.",
+  "order": 79,
+  "objectives": [
+   "① Real-World Analogy",
+   "② Plain English Explanation",
+   "③ Why Does This Matter?",
+   "⑤ Beginner-Friendly Code Example",
+   "⑦ Quick Recap",
+   "⑧ Visual Explanation"
+  ],
+  "sourceFile": "fri_may_29_2026_idf_and_its_importance_in_search.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval for Beginners"
+ },
+ {
+  "id": "rg-05-hybrid-search-combining-bm25-dense-retrieval-5fdacc",
+  "trackId": "veerarag",
+  "title": "05. Retrieval, Hybrid & Reranking: Hybrid Search: Combining BM25 + Dense Retrieval",
+  "summary": "A hospital uses two diagnostic tools: > - Blood test (precise, catches specific markers exactly) — like BM25 > - MRI scan (holistic, catches patterns and relationships) — like dense retrieval > > Neither test alone is perfect.",
+  "order": 80,
+  "objectives": [
+   "① Real-World Analogy",
+   "② Plain English Explanation",
+   "③ Why Does This Matter?",
+   "⑤ Beginner-Friendly Code Example",
+   "⑥ Common Beginner Mistakes (Lesson 14)",
+   "⑦ Quick Recap (Lesson 14)"
+  ],
+  "sourceFile": "fri_may_29_2026_idf_and_its_importance_in_search.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval for Beginners"
+ },
+ {
+  "id": "rg-05-metadata-filtering-native-090dad",
+  "trackId": "veerarag",
+  "title": "05. Retrieval, Hybrid & Reranking: Metadata Filtering (Native)",
+  "summary": "Metadata Filtering (Native): explanations and runnable examples.",
+  "order": 81,
+  "objectives": [
+   "Metadata Filtering (Native)"
+  ],
+  "sourceFile": "fri_may_29_2026_creating_rag_application_with_lang_chain_and.md",
+  "labIds": [],
+  "series": "Complete ChromaDB Masterclass"
+ },
+ {
+  "id": "rg-05-all-langchain-search-types-981b94",
+  "trackId": "veerarag",
+  "title": "05. Retrieval, Hybrid & Reranking: All LangChain Search Types",
+  "summary": "All LangChain Search Types: explanations and runnable examples.",
+  "order": 82,
+  "objectives": [
+   "All LangChain Search Types"
+  ],
+  "sourceFile": "fri_may_29_2026_creating_rag_application_with_lang_chain_and.md",
+  "labIds": [],
+  "series": "Complete ChromaDB Masterclass"
+ },
+ {
+  "id": "rg-05-langchain-metadata-filtering-3-complete-examples-fc7127",
+  "trackId": "veerarag",
+  "title": "05. Retrieval, Hybrid & Reranking: LangChain Metadata Filtering (3 Complete Examples)",
+  "summary": "LangChain Metadata Filtering (3 Complete Examples): explanations and runnable examples.",
+  "order": 83,
+  "objectives": [
+   "Project 1 — Knowledge Base with Full CRUD",
+   "Project 2 — Multi-Collection Document Store with All Search Types",
+   "Project 3 — Full RAG Pipeline with Metadata Filtering",
+   "Master Comparison Table",
+   "Quick Start for All Projects",
+   "Complete File Structure"
+  ],
+  "sourceFile": "fri_may_29_2026_creating_rag_application_with_lang_chain_and.md",
+  "labIds": [],
+  "series": "Complete ChromaDB Masterclass"
+ },
+ {
+  "id": "rg-05-sparse-retrieval-hybrid-search-foundations-344fb4",
+  "trackId": "veerarag",
+  "title": "05. Retrieval, Hybrid & Reranking: Sparse Retrieval & Hybrid Search Foundations",
+  "summary": "Covers Sparse vs Dense Retrieval, Sparse Vector Representation, VISUAL 2: Sparse vs Dense Vectors.",
+  "order": 84,
+  "objectives": [
+   "Sparse vs Dense Retrieval",
+   "Sparse Vector Representation",
+   "VISUAL 2: Sparse vs Dense Vectors"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Master Course"
+ },
+ {
+  "id": "rg-05-hybrid-search-bm25-vector-rrf-1cfdff",
+  "trackId": "veerarag",
+  "title": "05. Retrieval, Hybrid & Reranking: Hybrid Search (BM25 + Vector + RRF)",
+  "summary": "RRF is the standard algorithm for combining multiple ranked lists.",
+  "order": 85,
+  "objectives": [
+   "Why Hybrid Search?",
+   "Reciprocal Rank Fusion (RRF)",
+   "Complete Hybrid Search Implementation",
+   "VISUAL 6: Hybrid Search + RRF"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Master Course"
+ },
+ {
+  "id": "rg-05-reranking-cross-encoders-e7f260",
+  "trackId": "veerarag",
+  "title": "05. Retrieval, Hybrid & Reranking: Reranking & Cross-encoders",
+  "summary": "Covers The Two-Stage Retrieval Pipeline, Bi-Encoder vs Cross-Encoder, ColBERT — Late Interaction Reranking, VISUAL 11: Two-Stage Retrieval + Reranking.",
+  "order": 86,
+  "objectives": [
+   "The Two-Stage Retrieval Pipeline",
+   "Bi-Encoder vs Cross-Encoder",
+   "ColBERT — Late Interaction Reranking",
+   "VISUAL 11: Two-Stage Retrieval + Reranking"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Master Course"
+ },
+ {
+  "id": "rg-05-core-rag-techniques-part-1-of-3-bcc60b",
+  "trackId": "veerarag",
+  "title": "05. Retrieval, Hybrid & Reranking: CORE RAG TECHNIQUES (Part 1 of 3)",
+  "summary": "Semantic Search converts both documents and queries into dense vector embeddings using neural models. It finds results based on meaning, not just keyword matching.",
+  "order": 87,
+  "objectives": [
+   "TECHNIQUE 2: BM25 SEARCH",
+   "TECHNIQUE 3: HYBRID SEARCH",
+   "TECHNIQUE 4: METADATA FILTERING",
+   "TECHNIQUE 5: RE-RANKING (Cross-Encoder)"
+  ],
+  "sourceFile": "fri_may_29_2026_rag_search_and_filtering_techniques_overview.md",
+  "labIds": [],
+  "series": "RAG Search & Filtering Techniques"
+ },
+ {
+  "id": "rg-05-core-rag-techniques-part-2-of-3-e65560",
+  "trackId": "veerarag",
+  "title": "05. Retrieval, Hybrid & Reranking: CORE RAG TECHNIQUES (Part 2 of 3)",
+  "summary": "MMR balances two goals: 1. Relevance — Retrieved documents should be relevant to the query 2.",
+  "order": 88,
+  "objectives": [
+   "TECHNIQUE 6: MMR (Maximal Marginal Relevance)",
+   "TECHNIQUE 7: HyDE (Hypothetical Document Embeddings)",
+   "TECHNIQUE 8: PARENT DOCUMENT RETRIEVAL",
+   "TECHNIQUE 9: SELF-QUERY RETRIEVAL",
+   "TECHNIQUE 10: CONTEXTUAL COMPRESSION"
+  ],
+  "sourceFile": "fri_may_29_2026_rag_search_and_filtering_techniques_overview.md",
+  "labIds": [],
+  "series": "RAG Search & Filtering Techniques"
+ },
+ {
+  "id": "rg-05-core-rag-techniques-part-3-of-3-2cf46b",
+  "trackId": "veerarag",
+  "title": "05. Retrieval, Hybrid & Reranking: CORE RAG TECHNIQUES (Part 3 of 3)",
+  "summary": "CORE RAG TECHNIQUES (Part 3 of 3): explanations and runnable examples.",
+  "order": 89,
+  "objectives": [
+   "CORE RAG TECHNIQUES (Part 3 of 3)"
+  ],
+  "sourceFile": "fri_may_29_2026_rag_search_and_filtering_techniques_overview.md",
+  "labIds": [],
+  "series": "RAG Search & Filtering Techniques"
+ },
+ {
+  "id": "rg-06-query-classification-bbda86",
+  "trackId": "veerarag",
+  "title": "06. Query & Generation: Query Classification",
+  "summary": "Before routing a query to the appropriate retrieval strategy, a RAG system must first understand what TYPE of query it is.",
+  "order": 90,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "08_Query_Understanding_Transformation.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-06-query-rewriting-and-expansion-67ebd3",
+  "trackId": "veerarag",
+  "title": "06. Query & Generation: Query Rewriting and Expansion",
+  "summary": "Query rewriting transforms the user's query into a form that will retrieve better results, without changing the user's intent.",
+  "order": 91,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Code",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "08_Query_Understanding_Transformation.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-06-rag-prompt-engineering-716cf3",
+  "trackId": "veerarag",
+  "title": "06. Query & Generation: RAG Prompt Engineering",
+  "summary": "The prompt template is the critical bridge between retrieved context and generated answers.",
+  "order": 92,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "09_Generation_Prompting.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-06-structured-output-and-citation-87a318",
+  "trackId": "veerarag",
+  "title": "06. Query & Generation: Structured Output and Citation",
+  "summary": "For production RAG systems, unstructured text output is often insufficient.",
+  "order": 93,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Code",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "09_Generation_Prompting.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-06-query-expansion-1c50ae",
+  "trackId": "veerarag",
+  "title": "06. Query & Generation: Query Expansion",
+  "summary": "Query expansion addresses vocabulary mismatch by adding related terms to the original query before retrieval.",
+  "order": 94,
+  "objectives": [
+   "CONCEPT 1: Manual and Thesaurus-Based Query Expansion",
+   "① Concept Explanation",
+   "② 10 Conceptual Questions & Answers",
+   "③ 10 Scenario-Based Questions & Answers",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "11_query_expansion.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval"
+ },
+ {
+  "id": "rg-07-self-rag-and-corrective-rag-crag-2a440d",
+  "trackId": "veerarag",
+  "title": "07. Advanced & Agentic RAG: Self-RAG and Corrective RAG (CRAG)",
+  "summary": "Self-RAG (Asai et al., 2023) adds self-reflection tokens to RAG: the LLM learns to generate special tokens like [Retrieve] (should I retrieve at all?), [Relevant] (is this retrieved doc relevant?), [Supported] (is my answer grounded?), and…",
+  "order": 95,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "10_Advanced_RAG_Architectures.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-07-graph-rag-implementation-6853af",
+  "trackId": "veerarag",
+  "title": "07. Advanced & Agentic RAG: Graph RAG Implementation",
+  "summary": "Graph RAG constructs a knowledge graph from the document corpus: entities (people, places, products, concepts) become nodes, and relationships between them become edges.",
+  "order": 96,
+  "objectives": [
+   "① Concept Explanation",
+   "② Key Code",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "10_Advanced_RAG_Architectures.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-07-agentic-rag-ecb5b2",
+  "trackId": "veerarag",
+  "title": "07. Advanced & Agentic RAG: Agentic RAG",
+  "summary": "Agentic RAG replaces the fixed retrieve→generate pipeline with an LLM agent that decides which tools to use, in what order, and how many times. The agent has a toolkit: vector search, web search, SQL query, calculator, code interpreter.",
+  "order": 97,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "10_Advanced_RAG_Architectures.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-07-rag-fusion-multi-query-rag-3ca6c2",
+  "trackId": "veerarag",
+  "title": "07. Advanced & Agentic RAG: RAG Fusion & Multi-Query RAG",
+  "summary": "A single query embedding often fails to capture all relevant angles of a question.",
+  "order": 98,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "10_Advanced_RAG_Architectures.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-07-flare-long-rag-other-advanced-patterns-1b516d",
+  "trackId": "veerarag",
+  "title": "07. Advanced & Agentic RAG: FLARE, Long-RAG & Other Advanced Patterns",
+  "summary": "Beyond Self-RAG, CRAG, Agentic RAG, and RAG Fusion, several other advanced RAG patterns address specific limitations:",
+  "order": 99,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "10_Advanced_RAG_Architectures.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-07-mcp-tool-calling-concepts-implementation-and-eva-c48e95",
+  "trackId": "veerarag",
+  "title": "07. Advanced & Agentic RAG: MCP & Tool Calling: Concepts, Implementation, and Evaluation",
+  "summary": "Prerequisite: File 04 (agents). You know trajectories, the agent loop, and the four evaluation points. > > Scope: Tool calling mechanics, the MCP protocol, and how to score each link in the tool-use chain.",
+  "order": 100,
+  "objectives": [
+   "What is Tool Calling?",
+   "Function Calling Deep Dive",
+   "MCP (Model Context Protocol) — Concepts",
+   "MCP vs Traditional Function Calling",
+   "Tool Calling Evaluation",
+   "MCP-Specific Evaluation"
+  ],
+  "sourceFile": "07-mcp-tool-calling.md",
+  "labIds": [],
+  "series": "AI Evaluation & Observability"
+ },
+ {
+  "id": "rg-07-build-a-rag-app-with-langchain-c47c65",
+  "trackId": "veerarag",
+  "title": "07. Advanced & Agentic RAG: Build a RAG App with LangChain",
+  "summary": "I need to create a repository first — since I can't create repositories directly, I'll create all three projects as files I'll write out for you. Let me build all three complete projects now.",
+  "order": 101,
+  "objectives": [
+   "Complete Feature Coverage Summary",
+   "Quick Start",
+   "Key API Notes (LangChain 1.3.2)"
+  ],
+  "sourceFile": "fri_may_29_2026_creating_rag_application_with_lang_chain_and.md",
+  "labIds": [],
+  "series": "Build a RAG App with LangChain"
+ },
+ {
+  "id": "rg-07-what-is-mcp-6de170",
+  "trackId": "veerarag",
+  "title": "07. Advanced & Agentic RAG: What Is MCP?",
+  "summary": "MCP (Model Context Protocol) is an open standard protocol developed by Anthropic (2024) that defines how AI models (LLMs) communicate with external tools, data sources, and services in a standardized, secure, and interoperable way.",
+  "order": 102,
+  "objectives": [
+   "Definition & Core Concept",
+   "The Problem MCP Solves",
+   "MCP Architecture — Deep Dive",
+   "MCP Communication Flow",
+   "MCP Transport Types"
+  ],
+  "sourceFile": "fri_may_29_2026_agentic_rag_techniques_overview.md",
+  "labIds": [],
+  "series": "Complete MCP (Model Context Protocol) Masterclass 2026"
+ },
+ {
+  "id": "rg-07-mcp-implementations-part-1-of-3-6ae945",
+  "trackId": "veerarag",
+  "title": "07. Advanced & Agentic RAG: MCP IMPLEMENTATIONS (Part 1 of 3)",
+  "summary": "FastMCP is a high-level Python framework that makes building MCP servers dramatically simpler using decorators — similar to how FastAPI works for REST APIs.",
+  "order": 103,
+  "objectives": [
+   "Installation",
+   "FastMCP Example 1: Weather & News Intelligence Server",
+   "FastMCP Example 2: Database Intelligence Server with Context"
+  ],
+  "sourceFile": "fri_may_29_2026_agentic_rag_techniques_overview.md",
+  "labIds": [],
+  "series": "Complete MCP (Model Context Protocol) Masterclass 2026"
+ },
+ {
+  "id": "rg-07-mcp-implementations-part-2-of-3-b9fe6c",
+  "trackId": "veerarag",
+  "title": "07. Advanced & Agentic RAG: MCP IMPLEMENTATIONS (Part 2 of 3)",
+  "summary": "LangGraph adds stateful, multi-step workflows with human-in-the-loop capabilities on top of LangChain. Perfect for complex agent patterns.",
+  "order": 104,
+  "objectives": [
+   "LangChain + MCP Example 1: Research Assistant Agent",
+   "LangChain + MCP Example 2: Multi-Server E-Commerce Agent",
+   "Installation",
+   "LangGraph + MCP Example: Intelligent Data Analysis Pipeline"
+  ],
+  "sourceFile": "fri_may_29_2026_agentic_rag_techniques_overview.md",
+  "labIds": [],
+  "series": "Complete MCP (Model Context Protocol) Masterclass 2026"
+ },
+ {
+  "id": "rg-07-mcp-implementations-part-3-of-3-9685d9",
+  "trackId": "veerarag",
+  "title": "07. Advanced & Agentic RAG: MCP IMPLEMENTATIONS (Part 3 of 3)",
+  "summary": "Sometimes you need maximum control. Here's MCP over HTTP without any framework.",
+  "order": 105,
+  "objectives": [
+   "Installation",
+   "Visual: Google ADK + MCP",
+   "SECTION F: MCP WITHOUT Frameworks (Pure Python)",
+   "SECTION G: MCP + LLM Tool Calling (Complete Integration)"
+  ],
+  "sourceFile": "fri_may_29_2026_agentic_rag_techniques_overview.md",
+  "labIds": [],
+  "series": "Complete MCP (Model Context Protocol) Masterclass 2026"
+ },
+ {
+  "id": "rg-07-mcp-techniques-summary-517402",
+  "trackId": "veerarag",
+  "title": "07. Advanced & Agentic RAG: MCP Techniques Summary",
+  "summary": "MCP TECHNIQUES SUMMARY: explanations and runnable examples.",
+  "order": 106,
+  "objectives": [
+   "MCP TECHNIQUES SUMMARY"
+  ],
+  "sourceFile": "fri_may_29_2026_agentic_rag_techniques_overview.md",
+  "labIds": [],
+  "series": "Complete MCP (Model Context Protocol) Masterclass 2026"
+ },
+ {
+  "id": "rg-07-what-is-mcp-and-why-does-it-exist-b81443",
+  "trackId": "veerarag",
+  "title": "07. Advanced & Agentic RAG: What is MCP and Why Does It Exist?",
+  "summary": "Imagine it is the year 2010. You have a laptop, a phone, a camera, and a pair of headphones.",
+  "order": 107,
+  "objectives": [
+   "① Real-World Analogy — The USB-C Story",
+   "② Plain English Explanation",
+   "③ Why Does This Matter?",
+   "④ Step-by-Step Technical Explanation",
+   "⑤ The Real-World Example — Claude Reading a File",
+   "⑥ What MCP Is NOT"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "MCP (Model Context Protocol)"
+ },
+ {
+  "id": "rg-07-what-is-json-rpc-and-why-mcp-uses-it-629379",
+  "trackId": "veerarag",
+  "title": "07. Advanced & Agentic RAG: What is JSON-RPC and Why MCP Uses It",
+  "summary": "In the last lesson we learned that MCP is a standard \"language\" for AI agents and tools. Today we learn the exact grammar of that language — how messages are structured and sent.",
+  "order": 108,
+  "objectives": [
+   "① Real-World Analogy — The Phone Order Analogy",
+   "② Plain English Explanation",
+   "③ Why Does This Matter?",
+   "④ Step-by-Step Technical Explanation",
+   "⑤ Beginner-Friendly Code Example",
+   "⑥ Common Beginner Mistakes"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "MCP (Model Context Protocol)"
+ },
+ {
+  "id": "rg-07-mcp-transport-layers-how-messages-travel-164645",
+  "trackId": "veerarag",
+  "title": "07. Advanced & Agentic RAG: MCP Transport Layers (How Messages Travel)",
+  "summary": "In the last lesson we learned the exact shape of JSON-RPC messages. Today we learn how those messages actually travel between the client and the server.",
+  "order": 109,
+  "objectives": [
+   "① Real-World Analogy — The Post Office",
+   "② Plain English Explanation",
+   "③ Why Does This Matter?",
+   "④ Step-by-Step Technical Explanation",
+   "⑤ Beginner-Friendly Code Example",
+   "⑥ Common Beginner Mistakes"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "MCP (Model Context Protocol)"
+ },
+ {
+  "id": "rg-07-mcp-primitives-tools-the-most-important-one-29bb73",
+  "trackId": "veerarag",
+  "title": "07. Advanced & Agentic RAG: MCP Primitives: Tools (The Most Important One)",
+  "summary": "In the last lesson we learned how messages travel. Today we learn the most important thing you will build: Tools — the functions your AI agent can call.",
+  "order": 110,
+  "objectives": [
+   "① Real-World Analogy — The Swiss Army Knife",
+   "② Plain English Explanation",
+   "③ Why Does This Matter?",
+   "④ Step-by-Step Technical Explanation",
+   "⑤ Beginner-Friendly Code Example",
+   "⑥ Common Beginner Mistakes"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "MCP (Model Context Protocol)"
+ },
+ {
+  "id": "rg-07-mcp-primitives-resources-data-the-agent-can-read-fab9b9",
+  "trackId": "veerarag",
+  "title": "07. Advanced & Agentic RAG: MCP Primitives: Resources (Data the Agent Can Read)",
+  "summary": "In the last lesson we built Tools — things the agent can do. Today we learn about Resources — things the agent can read.",
+  "order": 111,
+  "objectives": [
+   "① Real-World Analogy — The Library vs The Handyman",
+   "② Plain English Explanation",
+   "③ Why Does This Matter?",
+   "④ Step-by-Step Technical Explanation",
+   "⑤ Beginner-Friendly Code Example",
+   "⑥ Common Beginner Mistakes"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "MCP (Model Context Protocol)"
+ },
+ {
+  "id": "rg-07-mcp-primitives-prompts-reusable-prompt-templates-271894",
+  "trackId": "veerarag",
+  "title": "07. Advanced & Agentic RAG: MCP Primitives: Prompts (Reusable Prompt Templates)",
+  "summary": "In the last lesson we learned about Resources. Today we cover the third and final primitive — Prompts — reusable fill-in-the-blank templates.",
+  "order": 112,
+  "objectives": [
+   "① Real-World Analogy — The Email Template",
+   "② Plain English Explanation",
+   "③ Why Does This Matter?",
+   "④ Step-by-Step Technical Explanation",
+   "⑤ Beginner-Friendly Code Example"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "MCP (Model Context Protocol)"
+ },
+ {
+  "id": "rg-07-building-your-first-mcp-server-raw-python-sdk-f8c756",
+  "trackId": "veerarag",
+  "title": "07. Advanced & Agentic RAG: Building Your First MCP Server (Raw Python SDK)",
+  "summary": "In previous lessons we learned about Tools, Resources, and Prompts using FastMCP. Today we use the raw MCP Python SDK — the lower-level approach — so you understand exactly what happens under the hood.",
+  "order": 113,
+  "objectives": [
+   "① Real-World Analogy — Building with Bricks vs a Pre-fab Kit",
+   "② Plain English Explanation",
+   "③ Why Does This Matter?",
+   "④ Step-by-Step Technical Explanation",
+   "⑤ Complete Code Example — Calculator Server (Raw SDK)",
+   "⑥ Testing with the MCP Inspector"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "MCP (Model Context Protocol)"
+ },
+ {
+  "id": "rg-07-building-mcp-servers-with-fastmcp-the-easy-way-62292a",
+  "trackId": "veerarag",
+  "title": "07. Advanced & Agentic RAG: Building MCP Servers with FastMCP (The Easy Way)",
+  "summary": "In the last lesson we built a calculator with the raw SDK — lots of code, but very clear. Today we rebuild it with FastMCP in a fraction of the lines.",
+  "order": 114,
+  "objectives": [
+   "① Real-World Analogy — The Automatic vs Manual Transmission",
+   "② Plain English Explanation",
+   "③ Why Does This Matter?",
+   "④ Step-by-Step Technical Explanation",
+   "⑤ Complete Code Example — FastMCP Comparison",
+   "⑥ FastMCP vs Raw SDK — Complete Side-by-Side"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "MCP (Model Context Protocol)"
+ },
+ {
+  "id": "rg-07-building-an-mcp-client-connecting-to-a-server-b625c6",
+  "trackId": "veerarag",
+  "title": "07. Advanced & Agentic RAG: Building an MCP Client (Connecting to a Server)",
+  "summary": "In the last two lessons we built servers. Today we flip sides and learn how to write Python code that connects to and talks to an MCP server.",
+  "order": 115,
+  "objectives": [
+   "① Real-World Analogy — The Restaurant Customer",
+   "② Plain English Explanation",
+   "③ Why Does This Matter?",
+   "④ Step-by-Step Technical Explanation",
+   "⑤ Complete Code Example — MCP Client",
+   "⑥ Common Beginner Mistakes"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "MCP (Model Context Protocol)"
+ },
+ {
+  "id": "rg-07-connecting-mcp-to-langchain-30270b",
+  "trackId": "veerarag",
+  "title": "07. Advanced & Agentic RAG: Connecting MCP to LangChain",
+  "summary": "In the last lesson we built an MCP client from scratch. Today we let LangChain do the client work for us — and use our MCP tools inside a real AI agent.",
+  "order": 116,
+  "objectives": [
+   "① Real-World Analogy — The Staffing Agency",
+   "② Plain English Explanation",
+   "③ Why Does This Matter?",
+   "④ Step-by-Step Technical Explanation",
+   "⑤ Installation",
+   "⑥ Complete Code Example"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "MCP (Model Context Protocol)"
+ },
+ {
+  "id": "rg-07-connecting-mcp-to-langgraph-8bd217",
+  "trackId": "veerarag",
+  "title": "07. Advanced & Agentic RAG: Connecting MCP to LangGraph",
+  "summary": "In the last lesson we connected MCP to LangChain agents. Today we go deeper with LangGraph — for building agents with persistent state, complex flows, and multi-step reasoning.",
+  "order": 117,
+  "objectives": [
+   "① Real-World Analogy — The Assembly Line",
+   "② Plain English Explanation",
+   "③ Why Does This Matter?",
+   "④ Complete Code Example",
+   "⑤ Visual Explanation",
+   "⑥ Quick Recap — What Did We Just Learn?"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "MCP (Model Context Protocol)"
+ },
+ {
+  "id": "rg-07-connecting-mcp-to-google-adk-4d75eb",
+  "trackId": "veerarag",
+  "title": "07. Advanced & Agentic RAG: Connecting MCP to Google ADK",
+  "summary": "In the last lesson we used LangGraph. Today we connect our MCP server to Google ADK — Google's own agent framework.",
+  "order": 118,
+  "objectives": [
+   "① Real-World Analogy — The Universal Power Adapter",
+   "② Plain English Explanation",
+   "③ Installation",
+   "④ Complete Code Example",
+   "⑤ Visual Explanation",
+   "⑥ Quick Recap — What Did We Just Learn?"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "MCP (Model Context Protocol)"
+ },
+ {
+  "id": "rg-07-connecting-mcp-to-openai-agents-sdk-bd51be",
+  "trackId": "veerarag",
+  "title": "07. Advanced & Agentic RAG: Connecting MCP to OpenAI Agents SDK",
+  "summary": "In the last lesson we connected to Google ADK. Today we connect to the OpenAI Agents SDK — OpenAI's own agent framework.",
+  "order": 119,
+  "objectives": [
+   "① Real-World Analogy — The Hotel Concierge",
+   "② Plain English Explanation",
+   "③ Installation",
+   "④ Complete Code Example",
+   "⑤ LangChain vs OpenAI Agents SDK — Quick Comparison",
+   "⑥ Quick Recap — What Did We Just Learn?"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "MCP (Model Context Protocol)"
+ },
+ {
+  "id": "rg-08-graph-rag-foundations-97e2f7",
+  "trackId": "veerarag",
+  "title": "08. GraphRAG: Graph RAG Foundations",
+  "summary": "Graph RAG (Graph Retrieval-Augmented Generation) augments LLM generation by retrieving context from a structured knowledge graph rather than (or in addition to) a flat vector index.",
+  "order": 120,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "01_graph_rag_foundations.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-08-knowledge-graph-construction-67ba22",
+  "trackId": "veerarag",
+  "title": "08. GraphRAG: Knowledge Graph Construction",
+  "summary": "Entity extraction is the process of identifying and classifying named entities (people, organisations, locations, products, concepts) in unstructured text — the first step in building a knowledge graph.",
+  "order": 121,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "02_knowledge_graph_construction.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-08-graph-data-structures-for-rag-beaf84",
+  "trackId": "veerarag",
+  "title": "08. GraphRAG: Graph Data Structures for RAG",
+  "summary": "The property graph model is the dominant data structure for Graph RAG systems.",
+  "order": 122,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "03_graph_data_structures.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-08-graph-databases-for-graph-rag-5eb685",
+  "trackId": "veerarag",
+  "title": "08. GraphRAG: Graph Databases for Graph RAG",
+  "summary": "Graph databases store, query, and traverse graph-structured data natively — unlike relational databases that require expensive JOIN operations for relationship traversal.",
+  "order": 123,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "04_graph_databases.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-08-community-detection-algorithms-778fcc",
+  "trackId": "veerarag",
+  "title": "08. GraphRAG: Community Detection Algorithms",
+  "summary": "Community detection partitions a graph into clusters (communities) of nodes that are more densely connected internally than externally.",
+  "order": 124,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "05_community_detection.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-08-graph-traversal-retrieval-fd98e2",
+  "trackId": "veerarag",
+  "title": "08. GraphRAG: Graph Traversal & Retrieval",
+  "summary": "Graph traversal is the mechanism by which Graph RAG retrieves relevant context from a knowledge graph given a query.",
+  "order": 125,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "06_graph_traversal_retrieval.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-08-hybrid-graph-vector-retrieval-efba90",
+  "trackId": "veerarag",
+  "title": "08. GraphRAG: Hybrid Graph-Vector Retrieval",
+  "summary": "Hybrid Graph-Vector Retrieval fuses two complementary retrieval signals: vector similarity (semantic closeness in embedding space) and graph traversal (structural relatedness via typed relationships).",
+  "order": 126,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "07_hybrid_graph_vector_retrieval.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-08-entity-linking-disambiguation-9a6358",
+  "trackId": "veerarag",
+  "title": "08. GraphRAG: Entity Linking & Disambiguation",
+  "summary": "Entity Linking (EL) — also called Named Entity Disambiguation (NED) — is the process of mapping entity mentions in text to specific entries in a knowledge base.",
+  "order": 127,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "08_entity_linking_disambiguation.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-08-graph-query-languages-cecdad",
+  "trackId": "veerarag",
+  "title": "08. GraphRAG: Graph Query Languages",
+  "summary": "Graph databases use specialised query languages designed for traversing relationships efficiently. Cypher (Neo4j) uses a declarative, ASCII-art pattern syntax ((n)-[:REL]->(m)) that is highly readable and optimised for property graphs.",
+  "order": 128,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "09_graph_query_languages.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-08-microsoft-graphrag-deep-dive-fc7c8c",
+  "trackId": "veerarag",
+  "title": "08. GraphRAG: Microsoft GraphRAG Deep Dive",
+  "summary": "Microsoft GraphRAG (released 2024) is an end-to-end framework that constructs a hierarchical community graph from source documents, then uses that graph for both local (entity-centric) and global (theme-level) question answering.",
+  "order": 129,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "10_microsoft_graphrag_deep_dive.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-08-lightrag-ae8c19",
+  "trackId": "veerarag",
+  "title": "08. GraphRAG: LightRAG",
+  "summary": "LightRAG (University of Hong Kong, 2024) is a Graph RAG framework designed for efficiency and simplicity while supporting both entity-level and relationship-level retrieval.",
+  "order": 130,
+  "objectives": [
+   "CONCEPT 11.1: LightRAG Architecture and Dual-Level Retrieval",
+   "① Concept Explanation",
+   "② 10 Conceptual Interview Questions with Answers",
+   "③ 10 Scenario-Based Interview Questions with Answers",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "11_lightrag.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-08-graphrag-fundamentals-9a7b6f",
+  "trackId": "veerarag",
+  "title": "08. GraphRAG: GraphRAG Fundamentals",
+  "summary": "Learning Path: Beginner → Intermediate → Advanced → Production → FAANG",
+  "order": 131,
+  "objectives": [
+   "STEP 1 — SIMPLE & INTUITIVE EXPLANATION",
+   "STEP 2 — INTERNAL WORKING",
+   "STEP 3 — ARCHITECTURE EXPLANATION",
+   "STEP 4 — PRODUCTION USAGE",
+   "STEP 5 — COMMON FAILURES & PRODUCTION ISSUES",
+   "STEP 6 — DEBUGGING STRATEGY"
+  ],
+  "sourceFile": "section3_graphrag_fundamentals.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Interview Guide"
+ },
+ {
+  "id": "rg-08-knowledge-graphs-9caa64",
+  "trackId": "veerarag",
+  "title": "08. GraphRAG: Knowledge Graphs",
+  "summary": "Learning Path: Beginner → Intermediate → Advanced → Production → FAANG",
+  "order": 132,
+  "objectives": [
+   "STEP 1 — SIMPLE & INTUITIVE EXPLANATION",
+   "STEP 2 — INTERNAL WORKING",
+   "STEP 3 — ARCHITECTURE EXPLANATION",
+   "STEP 4 — PRODUCTION USAGE",
+   "STEP 5 — COMMON FAILURES & PRODUCTION ISSUES",
+   "STEP 6 — DEBUGGING STRATEGY"
+  ],
+  "sourceFile": "section4_knowledge_graphs.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Interview Guide"
+ },
+ {
+  "id": "rg-08-graphrag-pipeline-13da9c",
+  "trackId": "veerarag",
+  "title": "08. GraphRAG: GraphRAG Pipeline",
+  "summary": "Learning Path: Beginner → Intermediate → Advanced → Production → FAANG",
+  "order": 133,
+  "objectives": [
+   "STEP 1 — SIMPLE & INTUITIVE EXPLANATION",
+   "STEP 2 — INTERNAL WORKING",
+   "STEP 3 — ARCHITECTURE EXPLANATION",
+   "STEP 4 — PRODUCTION USAGE",
+   "STEP 5 — COMMON FAILURES & PRODUCTION ISSUES",
+   "STEP 6 — DEBUGGING STRATEGY"
+  ],
+  "sourceFile": "section5_graphrag_pipeline.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Interview Guide"
+ },
+ {
+  "id": "rg-08-graphrag-vs-normal-rag-dad63b",
+  "trackId": "veerarag",
+  "title": "08. GraphRAG: GraphRAG vs Normal RAG",
+  "summary": "Learning Path: Beginner → Intermediate → Advanced → Production → FAANG",
+  "order": 134,
+  "objectives": [
+   "STEP 1 — SIMPLE & INTUITIVE EXPLANATION",
+   "STEP 2 — INTERNAL WORKING",
+   "STEP 3 — ARCHITECTURE EXPLANATION",
+   "STEP 4 — PRODUCTION USAGE",
+   "STEP 5 — COMMON FAILURES & PRODUCTION ISSUES",
+   "STEP 6 — DEBUGGING STRATEGY"
+  ],
+  "sourceFile": "section6_graphrag_vs_normal_rag.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Interview Guide"
+ },
+ {
+  "id": "rg-08-graphrag-complete-knowledge-graph-understanding-7dca90",
+  "trackId": "veerarag",
+  "title": "08. GraphRAG: GraphRAG — Complete Knowledge Graph Understanding",
+  "summary": "GraphRAG was introduced by Microsoft Research (2024). It dramatically improves answers to global questions that span multiple documents.",
+  "order": 135,
+  "objectives": [
+   "What is GraphRAG?",
+   "Knowledge Graphs — Deep Dive",
+   "Building a Knowledge Graph from Scratch",
+   "Entity Extraction with NLP",
+   "VISUAL 3: Knowledge Graph Structure"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Master Course"
+ },
+ {
+  "id": "rg-08-graph-traversal-subgraph-retrieval-9aed4d",
+  "trackId": "veerarag",
+  "title": "08. GraphRAG: Graph Traversal & Subgraph Retrieval",
+  "summary": "Covers Graph Traversal Algorithms, GraphRAG Pipeline — Complete Implementation, VISUAL 4: GraphRAG Pipeline End-to-End.",
+  "order": 136,
+  "objectives": [
+   "Graph Traversal Algorithms",
+   "GraphRAG Pipeline — Complete Implementation",
+   "VISUAL 4: GraphRAG Pipeline End-to-End"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Master Course"
+ },
+ {
+  "id": "rg-08-neo4j-cypher-queries-9798d2",
+  "trackId": "veerarag",
+  "title": "08. GraphRAG: Neo4j & Cypher Queries",
+  "summary": "Neo4j is the world's leading native graph database. It stores data as nodes and relationships — not as tables.",
+  "order": 137,
+  "objectives": [
+   "Neo4j Fundamentals",
+   "Cypher Query Language — Complete Guide",
+   "Neo4j + Python Full Integration",
+   "VISUAL 5: Neo4j Storage Model"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Master Course"
+ },
+ {
+  "id": "rg-08-production-graphrag-system-d829da",
+  "trackId": "veerarag",
+  "title": "08. GraphRAG: Production GraphRAG System",
+  "summary": "Covers Complete Production Architecture, Scaling & Optimization Strategies, VISUAL 7: Production Architecture.",
+  "order": 138,
+  "objectives": [
+   "Complete Production Architecture",
+   "Scaling & Optimization Strategies",
+   "VISUAL 7: Production Architecture"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Master Course"
+ },
+ {
+  "id": "rg-08-complete-comparison-cheat-sheet-0ede97",
+  "trackId": "veerarag",
+  "title": "08. GraphRAG: Complete Comparison & Cheat Sheet",
+  "summary": "You now have a complete master course on GraphRAG + BM25. Every concept has been covered from mathematical foundations to production code.",
+  "order": 139,
+  "objectives": [
+   "FINAL VISUAL: Complete System Overview",
+   "Master Cheat Sheet",
+   "Your Learning Path",
+   "Key Libraries Summary"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Master Course"
+ },
+ {
+  "id": "rg-08-community-detection-global-graphrag-search-a0c249",
+  "trackId": "veerarag",
+  "title": "08. GraphRAG: Community Detection & Global GraphRAG Search",
+  "summary": "Communities = Groups of densely connected entities in the graph",
+  "order": 140,
+  "objectives": [
+   "Why Communities Matter in GraphRAG",
+   "Louvain Algorithm — Community Detection",
+   "Global Search Implementation",
+   "VISUAL 9: Community Detection & Global Search"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Master Course"
+ },
+ {
+  "id": "rg-08-advanced-graph-algorithms-1dede6",
+  "trackId": "veerarag",
+  "title": "08. GraphRAG: Advanced Graph Algorithms",
+  "summary": "Covers PageRank for Entity Importance, VISUAL 10: PageRank in Knowledge Graph.",
+  "order": 141,
+  "objectives": [
+   "PageRank for Entity Importance",
+   "VISUAL 10: PageRank in Knowledge Graph"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Master Course"
+ },
+ {
+  "id": "rg-08-graphrag-with-langchain-llamaindex-3b9eec",
+  "trackId": "veerarag",
+  "title": "08. GraphRAG: GraphRAG with LangChain & LlamaIndex",
+  "summary": "Covers LangChain GraphRAG Implementation, LlamaIndex GraphRAG, VISUAL 12: LangChain vs LlamaIndex GraphRAG.",
+  "order": 142,
+  "objectives": [
+   "LangChain GraphRAG Implementation",
+   "LlamaIndex GraphRAG",
+   "VISUAL 12: LangChain vs LlamaIndex GraphRAG"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Master Course"
+ },
+ {
+  "id": "rg-09-evaluation-metrics-3c873d",
+  "trackId": "veerarag",
+  "title": "09. Evaluation: Evaluation & Metrics",
+  "summary": "RAGAS (Retrieval-Augmented Generation Assessment) is the industry-standard framework for evaluating RAG systems. It provides reference-free metrics (no human labels required) by using an LLM as a judge.",
+  "order": 143,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "11_Evaluation_Metrics.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-09-evaluation-tracing-monitoring-learning-path-45d5cd",
+  "trackId": "veerarag",
+  "title": "09. Evaluation: Evaluation, tracing & monitoring — learning path",
+  "summary": "Audience: You already know LLMs, RAG, agents, agentic AI basics.",
+  "order": 144,
+  "objectives": [
+   "Why This Guide Exists",
+   "The Big Picture (ASCII Map)",
+   "File Index & Learning Path",
+   "Core Vocabulary (Memorize These)",
+   "The Three Layers of AI Quality",
+   "Mental Model: \"The Eval Pyramid\""
+  ],
+  "sourceFile": "00-overview-and-learning-path.md",
+  "labIds": [],
+  "series": "AI Evaluation & Observability"
+ },
+ {
+  "id": "rg-09-llm-evaluation-metrics-methods-and-llm-as-a-judg-36eba1",
+  "trackId": "veerarag",
+  "title": "09. Evaluation: LLM Evaluation: Metrics, Methods, and LLM-as-a-Judge",
+  "summary": "Prereq: You understand LLM basics (tokenization, prompting, fine-tuning at a conceptual level).",
+  "order": 145,
+  "objectives": [
+   "Why Evaluate LLMs?",
+   "Two Types of Evaluation",
+   "Classical NLP Metrics (Still Used, With Caveats)",
+   "Modern LLM Benchmarks",
+   "LLM-as-a-Judge (Critical Section)",
+   "Human Evaluation"
+  ],
+  "sourceFile": "01-llm-evaluation.md",
+  "labIds": [],
+  "series": "AI Evaluation & Observability"
+ },
+ {
+  "id": "rg-09-rag-evaluation-retrieval-generation-and-end-to-e-3edf1b",
+  "trackId": "veerarag",
+  "title": "09. Evaluation: RAG Evaluation: Retrieval, Generation, and End-to-End Metrics",
+  "summary": "A RAG pipeline is two systems chained together: a retriever that fetches context and a generator (LLM) that produces an answer from it.",
+  "order": 146,
+  "objectives": [
+   "Why RAG Eval is Hard",
+   "The RAG Pipeline (Quick Visual)",
+   "Retrieval Metrics (Detailed)",
+   "Generation Metrics (RAG-Specific)",
+   "The RAGAS Framework (Deep Dive)",
+   "End-to-End Evaluation"
+  ],
+  "sourceFile": "02-rag-evaluation.md",
+  "labIds": [],
+  "series": "AI Evaluation & Observability"
+ },
+ {
+  "id": "rg-09-advanced-rag-graph-rag-agentic-rag-self-rag-corr-96d990",
+  "trackId": "veerarag",
+  "title": "09. Evaluation: Advanced RAG: Graph RAG, Agentic RAG, Self-RAG & Corrective RAG Evaluation",
+  "summary": "Prerequisite: You've read 02-rag-evaluation.md — faithfulness, context precision/recall, RAGAS, basic retrieval metrics.",
+  "order": 147,
+  "objectives": [
+   "Why Vanilla RAG Isn't Enough",
+   "Graph RAG — Concepts & Evaluation",
+   "Agentic RAG — Concepts & Evaluation",
+   "Self-RAG — Concepts & Evaluation",
+   "Corrective RAG (CRAG) — Concepts & Evaluation",
+   "Hybrid & Advanced Retrieval Eval"
+  ],
+  "sourceFile": "03-advanced-rag-eval.md",
+  "labIds": [],
+  "series": "AI Evaluation & Observability"
+ },
+ {
+  "id": "rg-09-ai-agent-evaluation-tasks-tools-and-trajectories-e29c46",
+  "trackId": "veerarag",
+  "title": "09. Evaluation: AI Agent Evaluation: Tasks, Tools, and Trajectories",
+  "summary": "Prerequisite: File 01 (LLM eval). You know BLEU, ROUGE, perplexity, and LLM-as-judge for single input/output pairs. > > Scope: Single autonomous agents.",
+  "order": 148,
+  "objectives": [
+   "What Makes Agent Eval Different from LLM Eval",
+   "The Agent Loop",
+   "Core Agent Metrics",
+   "Trajectory-Level Evaluation",
+   "Tool-Use Specific Evaluation",
+   "Agent Benchmarks"
+  ],
+  "sourceFile": "04-ai-agents-evaluation.md",
+  "labIds": [],
+  "series": "AI Evaluation & Observability"
+ },
+ {
+  "id": "rg-09-multi-agent-system-evaluation-coordination-commu-0ace0f",
+  "trackId": "veerarag",
+  "title": "09. Evaluation: Multi-Agent System Evaluation: Coordination, Communication, and Emergent Behavior",
+  "summary": "A single agent is one LLM making one decision per step. A multi-agent system (MAS) is N agents, each making decisions, plus a coordination layer that decides who speaks next, who sees what, and when to stop.",
+  "order": 149,
+  "objectives": [
+   "Why Multi-Agent Eval is Harder Than Single-Agent",
+   "Multi-Agent Architectures (Quick Overview)",
+   "Core Multi-Agent Metrics",
+   "Framework-Specific Eval Patterns",
+   "Emergent Behavior Evaluation",
+   "LLM-as-Judge for Multi-Agent"
+  ],
+  "sourceFile": "05-multi-agent-evaluation.md",
+  "labIds": [],
+  "series": "AI Evaluation & Observability"
+ },
+ {
+  "id": "rg-09-agentic-ai-evaluation-autonomy-safety-and-long-h-158893",
+  "trackId": "veerarag",
+  "title": "09. Evaluation: Agentic AI Evaluation: Autonomy, Safety, and Long-Horizon Tasks",
+  "summary": "Prerequisite: Files 04 (single-agent eval) and 05 (multi-agent eval).",
+  "order": 150,
+  "objectives": [
+   "What \"Agentic AI\" Means (Beyond Single Agents)",
+   "The Autonomy Spectrum",
+   "Long-Horizon Task Evaluation",
+   "Safety Evaluation for Agentic AI (Critical)",
+   "Alignment & Oversight Metrics",
+   "Memory & State Evaluation"
+  ],
+  "sourceFile": "06-agentic-ai-evaluation.md",
+  "labIds": [],
+  "series": "AI Evaluation & Observability"
+ },
+ {
+  "id": "rg-09-golden-datasets-the-foundation-of-trustworthy-ai-de45da",
+  "trackId": "veerarag",
+  "title": "09. Evaluation: Golden Datasets: The Foundation of Trustworthy AI Evaluation",
+  "summary": "Prerequisite: Files 01–09. You understand how to score LLM, RAG, agent, and tool-calling outputs; you understand tracing and monitoring.",
+  "order": 151,
+  "objectives": [
+   "What is a Golden Dataset?",
+   "Why You Need a Golden Dataset",
+   "Anatomy of a Good Golden Dataset",
+   "How to Build a Golden Dataset",
+   "Sizing Your Golden Dataset",
+   "Annotation Strategy"
+  ],
+  "sourceFile": "10-golden-datasets.md",
+  "labIds": [],
+  "series": "AI Evaluation & Observability"
+ },
+ {
+  "id": "rg-09-evaluation-metrics-3ab954",
+  "trackId": "veerarag",
+  "title": "09. Evaluation: Evaluation Metrics",
+  "summary": "IR evaluation requires both a set of retrieved documents and relevance judgements (qrels). Precision@K measures what fraction of the top-K retrieved documents are relevant: the higher, the fewer irrelevant results the user sees.",
+  "order": 152,
+  "objectives": [
+   "CONCEPT 1: Precision, Recall and F1",
+   "① Concept Explanation",
+   "② 10 Conceptual Questions & Answers",
+   "③ 10 Scenario-Based Questions & Answers",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "12_evaluation_metrics.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval"
+ },
+ {
+  "id": "rg-09-graph-rag-evaluation-5f5238",
+  "trackId": "veerarag",
+  "title": "09. Evaluation: Graph RAG Evaluation",
+  "summary": "Evaluating Graph RAG systems requires metrics that go beyond standard RAG evaluation because the retrieval mechanism is graph-structured — meaning we must assess not just whether the answer is correct, but whether the right entities,…",
+  "order": 153,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "12_graph_rag_evaluation.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-09-graphrag-evaluation-58d749",
+  "trackId": "veerarag",
+  "title": "09. Evaluation: GraphRAG Evaluation",
+  "summary": "Learning Path: Beginner → Intermediate → Advanced → Production → FAANG",
+  "order": 154,
+  "objectives": [
+   "STEP 1 — SIMPLE & INTUITIVE EXPLANATION",
+   "STEP 2 — INTERNAL WORKING",
+   "STEP 3 — ARCHITECTURE EXPLANATION",
+   "STEP 4 — PRODUCTION USAGE",
+   "STEP 5 — COMMON FAILURES & PRODUCTION ISSUES",
+   "STEP 6 — DEBUGGING STRATEGY"
+  ],
+  "sourceFile": "section7_graphrag_evaluation.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Interview Guide"
+ },
+ {
+  "id": "rg-09-final-master-visual-summary-615009",
+  "trackId": "veerarag",
+  "title": "09. Evaluation: Final Master Visual Summary",
+  "summary": "You now have a COMPLETE mastery of RAG Evaluation: > > - 6 Retriever Metrics with formulas, 3 real-world examples each, Python code, visualizations > - 5 Generation Metrics with hallucination types, faithfulness detection, LLM-judge design…",
+  "order": 155,
+  "objectives": [
+   "Final Master Visual Summary"
+  ],
+  "sourceFile": "fri_may_29_2026_rag_evaluation_techniques_overview_with_examples.md",
+  "labIds": [],
+  "series": "Final Master Visual Summary"
+ },
+ {
+  "id": "rg-09-evaluation-benchmarking-137243",
+  "trackId": "veerarag",
+  "title": "09. Evaluation: Evaluation & Benchmarking",
+  "summary": "Covers Complete Evaluation Framework, VISUAL 13: Evaluation Metrics Dashboard.",
+  "order": 156,
+  "objectives": [
+   "Complete Evaluation Framework",
+   "VISUAL 13: Evaluation Metrics Dashboard"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Master Course"
+ },
+ {
+  "id": "rg-09-retriever-evaluation-b3f60c",
+  "trackId": "veerarag",
+  "title": "09. Evaluation: Retriever Evaluation",
+  "summary": "The Retriever is responsible for fetching relevant documents from a knowledge base. We evaluate HOW WELL it retrieves the RIGHT documents.",
+  "order": 157,
+  "objectives": [
+   "PRECISION@K",
+   "RECALL@K",
+   "F1 SCORE",
+   "MEAN RECIPROCAL RANK (MRR)",
+   "NDCG (Normalized Discounted Cumulative Gain)",
+   "HIT RATE (Hit@K)"
+  ],
+  "sourceFile": "fri_may_29_2026_rag_evaluation_techniques_overview_with_examples.md",
+  "labIds": [],
+  "series": "RAG Evaluation Techniques"
+ },
+ {
+  "id": "rg-09-generation-evaluation-4996b8",
+  "trackId": "veerarag",
+  "title": "09. Evaluation: Generation Evaluation",
+  "summary": "After retrieval, the LLM generates an answer from the retrieved context. We evaluate HOW GOOD that generated answer is.",
+  "order": 158,
+  "objectives": [
+   "FAITHFULNESS",
+   "ANSWER RELEVANCY",
+   "HALLUCINATION DETECTION",
+   "FLUENCY & COHERENCE"
+  ],
+  "sourceFile": "fri_may_29_2026_rag_evaluation_techniques_overview_with_examples.md",
+  "labIds": [],
+  "series": "RAG Evaluation Techniques"
+ },
+ {
+  "id": "rg-09-end-to-end-evaluation-part-1-of-2-e97990",
+  "trackId": "veerarag",
+  "title": "09. Evaluation: END-TO-END EVALUATION (Part 1 of 2)",
+  "summary": "Context Precision measures: _\"Among the retrieved context chunks, how many were actually NEEDED to answer the question?\"_ It evaluates context quality from the perspective of relevance to the ground truth answer.",
+  "order": 159,
+  "objectives": [
+   "CONTEXT PRECISION",
+   "CONTEXT RECALL",
+   "RAGAS FRAMEWORK"
+  ],
+  "sourceFile": "fri_may_29_2026_rag_evaluation_techniques_overview_with_examples.md",
+  "labIds": [],
+  "series": "RAG Evaluation Techniques"
+ },
+ {
+  "id": "rg-09-end-to-end-evaluation-part-2-of-2-729f6b",
+  "trackId": "veerarag",
+  "title": "09. Evaluation: END-TO-END EVALUATION (Part 2 of 2)",
+  "summary": "LLM-as-Judge uses a powerful LLM (like GPT-4) to evaluate the quality of generated answers. It acts as an automated human evaluator.",
+  "order": 160,
+  "objectives": [
+   "LLM-AS-JUDGE",
+   "HUMAN EVALUATION"
+  ],
+  "sourceFile": "fri_may_29_2026_rag_evaluation_techniques_overview_with_examples.md",
+  "labIds": [],
+  "series": "RAG Evaluation Techniques"
+ },
+ {
+  "id": "rg-10-tracing-spans-traces-and-observability-for-ai-sy-6a3b46",
+  "trackId": "veerarag",
+  "title": "10. Observability & Monitoring: Tracing: Spans, Traces, and Observability for AI Systems",
+  "summary": "Prerequisite: Files 01–07. You understand LLM, RAG, and agent evaluation as scoring functions over outputs and trajectories.",
+  "order": 161,
+  "objectives": [
+   "What is Tracing? (and why it matters for AI)",
+   "Core Concepts: Spans, Traces, Context",
+   "The Anatomy of a Good Span",
+   "Distributed Tracing for AI (OpenTelemetry)",
+   "Popular AI Tracing Tools (comparison)",
+   "Tracing Patterns by System Type"
+  ],
+  "sourceFile": "08-tracing.md",
+  "labIds": [],
+  "series": "AI Evaluation & Observability"
+ },
+ {
+  "id": "rg-10-production-monitoring-drift-latency-cost-and-ale-6eeec3",
+  "trackId": "veerarag",
+  "title": "10. Observability & Monitoring: Production Monitoring: Drift, Latency, Cost, and Alerts for AI Systems",
+  "summary": "Prerequisite: File 08 (tracing). You can capture spans, build a trace tree, and reconstruct why a request behaved the way it did.",
+  "order": 162,
+  "objectives": [
+   "Why Monitoring AI ≠ Monitoring Traditional Software",
+   "The Three Pillars of AI Monitoring",
+   "Drift Detection (Critical Section)",
+   "Quality Monitoring in Production",
+   "Operational Monitoring",
+   "Cost & Token Monitoring"
+  ],
+  "sourceFile": "09-monitoring.md",
+  "labIds": [],
+  "series": "AI Evaluation & Observability"
+ },
+ {
+  "id": "rg-11-rag-failure-modes-debugging-4fda97",
+  "trackId": "veerarag",
+  "title": "11. Production: Failures, Scale & Security: RAG Failure Modes & Debugging",
+  "summary": "RAG failures fall into five distinct categories, each with different root causes and fixes. Understanding the failure taxonomy is essential for systematic debugging — without a framework, engineers waste hours tuning the wrong component.",
+  "order": 163,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "12_RAG_Failure_Modes_Debugging.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-11-security-governance-6dc77a",
+  "trackId": "veerarag",
+  "title": "11. Production: Failures, Scale & Security: Security & Governance",
+  "summary": "Multi-tenant RAG systems (SaaS products, enterprise portals) must ensure that Tenant A cannot retrieve Tenant B's documents.",
+  "order": 164,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "14_Security_Governance.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-11-langchain-rag-patterns-retrievalqa-vs-lcel-9c969f",
+  "trackId": "veerarag",
+  "title": "11. Production: Failures, Scale & Security: LangChain RAG Patterns — RetrievalQA vs LCEL",
+  "summary": "LangChain has two generations of RAG abstractions. RetrievalQA (legacy): a high-level chain that wraps retriever + LLM + prompt into a single object — easy to use but hard to customize, instrument, or extend.",
+  "order": 165,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "15_RAG_Infrastructure_Tools.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-11-complete-production-rag-reference-architecture-d1943b",
+  "trackId": "veerarag",
+  "title": "11. Production: Failures, Scale & Security: Complete Production RAG Reference Architecture",
+  "summary": "Covers ① Full System Design, ④ Complete Architecture Visual.",
+  "order": 166,
+  "objectives": [
+   "① Full System Design",
+   "④ Complete Architecture Visual"
+  ],
+  "sourceFile": "15_RAG_Infrastructure_Tools.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-11-performance-and-scalability-eb3651",
+  "trackId": "veerarag",
+  "title": "11. Production: Failures, Scale & Security: Performance and Scalability",
+  "summary": "BM25 query latency depends on corpus size, posting list lengths, and early termination. For a corpus of N documents with vocabulary V, the worst-case cost is O(Σ df(q_i)) per query — summing posting list lengths over all query terms.",
+  "order": 167,
+  "objectives": [
+   "CONCEPT 1: BM25 Latency at Scale",
+   "① Concept Explanation",
+   "② 10 Conceptual Questions & Answers",
+   "③ 10 Scenario-Based Questions & Answers",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "13_performance_scalability.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval"
+ },
+ {
+  "id": "rg-11-failure-modes-debugging-2dda86",
+  "trackId": "veerarag",
+  "title": "11. Production: Failures, Scale & Security: Failure Modes & Debugging",
+  "summary": "Graph RAG systems have failure modes that span three layers: knowledge graph construction (bad extraction, missed entities), retrieval (wrong graph traversal, poor vector search), and generation (hallucination, context overflow).",
+  "order": 168,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "13_failure_modes_debugging.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-11-scalability-performance-ad6a52",
+  "trackId": "veerarag",
+  "title": "11. Production: Failures, Scale & Security: Scalability & Performance",
+  "summary": "Scaling Graph RAG from a 10,000-entity prototype to a 10M+ entity production system requires addressing three bottlenecks independently: indexing throughput (parallel LLM extraction, batched embeddings, distributed chunking), graph storage…",
+  "order": 169,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "14_scalability_performance.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-11-infrastructure-tools-173c5c",
+  "trackId": "veerarag",
+  "title": "11. Production: Failures, Scale & Security: Infrastructure & Tools",
+  "summary": "The Graph RAG ecosystem has converged around four major infrastructure pillars: Microsoft GraphRAG (CLI-driven pipeline producing Parquet artifacts with community reports, best for structured enterprise corpora), LightRAG-HKU (dual-level…",
+  "order": 170,
+  "objectives": [
+   "① Concept Explanation",
+   "④ Visual Explanation"
+  ],
+  "sourceFile": "15_infrastructure_tools.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-11-production-graphrag-systems-6c3b9d",
+  "trackId": "veerarag",
+  "title": "11. Production: Failures, Scale & Security: Production GraphRAG Systems",
+  "summary": "Learning Path: Beginner → Intermediate → Advanced → Production → FAANG",
+  "order": 171,
+  "objectives": [
+   "STEP 1 — SIMPLE & INTUITIVE EXPLANATION",
+   "STEP 2 — INTERNAL WORKING",
+   "STEP 3 — ARCHITECTURE EXPLANATION",
+   "STEP 4 — PRODUCTION USAGE",
+   "STEP 5 — COMMON FAILURES & PRODUCTION ISSUES",
+   "STEP 6 — DEBUGGING STRATEGY"
+  ],
+  "sourceFile": "section8_production_graphrag.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Interview Guide"
+ },
+ {
+  "id": "rg-11-security-in-graphrag-systems-c9f1da",
+  "trackId": "veerarag",
+  "title": "11. Production: Failures, Scale & Security: Security in GraphRAG Systems",
+  "summary": "Learning Path: Beginner → Intermediate → Advanced → Production → FAANG",
+  "order": 172,
+  "objectives": [
+   "STEP 1 — SIMPLE & INTUITIVE EXPLANATION",
+   "STEP 2 — INTERNAL WORKING",
+   "STEP 3 — ARCHITECTURE EXPLANATION",
+   "STEP 4 — PRODUCTION USAGE",
+   "STEP 5 — COMMON FAILURES & PRODUCTION ISSUES",
+   "STEP 6 — DEBUGGING STRATEGY"
+  ],
+  "sourceFile": "section9_security.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Interview Guide"
+ },
+ {
+  "id": "rg-11-bm25-with-elasticsearch-production-scale-search-18c59d",
+  "trackId": "veerarag",
+  "title": "11. Production: Failures, Scale & Security: BM25 with Elasticsearch (Production-Scale Search)",
+  "summary": "rank-bm25 is like a home kitchen blender — perfect for personal use, maybe up to a few thousand documents.",
+  "order": 173,
+  "objectives": [
+   "① Real-World Analogy",
+   "② Plain English Explanation",
+   "③ Why Does This Matter?",
+   "④ Step-by-Step Setup",
+   "⑤ Beginner-Friendly Code Example",
+   "⑥ Common Beginner Mistakes (Lesson 15)"
+  ],
+  "sourceFile": "fri_may_29_2026_idf_and_its_importance_in_search.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval for Beginners"
+ },
+ {
+  "id": "rg-11-advanced-production-patterns-27ba6b",
+  "trackId": "veerarag",
+  "title": "11. Production: Failures, Scale & Security: ADVANCED PRODUCTION PATTERNS",
+  "summary": "This completes the full Advanced Master Course on GraphRAG + BM25. > > You now have mastery over: > - BM25 family (BM25, BM25+, BM25L, SPLADE) > - GraphRAG (local, global, relational query modes) > - Community detection (Louvain,…",
+  "order": 174,
+  "objectives": [
+   "Streaming GraphRAG with Async",
+   "GraphRAG Observability Stack",
+   "VISUAL 14: Complete Production Observability",
+   "VISUAL 15: The Ultimate GraphRAG + BM25 System",
+   "Complete Advanced Cheat Sheet",
+   "Advanced Learning Path (Weeks 9-16)"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Master Course"
+ },
+ {
+  "id": "rg-11-mcp-security-basics-for-beginners-c44857",
+  "trackId": "veerarag",
+  "title": "11. Production: Failures, Scale & Security: MCP Security Basics for Beginners",
+  "summary": "In the last lessons we connected MCP to four different frameworks. Today we learn something critically important — keeping your MCP server secure.",
+  "order": 175,
+  "objectives": [
+   "① Real-World Analogy — The Security Guard",
+   "② Why Security Matters So Much for MCP",
+   "③ Complete Security Implementation",
+   "⑤ Quick Recap — What Did We Just Learn?"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "MCP (Model Context Protocol)"
+ },
+ {
+  "id": "rg-11-debugging-and-testing-mcp-servers-fda15c",
+  "trackId": "veerarag",
+  "title": "11. Production: Failures, Scale & Security: Debugging and Testing MCP Servers",
+  "summary": "This is the final lesson! We pull together everything and learn how to find and fix problems confidently.",
+  "order": 176,
+  "objectives": [
+   "① The MCP Inspector — Your Best Friend",
+   "② Complete Testing Suite",
+   "③ Quick Recap — Final Lesson"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "MCP (Model Context Protocol)"
+ },
+ {
+  "id": "rg-20-multi-agent-system-evaluation-coordination-commu-0e78eb",
+  "trackId": "veerarag",
+  "title": "20. Exercises: Multi-Agent System Evaluation: Coordination, Communication, and Emergent Behavior",
+  "summary": "When the final answer is wrong in a single-agent system, you trace the trajectory: which step went sideways? One agent, one trajectory, one blame target.",
+  "order": 177,
+  "objectives": [
+   "Solve the Multi-Agent System Evaluation: Coordination, Communication, and Emergent Behavior exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "05-multi-agent-evaluation.md",
+  "labIds": [],
+  "series": "AI Evaluation & Observability"
+ },
+ {
+  "id": "rg-20-bm25-sparse-retrieval-for-beginners-145382",
+  "trackId": "veerarag",
+  "title": "20. Exercises: BM25 & Sparse Retrieval for Beginners",
+  "summary": "Task: Add a 6th document \"Deep learning is a subset of machine learning\" to our document collection, re-build the inverted index, and search for \"deep learning\". Print the ranked results.",
+  "order": 178,
+  "objectives": [
+   "Solve the BM25 & Sparse Retrieval for Beginners exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "fri_may_29_2026_idf_and_its_importance_in_search.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval for Beginners"
+ },
+ {
+  "id": "rg-20-mcp-model-context-protocol-37dcb2",
+  "trackId": "veerarag",
+  "title": "20. Exercises: MCP (Model Context Protocol)",
+  "summary": "Exercise: Answer these 5 questions in your own words. No looking at notes!",
+  "order": 179,
+  "objectives": [
+   "Solve the MCP (Model Context Protocol) exercises without looking at the lesson",
+   "Test edge cases and explain your approach"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "MCP (Model Context Protocol)"
+ },
+ {
+  "id": "rg-21-build-a-rag-app-with-langchain-b2f51c",
+  "trackId": "veerarag",
+  "title": "21. Projects: Build a RAG App with LangChain",
+  "summary": "Projects for Build a RAG App with LangChain.",
+  "order": 180,
+  "objectives": [
+   "Build the Build a RAG App with LangChain projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "fri_may_29_2026_creating_rag_application_with_lang_chain_and.md",
+  "labIds": [],
+  "series": "Build a RAG App with LangChain"
+ },
+ {
+  "id": "rg-21-graphrag-bm25-master-course-784914",
+  "trackId": "veerarag",
+  "title": "21. Projects: GraphRAG + BM25 Master Course",
+  "summary": "Projects for GraphRAG + BM25 Master Course.",
+  "order": 181,
+  "objectives": [
+   "Build the GraphRAG + BM25 Master Course projects end to end",
+   "Keep a short README with assumptions and tradeoffs"
+  ],
+  "sourceFile": "fri_may_29_2026_graph_rag_and_bm_25_master_course_outline.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Master Course"
+ },
+ {
+  "id": "rg-22-master-interview-bank-evaluation-tracing-monitor-72aec3",
+  "trackId": "veerarag",
+  "title": "22. Interview: Master Interview Bank: Evaluation, Tracing & Monitoring (Part 1)",
+  "summary": "Interview Q&A for Master Interview Bank: Evaluation, Tracing & Monitoring (part 1 of 2).",
+  "order": 182,
+  "objectives": [
+   "Answer the Master Interview Bank: Evaluation, Tracing & Monitoring interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "11-interview-questions.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "rg-22-master-interview-bank-evaluation-tracing-monitor-08ced4",
+  "trackId": "veerarag",
+  "title": "22. Interview: Master Interview Bank: Evaluation, Tracing & Monitoring (Part 2)",
+  "summary": "Interview Q&A for Master Interview Bank: Evaluation, Tracing & Monitoring (part 2 of 2).",
+  "order": 183,
+  "objectives": [
+   "Answer the Master Interview Bank: Evaluation, Tracing & Monitoring interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "11-interview-questions.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "rg-22-ai-agents-rag-mcp-interview-checklist-a45193",
+  "trackId": "veerarag",
+  "title": "22. Interview: AI Agents, RAG & MCP Interview Checklist",
+  "summary": "Interview Q&A for AI Agents, RAG & MCP Interview Checklist.",
+  "order": 184,
+  "objectives": [
+   "Answer the AI Agents, RAG & MCP Interview Checklist interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "fri_may_29_2026_interview_preparation_for_ai_agents_and.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "rg-22-rag-interview-bible-senior-level-part-1-10fd3c",
+  "trackId": "veerarag",
+  "title": "22. Interview: RAG Interview Bible (senior level) (Part 1)",
+  "summary": "Interview Q&A for RAG Interview Bible (senior level) — 20 questions with model answers (part 1 of 5).",
+  "order": 185,
+  "objectives": [
+   "Answer 20 RAG Interview Bible (senior level) interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "fri_may_29_2026_rag_interview_preparation_system_overview.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "rg-22-rag-interview-bible-senior-level-part-2-0e7eb9",
+  "trackId": "veerarag",
+  "title": "22. Interview: RAG Interview Bible (senior level) (Part 2)",
+  "summary": "Interview Q&A for RAG Interview Bible (senior level) — 20 questions with model answers (part 2 of 5).",
+  "order": 186,
+  "objectives": [
+   "Answer 20 RAG Interview Bible (senior level) interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "fri_may_29_2026_rag_interview_preparation_system_overview.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "rg-22-rag-interview-bible-senior-level-part-3-0cb789",
+  "trackId": "veerarag",
+  "title": "22. Interview: RAG Interview Bible (senior level) (Part 3)",
+  "summary": "Interview Q&A for RAG Interview Bible (senior level) — 20 questions with model answers (part 3 of 5).",
+  "order": 187,
+  "objectives": [
+   "Answer 20 RAG Interview Bible (senior level) interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "fri_may_29_2026_rag_interview_preparation_system_overview.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "rg-22-rag-interview-bible-senior-level-part-4-b7e877",
+  "trackId": "veerarag",
+  "title": "22. Interview: RAG Interview Bible (senior level) (Part 4)",
+  "summary": "Interview Q&A for RAG Interview Bible (senior level) — 20 questions with model answers (part 4 of 5).",
+  "order": 188,
+  "objectives": [
+   "Answer 20 RAG Interview Bible (senior level) interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "fri_may_29_2026_rag_interview_preparation_system_overview.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "rg-22-rag-interview-bible-senior-level-part-5-74e2b8",
+  "trackId": "veerarag",
+  "title": "22. Interview: RAG Interview Bible (senior level) (Part 5)",
+  "summary": "Interview Q&A for RAG Interview Bible (senior level) — 20 questions with model answers (part 5 of 5).",
+  "order": 189,
+  "objectives": [
+   "Answer 20 RAG Interview Bible (senior level) interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "fri_may_29_2026_rag_interview_preparation_system_overview.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "rg-22-rag-interview-prep-system-part-1-e67aa8",
+  "trackId": "veerarag",
+  "title": "22. Interview: RAG Interview Prep System (Part 1)",
+  "summary": "Interview Q&A for RAG Interview Prep System — 5 questions with model answers (part 1 of 4).",
+  "order": 190,
+  "objectives": [
+   "Answer 5 RAG Interview Prep System interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "fri_may_29_2026_rag_interview_preparation_system.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "rg-22-rag-interview-prep-system-part-2-678bff",
+  "trackId": "veerarag",
+  "title": "22. Interview: RAG Interview Prep System (Part 2)",
+  "summary": "Interview Q&A for RAG Interview Prep System — 5 questions with model answers (part 2 of 4).",
+  "order": 191,
+  "objectives": [
+   "Answer 5 RAG Interview Prep System interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "fri_may_29_2026_rag_interview_preparation_system.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "rg-22-rag-interview-prep-system-part-3-b0d96f",
+  "trackId": "veerarag",
+  "title": "22. Interview: RAG Interview Prep System (Part 3)",
+  "summary": "Interview Q&A for RAG Interview Prep System — 5 questions with model answers (part 3 of 4).",
+  "order": 192,
+  "objectives": [
+   "Answer 5 RAG Interview Prep System interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "fri_may_29_2026_rag_interview_preparation_system.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "rg-22-rag-interview-prep-system-part-4-c94eca",
+  "trackId": "veerarag",
+  "title": "22. Interview: RAG Interview Prep System (Part 4)",
+  "summary": "Interview Q&A for RAG Interview Prep System — 5 questions with model answers (part 4 of 4).",
+  "order": 193,
+  "objectives": [
+   "Answer 5 RAG Interview Prep System interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "fri_may_29_2026_rag_interview_preparation_system.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "rg-22-graphrag-bm25-coding-interview-3ab155",
+  "trackId": "veerarag",
+  "title": "22. Interview: GraphRAG & BM25 Coding Interview",
+  "summary": "Interview Q&A for GraphRAG & BM25 Coding Interview.",
+  "order": 194,
+  "objectives": [
+   "Answer the GraphRAG & BM25 Coding Interview interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "section10_coding_interview.md",
+  "labIds": [],
+  "series": "Interview Banks"
+ },
+ {
+  "id": "rg-22-rag-core-course-526faa",
+  "trackId": "veerarag",
+  "title": "22. Interview: RAG Core Course",
+  "summary": "Interview Q&A for RAG Core Course — 32 questions with model answers.",
+  "order": 195,
+  "objectives": [
+   "Answer 32 RAG Core Course interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "01_RAG_Foundations.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-22-rag-core-course-9990a3",
+  "trackId": "veerarag",
+  "title": "22. Interview: RAG Core Course",
+  "summary": "Interview Q&A for RAG Core Course — 7 questions with model answers.",
+  "order": 196,
+  "objectives": [
+   "Answer 7 RAG Core Course interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "02_Document_Processing_Ingestion.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-22-rag-core-course-1837d9",
+  "trackId": "veerarag",
+  "title": "22. Interview: RAG Core Course",
+  "summary": "Interview Q&A for RAG Core Course — 5 questions with model answers.",
+  "order": 197,
+  "objectives": [
+   "Answer 5 RAG Core Course interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "03_Chunking_Strategies.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-22-rag-core-course-bb8830",
+  "trackId": "veerarag",
+  "title": "22. Interview: RAG Core Course",
+  "summary": "Interview Q&A for RAG Core Course — 7 questions with model answers.",
+  "order": 198,
+  "objectives": [
+   "Answer 7 RAG Core Course interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "04_Embedding_Models.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-22-rag-core-course-f81714",
+  "trackId": "veerarag",
+  "title": "22. Interview: RAG Core Course",
+  "summary": "Interview Q&A for RAG Core Course — 11 questions with model answers.",
+  "order": 199,
+  "objectives": [
+   "Answer 11 RAG Core Course interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "05_Vector_Databases.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-22-rag-core-course-b0a032",
+  "trackId": "veerarag",
+  "title": "22. Interview: RAG Core Course",
+  "summary": "Interview Q&A for RAG Core Course — 10 questions with model answers.",
+  "order": 200,
+  "objectives": [
+   "Answer 10 RAG Core Course interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "06_Retrieval_Strategies.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-22-rag-core-course-fd1d08",
+  "trackId": "veerarag",
+  "title": "22. Interview: RAG Core Course",
+  "summary": "Interview Q&A for RAG Core Course — 10 questions with model answers.",
+  "order": 201,
+  "objectives": [
+   "Answer 10 RAG Core Course interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "07_Reranking.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-22-rag-core-course-b4cdf6",
+  "trackId": "veerarag",
+  "title": "22. Interview: RAG Core Course",
+  "summary": "Interview Q&A for RAG Core Course — 10 questions with model answers.",
+  "order": 202,
+  "objectives": [
+   "Answer 10 RAG Core Course interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "08_Query_Understanding_Transformation.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-22-rag-core-course-415104",
+  "trackId": "veerarag",
+  "title": "22. Interview: RAG Core Course",
+  "summary": "Interview Q&A for RAG Core Course — 10 questions with model answers.",
+  "order": 203,
+  "objectives": [
+   "Answer 10 RAG Core Course interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "09_Generation_Prompting.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-22-rag-core-course-part-1-0cdf6a",
+  "trackId": "veerarag",
+  "title": "22. Interview: RAG Core Course (Part 1)",
+  "summary": "Interview Q&A for RAG Core Course — 37 questions with model answers (part 1 of 2).",
+  "order": 204,
+  "objectives": [
+   "Answer 37 RAG Core Course interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "10_Advanced_RAG_Architectures.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-22-rag-core-course-part-2-8a43c0",
+  "trackId": "veerarag",
+  "title": "22. Interview: RAG Core Course (Part 2)",
+  "summary": "Interview Q&A for RAG Core Course — 37 questions with model answers (part 2 of 2).",
+  "order": 205,
+  "objectives": [
+   "Answer 37 RAG Core Course interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "10_Advanced_RAG_Architectures.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-22-evaluation-metrics-9946db",
+  "trackId": "veerarag",
+  "title": "22. Interview: Evaluation & Metrics",
+  "summary": "Interview Q&A for Evaluation & Metrics — 9 questions with model answers.",
+  "order": 206,
+  "objectives": [
+   "Answer 9 Evaluation & Metrics interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "11_Evaluation_Metrics.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-22-rag-failure-modes-debugging-41a45d",
+  "trackId": "veerarag",
+  "title": "22. Interview: RAG Failure Modes & Debugging",
+  "summary": "Interview Q&A for RAG Failure Modes & Debugging — 10 questions with model answers.",
+  "order": 207,
+  "objectives": [
+   "Answer 10 RAG Failure Modes & Debugging interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "12_RAG_Failure_Modes_Debugging.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-22-security-governance-7bda98",
+  "trackId": "veerarag",
+  "title": "22. Interview: Security & Governance",
+  "summary": "Interview Q&A for Security & Governance — 10 questions with model answers.",
+  "order": 208,
+  "objectives": [
+   "Answer 10 Security & Governance interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "14_Security_Governance.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-22-rag-core-course-6b0819",
+  "trackId": "veerarag",
+  "title": "22. Interview: RAG Core Course",
+  "summary": "Interview Q&A for RAG Core Course — 8 questions with model answers.",
+  "order": 209,
+  "objectives": [
+   "Answer 8 RAG Core Course interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "15_RAG_Infrastructure_Tools.md",
+  "labIds": [],
+  "series": "RAG Core Course"
+ },
+ {
+  "id": "rg-22-llm-evaluation-metrics-methods-and-llm-as-a-judg-c7a410",
+  "trackId": "veerarag",
+  "title": "22. Interview: LLM Evaluation: Metrics, Methods, and LLM-as-a-Judge",
+  "summary": "Interview Q&A for LLM Evaluation: Metrics, Methods, and LLM-as-a-Judge.",
+  "order": 210,
+  "objectives": [
+   "Answer the LLM Evaluation: Metrics, Methods, and LLM-as-a-Judge interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "01-llm-evaluation.md",
+  "labIds": [],
+  "series": "AI Evaluation & Observability"
+ },
+ {
+  "id": "rg-22-rag-evaluation-retrieval-generation-and-end-to-e-83e279",
+  "trackId": "veerarag",
+  "title": "22. Interview: RAG Evaluation: Retrieval, Generation, and End-to-End Metrics",
+  "summary": "Interview Q&A for RAG Evaluation: Retrieval, Generation, and End-to-End Metrics — 10 questions with model answers.",
+  "order": 211,
+  "objectives": [
+   "Answer 10 RAG Evaluation: Retrieval, Generation, and End-to-End Metrics interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "02-rag-evaluation.md",
+  "labIds": [],
+  "series": "AI Evaluation & Observability"
+ },
+ {
+  "id": "rg-22-advanced-rag-graph-rag-agentic-rag-self-rag-corr-e8315c",
+  "trackId": "veerarag",
+  "title": "22. Interview: Advanced RAG: Graph RAG, Agentic RAG, Self-RAG & Corrective RAG Evaluation",
+  "summary": "Interview Q&A for Advanced RAG: Graph RAG, Agentic RAG, Self-RAG & Corrective RAG Evaluation — 10 questions with model answers.",
+  "order": 212,
+  "objectives": [
+   "Answer 10 Advanced RAG: Graph RAG, Agentic RAG, Self-RAG & Corrective RAG Evaluation interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "03-advanced-rag-eval.md",
+  "labIds": [],
+  "series": "AI Evaluation & Observability"
+ },
+ {
+  "id": "rg-22-ai-agent-evaluation-tasks-tools-and-trajectories-153f78",
+  "trackId": "veerarag",
+  "title": "22. Interview: AI Agent Evaluation: Tasks, Tools, and Trajectories",
+  "summary": "Interview Q&A for AI Agent Evaluation: Tasks, Tools, and Trajectories.",
+  "order": 213,
+  "objectives": [
+   "Answer the AI Agent Evaluation: Tasks, Tools, and Trajectories interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "04-ai-agents-evaluation.md",
+  "labIds": [],
+  "series": "AI Evaluation & Observability"
+ },
+ {
+  "id": "rg-22-multi-agent-system-evaluation-coordination-commu-375b74",
+  "trackId": "veerarag",
+  "title": "22. Interview: Multi-Agent System Evaluation: Coordination, Communication, and Emergent Behavior",
+  "summary": "Interview Q&A for Multi-Agent System Evaluation: Coordination, Communication, and Emergent Behavior — 10 questions with model answers.",
+  "order": 214,
+  "objectives": [
+   "Answer 10 Multi-Agent System Evaluation: Coordination, Communication, and Emergent Behavior interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "05-multi-agent-evaluation.md",
+  "labIds": [],
+  "series": "AI Evaluation & Observability"
+ },
+ {
+  "id": "rg-22-agentic-ai-evaluation-autonomy-safety-and-long-h-4a56b6",
+  "trackId": "veerarag",
+  "title": "22. Interview: Agentic AI Evaluation: Autonomy, Safety, and Long-Horizon Tasks",
+  "summary": "Interview Q&A for Agentic AI Evaluation: Autonomy, Safety, and Long-Horizon Tasks.",
+  "order": 215,
+  "objectives": [
+   "Answer the Agentic AI Evaluation: Autonomy, Safety, and Long-Horizon Tasks interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "06-agentic-ai-evaluation.md",
+  "labIds": [],
+  "series": "AI Evaluation & Observability"
+ },
+ {
+  "id": "rg-22-mcp-tool-calling-concepts-implementation-and-eva-d239a4",
+  "trackId": "veerarag",
+  "title": "22. Interview: MCP & Tool Calling: Concepts, Implementation, and Evaluation",
+  "summary": "Interview Q&A for MCP & Tool Calling: Concepts, Implementation, and Evaluation.",
+  "order": 216,
+  "objectives": [
+   "Answer the MCP & Tool Calling: Concepts, Implementation, and Evaluation interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "07-mcp-tool-calling.md",
+  "labIds": [],
+  "series": "AI Evaluation & Observability"
+ },
+ {
+  "id": "rg-22-tracing-spans-traces-and-observability-for-ai-sy-a2558b",
+  "trackId": "veerarag",
+  "title": "22. Interview: Tracing: Spans, Traces, and Observability for AI Systems",
+  "summary": "Interview Q&A for Tracing: Spans, Traces, and Observability for AI Systems — 10 questions with model answers.",
+  "order": 217,
+  "objectives": [
+   "Answer 10 Tracing: Spans, Traces, and Observability for AI Systems interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "08-tracing.md",
+  "labIds": [],
+  "series": "AI Evaluation & Observability"
+ },
+ {
+  "id": "rg-22-production-monitoring-drift-latency-cost-and-ale-a83ed3",
+  "trackId": "veerarag",
+  "title": "22. Interview: Production Monitoring: Drift, Latency, Cost, and Alerts for AI Systems",
+  "summary": "Interview Q&A for Production Monitoring: Drift, Latency, Cost, and Alerts for AI Systems — 10 questions with model answers.",
+  "order": 218,
+  "objectives": [
+   "Answer 10 Production Monitoring: Drift, Latency, Cost, and Alerts for AI Systems interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "09-monitoring.md",
+  "labIds": [],
+  "series": "AI Evaluation & Observability"
+ },
+ {
+  "id": "rg-22-golden-datasets-the-foundation-of-trustworthy-ai-335d18",
+  "trackId": "veerarag",
+  "title": "22. Interview: Golden Datasets: The Foundation of Trustworthy AI Evaluation",
+  "summary": "Interview Q&A for Golden Datasets: The Foundation of Trustworthy AI Evaluation — 10 questions with model answers.",
+  "order": 219,
+  "objectives": [
+   "Answer 10 Golden Datasets: The Foundation of Trustworthy AI Evaluation interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "10-golden-datasets.md",
+  "labIds": [],
+  "series": "AI Evaluation & Observability"
+ },
+ {
+  "id": "rg-22-bm25-sparse-retrieval-2480ae",
+  "trackId": "veerarag",
+  "title": "22. Interview: BM25 & Sparse Retrieval",
+  "summary": "Interview Q&A for BM25 & Sparse Retrieval — 57 questions with model answers.",
+  "order": 220,
+  "objectives": [
+   "Answer 57 BM25 & Sparse Retrieval interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "01_ir_foundations.md",
+  "labIds": [],
+  "series": "BM25 & Sparse Retrieval"
+ },
+ {
+  "id": "rg-22-graph-rag-foundations-e7e57b",
+  "trackId": "veerarag",
+  "title": "22. Interview: Graph RAG Foundations",
+  "summary": "Interview Q&A for Graph RAG Foundations — 10 questions with model answers.",
+  "order": 221,
+  "objectives": [
+   "Answer 10 Graph RAG Foundations interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "01_graph_rag_foundations.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-22-knowledge-graph-construction-1af63c",
+  "trackId": "veerarag",
+  "title": "22. Interview: Knowledge Graph Construction",
+  "summary": "Interview Q&A for Knowledge Graph Construction — 10 questions with model answers.",
+  "order": 222,
+  "objectives": [
+   "Answer 10 Knowledge Graph Construction interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "02_knowledge_graph_construction.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-22-graph-data-structures-for-rag-9552bf",
+  "trackId": "veerarag",
+  "title": "22. Interview: Graph Data Structures for RAG",
+  "summary": "Interview Q&A for Graph Data Structures for RAG — 9 questions with model answers.",
+  "order": 223,
+  "objectives": [
+   "Answer 9 Graph Data Structures for RAG interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "03_graph_data_structures.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-22-graph-databases-for-graph-rag-9de6a4",
+  "trackId": "veerarag",
+  "title": "22. Interview: Graph Databases for Graph RAG",
+  "summary": "Interview Q&A for Graph Databases for Graph RAG — 6 questions with model answers.",
+  "order": 224,
+  "objectives": [
+   "Answer 6 Graph Databases for Graph RAG interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "04_graph_databases.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-22-community-detection-algorithms-7feb25",
+  "trackId": "veerarag",
+  "title": "22. Interview: Community Detection Algorithms",
+  "summary": "Interview Q&A for Community Detection Algorithms — 8 questions with model answers.",
+  "order": 225,
+  "objectives": [
+   "Answer 8 Community Detection Algorithms interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "05_community_detection.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-22-graph-traversal-retrieval-aaeb1e",
+  "trackId": "veerarag",
+  "title": "22. Interview: Graph Traversal & Retrieval",
+  "summary": "Interview Q&A for Graph Traversal & Retrieval — 6 questions with model answers.",
+  "order": 226,
+  "objectives": [
+   "Answer 6 Graph Traversal & Retrieval interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "06_graph_traversal_retrieval.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-22-hybrid-graph-vector-retrieval-119b79",
+  "trackId": "veerarag",
+  "title": "22. Interview: Hybrid Graph-Vector Retrieval",
+  "summary": "Interview Q&A for Hybrid Graph-Vector Retrieval — 6 questions with model answers.",
+  "order": 227,
+  "objectives": [
+   "Answer 6 Hybrid Graph-Vector Retrieval interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "07_hybrid_graph_vector_retrieval.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-22-entity-linking-disambiguation-f09489",
+  "trackId": "veerarag",
+  "title": "22. Interview: Entity Linking & Disambiguation",
+  "summary": "Interview Q&A for Entity Linking & Disambiguation — 5 questions with model answers.",
+  "order": 228,
+  "objectives": [
+   "Answer 5 Entity Linking & Disambiguation interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "08_entity_linking_disambiguation.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-22-graph-query-languages-a46909",
+  "trackId": "veerarag",
+  "title": "22. Interview: Graph Query Languages",
+  "summary": "Interview Q&A for Graph Query Languages — 2 questions with model answers.",
+  "order": 229,
+  "objectives": [
+   "Answer 2 Graph Query Languages interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "09_graph_query_languages.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-22-microsoft-graphrag-deep-dive-d9c53c",
+  "trackId": "veerarag",
+  "title": "22. Interview: Microsoft GraphRAG Deep Dive",
+  "summary": "Interview Q&A for Microsoft GraphRAG Deep Dive — 1 questions with model answers.",
+  "order": 230,
+  "objectives": [
+   "Answer 1 Microsoft GraphRAG Deep Dive interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "10_microsoft_graphrag_deep_dive.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-22-graph-rag-evaluation-f6aadf",
+  "trackId": "veerarag",
+  "title": "22. Interview: Graph RAG Evaluation",
+  "summary": "Interview Q&A for Graph RAG Evaluation — 1 questions with model answers.",
+  "order": 231,
+  "objectives": [
+   "Answer 1 Graph RAG Evaluation interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "12_graph_rag_evaluation.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-22-failure-modes-debugging-6a16c4",
+  "trackId": "veerarag",
+  "title": "22. Interview: Failure Modes & Debugging",
+  "summary": "Interview Q&A for Failure Modes & Debugging — 1 questions with model answers.",
+  "order": 232,
+  "objectives": [
+   "Answer 1 Failure Modes & Debugging interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "13_failure_modes_debugging.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-22-scalability-performance-8f55e9",
+  "trackId": "veerarag",
+  "title": "22. Interview: Scalability & Performance",
+  "summary": "Interview Q&A for Scalability & Performance — 1 questions with model answers.",
+  "order": 233,
+  "objectives": [
+   "Answer 1 Scalability & Performance interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "14_scalability_performance.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-22-infrastructure-tools-0c505b",
+  "trackId": "veerarag",
+  "title": "22. Interview: Infrastructure & Tools",
+  "summary": "Interview Q&A for Infrastructure & Tools — 1 questions with model answers.",
+  "order": 234,
+  "objectives": [
+   "Answer 1 Infrastructure & Tools interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "15_infrastructure_tools.md",
+  "labIds": [],
+  "series": "GraphRAG Course"
+ },
+ {
+  "id": "rg-22-bm25-fundamentals-edc55a",
+  "trackId": "veerarag",
+  "title": "22. Interview: BM25 Fundamentals",
+  "summary": "Interview Q&A for BM25 Fundamentals — 6 questions with model answers.",
+  "order": 235,
+  "objectives": [
+   "Answer 6 BM25 Fundamentals interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "section1_bm25_fundamentals.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Interview Guide"
+ },
+ {
+  "id": "rg-22-hybrid-search-ee5426",
+  "trackId": "veerarag",
+  "title": "22. Interview: Hybrid Search",
+  "summary": "Interview Q&A for Hybrid Search — 7 questions with model answers.",
+  "order": 236,
+  "objectives": [
+   "Answer 7 Hybrid Search interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "section2_hybrid_search.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Interview Guide"
+ },
+ {
+  "id": "rg-22-graphrag-fundamentals-40af6a",
+  "trackId": "veerarag",
+  "title": "22. Interview: GraphRAG Fundamentals",
+  "summary": "Interview Q&A for GraphRAG Fundamentals — 5 questions with model answers.",
+  "order": 237,
+  "objectives": [
+   "Answer 5 GraphRAG Fundamentals interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "section3_graphrag_fundamentals.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Interview Guide"
+ },
+ {
+  "id": "rg-22-knowledge-graphs-bc54a5",
+  "trackId": "veerarag",
+  "title": "22. Interview: Knowledge Graphs",
+  "summary": "Interview Q&A for Knowledge Graphs — 5 questions with model answers.",
+  "order": 238,
+  "objectives": [
+   "Answer 5 Knowledge Graphs interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "section4_knowledge_graphs.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Interview Guide"
+ },
+ {
+  "id": "rg-22-graphrag-pipeline-b93214",
+  "trackId": "veerarag",
+  "title": "22. Interview: GraphRAG Pipeline",
+  "summary": "Interview Q&A for GraphRAG Pipeline — 5 questions with model answers.",
+  "order": 239,
+  "objectives": [
+   "Answer 5 GraphRAG Pipeline interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "section5_graphrag_pipeline.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Interview Guide"
+ },
+ {
+  "id": "rg-22-graphrag-vs-normal-rag-555980",
+  "trackId": "veerarag",
+  "title": "22. Interview: GraphRAG vs Normal RAG",
+  "summary": "Interview Q&A for GraphRAG vs Normal RAG — 5 questions with model answers.",
+  "order": 240,
+  "objectives": [
+   "Answer 5 GraphRAG vs Normal RAG interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "section6_graphrag_vs_normal_rag.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Interview Guide"
+ },
+ {
+  "id": "rg-22-graphrag-evaluation-26d6f8",
+  "trackId": "veerarag",
+  "title": "22. Interview: GraphRAG Evaluation",
+  "summary": "Interview Q&A for GraphRAG Evaluation — 5 questions with model answers.",
+  "order": 241,
+  "objectives": [
+   "Answer 5 GraphRAG Evaluation interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "section7_graphrag_evaluation.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Interview Guide"
+ },
+ {
+  "id": "rg-22-production-graphrag-systems-8b9637",
+  "trackId": "veerarag",
+  "title": "22. Interview: Production GraphRAG Systems",
+  "summary": "Interview Q&A for Production GraphRAG Systems — 5 questions with model answers.",
+  "order": 242,
+  "objectives": [
+   "Answer 5 Production GraphRAG Systems interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "section8_production_graphrag.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Interview Guide"
+ },
+ {
+  "id": "rg-22-security-in-graphrag-systems-a1953d",
+  "trackId": "veerarag",
+  "title": "22. Interview: Security in GraphRAG Systems",
+  "summary": "Interview Q&A for Security in GraphRAG Systems — 5 questions with model answers.",
+  "order": 243,
+  "objectives": [
+   "Answer 5 Security in GraphRAG Systems interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "section9_security.md",
+  "labIds": [],
+  "series": "GraphRAG + BM25 Interview Guide"
+ },
+ {
+  "id": "rg-22-complete-mcp-model-context-protocol-masterclass--a05a46",
+  "trackId": "veerarag",
+  "title": "22. Interview: Complete MCP (Model Context Protocol) Masterclass 2026",
+  "summary": "Interview Q&A for Complete MCP (Model Context Protocol) Masterclass 2026 — 11 questions with model answers.",
+  "order": 244,
+  "objectives": [
+   "Answer 11 Complete MCP (Model Context Protocol) Masterclass 2026 interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "fri_may_29_2026_agentic_rag_techniques_overview.md",
+  "labIds": [],
+  "series": "Complete MCP (Model Context Protocol) Masterclass 2026"
+ },
+ {
+  "id": "rg-22-rag-evaluation-techniques-5a0649",
+  "trackId": "veerarag",
+  "title": "22. Interview: RAG Evaluation Techniques",
+  "summary": "Interview Q&A for RAG Evaluation Techniques.",
+  "order": 245,
+  "objectives": [
+   "Answer the RAG Evaluation Techniques interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "fri_may_29_2026_rag_evaluation_techniques_overview_with_examples.md",
+  "labIds": [],
+  "series": "RAG Evaluation Techniques"
+ },
+ {
+  "id": "rg-22-complete-rag-indexing-techniques-master-guide-20-17ced8",
+  "trackId": "veerarag",
+  "title": "22. Interview: Complete RAG Indexing Techniques — Master Guide 2026",
+  "summary": "Interview Q&A for Complete RAG Indexing Techniques — Master Guide 2026 — 1 questions with model answers.",
+  "order": 246,
+  "objectives": [
+   "Answer 1 Complete RAG Indexing Techniques — Master Guide 2026 interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "fri_may_29_2026_rag_indexing_techniques_explained_with_examples.md",
+  "labIds": [],
+  "series": "RAG Indexing Techniques"
+ },
+ {
+  "id": "rg-22-rag-search-filtering-techniques-7889e4",
+  "trackId": "veerarag",
+  "title": "22. Interview: RAG Search & Filtering Techniques",
+  "summary": "Interview Q&A for RAG Search & Filtering Techniques — 28 questions with model answers.",
+  "order": 247,
+  "objectives": [
+   "Answer 28 RAG Search & Filtering Techniques interview questions out loud",
+   "Lead with the concept, then a small example, then a tradeoff"
+  ],
+  "sourceFile": "fri_may_29_2026_rag_search_and_filtering_techniques_overview.md",
+  "labIds": [],
+  "series": "RAG Search & Filtering Techniques"
+ }
+]

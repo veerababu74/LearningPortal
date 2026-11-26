@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom'
 import { getCurriculumIndex } from '@/content/loadCurriculum'
 import { DOCKER_LABS, DOCKER_MODULES } from '@/content/docker/modules'
 import { PYTHON_LABS } from '@/content/python/modules'
-import { AGENT_GALLERY as AGENT_SIMS, PYTHON_GALLERY } from '@/content/sims/registry'
+import { AGENT_GALLERY as AGENT_SIMS, PYTHON_GALLERY, RAG_GALLERY } from '@/content/sims/registry'
+import { RAG_LABS } from '@/content/rag/course'
 import { useProgress } from '@/store/progress'
 import { useDockerProgress } from '@/store/dockerProgress'
 import './Topics.css'
@@ -18,7 +19,7 @@ type TopicCard = {
   pct: number
 }
 
-const COURSE_TRACKS = new Set(['python', 'asyncconcur', 'agents'])
+const COURSE_TRACKS = new Set(['python', 'asyncconcur', 'agents', 'veerarag'])
 
 function pctOf(ids: string[], done: string[]) {
   if (!ids.length) return 0
@@ -73,6 +74,17 @@ export function Topics() {
       accent: track('agents')?.accent || '#7c3aed',
       stats: [`${track('agents')?.lessonCount ?? 0} lessons`, `${AGENT_SIMS.length} simulations`, `${seriesCount('agents')} courses`],
       pct: pctOf(lessonIds('agents'), completed),
+    },
+    {
+      key: 'rag',
+      title: 'VeeraRAG',
+      kicker: 'RAG · BM25 · GraphRAG · evaluation',
+      blurb:
+        'Retrieval-Augmented Generation end to end: chunking, embeddings, BM25 and hybrid search, reranking, GraphRAG, evaluation, observability and production — with simulations, hands-on labs and interview banks.',
+      to: '/rag',
+      accent: track('veerarag')?.accent || '#0d9488',
+      stats: [`${track('veerarag')?.lessonCount ?? 0} lessons`, `${RAG_GALLERY.length} simulations`, `${RAG_LABS.length} labs`],
+      pct: pctOf(lessonIds('veerarag'), completed),
     },
     {
       key: 'docker',

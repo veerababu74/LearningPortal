@@ -2,6 +2,7 @@ export type TrackId =
   | 'python'
   | 'asyncconcur'
   | 'agents'
+  | 'veerarag'
   | 'llm-concepts'
   | 'rag'
   | 'agentic-ai'

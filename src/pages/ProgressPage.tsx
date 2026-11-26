@@ -37,7 +37,9 @@ export function ProgressPage() {
                 to={
                   track.id === 'python'
                     ? '/python'
-                    : track.id === 'agents'
+                    : track.id === 'veerarag'
+                      ? '/rag'
+                      : track.id === 'agents'
                       ? '/agents'
                       : track.id === 'asyncconcur'
                       ? '/async'

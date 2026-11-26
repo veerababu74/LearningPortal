@@ -47,6 +47,11 @@ const AgentVisualizerIndex = page(() => import('@/pages/agents/AgentVisualizer')
 const AgentVisualizerPage = page(() => import('@/pages/agents/AgentVisualizer'), 'AgentVisualizerPage')
 const PythonVisualizerIndex = page(() => import('@/pages/agents/AgentVisualizer'), 'PythonVisualizerIndex')
 const PythonVisualizerPage = page(() => import('@/pages/agents/AgentVisualizer'), 'PythonVisualizerPage')
+const RagVisualizerIndex = page(() => import('@/pages/agents/AgentVisualizer'), 'RagVisualizerIndex')
+const RagVisualizerPage = page(() => import('@/pages/agents/AgentVisualizer'), 'RagVisualizerPage')
+const RagHome = page(() => import('@/pages/rag/RagPages'), 'RagHome')
+const RagPhasePage = page(() => import('@/pages/rag/RagPages'), 'RagPhasePage')
+const RagModulePage = page(() => import('@/pages/rag/RagPages'), 'RagModulePage')
 
 function NotFound() {
   return (
@@ -93,6 +98,12 @@ export default function App() {
           <Route path="agents/learn/:moduleId" element={<AgentsModuleBrowsePage />} />
           <Route path="agents/:phaseId" element={<AgentsPhasePage />} />
 
+          <Route path="rag" element={<RagHome />} />
+          <Route path="rag/visualizer" element={<RagVisualizerIndex />} />
+          <Route path="rag/visualizer/:simId" element={<RagVisualizerPage />} />
+          <Route path="rag/learn/:moduleId" element={<RagModulePage />} />
+          <Route path="rag/:phaseId" element={<RagPhasePage />} />
+
           <Route path="docker" element={<DockerHome />} />
           <Route path="docker/labs" element={<DockerLabsIndex />} />
           <Route path="docker/labs/:labId" element={<DockerLabRouter />} />
@@ -104,6 +115,7 @@ export default function App() {
           <Route path="tracks/python" element={<Navigate to="/python" replace />} />
           <Route path="tracks/asyncconcur" element={<Navigate to="/async" replace />} />
           <Route path="tracks/agents" element={<Navigate to="/agents" replace />} />
+          <Route path="tracks/veerarag" element={<Navigate to="/rag" replace />} />
           <Route path="tracks/:trackId" element={<TrackOverview />} />
           <Route path="learn/:trackId/:lessonId" element={<LessonPage />} />
           <Route path="labs" element={<LabsIndex />} />

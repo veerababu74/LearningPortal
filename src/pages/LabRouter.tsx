@@ -14,6 +14,11 @@ import { GuardrailLab } from './labs/playground/GuardrailLab'
 import { MultiAgentPlannerLab } from './labs/playground/MultiAgentPlannerLab'
 import { ConcurrencyPlaygroundLab } from './labs/playground/ConcurrencyPlaygroundLab'
 import { HashTableLab } from './labs/playground/HashTableLab'
+import { BM25Lab } from './labs/playground/rag/BM25Lab'
+import { ChunkingStrategyLab } from './labs/playground/rag/ChunkingStrategyLab'
+import { HybridRetrievalLab } from './labs/playground/rag/HybridRetrievalLab'
+import { RagEvalLab } from './labs/playground/rag/RagEvalLab'
+import { RagObservabilityLab } from './labs/playground/rag/RagObservabilityLab'
 
 const MAP = {
   chunking: ChunkingLab,
@@ -31,6 +36,11 @@ const MAP = {
   'multiagent-planner': MultiAgentPlannerLab,
   'concurrency-playground': ConcurrencyPlaygroundLab,
   'hash-table': HashTableLab,
+  bm25: BM25Lab,
+  'chunking-strategy': ChunkingStrategyLab,
+  'hybrid-retrieval': HybridRetrievalLab,
+  'rag-eval': RagEvalLab,
+  'rag-observability': RagObservabilityLab,
 } as const
 
 export function LabRouter() {

@@ -251,7 +251,7 @@
 
 @media (max-width: 800px) {
   .track-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .page-head h1 {

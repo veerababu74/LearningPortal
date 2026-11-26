@@ -14,6 +14,7 @@ import mermaid from 'mermaid'
 import { ASYNC_DIAGRAMS } from './diagrams-async.mjs'
 import { PYTHON_DIAGRAMS } from './diagrams-python.mjs'
 import { AGENT_DIAGRAMS } from './diagrams-agents.mjs'
+import { RAG_DIAGRAMS } from './diagrams-rag.mjs'
 
 // mermaid's parser touches DOMPurify hooks; outside a browser they are missing.
 for (const fn of ['addHook', 'removeHook', 'removeHooks', 'removeAllHooks', 'setConfig']) {
@@ -39,6 +40,7 @@ async function main() {
     ['async', ASYNC_DIAGRAMS],
     ['python', PYTHON_DIAGRAMS],
     ['agents', AGENT_DIAGRAMS],
+    ['veerarag', RAG_DIAGRAMS],
   ]) {
     const ids = new Set()
     for (const d of list) {
@@ -57,7 +59,7 @@ async function main() {
   }
 
   if (!curatedOnly) {
-    for (const track of ['python', 'asyncconcur', 'agents']) {
+    for (const track of ['python', 'asyncconcur', 'agents', 'veerarag']) {
       const dir = path.join(root, 'src', 'content', 'generated', track, 'lessons')
       if (!fs.existsSync(dir)) continue
       let total = 0

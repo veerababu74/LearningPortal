@@ -623,3 +623,49 @@
 .pg-table-wrap {
   overflow-x: auto;
 }
+
+.pg-axis div {
+  padding-right: 0.6rem;
+}
+
+@media (max-width: 560px) {
+  .pg {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  .pg-card {
+    padding: 0.8rem 0.8rem;
+  }
+  .pg-gantt-row,
+  .pg-axis {
+    grid-template-columns: 5.2rem minmax(0, 1fr);
+    gap: 0.35rem;
+  }
+  .pg-gantt-row > span {
+    font-size: 0.75rem;
+  }
+  .pg-bar {
+    grid-template-columns: minmax(72px, 110px) minmax(0, 1fr) 3rem;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+  }
+  .pg-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .pg-stat strong {
+    font-size: 1.05rem;
+  }
+  .pg-layer {
+    grid-template-columns: 1.6rem minmax(0, 1fr);
+  }
+  .pg-layer .pg-badge {
+    grid-column: 2;
+    justify-self: start;
+  }
+  .pg-slots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .pg-btn {
+    flex: 1 1 auto;
+  }
+}

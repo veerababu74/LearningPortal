@@ -1,13 +1,14 @@
 import { Link, useSearchParams } from 'react-router-dom'
 import { PYTHON_LABS } from '@/content/python/modules'
 import { DOCKER_LABS } from '@/content/docker/modules'
-import { AGENT_GALLERY, PYTHON_GALLERY, simGroup, simHref } from '@/content/sims/registry'
+import { AGENT_GALLERY, PYTHON_GALLERY, RAG_GALLERY, simGroup, simHref } from '@/content/sims/registry'
+import { RAG_LABS } from '@/content/rag/course'
 import type { AgentSim } from '@/content/agents/visualizer'
 import './LabsIndex.css'
 
 type LabKind = 'playground' | 'simulator' | 'lab'
 type Lab = { id: string; title: string; blurb: string; to: string; kind: LabKind; tags?: string[]; sub?: string }
-type GroupId = 'agent-labs' | 'agent-sims' | 'python-sims' | 'python' | 'async' | 'docker' | 'genai'
+type GroupId = 'agent-labs' | 'agent-sims' | 'rag-labs' | 'rag-sims' | 'python-sims' | 'python' | 'async' | 'docker' | 'genai'
 type Group = {
   id: GroupId
   title: string
@@ -85,9 +86,6 @@ const AGENT_PLAYGROUNDS: Lab[] = [
 ]
 
 const GENAI_LABS: Lab[] = [
-  { id: 'chunking', title: 'Chunking simulator', blurb: 'Tune chunk size and overlap and watch how text splits.', to: '/labs/chunking', kind: 'lab' },
-  { id: 'cosine', title: 'Cosine similarity', blurb: 'See how vector angle becomes a relevance score.', to: '/labs/cosine', kind: 'lab' },
-  { id: 'retrieval', title: 'Hybrid retrieval / RRF', blurb: 'Fuse dense and sparse rankings step by step.', to: '/labs/retrieval', kind: 'lab' },
   { id: 'injection', title: 'Prompt injection path', blurb: 'Animate how untrusted text hijacks a prompt.', to: '/labs/injection', kind: 'lab' },
   { id: 'rate-limit', title: 'Token bucket rate limit', blurb: 'Watch tokens refill and requests get admitted or rejected.', to: '/labs/rate-limit', kind: 'lab' },
 ]
@@ -105,10 +103,33 @@ const GROUPS: Group[] = [
   {
     id: 'agent-sims',
     title: 'AI Agent simulators',
-    blurb: 'Animated step-by-step runs of agents, multi-agent systems and RAG: moving packets, live state, highlighted code and predict-the-next-step questions.',
+    blurb: 'Animated step-by-step runs of agents and multi-agent systems: moving packets, live state, highlighted code and predict-the-next-step questions.',
     accent: '#9333ea',
     course: { to: '/agents/visualizer', label: 'Agent Visualizer gallery' },
     labs: AGENT_GALLERY.map(fromSim),
+    isNew: true,
+  },
+  {
+    id: 'rag-labs',
+    title: 'RAG labs',
+    blurb: 'Real calculations you can change: BM25 scoring, chunking strategies, hybrid fusion and reranking, evaluation metrics and production observability.',
+    accent: '#0d9488',
+    course: { to: '/rag', label: 'VeeraRAG course' },
+    labs: [
+      ...RAG_LABS.map((l) => ({ id: l.to.split('/').pop() as string, title: l.title, blurb: l.text, to: l.to, kind: 'playground' as const, tags: ['RAG'] })),
+      { id: 'chunking', title: 'Chunk size & overlap', blurb: 'Tune chunk size and overlap and watch how text splits.', to: '/labs/chunking', kind: 'lab' as const },
+      { id: 'cosine', title: 'Cosine similarity', blurb: 'See how vector angle becomes a relevance score.', to: '/labs/cosine', kind: 'lab' as const },
+      { id: 'retrieval', title: 'Hybrid retrieval / RRF', blurb: 'Fuse dense and sparse rankings step by step.', to: '/labs/retrieval', kind: 'lab' as const },
+    ],
+    isNew: true,
+  },
+  {
+    id: 'rag-sims',
+    title: 'RAG simulators',
+    blurb: 'Ingestion, BM25 scoring, hybrid search, multi-query, corrective RAG, GraphRAG, evaluation gates and a production incident — animated step by step.',
+    accent: '#0f766e',
+    course: { to: '/rag/visualizer', label: 'RAG Visualizer gallery' },
+    labs: RAG_GALLERY.map(fromSim),
     isNew: true,
   },
   {
@@ -167,7 +188,7 @@ const GROUPS: Group[] = [
   {
     id: 'genai',
     title: 'Generative AI',
-    blurb: 'Chunking, embeddings, retrieval fusion, prompt injection and rate limits.',
+    blurb: 'Prompt injection and rate limiting (RAG labs have their own group above).',
     accent: '#c026d3',
     course: { to: '/tracks', label: 'Generative AI tracks' },
     labs: GENAI_LABS,

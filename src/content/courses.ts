@@ -1,7 +1,7 @@
 import { getCurriculumIndex } from '@/content/loadCurriculum'
 
 export type Course = {
-  id: 'python' | 'async' | 'agents' | 'docker' | 'genai'
+  id: 'python' | 'async' | 'agents' | 'rag' | 'docker' | 'genai'
   title: string
   kicker: string
   blurb: string
@@ -13,7 +13,7 @@ export type Course = {
 }
 
 /** Tracks that have their own course home (everything else is a GenAI track). */
-export const COURSE_TRACKS = new Set(['python', 'asyncconcur', 'agents'])
+export const COURSE_TRACKS = new Set(['python', 'asyncconcur', 'agents', 'veerarag'])
 
 export function genaiTrackIds() {
   return getCurriculumIndex()
@@ -53,6 +53,16 @@ export const COURSES: Course[] = [
     trackIds: ['agents'],
   },
   {
+    id: 'rag',
+    title: 'VeeraRAG',
+    kicker: 'RAG · BM25 · GraphRAG · evaluation',
+    blurb: 'Retrieval-Augmented Generation end to end: chunking, embeddings, BM25 and hybrid search, reranking, GraphRAG, evaluation, observability and production — with labs and interview banks.',
+    to: '/rag',
+    accent: '#0d9488',
+    icon: '🔎',
+    trackIds: ['veerarag'],
+  },
+  {
     id: 'genai',
     title: 'Generative AI',
     kicker: 'LLMs · RAG · security · production',
@@ -83,6 +93,7 @@ export function courseHomeFor(trackId: string): { to: string; label: string } {
   if (trackId === 'python') return { to: '/python', label: 'Python Mastery' }
   if (trackId === 'asyncconcur') return { to: '/async', label: 'Async & Concurrency' }
   if (trackId === 'agents') return { to: '/agents', label: 'VeeraAgents' }
+  if (trackId === 'veerarag') return { to: '/rag', label: 'VeeraRAG' }
   const t = getCurriculumIndex().tracks.find((x) => x.id === trackId)
   return t ? { to: `/tracks/${trackId}`, label: t.title } : { to: '/tracks', label: 'Generative AI tracks' }
 }

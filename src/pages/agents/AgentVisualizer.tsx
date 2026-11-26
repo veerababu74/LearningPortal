@@ -2,12 +2,12 @@ import { useMemo, useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { AGENT_MODULE_INFO } from '@/content/agents/catalog'
 import type { AgentSim } from '@/content/agents/visualizer'
-import { AGENT_GALLERY, PYTHON_GALLERY, simGroup, simLessonsHref } from '@/content/sims/registry'
+import { AGENT_GALLERY, PYTHON_GALLERY, RAG_GALLERY, simGroup, simLessonsHref } from '@/content/sims/registry'
 import { AgentSimPlayer } from '@/components/agents/AgentSimPlayer'
 import '@/components/python/python.css'
 import '@/components/agents/agents.css'
 
-type Kind = 'agents' | 'python'
+type Kind = 'agents' | 'python' | 'rag'
 
 const GALLERIES: Record<
   Kind,
@@ -19,9 +19,19 @@ const GALLERIES: Record<
     home: '/agents',
     homeLabel: 'VeeraAgents',
     kicker: 'Agent Visualizer',
-    title: 'Watch agents, multi-agent systems and RAG run, one step at a time',
+    title: 'Watch agents and multi-agent systems run, one step at a time',
     intro:
       'Each simulation animates a real scenario: a packet travels between components, the active part glows, the live state and event log update, and the matching line of code is highlighted. Predict mode pauses at key moments and asks what happens next.',
+  },
+  rag: {
+    sims: RAG_GALLERY,
+    base: '/rag/visualizer',
+    home: '/rag',
+    homeLabel: 'VeeraRAG',
+    kicker: 'RAG Visualizer',
+    title: 'Watch RAG pipelines run, one step at a time',
+    intro:
+      'Ingestion, BM25 scoring, hybrid search, multi-query, corrective RAG, GraphRAG, evaluation gates and a production incident — each animated step by step with live state, highlighted code and predict-the-next-step questions.',
   },
   python: {
     sims: PYTHON_GALLERY,
@@ -37,6 +47,7 @@ const GALLERIES: Record<
 
 function moduleLabel(sim: AgentSim, kind: Kind) {
   if (kind === 'python') return `Module ${sim.module}`
+  if (kind === 'rag') return `Module ${sim.ragModule || '—'}`
   const info = AGENT_MODULE_INFO[sim.module]
   return `${info?.icon || ''} Module ${sim.module}`
 }
@@ -171,4 +182,12 @@ export function PythonVisualizerIndex() {
 
 export function PythonVisualizerPage() {
   return <SimPage kind="python" />
+}
+
+export function RagVisualizerIndex() {
+  return <SimGallery kind="rag" />
+}
+
+export function RagVisualizerPage() {
+  return <SimPage kind="rag" />
 }

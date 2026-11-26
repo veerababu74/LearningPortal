@@ -179,7 +179,7 @@
 }
 
 .ld-node rect {
-  fill: rgba(255, 255, 255, 0.1);
+  fill: #1e3a8a;
   stroke: rgba(255, 255, 255, 0.35);
   stroke-width: 1.5;
 }
@@ -517,4 +517,13 @@
   background: var(--reward);
   border-color: var(--reward);
   color: #1c1917;
+}
+
+@media (max-width: 560px) {
+  .landing-cta .lbtn {
+    flex: 1 1 100%;
+  }
+  .landing-hero h1 {
+    font-size: clamp(1.9rem, 9vw, 2.4rem);
+  }
 }

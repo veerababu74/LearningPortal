@@ -488,11 +488,11 @@
 
 @media (max-width: 860px) {
   .py-term {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .py-phase-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 

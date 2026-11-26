@@ -4,8 +4,6 @@
  */
 import type { AgentSim } from '@/content/agents/visualizer'
 
-const RAG_HOME = '/tracks/rag'
-
 /* ================================================================ ingestion */
 
 const INGEST: AgentSim = {
@@ -14,7 +12,8 @@ const INGEST: AgentSim = {
   framework: 'RAG',
   group: 'RAG',
   module: '08',
-  home: RAG_HOME,
+  home: '/rag/learn/02',
+  ragModule: '02',
   level: 'Beginner',
   summary: 'Follow one PDF from upload to searchable vectors, including deduplication by content hash so unchanged files are not re-embedded.',
   scenario: 'HR uploads “leave-policy-2026.pdf” (12 pages). Last week\'s version is already indexed.',
@@ -117,7 +116,8 @@ const QUERY: AgentSim = {
   framework: 'RAG',
   group: 'RAG',
   module: '08',
-  home: RAG_HOME,
+  home: '/rag/learn/05',
+  ragModule: '05',
   level: 'Beginner',
   summary: 'A question becomes a vector, pulls 20 candidates, a cross-encoder reranks them to 4, and the model answers only from those, with citations.',
   scenario: 'Employee asks: “How many sick days do I get per year?”',
@@ -227,7 +227,8 @@ const HYBRID: AgentSim = {
   framework: 'RAG',
   group: 'RAG',
   module: '08',
-  home: RAG_HOME,
+  home: '/rag/learn/05',
+  ragModule: '05',
   level: 'Intermediate',
   summary: 'Keyword search finds exact codes and names; vector search finds paraphrases. Reciprocal Rank Fusion combines both rankings.',
   scenario: 'Query: “error E-4012 when exporting payroll”. The fix is in a doc that never says “exporting”.',
@@ -320,7 +321,8 @@ const CRAG: AgentSim = {
   framework: 'LangGraph',
   group: 'RAG',
   module: '08',
-  home: RAG_HOME,
+  home: '/rag/learn/07',
+  ragModule: '07',
   level: 'Intermediate',
   summary: 'When the internal knowledge base has nothing relevant, CRAG strips the bad chunks and searches the web instead of hallucinating.',
   scenario: 'Question: “What did the EU AI Act require from August 2026?” The internal KB only has 2024 drafts.',
@@ -416,7 +418,8 @@ const CONVO: AgentSim = {
   framework: 'RAG',
   group: 'RAG',
   module: '08',
-  home: RAG_HOME,
+  home: '/rag/learn/06',
+  ragModule: '06',
   level: 'Beginner',
   summary: 'Follow-up questions like “and for contractors?” are useless as search queries. A condense step turns them into stand-alone questions.',
   scenario: 'Turn 1: “What is the parental leave policy?” Turn 2: “And for contractors?”',
@@ -504,7 +507,8 @@ const ACL: AgentSim = {
   framework: 'RAG',
   group: 'RAG',
   module: '09',
-  home: RAG_HOME,
+  home: '/rag/learn/11',
+  ragModule: '11',
   level: 'Advanced',
   summary: 'Filtering after retrieval leaks data and wastes recall. The permission filter must be part of the vector query itself.',
   scenario: 'An employee in Sales asks “What are the salary bands for engineers?” Salary docs are HR-only.',
@@ -600,7 +604,8 @@ const CACHE: AgentSim = {
   framework: 'RAG',
   group: 'RAG',
   module: '09',
-  home: RAG_HOME,
+  home: '/rag/learn/11',
+  ragModule: '11',
   level: 'Intermediate',
   summary: 'Similar questions hit a cache of previous answers keyed by embedding. A strict threshold and an index version prevent wrong or stale hits.',
   scenario: '“How do I reset my VPN password?” was answered an hour ago. Now someone asks “VPN password reset steps?”',

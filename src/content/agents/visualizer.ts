@@ -44,6 +44,8 @@ export type AgentSim = {
   module: string
   /** Where "Read the lessons for this topic" points (defaults to the VeeraAgents module). */
   home?: string
+  /** Module id inside the VeeraRAG course, for RAG simulations. */
+  ragModule?: string
   level: 'Beginner' | 'Intermediate' | 'Advanced'
   summary: string
   scenario: string
@@ -1374,6 +1376,7 @@ const RAG: AgentSim = {
   title: 'Agentic RAG: retrieve, grade, rewrite, answer',
   framework: 'Pattern',
   module: '08',
+  ragModule: '07',
   level: 'Intermediate',
   summary: 'Plain RAG retrieves once and hopes. Agentic RAG grades what it retrieved and rewrites the query when the documents are irrelevant.',
   scenario: 'An HR bot is asked “Can I carry over unused PTO?” The first search returns the wrong documents.',

@@ -12,6 +12,8 @@ import { useProgress } from '@/store/progress'
 import { phaseForModule as pyPhaseForModule } from '@/content/python/catalog'
 import { phaseForModule as asyncPhaseForModule } from '@/content/asyncconcur/catalog'
 import { phaseForModule as agentsPhaseForModule } from '@/content/agents/catalog'
+import { phaseForModule as coursePhaseForModule } from '@/content/courseKit'
+import { RAG_COURSE } from '@/content/rag/course'
 import { simHref, simsForLesson } from '@/content/sims/registry'
 import { AgentSimPlayer } from '@/components/agents/AgentSimPlayer'
 import './LessonShell.css'
@@ -35,6 +37,12 @@ function cardBrowsePath(trackId: string, title: string) {
     const phase = agentsPhaseForModule(m[1])
     if (!phase) return '/agents'
     return phase === 'learn' ? `/agents/learn/${m[1]}` : `/agents/${phase}`
+  }
+  if (trackId === 'veerarag') {
+    if (!m) return '/rag'
+    const phase = coursePhaseForModule(RAG_COURSE, m[1])
+    if (!phase) return '/rag'
+    return phase === 'learn' ? `/rag/learn/${m[1]}` : `/rag/${phase}`
   }
   return `/tracks/${trackId}`
 }
@@ -111,6 +119,7 @@ export function LessonShell({
   nextId?: string
 }) {
   const [activeSection, setActiveSection] = useState(lesson.sections[0]?.id)
+  const [outlineOpen, setOutlineOpen] = useState(false)
   const setLastLesson = useProgress((s) => s.setLastLesson)
   const markComplete = useProgress((s) => s.markComplete)
   const toggleBookmark = useProgress((s) => s.toggleBookmark)
@@ -138,8 +147,8 @@ export function LessonShell({
       ),
     [lesson.sections],
   )
-  const isCourseTrack = lesson.trackId === 'python' || lesson.trackId === 'asyncconcur' || lesson.trackId === 'agents'
-  const COURSE_HOME: Record<string, [string, string]> = { python: ['/python', 'Python'], asyncconcur: ['/async', 'Async'], agents: ['/agents', 'VeeraAgents'] }
+  const isCourseTrack = ['python', 'asyncconcur', 'agents', 'veerarag'].includes(lesson.trackId)
+  const COURSE_HOME: Record<string, [string, string]> = { python: ['/python', 'Python'], asyncconcur: ['/async', 'Async'], agents: ['/agents', 'VeeraAgents'], veerarag: ['/rag', 'VeeraRAG'] }
   const agentVisuals = simsForLesson(lesson.trackId, lesson.title, lesson.sourceFile || '')
   const coverage = [
     `${lesson.sections.length} ${lesson.sections.length === 1 ? 'section' : 'sections'}`,
@@ -152,15 +161,27 @@ export function LessonShell({
 
   return (
     <div className="lesson-shell">
-      <aside className="lesson-aside">
-        <p className="aside-kicker">Lesson outline</p>
+      <aside className={outlineOpen ? 'lesson-aside open' : 'lesson-aside'}>
+        <p className="aside-kicker aside-kicker-desktop">Lesson outline</p>
+        <button
+          type="button"
+          className="outline-toggle"
+          aria-expanded={outlineOpen}
+          onClick={() => setOutlineOpen((o) => !o)}
+        >
+          <span>Lesson outline · {lesson.sections.length} sections</span>
+          <span aria-hidden>{outlineOpen ? '▴' : '▾'}</span>
+        </button>
         <nav className="section-nav">
           {lesson.sections.map((s, i) => (
             <a
               key={s.id}
               href={`#${s.id}`}
               className={s.id === activeSection ? 'sec active' : 'sec'}
-              onClick={() => setActiveSection(s.id)}
+              onClick={() => {
+                setActiveSection(s.id)
+                setOutlineOpen(false)
+              }}
             >
               <span>{i + 1}</span>
               {cleanNavTitle(s.title)}

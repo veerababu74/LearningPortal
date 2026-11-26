@@ -76,6 +76,7 @@ export function AgentSimPlayer({ sim, compact = false }: Props) {
   const [picked, setPicked] = useState<Record<number, number>>({})
   const [score, setScore] = useState({ right: 0, total: 0 })
   const codeRef = useRef<HTMLDivElement>(null)
+  const stageRef = useRef<HTMLDivElement>(null)
   const motionRef = useRef<SVGAnimateMotionElement>(null)
   const reduced = usePrefersReducedMotion()
 
@@ -125,6 +126,19 @@ export function AgentSimPlayer({ sim, compact = false }: Props) {
   useLayoutEffect(() => {
     motionRef.current?.beginElement?.()
   }, [step, sim.id])
+
+  // On narrow screens the diagram keeps a readable size and scrolls sideways:
+  // follow the active part of the diagram like a camera.
+  useEffect(() => {
+    const box = stageRef.current
+    if (!box || box.scrollWidth <= box.clientWidth + 4) return
+    const node = activeNode ? byId.get(activeNode) : undefined
+    const edge = cur?.edge ? sim.edges.find((e) => e.id === cur.edge) : undefined
+    const from = edge ? byId.get(edge.from) : undefined
+    const x = node && from ? (node.x + from.x) / 2 : node ? node.x : VIEW_W / 2
+    const left = (x / VIEW_W) * box.scrollWidth - box.clientWidth / 2
+    box.scrollTo({ left: Math.max(0, left), behavior: reduced ? 'auto' : 'smooth' })
+  }, [activeNode, cur, byId, sim, reduced])
 
   // keep the highlighted code line in view (scroll the code pane only, never the page)
   useEffect(() => {
@@ -242,7 +256,7 @@ export function AgentSimPlayer({ sim, compact = false }: Props) {
           </div>
         </div>
 
-        <div className="agsim-stage">
+        <div className="agsim-stage" ref={stageRef}>
           <svg viewBox={`0 0 ${VIEW_W} ${VIEW_H}`} role="img" aria-label={`${sim.title} — animated diagram`}>
             <defs>
               <marker id={`arr-${sim.id}`} viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
@@ -321,6 +335,7 @@ export function AgentSimPlayer({ sim, compact = false }: Props) {
           </svg>
         </div>
 
+        <p className="agsim-swipe-hint">↔ Swipe the diagram — it follows the active step.</p>
         <div className="agsim-dots" role="tablist" aria-label="Steps">
           {sim.steps.map((s, i) => (
             <button

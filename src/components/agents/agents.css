@@ -859,3 +859,67 @@
 .track-sims h2 {
   margin: 0 0 0.25rem;
 }
+
+/* ---------------------------------------------------------- phones */
+
+.agsim-swipe-hint {
+  display: none;
+  margin: -0.2rem 0 0;
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  /* keep labels readable: the diagram stays ≥ 660px wide and scrolls inside its frame */
+  .agsim-stage {
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+  .agsim-stage svg {
+    min-width: 660px;
+  }
+  .agsim-swipe-hint {
+    display: block;
+  }
+  .agsim-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .agsim-btns {
+    justify-content: space-between;
+  }
+  .agsim-btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  .agsim-btn.primary {
+    flex: 1;
+  }
+  .agsim-opts {
+    justify-content: space-between;
+  }
+  .agsim-narration {
+    min-height: 0;
+  }
+  .agsim-options {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .agsim-code {
+    max-height: 240px;
+  }
+  .agsim-kv {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.15rem;
+  }
+  .ag-sim-head {
+    align-items: stretch;
+  }
+  .ag-sim-nav .ag-cta {
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+  }
+}

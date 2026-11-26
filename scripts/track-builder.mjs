@@ -163,7 +163,14 @@ function summaryFrom(sections, fallback) {
   return fallback
 }
 
-export function createTrack({ trackId, prefix, moduleFor, labIdsFor = () => [], seriesRank = () => 50 }) {
+export function createTrack({
+  trackId,
+  prefix,
+  moduleFor,
+  labIdsFor = () => [],
+  seriesRank = () => 50,
+  companions = { exercise: MOD_EXERCISES, project: MOD_PROJECTS, interview: MOD_INTERVIEW },
+}) {
   const raw = [] // internal lesson records
 
   function push(rec) {
@@ -217,7 +224,7 @@ export function createTrack({ trackId, prefix, moduleFor, labIdsFor = () => [], 
 
   function addCompanion({ kind, rel, series, topic, sections, qa = [] }) {
     if (!sections.length) return
-    const mod = kind === 'interview' ? MOD_INTERVIEW : kind === 'exercise' ? MOD_EXERCISES : MOD_PROJECTS
+    const mod = kind === 'interview' ? companions.interview : kind === 'exercise' ? companions.exercise : companions.project
     const parts = chunkSections(sections, COMPANION_PART_CHARS)
     parts.forEach((secs, i) => {
       const t = parts.length > 1 ? `${topic} (Part ${i + 1})` : topic

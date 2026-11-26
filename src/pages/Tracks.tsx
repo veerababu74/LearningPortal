@@ -38,6 +38,8 @@ export function Tracks() {
                   to={
                     track.id === 'python'
                       ? '/python'
+                      : track.id === 'veerarag'
+                      ? '/rag'
                       : track.id === 'agents'
                       ? '/agents'
                       : track.id === 'asyncconcur'

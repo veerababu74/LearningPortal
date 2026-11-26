@@ -178,7 +178,7 @@
 
 @media (max-width: 1100px) {
   .section-diagram-pair {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .section-diagram {
@@ -354,7 +354,7 @@
 
 @media (max-width: 860px) {
   .lesson-shell {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 1rem;
   }
 
@@ -364,7 +364,7 @@
   }
 
   .section-nav {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .lesson-hero h1 {
@@ -423,4 +423,97 @@
 
 .concept-visual-text .md-body {
   max-width: 100%;
+}
+
+/* Mobile safety: grid tracks must be allowed to shrink below their widest child (long code lines,
+   simulations, tables, diagrams), otherwise the whole lesson column overflows the screen. */
+.lesson-main,
+.lesson-section-block {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.lesson-shell > *,
+.lesson-main > *,
+.lesson-section-block > * {
+  min-width: 0;
+}
+
+.lesson-hero h1 {
+  overflow-wrap: anywhere;
+}
+
+/* track pill: flex drops the spaces around "·", so space the items explicitly */
+.track-pill {
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  line-height: 1.3;
+}
+
+.outline-toggle {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  /* outline becomes a compact sticky bar under the top navigation */
+  .lesson-aside {
+    position: sticky;
+    top: calc(var(--nav-h) + 0.4rem);
+    z-index: 20;
+    padding: 0.35rem;
+    max-height: none;
+    overflow: visible;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  }
+  .lesson-aside.open .section-nav {
+    max-height: 55vh;
+    overflow-y: auto;
+  }
+  .aside-kicker-desktop {
+    display: none;
+  }
+  .outline-toggle {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    padding: 0.5rem 0.75rem;
+    border: 0;
+    border-radius: 10px;
+    background: transparent;
+    font: inherit;
+    font-weight: 750;
+    font-size: 0.92rem;
+    color: var(--focus-deep);
+    cursor: pointer;
+  }
+  .outline-toggle:focus-visible {
+    outline: 3px solid var(--focus-soft);
+  }
+  .lesson-aside .section-nav,
+  .lesson-aside .lab-links {
+    display: none;
+  }
+  .lesson-aside.open .section-nav,
+  .lesson-aside.open .lab-links {
+    display: grid;
+    padding: 0.3rem 0.4rem 0.5rem;
+  }
+  .lesson-shell {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  .lesson-hero h1 {
+    font-size: clamp(1.45rem, 6.4vw, 2rem);
+    line-height: 1.15;
+  }
+}
+
+.text-lead,
+.point-text,
+.section-visual-summary,
+.summary,
+.section-banner h2 {
+  overflow-wrap: anywhere;
 }

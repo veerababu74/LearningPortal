@@ -163,3 +163,42 @@
 .md-body .md-code-block code {
   font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
 }
+
+/* Long URLs, identifiers and inline code must wrap instead of widening the page on phones.
+   (Code blocks keep white-space: pre and scroll inside their own frame.) */
+.md-body,
+.md-body p,
+.md-body li,
+.md-body blockquote,
+.md-body td,
+.md-body th,
+.md-body h1,
+.md-body h2,
+.md-body h3,
+.md-body h4 {
+  overflow-wrap: anywhere;
+}
+
+.md-body :not(pre) > code {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Wide math formulas scroll inside their own box instead of widening the page */
+.md-body .katex-display {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.2rem 0;
+}
+
+.md-body .katex {
+  max-width: 100%;
+}
+
+.md-body :not(.katex-display) > .katex {
+  display: inline-block;
+  overflow-x: auto;
+  overflow-y: hidden;
+  vertical-align: middle;
+}
