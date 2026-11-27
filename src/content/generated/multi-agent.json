@@ -6,9 +6,7 @@
   "summary": "---",
   "order": 1,
   "objectives": [
-   "Explain every point in “Part — 1. Complete multi-agent orchestration curriculum” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Part — 1. Complete multi-agent orchestration curriculum"
   ],
   "labIds": [
    "multi-agent"
@@ -21,9 +19,9 @@
   "summary": "2.1 Single agent vs multi-agent vs agentic orchestration Consider a business requirement: Investigate a supplier, verify compliance, analyze financial risk, check the departmental budget, and prepare a purchase-order…",
   "order": 2,
   "objectives": [
-   "Explain every point in “Part — 2. Understanding multi-agent systems” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Single agent vs multi-agent vs agentic orchestration",
+   "Important terminology",
+   "Do multiple agents require multiple LLMs?"
   ],
   "labIds": [
    "multi-agent"
@@ -36,9 +34,9 @@
   "summary": "Multi-agent architectures are not automatically superior to single-agent systems. 3.1 Appropriate use cases Requirement Why multiple agents may help -------- -------- Distinct specialist knowledge Different instructions…",
   "order": 3,
   "objectives": [
-   "Explain every point in “Part — 3. When should you use multiple agents?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Appropriate use cases",
+   "When multi-agent systems become unnecessary",
+   "Architecture selection decision tree"
   ],
   "labIds": [
    "multi-agent"
@@ -51,9 +49,7 @@
   "summary": "Before learning individual design patterns, understand the architectural topology of the system. The topology determines how agents communicate, where decisions are made and how failures propagate. O = Orchestrator. A =…",
   "order": 4,
   "objectives": [
-   "Explain every point in “Part — 4. Multi-agent orchestration architectures” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Orchestration vs choreography"
   ],
   "labIds": [
    "retrieval",
@@ -67,9 +63,12 @@
   "summary": "This section is central to the entire masterclass. 5.1 Complete pattern catalogue Additional production patterns include event-driven orchestration, dynamic DAG planning, reflection loops, human-in-the-loop, Saga…",
   "order": 5,
   "objectives": [
-   "Explain every point in “Part — 5. Agent orchestration design patterns” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Complete pattern catalogue",
+   "Pattern 1 — Sequential orchestration",
+   "Pattern 2 — Parallel orchestration",
+   "Pattern 3 — Router-based orchestration",
+   "Pattern 4 — Supervisor-worker orchestration",
+   "Pattern 5 — Hierarchical orchestration"
   ],
   "labIds": [
    "multi-agent"
@@ -82,9 +81,12 @@
   "summary": "Multi-agent orchestration is not only an LLM problem. It is also a graph theory, scheduling, distributed systems, optimization and decision-making problem. 6.1 Graph theory A multi-agent system can be represented as: \\[…",
   "order": 6,
   "objectives": [
-   "Explain every point in “Part — 6. Mathematical foundations of multi-agent orchestration” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Graph theory",
+   "Delegation tree complexity",
+   "Distributed task scheduling and critical-path mathematics",
+   "Task assignment as an optimization problem",
+   "Multi-agent decision processes",
+   "Game theory, cooperation and competition"
   ],
   "labIds": [
    "multi-agent"
@@ -97,9 +99,10 @@
   "summary": "7.1 The difference between a planner and a scheduler Component Responsibility -------- -------- Planner Determines what tasks are required Validator Verifies plan legality, dependencies and constraints Scheduler…",
   "order": 7,
   "objectives": [
-   "Explain every point in “Part — 7. Advanced planning, delegation and scheduling” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "The difference between a planner and a scheduler",
+   "Dynamic task graph generation",
+   "Scheduling algorithms",
+   "Contract Net Protocol — bidding-based allocation"
   ],
   "labIds": [
    "multi-agent"
@@ -112,9 +115,10 @@
   "summary": "We will implement an asynchronous dependency-aware scheduler before introducing framework abstractions. This is an important exercise because it separates scheduling from model reasoning. 8.1 Architecture 8.2 Runnable…",
   "order": 8,
   "objectives": [
-   "Explain every point in “Part — 8. Pure Python multi-agent orchestrator — First practical laboratory” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Architecture",
+   "Runnable teaching implementation",
+   "Implement synthetic specialist agents",
+   "What this example demonstrates"
   ],
   "labIds": [
    "rate-limit",
@@ -128,9 +132,11 @@
   "summary": "Beyond the foundational patterns, enterprise systems frequently combine multiple forms of orchestration. 9.1 Dynamic adaptive orchestration Not every user request needs the same number of agents. Example execution…",
   "order": 9,
   "objectives": [
-   "Explain every point in “Part — 9. Advanced orchestration patterns used in production” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Dynamic adaptive orchestration",
+   "Scatter-gather with partial results",
+   "Map-reduce vs scatter-gather",
+   "Streaming orchestration",
+   "Speculative orchestration"
   ],
   "labIds": [
    "multi-agent"
@@ -143,9 +149,11 @@
   "summary": "10.1 Communication mechanisms Mechanism Characteristics Suitable application -------- -------- -------- Direct function call In-process, low overhead Local subagents HTTP / REST Request-response communication…",
   "order": 10,
   "objectives": [
-   "Explain every point in “Part — 10. Agent communication engineering” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Communication mechanisms",
+   "Synchronous vs asynchronous communication",
+   "Production message envelope",
+   "Classical agent communication",
+   "Message ordering and causality"
   ],
   "labIds": [
    "multi-agent"
@@ -158,9 +166,10 @@
   "summary": "MCP and A2A solve different integration problems. 11.1 What MCP provides MCP provides interoperable access to capabilities and context, such as tools, resources and prompts. It does not determine which agents should…",
   "order": 11,
   "objectives": [
-   "Explain every point in “Part — 11. MCP and A2A inside multi-agent orchestration” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What MCP provides",
+   "What A2A provides",
+   "What the orchestrator must still implement",
+   "Remote agent integration sequence"
   ],
   "labIds": [
    "multi-agent"
@@ -173,9 +182,11 @@
   "summary": "State engineering becomes increasingly important as agents execute concurrently. 12.1 State ownership architecture Shared workflow state Task status · Verified milestones · Evidence references Authoritative business…",
   "order": 12,
   "objectives": [
-   "Explain every point in “Part — 12. Shared state, private state and memory isolation” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "State ownership architecture",
+   "State categories",
+   "Parallel state merging",
+   "Reducer properties",
+   "CRDTs and eventually consistent shared data"
   ],
   "labIds": [
    "multi-agent"
@@ -188,9 +199,10 @@
   "summary": "13.1 The shared conversation problem Suppose eight agents each receive the complete conversation history of every other agent. Each specialist contributes 2,000 tokens. The accumulated history reaches 16,000 tokens,…",
   "order": 13,
   "objectives": [
-   "Explain every point in “Part — 13. Multi-agent context engineering” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "The shared conversation problem",
+   "Context isolation",
+   "Context delegation contract",
+   "Context engineering techniques"
   ],
   "labIds": [
    "retrieval",
@@ -204,9 +216,11 @@
   "summary": "Multi-agent systems introduce classical distributed systems problems that cannot be solved through prompt engineering alone. 14.1 Race conditions Suppose two specialist agents independently read the same departmental…",
   "order": 14,
   "objectives": [
-   "Explain every point in “Part — 14. Concurrency, synchronization and distributed consistency” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Race conditions",
+   "Synchronization mechanisms",
+   "Deadlocks, livelocks and starvation",
+   "CAP theorem and agent state",
+   "Leader election and distributed orchestration"
   ],
   "labIds": [
    "multi-agent"
@@ -219,9 +233,9 @@
   "summary": "One of the more advanced problems in multi-agent systems is determining whether the complete distributed task has finished. 15.1 Local completion does not mean global completion Suppose the supervisor finishes…",
   "order": 15,
   "objectives": [
-   "Explain every point in “Part — 15. Distributed termination and progress detection” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Local completion does not mean global completion",
+   "Completion conditions",
+   "Progress tracking"
   ],
   "labIds": [
    "multi-agent"
@@ -234,9 +248,10 @@
   "summary": "16.1 Agent agreement is not distributed database consensus There are two distinct meanings of consensus: AI decision consensus Distributed-system consensus -------- -------- Agents agree on a conclusion Replicas agree…",
   "order": 16,
   "objectives": [
-   "Explain every point in “Part — 16. Consensus, voting and conflict resolution” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Agent agreement is not distributed database consensus",
+   "Majority voting mathematics",
+   "Evidence-based conflict resolution",
+   "Negotiation between agents"
   ],
   "labIds": []
  },
@@ -247,9 +262,11 @@
   "summary": "Now we can translate the concepts into a graph-based implementation. LangGraph supports shared typed state, fixed and conditional transitions, dynamic dispatch with Send , and state updates with routing through Command…",
   "order": 17,
   "objectives": [
-   "Explain every point in “Part — 17. LangGraph multi-agent orchestration implementation” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Static fan-out and fan-in graph",
+   "Implementation using LangGraph",
+   "Important advanced LangGraph concepts",
+   "Dynamic fan-out using Send",
+   "Production checkpoint and replay warning"
   ],
   "labIds": [
    "multi-agent"
@@ -262,9 +279,9 @@
   "summary": "The same multi-agent problem can be implemented using an agent SDK rather than an explicit graph. 18.1 Manager pattern: Agents as tools Manager agent — owns final response Finance specialist Returns structured analysis…",
   "order": 18,
   "objectives": [
-   "Explain every point in “Part — 18. OpenAI Agents SDK — Manager and handoff orchestration” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Manager pattern: Agents as tools",
+   "Handoff implementation",
+   "What must be added for production"
   ],
   "labIds": [
    "multi-agent"
@@ -277,9 +294,9 @@
   "summary": "Since orchestration concepts are framework-independent, it is important to compare equivalent patterns across different libraries. Engineering requirement Suitable framework approach -------- -------- Explicit graph and…",
   "order": 19,
   "objectives": [
-   "Explain every point in “Part — 19. Google ADK, Microsoft Agent Framework and other ecosystems” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Google ADK orchestration patterns",
+   "Microsoft Agent Framework",
+   "Framework selection criteria"
   ],
   "labIds": [
    "multi-agent"
@@ -292,9 +309,10 @@
   "summary": "A production multi-agent workflow may run for seconds, minutes, hours or days. A research task might wait for remote evidence. A procurement workflow might wait until a manager approves it tomorrow. 20.1 Durable…",
   "order": 20,
   "objectives": [
-   "Explain every point in “Part — 20. Durable multi-agent execution” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Workflow state machine",
+   "The durable task record",
+   "Outbox-based task delegation",
+   "Exactly-once business effects"
   ],
   "labIds": [
    "multi-agent"
@@ -307,9 +325,8 @@
   "summary": "Human approval should be a first-class workflow state rather than an instruction embedded in the supervisor's prompt. Specialist agents produce evidence Supervisor prepares exact proposed action Persist approval…",
   "order": 21,
   "objectives": [
-   "Explain every point in “Part — 21. Advanced human-in-the-loop orchestration” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Approval patterns",
+   "Concurrent resume problem"
   ],
   "labIds": [
    "multi-agent"
@@ -322,9 +339,10 @@
   "summary": "The security surface increases when agents communicate across multiple runtimes, tools and organizational boundaries. 22.1 Trust model The parent agent must not automatically trust every assertion or action proposal…",
   "order": 22,
   "objectives": [
-   "Explain every point in “Part — 22. Multi-agent security and trust boundaries” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Trust model",
+   "Effective delegation permissions",
+   "Security controls specific to multiple agents",
+   "Agent governance registry"
   ],
   "labIds": [
    "retrieval",
@@ -339,9 +357,10 @@
   "summary": "23.1 The coordination overhead problem Consider two architectures solving the same task. genui{\"charts widget v2\":{\"content\":{\"chartType\":\"bar\",\"xKey\":\"architecture\",\"series\":[{\"dataKey\":\"work\",\"label\":\"Useful model…",
   "order": 23,
   "objectives": [
-   "Explain every point in “Part — 23. Multi-agent performance and latency optimization” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "The coordination overhead problem",
+   "Amdahl's Law",
+   "Tail-latency amplification",
+   "Performance optimization strategies"
   ],
   "labIds": [
    "retrieval",
@@ -355,9 +374,10 @@
   "summary": "24.1 Total cost of delegation The cost of an orchestration run is: \\[ C {run}=C {supervisor} +\\sum {i=1}^{n}C {specialist,i} +C {communication} +C {tools} +C {verification} +C {infra} \\] Every nested agent can perform…",
   "order": 24,
   "objectives": [
-   "Explain every point in “Part — 24. Multi-agent cost management” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Total cost of delegation",
+   "Interactive delegation cost simulator",
+   "Hierarchical budget allocation",
+   "Adaptive autonomy economics"
   ],
   "labIds": [
    "multi-agent"
@@ -370,9 +390,10 @@
   "summary": "A multi-agent platform needs evaluation at both the individual-agent level and the end-to-end workflow level. 25.1 Complete evaluation architecture 25.2 Multi-agent-specific metrics Metric Definition -------- --------…",
   "order": 25,
   "objectives": [
-   "Explain every point in “Part — 25. Multi-agent evaluation” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Multi-agent-specific metrics",
+   "Error propagation and reliability mathematics",
+   "Agent ablation testing",
+   "Oracle-based debugging"
   ],
   "labIds": [
    "retrieval",
@@ -386,9 +407,10 @@
   "summary": "Observability must reveal how a task moves through a hierarchy of agents and dependencies. 26.1 Example complete execution trace Trace: supplier investigation 7.2 seconds Verified report Illustrative trace with nested…",
   "order": 26,
   "objectives": [
-   "Explain every point in “Part — 26. Multi-agent observability and distributed tracing” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Example complete execution trace",
+   "Trace hierarchy",
+   "What to record",
+   "Multi-agent monitoring dashboard"
   ],
   "labIds": [
    "chunking",
@@ -403,9 +425,12 @@
   "summary": "We already established a combined catalogue of 145 AI failure scenarios. The following dedicated matrix focuses specifically on orchestration. Some failure modes overlap the earlier catalogue, but the…",
   "order": 27,
   "objectives": [
-   "Explain every point in “Part — 27. Multi-agent production failure scenarios” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Batch A — Planning and delegation",
+   "Batch B — Communication and coordination",
+   "Batch C — Shared state and memory",
+   "Batch D — Distributed execution and reliability",
+   "Batch E — Performance, cost and quality",
+   "Batch F — Security, approvals and governance"
   ],
   "labIds": [
    "chunking",
@@ -422,9 +447,11 @@
   "summary": "Scenario — A supervisor creates a runaway multi-agent workflow A procurement investigation normally launches three specialists. After a prompt update, each specialist starts delegating to additional agents. The parent…",
   "order": 28,
   "objectives": [
-   "Explain every point in “Part — 28. Production incident simulation” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Scenario — A supervisor creates a runaway multi-agent workflow",
+   "How to diagnose it",
+   "Immediate containment",
+   "Permanent solution",
+   "Example regression test"
   ],
   "labIds": [
    "rate-limit",
@@ -438,9 +465,10 @@
   "summary": "29.1 Full multi-agent orchestration platform 29.2 Capacity planning example Suppose the platform receives 20 root tasks per second. Each root task creates an average of four specialist executions. \\[…",
   "order": 29,
   "objectives": [
-   "Explain every point in “Part — 29. Production infrastructure and scalability” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Capacity planning example",
+   "Bulkhead architecture",
+   "Deployment practices",
+   "Availability, failover and disaster recovery"
   ],
   "labIds": [
    "rate-limit",
@@ -454,9 +482,12 @@
   "summary": "Project: Multi-Agent Enterprise Operations Platform This project extends our earlier procurement agent into a reusable orchestration platform that can support multiple business domains. Business use cases The platform…",
   "order": 30,
   "objectives": [
-   "Explain every point in “Part — 30. Integrated enterprise capstone project” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Project: Multi-Agent Enterprise Operations Platform",
+   "Agent hierarchy",
+   "Suggested technology stack",
+   "Enterprise repository structure",
+   "Core database entities",
+   "Acceptance criteria"
   ],
   "labIds": [
    "retrieval",
@@ -471,9 +502,7 @@
   "summary": "Instead of jumping directly into a distributed platform, build the concepts in increasing order of complexity. ---",
   "order": 31,
   "objectives": [
-   "Explain every point in “Part — 31. Progressive practical laboratories” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Part — 31. Progressive practical laboratories"
   ],
   "labIds": []
  },
@@ -484,9 +513,7 @@
   "summary": "The following questions focus specifically on multi-agent orchestration rather than repeating the 140 RAG and Agentic AI interview questions we already covered. Interview question Expected senior-level answer --------…",
   "order": 32,
   "objectives": [
-   "Explain every point in “Part — 32. Senior-level interview preparation” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Part — 32. Senior-level interview preparation"
   ],
   "labIds": [
    "multi-agent"
@@ -499,9 +526,7 @@
   "summary": "Multi-agent production assessment /32 [Copy production checklist] ---",
   "order": 33,
   "objectives": [
-   "Explain every point in “Part — 33. Multi-agent production readiness checklist” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Part — 33. Multi-agent production readiness checklist"
   ],
   "labIds": [
    "multi-agent"
@@ -514,9 +539,12 @@
   "summary": "Module Proposed hours -------- -------- Multi-agent fundamentals and architectures 12 Orchestration design patterns 24 Mathematics, graph theory and scheduling 20 Planning, delegation and task decomposition 18 Agent…",
   "order": 34,
   "objectives": [
-   "Explain every point in “Part — 34. Complete multi-agent orchestration learning roadmap” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Official learning resources",
+   "Completion status",
+   "Current coverage assessment",
+   "Security — Covered, but requires deeper explanations",
+   "Production-grade scenarios — 50 covered, more depth required",
+   "Final masterclass target"
   ],
   "labIds": [
    "chunking",
@@ -533,9 +561,12 @@
   "summary": "35.1 What is a multi-agent harness? A multi-agent harness is the software infrastructure responsible for managing the complete execution lifecycle of multiple agents. It provides the environment in which agents can…",
   "order": 35,
   "objectives": [
-   "Explain every point in “Part — 35. Advanced multi-agent harness and orchestration engine” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is a multi-agent harness?",
+   "Responsibilities of each plane",
+   "Supervisor agent vs orchestration engine",
+   "What happens internally when a user submits a task?",
+   "Complete agent lifecycle",
+   "Pure Python agent registry"
   ],
   "labIds": [
    "multi-agent"
@@ -548,9 +579,10 @@
   "summary": "We previously studied the standard design patterns. Now we will implement the more advanced patterns that allow an orchestration system to adapt dynamically. 36.1 Static vs dynamic vs adaptive orchestration Static…",
   "order": 36,
   "objectives": [
-   "Explain every point in “Part — 36. Advanced orchestration pattern implementation” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Static vs dynamic vs adaptive orchestration",
+   "Safe graph mutation",
+   "Python graph validation",
+   "Incremental recomputation"
   ],
   "labIds": [
    "multi-agent"
@@ -563,9 +595,11 @@
   "summary": "The scheduler decides when and where validated tasks execute. A production scheduler must consider dependency relationships, deadlines, workload priorities, worker capabilities, token quotas and resource availability.…",
   "order": 37,
   "objectives": [
-   "Explain every point in “Part — 37. Advanced task scheduling algorithms” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Scheduling problem",
+   "Scheduling algorithm comparison",
+   "Critical-path method — worked example",
+   "Python implementation of critical-path scheduling",
+   "HEFT — Heterogeneous Earliest Finish Time"
   ],
   "labIds": [
    "multi-agent"
@@ -578,9 +612,9 @@
   "summary": "38.1 Capability discovery pipeline Validated task requirements Filter by required capability, identity, permissions and data policy Rank eligible agents by measured quality, latency, load and cost Atomically reserve…",
   "order": 38,
   "objectives": [
-   "Explain every point in “Part — 38. Agent discovery, matchmaking and intelligent allocation” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Capability discovery pipeline",
+   "Hungarian algorithm for agent-task matching",
+   "Dynamic reputation scoring"
   ],
   "labIds": []
  },
@@ -591,9 +625,10 @@
   "summary": "The Contract Net Protocol is a classical multi-agent coordination mechanism introduced for distributed problem-solving. Instead of assigning every task through a fixed centralized mapping, agents can negotiate task…",
   "order": 39,
   "objectives": [
-   "Explain every point in “Part — 39. Contract Net Protocol, negotiation and agent marketplaces” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Contract Net Protocol lifecycle",
+   "Agent marketplace architecture",
+   "Multi-objective agent selection",
+   "Production marketplace failures"
   ],
   "labIds": [
    "multi-agent"
@@ -606,9 +641,11 @@
   "summary": "This is an important advanced theoretical topic that was missing from our earlier LLM-focused lessons. 40.1 Traditional RL vs MARL vs LLM orchestration Approach Core mechanism -------- -------- Reinforcement learning…",
   "order": 40,
   "objectives": [
-   "Explain every point in “Part — 40. Multi-Agent Reinforcement Learning — MARL” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Traditional RL vs MARL vs LLM orchestration",
+   "Markov games",
+   "Centralized training, decentralized execution (CTDE)",
+   "Important MARL algorithms",
+   "Contextual bandits for adaptive routing"
   ],
   "labIds": [
    "multi-agent"
@@ -621,9 +658,11 @@
   "summary": "41.1 Cooperative systems All agents contribute toward a shared objective. Example: finance, supplier and compliance agents jointly prepare a verified procurement report. 41.2 Competitive systems Agents may produce…",
   "order": 41,
   "objectives": [
-   "Explain every point in “Part — 41. Cooperative, competitive and mixed-motive agents” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Cooperative systems",
+   "Competitive systems",
+   "Mixed-motive systems",
+   "Nash equilibrium",
+   "Shapley value and specialist contribution"
   ],
   "labIds": [
    "multi-agent"
@@ -636,9 +675,10 @@
   "summary": "This is one of the most important distinctions between ordinary agent demos and fault-tolerant distributed orchestration. 42.1 Why do agents need distributed coordination infrastructure? Imagine three orchestration…",
   "order": 42,
   "objectives": [
-   "Explain every point in “Part — 42. Distributed consensus — Raft, Paxos and quorum engineering” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Why do agents need distributed coordination infrastructure?",
+   "Raft consensus architecture",
+   "Quorum mathematics",
+   "Raft vs Paxos vs Byzantine fault tolerance"
   ],
   "labIds": [
    "multi-agent"
@@ -651,9 +691,9 @@
   "summary": "43.1 Realistic production failure Supervisor A acquires ownership of workflow WF-101 . Its network connection becomes unstable. The ownership lease expires, and Supervisor B acquires the workflow. Supervisor A later…",
   "order": 43,
   "objectives": [
-   "Explain every point in “Part — 43. Leader election and split-brain prevention” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Realistic production failure",
+   "Lease vs fencing token",
+   "Production diagnosis"
   ],
   "labIds": []
  },
@@ -664,9 +704,10 @@
   "summary": "44.1 Why ordinary timestamps are not enough Distributed agents run on different servers. Their physical clocks may not agree. A finance result recorded at 10:00:01 on one server might have been generated before an event…",
   "order": 44,
   "objectives": [
-   "Explain every point in “Part — 44. Lamport clocks, vector clocks and causal ordering” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Why ordinary timestamps are not enough",
+   "Lamport clock rules",
+   "Python implementation",
+   "Vector clocks"
   ],
   "labIds": []
  },
@@ -677,9 +718,10 @@
   "summary": "45.1 What is a CRDT? A conflict-free replicated data type is designed so that compatible distributed replicas can merge their updates and converge under the applicable synchronization assumptions. Suppose three research…",
   "order": 45,
   "objectives": [
-   "Explain every point in “Part — 45. Advanced CRDTs and shared-state synchronization” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is a CRDT?",
+   "Important CRDT types",
+   "Python G-Counter",
+   "Why eventual consistency cannot enforce every business rule"
   ],
   "labIds": []
  },
@@ -690,9 +732,10 @@
   "summary": "46.1 Why termination is difficult A supervisor can appear idle while delegated tasks are still active or messages are still in transit. Imagine: - Supervisor A has finished its local analysis. - Agent B has sent a…",
   "order": 46,
   "objectives": [
-   "Explain every point in “Part — 46. Distributed termination detection” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Why termination is difficult",
+   "Classical termination-detection algorithms",
+   "Production completion invariant",
+   "Atomic finalization"
   ],
   "labIds": []
  },
@@ -703,9 +746,11 @@
   "summary": "These four failure classes are frequently confused during distributed-system interviews. 47.1 Visual comparison Deadlock Both agents wait for resources held by the other. Livelock Agents continue acting but make no…",
   "order": 47,
   "objectives": [
-   "Explain every point in “Part — 47. Deadlocks, livelocks, starvation and priority inversion” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Visual comparison",
+   "Deadlock: Coffman conditions",
+   "Livelock and no-progress detection",
+   "Priority aging",
+   "Detection and recovery matrix"
   ],
   "labIds": [
    "multi-agent"
@@ -718,9 +763,12 @@
   "summary": "Multi-agent orchestration often coordinates business operations across independent services. A purchase-order workflow might involve inventory, finance, compliance, procurement and notification services. A single local…",
   "order": 48,
   "objectives": [
-   "Explain every point in “Part — 48. Distributed transactions and Saga orchestration” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Two-phase commit vs Saga",
+   "Saga orchestration example",
+   "Compensating actions",
+   "Production Saga state machine",
+   "Durable Saga record",
+   "Saga failure-injection tests"
   ],
   "labIds": [
    "injection",
@@ -734,9 +782,12 @@
   "summary": "49.1 MCP architecture at enterprise scale In a basic MCP implementation, one AI application connects to one MCP server. In a production multi-agent platform, hundreds of logical agents may require access to thousands of…",
   "order": 49,
   "objectives": [
-   "Explain every point in “Part — 49. Advanced MCP orchestration in multi-agent systems” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "MCP architecture at enterprise scale",
+   "MCP tool discovery vs tool authorization",
+   "Large-scale MCP tool selection",
+   "Tool registry with immutable capability contracts",
+   "MCP tool rug pull and schema drift",
+   "MCP invocation security pipeline"
   ],
   "labIds": [
    "retrieval",
@@ -751,9 +802,12 @@
   "summary": "50.1 Why A2A is important for enterprise orchestration Imagine an organization with four independently developed agents: Agent Implementation -------- -------- Procurement supervisor LangGraph Supplier investigation…",
   "order": 50,
   "objectives": [
-   "Explain every point in “Part — 50. Advanced A2A orchestration and distributed agent communication” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Why A2A is important for enterprise orchestration",
+   "Agent Cards and capability discovery",
+   "Remote task state vs local workflow state",
+   "Lost remote task reference",
+   "Application-level delegation ledger",
+   "A2A artifact integrity"
   ],
   "labIds": [
    "retrieval",
@@ -768,9 +822,10 @@
   "summary": "51.1 What is zero trust? Zero trust means that access is not granted merely because an agent runs inside an internal network, belongs to an approved application or communicates with another trusted service. Every…",
   "order": 51,
   "objectives": [
-   "Explain every point in “Part — 51. Multi-agent zero-trust architecture” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is zero trust?",
+   "RBAC, ABAC and ReBAC",
+   "Pure Python authorization gateway",
+   "Fail closed vs graceful degradation"
   ],
   "labIds": [
    "retrieval",
@@ -784,9 +839,12 @@
   "summary": "52.1 Why an agent name is not an identity Consider a message containing: Anyone capable of generating that message can claim to be the finance manager. The sender field does not establish authenticated identity, and an…",
   "order": 52,
   "objectives": [
-   "Explain every point in “Part — 52. Agent identity, workload authentication and delegated credentials” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Why an agent name is not an identity",
+   "Delegated identity architecture",
+   "Effective permission mathematics",
+   "Authentication technologies",
+   "MCP credential audience and token passthrough",
+   "Credential handling requirements"
   ],
   "labIds": []
  },
@@ -797,9 +855,11 @@
   "summary": "53.1 Why multi-agent injection is more dangerous In a single-agent system, malicious external content may influence one model context. In a multi-agent system, that content may be summarized, rewritten, stored in memory…",
   "order": 53,
   "objectives": [
-   "Explain every point in “Part — 53. Inter-agent prompt injection and memory poisoning” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Why multi-agent injection is more dangerous",
+   "Instruction laundering",
+   "Evidence provenance",
+   "Shared-memory poisoning",
+   "Memory containment after an incident"
   ],
   "labIds": [
    "retrieval",
@@ -814,9 +874,11 @@
   "summary": "54.1 Treat specialist compromise as an architectural assumption A specialist agent may become unreliable because of a compromised dependency, malicious external input, incorrect instructions, model regression or an…",
   "order": 54,
   "objectives": [
-   "Explain every point in “Part — 54. Compromised agents, collusion and adversarial collaboration” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Treat specialist compromise as an architectural assumption",
+   "Agent collusion and correlated errors",
+   "Mathematics of false consensus",
+   "Blast-radius reduction",
+   "Emergency response to a compromised agent"
   ],
   "labIds": [
    "retrieval"
@@ -829,9 +891,12 @@
   "summary": "55.1 Why sandboxing is necessary Some agents only generate text. Others can execute Python, access files, operate browsers, query databases or interact with enterprise applications. These capabilities introduce software…",
   "order": 55,
   "objectives": [
-   "Explain every point in “Part — 55. Agent sandboxing and execution isolation” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Why sandboxing is necessary",
+   "Isolation technologies",
+   "Sandbox resource limits",
+   "Illustrative isolated execution configuration",
+   "SSRF and network egress restrictions",
+   "Computer-use agent isolation"
   ],
   "labIds": [
    "multi-agent"
@@ -844,9 +909,12 @@
   "summary": "56.1 What is AgentOps governance? AgentOps governance manages the lifecycle, ownership, risk and operational behavior of deployed agents. It answers questions such as: Who owns this agent? Which model and tools can it…",
   "order": 56,
   "objectives": [
-   "Explain every point in “Part — 56. Enterprise governance, compliance and audit engineering” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is AgentOps governance?",
+   "Enterprise agent registry",
+   "Risk-based autonomy",
+   "Complete audit trail",
+   "Tamper-evident audit records",
+   "Emergency kill switch"
   ],
   "labIds": [
    "rate-limit",
@@ -860,9 +928,11 @@
   "summary": "We previously identified S01–S35. We will now complete the defensive analysis for all 35 scenarios, including root causes, detection mechanisms, containment and permanent solutions. These are synthetic threat-model…",
   "order": 57,
   "objectives": [
-   "Explain every point in “Part — 57. Complete multi-agent security failure catalogue” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Batch 1 — Agent intelligence and trust",
+   "Batch 2 — Identity, permissions and data isolation",
+   "Batch 3 — MCP and A2A security",
+   "Batch 4 — Transactions, execution and resource abuse",
+   "Batch 5 — Audit, confidentiality and emergency response"
   ],
   "labIds": [
    "retrieval",
@@ -877,9 +947,11 @@
   "summary": "Now we will examine how these failures appear during actual application execution, using realistic but synthetic enterprise scenarios. Case study 1 — Compromised specialist influences a financial operation Business…",
   "order": 58,
   "objectives": [
-   "Explain every point in “Part — 58. Security production incident case studies” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Case study 1 — Compromised specialist influences a financial operation",
+   "Case study 2 — Cross-tenant leakage through shared agent cache",
+   "Case study 3 — Financial resource exhaustion through recursive delegation",
+   "Case study 4 — Revoked permission restored from a checkpoint",
+   "Case study 5 — Remote cancellation after a committed transaction"
   ],
   "labIds": [
    "retrieval",
@@ -893,9 +965,12 @@
   "summary": "Laboratory 18 and 22 — Zero-trust orchestration and adversarial testing We can combine the earlier authorization gateway with synthetic tests. This laboratory uses no real customer information, external credentials or…",
   "order": 59,
   "objectives": [
-   "Explain every point in “Part — 59. Multi-agent security testing laboratory” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Laboratory 18 and 22 — Zero-trust orchestration and adversarial testing",
+   "Negative authorization tests",
+   "Complete adversarial test plan",
+   "Security evaluation mathematics",
+   "False positive vs false negative",
+   "Remaining chapters"
   ],
   "labIds": [
    "retrieval",
@@ -911,9 +986,12 @@
   "summary": "60.1 Why multi-agent resource management is different In a conventional RAG application, one request might invoke an embedding model, a retriever, a reranker and a generation model. In a multi-agent application, a…",
   "order": 60,
   "objectives": [
-   "Explain every point in “Part — 60. Distributed FinOps and resource management” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Why multi-agent resource management is different",
+   "Resource limits that must be independently enforced",
+   "Hierarchical budget architecture",
+   "The distributed budget race condition",
+   "PostgreSQL atomic budgeting",
+   "Reservation lifecycle"
   ],
   "labIds": [
    "retrieval",
@@ -928,9 +1006,12 @@
   "summary": "61.1 Why ordinary round robin is insufficient An agent processing a simple invoice lookup might require one model call and two seconds. Another agent performing enterprise research might require 20 model calls and two…",
   "order": 61,
   "objectives": [
-   "Explain every point in “Part — 61. Intelligent workload scheduling and load balancing” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Why ordinary round robin is insufficient",
+   "Production scheduling pipeline",
+   "Weighted fair scheduling",
+   "Deficit Round Robin (DRR)",
+   "Queueing mathematics and utilization",
+   "Load balancing strategies"
   ],
   "labIds": [
    "multi-agent"
@@ -943,9 +1024,11 @@
   "summary": "62.1 Multi-agent caching hierarchy Each cache operates at a different semantic boundary. A cached financial recommendation is not equivalent to a current financial approval. 62.2 Cache key construction A useful…",
   "order": 62,
   "objectives": [
-   "Explain every point in “Part — 62. Advanced caching, hedging and duplicate-work elimination” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Multi-agent caching hierarchy",
+   "Cache key construction",
+   "Distributed single-flight",
+   "Hedged requests and straggler mitigation",
+   "Cache failure scenarios"
   ],
   "labIds": [
    "multi-agent"
@@ -958,9 +1041,11 @@
   "summary": "63.1 Complete latency decomposition For a root workflow: \\[ T {total}=T {admission}+T {queue} +T {execution}+T {verification}+T {delivery} \\] Within the execution stage, total latency depends on the dependency graph and…",
   "order": 63,
   "objectives": [
-   "Explain every point in “Part — 63. Multi-agent latency optimization” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Complete latency decomposition",
+   "Tail-latency engineering",
+   "Interactive parallel-execution planner",
+   "Optimization order",
+   "Deadline propagation"
   ],
   "labIds": [
    "multi-agent"
@@ -973,9 +1058,11 @@
   "summary": "64.1 Reliability architecture 64.2 Retry amplification Suppose four execution layers independently allow three total attempts: The worst-case number of underlying attempts is: \\[ 3^4=81 \\] One logical operation can…",
   "order": 64,
   "objectives": [
-   "Explain every point in “Part — 64. Multi-agent fault tolerance, failover and durable recovery” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Retry amplification",
+   "Circuit breaker state machine",
+   "Bulkhead isolation",
+   "Recovery policy by operation type",
+   "Durable workflow recovery"
   ],
   "labIds": [
    "retrieval",
@@ -989,9 +1076,12 @@
   "summary": "65.1 Six dimensions of multi-agent observability Dimension Examples -------- -------- Infrastructure CPU, memory, connection pools, queue age Runtime Agent executions, retries, worker leases Communication Delegation,…",
   "order": 65,
   "objectives": [
-   "Explain every point in “Part — 65. Deep distributed observability and debugging” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Six dimensions of multi-agent observability",
+   "Understanding span trees",
+   "OpenTelemetry implementation",
+   "Context propagation across asynchronous boundaries",
+   "Prometheus metrics",
+   "Useful PromQL queries"
   ],
   "labIds": [
    "retrieval",
@@ -1005,9 +1095,12 @@
   "summary": "66.1 Why individual agent quality is insufficient Suppose all three specialists return correct information. The supervisor combines their results incorrectly and produces an unsupported recommendation. The system has…",
   "order": 66,
   "objectives": [
-   "Explain every point in “Part — 66. Multi-agent quality evaluation and specialist contribution analysis” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Why individual agent quality is insufficient",
+   "Multi-agent evaluation dimensions",
+   "Golden workflow dataset",
+   "Trajectory precision and recall",
+   "Oracle substitution experiment",
+   "Ablation and marginal contribution"
   ],
   "labIds": [
    "multi-agent"
@@ -1020,9 +1113,12 @@
   "summary": "This is where our production architecture must be validated experimentally. 67.1 Different types of performance testing Chaos engineering Introduce controlled dependency failures and verify that the system maintains…",
   "order": 67,
   "objectives": [
-   "Explain every point in “Part — 67. Load, stress, spike, soak and chaos testing” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Different types of performance testing",
+   "What should be tested?",
+   "Locust testing laboratory",
+   "Closed-loop vs open-loop workload generation",
+   "Illustrative load-testing results",
+   "Chaos engineering methodology"
   ],
   "labIds": [
    "retrieval",
@@ -1036,9 +1132,11 @@
   "summary": "In Part 27, we covered the first 50 multi-agent failure scenarios. In our gap analysis, we identified 50 additional scenarios but had not explained their detection and recovery mechanisms. We will now complete that…",
   "order": 68,
   "objectives": [
-   "Explain every point in “Part — 68. Complete production failure scenarios M51–M100” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Batch G — Distributed coordination and consistency",
+   "Batch H — Scheduling, termination and message delivery",
+   "Batch I — Artifacts, memory and state recovery",
+   "Batch J — Versioning, caching and context engineering",
+   "Batch K — Infrastructure, governance and business quality"
   ],
   "labIds": [
    "retrieval",
@@ -1053,9 +1151,11 @@
   "summary": "Business scenario An enterprise AI platform supports 500 tenants. A new supervisor version increases average delegation from three to eight specialists per task. At the same time, a remote MCP dependency becomes slow.…",
   "order": 69,
   "objectives": [
-   "Explain every point in “Part — 68.1. Detailed production incident — Distributed resource exhaustion” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Business scenario",
+   "Root cause analysis",
+   "Immediate containment",
+   "Permanent corrective actions",
+   "Example recovery targets"
   ],
   "labIds": [
    "rate-limit"
@@ -1068,9 +1168,7 @@
   "summary": "Scenario A workflow has \\$0.10 available. Three workers simultaneously attempt to reserve \\$0.04 each. The intended total is \\$0.12. If reservation checks are not atomic, all three may succeed. Now suppose two workers…",
   "order": 70,
   "objectives": [
-   "Explain every point in “Part — 68.2. Detailed production incident — Budget race and orphaned reservations” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Scenario"
   ],
   "labIds": []
  },
@@ -1081,9 +1179,12 @@
   "summary": "This is a particularly difficult AI production incident. The application reports: - API availability: 99.9%. - Model-call success: 99.7%. - Database and CPU health: normal. - User satisfaction and verified business…",
   "order": 71,
   "objectives": [
-   "Explain every point in “Part — 68.3. Detailed production incident — Quality degradation without infrastructure errors” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Q56. How do you enforce a global token budget across multiple agents?",
+   "Q57. What happens when RPM capacity is available but TPM is exhausted?",
+   "Q58. How do you prevent concurrent budget overspending?",
+   "Q59. What should happen when provider usage information is missing?",
+   "Q60. How do you handle a distributed rate limiter outage?",
+   "Q61. Token bucket vs fixed-window rate limiter?"
   ],
   "labIds": [
    "rate-limit",
@@ -1097,9 +1198,12 @@
   "summary": "Before relying on LangGraph, CrewAI, Google ADK or another framework, every senior AI engineer should understand what an orchestration engine does internally. We will build a local reference engine using Python's…",
   "order": 72,
   "objectives": [
-   "Explain every point in “Part — 69. Building a multi-agent orchestration engine from scratch” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Internal architecture",
+   "Business scenario: Supplier investigation",
+   "Task lifecycle",
+   "Download the working Python implementation",
+   "Understanding the implementation",
+   "Actual execution result"
   ],
   "labIds": [
    "multi-agent"
@@ -1112,9 +1216,10 @@
   "summary": "The pure Python engine teaches us the internal mechanics of orchestration. LangGraph provides abstractions for building stateful agent workflows, including graph execution, reducers, persistence, conditional routing and…",
   "order": 73,
   "objectives": [
-   "Explain every point in “Part — 70. Advanced LangGraph multi-agent implementation” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Enterprise workflow with dynamic workers",
+   "Dynamic dispatch using Send",
+   "Human-in-the-loop interrupt and resume",
+   "Production LangGraph failure scenarios"
   ],
   "labIds": [
    "multi-agent"
@@ -1127,9 +1232,10 @@
   "summary": "71.1 Framework-independent architecture An enterprise does not necessarily want every team to use the same agent framework. A2A provides the agent interoperability boundary. MCP provides access to tools and contextual…",
   "order": 74,
   "objectives": [
-   "Explain every point in “Part — 71. Cross-framework MCP and A2A orchestration” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Framework-independent architecture",
+   "Adapter pattern",
+   "Normalized result contract",
+   "Interoperability contract tests"
   ],
   "labIds": [
    "agent-loop",
@@ -1143,9 +1249,10 @@
   "summary": "Framework APIs evolve quickly. I checked the current ADK and Microsoft documentation for this section rather than relying entirely on older tutorials. 72.1 Google ADK Google ADK 2.0 introduces a graph-oriented workflow…",
   "order": 75,
   "objectives": [
-   "Explain every point in “Part — 72. Google ADK, Microsoft Agent Framework and OpenAI Agents SDK” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Google ADK",
+   "Microsoft Agent Framework",
+   "OpenAI Agents SDK",
+   "Framework selection matrix"
   ],
   "labIds": [
    "agent-loop",
@@ -1159,9 +1266,11 @@
   "summary": "73.1 Multi-agent vs multi-model vs multimodal These are three different dimensions of AI architecture. Architecture Meaning -------- -------- Multi-agent Multiple logical intelligent components Multi-model Multiple…",
   "order": 76,
   "objectives": [
-   "Explain every point in “Part — 73. Multi-model and multimodal orchestration” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Multi-agent vs multi-model vs multimodal",
+   "Multimodal document intelligence platform",
+   "Multi-model routing",
+   "Model cascade",
+   "Multimodal production failures"
   ],
   "labIds": [
    "retrieval",
@@ -1175,9 +1284,11 @@
   "summary": "74.1 Computer-use agent orchestration Computer-use agents operate graphical interfaces when appropriate APIs are unavailable or insufficient. A production design separates planning, observation, execution and…",
   "order": 77,
   "objectives": [
-   "Explain every point in “Part — 74. Computer-use and autonomous coding agent teams” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Computer-use agent orchestration",
+   "API-based vs computer-use orchestration",
+   "Autonomous coding agent teams",
+   "Concurrent code modification problem",
+   "Coding and computer-use security scenarios"
   ],
   "labIds": [
    "agent-loop",
@@ -1191,9 +1302,10 @@
   "summary": "This is an advanced topic that connects agent orchestration with formal methods. LLM output is probabilistic, but many surrounding workflow properties can be expressed as deterministic invariants. 75.1 Safety vs…",
   "order": 78,
   "objectives": [
-   "Explain every point in “Part — 75. Formal workflow verification and model checking” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Safety vs liveness",
+   "Temporal logic intuition",
+   "Pure Python exhaustive state exploration",
+   "Formal verification tools"
   ],
   "labIds": [
    "multi-agent"
@@ -1206,9 +1318,11 @@
   "summary": "76.1 Enterprise multi-region architecture A production platform may need to serve geographically distributed tenants while maintaining regional data restrictions, high availability and safe workflow recovery. The…",
   "order": 79,
   "objectives": [
-   "Explain every point in “Part — 76. Multi-region deployment and disaster recovery” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Enterprise multi-region architecture",
+   "Active-passive vs active-active",
+   "Recovery point objective and recovery time objective",
+   "Safe regional failover",
+   "Disaster recovery tests"
   ],
   "labIds": [
    "retrieval"
@@ -1221,9 +1335,11 @@
   "summary": "Project: Governed Enterprise Agent Orchestration Platform This capstone brings together our RAG, Agentic AI, MCP, A2A, multi-agent security and distributed reliability lessons. The system supports supplier…",
   "order": 80,
   "objectives": [
-   "Explain every point in “Part — 77. Integrated enterprise multi-agent platform capstone” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Project: Governed Enterprise Agent Orchestration Platform",
+   "API design",
+   "Database design",
+   "Progressive implementation strategy",
+   "Production technology stack"
   ],
   "labIds": [
    "retrieval",
@@ -1237,9 +1353,12 @@
   "summary": "We have already covered the first 75 multi-agent interview questions. The following final 25 questions emphasize production architecture, distributed execution, security, implementation and difficult system-design…",
   "order": 81,
   "objectives": [
-   "Explain every point in “Part — 78. Senior multi-agent interview masterclass — Questions 76–100” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Q76. How would you design a dynamic DAG scheduler that avoids unnecessary waiting?",
+   "Q77. How would you integrate autonomous LLM planning with deterministic workflow execution?",
+   "Q78. What is the difference between a checkpoint and an operation ledger?",
+   "Q79. A remote A2A agent returns completed, but its artifact is missing. What should happen?",
+   "Q80. How do you achieve exactly-once external business effects?",
+   "Q81. How do you manage mixed-version agent deployments?"
   ],
   "labIds": [
    "retrieval",
@@ -1254,9 +1373,7 @@
   "summary": "Senior AI engineer interview assessment --- Overall candidate score /100 Suggested teaching rubric, not a validated hiring instrument. Serious security or integrity failures should be assessed independently of the total…",
   "order": 82,
   "objectives": [
-   "Explain every point in “Part — 78.1. Interview scoring rubric” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Part — 78.1. Interview scoring rubric"
   ],
   "labIds": []
  },
@@ -1267,9 +1384,11 @@
   "summary": "We will conclude the architecture lessons with five distinct business scenarios. The objective is to understand why different use cases require different orchestration patterns. Case study 1 — Intelligent resume…",
   "order": 83,
   "objectives": [
-   "Explain every point in “Part — 79. Additional enterprise system-design case studies” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Case study 1 — Intelligent resume processing and recruitment",
+   "Case study 2 — Enterprise IT incident investigation",
+   "Case study 3 — Enterprise customer-support platform",
+   "Case study 4 — Enterprise research and intelligence",
+   "Case study 5 — Financial invoice reconciliation"
   ],
   "labIds": [
    "chunking",
@@ -1284,9 +1403,11 @@
   "summary": "The following checklist consolidates the complete multi-agent masterclass. It is an implementation assessment rather than a measure of whether someone has read the theoretical material. Enterprise orchestration…",
   "order": 84,
   "objectives": [
-   "Explain every point in “Part — 80. Final production readiness assessment” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Complete curriculum audit",
+   "Official reference resources",
+   "What remains unfinished?",
+   "Download your consolidated Markdown file",
+   "Content included"
   ],
   "labIds": [
    "chunking",

@@ -2,12 +2,12 @@ import { useMemo, useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { AGENT_MODULE_INFO } from '@/content/agents/catalog'
 import type { AgentSim } from '@/content/agents/visualizer'
-import { AGENT_GALLERY, PROJECT_GALLERY, PYTHON_GALLERY, RAG_GALLERY, simGroup, simLessonsHref } from '@/content/sims/registry'
+import { AGENT_GALLERY, ML_GALLERY, PROJECT_GALLERY, PYTHON_GALLERY, RAG_GALLERY, simGroup, simLessonsHref } from '@/content/sims/registry'
 import { AgentSimPlayer } from '@/components/agents/AgentSimPlayer'
 import '@/components/python/python.css'
 import '@/components/agents/agents.css'
 
-type Kind = 'agents' | 'python' | 'rag' | 'project'
+type Kind = 'agents' | 'python' | 'rag' | 'project' | 'ml'
 
 const GALLERIES: Record<
   Kind,
@@ -43,6 +43,16 @@ const GALLERIES: Record<
     intro:
       'Frames being pushed and popped, names pointing at objects, generators pausing at yield, the event loop switching tasks, threads fighting over the GIL. Play each one, predict the next step, and watch the highlighted line run.',
   },
+  ml: {
+    sims: ML_GALLERY,
+    base: '/ml/visualizer',
+    home: '/ml',
+    homeLabel: 'VeeraML',
+    kicker: 'ML Visualizer',
+    title: 'Watch machine-learning algorithms learn, one step at a time',
+    intro:
+      'A leak-free pipeline, gradient descent (and divergence), a decision-tree split, threshold tuning, random forests, gradient boosting, K-means, cross-validation, backpropagation and production drift — each with the real numbers at every step, highlighted code and predict-the-next-step questions.',
+  },
   project: {
     sims: PROJECT_GALLERY,
     base: '/project/visualizer',
@@ -56,7 +66,7 @@ const GALLERIES: Record<
 }
 
 function moduleLabel(sim: AgentSim, kind: Kind) {
-  if (kind === 'python' || kind === 'project') return `Module ${sim.module}`
+  if (kind === 'python' || kind === 'project' || kind === 'ml') return `Module ${sim.module}`
   if (kind === 'rag') return `Module ${sim.ragModule || '—'}`
   const info = AGENT_MODULE_INFO[sim.module]
   return `${info?.icon || ''} Module ${sim.module}`
@@ -208,4 +218,12 @@ export function ProjectVisualizerIndex() {
 
 export function ProjectVisualizerPage() {
   return <SimPage kind="project" />
+}
+
+export function MlVisualizerIndex() {
+  return <SimGallery kind="ml" />
+}
+
+export function MlVisualizerPage() {
+  return <SimPage kind="ml" />
 }

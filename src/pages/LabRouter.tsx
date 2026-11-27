@@ -25,6 +25,10 @@ import { PlaywrightLab } from './labs/playground/project/PlaywrightLab'
 import { HttpLifecycleLab } from './labs/playground/project/HttpLifecycleLab'
 import { FastApiPydanticLab } from './labs/playground/project/FastApiPydanticLab'
 import { CapstoneEvaluatorLab } from './labs/playground/project/CapstoneEvaluatorLab'
+import { GradientDescentLab } from './labs/playground/ml/GradientDescentLab'
+import { BiasVarianceLab } from './labs/playground/ml/BiasVarianceLab'
+import { ThresholdLab } from './labs/playground/ml/ThresholdLab'
+import { KMeansLab } from './labs/playground/ml/KMeansLab'
 
 const MAP = {
   chunking: ChunkingLab,
@@ -53,6 +57,10 @@ const MAP = {
   'http-lifecycle': HttpLifecycleLab,
   'fastapi-pydantic': FastApiPydanticLab,
   'capstone-evaluator': CapstoneEvaluatorLab,
+  'gradient-descent': GradientDescentLab,
+  'bias-variance': BiasVarianceLab,
+  threshold: ThresholdLab,
+  kmeans: KMeansLab,
 } as const
 
 export function LabRouter() {

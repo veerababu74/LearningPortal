@@ -571,19 +571,110 @@ function seededShuffle(arr, seed) {
  * Real knowledge-check questions built from source Q&A: the correct option is the source
  * answer's lead sentence; distractors are lead sentences of *other* answers in the pool.
  */
-export function quizFromQA(items, pool = items, max = 5) {
-  const lead = (a) => {
-    const src = firstParagraph(a, 30) || a
-    const one = firstSentences(src, 1, 170)
-    return one.length < 60 ? firstSentences(src, 2, 190) : one
+/** Content blocks of an answer: paragraphs and lists (code, tables, headings skipped). */
+function answerBlocks(md) {
+  const blocks = []
+  let cur = null
+  const push = () => {
+    if (cur && cur.lines.length) blocks.push(cur)
+    cur = null
   }
-  const usable = items.filter((i) => lead(i.answer).length > 25)
-  const poolLeads = [...new Set(pool.map((p) => lead(p.answer)).filter((x) => x.length > 25))]
+  for (const { line, code } of annotate(String(md || ''))) {
+    if (code || !line.trim() || /^\s*(#|\|)/.test(line)) {
+      push()
+      continue
+    }
+    const isItem = /^\s*(?:[-*+]|\d+[.)])\s+\S/.test(line)
+    const kind = isItem ? 'list' : 'para'
+    if (!cur || (cur.kind !== kind && !(cur.kind === 'list' && /^\s{2,}\S/.test(line)))) {
+      push()
+      cur = { kind, lines: [] }
+    }
+    cur.lines.push(line)
+  }
+  push()
+  return blocks.map((b) => ({
+    kind: b.kind,
+    text: b.kind === 'list' ? b.lines.filter((l) => /^\s*(?:[-*+]|\d+[.)])\s+/.test(l)).map((l) => plain(l, 140).replace(/[.;:]+$/, '')) : plain(b.lines.join(' '), 2000),
+  }))
+}
+
+const QTYPE = (q) =>
+  /\b(detect|monitor|identify|diagnos|notice)\b/i.test(q)
+    ? 'detect'
+    : /\b(fix|prevent|mitigat|solve|handle|secure|avoid|reduce)\b/i.test(q)
+      ? 'fix'
+      : /^\s*why\b/i.test(q)
+        ? 'why'
+        : /^\s*(what is|what are|what does|define)\b/i.test(q)
+          ? 'what'
+          : 'other'
+
+/**
+ * The part of an answer that a quiz option should show:
+ *  - "What is X?" → the first definitional sentence ("X is …", "… controls …", "… happens when …"),
+ *  - an intro ending in ":" is joined with the first items of the list that follows,
+ *  - a list answer becomes "a; b; c",
+ *  - otherwise the first one or two sentences.
+ */
+export function answerLead(answer, q = '') {
+  const blocks = answerBlocks(answer)
+  if (!blocks.length) return firstSentences(answer, 1, 170)
+  if (QTYPE(q) === 'what') {
+    const words = (q.match(/^\s*what (?:is|are|does)\s+(?:an?\s+|the\s+)?(.+?)\??$/i)?.[1] || '')
+      .toLowerCase()
+      .split(/[^a-z0-9]+/)
+      .filter((w) => w.length >= 4)
+      .map((w) => w.replace(/(ion|ing|s)$/, ''))
+    const mentions = (s) => !words.length || words.some((w) => s.toLowerCase().includes(w))
+    for (const b of blocks.slice(0, 4)) {
+      if (b.kind !== 'para') continue
+      const sents = b.text.split(/(?<=[.!?])\s+/)
+      const def = sents.find(
+        (s) => /\b(is|are|means|refers to|happens when|occurs when|controls|describes|measures)\b/i.test(s) && !/\bnot the same\b|\brelated, but\b/i.test(s) && mentions(s) && s.length >= 40,
+      )
+      if (def) return def.length > 190 ? `${def.slice(0, 188).replace(/\s+\S*$/, '')}…` : def
+    }
+  }
+  for (let i = 0; i < blocks.length; i++) {
+    const b = blocks[i]
+    if (b.kind === 'list') {
+      const items = b.text.filter((t) => t.length > 3).slice(0, 3)
+      if (items.length >= 2) return `${items.join('; ')}.`
+      continue
+    }
+    if (/:$/.test(b.text) && blocks[i + 1]?.kind === 'list') {
+      const items = blocks[i + 1].text.filter((t) => t.length > 3).slice(0, 3)
+      if (items.length) return `${b.text.replace(/:$/, '')}: ${items.join('; ')}.`.replace(/^(check|steps?|solution|example)\s*:\s*/i, '')
+    }
+    if (b.text.length >= 40) {
+      const one = firstSentences(b.text, 1, 170)
+      return one.length < 60 ? firstSentences(b.text, 2, 190) : one
+    }
+  }
+  return firstSentences(answer, 1, 170)
+}
+
+const weakLead = (s) => s.length < 35 || /:$/.test(s) || /^(solution|step|example|check|note|important)\b\s*\d*\s*[—:-]/i.test(s)
+
+export function quizFromQA(items, pool = items, max = 5) {
+  const usable = items.map((i) => ({ ...i, lead: answerLead(i.answer, i.q), type: QTYPE(i.q) })).filter((i) => !weakLead(i.lead))
+  const poolLeads = []
+  const seenLead = new Set()
+  for (const p of pool) {
+    const lead = answerLead(p.answer, p.q)
+    if (weakLead(lead) || seenLead.has(lead)) continue
+    seenLead.add(lead)
+    poolLeads.push({ lead, type: QTYPE(p.q || '') })
+  }
   if (poolLeads.length < 4) return []
   const out = []
   for (const it of usable) {
-    const correct = lead(it.answer)
-    const distract = seededShuffle(poolLeads.filter((x) => x !== correct), it.q).slice(0, 3)
+    const correct = it.lead
+    // distractors answer the same kind of question (a fix for a fix, a detection for a detection)
+    const same = seededShuffle(poolLeads.filter((x) => x.lead !== correct && x.type === it.type), it.q)
+    const other = seededShuffle(poolLeads.filter((x) => x.lead !== correct && x.type !== it.type), `${it.q}#o`)
+    const distract = [...same, ...other].slice(0, 3).map((x) => x.lead)
     if (distract.length < 3) continue
     const options = seededShuffle([correct, ...distract], `${it.q}#opts`)
     out.push({

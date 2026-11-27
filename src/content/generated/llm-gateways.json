@@ -1,14 +1,170 @@
 [
  {
+  "id": "llm-gateways-001-what-is-an-llm-gateway",
+  "trackId": "llm-gateways",
+  "title": "What is an LLM Gateway?",
+  "summary": "Definition An LLM Gateway is an intermediary service between your application and one or more Large Language Model providers. It provides a centralized interface for communicating with models such as OpenAI, Anthropic,…",
+  "order": 1,
+  "objectives": [
+   "What is an LLM Gateway?"
+  ],
+  "labIds": [
+   "rate-limit"
+  ]
+ },
+ {
+  "id": "llm-gateways-002-why-do-we-need-an-llm-gateway",
+  "trackId": "llm-gateways",
+  "title": "Why do we need an LLM Gateway?",
+  "summary": "Let's understand the production problems that gateways help solve. Problem 1 — Multiple provider integrations Suppose you use three providers. Your application needs to manage different: - API endpoints. -…",
+  "order": 2,
+  "objectives": [
+   "Why do we need an LLM Gateway?"
+  ],
+  "labIds": [
+   "rate-limit"
+  ]
+ },
+ {
+  "id": "llm-gateways-003-llm-gateway-architecture",
+  "trackId": "llm-gateways",
+  "title": "LLM Gateway Architecture",
+  "summary": "Now let's understand how a production LLM Gateway works internally. High-level architecture Client Applications Chatbot · RAG · Agents · Backend APIs ↓ LLM Gateway Authentication Verify gateway key Rate Limiting Check…",
+  "order": 3,
+  "objectives": [
+   "LLM Gateway Architecture"
+  ],
+  "labIds": [
+   "retrieval",
+   "rate-limit"
+  ]
+ },
+ {
+  "id": "llm-gateways-004-llm-gateway-vs-api-gateway-vs-reverse-proxy",
+  "trackId": "llm-gateways",
+  "title": "LLM Gateway vs API Gateway vs Reverse Proxy",
+  "summary": "These three terms are related, but they have different primary responsibilities. A. API Gateway An API Gateway is a centralized entry point for managing API traffic. It commonly handles: - Authentication. -…",
+  "order": 4,
+  "objectives": [
+   "LLM Gateway vs API Gateway vs Reverse Proxy"
+  ],
+  "labIds": [
+   "chunking",
+   "rate-limit"
+  ]
+ },
+ {
+  "id": "llm-gateways-005-llm-gateway-vs-direct-llm-integration",
+  "trackId": "llm-gateways",
+  "title": "LLM Gateway vs Direct LLM Integration",
+  "summary": "This is one of the most important architectural decisions when building AI applications. A. Direct LLM Integration Your application directly communicates with the model provider. AI Application ↓ OpenAI SDK ↓ OpenAI API…",
+  "order": 5,
+  "objectives": [
+   "LLM Gateway vs Direct LLM Integration"
+  ],
+  "labIds": [
+   "rate-limit"
+  ]
+ },
+ {
+  "id": "llm-gateways-006-batch-1-revision-practice-llm-gateway-fundamentals",
+  "trackId": "llm-gateways",
+  "title": "Batch 1 — revision & practice: LLM Gateway Fundamentals",
+  "summary": "Batch 1 — Interview Questions Try answering these without looking at the explanations. 1. What is an LLM Gateway? Explain its purpose in a production AI architecture. 2. Why would an enterprise use an LLM Gateway…",
+  "order": 6,
+  "objectives": [
+   "Batch 1 — Interview Questions",
+   "Practical assignment"
+  ],
+  "labIds": [
+   "rate-limit"
+  ]
+ },
+ {
+  "id": "llm-gateways-007-provider-abstraction-unified-api",
+  "trackId": "llm-gateways",
+  "title": "Provider Abstraction — Unified API",
+  "summary": "What is provider abstraction? Provider abstraction means hiding provider-specific implementation details behind a common interface. Consider three LLM providers: - Interactive content unavailable: Entity - Interactive…",
+  "order": 7,
+  "objectives": [
+   "Provider Abstraction — Unified API"
+  ],
+  "labIds": [
+   "agent-loop"
+  ]
+ },
+ {
+  "id": "llm-gateways-008-model-routing",
+  "trackId": "llm-gateways",
+  "title": "Model Routing",
+  "summary": "What is model routing? Model routing is the process of selecting which LLM model should handle an incoming request. The gateway receives a request and decides where to send it based on configured rules. For example:…",
+  "order": 8,
+  "objectives": [
+   "Model Routing"
+  ],
+  "labIds": [
+   "agent-loop"
+  ]
+ },
+ {
+  "id": "llm-gateways-009-model-selection-strategies",
+  "trackId": "llm-gateways",
+  "title": "Model Selection Strategies",
+  "summary": "Model routing determines where a request goes. Model selection determines which model is the best fit for that request . This is an important production engineering decision. What factors should you consider? A common…",
+  "order": 9,
+  "objectives": [
+   "Model Selection Strategies"
+  ],
+  "labIds": [
+   "retrieval"
+  ]
+ },
+ {
+  "id": "llm-gateways-010-load-balancing",
+  "trackId": "llm-gateways",
+  "title": "Load Balancing",
+  "summary": "What is load balancing? Load balancing distributes incoming requests across multiple eligible model deployments or provider instances. The purpose is to prevent one deployment from becoming overloaded while others have…",
+  "order": 10,
+  "objectives": [
+   "Load Balancing"
+  ],
+  "labIds": [
+   "rate-limit"
+  ]
+ },
+ {
+  "id": "llm-gateways-011-failover-and-fallback-strategies",
+  "trackId": "llm-gateways",
+  "title": "Failover and Fallback Strategies",
+  "summary": "This is one of the most important concepts in production LLM Gateway Engineering. What is failover? Failover means switching from an unavailable or unhealthy deployment/provider to another eligible deployment/provider.…",
+  "order": 11,
+  "objectives": [
+   "Failover and Fallback Strategies"
+  ],
+  "labIds": [
+   "rate-limit"
+  ]
+ },
+ {
+  "id": "llm-gateways-012-batch-2-revision-practice-provider-abstraction-and-model-routing",
+  "trackId": "llm-gateways",
+  "title": "Batch 2 — revision & practice: Provider Abstraction and Model Routing",
+  "summary": "Batch 2 — Complete Revision Concept Remember this --- --- Provider abstraction One common interface for multiple providers Model routing Decide where a request should go Model selection Choose the model that best…",
+  "order": 12,
+  "objectives": [
+   "Batch 2 — Complete Revision",
+   "Practical assignment"
+  ],
+  "labIds": []
+ },
+ {
   "id": "llm-gateways-001-rate-limiting-rpm-tpm-and-concurrency-limits",
   "trackId": "llm-gateways",
   "title": "Rate Limiting — RPM, TPM and Concurrency Limits",
   "summary": "What is rate limiting? Rate limiting is a technique used to control how many requests or resources a client can consume within a specified time period. In an LLM Gateway, it prevents one user, application or tenant from…",
-  "order": 1,
+  "order": 13,
   "objectives": [
-   "Explain every point in “Rate Limiting — RPM, TPM and Concurrency Limits” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Rate Limiting — RPM, TPM and Concurrency Limits"
   ],
   "labIds": [
    "rate-limit"
@@ -19,11 +175,9 @@
   "trackId": "llm-gateways",
   "title": "Quota Management — User, Application and Tenant Quotas",
   "summary": "What is quota management? Quota management controls the total amount of a resource a user, application or tenant can consume within a specified period. Unlike a rate limit, which controls usage speed, a quota controls…",
-  "order": 2,
+  "order": 14,
   "objectives": [
-   "Explain every point in “Quota Management — User, Application and Tenant Quotas” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Quota Management — User, Application and Tenant Quotas"
   ],
   "labIds": [
    "rate-limit"
@@ -34,11 +188,9 @@
   "trackId": "llm-gateways",
   "title": "Virtual API Keys — Gateway Authentication and Key Management",
   "summary": "What is a Virtual API Key? A Virtual API Key (also called a gateway key or proxy key) is a credential issued by the LLM Gateway to an application, user or service. Instead of giving every application the actual OpenAI,…",
-  "order": 3,
+  "order": 15,
   "objectives": [
-   "Explain every point in “Virtual API Keys — Gateway Authentication and Key Management” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Virtual API Keys — Gateway Authentication and Key Management"
   ],
   "labIds": [
    "retrieval",
@@ -50,11 +202,9 @@
   "trackId": "llm-gateways",
   "title": "Token and Cost Management — Usage Calculation and Budget Enforcement",
   "summary": "This concept is extremely important for anyone building an LLM platform. What is token usage? LLMs process text as tokens rather than directly processing words. A token can represent: - A complete word. - Part of a…",
-  "order": 4,
+  "order": 16,
   "objectives": [
-   "Explain every point in “Token and Cost Management — Usage Calculation and Budget Enforcement” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Token and Cost Management — Usage Calculation and Budget Enforcement"
   ],
   "labIds": []
  },
@@ -63,11 +213,9 @@
   "trackId": "llm-gateways",
   "title": "Request Retries, Timeouts and Circuit Breaker — Production Reliability",
   "summary": "We introduced retry, backoff and circuit breaker in Batch 2. Now let's connect them to the traffic-management architecture and understand how to implement them together. A. Request timeout A timeout defines how long the…",
-  "order": 5,
+  "order": 17,
   "objectives": [
-   "Explain every point in “Request Retries, Timeouts and Circuit Breaker — Production Reliability” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Request Retries, Timeouts and Circuit Breaker — Production Reliability"
   ],
   "labIds": [
    "chunking",
@@ -75,15 +223,15 @@
   ]
  },
  {
-  "id": "llm-gateways-006-gateway-3-revision-sheet",
+  "id": "llm-gateways-018-batch-3-revision-practice-traffic-management-quotas-and-reliability",
   "trackId": "llm-gateways",
-  "title": "Gateway — 3. Revision Sheet",
-  "summary": "Concept One-line definition --- --- Rate limiting Controls how fast resources can be consumed Quota management Controls total allowed consumption Virtual API keys Gateway-managed credentials for applications and tenants…",
-  "order": 6,
+  "title": "Batch 3 — revision & practice: Traffic Management, Quotas and Reliability",
+  "summary": "What this batch covers In this batch, we'll learn how to protect an LLM Gateway from excessive requests, control usage across tenants, manage gateway credentials, track LLM costs, and keep requests reliable. The five…",
+  "order": 18,
   "objectives": [
-   "Explain every point in “Gateway — 3. Revision Sheet” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What this batch covers",
+   "Batch 3 — Revision Sheet",
+   "Test your understanding"
   ],
   "labIds": [
    "rate-limit"
@@ -94,11 +242,9 @@
   "trackId": "llm-gateways",
   "title": "LLM Response Caching — Exact and Semantic Caching",
   "summary": "What is LLM caching? LLM caching means storing the result of an earlier LLM request so that a later eligible request can reuse that result instead of calling the model again. Normally: User asks: \"What is RAG?\" ↓ LLM…",
-  "order": 7,
+  "order": 19,
   "objectives": [
-   "Explain every point in “LLM Response Caching — Exact and Semantic Caching” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "LLM Response Caching — Exact and Semantic Caching"
   ],
   "labIds": []
  },
@@ -107,11 +253,9 @@
   "trackId": "llm-gateways",
   "title": "Semantic Cache Architecture and Similarity Thresholds",
   "summary": "Now let's go deeper into semantic caching. What is a similarity threshold? A similarity threshold is the minimum similarity score required before the gateway considers a stored response eligible for reuse. For example:…",
-  "order": 8,
+  "order": 20,
   "objectives": [
-   "Explain every point in “Semantic Cache Architecture and Similarity Thresholds” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Semantic Cache Architecture and Similarity Thresholds"
   ],
   "labIds": [
    "cosine"
@@ -122,11 +266,9 @@
   "trackId": "llm-gateways",
   "title": "Streaming Responses — SSE and Token-by-Token Generation",
   "summary": "What is streaming? Normally, an LLM application waits for the entire response before showing anything to the user. Streaming sends generated output progressively as it becomes available. This makes an application feel…",
-  "order": 9,
+  "order": 21,
   "objectives": [
-   "Explain every point in “Streaming Responses — SSE and Token-by-Token Generation” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Streaming Responses — SSE and Token-by-Token Generation"
   ],
   "labIds": [
    "chunking",
@@ -138,11 +280,9 @@
   "trackId": "llm-gateways",
   "title": "Prompt Management — Templates, Centralization and Versioning",
   "summary": "What is prompt management? Prompt management is the practice of creating, storing, organizing, updating, testing and deploying prompts in a controlled way. Imagine an enterprise has 20 AI applications. Each application…",
-  "order": 10,
+  "order": 22,
   "objectives": [
-   "Explain every point in “Prompt Management — Templates, Centralization and Versioning” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Prompt Management — Templates, Centralization and Versioning"
   ],
   "labIds": [
    "retrieval"
@@ -153,1235 +293,138 @@
   "trackId": "llm-gateways",
   "title": "Prompt Optimization and Prompt Evaluation in a Gateway",
   "summary": "What is prompt optimization? Prompt optimization means improving prompts to achieve better model performance while controlling cost, latency and output quality. A good prompt should: - Clearly define the task. - Provide…",
-  "order": 11,
-  "objectives": [
-   "Explain every point in “Prompt Optimization and Prompt Evaluation in a Gateway” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval"
-  ]
- },
- {
-  "id": "llm-gateways-012-what-is-context-window-exhaustion",
-  "trackId": "llm-gateways",
-  "title": "What is context window exhaustion?",
-  "summary": "Every LLM has a maximum amount of information it can process in one request. This maximum is called the context window . It is measured in tokens. For example, imagine your selected model has a context window of 128,000…",
-  "order": 12,
-  "objectives": [
-   "Explain every point in “What is context window exhaustion?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-013-why-does-it-happen",
-  "trackId": "llm-gateways",
-  "title": "Why does it happen?",
-  "summary": "Common reasons: 1. Conversation history continuously grows. 2. RAG retrieves too many documents. 3. Chunk sizes are too large. 4. Tool outputs contain huge JSON responses. 5. Agents repeatedly append their reasoning and…",
-  "order": 13,
-  "objectives": [
-   "Explain every point in “Why does it happen?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "retrieval"
-  ]
- },
- {
-  "id": "llm-gateways-014-real-time-example",
-  "trackId": "llm-gateways",
-  "title": "Real-time example",
-  "summary": "Imagine an AI research agent. The user asks: Research the top 10 competitors and compare their products. The agent performs: 1. Search the internet. 2. Retrieve 20 documents. 3. Summarize each document. 4. Call another…",
-  "order": 14,
-  "objectives": [
-   "Explain every point in “Real-time example” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval"
-  ]
- },
- {
-  "id": "llm-gateways-015-what-is-token-budget-exhaustion",
-  "trackId": "llm-gateways",
-  "title": "What is token budget exhaustion?",
-  "summary": "Token budget exhaustion occurs when your application consumes more tokens than its allocated budget. This is different from context window exhaustion. Context window exhaustion Token budget exhaustion --- ---…",
-  "order": 15,
-  "objectives": [
-   "Explain every point in “What is token budget exhaustion?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-016-where-does-it-happen",
-  "trackId": "llm-gateways",
-  "title": "Where does it happen?",
-  "summary": "This is particularly dangerous in multi-agent systems because a single user task can trigger dozens of LLM calls.",
-  "order": 16,
-  "objectives": [
-   "Explain every point in “Where does it happen?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "multi-agent"
-  ]
- },
- {
-  "id": "llm-gateways-017-what-is-rate-limit-exhaustion",
-  "trackId": "llm-gateways",
-  "title": "What is rate limit exhaustion?",
-  "summary": "LLM providers restrict how frequently you can send requests and how many tokens you can process over a period. Two important limits: RPM — Requests Per Minute Maximum number of requests allowed per minute. TPM — Tokens…",
-  "order": 17,
-  "objectives": [
-   "Explain every point in “What is rate limit exhaustion?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "rate-limit"
-  ]
- },
- {
-  "id": "llm-gateways-018-example",
-  "trackId": "llm-gateways",
-  "title": "Example",
-  "summary": "Suppose your provider allows: - RPM = 60 - TPM = 100,000 Your application sends 100 requests within one minute. RPM limit example Allowed · (60 requests) Attempted · (100 requests) 40 requests may be rate-limited. Even…",
-  "order": 18,
-  "objectives": [
-   "Explain every point in “Example” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "rate-limit"
-  ]
- },
- {
-  "id": "llm-gateways-019-what-is-provider-quota-exhaustion",
-  "trackId": "llm-gateways",
-  "title": "What is provider quota exhaustion?",
-  "summary": "Rate limits and quotas are related, but they are not the same. A rate limit controls how quickly you can use a service. A quota controls how much total usage is allocated to your account or project over a defined…",
-  "order": 19,
-  "objectives": [
-   "Explain every point in “What is provider quota exhaustion?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "rate-limit"
-  ]
- },
- {
-  "id": "llm-gateways-020-what-is-latency",
-  "trackId": "llm-gateways",
-  "title": "What is latency?",
-  "summary": "Latency is the time taken to process a request and return a response. Example: Total latency = 25 seconds. The application may become slow even when the LLM provider is functioning correctly.",
-  "order": 20,
-  "objectives": [
-   "Explain every point in “What is latency?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-021-what-is-a-timeout",
-  "trackId": "llm-gateways",
-  "title": "What is a timeout?",
-  "summary": "A timeout occurs when an operation takes longer than the maximum time the application is willing to wait. Example: - Your application timeout is 10 seconds. - Provider takes 20 seconds. - Your application stops waiting…",
-  "order": 21,
-  "objectives": [
-   "Explain every point in “What is a timeout?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-022-what-is-a-provider-outage",
-  "trackId": "llm-gateways",
-  "title": "What is a provider outage?",
-  "summary": "A provider outage happens when an LLM provider's service becomes unavailable or partially unavailable. Examples of providers: - Interactive content unavailable: Entity - Interactive content unavailable: Entity -…",
-  "order": 22,
-  "objectives": [
-   "Explain every point in “What is a provider outage?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-023-real-world-example",
-  "trackId": "llm-gateways",
-  "title": "Real-world example",
-  "summary": "Imagine you build an AI customer-support application. Your primary model is hosted by Provider A. At 10 AM, Provider A experiences an outage. Your application receives: Your application can no longer answer customer…",
   "order": 23,
   "objectives": [
-   "Explain every point in “Real-world example” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Prompt Optimization and Prompt Evaluation in a Gateway"
   ],
-  "labIds": []
+  "labIds": [
+   "retrieval"
+  ]
  },
  {
-  "id": "llm-gateways-024-what-is-model-unavailability",
+  "id": "llm-gateways-024-batch-4-revision-practice-caching-streaming-and-prompt-management",
   "trackId": "llm-gateways",
-  "title": "What is model unavailability?",
-  "summary": "Model unavailability happens when the provider is operating, but the particular model you requested cannot be accessed. This is different from a complete provider outage. Example: Your application uses Model Y, so your…",
+  "title": "Batch 4 — revision & practice: Caching, Streaming and Prompt Management",
+  "summary": "What this batch covers In this batch, we'll learn how to reduce LLM costs, improve response speed, deliver responses in real time, centrally manage prompts, and evaluate prompt quality. The five concepts: 1. LLM…",
   "order": 24,
   "objectives": [
-   "Explain every point in “What is model unavailability?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What this batch covers",
+   "Batch 4 — Complete Revision Sheet",
+   "Practical assignment"
   ],
-  "labIds": []
+  "labIds": [
+   "rate-limit"
+  ]
  },
  {
-  "id": "llm-gateways-025-how-to-detect-it",
+  "id": "llm-gateways-025-llm-gateway-observability",
   "trackId": "llm-gateways",
-  "title": "How to detect it?",
-  "summary": "Check: 1. Model identifier. 2. Provider model catalog. 3. Region and deployment configuration. 4. Account permissions. 5. Provider error code and message. 6. Model lifecycle and retirement notices.",
+  "title": "LLM Gateway Observability",
+  "summary": "1.1 What is observability? Observability is the ability to understand what is happening inside your LLM Gateway by examining the information it produces. Imagine your application sends a request to an LLM Gateway: The…",
   "order": 25,
   "objectives": [
-   "Explain every point in “How to detect it?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is observability?",
+   "Three pillars of observability",
+   "Logs — What happened?",
+   "Metrics — How much and how often?",
+   "Tracing — Where did the time go?",
+   "Distributed request trace"
   ],
-  "labIds": []
+  "labIds": [
+   "rate-limit"
+  ]
  },
  {
-  "id": "llm-gateways-026-what-are-these-errors",
+  "id": "llm-gateways-026-guardrails-and-security-policies-at-the-gateway",
   "trackId": "llm-gateways",
-  "title": "What are these errors?",
-  "summary": "When your application calls an LLM API, the provider responds with an HTTP status code. These codes help identify the failure. Two important categories: - HTTP 429 — Too many requests or quota/rate-limit related…",
+  "title": "Guardrails and Security Policies at the Gateway",
+  "summary": "2.1 What are gateway guardrails? Guardrails are controls that check incoming requests and outgoing model responses against defined policies. For example, imagine a banking chatbot. A user asks: Show me another…",
   "order": 26,
   "objectives": [
-   "Explain every point in “What are these errors?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What are gateway guardrails?",
+   "Gateway guardrail architecture",
+   "Types of gateway guardrails",
+   "Gateway security versus application security",
+   "Streaming guardrail challenge",
+   "How to detect and fix guardrail failures"
   ],
-  "labIds": []
+  "labIds": [
+   "chunking",
+   "retrieval",
+   "injection",
+   "rate-limit"
+  ]
  },
  {
-  "id": "llm-gateways-027-http-429-too-many-requests",
+  "id": "llm-gateways-027-multi-tenant-architecture-and-isolation",
   "trackId": "llm-gateways",
-  "title": "HTTP 429 — Too Many Requests",
-  "summary": "Example: It usually means that the request exceeded an applicable rate limit or quota restriction. Possible reasons: - RPM exceeded. - TPM exceeded. - Too many concurrent requests. - Account or project quota exhausted.…",
+  "title": "Multi-Tenant Architecture and Isolation",
+  "summary": "3.1 What is multi-tenancy? Multi-tenancy means multiple customers or organizations use the same application infrastructure while keeping their data, configurations, usage and permissions isolated. Example: Imagine you…",
   "order": 27,
   "objectives": [
-   "Explain every point in “HTTP 429 — Too Many Requests” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is multi-tenancy?",
+   "Multi-tenant LLM Gateway",
+   "Why is tenant isolation important?",
+   "Three isolation strategies",
+   "What must be tenant-isolated in an LLM Gateway?",
+   "Tenant identity must be trusted"
   ],
   "labIds": [
+   "retrieval",
    "rate-limit"
   ]
  },
  {
-  "id": "llm-gateways-028-http-5xx-server-side-failures",
+  "id": "llm-gateways-028-gateway-deployment-scalability-and-high-availability",
   "trackId": "llm-gateways",
-  "title": "HTTP 5xx — Server-side failures",
-  "summary": "These errors indicate a server-side or upstream problem. Common codes: Code Meaning Typical interpretation --- --- --- 500 Internal Server Error Unexpected server error 502 Bad Gateway Invalid or failed upstream…",
+  "title": "Gateway Deployment, Scalability and High Availability",
+  "summary": "4.1 What happens when your gateway becomes popular? Initially, your architecture may be: Suppose you have 10 users. This might be sufficient. Now imagine you have 100,000 users. Problems can appear: - Gateway CPU and…",
   "order": 28,
   "objectives": [
-   "Explain every point in “HTTP 5xx — Server-side failures” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What happens when your gateway becomes popular?",
+   "Horizontal scaling",
+   "Horizontally scalable gateway",
+   "Stateless gateway architecture",
+   "High availability",
+   "Health checks"
   ],
-  "labIds": []
+  "labIds": [
+   "rate-limit",
+   "multi-agent"
+  ]
  },
  {
-  "id": "llm-gateways-029-how-to-fix-5xx-errors",
+  "id": "llm-gateways-029-building-a-production-style-llm-gateway-using-fastapi-and-litellm",
   "trackId": "llm-gateways",
-  "title": "How to fix 5xx errors?",
-  "summary": "1. Retry transient failures with exponential backoff and jitter. 2. Apply request deadlines. 3. Use circuit breakers. 4. Switch to an approved fallback provider if appropriate. 5. Check provider status and network…",
+  "title": "Building a Production-Style LLM Gateway Using FastAPI and LiteLLM",
+  "summary": "Now let's connect the concepts and build a practical gateway. 5.1 What are we building? We will create an LLM Gateway that: - Accepts client requests. - Authenticates the client. - Identifies its tenant. - Enforces a…",
   "order": 29,
   "objectives": [
-   "Explain every point in “How to fix 5xx errors?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What are we building?",
+   "Our LLM Gateway architecture",
+   "What is LiteLLM?",
+   "Install dependencies",
+   "Create the FastAPI Gateway",
+   "Test the API"
   ],
   "labIds": [
+   "chunking",
+   "retrieval",
    "rate-limit"
   ]
  },
  {
-  "id": "llm-gateways-030-what-is-model-deprecation",
+  "id": "llm-gateways-030-batch-5-revision-practice",
   "trackId": "llm-gateways",
-  "title": "What is model deprecation?",
-  "summary": "Model deprecation happens when an LLM provider announces that a particular model or model version will be retired or no longer supported. Example: Model retirement schedules and policies vary by provider.",
+  "title": "Batch 5 — revision & practice",
+  "summary": "What this batch covers Final batch: Advanced Gateway Engineering (Batch 5 of 5) In this batch, we'll cover the five concepts required to design, build, deploy, and operate a production-ready LLM Gateway. 1. LLM Gateway…",
   "order": 30,
   "objectives": [
-   "Explain every point in “What is model deprecation?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-031-what-is-a-model-version-change",
-  "trackId": "llm-gateways",
-  "title": "What is a model version change?",
-  "summary": "Sometimes a model identifier stays similar, but the provider updates the underlying model or its behavior. This can change: - Response style. - Reasoning behavior. - Tool calling. - Structured output. - Latency. - Token…",
-  "order": 31,
-  "objectives": [
-   "Explain every point in “What is a model version change?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What this batch covers",
+   "Important concepts to remember",
+   "Interview and self-assessment"
   ],
   "labIds": [
-   "agent-loop"
-  ]
- },
- {
-  "id": "llm-gateways-032-what-is-provider-response-inconsistency",
-  "trackId": "llm-gateways",
-  "title": "What is provider response inconsistency?",
-  "summary": "The same or similar request can produce different outputs across models, providers or even repeated calls to the same model. This is especially important when your application depends on predictable output. For example,…",
-  "order": 32,
-  "objectives": [
-   "Explain every point in “What is provider response inconsistency?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-033-what-is-hallucination",
-  "trackId": "llm-gateways",
-  "title": "What is hallucination?",
-  "summary": "Hallucination happens when an LLM generates information that sounds convincing but is incorrect, unsupported or fabricated. Simple definition: The model gives an answer confidently without having reliable evidence for…",
-  "order": 33,
-  "objectives": [
-   "Explain every point in “What is hallucination?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-034-why-does-hallucination-happen",
-  "trackId": "llm-gateways",
-  "title": "Why does hallucination happen?",
-  "summary": "LLMs generate likely next tokens based on learned patterns. They are not automatically connected to a verified knowledge database. Common causes: - Missing information in training data. - Outdated model knowledge. -…",
-  "order": 34,
-  "objectives": [
-   "Explain every point in “Why does hallucination happen?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval"
-  ]
- },
- {
-  "id": "llm-gateways-035-where-does-hallucination-happen",
-  "trackId": "llm-gateways",
-  "title": "Where does hallucination happen?",
-  "summary": "Hallucination in a RAG application User asks a question ↓ Retriever Retrieves irrelevant documents ↓ LLM receives poor evidence Missing or incorrect context ↓ Hallucinated answer Confident but unsupported response…",
-  "order": 35,
-  "objectives": [
-   "Explain every point in “Where does hallucination happen?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval",
-   "multi-agent"
-  ]
- },
- {
-  "id": "llm-gateways-036-how-to-detect-hallucinations",
-  "trackId": "llm-gateways",
-  "title": "How to detect hallucinations?",
-  "summary": "Look for: Signal What to check --- --- Unsupported claims No supporting source Citation mismatch Citation does not support the claim Contradictory answers Different answers for the same facts Low retrieval relevance…",
-  "order": 36,
-  "objectives": [
-   "Explain every point in “How to detect hallucinations?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval"
-  ]
- },
- {
-  "id": "llm-gateways-037-how-to-fix-hallucinations",
-  "trackId": "llm-gateways",
-  "title": "How to fix hallucinations?",
-  "summary": "Solution 1 — RAG grounding Provide relevant, trusted documents as evidence. --- Solution 2 — Source citations Require answers to reference supporting document IDs or passages. --- Solution 3 — Abstention Instruct the…",
-  "order": 37,
-  "objectives": [
-   "Explain every point in “How to fix hallucinations?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "retrieval"
-  ]
- },
- {
-  "id": "llm-gateways-038-what-is-prompt-sensitivity",
-  "trackId": "llm-gateways",
-  "title": "What is prompt sensitivity?",
-  "summary": "Prompt sensitivity means small changes in the wording, structure or formatting of a prompt can produce significantly different model outputs. Example: Prompt A: Prompt B: These prompts can produce very different…",
-  "order": 38,
-  "objectives": [
-   "Explain every point in “What is prompt sensitivity?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-039-what-are-instruction-conflicts",
-  "trackId": "llm-gateways",
-  "title": "What are instruction conflicts?",
-  "summary": "Instruction conflicts occur when an LLM receives multiple instructions that contradict each other or cannot all be followed. Example: System instruction: User instruction: The model now has conflicting format…",
-  "order": 39,
-  "objectives": [
-   "Explain every point in “What are instruction conflicts?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval"
-  ]
- },
- {
-  "id": "llm-gateways-040-what-is-invalid-structured-output",
-  "trackId": "llm-gateways",
-  "title": "What is invalid structured output?",
-  "summary": "It happens when the LLM returns output that does not match the format expected by your application. Common expected formats: - JSON. - XML. - Pydantic models. - Tool-call argument schemas. - Database extraction schemas.…",
-  "order": 40,
-  "objectives": [
-   "Explain every point in “What is invalid structured output?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-041-what-is-response-truncation",
-  "trackId": "llm-gateways",
-  "title": "What is response truncation?",
-  "summary": "Truncation happens when the model's output stops before the requested response is complete. Example: User asks: Generate a complete Python application with 10 functions. The model returns: Then stops unexpectedly. The…",
-  "order": 41,
-  "objectives": [
-   "Explain every point in “What is response truncation?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-042-what-is-poor-retrieval",
-  "trackId": "llm-gateways",
-  "title": "What is poor retrieval?",
-  "summary": "Poor retrieval happens when your RAG system fails to retrieve the correct or most relevant documents for a user's query. The answer may exist in your knowledge base, but the retriever cannot find it. Visual explanation…",
-  "order": 42,
-  "objectives": [
-   "Explain every point in “What is poor retrieval?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "retrieval"
-  ]
- },
- {
-  "id": "llm-gateways-043-why-does-poor-retrieval-happen",
-  "trackId": "llm-gateways",
-  "title": "Why does poor retrieval happen?",
-  "summary": "Common causes: - Incorrect embedding model. - Poor document chunking. - Wrong similarity metric. - Low-quality documents. - Incorrect top-k configuration. - Missing metadata filters. - Query and document vocabulary…",
-  "order": 43,
-  "objectives": [
-   "Explain every point in “Why does poor retrieval happen?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "cosine",
-   "retrieval"
-  ]
- },
- {
-  "id": "llm-gateways-044-how-to-detect-poor-retrieval",
-  "trackId": "llm-gateways",
-  "title": "How to detect poor retrieval?",
-  "summary": "Monitor these metrics: Metric What it tells you --- --- Recall@K Did the correct document appear in the top K results? Precision@K How many retrieved documents were relevant? MRR How high was the first relevant result?…",
-  "order": 44,
-  "objectives": [
-   "Explain every point in “How to detect poor retrieval?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval"
-  ]
- },
- {
-  "id": "llm-gateways-045-how-to-fix-poor-retrieval",
-  "trackId": "llm-gateways",
-  "title": "How to fix poor retrieval?",
-  "summary": "Solution 1 — Improve embeddings Choose an embedding model appropriate for your language and domain. Solution 2 — Hybrid search Combine vector search and keyword search. Hybrid retrieval architecture User query ↓ Vector…",
-  "order": 45,
-  "objectives": [
-   "Explain every point in “How to fix poor retrieval?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "retrieval"
-  ]
- },
- {
-  "id": "llm-gateways-046-what-is-chunking",
-  "trackId": "llm-gateways",
-  "title": "What is chunking?",
-  "summary": "Chunking means dividing large documents into smaller pieces before storing them in a vector database. Why? Embedding models and retrieval systems work with manageable text segments rather than requiring an entire large…",
-  "order": 46,
-  "objectives": [
-   "Explain every point in “What is chunking?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "retrieval"
-  ]
- },
- {
-  "id": "llm-gateways-047-why-do-chunking-problems-happen",
-  "trackId": "llm-gateways",
-  "title": "Why do chunking problems happen?",
-  "summary": "Three common problems: A. Chunks are too small Original text: Bad chunks: The meaning is split across chunks. B. Chunks are too large A single chunk contains 30 pages. Problems: - Embedding may exceed model limits. -…",
-  "order": 47,
-  "objectives": [
-   "Explain every point in “Why do chunking problems happen?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "retrieval"
-  ]
- },
- {
-  "id": "llm-gateways-048-how-to-detect-chunking-problems",
-  "trackId": "llm-gateways",
-  "title": "How to detect chunking problems?",
-  "summary": "- Relevant information split across chunks. - Low retrieval recall. - Incomplete answers. - Missing table headers or section titles. - Large numbers of irrelevant chunks. - Answers missing important exceptions. Inspect…",
-  "order": 48,
-  "objectives": [
-   "Explain every point in “How to detect chunking problems?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "retrieval"
-  ]
- },
- {
-  "id": "llm-gateways-049-how-to-fix-chunking-problems",
-  "trackId": "llm-gateways",
-  "title": "How to fix chunking problems?",
-  "summary": "Strategy When useful --- --- Fixed-size chunking Simple documents Recursive chunking General-purpose RAG Semantic chunking Natural topic boundaries Structure-aware chunking PDFs, headings, sections Parent-child chunking…",
-  "order": 49,
-  "objectives": [
-   "Explain every point in “How to fix chunking problems?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "retrieval"
-  ]
- },
- {
-  "id": "llm-gateways-050-what-are-embeddings",
-  "trackId": "llm-gateways",
-  "title": "What are embeddings?",
-  "summary": "Embeddings convert text into numerical vectors that represent semantic information. Example: An embedding model converts this sentence into a vector: Semantically similar text should generally have nearby vector…",
-  "order": 50,
-  "objectives": [
-   "Explain every point in “What are embeddings?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-051-what-is-embedding-mismatch",
-  "trackId": "llm-gateways",
-  "title": "What is embedding mismatch?",
-  "summary": "Embedding mismatch occurs when document embeddings and query embeddings are incompatible or poorly aligned. A common example is using one embedding model to index documents and a different incompatible model to embed…",
-  "order": 51,
-  "objectives": [
-   "Explain every point in “What is embedding mismatch?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-052-what-is-stale-data",
-  "trackId": "llm-gateways",
-  "title": "What is stale data?",
-  "summary": "Stale data means your RAG system retrieves outdated information instead of the latest approved information. Incorrect documents may also contain: - Wrong facts. - Duplicate policies. - Contradictory versions. -…",
-  "order": 52,
-  "objectives": [
-   "Explain every point in “What is stale data?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval"
-  ]
- },
- {
-  "id": "llm-gateways-053-how-to-detect-stale-documents",
-  "trackId": "llm-gateways",
-  "title": "How to detect stale documents?",
-  "summary": "Track: - Document version. - Document last-modified timestamp. - Indexing timestamp. - Source document hash. - Document approval status. - Number of duplicate versions. - Retrieval results against known current facts.…",
-  "order": 53,
-  "objectives": [
-   "Explain every point in “How to detect stale documents?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval"
-  ]
- },
- {
-  "id": "llm-gateways-054-what-is-retrieval-noise",
-  "trackId": "llm-gateways",
-  "title": "What is retrieval noise?",
-  "summary": "Retrieval noise occurs when your RAG system retrieves unnecessary, irrelevant or low-quality documents and passes them to the LLM. Unlike poor retrieval, where the correct document may be missing, retrieval noise…",
-  "order": 54,
-  "objectives": [
-   "Explain every point in “What is retrieval noise?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval"
-  ]
- },
- {
-  "id": "llm-gateways-055-how-to-detect-retrieval-noise",
-  "trackId": "llm-gateways",
-  "title": "How to detect retrieval noise?",
-  "summary": "Monitor: - Precision@K. - Duplicate retrieval rate. - Average relevance score. - Context utilization. - Irrelevant context ratio. - Answer faithfulness. - Tokens consumed per retrieved document.",
-  "order": 55,
-  "objectives": [
-   "Explain every point in “How to detect retrieval noise?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval"
-  ]
- },
- {
-  "id": "llm-gateways-056-how-to-fix-it",
-  "trackId": "llm-gateways",
-  "title": "How to fix it?",
-  "summary": "Solution 1 — Tune top-k Retrieve only the number of documents that evaluation shows are useful. Solution 2 — Similarity threshold Filter out results below a tested relevance threshold. Be careful: score ranges and…",
-  "order": 56,
-  "objectives": [
-   "Explain every point in “How to fix it?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "cosine",
-   "retrieval",
-   "multi-agent"
-  ]
- },
- {
-  "id": "llm-gateways-057-what-is-conversation-memory-loss",
-  "trackId": "llm-gateways",
-  "title": "What is conversation memory loss?",
-  "summary": "Conversation memory loss happens when an AI application cannot access important information from previous interactions. The model may behave as if it has forgotten what the user said earlier. Important: LLMs do not…",
-  "order": 57,
-  "objectives": [
-   "Explain every point in “What is conversation memory loss?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-058-what-is-memory-pollution",
-  "trackId": "llm-gateways",
-  "title": "What is memory pollution?",
-  "summary": "Memory pollution happens when an AI application stores incorrect, irrelevant, temporary or malicious information in its memory. Later, the application retrieves that information and uses it as if it were reliable.…",
-  "order": 58,
-  "objectives": [
-   "Explain every point in “What is memory pollution?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval"
-  ]
- },
- {
-  "id": "llm-gateways-059-what-is-memory-inconsistency",
-  "trackId": "llm-gateways",
-  "title": "What is memory inconsistency?",
-  "summary": "Memory inconsistency occurs when different parts of an AI application maintain conflicting versions of the same information. Unlike memory pollution, where bad information is stored, inconsistency means multiple stored…",
-  "order": 59,
-  "objectives": [
-   "Explain every point in “What is memory inconsistency?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-060-what-is-context-overflow",
-  "trackId": "llm-gateways",
-  "title": "What is context overflow?",
-  "summary": "Context overflow occurs when the total tokens sent to the LLM exceed the model's available context capacity. Remember, the context window can include: - System prompt. - Developer prompt. - User message. - Conversation…",
-  "order": 60,
-  "objectives": [
-   "Explain every point in “What is context overflow?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval"
-  ]
- },
- {
-  "id": "llm-gateways-061-what-is-long-term-memory-retrieval-failure",
-  "trackId": "llm-gateways",
-  "title": "What is long-term memory retrieval failure?",
-  "summary": "It happens when an AI application has successfully stored information for future use but cannot retrieve the correct memory when needed. This is different from conversation memory loss. - Memory loss: Information was…",
-  "order": 61,
-  "objectives": [
-   "Explain every point in “What is long-term memory retrieval failure?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval"
-  ]
- },
- {
-  "id": "llm-gateways-062-what-is-an-infinite-agent-loop",
-  "trackId": "llm-gateways",
-  "title": "What is an infinite agent loop?",
-  "summary": "An infinite agent loop occurs when an AI agent repeatedly executes the same or similar actions without making meaningful progress toward its goal. The agent doesn't reach a successful completion state. Visual…",
-  "order": 62,
-  "objectives": [
-   "Explain every point in “What is an infinite agent loop?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "agent-loop"
-  ]
- },
- {
-  "id": "llm-gateways-063-how-to-detect-infinite-loops",
-  "trackId": "llm-gateways",
-  "title": "How to detect infinite loops?",
-  "summary": "Monitor these signals: Signal What it indicates --- --- Iteration count increases Agent is running too long Same tool called repeatedly Possible action loop Same arguments repeated No meaningful progress Token usage…",
-  "order": 63,
-  "objectives": [
-   "Explain every point in “How to detect infinite loops?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-064-what-is-an-agent-getting-stuck",
-  "trackId": "llm-gateways",
-  "title": "What is an agent getting stuck?",
-  "summary": "An agent gets stuck when it cannot determine the next valid action or make progress toward its goal. Unlike an infinite loop, the agent may not repeatedly execute actions. It may simply stop progressing. Difference -…",
-  "order": 64,
-  "objectives": [
-   "Explain every point in “What is an agent getting stuck?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-065-what-is-premature-termination",
-  "trackId": "llm-gateways",
-  "title": "What is premature termination?",
-  "summary": "Premature termination happens when an AI agent stops execution before completing the user's requested task. The agent may return an answer that looks complete, even though important steps were never executed.",
-  "order": 65,
-  "objectives": [
-   "Explain every point in “What is premature termination?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-066-visual-explanation",
-  "trackId": "llm-gateways",
-  "title": "Visual explanation",
-  "summary": "Expected versus actual execution Expected workflow 1. Search information 2. Analyze information 3. Generate report 4. Validate report 5. Return final report --- Actual workflow 1. Search information 2. Analyze…",
-  "order": 66,
-  "objectives": [
-   "Explain every point in “Visual explanation” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-067-what-is-repeated-reasoning-and-action",
-  "trackId": "llm-gateways",
-  "title": "What is repeated reasoning and action?",
-  "summary": "It occurs when an AI agent unnecessarily repeats its planning, reasoning or tool execution instead of reusing previous results. This may happen even when the agent is not in a strict infinite loop. Example User: Find…",
-  "order": 67,
-  "objectives": [
-   "Explain every point in “What is repeated reasoning and action?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-068-what-is-goal-drift",
-  "trackId": "llm-gateways",
-  "title": "What is goal drift?",
-  "summary": "Goal drift occurs when an AI agent gradually moves away from the original user objective while executing a multi-step task. The agent starts with the correct goal but eventually focuses on unrelated or unnecessary work.…",
-  "order": 68,
-  "objectives": [
-   "Explain every point in “What is goal drift?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-069-what-is-tool-selection-failure",
-  "trackId": "llm-gateways",
-  "title": "What is tool selection failure?",
-  "summary": "Tool selection failure happens when an AI agent fails to select the correct tool required to complete a task. The tool exists, is available and may be working correctly, but the agent chooses the wrong action or doesn't…",
-  "order": 69,
-  "objectives": [
-   "Explain every point in “What is tool selection failure?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-070-what-is-incorrect-tool-argument-generation",
-  "trackId": "llm-gateways",
-  "title": "What is incorrect tool argument generation?",
-  "summary": "It happens when an AI agent selects the correct tool but sends incorrect, incomplete or invalid arguments. The tool itself may be perfectly implemented. The failure is in the parameters generated by the model.",
-  "order": 70,
-  "objectives": [
-   "Explain every point in “What is incorrect tool argument generation?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-071-what-is-tool-execution-failure",
-  "trackId": "llm-gateways",
-  "title": "What is tool execution failure?",
-  "summary": "Tool execution failure happens when an agent selects the correct tool and provides valid arguments, but the tool fails while executing. The problem may be inside the external API, network, database, authentication layer…",
-  "order": 71,
-  "objectives": [
-   "Explain every point in “What is tool execution failure?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-072-what-are-tool-output-parsing-errors",
-  "trackId": "llm-gateways",
-  "title": "What are tool output parsing errors?",
-  "summary": "These errors occur when an agent receives a tool response but cannot correctly understand, parse or extract the required information. The tool may have executed successfully. The problem occurs while interpreting its…",
-  "order": 72,
-  "objectives": [
-   "Explain every point in “What are tool output parsing errors?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-073-what-are-tool-permission-and-side-effect-problems",
-  "trackId": "llm-gateways",
-  "title": "What are tool permission and side-effect problems?",
-  "summary": "These occur when an AI agent: - Executes a tool without sufficient authorization. - Performs an action the user didn't approve. - Performs the wrong action. - Executes an action multiple times. - Causes unintended…",
-  "order": 73,
-  "objectives": [
-   "Explain every point in “What are tool permission and side-effect problems?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-074-what-is-authentication-failure",
-  "trackId": "llm-gateways",
-  "title": "What is authentication failure?",
-  "summary": "Authentication is the process of verifying who or what is making a request . Authentication failure happens when an application, agent or service cannot prove its identity to another service. For example: Your AI agent…",
-  "order": 74,
-  "objectives": [
-   "Explain every point in “What is authentication failure?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-075-how-authentication-works",
-  "trackId": "llm-gateways",
-  "title": "How authentication works",
-  "summary": "AI Agent Wants to access customer API ↓ Authentication Service Validates API key / access token ↓ (Valid) Identity verified Request proceeds to authorization. (Invalid) 401 Unauthorized Request rejected.",
-  "order": 75,
-  "objectives": [
-   "Explain every point in “How authentication works” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-076-why-does-authentication-fail",
-  "trackId": "llm-gateways",
-  "title": "Why does authentication fail?",
-  "summary": "Cause Explanation --- --- Invalid API key Incorrect credentials Expired access token Token lifetime ended Missing token Authorization header absent Incorrect token format Wrong Bearer format or malformed token Secret…",
-  "order": 76,
-  "objectives": [
-   "Explain every point in “Why does authentication fail?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-077-real-time-ai-agent-example",
-  "trackId": "llm-gateways",
-  "title": "Real-time AI agent example",
-  "summary": "Your agent calls: API response: The agent cannot retrieve customer information because its authentication token is expired.",
-  "order": 77,
-  "objectives": [
-   "Explain every point in “Real-time AI agent example” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval"
-  ]
- },
- {
-  "id": "llm-gateways-078-what-is-authorization-failure",
-  "trackId": "llm-gateways",
-  "title": "What is authorization failure?",
-  "summary": "Authorization determines what an authenticated identity is allowed to do . Authorization failure occurs when a user, agent or application attempts to access a resource or perform an action for which it lacks permission.…",
-  "order": 78,
-  "objectives": [
-   "Explain every point in “What is authorization failure?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-079-what-are-api-rate-limits",
-  "trackId": "llm-gateways",
-  "title": "What are API rate limits?",
-  "summary": "An API rate limit restricts how many requests a client can send within a specified period. For example: If your AI application sends 150 requests in one minute, the service may reject the additional requests. This…",
-  "order": 79,
-  "objectives": [
-   "Explain every point in “What are API rate limits?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "rate-limit"
-  ]
- },
- {
-  "id": "llm-gateways-080-why-is-this-particularly-important-in-agentic-ai",
-  "trackId": "llm-gateways",
-  "title": "Why is this particularly important in Agentic AI?",
-  "summary": "A traditional application may make one API request for one user action. An agentic application may make multiple calls: - LLM calls a planning agent. - Planning agent calls a search API. - Search agent calls another…",
-  "order": 80,
-  "objectives": [
-   "Explain every point in “Why is this particularly important in Agentic AI?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval",
-   "rate-limit"
-  ]
- },
- {
-  "id": "llm-gateways-081-common-rate-limit-types",
-  "trackId": "llm-gateways",
-  "title": "Common rate-limit types",
-  "summary": "Limit Meaning --- --- RPM Requests per minute RPS Requests per second TPM Tokens per minute Daily quota Maximum requests per day Concurrent requests Maximum simultaneous requests Bandwidth limit Maximum data transfer…",
-  "order": 81,
-  "objectives": [
-   "Explain every point in “Common rate-limit types” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "rate-limit"
-  ]
- },
- {
-  "id": "llm-gateways-082-what-are-network-and-dns-failures",
-  "trackId": "llm-gateways",
-  "title": "What are network and DNS failures?",
-  "summary": "These occur when your AI application cannot establish communication with an external service. Your agent may select the correct tool, generate valid arguments and have valid credentials, but the request cannot reach the…",
-  "order": 82,
-  "objectives": [
-   "Explain every point in “What are network and DNS failures?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-083-how-dns-works",
-  "trackId": "llm-gateways",
-  "title": "How DNS works",
-  "summary": "Suppose your agent wants to call: The application needs to find the server's IP address. AI application requests api.example.com ↓ DNS resolver Looks up the domain's IP address ↓ (Success) IP resolved Application…",
-  "order": 83,
-  "objectives": [
-   "Explain every point in “How DNS works” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-084-why-do-network-failures-happen",
-  "trackId": "llm-gateways",
-  "title": "Why do network failures happen?",
-  "summary": "Problem Explanation --- --- DNS resolution failure Domain cannot be resolved Connection refused Destination rejects connection Connection reset Connection unexpectedly terminated Firewall restriction Traffic blocked by…",
-  "order": 84,
-  "objectives": [
-   "Explain every point in “Why do network failures happen?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-085-what-is-a-retry",
-  "trackId": "llm-gateways",
-  "title": "What is a retry?",
-  "summary": "A retry means attempting a failed request again. For example: Retries are useful for temporary failures. But retries can create serious problems when the original request may already have succeeded.",
-  "order": 85,
-  "objectives": [
-   "Explain every point in “What is a retry?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-086-what-is-a-duplicate-request-problem",
-  "trackId": "llm-gateways",
-  "title": "What is a duplicate request problem?",
-  "summary": "A duplicate request occurs when the same operation is executed more than once unintentionally. Imagine a payment API. The application sends a payment request for ₹5,000. The payment provider processes it successfully,…",
-  "order": 86,
-  "objectives": [
-   "Explain every point in “What is a duplicate request problem?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-087-why-do-timeouts-happen",
-  "trackId": "llm-gateways",
-  "title": "Why do timeouts happen?",
-  "summary": "- Slow external API. - Network congestion. - Database query taking too long. - Provider overload. - Long-running agent execution. - Large payloads. - Incorrect timeout configuration. - Downstream service delays.",
-  "order": 87,
-  "objectives": [
-   "Explain every point in “Why do timeouts happen?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-088-why-do-duplicate-requests-happen",
-  "trackId": "llm-gateways",
-  "title": "Why do duplicate requests happen?",
-  "summary": "- Automatic retries. - Client resubmission. - Network interruptions. - Agent repeats the same tool call. - Multiple workers process the same task. - Message queue redelivery. - Missing idempotency mechanisms.",
-  "order": 88,
-  "objectives": [
-   "Explain every point in “Why do duplicate requests happen?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-089-what-is-idempotency",
-  "trackId": "llm-gateways",
-  "title": "What is idempotency?",
-  "summary": "Idempotency means that repeating the same operation with the same idempotency key produces the same intended effect as performing it once. For example: Your application sends a payment request with: The first request…",
-  "order": 89,
-  "objectives": [
-   "Explain every point in “What is idempotency?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-090-how-to-detect-these-problems",
-  "trackId": "llm-gateways",
-  "title": "How to detect these problems?",
-  "summary": "Monitor: Metric What it tells you --- --- Timeout rate How often requests exceed deadlines Retry count How many repeated attempts occur Duplicate transaction count Repeated side effects API latency How long services…",
-  "order": 90,
-  "objectives": [
-   "Explain every point in “How to detect these problems?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-091-how-to-fix-them",
-  "trackId": "llm-gateways",
-  "title": "How to fix them?",
-  "summary": "Solution 1 — Configure timeouts Set appropriate connection and response timeouts for each dependency. Solution 2 — Bounded retries Don't retry indefinitely. Set a maximum attempt count and overall deadline. Solution 3 —…",
-  "order": 91,
-  "objectives": [
-   "Explain every point in “How to fix them?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "llm-gateways-092-practical-python-example",
-  "trackId": "llm-gateways",
-  "title": "Practical Python example",
-  "summary": "Here is a simplified example of safe retry behavior for an API that supports idempotency keys. In a real system: - The key must remain the same for retries of the same logical payment. - A new payment order must have a…",
-  "order": 92,
-  "objectives": [
-   "Explain every point in “Practical Python example” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "rate-limit",
-   "multi-agent"
-  ]
- },
- {
-  "id": "llm-gateways-093-gateway-1-llm-gateway-fundamentals",
-  "trackId": "llm-gateways",
-  "title": "Gateway — 1. LLM Gateway Fundamentals",
-  "summary": "1. What is an LLM Gateway? 2. Why do we need an LLM Gateway? 3. LLM Gateway Architecture 4. LLM Gateway vs API Gateway vs Reverse Proxy 5. LLM Gateway vs Direct LLM Integration --- 1. What is an LLM Gateway? Definition…",
-  "order": 93,
-  "objectives": [
-   "Explain every point in “Gateway — 1. LLM Gateway Fundamentals” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "retrieval",
-   "rate-limit"
-  ]
- },
- {
-  "id": "llm-gateways-094-gateway-1-interview-questions",
-  "trackId": "llm-gateways",
-  "title": "Gateway — 1. Interview Questions",
-  "summary": "Try answering these without looking at the explanations. 1. What is an LLM Gateway? Explain its purpose in a production AI architecture. 2. Why would an enterprise use an LLM Gateway instead of directly integrating…",
-  "order": 94,
-  "objectives": [
-   "Explain every point in “Gateway — 1. Interview Questions” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "rate-limit"
-  ]
- },
- {
-  "id": "llm-gateways-095-gateway-2-provider-abstraction-and-model-routing",
-  "trackId": "llm-gateways",
-  "title": "Gateway — 2. Provider Abstraction and Model Routing",
-  "summary": "In the previous batch, we learned why an LLM Gateway sits between applications and model providers. Now we'll learn how the gateway decides which provider to call, which model to select, how to distribute traffic, and…",
-  "order": 95,
-  "objectives": [
-   "Explain every point in “Gateway — 2. Provider Abstraction and Model Routing” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval",
-   "rate-limit",
-   "agent-loop"
-  ]
- },
- {
-  "id": "llm-gateways-096-gateway-2-complete-revision",
-  "trackId": "llm-gateways",
-  "title": "Gateway — 2. Complete Revision",
-  "summary": "Concept Remember this --- --- Provider abstraction One common interface for multiple providers Model routing Decide where a request should go Model selection Choose the model that best satisfies requirements Load…",
-  "order": 96,
-  "objectives": [
-   "Explain every point in “Gateway — 2. Complete Revision” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "rate-limit"
-  ]
- },
- {
-  "id": "llm-gateways-097-gateway-3-traffic-management-quotas-and-reliability",
-  "trackId": "llm-gateways",
-  "title": "Gateway — 3. Traffic Management, Quotas and Reliability",
-  "summary": "In this batch, we'll learn how to protect an LLM Gateway from excessive requests, control usage across tenants, manage gateway credentials, track LLM costs, and keep requests reliable. The five concepts: 1. Rate…",
-  "order": 97,
-  "objectives": [
-   "Explain every point in “Gateway — 3. Traffic Management, Quotas and Reliability” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "retrieval",
    "rate-limit"
   ]
  }

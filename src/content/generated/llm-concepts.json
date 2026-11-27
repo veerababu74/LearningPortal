@@ -6,9 +6,12 @@
   "summary": "This is one of the most important concepts for an AI Engineer. A chatbot can produce fluent, confident answers and still be completely wrong. In production, your responsibility is not just to generate answers — it is to…",
   "order": 1,
   "objectives": [
-   "Explain every point in “LLM Hallucinations, Reliability and Grounded Generation” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is an LLM hallucination?",
+   "Why do LLMs hallucinate?",
+   "Types of hallucinations",
+   "Parametric knowledge vs retrieved knowledge",
+   "Why RAG does not eliminate hallucinations",
+   "Faithfulness vs factual correctness vs groundedness"
   ],
   "labIds": [
    "chunking",
@@ -24,9 +27,12 @@
   "summary": "This is a critical topic for an AI Engineer moving from prototype development to production systems. Imagine you deploy a RAG chatbot today. Your evaluation accuracy is 92%. After two months, users start reporting…",
   "order": 2,
   "objectives": [
-   "Explain every point in “LLM Drift and Production Monitoring” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is LLM drift?",
+   "Types of drift you must understand",
+   "Understand the differences between drift types",
+   "How do you detect drift in production?",
+   "Production monitoring metrics with examples",
+   "Offline evaluation vs online evaluation"
   ],
   "labIds": [
    "chunking",
@@ -42,9 +48,12 @@
   "summary": "This is one of the most important skills for an AI Engineer because prompts control how an LLM interprets instructions, uses context, follows constraints, calls tools, and generates responses. Since you're already…",
   "order": 3,
   "objectives": [
-   "Explain every point in “Prompt Engineering — From Fundamentals to Advanced Techniques” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Complete prompt engineering roadmap",
+   "What is prompt engineering?",
+   "Zero-shot prompting",
+   "One-shot prompting",
+   "Few-shot prompting",
+   "Role-based prompting"
   ],
   "labIds": [
    "chunking",
@@ -60,9 +69,12 @@
   "summary": "This is an important concept for an AI Engineer because not every LLM problem can be solved through prompt engineering or RAG. Imagine you're building an enterprise pharmaceutical AI assistant. You need the model to:…",
   "order": 4,
   "objectives": [
-   "Explain every point in “Fine-tuning and Model Adaptation” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is fine-tuning?",
+   "Pretraining vs fine-tuning vs prompt engineering vs RAG",
+   "Types of fine-tuning",
+   "Parameter-efficient fine-tuning (PEFT)",
+   "Full fine-tuning vs PEFT",
+   "Training dataset preparation"
   ],
   "labIds": [
    "chunking",

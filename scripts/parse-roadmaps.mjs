@@ -7,6 +7,7 @@ import {
   buildSectionFlow,
   enrichThinContent,
 } from './flow-templates.mjs'
+import { courseLessons, mergeCourses, region, segmentCourse } from './roadmap-structure.mjs'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = path.resolve(__dirname, '..')
@@ -274,47 +275,25 @@ function makeLesson({ trackId, title, body, order, sourceFile, idHint }) {
   const lessonDiagram = pickFlowTemplate(title, body)
   const scenario = buildScenario(title, body)
 
-  const lessonBodyForContext = cleanBody(body)
+
   const sections = sectionDefs
     .map((s, idx) => {
       const raw = s.lines.join('\n')
-      let cleaned = enrichThinContent(s.title, cleanBody(raw), lessonBodyForContext)
-      if (!isUsefulBody(cleaned)) {
-        cleaned = enrichThinContent(
-          s.title,
-          `### ${s.title}\n\nThis section covers **${s.title}** as part of **${title}**.`,
-          lessonBodyForContext,
-        )
-      }
+      // No padding: short sections stay short (the polish pass merges heading-only ones), and nothing is
+      // borrowed from other sections or canned text — that produced repeated, off-topic bullets.
+      const cleaned = cleanBody(raw)
       const code = extractCodeBlocks(raw).filter(
         (c) => c.framework !== 'plain' || c.language === 'python' || c.code.length > 40,
       )
       const codeForPanel = code.filter(
         (c) => c.language !== 'text' || !/flowchart|sequenceDiagram|stateDiagram/.test(c.code),
       )
-      const points = extractTeachingPoints(s.title, cleaned, lessonBodyForContext).filter(
-        (p) => isUsefulBody(p.textExplanation) || isUsefulBody(p.body),
-      )
+      // No per-point cards: they repeated the section text next to template diagrams.
       const section = {
         id: `sec-${idx}`,
         title: s.title,
         body: cleaned,
-        visualSummary:
-          points[0]?.visualExplanation ||
-          `Follow the flow diagram to see how “${s.title}” works from start to finish.`,
         diagram: buildSectionFlow(s.title, cleaned),
-        points: points.length
-          ? points
-          : [
-              {
-                id: 'pt-0',
-                title: s.title,
-                visualExplanation: `This diagram walks through the key steps for “${s.title}”.`,
-                textExplanation: cleaned.slice(0, 1200),
-                body: cleaned,
-                diagram: buildSectionFlow(s.title, cleaned),
-              },
-            ],
       }
       if (idx === 0 && scenario) section.scenario = scenario
       if (codeForPanel.length) section.code = codeForPanel
@@ -325,7 +304,7 @@ function makeLesson({ trackId, title, body, order, sourceFile, idHint }) {
       }
       return section
     })
-    .filter((s) => isUsefulBody(s.body) || (s.points && s.points.length > 0))
+    .filter((s) => isUsefulBody(s.body) || s.code?.length)
 
   if (allCode.length && !sections.some((s) => s.code?.length)) {
     sections[0].code = allCode.slice(0, 10)
@@ -336,11 +315,15 @@ function makeLesson({ trackId, title, body, order, sourceFile, idHint }) {
     sections[0].diagram = lessonDiagram
   }
 
+  // What the lesson actually covers (its own section titles), not a fixed template.
   const objectives = [
-    `Explain every point in “${title}” with clear language`,
-    'Use the flow diagram to see what happens one step after another',
-    'Connect the visual flow to the written explanation and code',
-  ]
+    ...new Set(
+      sections
+        .map((s) => String(s.title).replace(/^\d+(?:\.\d+)*[.)]?\s*/, '').trim())
+        .filter((t) => t && !/^(overview|introduction|summary|interview questions?.*|knowledge (check|assessment)|quick revision|memory trick)$/i.test(t)),
+    ),
+  ].slice(0, 6)
+  if (!objectives.length) objectives.push(title)
 
   const labIds = []
   const t = `${title} ${body}`.toLowerCase()
@@ -637,6 +620,114 @@ function parseSecurity2(md, sourceFile) {
   return lessons
 }
 
+/**
+ * LLM Security, LLM Gateways and Production Failures, rebuilt from the three security roadmap files:
+ * one whole lesson per concept / topic (never per sub-heading), each batch followed by its revision
+ * lesson, duplicates across files resolved to the longest copy. See roadmap-structure.mjs.
+ */
+function buildSecurityTracks(mainMd, gw1Md, sec2Md) {
+  const main = stripExportNoise(mainMd)
+  const gw1 = stripExportNoise(gw1Md)
+  const sec2 = stripExportNoise(sec2Md)
+  const lessons = []
+  const emit = (trackId, specs, file, start) =>
+    specs.forEach((s, i) =>
+      lessons.push(makeLesson({ trackId, title: s.title, body: s.body, order: start + i, sourceFile: file, idHint: s.idHint })),
+    )
+  const conceptWord = /^concept\s+(\d+)\.\s+(.+)$/i
+  const MODULE2 = /^module 2\s*[—–-]\s*llm gateway engineering$/i
+
+  // LLM Security — 30 concepts in 6 batches ("# Concept N." early, bare "# N. Title" from 16 on)
+  const security = segmentCourse(region(main, null, MODULE2), {
+    maxLevel: 1,
+    conceptAt: (h) => {
+      const m = h.title.match(/^(?:concept\s+)?(\d+)\.\s+(.+)$/i)
+      if (!m) return null
+      const num = Number(m[1])
+      const word = /^concept/i.test(h.title)
+      if (num < 1 || num > 30 || !(word || (h.level === 1 && num >= 16))) return null
+      return { key: `s${num}`, num, title: m[2].trim() }
+    },
+    batchOfConcept: (n) => Math.ceil(n / 5),
+  })
+  emit(
+    'llm-security',
+    courseLessons(security, {
+      idPrefix: 'sec',
+      name: (c) => `Concept ${c.num}. ${c.title}`,
+      reviewTitle: (b, t) => `Batch ${b} — revision & practice${t ? `: ${t}` : ''}`,
+    }),
+    'LLM Security Gateways Roadmap.md',
+    1,
+  )
+
+  // LLM Gateways — 5 batches × 5 topics, spread over the main file and file (1)
+  const gwOpts = {
+    maxLevel: 2,
+    conceptAt: (h) => {
+      const c = h.title.match(conceptWord)
+      if (c && h.level === 1) return { num: Number(c[1]), title: c[2].trim() }
+      const m = h.level === 2 ? h.title.match(/^(\d+)\.\s+(.+)$/) : null
+      return m ? { num: Number(m[1]), title: m[2].trim() } : null
+    },
+    keyOf: (c, batch) => `b${batch}-${c.num}`,
+  }
+  const gateways = mergeCourses(
+    segmentCourse(region(main, MODULE2, /pdf masterclass/i), gwOpts),
+    segmentCourse(region(gw1, null, /complete production problems masterclass/i), gwOpts),
+  )
+  emit(
+    'llm-gateways',
+    courseLessons(gateways, {
+      idPrefix: 'gw',
+      name: (c) => c.title,
+      reviewTitle: (b, t) => `Batch ${b} — revision & practice${t ? `: ${t}` : ''}`,
+    }),
+    'LLM Security Gateways Roadmap (1).md',
+    1,
+  )
+
+  // Production Failures — 75 concepts in 15 batches (1–40 in file (1), 36–75 in file (2))
+  const prodOpts = {
+    maxLevel: 1,
+    conceptAt: (h) => {
+      const m = h.title.match(conceptWord)
+      return m ? { key: `p${m[1]}`, num: Number(m[1]), title: m[2].trim() } : null
+    },
+    batchOfConcept: (n) => Math.ceil(n / 5),
+  }
+  const production = mergeCourses(
+    segmentCourse(region(gw1, /complete production problems masterclass/i, null), prodOpts),
+    segmentCourse(region(sec2, null, /^production-grade genai/i), prodOpts),
+  )
+  const prodSpecs = courseLessons(production, {
+    idPrefix: 'pf',
+    name: (c) => `Concept ${c.num}. ${c.title}`,
+    reviewTitle: (b, t) => `Batch ${b} — revision & practice${t ? `: ${t}` : ''}`,
+  })
+  emit('production-failures', prodSpecs, 'LLM Security Gateways Roadmap (1).md', 1)
+
+  // Observability & logging course (file (2), its own concept numbering) — after the 75 problems
+  const observability = segmentCourse(region(sec2, /^production-grade genai/i, /visual handbook/i), {
+    ...prodOpts,
+    conceptAt: (h) => {
+      const m = h.title.match(conceptWord)
+      return m ? { key: `o${m[1]}`, num: Number(m[1]), title: m[2].trim() } : null
+    },
+  })
+  emit(
+    'production-failures',
+    courseLessons(observability, {
+      idPrefix: 'obs',
+      name: (c) => `Observability ${c.num}. ${c.title}`,
+      reviewTitle: (b, t) => `Observability batch ${b} — revision & practice${t ? `: ${t}` : ''}`,
+    }),
+    'LLM Security Gateways Roadmap (2).md',
+    prodSpecs.length + 1,
+  )
+  return lessons
+}
+
 function parseRagMega(md, sourceFile) {
   const clean = stripExportNoise(md)
   const lessons = []
@@ -736,17 +827,37 @@ function dedupeLessons(lessons) {
     grouped[lesson.trackId].push(lesson)
   }
 
+  // Keep the id a lesson had before (matched by title) so learners' progress survives re-ordering.
+  const previous = previousIds()
   const result = []
   for (const trackId of TRACK_META.map((t) => t.id)) {
     const list = (grouped[trackId] || []).sort((a, b) => a.order - b.order)
+    const used = new Set()
     list.forEach((l, i) => {
       l.order = i + 1
-      // stable id
-      l.id = `${trackId}-${String(i + 1).padStart(3, '0')}-${slugify(l.title)}`
+      const old = previous.get(`${trackId}::${slugify(l.title)}`)
+      l.id = old && !used.has(old) ? old : `${trackId}-${String(i + 1).padStart(3, '0')}-${slugify(l.title)}`
+      used.add(l.id)
       result.push(l)
     })
   }
   return result
+}
+
+function previousIds() {
+  const map = new Map()
+  try {
+    const idx = JSON.parse(fs.readFileSync(path.join(outDir, 'index.json'), 'utf8'))
+    for (const [trackId, list] of Object.entries(idx.lessonsByTrack || {})) {
+      for (const l of list) {
+        const key = `${trackId}::${slugify(l.title)}`
+        if (!map.has(key)) map.set(key, l.id)
+      }
+    }
+  } catch {
+    /* first run */
+  }
+  return map
 }
 
 function main() {
@@ -771,14 +882,10 @@ function main() {
   console.log('Parsing roadmaps…')
   const all = [
     ...parseLlmConcepts(fs.readFileSync(files.llmConcepts, 'utf8'), 'LLM Concepts Roadmap.md'),
-    ...parseSecurityMain(fs.readFileSync(files.security, 'utf8'), 'LLM Security Gateways Roadmap.md'),
-    ...parseSecurity1(
+    ...buildSecurityTracks(
+      fs.readFileSync(files.security, 'utf8'),
       fs.readFileSync(files.security1, 'utf8'),
-      'LLM Security Gateways Roadmap (1).md',
-    ),
-    ...parseSecurity2(
       fs.readFileSync(files.security2, 'utf8'),
-      'LLM Security Gateways Roadmap (2).md',
     ),
     ...parseRagMega(fs.readFileSync(files.rag, 'utf8'), 'RAG Masterclass Roadmap.md'),
   ]

@@ -1,74 +1,264 @@
 [
  {
-  "id": "production-failures-001-concept-6-application-logging-fundamentals",
+  "id": "production-failures-001-concept-1-context-window-exhaustion",
   "trackId": "production-failures",
-  "title": "Concept 6. Application Logging Fundamentals",
-  "summary": "1. What is application logging? Application logging is the process of recording important events that occur while your application is running. A log entry is a record of an event. For example: These records help…",
+  "title": "Concept 1. Context Window Exhaustion",
+  "summary": "(Critical production problem) 1. What is context window exhaustion? Every LLM has a maximum amount of information it can process in one request. This maximum is called the context window . It is measured in tokens. For…",
   "order": 1,
   "objectives": [
-   "Explain every point in “Concept 6. Application Logging Fundamentals” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is context window exhaustion?",
+   "Why does it happen?",
+   "Where does it happen?",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
   ],
   "labIds": [
+   "chunking",
    "retrieval",
    "multi-agent"
   ]
  },
  {
-  "id": "production-failures-002-concept-7-structured-logging-and-json-logs",
+  "id": "production-failures-002-concept-2-token-budget-exhaustion",
   "trackId": "production-failures",
-  "title": "Concept 7. Structured Logging and JSON Logs",
-  "summary": "(Important for production) 1. What is structured logging? Structured logging means recording logs in a predefined, machine-readable format instead of writing arbitrary text messages. Consider these two examples.…",
+  "title": "Concept 2. Token Budget Exhaustion",
+  "summary": "(Critical cost and availability problem) 1. What is token budget exhaustion? Token budget exhaustion occurs when your application consumes more tokens than its allocated budget. This is different from context window…",
   "order": 2,
   "objectives": [
-   "Explain every point in “Concept 7. Structured Logging and JSON Logs” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "production-failures-003-concept-8-log-levels-correlation-ids-and-request-ids",
-  "trackId": "production-failures",
-  "title": "Concept 8. Log Levels, Correlation IDs and Request IDs",
-  "summary": "This concept contains three important production engineering topics. Part A — Log levels 1. What are log levels? Log levels represent the severity or importance of a log event. Python provides these common levels: Level…",
-  "order": 3,
-  "objectives": [
-   "Explain every point in “Concept 8. Log Levels, Correlation IDs and Request IDs” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is token budget exhaustion?",
+   "Why does it happen?",
+   "Where does it happen?",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
   ],
   "labIds": [
    "multi-agent"
   ]
  },
  {
-  "id": "production-failures-004-concept-9-centralized-logging-and-log-aggregation",
+  "id": "production-failures-003-concept-3-rpm-tpm-rate-limit-exhaustion",
   "trackId": "production-failures",
-  "title": "Concept 9. Centralized Logging and Log Aggregation",
-  "summary": "(Essential for microservices) 1. What is centralized logging? Centralized logging means collecting logs from multiple services and storing them in a common logging platform. Imagine your application has: Each service…",
-  "order": 4,
+  "title": "Concept 3. RPM / TPM Rate Limit Exhaustion",
+  "summary": "(Very common provider API issue) 1. What is rate limit exhaustion? LLM providers restrict how frequently you can send requests and how many tokens you can process over a period. Two important limits: RPM — Requests Per…",
+  "order": 3,
   "objectives": [
-   "Explain every point in “Concept 9. Centralized Logging and Log Aggregation” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is rate limit exhaustion?",
+   "Example",
+   "Why does it happen?",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
   ],
   "labIds": [
-   "chunking",
+   "rate-limit",
+   "multi-agent"
+  ]
+ },
+ {
+  "id": "production-failures-004-concept-4-provider-quota-exhaustion",
+  "trackId": "production-failures",
+  "title": "Concept 4. Provider Quota Exhaustion",
+  "summary": "1. What is provider quota exhaustion? Rate limits and quotas are related, but they are not the same. A rate limit controls how quickly you can use a service. A quota controls how much total usage is allocated to your…",
+  "order": 4,
+  "objectives": [
+   "What is provider quota exhaustion?",
+   "Why does it happen?",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
+  ],
+  "labIds": [
+   "rate-limit"
+  ]
+ },
+ {
+  "id": "production-failures-005-concept-5-llm-latency-and-timeout",
+  "trackId": "production-failures",
+  "title": "Concept 5. LLM Latency and Timeout",
+  "summary": "(Critical user-experience problem) 1. What is latency? Latency is the time taken to process a request and return a response. Example: Total latency = 25 seconds. The application may become slow even when the LLM…",
+  "order": 5,
+  "objectives": [
+   "What is latency?",
+   "What is a timeout?",
+   "Why does it happen?",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
+  ],
+  "labIds": [
    "retrieval"
   ]
  },
  {
-  "id": "production-failures-005-concept-10-secure-logging-pii-masking-and-log-retention",
+  "id": "production-failures-006-batch-1-revision-practice-llm-resource-token-problems",
   "trackId": "production-failures",
-  "title": "Concept 10. Secure Logging, PII Masking and Log Retention",
-  "summary": "(Security-critical) This is especially important because you've already studied LLM security, prompt injection, sensitive information leakage and cross-tenant isolation. Your observability system itself can become a…",
-  "order": 5,
+  "title": "Batch 1 — revision & practice: LLM Resource & Token Problems",
+  "summary": "Batch 1 — Quick revision Problem Simple meaning Main fix --- --- --- Context window exhaustion Too much information in one request Summarize, retrieve less, compress Token budget exhaustion Usage allocation consumed…",
+  "order": 6,
   "objectives": [
-   "Explain every point in “Concept 10. Secure Logging, PII Masking and Log Retention” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Batch 1 — Quick revision",
+   "How these five problems connect",
+   "Practical exercise"
+  ],
+  "labIds": [
+   "retrieval",
+   "rate-limit"
+  ]
+ },
+ {
+  "id": "production-failures-007-concept-6-llm-provider-outage",
+  "trackId": "production-failures",
+  "title": "Concept 6. LLM Provider Outage",
+  "summary": "(Critical availability problem) 1. What is a provider outage? A provider outage happens when an LLM provider's service becomes unavailable or partially unavailable. Examples of providers: - Interactive content…",
+  "order": 7,
+  "objectives": [
+   "What is a provider outage?",
+   "Why does it happen?",
+   "Where does it happen?",
+   "Real-world example",
+   "How to detect it?",
+   "How to fix it?"
+  ],
+  "labIds": []
+ },
+ {
+  "id": "production-failures-008-concept-7-model-unavailability",
+  "trackId": "production-failures",
+  "title": "Concept 7. Model Unavailability",
+  "summary": "1. What is model unavailability? Model unavailability happens when the provider is operating, but the particular model you requested cannot be accessed. This is different from a complete provider outage. Example: Your…",
+  "order": 8,
+  "objectives": [
+   "What is model unavailability?",
+   "Why does it happen?",
+   "Where does it happen?",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
+  ],
+  "labIds": []
+ },
+ {
+  "id": "production-failures-009-concept-8-http-429-and-5xx-errors",
+  "trackId": "production-failures",
+  "title": "Concept 8. HTTP 429 and 5xx Errors",
+  "summary": "(Extremely common production failure) 1. What are these errors? When your application calls an LLM API, the provider responds with an HTTP status code. These codes help identify the failure. Two important categories: -…",
+  "order": 9,
+  "objectives": [
+   "What are these errors?",
+   "HTTP 429 — Too Many Requests",
+   "HTTP 5xx — Server-side failures",
+   "How to fix 5xx errors?"
+  ],
+  "labIds": [
+   "rate-limit"
+  ]
+ },
+ {
+  "id": "production-failures-010-concept-9-model-deprecation-and-version-changes",
+  "trackId": "production-failures",
+  "title": "Concept 9. Model Deprecation and Version Changes",
+  "summary": "(Long-term maintenance problem) 1. What is model deprecation? Model deprecation happens when an LLM provider announces that a particular model or model version will be retired or no longer supported. Example: Model…",
+  "order": 10,
+  "objectives": [
+   "What is model deprecation?",
+   "Why does it happen?",
+   "What is a model version change?",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
+  ],
+  "labIds": [
+   "agent-loop"
+  ]
+ },
+ {
+  "id": "production-failures-011-concept-10-provider-response-inconsistency",
+  "trackId": "production-failures",
+  "title": "Concept 10. Provider Response Inconsistency",
+  "summary": "1. What is provider response inconsistency? The same or similar request can produce different outputs across models, providers or even repeated calls to the same model. This is especially important when your application…",
+  "order": 11,
+  "objectives": [
+   "What is provider response inconsistency?",
+   "Why does it happen?",
+   "Where does it happen?",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
+  ],
+  "labIds": [
+   "multi-agent"
+  ]
+ },
+ {
+  "id": "production-failures-012-batch-2-revision-practice-llm-provider-model-failures",
+  "trackId": "production-failures",
+  "title": "Batch 2 — revision & practice: LLM Provider & Model Failures",
+  "summary": "What this batch covers Concepts 6–10 of 75 · (Batch 2 of 15) In Batch 1, we learned about token limits, quotas, rate limits and latency. Now imagine your application is perfectly implemented, your prompts are correct,…",
+  "order": 12,
+  "objectives": [
+   "What this batch covers",
+   "Batch 2 — How the five problems differ",
+   "Real-world combined failure scenario",
+   "Detection and troubleshooting cheat sheet",
+   "Practical assessment — Batch 2"
+  ],
+  "labIds": [
+   "rate-limit"
+  ]
+ },
+ {
+  "id": "production-failures-013-concept-11-llm-hallucinations",
+  "trackId": "production-failures",
+  "title": "Concept 11. LLM Hallucinations",
+  "summary": "(High-impact reliability problem) 1. What is hallucination? Hallucination happens when an LLM generates information that sounds convincing but is incorrect, unsupported or fabricated. Simple definition: The model gives…",
+  "order": 13,
+  "objectives": [
+   "What is hallucination?",
+   "Why does hallucination happen?",
+   "Where does hallucination happen?",
+   "Real-time example",
+   "How to detect hallucinations?",
+   "How to fix hallucinations?"
+  ],
+  "labIds": [
+   "chunking",
+   "retrieval",
+   "multi-agent"
+  ]
+ },
+ {
+  "id": "production-failures-014-concept-12-prompt-sensitivity",
+  "trackId": "production-failures",
+  "title": "Concept 12. Prompt Sensitivity",
+  "summary": "1. What is prompt sensitivity? Prompt sensitivity means small changes in the wording, structure or formatting of a prompt can produce significantly different model outputs. Example: Prompt A: Prompt B: These prompts can…",
+  "order": 14,
+  "objectives": [
+   "What is prompt sensitivity?",
+   "Why does it happen?",
+   "Where does it happen?",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
+  ],
+  "labIds": [
+   "multi-agent"
+  ]
+ },
+ {
+  "id": "production-failures-015-concept-13-instruction-conflicts",
+  "trackId": "production-failures",
+  "title": "Concept 13. Instruction Conflicts",
+  "summary": "(Common in agents and RAG systems) 1. What are instruction conflicts? Instruction conflicts occur when an LLM receives multiple instructions that contradict each other or cannot all be followed. Example: System…",
+  "order": 15,
+  "objectives": [
+   "What are instruction conflicts?",
+   "Why does it happen?",
+   "Where does it happen?",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
   ],
   "labIds": [
    "retrieval",
@@ -76,15 +266,513 @@
   ]
  },
  {
+  "id": "production-failures-016-concept-14-invalid-structured-output",
+  "trackId": "production-failures",
+  "title": "Concept 14. Invalid Structured Output",
+  "summary": "(Common API integration problem) 1. What is invalid structured output? It happens when the LLM returns output that does not match the format expected by your application. Common expected formats: - JSON. - XML. -…",
+  "order": 16,
+  "objectives": [
+   "What is invalid structured output?",
+   "Why does it happen?",
+   "Where does it happen?",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
+  ],
+  "labIds": [
+   "agent-loop"
+  ]
+ },
+ {
+  "id": "production-failures-017-concept-15-incomplete-or-truncated-responses",
+  "trackId": "production-failures",
+  "title": "Concept 15. Incomplete or Truncated Responses",
+  "summary": "1. What is response truncation? Truncation happens when the model's output stops before the requested response is complete. Example: User asks: Generate a complete Python application with 10 functions. The model…",
+  "order": 17,
+  "objectives": [
+   "What is response truncation?",
+   "Why does it happen?",
+   "Where does it happen?",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
+  ],
+  "labIds": [
+   "multi-agent"
+  ]
+ },
+ {
+  "id": "production-failures-018-batch-3-revision-practice-prompt-output-problems",
+  "trackId": "production-failures",
+  "title": "Batch 3 — revision & practice: Prompt & Output Problems",
+  "summary": "What this batch covers Concepts 11–15 of 75 · (Batch 3 of 15) In this batch, we will study problems that happen when an LLM receives a prompt and generates an answer. Imagine your RAG application is working, the…",
+  "order": 18,
+  "objectives": [
+   "What this batch covers",
+   "Batch 3 — Quick revision",
+   "Important: How these five problems connect",
+   "Production troubleshooting cheat sheet",
+   "Practical assessment — Batch 3",
+   "Next: Batch 4 — RAG & Retrieval Problems"
+  ],
+  "labIds": [
+   "chunking",
+   "retrieval",
+   "rate-limit"
+  ]
+ },
+ {
+  "id": "production-failures-019-concept-16-poor-retrieval",
+  "trackId": "production-failures",
+  "title": "Concept 16. Poor Retrieval",
+  "summary": "(High-impact RAG problem) 1. What is poor retrieval? Poor retrieval happens when your RAG system fails to retrieve the correct or most relevant documents for a user's query. The answer may exist in your knowledge base,…",
+  "order": 19,
+  "objectives": [
+   "What is poor retrieval?",
+   "Why does poor retrieval happen?",
+   "Where does it happen?",
+   "Real-time example",
+   "How to detect poor retrieval?",
+   "How to fix poor retrieval?"
+  ],
+  "labIds": [
+   "chunking",
+   "cosine",
+   "retrieval"
+  ]
+ },
+ {
+  "id": "production-failures-020-concept-17-chunking-problems",
+  "trackId": "production-failures",
+  "title": "Concept 17. Chunking Problems",
+  "summary": "1. What is chunking? Chunking means dividing large documents into smaller pieces before storing them in a vector database. Why? Embedding models and retrieval systems work with manageable text segments rather than…",
+  "order": 20,
+  "objectives": [
+   "What is chunking?",
+   "Why do chunking problems happen?",
+   "Where does it happen?",
+   "Real-time example",
+   "How to detect chunking problems?",
+   "How to fix chunking problems?"
+  ],
+  "labIds": [
+   "chunking",
+   "retrieval"
+  ]
+ },
+ {
+  "id": "production-failures-021-concept-18-embedding-mismatch",
+  "trackId": "production-failures",
+  "title": "Concept 18. Embedding Mismatch",
+  "summary": "(Important indexing problem) 1. What are embeddings? Embeddings convert text into numerical vectors that represent semantic information. Example: An embedding model converts this sentence into a vector: Semantically…",
+  "order": 21,
+  "objectives": [
+   "What are embeddings?",
+   "What is embedding mismatch?",
+   "Why does it happen?",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
+  ],
+  "labIds": [
+   "retrieval"
+  ]
+ },
+ {
+  "id": "production-failures-022-concept-19-stale-or-incorrect-documents",
+  "trackId": "production-failures",
+  "title": "Concept 19. Stale or Incorrect Documents",
+  "summary": "1. What is stale data? Stale data means your RAG system retrieves outdated information instead of the latest approved information. Incorrect documents may also contain: - Wrong facts. - Duplicate policies. -…",
+  "order": 22,
+  "objectives": [
+   "What is stale data?",
+   "Why does it happen?",
+   "Where does it happen?",
+   "Real-time example",
+   "How to detect stale documents?",
+   "How to fix it?"
+  ],
+  "labIds": [
+   "chunking",
+   "retrieval"
+  ]
+ },
+ {
+  "id": "production-failures-023-concept-20-retrieval-noise",
+  "trackId": "production-failures",
+  "title": "Concept 20. Retrieval Noise",
+  "summary": "1. What is retrieval noise? Retrieval noise occurs when your RAG system retrieves unnecessary, irrelevant or low-quality documents and passes them to the LLM. Unlike poor retrieval, where the correct document may be…",
+  "order": 23,
+  "objectives": [
+   "What is retrieval noise?",
+   "Why does it happen?",
+   "Where does it happen?",
+   "Real-time example",
+   "How to detect retrieval noise?",
+   "How to fix it?"
+  ],
+  "labIds": [
+   "chunking",
+   "cosine",
+   "retrieval"
+  ]
+ },
+ {
+  "id": "production-failures-024-batch-4-revision-practice-rag-retrieval-problems",
+  "trackId": "production-failures",
+  "title": "Batch 4 — revision & practice: RAG & Retrieval Problems",
+  "summary": "What this batch covers Concepts 16–20 of 75 · (Batch 4 of 15) In this batch, we will understand five major problems that occur inside Retrieval-Augmented Generation (RAG) applications. Imagine your company has 100,000…",
+  "order": 24,
+  "objectives": [
+   "What this batch covers",
+   "Batch 4 — Complete comparison",
+   "How they connect in a real RAG application",
+   "Production debugging checklist",
+   "Practical assessment — Batch 4",
+   "Next: Batch 5 — Memory & Context Problems"
+  ],
+  "labIds": [
+   "chunking",
+   "retrieval"
+  ]
+ },
+ {
+  "id": "production-failures-025-concept-21-conversation-memory-loss",
+  "trackId": "production-failures",
+  "title": "Concept 21. Conversation Memory Loss",
+  "summary": "(Common agent problem) 1. What is conversation memory loss? Conversation memory loss happens when an AI application cannot access important information from previous interactions. The model may behave as if it has…",
+  "order": 25,
+  "objectives": [
+   "What is conversation memory loss?",
+   "Why does it happen?",
+   "Visual explanation",
+   "Where does it happen?",
+   "How to detect it?",
+   "How to fix it?"
+  ],
+  "labIds": [
+   "retrieval",
+   "agent-loop"
+  ]
+ },
+ {
+  "id": "production-failures-026-concept-22-memory-pollution",
+  "trackId": "production-failures",
+  "title": "Concept 22. Memory Pollution",
+  "summary": "1. What is memory pollution? Memory pollution happens when an AI application stores incorrect, irrelevant, temporary or malicious information in its memory. Later, the application retrieves that information and uses it…",
+  "order": 26,
+  "objectives": [
+   "What is memory pollution?",
+   "Why does it happen?",
+   "Where does it happen?",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
+  ],
+  "labIds": [
+   "retrieval",
+   "injection",
+   "multi-agent"
+  ]
+ },
+ {
+  "id": "production-failures-027-concept-23-memory-inconsistency",
+  "trackId": "production-failures",
+  "title": "Concept 23. Memory Inconsistency",
+  "summary": "1. What is memory inconsistency? Memory inconsistency occurs when different parts of an AI application maintain conflicting versions of the same information. Unlike memory pollution, where bad information is stored,…",
+  "order": 27,
+  "objectives": [
+   "What is memory inconsistency?",
+   "Why does it happen?",
+   "Visual explanation",
+   "Where does it happen?",
+   "How to detect it?",
+   "How to fix it?"
+  ],
+  "labIds": [
+   "multi-agent"
+  ]
+ },
+ {
+  "id": "production-failures-028-concept-24-context-overflow",
+  "trackId": "production-failures",
+  "title": "Concept 24. Context Overflow",
+  "summary": "(Major LLM resource problem) 1. What is context overflow? Context overflow occurs when the total tokens sent to the LLM exceed the model's available context capacity. Remember, the context window can include: - System…",
+  "order": 28,
+  "objectives": [
+   "What is context overflow?",
+   "Why does it happen?",
+   "Visual explanation",
+   "Where does it happen?",
+   "How to detect it?",
+   "How to fix it?"
+  ],
+  "labIds": [
+   "retrieval",
+   "multi-agent"
+  ]
+ },
+ {
+  "id": "production-failures-029-concept-25-long-term-memory-retrieval-failures",
+  "trackId": "production-failures",
+  "title": "Concept 25. Long-Term Memory Retrieval Failures",
+  "summary": "1. What is long-term memory retrieval failure? It happens when an AI application has successfully stored information for future use but cannot retrieve the correct memory when needed. This is different from conversation…",
+  "order": 29,
+  "objectives": [
+   "What is long-term memory retrieval failure?",
+   "Why does it happen?",
+   "Visual explanation",
+   "Where does it happen?",
+   "How to detect it?",
+   "How to fix it?"
+  ],
+  "labIds": [
+   "retrieval",
+   "multi-agent"
+  ]
+ },
+ {
+  "id": "production-failures-030-batch-5-revision-practice-memory-context-problems",
+  "trackId": "production-failures",
+  "title": "Batch 5 — revision & practice: Memory & Context Problems",
+  "summary": "What this batch covers Concepts 21–25 of 75 · (Batch 5 of 15) Memory and context are critical components of GenAI applications, especially AI agents, conversational applications, RAG systems and multi-agent…",
+  "order": 30,
+  "objectives": [
+   "What this batch covers",
+   "Batch 5 — Complete comparison",
+   "Important: How these five problems connect",
+   "Production debugging checklist",
+   "Practical assessment — Batch 5",
+   "Next: Batch 6 — AI Agent Execution Problems"
+  ],
+  "labIds": [
+   "retrieval",
+   "multi-agent"
+  ]
+ },
+ {
+  "id": "production-failures-031-concept-26-infinite-agent-loops",
+  "trackId": "production-failures",
+  "title": "Concept 26. Infinite Agent Loops",
+  "summary": "(Critical production problem) 1. What is an infinite agent loop? An infinite agent loop occurs when an AI agent repeatedly executes the same or similar actions without making meaningful progress toward its goal. The…",
+  "order": 31,
+  "objectives": [
+   "What is an infinite agent loop?",
+   "Why does it happen?",
+   "Real-time example",
+   "Where does it happen?",
+   "How to detect infinite loops?",
+   "How to fix it?"
+  ],
+  "labIds": [
+   "rate-limit",
+   "multi-agent"
+  ]
+ },
+ {
+  "id": "production-failures-032-concept-27-agent-gets-stuck",
+  "trackId": "production-failures",
+  "title": "Concept 27. Agent Gets Stuck",
+  "summary": "1. What is an agent getting stuck? An agent gets stuck when it cannot determine the next valid action or make progress toward its goal. Unlike an infinite loop, the agent may not repeatedly execute actions. It may…",
+  "order": 32,
+  "objectives": [
+   "What is an agent getting stuck?",
+   "Why does it happen?",
+   "Visual explanation",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
+  ],
+  "labIds": []
+ },
+ {
+  "id": "production-failures-033-concept-28-premature-agent-termination",
+  "trackId": "production-failures",
+  "title": "Concept 28. Premature Agent Termination",
+  "summary": "(Silent task-completion failure) 1. What is premature termination? Premature termination happens when an AI agent stops execution before completing the user's requested task. The agent may return an answer that looks…",
+  "order": 33,
+  "objectives": [
+   "What is premature termination?",
+   "Why does it happen?",
+   "Visual explanation",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
+  ],
+  "labIds": []
+ },
+ {
+  "id": "production-failures-034-concept-29-repeated-reasoning-and-actions",
+  "trackId": "production-failures",
+  "title": "Concept 29. Repeated Reasoning and Actions",
+  "summary": "1. What is repeated reasoning and action? It occurs when an AI agent unnecessarily repeats its planning, reasoning or tool execution instead of reusing previous results. This may happen even when the agent is not in a…",
+  "order": 34,
+  "objectives": [
+   "What is repeated reasoning and action?",
+   "Why does it happen?",
+   "Where does it happen?",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
+  ],
+  "labIds": [
+   "multi-agent"
+  ]
+ },
+ {
+  "id": "production-failures-035-concept-30-goal-drift-and-task-abandonment",
+  "trackId": "production-failures",
+  "title": "Concept 30. Goal Drift and Task Abandonment",
+  "summary": "(Important in long-running agents) 1. What is goal drift? Goal drift occurs when an AI agent gradually moves away from the original user objective while executing a multi-step task. The agent starts with the correct…",
+  "order": 35,
+  "objectives": [
+   "What is goal drift?",
+   "Why does it happen?",
+   "Visual explanation",
+   "Where does it happen?",
+   "How to detect it?",
+   "How to fix it?"
+  ],
+  "labIds": [
+   "multi-agent"
+  ]
+ },
+ {
+  "id": "production-failures-036-batch-6-revision-practice-ai-agent-execution-problems",
+  "trackId": "production-failures",
+  "title": "Batch 6 — revision & practice: AI Agent Execution Problems",
+  "summary": "What this batch covers Concepts 26–30 of 75 · (Batch 6 of 15) Now we are moving from normal LLM problems to AI agent execution problems . An LLM usually receives a request and generates a response. An AI agent does…",
+  "order": 36,
+  "objectives": [
+   "What this batch covers",
+   "Batch 6 — Complete comparison",
+   "How all five problems connect",
+   "Production architecture: How to control agent execution",
+   "Practical assessment — Batch 6",
+   "Next: Batch 7 — Tool & Function Calling Problems"
+  ],
+  "labIds": [
+   "agent-loop"
+  ]
+ },
+ {
+  "id": "production-failures-037-concept-31-tool-not-selected",
+  "trackId": "production-failures",
+  "title": "Concept 31. Tool Not Selected",
+  "summary": "(Agent decision-making failure) 1. What is tool selection failure? Tool selection failure happens when an AI agent fails to select the correct tool required to complete a task. The tool exists, is available and may be…",
+  "order": 37,
+  "objectives": [
+   "What is tool selection failure?",
+   "Why does it happen?",
+   "Where does it happen?",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
+  ],
+  "labIds": [
+   "multi-agent"
+  ]
+ },
+ {
+  "id": "production-failures-038-concept-32-incorrect-tool-arguments",
+  "trackId": "production-failures",
+  "title": "Concept 32. Incorrect Tool Arguments",
+  "summary": "(Very common integration problem) 1. What is incorrect tool argument generation? It happens when an AI agent selects the correct tool but sends incorrect, incomplete or invalid arguments. The tool itself may be…",
+  "order": 38,
+  "objectives": [
+   "What is incorrect tool argument generation?",
+   "Why does it happen?",
+   "Visual explanation",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
+  ],
+  "labIds": []
+ },
+ {
+  "id": "production-failures-039-concept-33-tool-execution-failure",
+  "trackId": "production-failures",
+  "title": "Concept 33. Tool Execution Failure",
+  "summary": "1. What is tool execution failure? Tool execution failure happens when an agent selects the correct tool and provides valid arguments, but the tool fails while executing. The problem may be inside the external API,…",
+  "order": 39,
+  "objectives": [
+   "What is tool execution failure?",
+   "Why does it happen?",
+   "Where does it happen?",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
+  ],
+  "labIds": [
+   "rate-limit"
+  ]
+ },
+ {
+  "id": "production-failures-040-concept-34-tool-output-parsing-errors",
+  "trackId": "production-failures",
+  "title": "Concept 34. Tool Output Parsing Errors",
+  "summary": "1. What are tool output parsing errors? These errors occur when an agent receives a tool response but cannot correctly understand, parse or extract the required information. The tool may have executed successfully. The…",
+  "order": 40,
+  "objectives": [
+   "What are tool output parsing errors?",
+   "Why does it happen?",
+   "Visual explanation",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
+  ],
+  "labIds": []
+ },
+ {
+  "id": "production-failures-041-concept-35-tool-permission-and-side-effect-problems",
+  "trackId": "production-failures",
+  "title": "Concept 35. Tool Permission and Side-Effect Problems",
+  "summary": "(Critical security and reliability problem) 1. What are tool permission and side-effect problems? These occur when an AI agent: - Executes a tool without sufficient authorization. - Performs an action the user didn't…",
+  "order": 41,
+  "objectives": [
+   "What are tool permission and side-effect problems?",
+   "Why does it happen?",
+   "Visual explanation",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
+  ],
+  "labIds": [
+   "injection"
+  ]
+ },
+ {
+  "id": "production-failures-042-batch-7-revision-practice-tool-function-calling-problems",
+  "trackId": "production-failures",
+  "title": "Batch 7 — revision & practice: Tool & Function Calling Problems",
+  "summary": "What this batch covers Concepts 31–35 of 75 · (Batch 7 of 15) This is one of the most important topics in production Agentic AI engineering. An AI agent becomes powerful when it can interact with external tools and…",
+  "order": 42,
+  "objectives": [
+   "What this batch covers",
+   "Important: The five tool-calling failures are different",
+   "Complete tool-calling architecture",
+   "Production troubleshooting checklist",
+   "Practical assessment — Batch 7",
+   "Next: Batch 8 — API & Integration Problems"
+  ],
+  "labIds": [
+   "rate-limit",
+   "agent-loop"
+  ]
+ },
+ {
   "id": "production-failures-006-concept-36-authentication-failures",
   "trackId": "production-failures",
   "title": "Concept 36. Authentication Failures",
   "summary": "(Identity verification failure) 1. What is authentication? Authentication is the process of verifying who or what is making a request . In an AI application, authentication verifies the identity of: - The user. - The AI…",
-  "order": 6,
+  "order": 43,
   "objectives": [
-   "Explain every point in “Concept 36. Authentication Failures” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is authentication?",
+   "Why does authentication fail?",
+   "Visual explanation",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
   ],
   "labIds": []
  },
@@ -93,11 +781,14 @@
   "trackId": "production-failures",
   "title": "Concept 37. Authorization Failures",
   "summary": "(Access permission failure) 1. What is authorization? Authorization determines what an authenticated user or service is allowed to do . Authentication verifies identity. Authorization checks permissions. These are…",
-  "order": 7,
+  "order": 44,
   "objectives": [
-   "Explain every point in “Concept 37. Authorization Failures” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is authorization?",
+   "Real-time example",
+   "Visual explanation",
+   "Important authorization concepts",
+   "How to detect it?",
+   "How to fix it?"
   ],
   "labIds": [
    "multi-agent"
@@ -107,28 +798,34 @@
   "id": "production-failures-008-concept-38-api-rate-limits",
   "trackId": "production-failures",
   "title": "Concept 38. API Rate Limits",
-  "summary": "(Traffic and capacity problem) 1. What are API rate limits? An API rate limit restricts how many requests a client can send within a specified time period. For example: If your application sends more than the permitted…",
-  "order": 8,
+  "summary": "(Traffic and throttling problem) 1. What are API rate limits? An API rate limit restricts how many requests a client can send within a specified period. For example: If your AI application sends 150 requests in one…",
+  "order": 45,
   "objectives": [
-   "Explain every point in “Concept 38. API Rate Limits” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What are API rate limits?",
+   "Why is this particularly important in Agentic AI?",
+   "Common rate-limit types",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
   ],
   "labIds": [
-   "rate-limit",
-   "multi-agent"
+   "retrieval",
+   "rate-limit"
   ]
  },
  {
   "id": "production-failures-009-concept-39-network-and-dns-failures",
   "trackId": "production-failures",
   "title": "Concept 39. Network and DNS Failures",
-  "summary": "(Connectivity problem) 1. What are network failures? Network failures occur when your AI application cannot establish or maintain communication with another service. Examples: - Agent cannot connect to an MCP server. -…",
-  "order": 9,
+  "summary": "(Connectivity problem) 1. What are network and DNS failures? These occur when your AI application cannot establish communication with an external service. Your agent may select the correct tool, generate valid arguments…",
+  "order": 46,
   "objectives": [
-   "Explain every point in “Concept 39. Network and DNS Failures” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What are network and DNS failures?",
+   "How DNS works",
+   "Why do network failures happen?",
+   "Real-time AI agent example",
+   "How to detect it?",
+   "How to fix it?"
   ],
   "labIds": []
  },
@@ -136,14 +833,34 @@
   "id": "production-failures-010-concept-40-timeouts-retries-and-duplicate-requests",
   "trackId": "production-failures",
   "title": "Concept 40. Timeouts, Retries and Duplicate Requests",
-  "summary": "(Critical production reliability problem) This concept is especially important in Agentic AI because agents may automatically retry failed tool calls. A poorly designed retry mechanism can create duplicate payments,…",
-  "order": 10,
+  "summary": "(Critical production reliability problem) This is one of the most important concepts in distributed AI systems. 1. What is a timeout? A timeout occurs when an application waits for a response longer than its configured…",
+  "order": 47,
   "objectives": [
-   "Explain every point in “Concept 40. Timeouts, Retries and Duplicate Requests” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is a timeout?",
+   "What is a retry?",
+   "What is a duplicate request problem?",
+   "Why do timeouts happen?",
+   "Why do duplicate requests happen?",
+   "What is idempotency?"
+  ],
+  "labIds": []
+ },
+ {
+  "id": "production-failures-048-batch-8-revision-practice-api-integration-problems",
+  "trackId": "production-failures",
+  "title": "Batch 8 — revision & practice: API & Integration Problems",
+  "summary": "What this batch covers Concepts 36–40 of 75 · (Batch 8 of 15) This batch focuses on problems that occur when GenAI applications, AI agents, MCP servers and multi-agent systems communicate with external services. Imagine…",
+  "order": 48,
+  "objectives": [
+   "What this batch covers",
+   "Important comparison: Authentication vs Authorization vs Rate Limit vs Timeout",
+   "Production engineer's API debugging checklist",
+   "Batch 8 — Quick knowledge assessment",
+   "Next: Batch 9 — Multi-Agent Coordination Problems",
+   "What's included?"
   ],
   "labIds": [
+   "retrieval",
    "rate-limit",
    "multi-agent"
   ]
@@ -153,11 +870,14 @@
   "trackId": "production-failures",
   "title": "Concept 41. Agent Communication Failure",
   "summary": "(Communication problem) 1. What is agent communication failure? It happens when two or more agents cannot successfully exchange information, messages, instructions or results. In a multi-agent system, agents depend on…",
-  "order": 11,
+  "order": 49,
   "objectives": [
-   "Explain every point in “Concept 41. Agent Communication Failure” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is agent communication failure?",
+   "Visual explanation",
+   "Why does it happen?",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
   ],
   "labIds": [
    "multi-agent"
@@ -168,11 +888,14 @@
   "trackId": "production-failures",
   "title": "Concept 42. Task Delegation Failure",
   "summary": "(Task assignment problem) 1. What is task delegation failure? Task delegation failure occurs when a manager agent assigns a task to the wrong agent, provides incomplete instructions or fails to delegate the task…",
-  "order": 12,
+  "order": 50,
   "objectives": [
-   "Explain every point in “Concept 42. Task Delegation Failure” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is task delegation failure?",
+   "Visual explanation",
+   "Why does it happen?",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
   ],
   "labIds": [
    "multi-agent"
@@ -183,11 +906,14 @@
   "trackId": "production-failures",
   "title": "Concept 43. Conflicting Agent Decisions",
   "summary": "(Decision consistency problem) 1. What are conflicting agent decisions? This happens when multiple agents produce different or contradictory recommendations for the same task. It is common when agents independently…",
-  "order": 13,
+  "order": 51,
   "objectives": [
-   "Explain every point in “Concept 43. Conflicting Agent Decisions” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What are conflicting agent decisions?",
+   "Why does it happen?",
+   "Visual explanation",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
   ],
   "labIds": []
  },
@@ -196,11 +922,14 @@
   "trackId": "production-failures",
   "title": "Concept 44. Duplicate Work Across Agents",
   "summary": "(Resource wastage problem) 1. What is duplicate work? Duplicate work occurs when multiple agents perform the same task unnecessarily. It wastes: - Tokens. - API calls. - Execution time. - Money. - Compute resources. It…",
-  "order": 14,
+  "order": 52,
   "objectives": [
-   "Explain every point in “Concept 44. Duplicate Work Across Agents” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is duplicate work?",
+   "Why does it happen?",
+   "Visual explanation",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
   ],
   "labIds": [
    "chunking"
@@ -211,11 +940,31 @@
   "trackId": "production-failures",
   "title": "Concept 45. Agent Dependency and Coordination Deadlocks",
   "summary": "(Workflow blocking problem) 1. What is an agent dependency? An agent dependency means one agent needs another agent's output before it can execute or complete its task. For example: The Analysis Agent depends on the…",
-  "order": 15,
+  "order": 53,
   "objectives": [
-   "Explain every point in “Concept 45. Agent Dependency and Coordination Deadlocks” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is an agent dependency?",
+   "What is a coordination deadlock?",
+   "Visual explanation",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
+  ],
+  "labIds": [
+   "multi-agent"
+  ]
+ },
+ {
+  "id": "production-failures-054-batch-9-revision-practice-multi-agent-coordination-problems",
+  "trackId": "production-failures",
+  "title": "Batch 9 — revision & practice: Multi-Agent Coordination Problems",
+  "summary": "What this batch covers Concepts 41–45 of 75 · (Batch 9 of 15) This batch is extremely important when developing multi-agent AI systems using LangGraph, Azure AI Agent Framework, CrewAI, AutoGen, MCP and custom…",
+  "order": 54,
+  "objectives": [
+   "What this batch covers",
+   "Important comparison — All five problems",
+   "Production architecture: How to prevent these failures",
+   "Practical assessment — Batch 9",
+   "Next: Batch 10 — Agent State & Workflow Problems"
   ],
   "labIds": [
    "multi-agent"
@@ -226,11 +975,14 @@
   "trackId": "production-failures",
   "title": "Concept 46. State Synchronization Problems",
   "summary": "(Distributed state problem) 1. What is state synchronization failure? State synchronization failure happens when multiple agents, services or workflow components have different or outdated versions of the same state.…",
-  "order": 16,
+  "order": 55,
   "objectives": [
-   "Explain every point in “Concept 46. State Synchronization Problems” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is state synchronization failure?",
+   "Visual explanation",
+   "Why does it happen?",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
   ],
   "labIds": []
  },
@@ -239,11 +991,14 @@
   "trackId": "production-failures",
   "title": "Concept 47. Checkpointing and Recovery Failures",
   "summary": "(Long-running workflow reliability) 1. What is checkpointing? Checkpointing means saving the current state of an agent or workflow so it can resume later. It is especially important for long-running workflows. For…",
-  "order": 17,
+  "order": 56,
   "objectives": [
-   "Explain every point in “Concept 47. Checkpointing and Recovery Failures” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is checkpointing?",
+   "Visual explanation",
+   "Why does checkpointing fail?",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
   ],
   "labIds": [
    "agent-loop"
@@ -254,11 +1009,14 @@
   "trackId": "production-failures",
   "title": "Concept 48. Workflow State Corruption",
   "summary": "(State integrity problem) 1. What is workflow state corruption? Workflow state corruption occurs when the stored state becomes invalid, inconsistent, incomplete or incorrectly modified. It can make an agent: - Execute…",
-  "order": 18,
+  "order": 57,
   "objectives": [
-   "Explain every point in “Concept 48. Workflow State Corruption” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is workflow state corruption?",
+   "Visual explanation",
+   "Why does it happen?",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
   ],
   "labIds": []
  },
@@ -267,11 +1025,14 @@
   "trackId": "production-failures",
   "title": "Concept 49. Conditional Routing Failures",
   "summary": "(Workflow decision problem) 1. What is conditional routing? Conditional routing determines which node, agent or workflow path should execute next based on the current state or a decision. For example: This is common in…",
-  "order": 19,
+  "order": 58,
   "objectives": [
-   "Explain every point in “Concept 49. Conditional Routing Failures” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is conditional routing?",
+   "What is conditional routing failure?",
+   "Why does it happen?",
+   "Visual explanation",
+   "Real-time example",
+   "How to detect it?"
   ],
   "labIds": [
    "chunking",
@@ -284,11 +1045,30 @@
   "trackId": "production-failures",
   "title": "Concept 50. Human-in-the-Loop Interrupt and Resume Failures",
   "summary": "(Human approval and workflow recovery) 1. What is Human-in-the-Loop (HITL)? Human-in-the-Loop means a human participates in an AI workflow to review, approve, reject or provide missing information. This is especially…",
-  "order": 20,
+  "order": 59,
   "objectives": [
-   "Explain every point in “Concept 50. Human-in-the-Loop Interrupt and Resume Failures” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is Human-in-the-Loop (HITL)?",
+   "What is interrupt and resume?",
+   "What are interrupt and resume failures?",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
+  ],
+  "labIds": []
+ },
+ {
+  "id": "production-failures-060-batch-10-revision-practice-agent-state-workflow-problems",
+  "trackId": "production-failures",
+  "title": "Batch 10 — revision & practice: Agent State & Workflow Problems",
+  "summary": "What this batch covers Concepts 46–50 of 75 · (Batch 10 of 15) This batch is particularly important for building production-grade AI agents using LangGraph, Azure AI Agent Framework, CrewAI, AutoGen and custom…",
+  "order": 60,
+  "objectives": [
+   "What this batch covers",
+   "How a stateful agent works",
+   "Important comparison — All five problems",
+   "Production architecture — Reliable stateful AI workflow",
+   "Production metrics you should monitor",
+   "Practical assessment — Batch 10"
   ],
   "labIds": [
    "injection",
@@ -302,11 +1082,14 @@
   "trackId": "production-failures",
   "title": "Concept 51. Database Connection Pool Exhaustion",
   "summary": "(Database availability problem) 1. What is a database connection? A database connection is a communication channel between your application and a database. For example: Every operation requiring the database needs an…",
-  "order": 21,
+  "order": 61,
   "objectives": [
-   "Explain every point in “Concept 51. Database Connection Pool Exhaustion” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is a database connection?",
+   "What is connection pool exhaustion?",
+   "Visual explanation",
+   "Why does it happen?",
+   "Real-time GenAI example",
+   "How to detect it?"
   ],
   "labIds": [
    "retrieval"
@@ -317,11 +1100,14 @@
   "trackId": "production-failures",
   "title": "Concept 52. Database Query Performance Problems",
   "summary": "(Database latency problem) 1. What is a database query? A query is a command sent to a database to retrieve or modify information. Example: A database query performance problem occurs when a query takes too long or…",
-  "order": 22,
+  "order": 62,
   "objectives": [
-   "Explain every point in “Concept 52. Database Query Performance Problems” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is a database query?",
+   "Why does it happen?",
+   "Visual explanation",
+   "Real-time GenAI example",
+   "Another important problem: N+1 queries",
+   "How to detect it?"
   ],
   "labIds": [
    "retrieval"
@@ -332,11 +1118,14 @@
   "trackId": "production-failures",
   "title": "Concept 53. Data Consistency and Transaction Failures",
   "summary": "(Data integrity problem) 1. What is data consistency? Data consistency means that stored information remains correct and follows the application's business rules. For example, consider a payment system. When a customer…",
-  "order": 23,
+  "order": 63,
   "objectives": [
-   "Explain every point in “Concept 53. Data Consistency and Transaction Failures” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is data consistency?",
+   "What is a transaction?",
+   "Visual explanation",
+   "Real-time GenAI example",
+   "How to detect it?",
+   "How to fix it?"
   ],
   "labIds": []
  },
@@ -345,11 +1134,14 @@
   "trackId": "production-failures",
   "title": "Concept 54. Vector Database Indexing and Search Failures",
   "summary": "(RAG retrieval infrastructure problem) 1. What is a vector database? A vector database stores numerical representations of data called embeddings. In RAG, documents are converted into embeddings and stored in a vector…",
-  "order": 24,
+  "order": 64,
   "objectives": [
-   "Explain every point in “Concept 54. Vector Database Indexing and Search Failures” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is a vector database?",
+   "What are vector indexing and search failures?",
+   "Visual explanation",
+   "Why does it happen?",
+   "Real-time RAG example",
+   "How to detect it?"
   ],
   "labIds": [
    "chunking",
@@ -362,16 +1154,37 @@
   "trackId": "production-failures",
   "title": "Concept 55. Data Ingestion and Pipeline Failures",
   "summary": "(Data pipeline reliability problem) 1. What is data ingestion? Data ingestion is the process of collecting data from different sources and bringing it into your AI application. Examples: - PDF documents. - Word files. -…",
-  "order": 25,
+  "order": 65,
   "objectives": [
-   "Explain every point in “Concept 55. Data Ingestion and Pipeline Failures” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is data ingestion?",
+   "What is a data pipeline?",
+   "Why does it happen?",
+   "Real-time example",
+   "How to detect it?",
+   "How to fix it?"
   ],
   "labIds": [
    "chunking",
    "retrieval",
-   "rate-limit",
+   "rate-limit"
+  ]
+ },
+ {
+  "id": "production-failures-066-batch-11-revision-practice-data-database-problems",
+  "trackId": "production-failures",
+  "title": "Batch 11 — revision & practice: Data & Database Problems",
+  "summary": "What this batch covers Concepts 51–55 of 75 · (Batch 11 of 15) This batch focuses on database and data pipeline problems in production GenAI, RAG and Agentic AI applications. Imagine you're building an enterprise AI…",
+  "order": 66,
+  "objectives": [
+   "What this batch covers",
+   "Important comparison — All five concepts",
+   "How these five failures connect in a production RAG application",
+   "Practical assessment — Batch 11",
+   "Next: Batch 12 — Reliability & Performance Problems"
+  ],
+  "labIds": [
+   "chunking",
+   "retrieval",
    "multi-agent"
   ]
  },
@@ -380,11 +1193,14 @@
   "trackId": "production-failures",
   "title": "Concept 56. Single Point of Failure (SPOF)",
   "summary": "(Architecture reliability problem) 1. What is SPOF? A Single Point of Failure is a component whose failure can bring down the entire application or a critical part of it. In simple words: If one component fails and the…",
-  "order": 26,
+  "order": 67,
   "objectives": [
-   "Explain every point in “Concept 56. Single Point of Failure (SPOF)” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is SPOF?",
+   "Real-time GenAI example",
+   "Visual explanation",
+   "Where can SPOFs exist in AI applications?",
+   "How to detect it?",
+   "How to fix it?"
   ],
   "labIds": [
    "retrieval",
@@ -396,11 +1212,14 @@
   "trackId": "production-failures",
   "title": "Concept 57. Cascading Failures",
   "summary": "(Distributed systems problem) 1. What is a cascading failure? A cascading failure happens when one component fails and causes other dependent components to fail as well. One failure spreads through the system. 2.…",
-  "order": 27,
+  "order": 68,
   "objectives": [
-   "Explain every point in “Concept 57. Cascading Failures” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is a cascading failure?",
+   "Real-time Agentic AI example",
+   "Visual explanation",
+   "Why does it happen?",
+   "How to detect it?",
+   "How to prevent it?"
   ],
   "labIds": [
    "multi-agent"
@@ -411,11 +1230,14 @@
   "trackId": "production-failures",
   "title": "Concept 58. Concurrency and Race Conditions",
   "summary": "(Parallel execution problem) 1. What is concurrency? Concurrency means multiple operations make progress during overlapping time periods. In AI applications, concurrency is common: - Multiple users submit questions. -…",
-  "order": 28,
+  "order": 69,
   "objectives": [
-   "Explain every point in “Concept 58. Concurrency and Race Conditions” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is concurrency?",
+   "What is a race condition?",
+   "Visual explanation",
+   "Other real-world GenAI examples",
+   "How to detect it?",
+   "How to fix it?"
   ],
   "labIds": [
    "chunking"
@@ -426,11 +1248,14 @@
   "trackId": "production-failures",
   "title": "Concept 59. Queue Backlog and Backpressure",
   "summary": "(Throughput and capacity problem) 1. What is a queue? A queue temporarily stores tasks until workers are ready to process them. Example: Your AI application receives 1,000 document ingestion requests. Instead of…",
-  "order": 29,
+  "order": 70,
   "objectives": [
-   "Explain every point in “Concept 59. Queue Backlog and Backpressure” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is a queue?",
+   "What is queue backlog?",
+   "What is backpressure?",
+   "Visual explanation",
+   "Real-time GenAI example",
+   "How to detect it?"
   ],
   "labIds": [
    "chunking",
@@ -442,11 +1267,30 @@
   "trackId": "production-failures",
   "title": "Concept 60. Graceful Degradation and Failover Problems",
   "summary": "(Resilience and recovery problem) 1. What is graceful degradation? Graceful degradation means that when some components fail, the application continues providing reduced but useful functionality instead of completely…",
-  "order": 30,
+  "order": 71,
   "objectives": [
-   "Explain every point in “Concept 60. Graceful Degradation and Failover Problems” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is graceful degradation?",
+   "What is failover?",
+   "Visual explanation",
+   "Real-time GenAI example",
+   "Different degradation strategies",
+   "How to detect it?"
+  ],
+  "labIds": [
+   "retrieval"
+  ]
+ },
+ {
+  "id": "production-failures-072-batch-12-revision-practice-reliability-performance-problems",
+  "trackId": "production-failures",
+  "title": "Batch 12 — revision & practice: Reliability & Performance Problems",
+  "summary": "What this batch covers Concepts 56–60 of 75 · (Batch 12 of 15) In this batch, we'll learn how to keep GenAI, RAG, Agentic AI and multi-agent applications running reliably even when individual components fail. Imagine…",
+  "order": 72,
+  "objectives": [
+   "What this batch covers",
+   "How all five concepts work together",
+   "Practical assessment — Batch 12",
+   "Next: Batch 13 — Cost & Observability Problems"
   ],
   "labIds": [
    "retrieval",
@@ -458,11 +1302,14 @@
   "trackId": "production-failures",
   "title": "Concept 61. LLM Cost Explosion",
   "summary": "(Cost management problem) 1. What is LLM cost explosion? LLM cost explosion happens when the cost of running your AI application increases unexpectedly or becomes significantly higher than your budget. LLM applications…",
-  "order": 31,
+  "order": 73,
   "objectives": [
-   "Explain every point in “Concept 61. LLM Cost Explosion” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is LLM cost explosion?",
+   "How does an AI application generate costs?",
+   "Visual explanation",
+   "Why does cost explosion happen?",
+   "Understand the cost calculation",
+   "How to detect it?"
   ],
   "labIds": [
    "agent-loop",
@@ -474,11 +1321,14 @@
   "trackId": "production-failures",
   "title": "Concept 62. Token Usage Tracking and Cost Attribution",
   "summary": "(Cost visibility problem) 1. What is token usage tracking? Token usage tracking means measuring how many input and output tokens your application consumes during LLM operations. For every model call, you ideally…",
-  "order": 32,
+  "order": 74,
   "objectives": [
-   "Explain every point in “Concept 62. Token Usage Tracking and Cost Attribution” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is token usage tracking?",
+   "Why is this important?",
+   "Visual explanation",
+   "How to implement it?",
+   "Important: Token tracking vs cost attribution",
+   "How to detect problems?"
   ],
   "labIds": [
    "multi-agent"
@@ -489,11 +1339,14 @@
   "trackId": "production-failures",
   "title": "Concept 63. Missing Logs and Distributed Tracing",
   "summary": "(Debugging and visibility problem) 1. What are logs? Logs are records of events that happen inside your application. Examples: Logs help engineers understand what happened. 2. What is distributed tracing? Distributed…",
-  "order": 33,
+  "order": 75,
   "objectives": [
-   "Explain every point in “Concept 63. Missing Logs and Distributed Tracing” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What are logs?",
+   "What is distributed tracing?",
+   "What is the problem?",
+   "Visual explanation",
+   "What is a trace ID?",
+   "How to implement it?"
   ],
   "labIds": [
    "multi-agent"
@@ -504,11 +1357,14 @@
   "trackId": "production-failures",
   "title": "Concept 64. Poor Metrics and Monitoring",
   "summary": "(System health visibility problem) 1. What are metrics? Metrics are numerical measurements collected over time to understand application performance and health. Examples: - Request count. - Error count. - Latency. -…",
-  "order": 34,
+  "order": 76,
   "objectives": [
-   "Explain every point in “Concept 64. Poor Metrics and Monitoring” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What are metrics?",
+   "What is monitoring?",
+   "The four golden signals",
+   "Visual explanation",
+   "Which metrics should an AI engineer monitor?",
+   "How to detect problems?"
   ],
   "labIds": [
    "multi-agent"
@@ -519,15 +1375,36 @@
   "trackId": "production-failures",
   "title": "Concept 65. AI Quality and Performance Observability",
   "summary": "(AI-specific observability problem) 1. What is AI observability? Traditional monitoring tells you whether your application is running. AI observability goes further. It helps you understand whether your AI application…",
-  "order": 35,
+  "order": 77,
   "objectives": [
-   "Explain every point in “Concept 65. AI Quality and Performance Observability” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is AI observability?",
+   "Why is AI observability different?",
+   "What should you measure?",
+   "Visual explanation",
+   "Real-time RAG example",
+   "How to detect AI quality problems?"
   ],
   "labIds": [
    "chunking",
    "retrieval",
+   "multi-agent"
+  ]
+ },
+ {
+  "id": "production-failures-078-batch-13-revision-practice-cost-observability-problems",
+  "trackId": "production-failures",
+  "title": "Batch 13 — revision & practice: Cost & Observability Problems",
+  "summary": "What this batch covers Concepts 61–65 of 75 · (Batch 13 of 15) In this batch, we'll learn two important responsibilities of a production AI engineer: 1. Cost engineering: Understand where your GenAI application spends…",
+  "order": 78,
+  "objectives": [
+   "What this batch covers",
+   "How all five concepts work together",
+   "Important comparison — Batch 13",
+   "Practical assessment — Batch 13",
+   "Next: Batch 14 — Safety & Security Problems"
+  ],
+  "labIds": [
+   "chunking",
    "injection",
    "multi-agent"
   ]
@@ -537,11 +1414,14 @@
   "trackId": "production-failures",
   "title": "Concept 66. Prompt Injection and Indirect Prompt Injection",
   "summary": "(Critical AI security risk) 1. What is prompt injection? Prompt injection is an attack where malicious instructions are included in input supplied to an LLM to manipulate its behavior. The attacker attempts to override…",
-  "order": 36,
+  "order": 79,
   "objectives": [
-   "Explain every point in “Concept 66. Prompt Injection and Indirect Prompt Injection” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is prompt injection?",
+   "What is indirect prompt injection?",
+   "Direct vs indirect prompt injection",
+   "Visual explanation",
+   "Real-time Agentic AI example",
+   "How to detect it?"
   ],
   "labIds": [
    "retrieval",
@@ -553,11 +1433,14 @@
   "trackId": "production-failures",
   "title": "Concept 67. Sensitive Data Leakage and PII Exposure",
   "summary": "(Critical data protection risk) 1. What is sensitive data leakage? Sensitive data leakage happens when confidential information is exposed to someone or somewhere that should not have access to it. Examples: -…",
-  "order": 37,
+  "order": 80,
   "objectives": [
-   "Explain every point in “Concept 67. Sensitive Data Leakage and PII Exposure” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is sensitive data leakage?",
+   "What is PII?",
+   "How can GenAI applications leak data?",
+   "Visual explanation",
+   "Other real-time leakage scenarios",
+   "How to detect it?"
   ],
   "labIds": [
    "retrieval"
@@ -568,11 +1451,14 @@
   "trackId": "production-failures",
   "title": "Concept 68. Excessive Agent Permissions and Privilege Escalation",
   "summary": "(Critical agent security risk) 1. What are agent permissions? Agent permissions define which resources and operations an AI agent is allowed to access. For example: A customer-support agent might need permission to: -…",
-  "order": 38,
+  "order": 81,
   "objectives": [
-   "Explain every point in “Concept 68. Excessive Agent Permissions and Privilege Escalation” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What are agent permissions?",
+   "What is excessive agency?",
+   "What is privilege escalation?",
+   "Visual explanation",
+   "How to detect it?",
+   "How to fix it?"
   ],
   "labIds": [
    "retrieval"
@@ -583,11 +1469,14 @@
   "trackId": "production-failures",
   "title": "Concept 69. Insecure Tool Execution and Command Injection",
   "summary": "(Critical execution security risk) 1. What is tool execution? AI agents use tools to interact with external systems. Examples: - Python execution. - Shell commands. - Database queries. - File operations. - Browser…",
-  "order": 39,
+  "order": 82,
   "objectives": [
-   "Explain every point in “Concept 69. Insecure Tool Execution and Command Injection” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is tool execution?",
+   "What is insecure tool execution?",
+   "What is command injection?",
+   "Visual explanation",
+   "Real-time Agentic AI example",
+   "How to detect it?"
   ],
   "labIds": [
    "retrieval",
@@ -599,11 +1488,31 @@
   "trackId": "production-failures",
   "title": "Concept 70. Cross-Tenant Data Leakage and Isolation Failures",
   "summary": "(Critical multi-tenant security risk) 1. What is a tenant? A tenant is an individual customer, organization or account using a shared application. Imagine you build an enterprise AI SaaS application. It has three…",
-  "order": 40,
+  "order": 83,
   "objectives": [
-   "Explain every point in “Concept 70. Cross-Tenant Data Leakage and Isolation Failures” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is a tenant?",
+   "What is cross-tenant data leakage?",
+   "Why does it happen?",
+   "Visual explanation",
+   "Real-time RAG example",
+   "Hidden risk: Cache isolation"
+  ],
+  "labIds": [
+   "retrieval"
+  ]
+ },
+ {
+  "id": "production-failures-084-batch-14-revision-practice-safety-security-problems",
+  "trackId": "production-failures",
+  "title": "Batch 14 — revision & practice: Safety & Security Problems",
+  "summary": "What this batch covers Concepts 66–70 of 75 · (Batch 14 of 15) This is one of the most important batches for an AI engineer working with GenAI, RAG, Agentic AI and multi-agent systems. Traditional application security…",
+  "order": 84,
+  "objectives": [
+   "What this batch covers",
+   "Important comparison — All five security problems",
+   "How these attacks can work together",
+   "Practical assessment — Batch 14",
+   "Next: Batch 15 — Production Architecture & Recovery Problems"
   ],
   "labIds": [
    "retrieval",
@@ -616,11 +1525,14 @@
   "trackId": "production-failures",
   "title": "Concept 71. Disaster Recovery and Backup Failures",
   "summary": "(Business continuity risk) 1. What is disaster recovery? Disaster Recovery (DR) is the process of restoring an application and its data after a major failure. Examples: - Database failure. - Data center outage. - Cloud…",
-  "order": 41,
+  "order": 85,
   "objectives": [
-   "Explain every point in “Concept 71. Disaster Recovery and Backup Failures” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is disaster recovery?",
+   "Real-time GenAI example",
+   "Disaster recovery workflow",
+   "Important concepts: RPO and RTO",
+   "Types of backups",
+   "How to detect backup failures?"
   ],
   "labIds": []
  },
@@ -629,11 +1541,14 @@
   "trackId": "production-failures",
   "title": "Concept 72. Deployment, Model Rollback and Version Compatibility Problems",
   "summary": "(Production deployment risk) 1. What is a deployment problem? A deployment problem happens when a new version of your application, model, prompt, agent workflow or dependency causes failures after being released. Your…",
-  "order": 42,
+  "order": 86,
   "objectives": [
-   "Explain every point in “Concept 72. Deployment, Model Rollback and Version Compatibility Problems” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is a deployment problem?",
+   "What versions should an AI engineer manage?",
+   "Unsafe deployment",
+   "Safer deployment",
+   "What is model rollback?",
+   "Deployment strategies"
   ],
   "labIds": [
    "retrieval",
@@ -645,11 +1560,14 @@
   "trackId": "production-failures",
   "title": "Concept 73. Configuration and Secrets Management Failures",
   "summary": "(Security and configuration risk) 1. What is configuration management? Configuration management means controlling the settings that determine how your application operates. Examples: Your AI application may use…",
-  "order": 43,
+  "order": 87,
   "objectives": [
-   "Explain every point in “Concept 73. Configuration and Secrets Management Failures” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is configuration management?",
+   "What are secrets?",
+   "Real-time GenAI example",
+   "Secure configuration architecture",
+   "What is the difference between configuration and secrets?",
+   "Common production failures"
   ],
   "labIds": []
  },
@@ -658,11 +1576,14 @@
   "trackId": "production-failures",
   "title": "Concept 74. Capacity Planning and Auto-scaling Problems",
   "summary": "(Scalability and performance risk) 1. What is capacity planning? Capacity planning means estimating how much infrastructure your application needs to handle its expected workload. You need to estimate: - Number of…",
-  "order": 44,
+  "order": 88,
   "objectives": [
-   "Explain every point in “Concept 74. Capacity Planning and Auto-scaling Problems” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is capacity planning?",
+   "What is auto-scaling?",
+   "Why is this especially important for Agentic AI?",
+   "Auto-scaling architecture",
+   "Common capacity problems",
+   "How to calculate basic capacity?"
   ],
   "labIds": [
    "rate-limit",
@@ -674,11 +1595,31 @@
   "trackId": "production-failures",
   "title": "Concept 75. Incident Response, Root Cause Analysis and Recovery Runbooks",
   "summary": "(Final concept) This is the final concept of our 75-concept production problems roadmap. 1. What is incident response? Incident response is the structured process of identifying, investigating, containing and resolving…",
-  "order": 45,
+  "order": 89,
   "objectives": [
-   "Explain every point in “Concept 75. Incident Response, Root Cause Analysis and Recovery Runbooks” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is incident response?",
+   "What is Root Cause Analysis (RCA)?",
+   "Incident response lifecycle",
+   "What is a recovery runbook?",
+   "Real-time Agentic AI incident example",
+   "Important incident management concepts"
+  ],
+  "labIds": [
+   "rate-limit",
+   "multi-agent"
+  ]
+ },
+ {
+  "id": "production-failures-090-batch-15-revision-practice",
+  "trackId": "production-failures",
+  "title": "Batch 15 — revision & practice",
+  "summary": "Batch 15 — Production Architecture &amp; Recovery Problems Concepts 71–75 of 75 (Final batch) Welcome to the final batch\\! So far, we've covered problems across LLMs, RAG, agents, multi-agent orchestration, APIs,…",
+  "order": 90,
+  "objectives": [
+   "Batch 15 — Production Architecture &amp; Recovery Problems",
+   "Final production architecture — Bringing all 75 concepts together",
+   "Enterprise GenAI and multi-agent architecture",
+   "Production engineering: Which layer handles which problem?"
   ],
   "labIds": [
    "chunking",
@@ -689,282 +1630,170 @@
   ]
  },
  {
-  "id": "production-failures-046-1-llm-gateway-observability",
+  "id": "production-failures-091-observability-1-what-is-observability",
   "trackId": "production-failures",
-  "title": "1. LLM Gateway Observability",
-  "summary": "1.1 What is observability? Observability is the ability to understand what is happening inside your LLM Gateway by examining the information it produces. Imagine your application sends a request to an LLM Gateway: The…",
-  "order": 46,
+  "title": "Observability 1. What is Observability?",
+  "summary": "1. What is observability? Observability is the ability to understand the internal behavior and health of a system by examining the data it produces. In simple words: Observability helps you understand what is happening…",
+  "order": 91,
   "objectives": [
-   "Explain every point in “1. LLM Gateway Observability” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Observability 1. What is Observability?"
   ],
   "labIds": [
-   "rate-limit"
-  ]
- },
- {
-  "id": "production-failures-047-2-guardrails-and-security-policies-at-the-gateway",
-  "trackId": "production-failures",
-  "title": "2. Guardrails and Security Policies at the Gateway",
-  "summary": "2.1 What are gateway guardrails? Guardrails are controls that check incoming requests and outgoing model responses against defined policies. For example, imagine a banking chatbot. A user asks: Show me another…",
-  "order": 47,
-  "objectives": [
-   "Explain every point in “2. Guardrails and Security Policies at the Gateway” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "retrieval",
-   "injection",
-   "rate-limit"
-  ]
- },
- {
-  "id": "production-failures-048-3-multi-tenant-architecture-and-isolation",
-  "trackId": "production-failures",
-  "title": "3. Multi-Tenant Architecture and Isolation",
-  "summary": "3.1 What is multi-tenancy? Multi-tenancy means multiple customers or organizations use the same application infrastructure while keeping their data, configurations, usage and permissions isolated. Example: Imagine you…",
-  "order": 48,
-  "objectives": [
-   "Explain every point in “3. Multi-Tenant Architecture and Isolation” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval",
-   "rate-limit"
-  ]
- },
- {
-  "id": "production-failures-049-4-gateway-deployment-scalability-and-high-availability",
-  "trackId": "production-failures",
-  "title": "4. Gateway Deployment, Scalability and High Availability",
-  "summary": "4.1 What happens when your gateway becomes popular? Initially, your architecture may be: Suppose you have 10 users. This might be sufficient. Now imagine you have 100,000 users. Problems can appear: - Gateway CPU and…",
-  "order": 49,
-  "objectives": [
-   "Explain every point in “4. Gateway Deployment, Scalability and High Availability” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "rate-limit",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-050-5-building-a-production-style-llm-gateway-using-fastapi-and-litellm",
-  "trackId": "production-failures",
-  "title": "5. Building a Production-Style LLM Gateway Using FastAPI and LiteLLM",
-  "summary": "Now let's connect the concepts and build a practical gateway. 5.1 What are we building? We will create an LLM Gateway that: - Accepts client requests. - Authenticates the client. - Identifies its tenant. - Enforces a…",
-  "order": 50,
-  "objectives": [
-   "Explain every point in “5. Building a Production-Style LLM Gateway Using FastAPI and LiteLLM” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "retrieval",
-   "injection",
-   "rate-limit",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-051-1-context-window-exhaustion",
-  "trackId": "production-failures",
-  "title": "1. Context Window Exhaustion",
-  "summary": "(Critical production problem) 1. What is context window exhaustion? Every LLM has a maximum amount of information it can process in one request. This maximum is called the context window . It is measured in tokens. For…",
-  "order": 51,
-  "objectives": [
-   "Explain every point in “1. Context Window Exhaustion” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
    "retrieval",
    "multi-agent"
   ]
  },
  {
-  "id": "production-failures-052-2-token-budget-exhaustion",
+  "id": "production-failures-092-observability-2-observability-vs-monitoring-vs-debugging",
   "trackId": "production-failures",
-  "title": "2. Token Budget Exhaustion",
-  "summary": "(Critical cost and availability problem) 1. What is token budget exhaustion? Token budget exhaustion occurs when your application consumes more tokens than its allocated budget. This is different from context window…",
-  "order": 52,
+  "title": "Observability 2. Observability vs Monitoring vs Debugging",
+  "summary": "These three concepts are related, but they are not the same. 1. Monitoring Monitoring continuously checks predefined signals to determine whether your application is healthy. Example: If a threshold is crossed,…",
+  "order": 92,
   "objectives": [
-   "Explain every point in “2. Token Budget Exhaustion” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Observability 2. Observability vs Monitoring vs Debugging"
   ],
   "labIds": [
-   "multi-agent"
+   "retrieval"
   ]
  },
  {
-  "id": "production-failures-053-3-rpm-tpm-rate-limit-exhaustion",
+  "id": "production-failures-093-observability-3-the-three-pillars-of-observability-logs-metrics-and-traces",
   "trackId": "production-failures",
-  "title": "3. RPM / TPM Rate Limit Exhaustion",
-  "summary": "(Very common provider API issue) 1. What is rate limit exhaustion? LLM providers restrict how frequently you can send requests and how many tokens you can process over a period. Two important limits: RPM — Requests Per…",
-  "order": 53,
+  "title": "Observability 3. The Three Pillars of Observability: Logs, Metrics and Traces",
+  "summary": "(Extremely important) This is one of the most important concepts in production engineering. The three main pillars are: 1. Logs. 2. Metrics. 3. Traces. Each provides a different view of the application. 1. Logs — What…",
+  "order": 93,
   "objectives": [
-   "Explain every point in “3. RPM / TPM Rate Limit Exhaustion” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Observability 3. The Three Pillars of Observability: Logs, Metrics and Traces"
   ],
   "labIds": [
-   "rate-limit",
-   "multi-agent"
+   "retrieval"
   ]
  },
  {
-  "id": "production-failures-054-4-provider-quota-exhaustion",
+  "id": "production-failures-094-observability-4-distributed-systems-observability",
   "trackId": "production-failures",
-  "title": "4. Provider Quota Exhaustion",
-  "summary": "1. What is provider quota exhaustion? Rate limits and quotas are related, but they are not the same. A rate limit controls how quickly you can use a service. A quota controls how much total usage is allocated to your…",
-  "order": 54,
+  "title": "Observability 4. Distributed Systems Observability",
+  "summary": "1. What is a distributed system? A distributed system consists of multiple independent services or components that communicate to complete a task. Your enterprise AI application is a distributed system if it uses: -…",
+  "order": 94,
   "objectives": [
-   "Explain every point in “4. Provider Quota Exhaustion” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "rate-limit"
-  ]
- },
- {
-  "id": "production-failures-055-5-llm-latency-and-timeout",
-  "trackId": "production-failures",
-  "title": "5. LLM Latency and Timeout",
-  "summary": "(Critical user-experience problem) 1. What is latency? Latency is the time taken to process a request and return a response. Example: Total latency = 25 seconds. The application may become slow even when the LLM…",
-  "order": 55,
-  "objectives": [
-   "Explain every point in “5. LLM Latency and Timeout” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Observability 4. Distributed Systems Observability"
   ],
   "labIds": [
    "retrieval",
-   "rate-limit"
+   "multi-agent"
   ]
  },
  {
-  "id": "production-failures-056-6-llm-provider-outage",
+  "id": "production-failures-095-observability-5-observability-architecture-for-genai-applications",
   "trackId": "production-failures",
-  "title": "6. LLM Provider Outage",
-  "summary": "(Critical availability problem) 1. What is a provider outage? A provider outage happens when an LLM provider's service becomes unavailable or partially unavailable. Examples of providers: - Interactive content…",
-  "order": 56,
+  "title": "Observability 5. Observability Architecture for GenAI Applications",
+  "summary": "Now let's combine everything into one practical architecture. 1. What does an observability architecture do? It defines how your application generates telemetry, collects it, processes it, stores it and makes it…",
+  "order": 95,
   "objectives": [
-   "Explain every point in “6. LLM Provider Outage” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Observability 5. Observability Architecture for GenAI Applications"
+  ],
+  "labIds": [
+   "retrieval",
+   "multi-agent"
+  ]
+ },
+ {
+  "id": "production-failures-096-observability-batch-1-revision-practice-observability-fundamentals",
+  "trackId": "production-failures",
+  "title": "Observability batch 1 — revision & practice: Observability Fundamentals",
+  "summary": "Batch 1 — Knowledge check Test your understanding · (0/5 answered) 1. Your application takes 40 seconds. You want to identify the slow component. Which capability is most useful? - [ ] Observability - [ ] Only debugging…",
+  "order": 96,
+  "objectives": [
+   "Batch 1 — Knowledge check",
+   "Progress"
   ],
   "labIds": []
  },
  {
-  "id": "production-failures-057-7-model-unavailability",
+  "id": "production-failures-097-observability-6-application-logging-fundamentals",
   "trackId": "production-failures",
-  "title": "7. Model Unavailability",
-  "summary": "1. What is model unavailability? Model unavailability happens when the provider is operating, but the particular model you requested cannot be accessed. This is different from a complete provider outage. Example: Your…",
-  "order": 57,
+  "title": "Observability 6. Application Logging Fundamentals",
+  "summary": "1. What is application logging? Application logging is the process of recording important events that occur while your application is running. A log entry is a record of an event. For example: These records help…",
+  "order": 97,
   "objectives": [
-   "Explain every point in “7. Model Unavailability” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "production-failures-058-8-http-429-and-5xx-errors",
-  "trackId": "production-failures",
-  "title": "8. HTTP 429 and 5xx Errors",
-  "summary": "(Extremely common production failure) 1. What are these errors? When your application calls an LLM API, the provider responds with an HTTP status code. These codes help identify the failure. Two important categories: -…",
-  "order": 58,
-  "objectives": [
-   "Explain every point in “8. HTTP 429 and 5xx Errors” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is application logging?",
+   "Why do we need logging in AI applications?",
+   "Visual explanation",
+   "Python logging implementation",
+   "What should you log in GenAI applications?",
+   "How to detect logging problems?"
   ],
   "labIds": [
-   "rate-limit"
-  ]
- },
- {
-  "id": "production-failures-059-9-model-deprecation-and-version-changes",
-  "trackId": "production-failures",
-  "title": "9. Model Deprecation and Version Changes",
-  "summary": "(Long-term maintenance problem) 1. What is model deprecation? Model deprecation happens when an LLM provider announces that a particular model or model version will be retired or no longer supported. Example: Model…",
-  "order": 59,
-  "objectives": [
-   "Explain every point in “9. Model Deprecation and Version Changes” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "agent-loop"
-  ]
- },
- {
-  "id": "production-failures-060-10-provider-response-inconsistency",
-  "trackId": "production-failures",
-  "title": "10. Provider Response Inconsistency",
-  "summary": "1. What is provider response inconsistency? The same or similar request can produce different outputs across models, providers or even repeated calls to the same model. This is especially important when your application…",
-  "order": 60,
-  "objectives": [
-   "Explain every point in “10. Provider Response Inconsistency” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "rate-limit",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-061-11-llm-hallucinations",
-  "trackId": "production-failures",
-  "title": "11. LLM Hallucinations",
-  "summary": "(High-impact reliability problem) 1. What is hallucination? Hallucination happens when an LLM generates information that sounds convincing but is incorrect, unsupported or fabricated. Simple definition: The model gives…",
-  "order": 61,
-  "objectives": [
-   "Explain every point in “11. LLM Hallucinations” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
    "retrieval",
    "multi-agent"
   ]
  },
  {
-  "id": "production-failures-062-12-prompt-sensitivity",
+  "id": "production-failures-098-observability-7-structured-logging-and-json-logs",
   "trackId": "production-failures",
-  "title": "12. Prompt Sensitivity",
-  "summary": "1. What is prompt sensitivity? Prompt sensitivity means small changes in the wording, structure or formatting of a prompt can produce significantly different model outputs. Example: Prompt A: Prompt B: These prompts can…",
-  "order": 62,
+  "title": "Observability 7. Structured Logging and JSON Logs",
+  "summary": "(Important for production) 1. What is structured logging? Structured logging means recording logs in a predefined, machine-readable format instead of writing arbitrary text messages. Consider these two examples.…",
+  "order": 98,
   "objectives": [
-   "Explain every point in “12. Prompt Sensitivity” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is structured logging?",
+   "Why do we need structured logging?",
+   "Visual explanation",
+   "Python implementation using JSON logs",
+   "Recommended fields for production AI logs",
+   "How to detect structured logging problems?"
+  ],
+  "labIds": []
+ },
+ {
+  "id": "production-failures-099-observability-8-log-levels-correlation-ids-and-request-ids",
+  "trackId": "production-failures",
+  "title": "Observability 8. Log Levels, Correlation IDs and Request IDs",
+  "summary": "This concept contains three important production engineering topics. Part A — Log levels 1. What are log levels? Log levels represent the severity or importance of a log event. Python provides these common levels: Level…",
+  "order": 99,
+  "objectives": [
+   "Part A — Log levels",
+   "Part B — Request ID",
+   "Part C — Correlation ID",
+   "FastAPI example",
+   "How to detect problems?",
+   "How to fix them?"
   ],
   "labIds": [
    "multi-agent"
   ]
  },
  {
-  "id": "production-failures-063-13-instruction-conflicts",
+  "id": "production-failures-100-observability-9-centralized-logging-and-log-aggregation",
   "trackId": "production-failures",
-  "title": "13. Instruction Conflicts",
-  "summary": "(Common in agents and RAG systems) 1. What are instruction conflicts? Instruction conflicts occur when an LLM receives multiple instructions that contradict each other or cannot all be followed. Example: System…",
-  "order": 63,
+  "title": "Observability 9. Centralized Logging and Log Aggregation",
+  "summary": "(Essential for microservices) 1. What is centralized logging? Centralized logging means collecting logs from multiple services and storing them in a common logging platform. Imagine your application has: Each service…",
+  "order": 100,
   "objectives": [
-   "Explain every point in “13. Instruction Conflicts” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is centralized logging?",
+   "Visual explanation",
+   "Popular centralized logging tools",
+   "Real-time AI application example",
+   "How to implement centralized logging?",
+   "How to detect centralized logging problems?"
+  ],
+  "labIds": [
+   "chunking",
+   "retrieval"
+  ]
+ },
+ {
+  "id": "production-failures-101-observability-10-secure-logging-pii-masking-and-log-retention",
+  "trackId": "production-failures",
+  "title": "Observability 10. Secure Logging, PII Masking and Log Retention",
+  "summary": "(Security-critical) This is especially important because you've already studied LLM security, prompt injection, sensitive information leakage and cross-tenant isolation. Your observability system itself can become a…",
+  "order": 101,
+  "objectives": [
+   "What is secure logging?",
+   "What is PII?",
+   "Visual explanation",
+   "Python example: Basic PII masking",
+   "What is log retention?",
+   "What is log access control?"
   ],
   "labIds": [
    "retrieval",
@@ -972,1129 +1801,15 @@
   ]
  },
  {
-  "id": "production-failures-064-14-invalid-structured-output",
+  "id": "production-failures-102-observability-batch-2-revision-practice-logging-engineering",
   "trackId": "production-failures",
-  "title": "14. Invalid Structured Output",
-  "summary": "(Common API integration problem) 1. What is invalid structured output? It happens when the LLM returns output that does not match the format expected by your application. Common expected formats: - JSON. - XML. -…",
-  "order": 64,
-  "objectives": [
-   "Explain every point in “14. Invalid Structured Output” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "agent-loop"
-  ]
- },
- {
-  "id": "production-failures-065-15-incomplete-or-truncated-responses",
-  "trackId": "production-failures",
-  "title": "15. Incomplete or Truncated Responses",
-  "summary": "1. What is response truncation? Truncation happens when the model's output stops before the requested response is complete. Example: User asks: Generate a complete Python application with 10 functions. The model…",
-  "order": 65,
-  "objectives": [
-   "Explain every point in “15. Incomplete or Truncated Responses” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "retrieval",
-   "rate-limit",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-066-16-poor-retrieval",
-  "trackId": "production-failures",
-  "title": "16. Poor Retrieval",
-  "summary": "(High-impact RAG problem) 1. What is poor retrieval? Poor retrieval happens when your RAG system fails to retrieve the correct or most relevant documents for a user's query. The answer may exist in your knowledge base,…",
-  "order": 66,
-  "objectives": [
-   "Explain every point in “16. Poor Retrieval” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "cosine",
-   "retrieval"
-  ]
- },
- {
-  "id": "production-failures-067-17-chunking-problems",
-  "trackId": "production-failures",
-  "title": "17. Chunking Problems",
-  "summary": "1. What is chunking? Chunking means dividing large documents into smaller pieces before storing them in a vector database. Why? Embedding models and retrieval systems work with manageable text segments rather than…",
-  "order": 67,
-  "objectives": [
-   "Explain every point in “17. Chunking Problems” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "retrieval"
-  ]
- },
- {
-  "id": "production-failures-068-18-embedding-mismatch",
-  "trackId": "production-failures",
-  "title": "18. Embedding Mismatch",
-  "summary": "(Important indexing problem) 1. What are embeddings? Embeddings convert text into numerical vectors that represent semantic information. Example: An embedding model converts this sentence into a vector: Semantically…",
-  "order": 68,
-  "objectives": [
-   "Explain every point in “18. Embedding Mismatch” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval"
-  ]
- },
- {
-  "id": "production-failures-069-19-stale-or-incorrect-documents",
-  "trackId": "production-failures",
-  "title": "19. Stale or Incorrect Documents",
-  "summary": "1. What is stale data? Stale data means your RAG system retrieves outdated information instead of the latest approved information. Incorrect documents may also contain: - Wrong facts. - Duplicate policies. -…",
-  "order": 69,
-  "objectives": [
-   "Explain every point in “19. Stale or Incorrect Documents” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "retrieval"
-  ]
- },
- {
-  "id": "production-failures-070-20-retrieval-noise",
-  "trackId": "production-failures",
-  "title": "20. Retrieval Noise",
-  "summary": "1. What is retrieval noise? Retrieval noise occurs when your RAG system retrieves unnecessary, irrelevant or low-quality documents and passes them to the LLM. Unlike poor retrieval, where the correct document may be…",
-  "order": 70,
-  "objectives": [
-   "Explain every point in “20. Retrieval Noise” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "cosine",
-   "retrieval",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-071-21-conversation-memory-loss",
-  "trackId": "production-failures",
-  "title": "21. Conversation Memory Loss",
-  "summary": "(Common agent problem) 1. What is conversation memory loss? Conversation memory loss happens when an AI application cannot access important information from previous interactions. The model may behave as if it has…",
-  "order": 71,
-  "objectives": [
-   "Explain every point in “21. Conversation Memory Loss” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval",
-   "agent-loop"
-  ]
- },
- {
-  "id": "production-failures-072-22-memory-pollution",
-  "trackId": "production-failures",
-  "title": "22. Memory Pollution",
-  "summary": "1. What is memory pollution? Memory pollution happens when an AI application stores incorrect, irrelevant, temporary or malicious information in its memory. Later, the application retrieves that information and uses it…",
-  "order": 72,
-  "objectives": [
-   "Explain every point in “22. Memory Pollution” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval",
-   "injection",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-073-23-memory-inconsistency",
-  "trackId": "production-failures",
-  "title": "23. Memory Inconsistency",
-  "summary": "1. What is memory inconsistency? Memory inconsistency occurs when different parts of an AI application maintain conflicting versions of the same information. Unlike memory pollution, where bad information is stored,…",
-  "order": 73,
-  "objectives": [
-   "Explain every point in “23. Memory Inconsistency” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-074-24-context-overflow",
-  "trackId": "production-failures",
-  "title": "24. Context Overflow",
-  "summary": "(Major LLM resource problem) 1. What is context overflow? Context overflow occurs when the total tokens sent to the LLM exceed the model's available context capacity. Remember, the context window can include: - System…",
-  "order": 74,
-  "objectives": [
-   "Explain every point in “24. Context Overflow” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-075-25-long-term-memory-retrieval-failures",
-  "trackId": "production-failures",
-  "title": "25. Long-Term Memory Retrieval Failures",
-  "summary": "1. What is long-term memory retrieval failure? It happens when an AI application has successfully stored information for future use but cannot retrieve the correct memory when needed. This is different from conversation…",
-  "order": 75,
-  "objectives": [
-   "Explain every point in “25. Long-Term Memory Retrieval Failures” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-076-26-infinite-agent-loops",
-  "trackId": "production-failures",
-  "title": "26. Infinite Agent Loops",
-  "summary": "(Critical production problem) 1. What is an infinite agent loop? An infinite agent loop occurs when an AI agent repeatedly executes the same or similar actions without making meaningful progress toward its goal. The…",
-  "order": 76,
-  "objectives": [
-   "Explain every point in “26. Infinite Agent Loops” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "rate-limit",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-077-27-agent-gets-stuck",
-  "trackId": "production-failures",
-  "title": "27. Agent Gets Stuck",
-  "summary": "1. What is an agent getting stuck? An agent gets stuck when it cannot determine the next valid action or make progress toward its goal. Unlike an infinite loop, the agent may not repeatedly execute actions. It may…",
-  "order": 77,
-  "objectives": [
-   "Explain every point in “27. Agent Gets Stuck” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "production-failures-078-28-premature-agent-termination",
-  "trackId": "production-failures",
-  "title": "28. Premature Agent Termination",
-  "summary": "(Silent task-completion failure) 1. What is premature termination? Premature termination happens when an AI agent stops execution before completing the user's requested task. The agent may return an answer that looks…",
-  "order": 78,
-  "objectives": [
-   "Explain every point in “28. Premature Agent Termination” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "production-failures-079-29-repeated-reasoning-and-actions",
-  "trackId": "production-failures",
-  "title": "29. Repeated Reasoning and Actions",
-  "summary": "1. What is repeated reasoning and action? It occurs when an AI agent unnecessarily repeats its planning, reasoning or tool execution instead of reusing previous results. This may happen even when the agent is not in a…",
-  "order": 79,
-  "objectives": [
-   "Explain every point in “29. Repeated Reasoning and Actions” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-080-30-goal-drift-and-task-abandonment",
-  "trackId": "production-failures",
-  "title": "30. Goal Drift and Task Abandonment",
-  "summary": "(Important in long-running agents) 1. What is goal drift? Goal drift occurs when an AI agent gradually moves away from the original user objective while executing a multi-step task. The agent starts with the correct…",
-  "order": 80,
-  "objectives": [
-   "Explain every point in “30. Goal Drift and Task Abandonment” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-081-31-tool-not-selected",
-  "trackId": "production-failures",
-  "title": "31. Tool Not Selected",
-  "summary": "(Agent decision-making failure) 1. What is tool selection failure? Tool selection failure happens when an AI agent fails to select the correct tool required to complete a task. The tool exists, is available and may be…",
-  "order": 81,
-  "objectives": [
-   "Explain every point in “31. Tool Not Selected” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-082-32-incorrect-tool-arguments",
-  "trackId": "production-failures",
-  "title": "32. Incorrect Tool Arguments",
-  "summary": "(Very common integration problem) 1. What is incorrect tool argument generation? It happens when an AI agent selects the correct tool but sends incorrect, incomplete or invalid arguments. The tool itself may be…",
-  "order": 82,
-  "objectives": [
-   "Explain every point in “32. Incorrect Tool Arguments” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "production-failures-083-33-tool-execution-failure",
-  "trackId": "production-failures",
-  "title": "33. Tool Execution Failure",
-  "summary": "1. What is tool execution failure? Tool execution failure happens when an agent selects the correct tool and provides valid arguments, but the tool fails while executing. The problem may be inside the external API,…",
-  "order": 83,
-  "objectives": [
-   "Explain every point in “33. Tool Execution Failure” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "rate-limit"
-  ]
- },
- {
-  "id": "production-failures-084-34-tool-output-parsing-errors",
-  "trackId": "production-failures",
-  "title": "34. Tool Output Parsing Errors",
-  "summary": "1. What are tool output parsing errors? These errors occur when an agent receives a tool response but cannot correctly understand, parse or extract the required information. The tool may have executed successfully. The…",
-  "order": 84,
-  "objectives": [
-   "Explain every point in “34. Tool Output Parsing Errors” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "production-failures-085-35-tool-permission-and-side-effect-problems",
-  "trackId": "production-failures",
-  "title": "35. Tool Permission and Side-Effect Problems",
-  "summary": "(Critical security and reliability problem) 1. What are tool permission and side-effect problems? These occur when an AI agent: - Executes a tool without sufficient authorization. - Performs an action the user didn't…",
-  "order": 85,
-  "objectives": [
-   "Explain every point in “35. Tool Permission and Side-Effect Problems” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval",
-   "injection",
-   "rate-limit",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-086-36-authentication-failures",
-  "trackId": "production-failures",
-  "title": "36. Authentication Failures",
-  "summary": "(Identity verification failure) 1. What is authentication failure? Authentication is the process of verifying who or what is making a request . Authentication failure happens when an application, agent or service cannot…",
-  "order": 86,
-  "objectives": [
-   "Explain every point in “36. Authentication Failures” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval"
-  ]
- },
- {
-  "id": "production-failures-087-37-authorization-failures",
-  "trackId": "production-failures",
-  "title": "37. Authorization Failures",
-  "summary": "(Access control failure) 1. What is authorization failure? Authorization determines what an authenticated identity is allowed to do . Authorization failure occurs when a user, agent or application attempts to access a…",
-  "order": 87,
-  "objectives": [
-   "Explain every point in “37. Authorization Failures” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "production-failures-088-38-api-rate-limits",
-  "trackId": "production-failures",
-  "title": "38. API Rate Limits",
-  "summary": "(Traffic and throttling problem) 1. What are API rate limits? An API rate limit restricts how many requests a client can send within a specified period. For example: If your AI application sends 150 requests in one…",
-  "order": 88,
-  "objectives": [
-   "Explain every point in “38. API Rate Limits” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval",
-   "rate-limit"
-  ]
- },
- {
-  "id": "production-failures-089-39-network-and-dns-failures",
-  "trackId": "production-failures",
-  "title": "39. Network and DNS Failures",
-  "summary": "(Connectivity problem) 1. What are network and DNS failures? These occur when your AI application cannot establish communication with an external service. Your agent may select the correct tool, generate valid arguments…",
-  "order": 89,
-  "objectives": [
-   "Explain every point in “39. Network and DNS Failures” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "production-failures-090-40-timeouts-retries-and-duplicate-requests",
-  "trackId": "production-failures",
-  "title": "40. Timeouts, Retries and Duplicate Requests",
-  "summary": "(Critical production reliability problem) This is one of the most important concepts in distributed AI systems. 1. What is a timeout? A timeout occurs when an application waits for a response longer than its configured…",
-  "order": 90,
-  "objectives": [
-   "Explain every point in “40. Timeouts, Retries and Duplicate Requests” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "rate-limit",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-091-what-is-context-window-exhaustion",
-  "trackId": "production-failures",
-  "title": "What is context window exhaustion?",
-  "summary": "Every LLM has a maximum amount of information it can process in one request. This maximum is called the context window . It is measured in tokens. For example, imagine your selected model has a context window of 128,000…",
-  "order": 91,
-  "objectives": [
-   "Explain every point in “What is context window exhaustion?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "retrieval",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-092-what-is-token-budget-exhaustion",
-  "trackId": "production-failures",
-  "title": "What is token budget exhaustion?",
-  "summary": "Token budget exhaustion occurs when your application consumes more tokens than its allocated budget. This is different from context window exhaustion. Context window exhaustion Token budget exhaustion --- ---…",
-  "order": 92,
-  "objectives": [
-   "Explain every point in “What is token budget exhaustion?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "rate-limit",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-093-what-is-rate-limit-exhaustion",
-  "trackId": "production-failures",
-  "title": "What is rate limit exhaustion?",
-  "summary": "LLM providers restrict how frequently you can send requests and how many tokens you can process over a period. Two important limits: RPM — Requests Per Minute Maximum number of requests allowed per minute. TPM — Tokens…",
-  "order": 93,
-  "objectives": [
-   "Explain every point in “What is rate limit exhaustion?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "rate-limit",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-094-what-is-provider-quota-exhaustion",
-  "trackId": "production-failures",
-  "title": "What is provider quota exhaustion?",
-  "summary": "Rate limits and quotas are related, but they are not the same. A rate limit controls how quickly you can use a service. A quota controls how much total usage is allocated to your account or project over a defined…",
-  "order": 94,
-  "objectives": [
-   "Explain every point in “What is provider quota exhaustion?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "rate-limit"
-  ]
- },
- {
-  "id": "production-failures-095-what-is-a-timeout",
-  "trackId": "production-failures",
-  "title": "What is a timeout?",
-  "summary": "A timeout occurs when an operation takes longer than the maximum time the application is willing to wait. Example: - Your application timeout is 10 seconds. - Provider takes 20 seconds. - Your application stops waiting…",
-  "order": 95,
-  "objectives": [
-   "Explain every point in “What is a timeout?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval",
-   "rate-limit"
-  ]
- },
- {
-  "id": "production-failures-096-what-is-a-provider-outage",
-  "trackId": "production-failures",
-  "title": "What is a provider outage?",
-  "summary": "A provider outage happens when an LLM provider's service becomes unavailable or partially unavailable. Examples of providers: - Interactive content unavailable: Entity - Interactive content unavailable: Entity -…",
-  "order": 96,
-  "objectives": [
-   "Explain every point in “What is a provider outage?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "production-failures-097-what-is-model-unavailability",
-  "trackId": "production-failures",
-  "title": "What is model unavailability?",
-  "summary": "Model unavailability happens when the provider is operating, but the particular model you requested cannot be accessed. This is different from a complete provider outage. Example: Your application uses Model Y, so your…",
-  "order": 97,
-  "objectives": [
-   "Explain every point in “What is model unavailability?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "rate-limit"
-  ]
- },
- {
-  "id": "production-failures-098-what-is-a-model-version-change",
-  "trackId": "production-failures",
-  "title": "What is a model version change?",
-  "summary": "Sometimes a model identifier stays similar, but the provider updates the underlying model or its behavior. This can change: - Response style. - Reasoning behavior. - Tool calling. - Structured output. - Latency. - Token…",
-  "order": 98,
-  "objectives": [
-   "Explain every point in “What is a model version change?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "agent-loop"
-  ]
- },
- {
-  "id": "production-failures-099-what-is-provider-response-inconsistency",
-  "trackId": "production-failures",
-  "title": "What is provider response inconsistency?",
-  "summary": "The same or similar request can produce different outputs across models, providers or even repeated calls to the same model. This is especially important when your application depends on predictable output. For example,…",
-  "order": 99,
-  "objectives": [
-   "Explain every point in “What is provider response inconsistency?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "rate-limit",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-100-what-is-hallucination",
-  "trackId": "production-failures",
-  "title": "What is hallucination?",
-  "summary": "Hallucination happens when an LLM generates information that sounds convincing but is incorrect, unsupported or fabricated. Simple definition: The model gives an answer confidently without having reliable evidence for…",
-  "order": 100,
-  "objectives": [
-   "Explain every point in “What is hallucination?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "retrieval",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-101-what-is-prompt-sensitivity",
-  "trackId": "production-failures",
-  "title": "What is prompt sensitivity?",
-  "summary": "Prompt sensitivity means small changes in the wording, structure or formatting of a prompt can produce significantly different model outputs. Example: Prompt A: Prompt B: These prompts can produce very different…",
-  "order": 101,
-  "objectives": [
-   "Explain every point in “What is prompt sensitivity?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval",
-   "injection",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-102-what-is-invalid-structured-output",
-  "trackId": "production-failures",
-  "title": "What is invalid structured output?",
-  "summary": "It happens when the LLM returns output that does not match the format expected by your application. Common expected formats: - JSON. - XML. - Pydantic models. - Tool-call argument schemas. - Database extraction schemas.…",
+  "title": "Observability batch 2 — revision & practice: Logging Engineering",
+  "summary": "What this batch covers Concepts 6–10 of 75 · (5 concepts) In Batch 1, we learned that logs are one of the three pillars of observability. Now we're going deeper into logging. Imagine your production Agentic AI…",
   "order": 102,
   "objectives": [
-   "Explain every point in “What is invalid structured output?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "agent-loop"
-  ]
- },
- {
-  "id": "production-failures-103-what-is-response-truncation",
-  "trackId": "production-failures",
-  "title": "What is response truncation?",
-  "summary": "Truncation happens when the model's output stops before the requested response is complete. Example: User asks: Generate a complete Python application with 10 functions. The model returns: Then stops unexpectedly. The…",
-  "order": 103,
-  "objectives": [
-   "Explain every point in “What is response truncation?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "retrieval",
-   "rate-limit",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-104-what-is-poor-retrieval",
-  "trackId": "production-failures",
-  "title": "What is poor retrieval?",
-  "summary": "Poor retrieval happens when your RAG system fails to retrieve the correct or most relevant documents for a user's query. The answer may exist in your knowledge base, but the retriever cannot find it. Visual explanation…",
-  "order": 104,
-  "objectives": [
-   "Explain every point in “What is poor retrieval?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "cosine",
-   "retrieval"
-  ]
- },
- {
-  "id": "production-failures-105-what-is-chunking",
-  "trackId": "production-failures",
-  "title": "What is chunking?",
-  "summary": "Chunking means dividing large documents into smaller pieces before storing them in a vector database. Why? Embedding models and retrieval systems work with manageable text segments rather than requiring an entire large…",
-  "order": 105,
-  "objectives": [
-   "Explain every point in “What is chunking?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "retrieval"
-  ]
- },
- {
-  "id": "production-failures-106-what-is-embedding-mismatch",
-  "trackId": "production-failures",
-  "title": "What is embedding mismatch?",
-  "summary": "Embedding mismatch occurs when document embeddings and query embeddings are incompatible or poorly aligned. A common example is using one embedding model to index documents and a different incompatible model to embed…",
-  "order": 106,
-  "objectives": [
-   "Explain every point in “What is embedding mismatch?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval"
-  ]
- },
- {
-  "id": "production-failures-107-what-is-stale-data",
-  "trackId": "production-failures",
-  "title": "What is stale data?",
-  "summary": "Stale data means your RAG system retrieves outdated information instead of the latest approved information. Incorrect documents may also contain: - Wrong facts. - Duplicate policies. - Contradictory versions. -…",
-  "order": 107,
-  "objectives": [
-   "Explain every point in “What is stale data?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "retrieval"
-  ]
- },
- {
-  "id": "production-failures-108-what-is-retrieval-noise",
-  "trackId": "production-failures",
-  "title": "What is retrieval noise?",
-  "summary": "Retrieval noise occurs when your RAG system retrieves unnecessary, irrelevant or low-quality documents and passes them to the LLM. Unlike poor retrieval, where the correct document may be missing, retrieval noise…",
-  "order": 108,
-  "objectives": [
-   "Explain every point in “What is retrieval noise?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "cosine",
-   "retrieval",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-109-what-is-conversation-memory-loss",
-  "trackId": "production-failures",
-  "title": "What is conversation memory loss?",
-  "summary": "Conversation memory loss happens when an AI application cannot access important information from previous interactions. The model may behave as if it has forgotten what the user said earlier. Important: LLMs do not…",
-  "order": 109,
-  "objectives": [
-   "Explain every point in “What is conversation memory loss?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval",
-   "agent-loop"
-  ]
- },
- {
-  "id": "production-failures-110-what-is-memory-pollution",
-  "trackId": "production-failures",
-  "title": "What is memory pollution?",
-  "summary": "Memory pollution happens when an AI application stores incorrect, irrelevant, temporary or malicious information in its memory. Later, the application retrieves that information and uses it as if it were reliable.…",
-  "order": 110,
-  "objectives": [
-   "Explain every point in “What is memory pollution?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval",
-   "injection",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-111-what-is-memory-inconsistency",
-  "trackId": "production-failures",
-  "title": "What is memory inconsistency?",
-  "summary": "Memory inconsistency occurs when different parts of an AI application maintain conflicting versions of the same information. Unlike memory pollution, where bad information is stored, inconsistency means multiple stored…",
-  "order": 111,
-  "objectives": [
-   "Explain every point in “What is memory inconsistency?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-112-what-is-context-overflow",
-  "trackId": "production-failures",
-  "title": "What is context overflow?",
-  "summary": "Context overflow occurs when the total tokens sent to the LLM exceed the model's available context capacity. Remember, the context window can include: - System prompt. - Developer prompt. - User message. - Conversation…",
-  "order": 112,
-  "objectives": [
-   "Explain every point in “What is context overflow?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-113-what-is-long-term-memory-retrieval-failure",
-  "trackId": "production-failures",
-  "title": "What is long-term memory retrieval failure?",
-  "summary": "It happens when an AI application has successfully stored information for future use but cannot retrieve the correct memory when needed. This is different from conversation memory loss. - Memory loss: Information was…",
-  "order": 113,
-  "objectives": [
-   "Explain every point in “What is long-term memory retrieval failure?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-114-what-is-an-infinite-agent-loop",
-  "trackId": "production-failures",
-  "title": "What is an infinite agent loop?",
-  "summary": "An infinite agent loop occurs when an AI agent repeatedly executes the same or similar actions without making meaningful progress toward its goal. The agent doesn't reach a successful completion state. Visual…",
-  "order": 114,
-  "objectives": [
-   "Explain every point in “What is an infinite agent loop?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "rate-limit",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-115-what-is-an-agent-getting-stuck",
-  "trackId": "production-failures",
-  "title": "What is an agent getting stuck?",
-  "summary": "An agent gets stuck when it cannot determine the next valid action or make progress toward its goal. Unlike an infinite loop, the agent may not repeatedly execute actions. It may simply stop progressing. Difference -…",
-  "order": 115,
-  "objectives": [
-   "Explain every point in “What is an agent getting stuck?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "production-failures-116-what-is-premature-termination",
-  "trackId": "production-failures",
-  "title": "What is premature termination?",
-  "summary": "Premature termination happens when an AI agent stops execution before completing the user's requested task. The agent may return an answer that looks complete, even though important steps were never executed. 2. Why…",
-  "order": 116,
-  "objectives": [
-   "Explain every point in “What is premature termination?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "production-failures-117-what-is-repeated-reasoning-and-action",
-  "trackId": "production-failures",
-  "title": "What is repeated reasoning and action?",
-  "summary": "It occurs when an AI agent unnecessarily repeats its planning, reasoning or tool execution instead of reusing previous results. This may happen even when the agent is not in a strict infinite loop. Example User: Find…",
-  "order": 117,
-  "objectives": [
-   "Explain every point in “What is repeated reasoning and action?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-118-what-is-goal-drift",
-  "trackId": "production-failures",
-  "title": "What is goal drift?",
-  "summary": "Goal drift occurs when an AI agent gradually moves away from the original user objective while executing a multi-step task. The agent starts with the correct goal but eventually focuses on unrelated or unnecessary work.…",
-  "order": 118,
-  "objectives": [
-   "Explain every point in “What is goal drift?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-119-what-is-tool-selection-failure",
-  "trackId": "production-failures",
-  "title": "What is tool selection failure?",
-  "summary": "Tool selection failure happens when an AI agent fails to select the correct tool required to complete a task. The tool exists, is available and may be working correctly, but the agent chooses the wrong action or doesn't…",
-  "order": 119,
-  "objectives": [
-   "Explain every point in “What is tool selection failure?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-120-what-is-incorrect-tool-argument-generation",
-  "trackId": "production-failures",
-  "title": "What is incorrect tool argument generation?",
-  "summary": "It happens when an AI agent selects the correct tool but sends incorrect, incomplete or invalid arguments. The tool itself may be perfectly implemented. The failure is in the parameters generated by the model. 2. Why…",
-  "order": 120,
-  "objectives": [
-   "Explain every point in “What is incorrect tool argument generation?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": []
- },
- {
-  "id": "production-failures-121-what-is-tool-execution-failure",
-  "trackId": "production-failures",
-  "title": "What is tool execution failure?",
-  "summary": "Tool execution failure happens when an agent selects the correct tool and provides valid arguments, but the tool fails while executing. The problem may be inside the external API, network, database, authentication layer…",
-  "order": 121,
-  "objectives": [
-   "Explain every point in “What is tool execution failure?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval",
-   "injection",
-   "rate-limit",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-122-what-is-authentication-failure",
-  "trackId": "production-failures",
-  "title": "What is authentication failure?",
-  "summary": "Authentication is the process of verifying who or what is making a request . Authentication failure happens when an application, agent or service cannot prove its identity to another service. For example: Your AI agent…",
-  "order": 122,
-  "objectives": [
-   "Explain every point in “What is authentication failure?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval"
-  ]
- },
- {
-  "id": "production-failures-123-what-is-authorization-failure",
-  "trackId": "production-failures",
-  "title": "What is authorization failure?",
-  "summary": "Authorization determines what an authenticated identity is allowed to do . Authorization failure occurs when a user, agent or application attempts to access a resource or perform an action for which it lacks permission.…",
-  "order": 123,
-  "objectives": [
-   "Explain every point in “What is authorization failure?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval",
-   "rate-limit"
-  ]
- },
- {
-  "id": "production-failures-124-what-is-idempotency",
-  "trackId": "production-failures",
-  "title": "What is idempotency?",
-  "summary": "Idempotency means that repeating the same operation with the same idempotency key produces the same intended effect as performing it once. For example: Your application sends a payment request with: The first request…",
-  "order": 124,
-  "objectives": [
-   "Explain every point in “What is idempotency?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "rate-limit",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-125-batch-8-api-integration-problems",
-  "trackId": "production-failures",
-  "title": "Batch — 8. API & Integration Problems",
-  "summary": "Concepts 36–40 of 75 · (Batch 8 of 15) In production GenAI and Agentic AI applications, the LLM rarely works alone. It communicates with external systems: - REST APIs - Databases - MCP servers - Cloud services - Payment…",
-  "order": 125,
-  "objectives": [
-   "Explain every point in “Batch — 8. API & Integration Problems” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "rate-limit",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-126-batch-9-multi-agent-coordination-problems",
-  "trackId": "production-failures",
-  "title": "Batch — 9. Multi-Agent Coordination Problems",
-  "summary": "Concepts 41–45 of 75 · (Batch 9 of 15) This batch is extremely important when developing multi-agent AI systems using LangGraph, Azure AI Agent Framework, CrewAI, AutoGen, MCP and custom orchestration architectures. A…",
-  "order": 126,
-  "objectives": [
-   "Explain every point in “Batch — 9. Multi-Agent Coordination Problems” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-127-batch-10-agent-state-workflow-problems",
-  "trackId": "production-failures",
-  "title": "Batch — 10. Agent State & Workflow Problems",
-  "summary": "Concepts 46–50 of 75 · (Batch 10 of 15) This batch is particularly important for building production-grade AI agents using LangGraph, Azure AI Agent Framework, CrewAI, AutoGen and custom orchestration systems . Before…",
-  "order": 127,
-  "objectives": [
-   "Explain every point in “Batch — 10. Agent State & Workflow Problems” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "agent-loop",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-128-batch-11-data-database-problems",
-  "trackId": "production-failures",
-  "title": "Batch — 11. Data & Database Problems",
-  "summary": "Concepts 51–55 of 75 · (Batch 11 of 15) This batch focuses on database and data pipeline problems in production GenAI, RAG and Agentic AI applications. Imagine you're building an enterprise AI assistant with: -…",
-  "order": 128,
-  "objectives": [
-   "Explain every point in “Batch — 11. Data & Database Problems” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "cosine",
-   "retrieval",
-   "agent-loop",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-129-batch-12-reliability-performance-problems",
-  "trackId": "production-failures",
-  "title": "Batch — 12. Reliability & Performance Problems",
-  "summary": "Concepts 56–60 of 75 · (Batch 12 of 15) In this batch, we'll learn how to keep GenAI, RAG, Agentic AI and multi-agent applications running reliably even when individual components fail. Imagine you have deployed an…",
-  "order": 129,
-  "objectives": [
-   "Explain every point in “Batch — 12. Reliability & Performance Problems” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "chunking",
-   "retrieval",
-   "rate-limit",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-130-batch-13-cost-observability-problems",
-  "trackId": "production-failures",
-  "title": "Batch — 13. Cost & Observability Problems",
-  "summary": "Concepts 61–65 of 75 · (Batch 13 of 15) In this batch, we'll learn two important responsibilities of a production AI engineer: 1. Cost engineering: Understand where your GenAI application spends money and how to control…",
-  "order": 130,
-  "objectives": [
-   "Explain every point in “Batch — 13. Cost & Observability Problems” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-131-batch-14-safety-security-problems",
-  "trackId": "production-failures",
-  "title": "Batch — 14. Safety & Security Problems",
-  "summary": "Concepts 66–70 of 75 · (Batch 14 of 15) This is one of the most important batches for an AI engineer working with GenAI, RAG, Agentic AI and multi-agent systems. Traditional application security protects applications,…",
-  "order": 131,
-  "objectives": [
-   "Explain every point in “Batch — 14. Safety & Security Problems” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval",
-   "injection",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-132-batch-15-production-architecture-and-recovery-problems",
-  "trackId": "production-failures",
-  "title": "Batch — 15. Production Architecture &amp; Recovery Problems",
-  "summary": "Concepts 71–75 of 75 (Final batch) Welcome to the final batch\\! So far, we've covered problems across LLMs, RAG, agents, multi-agent orchestration, APIs, databases, security, cost and observability. Now let's learn how…",
-  "order": 132,
-  "objectives": [
-   "Explain every point in “Batch — 15. Production Architecture &amp; Recovery Problems” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval",
-   "rate-limit",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-133-batch-1-observability-fundamentals",
-  "trackId": "production-failures",
-  "title": "Batch — 1. Observability Fundamentals",
-  "summary": "5 concepts · (Beginner → Advanced) Concept 1. What is Observability? 1. What is observability? Observability is the ability to understand the internal behavior and health of a system by examining the data it produces.…",
-  "order": 133,
-  "objectives": [
-   "Explain every point in “Batch — 1. Observability Fundamentals” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-134-batch-2-logging-engineering",
-  "trackId": "production-failures",
-  "title": "Batch — 2. Logging Engineering",
-  "summary": "Concepts 6–10 of 75 · (5 concepts) In Batch 1, we learned that logs are one of the three pillars of observability. Now we're going deeper into logging. Imagine your production Agentic AI application receives 10,000…",
-  "order": 134,
-  "objectives": [
-   "Explain every point in “Batch — 2. Logging Engineering” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
-  ],
-  "labIds": [
-   "retrieval",
-   "multi-agent"
-  ]
- },
- {
-  "id": "production-failures-135-batch-2-practical-understanding",
-  "trackId": "production-failures",
-  "title": "Batch — 2. Practical understanding",
-  "summary": "Real-world debugging scenario Your Agentic AI application has the following problem: A user says the research agent failed. Your logs contain thousands of entries from different services. Which capabilities would help…",
-  "order": 135,
-  "objectives": [
-   "Explain every point in “Batch — 2. Practical understanding” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What this batch covers",
+   "Real-world debugging scenario",
+   "Progress tracker"
   ],
   "labIds": []
  }

@@ -67,6 +67,14 @@ const ProjectModulePage = page(() => import('@/pages/project/ProjectPages'), 'Pr
 const ProjectTopicPage = page(() => import('@/pages/project/ProjectPages'), 'ProjectTopicPage')
 const ProjectInterviewHub = page(() => import('@/pages/project/ProjectPages'), 'ProjectInterviewHub')
 
+const MlVisualizerIndex = page(() => import('@/pages/agents/AgentVisualizer'), 'MlVisualizerIndex')
+const MlVisualizerPage = page(() => import('@/pages/agents/AgentVisualizer'), 'MlVisualizerPage')
+const MlHome = page(() => import('@/pages/ml/MlPages'), 'MlHome')
+const MlPhasePage = page(() => import('@/pages/ml/MlPages'), 'MlPhasePage')
+const MlModulePage = page(() => import('@/pages/ml/MlPages'), 'MlModulePage')
+const MlTopicPage = page(() => import('@/pages/ml/MlPages'), 'MlTopicPage')
+const MlInterviewHub = page(() => import('@/pages/ml/MlPages'), 'MlInterviewHub')
+
 function NotFound() {
   return (
     <div className="track-page" style={{ maxWidth: 720, margin: '0 auto', padding: '3rem 1.25rem' }}>
@@ -133,6 +141,15 @@ export default function App() {
           <Route path="project/learn/:moduleId" element={<ProjectModulePage />} />
           <Route path="project/:phaseId" element={<ProjectPhasePage />} />
 
+          <Route path="ml" element={<MlHome />} />
+          <Route path="ml/visualizer" element={<MlVisualizerIndex />} />
+          <Route path="ml/visualizer/:simId" element={<MlVisualizerPage />} />
+          <Route path="ml/path/:topicId" element={<MlTopicPage />} />
+          <Route path="ml/interview" element={<MlInterviewHub />} />
+          <Route path="ml/learn" element={<Navigate to="/ml" replace />} />
+          <Route path="ml/learn/:moduleId" element={<MlModulePage />} />
+          <Route path="ml/:phaseId" element={<MlPhasePage />} />
+
           <Route path="docker" element={<DockerHome />} />
           <Route path="docker/labs" element={<DockerLabsIndex />} />
           <Route path="docker/labs/:labId" element={<DockerLabRouter />} />
@@ -146,6 +163,7 @@ export default function App() {
           <Route path="tracks/agents" element={<Navigate to="/agents" replace />} />
           <Route path="tracks/veerarag" element={<Navigate to="/rag" replace />} />
           <Route path="tracks/veeraproject" element={<Navigate to="/project" replace />} />
+          <Route path="tracks/veeraml" element={<Navigate to="/ml" replace />} />
           <Route path="tracks/:trackId" element={<TrackOverview />} />
           <Route path="learn/:trackId/:lessonId" element={<LessonPage />} />
           <Route path="labs" element={<LabsIndex />} />

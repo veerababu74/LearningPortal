@@ -41,6 +41,8 @@ export function ProgressPage() {
                       ? '/rag'
                       : track.id === 'veeraproject'
                         ? '/project'
+                        : track.id === 'veeraml'
+                          ? '/ml'
                         : track.id === 'agents'
                           ? '/agents'
                           : track.id === 'asyncconcur'

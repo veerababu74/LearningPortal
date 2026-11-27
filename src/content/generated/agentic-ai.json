@@ -6,9 +6,7 @@
   "summary": "How our projects will evolve Project Application Engineering objective -------- -------- -------- P1 Intelligent tool-calling assistant Understand agent execution loops P2 Research and analysis agent Planning and…",
   "order": 1,
   "objectives": [
-   "Explain every point in “Part — 1. Complete Agentic AI curriculum” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "How our projects will evolve"
   ],
   "labIds": [
    "multi-agent"
@@ -21,9 +19,11 @@
   "summary": "2.1 Evolution from traditional software to Agentic AI These categories are not necessarily replacements for each other. A production agentic system may use traditional software, machine learning, RAG and generative AI…",
   "order": 2,
   "objectives": [
-   "Explain every point in “Part — 2. Understanding AI agents and Agentic AI” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Evolution from traditional software to Agentic AI",
+   "What is an AI agent?",
+   "What is Agentic AI?",
+   "Chatbot vs RAG vs workflow vs AI agent",
+   "When should you not use an AI agent?"
   ],
   "labIds": [
    "retrieval"
@@ -36,9 +36,8 @@
   "summary": "3.1 Classical AI agent types Before LLM-based agents, artificial intelligence already had several established agent architectures. Modern LLM agents commonly combine goal-based behavior, utility-based selection and…",
   "order": 3,
   "objectives": [
-   "Explain every point in “Part — 3. Types of AI agents and levels of autonomy” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Classical AI agent types",
+   "Levels of agent autonomy"
   ],
   "labIds": []
  },
@@ -49,9 +48,10 @@
   "summary": "To understand Agentic AI deeply, we need concepts from reinforcement learning, decision theory, probability, optimization and graph theory. 4.1 Agent-environment interaction An agent receives an observation, chooses an…",
   "order": 4,
   "objectives": [
-   "Explain every point in “Part — 4. Mathematical foundations of AI agents” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Agent-environment interaction",
+   "Markov Decision Process — MDP",
+   "Partially Observable Markov Decision Process — POMDP",
+   "Utility-based action selection"
   ],
   "labIds": []
  },
@@ -62,9 +62,9 @@
   "summary": "This is the most important implementation concept in Agentic AI. Many developers believe the LLM directly executes Python functions, queries databases or calls APIs. In a typical tool-calling architecture, the LLM…",
   "order": 5,
   "objectives": [
-   "Explain every point in “Part — 5. Agent execution loop — How an agent actually works” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Complete agent execution lifecycle",
+   "Realistic example — Order investigation agent",
+   "Agent state vs environment state"
   ],
   "labIds": [
    "retrieval",
@@ -78,9 +78,11 @@
   "summary": "6.1 What is an AI agent tool? A tool is an application-defined capability that an agent can request. Examples include database operations, REST APIs, search, RAG retrieval, calculators, document generation, code…",
   "order": 6,
   "objectives": [
-   "Explain every point in “Part — 6. Tools, function calling and structured outputs” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is an AI agent tool?",
+   "Function calling lifecycle",
+   "Tool definition using JSON Schema",
+   "Structured output vs tool calling",
+   "Production tool failure scenarios"
   ],
   "labIds": [
    "retrieval",
@@ -94,9 +96,12 @@
   "summary": "Before learning frameworks, students should implement the underlying execution loop. We will use a local synthetic order database to avoid requiring an actual business API. 7.1 Project structure 7.2 Install dependencies…",
   "order": 7,
   "objectives": [
-   "Explain every point in “Part — 7. Build an AI agent from scratch — Without LangChain” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Project structure",
+   "Install dependencies",
+   "Implement the tool and input validation",
+   "Create the tool registry",
+   "Implement the execution loop",
+   "Practical assignment — Project 1"
   ],
   "labIds": [
    "retrieval"
@@ -109,9 +114,10 @@
   "summary": "8.1 ReAct — Reasoning and Acting ReAct combines task interpretation with actions and observations. The agent progressively gathers evidence and determines what to do next. For production observability, store structured…",
   "order": 8,
   "objectives": [
-   "Explain every point in “Part — 8. Agent reasoning, planning and execution patterns” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "ReAct — Reasoning and Acting",
+   "Plan-and-execute pattern",
+   "Reflection and evaluator-optimizer pattern",
+   "Advanced reasoning patterns"
   ],
   "labIds": [
    "retrieval",
@@ -125,9 +131,11 @@
   "summary": "Before implementing multi-agent systems, understand the fundamental orchestration patterns. 9.1 Prompt chaining — Sequential workflow Each step receives the output of the previous step. Example: Resume processing…",
   "order": 9,
   "objectives": [
-   "Explain every point in “Part — 9. Agent design patterns and orchestration” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Prompt chaining — Sequential workflow",
+   "Routing pattern",
+   "Parallelization pattern",
+   "Orchestrator-worker pattern",
+   "Choosing the right design pattern"
   ],
   "labIds": [
    "multi-agent"
@@ -140,9 +148,10 @@
   "summary": "Memory in Agentic AI is considerably more complex than storing a list of chat messages. An agent may need to remember user preferences, previous observations, workflow state, past decisions, pending approvals and…",
   "order": 10,
   "objectives": [
-   "Explain every point in “Part — 10. Agent memory and context engineering” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Types of memory",
+   "Memory retrieval mathematics",
+   "Production scenario — Memory poisoning",
+   "Memory engineering rules"
   ],
   "labIds": [
    "retrieval"
@@ -155,9 +164,9 @@
   "summary": "We have already implemented a tool-calling loop using pure Python. Now we can understand what an agent framework abstracts. LangChain provides a higher-level agent runtime through create agent , with tools and…",
   "order": 11,
   "objectives": [
-   "Explain every point in “Part — 11. LangChain — Implementing agents using a framework” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Installation",
+   "Basic LangChain agent",
+   "Pure Python vs LangChain vs LangGraph"
   ],
   "labIds": [
    "agent-loop",
@@ -171,9 +180,8 @@
   "summary": "LangGraph is useful when execution needs explicit state, conditional transitions, durable progress and human supervision. Its interrupt mechanism supports pausing an execution and resuming it using saved state.…",
   "order": 12,
   "objectives": [
-   "Explain every point in “Part — 12. LangGraph — State management and agent orchestration” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Graph terminology",
+   "Implement a conditional state graph"
   ],
   "labIds": [
    "agent-loop",
@@ -187,9 +195,11 @@
   "summary": "A multi-agent system contains multiple decision-making components that collaborate, delegate or specialize in different parts of a task. 13.1 Why do we need multiple agents? Consider an enterprise procurement…",
   "order": 13,
   "objectives": [
-   "Explain every point in “Part — 13. Multi-agent systems — Architecture and communication” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Why do we need multiple agents?",
+   "Multi-agent architecture patterns",
+   "Supervisor vs router",
+   "Subagents vs tools",
+   "Communication complexity"
   ],
   "labIds": [
    "retrieval",
@@ -203,9 +213,9 @@
   "summary": "These concepts are particularly important when developing enterprise agent platforms. They are related but serve different purposes. 14.1 Difference between tools, skills, hooks and subagents Component Main…",
   "order": 14,
   "objectives": [
-   "Explain every point in “Part — 14. Skills, hooks, middleware and plugins” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Difference between tools, skills, hooks and subagents",
+   "Agent skills — Progressive disclosure",
+   "Hooks and middleware lifecycle"
   ],
   "labIds": [
    "retrieval"
@@ -218,9 +228,12 @@
   "summary": "MCP standardizes how an AI application connects to external capabilities and context providers. It does not replace the LLM, agent runtime, REST APIs, authentication service or workflow engine. 15.1 Traditional…",
   "order": 15,
   "objectives": [
-   "Explain every point in “Part — 15. MCP — Model Context Protocol” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Traditional integrations vs MCP",
+   "MCP architecture",
+   "MCP primitives",
+   "Create an MCP server in Python",
+   "MCP client example",
+   "MCP production security scenarios"
   ],
   "labIds": [
    "retrieval"
@@ -233,9 +246,8 @@
   "summary": "MCP helps an agent access external tools and context. A2A addresses interoperability between independently implemented agents. MCP vs A2A 16.1 Key A2A concepts Concept Meaning -------- -------- Agent Card Describes an…",
   "order": 16,
   "objectives": [
-   "Explain every point in “Part — 16. A2A — Agent-to-Agent communication” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Key A2A concepts",
+   "Production example"
   ],
   "labIds": [
    "retrieval",
@@ -249,9 +261,8 @@
   "summary": "We have already studied RAG extensively. Agentic RAG combines those retrieval capabilities with dynamic planning, tool selection and iterative evidence gathering. 17.1 Conventional RAG vs Agentic RAG Conventional RAG…",
   "order": 17,
   "objectives": [
-   "Explain every point in “Part — 17. Agentic RAG — Connecting our two masterclasses” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Real enterprise scenario",
+   "Context requirements for multiple tools"
   ],
   "labIds": [
    "retrieval"
@@ -264,9 +275,9 @@
   "summary": "Human approval is not simply adding a confirmation message before executing a tool. In a production application, an approval is a governed authorization event associated with a specific proposed action. 18.1 Approval…",
   "order": 18,
   "objectives": [
-   "Explain every point in “Part — 18. Human-in-the-loop and approval engineering” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Approval data model",
+   "Time-of-check to time-of-use — TOCTOU",
+   "LangGraph interrupt example"
   ],
   "labIds": [
    "agent-loop"
@@ -279,9 +290,10 @@
   "summary": "This is one of the biggest differences between building a chatbot and building an agent that changes external systems. 19.1 Scenario — Tool succeeded, but the agent received a timeout The agent calls a payment service.…",
   "order": 19,
   "objectives": [
-   "Explain every point in “Part — 19. Durable execution, idempotency and transactional safety” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Scenario — Tool succeeded, but the agent received a timeout",
+   "Idempotency",
+   "Correct execution state machine",
+   "Saga pattern and compensating transactions"
   ],
   "labIds": []
  },
@@ -292,9 +304,7 @@
   "summary": "The following catalogue contains realistic engineering failure classes. These are teaching scenarios, not claims about specific historical incidents. ID Production scenario Failure class -------- -------- -------- A01…",
   "order": 20,
   "objectives": [
-   "Explain every point in “Part — 20. Production failure scenarios — What actually goes wrong with agents” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Part — 20. Production failure scenarios — What actually goes wrong with agents"
   ],
   "labIds": [
    "retrieval",
@@ -308,9 +318,12 @@
   "summary": "Agentic AI introduces additional risks beyond ordinary RAG because an agent may take actions that affect real systems. OWASP publishes a dedicated Top 10 security framework for agentic applications, covering risks…",
   "order": 21,
   "objectives": [
-   "Explain every point in “Part — 21. Agentic AI security and governance” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Trust boundaries",
+   "Excessive agency",
+   "Confused deputy problem",
+   "Tool security gateway",
+   "Sandbox and supply-chain security",
+   "Agent identity and delegation"
   ],
   "labIds": [
    "rate-limit"
@@ -323,9 +336,12 @@
   "summary": "RAG evaluates evidence retrieval and answer generation. Agent evaluation must additionally evaluate the execution trajectory and external task outcome. 22.1 Evaluation layers Security, latency, reliability and…",
   "order": 22,
   "objectives": [
-   "Explain every point in “Part — 22. Agent evaluation — Beyond ordinary LLM evaluation” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Evaluation layers",
+   "Important agent evaluation metrics",
+   "Trajectory evaluation",
+   "Reliability across multiple agent runs",
+   "Golden task dataset",
+   "Evaluation frameworks and benchmark topics"
   ],
   "labIds": [
    "retrieval"
@@ -338,9 +354,12 @@
   "summary": "An agent execution is not a single LLM request. It can contain a hierarchy of decisions, subagents, tool invocations, approval pauses, retries and external transactions. 23.1 Complete agent trace Example agent execution…",
   "order": 23,
   "objectives": [
-   "Explain every point in “Part — 23. Agent observability and distributed tracing” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Complete agent trace",
+   "Trace hierarchy",
+   "Agent telemetry event",
+   "OpenTelemetry implementation",
+   "Agent monitoring dashboard",
+   "Incident example — All tools return HTTP 200, but task success drops"
   ],
   "labIds": [
    "retrieval"
@@ -353,9 +372,11 @@
   "summary": "Agentic AI expenditure is often more variable than RAG expenditure because the number of operations is dynamically determined. 24.1 Complete cost model \\[ C {task}= \\sum {i=1}^{n} C {LLM,i} +\\sum {j=1}^{m} C {tool,j} +C…",
   "order": 24,
   "objectives": [
-   "Explain every point in “Part — 24. Agent cost management and FinOps” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Complete cost model",
+   "Hidden cost — Conversation and tool-history accumulation",
+   "Interactive agent cost calculator",
+   "Production cost reduction strategies",
+   "Global agent execution budget"
   ],
   "labIds": [
    "retrieval"
@@ -368,9 +389,10 @@
   "summary": "An agent may require multiple LLM calls, tools and verification operations before producing a result. 25.1 Sequential vs parallel execution Consider the following agent workflow. Stage Duration -------- --------…",
   "order": 25,
   "objectives": [
-   "Explain every point in “Part — 25. Latency reduction and critical-path optimization” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Sequential vs parallel execution",
+   "Directed acyclic graphs and critical paths",
+   "Amdahl's Law",
+   "Production latency optimization techniques"
   ],
   "labIds": [
    "multi-agent"
@@ -383,9 +405,10 @@
   "summary": "Our RAG course covered retries and circuit breakers. Agentic AI requires those controls plus additional guarantees about task execution and external side effects. 26.1 Retry types Retry type Example -------- --------…",
   "order": 26,
   "objectives": [
-   "Explain every point in “Part — 26. Production reliability and fault tolerance” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Retry types",
+   "Retry amplification",
+   "Durable execution architecture",
+   "Essential production reliability concepts"
   ],
   "labIds": [
    "retrieval"
@@ -398,9 +421,10 @@
   "summary": "Long-running agents should not necessarily execute entirely inside a single synchronous HTTP request. 27.1 Asynchronous task API 27.2 API endpoints Endpoint Purpose -------- -------- POST /tasks Create an authorized…",
   "order": 27,
   "objectives": [
-   "Explain every point in “Part — 27. Agent API engineering and scalability” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Asynchronous task API",
+   "API endpoints",
+   "Scalability mathematics",
+   "Noisy-neighbor isolation"
   ],
   "labIds": [
    "retrieval",
@@ -414,9 +438,9 @@
   "summary": "A production agent must be tested for acceptable behavior when the environment is incomplete, malicious, unavailable or inconsistent. 28.1 Complete testing strategy Security, adversarial, performance and resilience…",
   "order": 28,
   "objectives": [
-   "Explain every point in “Part — 28. Agent testing and chaos engineering” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Complete testing strategy",
+   "Failure-injection test matrix",
+   "Example unit tests"
   ],
   "labIds": [
    "injection",
@@ -430,9 +454,7 @@
   "summary": "There are several frameworks for developing AI agents. Students should understand their design philosophies rather than memorize framework-specific APIs. Framework or ecosystem Primary engineering focus --------…",
   "order": 29,
   "objectives": [
-   "Explain every point in “Part — 29. Agent frameworks and ecosystem selection” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Framework selection decision tree"
   ],
   "labIds": [
    "multi-agent"
@@ -445,9 +467,9 @@
   "summary": "Project: Intelligent enterprise procurement and operations assistant This project combines Agentic AI, RAG, MCP, structured tools, governance, memory, evaluation and production engineering. Business requirements The…",
   "order": 30,
   "objectives": [
-   "Explain every point in “Part — 30. Enterprise Agentic AI capstone project” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Project: Intelligent enterprise procurement and operations assistant",
+   "Recommended technology stack",
+   "Enterprise project directory structure"
   ],
   "labIds": [
    "retrieval",
@@ -462,9 +484,7 @@
   "summary": "To achieve the same depth as our RAG course, the following advanced areas must also be studied as dedicated lessons. Engineering domain Advanced topics -------- -------- Agent harness engineering Dynamic prompts, tool…",
   "order": 31,
   "objectives": [
-   "Explain every point in “Part — 31. Agentic AI production pitfalls and advanced curriculum gaps” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Part — 31. Agentic AI production pitfalls and advanced curriculum gaps"
   ],
   "labIds": [
    "retrieval",
@@ -478,9 +498,7 @@
   "summary": "I would structure the Agentic AI training as a cumulative engineering course of approximately 300 hours, including hands-on development. Module Subject Hours -------- -------- -------- 1 AI agent fundamentals and…",
   "order": 32,
   "objectives": [
-   "Explain every point in “Part — 32. Complete progressive learning roadmap” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Part — 32. Complete progressive learning roadmap"
   ],
   "labIds": [
    "multi-agent"
@@ -493,9 +511,12 @@
   "summary": "Enterprise agent readiness /28 [Copy checklist] --- Official learning resources Resource Learning objective -------- -------- urlBuilding Effective Agents —…",
   "order": 33,
   "objectives": [
-   "Explain every point in “Part — 33. Production readiness checklist” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "RAG",
+   "Agentic AI",
+   "Current completion status",
+   "Important topics we still need to cover deeply",
+   "Production scenarios that require deeper coverage",
+   "Final masterclass target"
   ],
   "labIds": [
    "retrieval",
@@ -509,9 +530,10 @@
   "summary": "34.1 What is an agent harness? An LLM is a model. An agent harness is the surrounding software infrastructure that enables the model to operate as a controlled agent. Many developers concentrate on writing better…",
   "order": 34,
   "objectives": [
-   "Explain every point in “Part — 34. Advanced agent harness engineering” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "What is an agent harness?",
+   "Production scenario: Same model, different agent performance",
+   "Agent state machine",
+   "Pure Python harness structure"
   ],
   "labIds": [
    "agent-loop"
@@ -524,9 +546,12 @@
   "summary": "35.1 The tool overload problem Imagine an enterprise agent connected to 50 MCP servers exposing 5,000 tools. Sending every tool definition into every LLM request creates three problems: - Excessive input-token…",
   "order": 35,
   "objectives": [
-   "Explain every point in “Part — 35. Advanced tool engineering and large tool catalogues” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "The tool overload problem",
+   "Tool retrieval architecture",
+   "Tool ranking mathematics",
+   "Interactive tool-context calculator",
+   "Tool contracts",
+   "Production tool failure: Schema drift"
   ],
   "labIds": [
    "retrieval"
@@ -539,9 +564,11 @@
   "summary": "36.1 Reactive vs deliberative planning Approach Mechanism -------- -------- Reactive Select the next action using the current observation Deliberative Construct a plan before execution Hybrid Create an initial plan and…",
   "order": 36,
   "objectives": [
-   "Explain every point in “Part — 36. Advanced planning algorithms” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Reactive vs deliberative planning",
+   "Plan representation as a DAG",
+   "Beam search",
+   "Monte Carlo Tree Search — MCTS",
+   "Production scenario: Planning explosion"
   ],
   "labIds": [
    "retrieval",
@@ -555,9 +582,10 @@
   "summary": "37.1 Memory lifecycle Memory is not just a vector database containing conversation summaries. An enterprise memory system needs: Capability Purpose -------- -------- Consolidation Merge compatible repeated information…",
   "order": 37,
   "objectives": [
-   "Explain every point in “Part — 37. Advanced memory engineering” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Memory lifecycle",
+   "Scenario: Conflicting memories",
+   "Temporal memory model",
+   "Memory forgetting mathematics"
   ],
   "labIds": []
  },
@@ -568,9 +596,9 @@
   "summary": "Context engineering is the process of determining which instructions, tools, memories, evidence and state are presented to the model at each execution step. 38.1 Context-window allocation Example 32,000-token context…",
   "order": 38,
   "objectives": [
-   "Explain every point in “Part — 38. Advanced context engineering” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Context-window allocation",
+   "Context management techniques",
+   "Scenario: Summarization changes a financial figure"
   ],
   "labIds": [
    "retrieval"
@@ -583,9 +611,10 @@
   "summary": "We previously created a simple conditional graph. Production systems need additional mechanisms for parallel state updates, dynamic workers, reusable subgraphs and persistent execution. 39.1 Reducers and parallel state…",
   "order": 39,
   "objectives": [
-   "Explain every point in “Part — 39. Advanced LangGraph engineering” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Reducers and parallel state updates",
+   "Dynamic fan-out using Send",
+   "Subgraphs",
+   "Checkpoint migration"
   ],
   "labIds": [
    "retrieval",
@@ -599,9 +628,9 @@
   "summary": "40.1 Structured communication contracts Agents should exchange typed task requests and structured results instead of unrestricted conversations wherever possible. Authentication and delegation credentials must be…",
   "order": 40,
   "objectives": [
-   "Explain every point in “Part — 40. Multi-agent communication engineering” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Structured communication contracts",
+   "Agent result contract",
+   "Message delivery semantics"
   ],
   "labIds": [
    "multi-agent"
@@ -614,9 +643,10 @@
   "summary": "41.1 Deadlock scenario The finance agent waits for the compliance agent to approve a supplier. The compliance agent waits for the finance agent to confirm the financial review. A wait-for graph can model the…",
   "order": 41,
   "objectives": [
-   "Explain every point in “Part — 41. Multi-agent failures, race conditions and deadlocks” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Deadlock scenario",
+   "Race condition — Lost update",
+   "Multi-agent consensus is not independent verification",
+   "Cascading failure probability"
   ],
   "labIds": [
    "multi-agent"
@@ -629,9 +659,10 @@
   "summary": "We previously learned how to create an MCP server and client. Now we will examine what happens at the protocol level. 42.1 MCP communication lifecycle This is the familiar MCP JSON-RPC lifecycle. Production clients…",
   "order": 42,
   "objectives": [
-   "Explain every point in “Part — 42. Advanced MCP protocol engineering” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "MCP communication lifecycle",
+   "JSON-RPC request structure",
+   "Transports",
+   "Important MCP engineering considerations"
   ],
   "labIds": []
  },
@@ -642,9 +673,8 @@
   "summary": "43.1 Tool poisoning and rug pulls An approved tool initially describes itself as a read-only invoice lookup. After a server update, its description, schema or behavior changes unexpectedly. This is a trust and software…",
   "order": 43,
   "objectives": [
-   "Explain every point in “Part — 43. Advanced MCP security” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Tool poisoning and rug pulls",
+   "MCP security failure matrix"
   ],
   "labIds": []
  },
@@ -655,9 +685,10 @@
   "summary": "44.1 Local subagent vs remote agent Local subagent A2A-connected remote agent -------- -------- Usually controlled by the same application May be operated independently Shared deployment trust model Separate security…",
   "order": 44,
   "objectives": [
-   "Explain every point in “Part — 44. Advanced A2A communication and remote agent lifecycle” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Local subagent vs remote agent",
+   "Remote task lifecycle",
+   "Scenario: Cancellation race",
+   "Delegation envelopes"
   ],
   "labIds": []
  },
@@ -668,9 +699,9 @@
   "summary": "45.1 Progressive skill loading Consider an agent supporting 100 enterprise procedures. Each procedure contains approximately 2,000 tokens. Loading all procedures costs 200,000 tokens before the actual user task. A…",
   "order": 45,
   "objectives": [
-   "Explain every point in “Part — 45. Advanced skills and hooks” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Progressive skill loading",
+   "Hook ordering",
+   "Fail-open vs fail-closed"
   ],
   "labIds": []
  },
@@ -681,9 +712,10 @@
   "summary": "Computer-use agents interact with graphical interfaces rather than relying exclusively on structured APIs. This is useful when an enterprise application has no suitable API, but it introduces additional uncertainty.…",
   "order": 46,
   "objectives": [
-   "Explain every point in “Part — 46. Computer-use agents and browser automation” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Observe–act–verify loop",
+   "API agents vs computer-use agents",
+   "Production scenario: Interface changes during execution",
+   "Browser-agent security"
   ],
   "labIds": []
  },
@@ -694,9 +726,9 @@
   "summary": "47.1 Production coding-agent workflow The agent should operate in a controlled workspace with only the permissions necessary for the task. 47.2 Production scenario: Tests pass but implementation is wrong A coding agent…",
   "order": 47,
   "objectives": [
-   "Explain every point in “Part — 47. Code-generation agents and sandbox engineering” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Production coding-agent workflow",
+   "Production scenario: Tests pass but implementation is wrong",
+   "Sandbox resource policy"
   ],
   "labIds": []
  },
@@ -707,9 +739,9 @@
   "summary": "An agent does not always begin execution when a user sends a chat message. It may be triggered by a document upload, scheduled event, support ticket or business-system notification. 48.1 Event-driven architecture Event…",
   "order": 48,
   "objectives": [
-   "Explain every point in “Part — 48. Event-driven agents and scheduling” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Event-driven architecture",
+   "Duplicate webhook problem",
+   "Event ordering"
   ],
   "labIds": []
  },
@@ -720,9 +752,9 @@
   "summary": "49.1 Why ordinary HTTP execution is insufficient A business investigation may need human approval tomorrow or a supplier response several days later. Keeping an HTTP connection, model session or worker thread active…",
   "order": 49,
   "objectives": [
-   "Explain every point in “Part — 49. Long-running and durable agents” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Why ordinary HTTP execution is insufficient",
+   "Resume safety",
+   "Replay vs re-execution"
   ],
   "labIds": []
  },
@@ -733,9 +765,9 @@
   "summary": "Human approval can become a bottleneck, especially when every agent operation triggers a confirmation. 50.1 Risk-based supervision Operation Typical supervision -------- -------- Search public policy Automatic within…",
   "order": 50,
   "objectives": [
-   "Explain every point in “Part — 50. Advanced human-in-the-loop engineering” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Risk-based supervision",
+   "Approval fatigue",
+   "Approval binding and separation of duties"
   ],
   "labIds": []
  },
@@ -746,9 +778,8 @@
   "summary": "Our earlier security lesson introduced excessive agency and confused deputies. Now we need a systematic threat model covering the entire agent lifecycle. OWASP's dedicated agentic application security guidance provides…",
   "order": 51,
   "objectives": [
-   "Explain every point in “Part — 51. Advanced agent threat modeling” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Additional production failure catalogue",
+   "Risk prioritization"
   ],
   "labIds": []
  },
@@ -759,9 +790,9 @@
   "summary": "Governance establishes who owns the agent, what it is allowed to do and how its behavior is reviewed. 52.1 Agent inventory Every production agent should have an inventory record. 52.2 Control-plane architecture Central…",
   "order": 52,
   "objectives": [
-   "Explain every point in “Part — 52. Enterprise agent governance framework” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Agent inventory",
+   "Control-plane architecture",
+   "Kill switches"
   ],
   "labIds": []
  },
@@ -772,9 +803,12 @@
   "summary": "One of the hardest production challenges is determining whether a new model, prompt or agent architecture is genuinely better. 53.1 Why ordinary answer evaluation is insufficient Consider two agents tasked with…",
   "order": 53,
   "objectives": [
-   "Explain every point in “Part — 53. Advanced agent evaluation and statistical testing” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Why ordinary answer evaluation is insufficient",
+   "Tool-call precision and recall",
+   "Selective execution and confidence calibration",
+   "Statistical significance",
+   "Zero observed security failures",
+   "Release gate scenario"
   ],
   "labIds": [
    "cosine"
@@ -787,9 +821,11 @@
   "summary": "54.1 Four different monitoring dimensions Dimension What it measures -------- -------- Infrastructure health CPU, memory, queues, network Runtime health Model and tool errors, execution latency Semantic quality Planning…",
   "order": 54,
   "objectives": [
-   "Explain every point in “Part — 54. Deep agent observability and production debugging” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Four different monitoring dimensions",
+   "Complete distributed trace",
+   "Trace correlation across queues and agents",
+   "Prometheus instrumentation",
+   "Production diagnostic scenarios"
   ],
   "labIds": [
    "multi-agent"
@@ -802,9 +838,10 @@
   "summary": "55.1 Hierarchical budget allocation A parent agent must not delegate its full remaining budget independently to every child. Suppose the parent has \\$0.10 remaining and creates five subagents. If each receives a \\$0.10…",
   "order": 55,
   "objectives": [
-   "Explain every point in “Part — 55. Advanced agent cost management and FinOps” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Hierarchical budget allocation",
+   "Distributed cost reservation",
+   "Cost of multi-agent delegation",
+   "FinOps dashboard"
   ],
   "labIds": [
    "multi-agent"
@@ -817,9 +854,10 @@
   "summary": "56.1 Tail-latency amplification If an orchestrator launches 20 independent workers and each has a 1% probability of missing its latency target: \\[ P(at\\ least\\ one\\ slow) =1-0.99^{20} \\approx18.21\\% \\] This assumes the…",
   "order": 56,
   "objectives": [
-   "Explain every point in “Part — 56. Advanced latency optimization” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Tail-latency amplification",
+   "Critical-path optimization",
+   "Speculative execution",
+   "Early stopping and quorum"
   ],
   "labIds": [
    "chunking",
@@ -833,9 +871,9 @@
   "summary": "57.1 Agent cache hierarchy 57.2 Scenario: Stale account balance An agent retrieves a departmental budget of ₹5 lakh and caches it for one hour. Ten minutes later, another system reserves ₹4 lakh. The cached answer is no…",
   "order": 57,
   "objectives": [
-   "Explain every point in “Part — 57. Advanced agent caching” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Scenario: Stale account balance",
+   "Cache key construction",
+   "Cache stampede protection"
   ],
   "labIds": [
    "retrieval"
@@ -848,9 +886,10 @@
   "summary": "58.1 Why retries are dangerous for write tools A tool may perform a business operation successfully before its response is lost. This is why retries must be based on operation identity and confirmed outcomes, not merely…",
   "order": 58,
   "objectives": [
-   "Explain every point in “Part — 58. Exactly-once effects and distributed execution” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Why retries are dangerous for write tools",
+   "Operation ledger schema",
+   "Fencing tokens",
+   "Transactional outbox"
   ],
   "labIds": []
  },
@@ -861,9 +900,10 @@
   "summary": "59.1 Queue saturation mathematics Suppose tasks arrive at 100 tasks/second but workers can complete only 80 tasks/second. The backlog increases by: \\[ 100-80=20\\ tasks/second \\] After five minutes: \\[ 20\\times300=6000\\…",
   "order": 59,
   "objectives": [
-   "Explain every point in “Part — 59. Scalability, backpressure and distributed scheduling” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Queue saturation mathematics",
+   "Token-based capacity planning",
+   "Backpressure architecture",
+   "Worker sizing"
   ],
   "labIds": []
  },
@@ -874,9 +914,9 @@
   "summary": "60.1 Complete distributed agent platform 60.2 Deployment components Component Deployment approach -------- -------- API gateway Stateless replicas Agent runtime Independently scalable workers Human approval service…",
   "order": 60,
   "objectives": [
-   "Explain every point in “Part — 60. Production deployment architecture” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Deployment components",
+   "Kubernetes production considerations",
+   "CI/CD release pipeline"
   ],
   "labIds": []
  },
@@ -887,9 +927,9 @@
   "summary": "61.1 Model migration risks A provider may replace, retire or alter the behavior of a model. A new model can have better general reasoning while performing worse on the application's specific tool schemas. Regression…",
   "order": 61,
   "objectives": [
-   "Explain every point in “Part — 61. Model lifecycle management and migration” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Model migration risks",
+   "Safe migration architecture",
+   "Compatibility matrix"
   ],
   "labIds": []
  },
@@ -900,9 +940,9 @@
   "summary": "62.1 Incident scenario — Duplicate purchase orders Imagine a production agent created 14 duplicate purchase orders after a network disruption. A disciplined incident response separates immediate containment from root…",
   "order": 62,
   "objectives": [
-   "Explain every point in “Part — 62. Incident management and root cause analysis” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Incident scenario — Duplicate purchase orders",
+   "Five Whys example",
+   "Incident severity"
   ],
   "labIds": []
  },
@@ -913,9 +953,9 @@
   "summary": "Disaster recovery is particularly challenging because restoring an old checkpoint may trigger operations that have already completed. 63.1 Recovery architecture 63.2 RPO and RTO Recovery Point Objective defines the…",
   "order": 63,
   "objectives": [
-   "Explain every point in “Part — 63. Disaster recovery for agentic systems” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Recovery architecture",
+   "RPO and RTO",
+   "Restore testing"
   ],
   "labIds": []
  },
@@ -926,9 +966,10 @@
   "summary": "We have already covered pure Python, LangChain and LangGraph. The same conceptual architecture can be implemented using other ecosystems. 64.1 OpenAI Agents SDK Installation: Basic read-only agent: The Agents SDK…",
   "order": 64,
   "objectives": [
-   "Explain every point in “Part — 64. Advanced framework implementations” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "OpenAI Agents SDK",
+   "Manager vs handoff pattern",
+   "Google Agent Development Kit — ADK",
+   "Framework selection comparison"
   ],
   "labIds": [
    "retrieval",
@@ -943,9 +984,12 @@
   "summary": "Project: Transaction-safe procurement and operations agent We will now combine the engineering principles into a concrete application. The following capstone includes a runnable local transaction-service core and an…",
   "order": 65,
   "objectives": [
-   "Explain every point in “Part — 65. Integrated enterprise Agentic AI capstone” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Project: Transaction-safe procurement and operations agent",
+   "Business requirements",
+   "Runnable local transaction core",
+   "What this implementation demonstrates",
+   "How the agent integrates with this service",
+   "Capstone acceptance tests"
   ],
   "labIds": [
    "retrieval",
@@ -959,9 +1003,12 @@
   "summary": "Target experience: Senior AI Engineer, Lead Engineer, AI Architect and Principal Engineer — 8+ years of overall engineering experience As with our RAG interview masterclass, the following questions test conceptual…",
   "order": 66,
   "objectives": [
-   "Explain every point in “Part — 66. Top 70 industry-grade Agentic AI interview questions and answers” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Section A: Agent architecture and fundamentals",
+   "Section B: Tools, reasoning and planning",
+   "Section C: Memory, state and LangGraph",
+   "Section D: Multi-agent systems, MCP and A2A",
+   "Section E: Security, governance and transactional integrity",
+   "Section F: Agent evaluation and observability"
   ],
   "labIds": [
    "chunking",
@@ -978,9 +1025,7 @@
   "summary": "The following assessment measures teaching depth, not whether the corresponding controls have been implemented and tested. Substantially covered Needs deeper coverage Major gap Main gaps identified Area What needs to be…",
   "order": 67,
   "objectives": [
-   "Explain every point in “Part — 1. Audit of our existing masterclasses” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Part — 1. Audit of our existing masterclasses"
   ],
   "labIds": [
    "multi-agent"
@@ -993,9 +1038,12 @@
   "summary": "Before studying individual problems, understand where they can occur. A problem appearing at one layer may have originated elsewhere. For example: Restarting the agent will not solve the actual root cause. Standard…",
   "order": 68,
   "objectives": [
-   "Explain every point in “Part — 2. Understand the complete production failure surface” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Standard failure-analysis methodology",
+   "Problem 1: Context window exhaustion",
+   "Problem 2: Token budget exhaustion",
+   "Problem 3: RPM and TPM exhaustion",
+   "Problem 4: Provider quota exhaustion",
+   "Problem 5: LLM latency and timeout"
   ],
   "labIds": [
    "chunking",
@@ -1012,9 +1060,11 @@
   "summary": "Your original 75 problems cover generic integrations, tools, authorization and network failures, but MCP introduces protocol-specific failure modes that deserve separate treatment. We should extend the catalogue rather…",
   "order": 69,
   "objectives": [
-   "Explain every point in “Part — 3. Missing MCP-specific production problems” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Batch 16: MCP protocol, transport and lifecycle problems",
+   "MCP lifecycle failure recovery",
+   "Batch 17: MCP security and capability-governance problems",
+   "Tool identity and namespace collision",
+   "MCP circuit breakers must be capability-aware"
   ],
   "labIds": [
    "retrieval"
@@ -1027,9 +1077,10 @@
   "summary": "A2A introduces an additional distributed-system boundary: the remote agent has its own runtime, lifecycle, state and tools. A local supervisor may not control how that agent executes its delegated task. Batch 18: A2A…",
   "order": 70,
   "objectives": [
-   "Explain every point in “Part — 4. Missing A2A-specific production problems” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Batch 18: A2A discovery, identity and task failures",
+   "A2A remote task lifecycle",
+   "Batch 19: A2A messaging, artifacts and distributed execution",
+   "A2A cancellation race — detailed production scenario"
   ],
   "labIds": [
    "retrieval"
@@ -1042,9 +1093,9 @@
   "summary": "Even after expanding your list to 115 problems, several cross-cutting AI platform risks remain. Batch 20: Data lifecycle, model quality and operational governance ID Additional problem Production solution --------…",
   "order": 71,
   "objectives": [
-   "Explain every point in “Part — 5. Additional missing production problems beyond MCP and A2A” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Batch 20: Data lifecycle, model quality and operational governance",
+   "Batch 21: Runtime, infrastructure and agent lifecycle failures",
+   "Batch 22: Human oversight, integrity and compliance"
   ],
   "labIds": [
    "chunking"
@@ -1057,9 +1108,10 @@
   "summary": "Instead of implementing unrelated error-handling logic for every agent, model and tool, define a common internal error contract. 6.1 Normalize failures into application-level categories Preserve the original sanitized…",
   "order": 72,
   "objectives": [
-   "Explain every point in “Part — 6. Build a unified production failure-handling framework” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Normalize failures into application-level categories",
+   "Recovery decision policy",
+   "Python recovery policy",
+   "Failure-handling reference matrix"
   ],
   "labIds": [
    "retrieval",
@@ -1075,9 +1127,10 @@
   "summary": "Real production incidents rarely involve only one failure. Consider a procurement agent supporting 500 enterprise tenants. Scenario A user requests a purchase investigation. The supervisor launches ten specialist…",
   "order": 73,
   "objectives": [
-   "Explain every point in “Part — 7. End-to-end compound failure simulation” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Scenario",
+   "What an inexperienced engineer might do",
+   "What a senior production AI engineer should do",
+   "Hypothetical optimization results"
   ],
   "labIds": [
    "rate-limit"
@@ -1090,9 +1143,8 @@
   "summary": "A useful operational dashboard should help engineers answer not only what failed, but where to investigate. Observed symptom First diagnostic checks -------- -------- HTTP 429 increases Error subcodes, RPM, TPM,…",
   "order": 74,
   "objectives": [
-   "Explain every point in “Part — 8. Production observability — symptom-to-root-cause investigation” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Mandatory correlation identifiers",
+   "Production alert design"
   ],
   "labIds": [
    "retrieval",
@@ -1106,9 +1158,10 @@
   "summary": "The correct way to teach these problems is to recreate them in controlled environments. Project 11: AI reliability and failure engineering laboratory Build a synthetic enterprise AI platform containing: Synthetic…",
   "order": 75,
   "objectives": [
-   "Explain every point in “Part — 9. Failure-injection laboratory” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Project 11: AI reliability and failure engineering laboratory",
+   "Failure injection test matrix",
+   "Example: Test retry limits without a real provider",
+   "Example: Simulate an ambiguous external outcome"
   ],
   "labIds": [
    "agent-loop"
@@ -1121,9 +1174,12 @@
   "summary": "Use this assessment for every enterprise RAG, AI agent, agentic AI, MCP or A2A project before production deployment. Production engineering assessment of controls checked % [Copy assessment] Checking a control should…",
   "order": 76,
   "objectives": [
-   "Explain every point in “Part — 10. Final production readiness checklist” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Combined course coverage",
+   "Recommended official references",
+   "Overall completion status",
+   "Topics completed",
+   "Production failure catalogue",
+   "What remains?"
   ],
   "labIds": [
    "retrieval",

@@ -1,7 +1,8 @@
 import { Link, useSearchParams } from 'react-router-dom'
 import { PYTHON_LABS } from '@/content/python/modules'
 import { DOCKER_LABS } from '@/content/docker/modules'
-import { AGENT_GALLERY, PYTHON_GALLERY, RAG_GALLERY, PROJECT_GALLERY, simGroup, simHref } from '@/content/sims/registry'
+import { AGENT_GALLERY, PYTHON_GALLERY, RAG_GALLERY, PROJECT_GALLERY, ML_GALLERY, simGroup, simHref } from '@/content/sims/registry'
+import { ML_LABS } from '@/content/ml/course'
 import { RAG_LABS } from '@/content/rag/course'
 import { PROJECT_LABS } from '@/content/project/course'
 import type { AgentSim } from '@/content/agents/visualizer'
@@ -10,6 +11,8 @@ import './LabsIndex.css'
 type LabKind = 'playground' | 'simulator' | 'lab'
 type Lab = { id: string; title: string; blurb: string; to: string; kind: LabKind; tags?: string[]; sub?: string }
 type GroupId =
+  | 'ml-labs'
+  | 'ml-sims'
   | 'project-labs'
   | 'project-sims'
   | 'agent-labs'
@@ -103,6 +106,31 @@ const GENAI_LABS: Lab[] = [
 ]
 
 const GROUPS: Group[] = [
+  {
+    id: 'ml-labs',
+    title: 'Machine learning playgrounds',
+    blurb: 'Gradient descent, the bias–variance tradeoff, decision thresholds and the confusion matrix, and K-means — change the settings and watch the model respond.',
+    accent: '#ea580c',
+    course: { to: '/ml', label: 'VeeraML course' },
+    labs: ML_LABS.map((l) => ({
+      id: l.to.split('/').pop() as string,
+      title: l.title,
+      blurb: l.text,
+      to: l.to,
+      kind: 'playground' as const,
+      tags: ['ML'],
+    })),
+    isNew: true,
+  },
+  {
+    id: 'ml-sims',
+    title: 'Machine learning simulators',
+    blurb: 'Step-by-step animations with the real numbers: pipelines and leakage, gradient descent, tree splits, forests, boosting, K-means, cross-validation, backprop and drift.',
+    accent: '#c2410c',
+    course: { to: '/ml/visualizer', label: 'ML Visualizer gallery' },
+    labs: ML_GALLERY.map(fromSim),
+    isNew: true,
+  },
   {
     id: 'project-labs',
     title: 'Full-Stack AI & QA playgrounds',

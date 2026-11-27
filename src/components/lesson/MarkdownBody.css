@@ -226,3 +226,14 @@
   overflow-y: hidden;
   vertical-align: middle;
 }
+
+/* Real figures (plots from the course notebooks and scripts) */
+.md-body img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0.9rem auto;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: #fff;
+}

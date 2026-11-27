@@ -1,7 +1,7 @@
 import { getCurriculumIndex } from '@/content/loadCurriculum'
 
 export type Course = {
-  id: 'python' | 'async' | 'agents' | 'rag' | 'project' | 'docker' | 'genai'
+  id: 'python' | 'async' | 'agents' | 'rag' | 'project' | 'ml' | 'docker' | 'genai'
   title: string
   kicker: string
   blurb: string
@@ -13,7 +13,7 @@ export type Course = {
 }
 
 /** Tracks that have their own course home (everything else is a GenAI track). */
-export const COURSE_TRACKS = new Set(['python', 'asyncconcur', 'agents', 'veerarag', 'veeraproject'])
+export const COURSE_TRACKS = new Set(['python', 'asyncconcur', 'agents', 'veerarag', 'veeraproject', 'veeraml'])
 
 export function genaiTrackIds() {
   return getCurriculumIndex()
@@ -73,6 +73,16 @@ export const COURSES: Course[] = [
     trackIds: ['veeraproject'],
   },
   {
+    id: 'ml',
+    title: 'VeeraML',
+    kicker: 'Machine learning · math · deep learning · MLOps',
+    blurb: 'Machine learning from the math up: data prep, regression, classification, ensembles, clustering, evaluation and tuning, deep learning, NLP/LLMs and MLOps — with real plots, simulations, labs and projects.',
+    to: '/ml',
+    accent: '#ea580c',
+    icon: '📊',
+    trackIds: ['veeraml'],
+  },
+  {
     id: 'genai',
     title: 'Generative AI',
     kicker: 'LLMs · RAG · security · production',
@@ -105,6 +115,7 @@ export function courseHomeFor(trackId: string): { to: string; label: string } {
   if (trackId === 'agents') return { to: '/agents', label: 'VeeraAgents' }
   if (trackId === 'veerarag') return { to: '/rag', label: 'VeeraRAG' }
   if (trackId === 'veeraproject') return { to: '/project', label: 'VeeraProject' }
+  if (trackId === 'veeraml') return { to: '/ml', label: 'VeeraML' }
   const t = getCurriculumIndex().tracks.find((x) => x.id === trackId)
   return t ? { to: `/tracks/${trackId}`, label: t.title } : { to: '/tracks', label: 'Generative AI tracks' }
 }

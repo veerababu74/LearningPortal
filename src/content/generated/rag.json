@@ -6,9 +6,8 @@
   "summary": "The course will be divided into the following modules. Each module builds upon the previous one so that students understand why a particular component is required before implementing it. RAG learning roadmap Beginner →…",
   "order": 1,
   "objectives": [
-   "Explain every point in “Part — 1. Complete RAG curriculum” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "RAG learning roadmap",
+   "Detailed syllabus"
   ],
   "labIds": [
    "chunking",
@@ -25,9 +24,7 @@
   "summary": "Before teaching individual components, students should understand where every component fits into the overall architecture. A production RAG application generally contains two major pipelines: 1. Ingestion pipeline:…",
   "order": 2,
   "objectives": [
-   "Explain every point in “Part — 2. Understanding the complete RAG architecture” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Module 1: What is RAG and why do we need it?"
   ],
   "labIds": [
    "chunking",
@@ -41,9 +38,7 @@
   "summary": "Document loading is not simply reading a file. It involves converting heterogeneous sources into a consistent representation that the RAG system can process. 2.1 Different document types and loading techniques Document…",
   "order": 3,
   "objectives": [
-   "Explain every point in “Module — 2. Document loading” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Module — 2. Document loading"
   ],
   "labIds": []
  },
@@ -54,9 +49,7 @@
   "summary": "Ordinary text extraction is insufficient when documents contain images, financial tables, diagrams, charts, equations or multiple columns. 3.1 Document parsing vs OCR vs layout analysis Technique Purpose --------…",
   "order": 4,
   "objectives": [
-   "Explain every point in “Module — 3. Document intelligence — handling complex documents” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Module — 3. Document intelligence — handling complex documents"
   ],
   "labIds": [
    "chunking",
@@ -70,9 +63,7 @@
   "summary": "Imagine a company uploads 100,000 documents containing millions of pages. Processing everything in a single Python loop is not an appropriate production architecture. Techniques to handle large document volumes Problem…",
   "order": 5,
   "objectives": [
-   "Explain every point in “Module — 4. Large-scale document ingestion” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Module — 4. Large-scale document ingestion"
   ],
   "labIds": [
    "chunking",
@@ -86,9 +77,7 @@
   "summary": "Suppose the same document is uploaded five times. Without duplicate detection, the RAG system will generate embeddings five times, unnecessarily increasing storage, cost and retrieval noise. Mathematics SHA-256 converts…",
   "order": 6,
   "objectives": [
-   "Explain every point in “Module — 5. Hashing, deduplication and incremental indexing” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Module — 5. Hashing, deduplication and incremental indexing"
   ],
   "labIds": [
    "chunking",
@@ -102,9 +91,7 @@
   "summary": "Document loading is not simply reading a file. It involves converting heterogeneous sources into a consistent representation that the RAG system can process. 2.1 Different document types and loading techniques Document…",
   "order": 7,
   "objectives": [
-   "Explain every point in “Part overview — 3. Document ingestion pipeline” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Part overview — 3. Document ingestion pipeline"
   ],
   "labIds": [
    "chunking",
@@ -119,9 +106,12 @@
   "summary": "Chunking is the process of dividing a large document into smaller, meaningful retrieval units. Embedding an entire 100-page document into one vector can lose important details and may exceed the embedding model's token…",
   "order": 8,
   "objectives": [
-   "Explain every point in “Module — 6. What is chunking?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Chunking strategies",
+   "Chunk size and overlap mathematics",
+   "Recommended chunk sizes",
+   "Fixed-size chunking without frameworks",
+   "Recursive chunking using LangChain",
+   "Semantic chunking"
   ],
   "labIds": [
    "chunking",
@@ -135,9 +125,12 @@
   "summary": "Chunking is the process of dividing a large document into smaller, meaningful retrieval units. Embedding an entire 100-page document into one vector can lose important details and may exceed the embedding model's token…",
   "order": 9,
   "objectives": [
-   "Explain every point in “Part overview — 4. Chunking engineering” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Chunking strategies",
+   "Chunk size and overlap mathematics",
+   "Recommended chunk sizes",
+   "Fixed-size chunking without frameworks",
+   "Recursive chunking using LangChain",
+   "Semantic chunking"
   ],
   "labIds": [
    "chunking",
@@ -151,9 +144,12 @@
   "summary": "An embedding is a numerical representation of information in a high-dimensional vector space. For example: The individual dimensions generally do not have simple human-readable meanings. Meaning emerges through the…",
   "order": 10,
   "objectives": [
-   "Explain every point in “Module — 7. Understanding embeddings” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "How embedding models work internally",
+   "Cosine similarity",
+   "Other similarity metrics",
+   "Embeddings without LangChain",
+   "How to select an embedding model",
+   "Embedding evaluation mathematics"
   ],
   "labIds": [
    "chunking",
@@ -168,9 +164,12 @@
   "summary": "An embedding is a numerical representation of information in a high-dimensional vector space. For example: The individual dimensions generally do not have simple human-readable meanings. Meaning emerges through the…",
   "order": 11,
   "objectives": [
-   "Explain every point in “Part overview — 5. Embedding engineering and mathematics” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "How embedding models work internally",
+   "Cosine similarity",
+   "Other similarity metrics",
+   "Embeddings without LangChain",
+   "How to select an embedding model",
+   "Embedding evaluation mathematics"
   ],
   "labIds": [
    "chunking",
@@ -185,9 +184,10 @@
   "summary": "Imagine you have one million document embeddings. Each embedding contains 768 float32 values. Without an index, the system may compare the query against every vector. The approximate computational complexity of…",
   "order": 12,
   "objectives": [
-   "Explain every point in “Module — 8. Why do we need vector indexes?” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Indexing techniques",
+   "Which index should you choose?",
+   "Vector databases",
+   "FAISS implementation"
   ],
   "labIds": [
    "retrieval"
@@ -200,9 +200,10 @@
   "summary": "Imagine you have one million document embeddings. Each embedding contains 768 float32 values. Without an index, the system may compare the query against every vector. The approximate computational complexity of…",
   "order": 13,
   "objectives": [
-   "Explain every point in “Part overview — 6. Vector databases and indexing” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Indexing techniques",
+   "Which index should you choose?",
+   "Vector databases",
+   "FAISS implementation"
   ],
   "labIds": [
    "retrieval"
@@ -215,9 +216,10 @@
   "summary": "A robust RAG system cannot depend on semantic similarity alone. Search scenario Appropriate retrieval -------- -------- Exact product ID Keyword or exact lookup Similar meaning Semantic search Technical error code BM25…",
   "order": 14,
   "objectives": [
-   "Explain every point in “Module — 9. Different retrieval strategies” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Keyword retrieval — BM25",
+   "Semantic vs keyword retrieval",
+   "Hybrid retrieval",
+   "Reranking"
   ],
   "labIds": [
    "chunking",
@@ -232,9 +234,10 @@
   "summary": "A robust RAG system cannot depend on semantic similarity alone. Search scenario Appropriate retrieval -------- -------- Exact product ID Keyword or exact lookup Similar meaning Semantic search Technical error code BM25…",
   "order": 15,
   "objectives": [
-   "Explain every point in “Part overview — 7. Retrieval engineering” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Keyword retrieval — BM25",
+   "Semantic vs keyword retrieval",
+   "Hybrid retrieval",
+   "Reranking"
   ],
   "labIds": [
    "chunking",
@@ -249,9 +252,8 @@
   "summary": "Module 10: Query transformation 10.1 Query rewriting Original query: What about its eligibility? Conversation-aware rewritten query: What are the eligibility requirements for the employee medical insurance policy? This…",
   "order": 16,
   "objectives": [
-   "Explain every point in “Part — 8. Advanced RAG techniques” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Module 10: Query transformation",
+   "Advanced RAG techniques comparison"
   ],
   "labIds": [
    "retrieval"
@@ -264,9 +266,7 @@
   "summary": "Retrieving documents does not guarantee sufficient evidence. A context validation system should check: Check Purpose -------- -------- Relevance Does the content address the question? Sufficiency Is enough information…",
   "order": 17,
   "objectives": [
-   "Explain every point in “Module — 11. Context checking before generation” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Module — 11. Context checking before generation"
   ],
   "labIds": [
    "retrieval"
@@ -279,9 +279,8 @@
   "summary": "Corrective RAG introduces a feedback loop. If retrieval is inadequate, the system attempts an alternative query or an authorized alternative knowledge source. Always enforce a retry limit. 12.1 Corrective RAG without…",
   "order": 18,
   "objectives": [
-   "Explain every point in “Module — 12. Corrective RAG” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Corrective RAG without LangGraph",
+   "Corrective RAG using LangGraph"
   ],
   "labIds": [
    "retrieval",
@@ -296,9 +295,8 @@
   "summary": "Retrieving documents does not guarantee sufficient evidence. A context validation system should check: Check Purpose -------- -------- Relevance Does the content address the question? Sufficiency Is enough information…",
   "order": 19,
   "objectives": [
-   "Explain every point in “Part overview — 9. Context engineering and agentic RAG” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Corrective RAG without LangGraph",
+   "Corrective RAG using LangGraph"
   ],
   "labIds": [
    "retrieval",
@@ -313,9 +311,7 @@
   "summary": "Module 13: Evaluating every layer Evaluation must not be limited to whether the chatbot's answer looks good. Evaluation metrics Layer Metrics -------- -------- Parsing OCR character error rate, table cell accuracy…",
   "order": 20,
   "objectives": [
-   "Explain every point in “Part — 10. RAG evaluation” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Module 13: Evaluating every layer"
   ],
   "labIds": [
    "chunking",
@@ -329,9 +325,8 @@
   "summary": "Module 14: Understanding the differences Concept Purpose -------- -------- Logging Record individual events Tracing Follow one request across components Metrics Measure system behavior numerically Monitoring Track…",
   "order": 21,
   "objectives": [
-   "Explain every point in “Part — 11. Tracing, monitoring and observability” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Module 14: Understanding the differences",
+   ",850 ms"
   ],
   "labIds": [
    "chunking",
@@ -346,9 +341,7 @@
   "summary": "If an embedding API returns a temporary failure, immediately retrying hundreds of requests can make the problem worse. Exponential backoff: \\[ t n=\\min(t {max},t 0 2^n) \\] Jitter introduces randomness to prevent…",
   "order": 22,
   "objectives": [
-   "Explain every point in “Module — 15. Exponential retries” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Fallback mechanisms"
   ],
   "labIds": [
    "rate-limit"
@@ -361,9 +354,7 @@
   "summary": "\\[ C {request}=C {query}+C {embedding} +C {retrieval}+C {rerank}+C {generation} \\] LLM token cost: \\[ C=\\frac{T {input}P {input} +T {output}P {output}}{10^6} \\] Prices are expressed per million tokens. Interactive cost…",
   "order": 23,
   "objectives": [
-   "Explain every point in “Module — 16. RAG cost optimization” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Module — 16. RAG cost optimization"
   ],
   "labIds": [
    "retrieval"
@@ -376,9 +367,7 @@
   "summary": "If an embedding API returns a temporary failure, immediately retrying hundreds of requests can make the problem worse. Exponential backoff: \\[ t n=\\min(t {max},t 0 2^n) \\] Jitter introduces randomness to prevent…",
   "order": 24,
   "objectives": [
-   "Explain every point in “Part overview — 12. Reliability, error handling and cost optimization” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Fallback mechanisms"
   ],
   "labIds": [
    "retrieval",
@@ -392,9 +381,7 @@
   "summary": "Module 17: Enterprise RAG security Major security threats Threat Mitigation -------- -------- Prompt injection Treat retrieved instructions as untrusted Document poisoning Trusted sources, provenance, upload validation…",
   "order": 25,
   "objectives": [
-   "Explain every point in “Part — 13. RAG security and governance” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Module 17: Enterprise RAG security"
   ],
   "labIds": [
    "retrieval",
@@ -409,9 +396,7 @@
   "summary": "Module 18: Testing strategies Test type What to test -------- -------- Unit testing Hashing, splitting, RRF, token counting Integration testing Embedding services, vector database, parsers Retrieval testing Correct…",
   "order": 26,
   "objectives": [
-   "Explain every point in “Part — 14. End-to-end application testing” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Module 18: Testing strategies"
   ],
   "labIds": [
    "chunking",
@@ -425,9 +410,8 @@
   "summary": "Project 6 — Baseline RAG without LangChain or LangGraph Students should first implement a complete working baseline before adding advanced orchestration. Installation Python implementation Configure OPENAI API KEY and…",
   "order": 27,
   "objectives": [
-   "Explain every point in “Part — 15. Complete practical RAG application” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Project 6 — Baseline RAG without LangChain or LangGraph",
+   "Project 7 — RAG using LangChain"
   ],
   "labIds": [
    "retrieval",
@@ -442,9 +426,7 @@
   "summary": "Build a complete application that can answer questions from company policies, employee records, invoices, technical manuals, financial reports and complex PDF documents. Complete deployment architecture Recommended…",
   "order": 28,
   "objectives": [
-   "Explain every point in “Part — 16. Final capstone — Enterprise Knowledge Assistant” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Recommended project folder structure"
   ],
   "labIds": [
    "chunking",
@@ -458,9 +440,7 @@
   "summary": "This is especially important for students preparing to work on real-world GenAI projects. Problem Likely cause Solution -------- -------- -------- Wrong answers despite correct documents Generation grounding Prompt and…",
   "order": 29,
   "objectives": [
-   "Explain every point in “Part — 17. Common RAG pitfalls and bottlenecks” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Part — 17. Common RAG pitfalls and bottlenecks"
   ],
   "labIds": [
    "chunking",
@@ -475,9 +455,8 @@
   "summary": "I recommend approximately 100 hours of instructor-led teaching and practical implementation for this complete course. Week Topics Hours Practical deliverable -------- -------- -------- -------- 1 RAG fundamentals and…",
   "order": 30,
   "objectives": [
-   "Explain every point in “Part — 18. Recommended teaching schedule” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Additional concepts that should not be missed",
+   "Official learning resources"
   ],
   "labIds": [
    "chunking",
@@ -494,9 +473,7 @@
   "summary": "In a basic RAG application, documents are directly converted into embeddings. In production, documents must pass through several security, quality and governance checkpoints before becoming searchable knowledge. Notice…",
   "order": 31,
   "objectives": [
-   "Explain every point in “Part — 19. Production RAG — Architecture with trust boundaries” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Part — 19. Production RAG — Architecture with trust boundaries"
   ],
   "labIds": []
  },
@@ -507,9 +484,7 @@
   "summary": "Before implementing solutions, students should understand the different ways a RAG system can fail. ID Production scenario Failure category -------- -------- -------- F01 Uploaded PDF contains malicious instructions…",
   "order": 32,
   "objectives": [
-   "Explain every point in “Part — 20. Production failure scenario catalogue” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Part — 20. Production failure scenario catalogue"
   ],
   "labIds": [
    "chunking",
@@ -525,9 +500,11 @@
   "summary": "21.1 Realistic production scenario An organization provides an internal document assistant. Employees can upload PDFs, Word documents and other files. An employee uploads a document that contains legitimate policy…",
   "order": 33,
   "objectives": [
-   "Explain every point in “Part — 21. Indirect prompt injection through documents” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Realistic production scenario",
+   "Direct vs indirect prompt injection",
+   "Why simple prompt engineering is insufficient",
+   "Mathematical evaluation of injection detection",
+   "Production-safe orchestration pattern"
   ],
   "labIds": [
    "chunking",
@@ -543,9 +520,12 @@
   "summary": "22.1 Production scenario — Employee knowledge assistant An HR department uploads a CSV containing employee information. Employee Department Salary National ID Bank account -------- -------- -------- -------- --------…",
   "order": 34,
   "objectives": [
-   "Explain every point in “Part — 22. PII detection, sensitive information and secret leakage” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Production scenario — Employee knowledge assistant",
+   "Data classification",
+   "Where sensitive data can leak",
+   "Redaction vs masking vs tokenization",
+   "PII detection using Microsoft Presidio",
+   "Recommended production policy"
   ],
   "labIds": [
    "chunking",
@@ -559,9 +539,11 @@
   "summary": "23.1 Prompt injection vs data poisoning These are different problems. Prompt injection Data poisoning -------- -------- Attempts to control model behavior Attempts to corrupt the knowledge used by the model Contains…",
   "order": 35,
   "objectives": [
-   "Explain every point in “Part — 23. Data poisoning and knowledge-base trust engineering” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Prompt injection vs data poisoning",
+   "Production scenario — Fake reimbursement policy",
+   "Metadata required for trust-aware retrieval",
+   "Trust-aware retrieval architecture",
+   "Temporal RAG — Documents change over time"
   ],
   "labIds": [
    "chunking",
@@ -576,9 +558,11 @@
   "summary": "24.1 Production scenario Suppose your SaaS RAG application has three customers: All three companies use the same vector database. An employee from Company A asks a generic salary-related question. The search finds a…",
   "order": 36,
   "objectives": [
-   "Explain every point in “Part — 24. Multi-tenant RAG and authorization failures” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Production scenario",
+   "Authorization before retrieval vs after retrieval",
+   "Authorization models",
+   "Permission revocation and synchronization",
+   "Cache isolation"
   ],
   "labIds": [
    "retrieval"
@@ -591,9 +575,12 @@
   "summary": "This is one of the most important topics missing from many RAG courses. A developer receives the following complaint: The information is present in the PDF. Why is the chatbot unable to answer my question? Changing the…",
   "order": 37,
   "objectives": [
-   "Explain every point in “Part — 25. Deep retrieval debugging — Why RAG cannot find the correct chunks” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Evidence lifecycle and failure localization",
+   "Retrieval debugging decision tree",
+   "Scenario A — Chunk boundary destroys meaning",
+   "Scenario B — Semantic search fails on exact terminology",
+   "Scenario C — Embedding model failure vs index failure",
+   "Scenario D — Metadata filtering destroys retrieval recall"
   ],
   "labIds": [
    "chunking",
@@ -607,9 +594,10 @@
   "summary": "26.1 Production scenario A developer increases top k from 5 to 30, expecting answer accuracy to improve. Instead: - LLM latency increases. - Prompt cost increases. - Duplicate information appears. - The model encounters…",
   "order": 38,
   "objectives": [
-   "Explain every point in “Part — 26. Advanced context engineering — More context is not always better” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Production scenario",
+   "Context packing as an optimization problem",
+   "Context sufficiency vs context relevance",
+   "Confidence calibration and abstention"
   ],
   "labIds": [
    "chunking",
@@ -624,9 +612,12 @@
   "summary": "The previous course introduced logging, tracing and monitoring. Now we need to understand how these are implemented across a distributed RAG application and how engineers use them during incidents. 27.1 Three pillars of…",
   "order": 39,
   "objectives": [
-   "Explain every point in “Part — 27. Deep observability engineering” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Three pillars of observability",
+   "Distributed observability architecture",
+   "Request ID vs trace ID vs span ID",
+   "Critical path analysis",
+   "Realistic incident — p95 latency suddenly increases",
+   "Implement OpenTelemetry without LangChain"
   ],
   "labIds": [
    "chunking",
@@ -640,9 +631,11 @@
   "summary": "28.1 Operational metrics vs quality metrics Operational health Semantic quality -------- -------- Request rate Retrieval recall Error rate Faithfulness Latency Citation accuracy CPU/GPU utilization Answer correctness…",
   "order": 40,
   "objectives": [
-   "Explain every point in “Part — 28. Production monitoring, SLOs and alerting” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Operational metrics vs quality metrics",
+   "Example incident dashboard",
+   "SLA vs SLO vs SLI",
+   "Metrics that should be collected",
+   "PromQL queries"
   ],
   "labIds": [
    "retrieval"
@@ -655,9 +648,12 @@
   "summary": "29.1 Why average evaluation scores can be misleading Suppose your test dataset contains 1,000 questions. genui{\"charts widget…",
   "order": 41,
   "objectives": [
-   "Explain every point in “Part — 29. Production evaluation — Beyond RAGAS scores” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Why average evaluation scores can be misleading",
+   "Hard negatives",
+   "Oracle evaluation — Isolating the failing component",
+   "LLM-as-a-judge limitations",
+   "Statistical confidence in evaluation",
+   "Evaluation dataset contamination"
   ],
   "labIds": [
    "chunking",
@@ -671,9 +667,10 @@
   "summary": "A production RAG application is a distributed system. Its reliability depends on object storage, queues, parsers, embedding providers, vector databases, rerankers, LLM providers and authorization services. 30.1 Retry…",
   "order": 42,
   "objectives": [
-   "Explain every point in “Part — 30. Distributed reliability engineering” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Retry amplification",
+   "Request deadline propagation",
+   "Circuit breaker pattern",
+   "Graceful degradation"
   ],
   "labIds": [
    "retrieval",
@@ -687,9 +684,10 @@
   "summary": "31.1 Scenario — Worker crashes halfway through ingestion A PDF has 1,000 chunks. The worker successfully writes 600 chunks and then crashes. A user searches the document while only 60% of its content is available. The…",
   "order": 43,
   "objectives": [
-   "Explain every point in “Part — 31. Large-scale ingestion consistency and concurrency” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Scenario — Worker crashes halfway through ingestion",
+   "Document ingestion state machine",
+   "Race conditions and idempotency",
+   "Blue-green index migration"
   ],
   "labIds": [
    "chunking",
@@ -703,9 +701,9 @@
   "summary": "32.1 Little's Law A useful equation for capacity planning is: \\[ L=\\lambda W \\] Where: - \\(L\\): Average number of requests in the system. - \\(\\lambda\\): Average arrival rate. - \\(W\\): Average time spent in the system.…",
   "order": 44,
   "objectives": [
-   "Explain every point in “Part — 32. Capacity planning, load testing and bottleneck mathematics” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Little's Law",
+   "Queue saturation",
+   "Production load testing scenarios"
   ],
   "labIds": [
    "retrieval"
@@ -718,9 +716,9 @@
   "summary": "The previous corrective RAG example had a retrieval and rewriting loop. A production agentic workflow requires additional authorization, budgets, fallback routing, state persistence and verification. 33.1 Production…",
   "order": 45,
   "objectives": [
-   "Explain every point in “Part — 33. Production agentic RAG using LangGraph” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Production state design",
+   "Deterministic control routing",
+   "LangGraph production controls"
   ],
   "labIds": [
    "retrieval",
@@ -734,9 +732,8 @@
   "summary": "Streaming introduces an additional security challenge. In a normal response pipeline: In a naive streaming pipeline: Sensitive information may have already reached the user before validation completes. 34.1 Streaming…",
   "order": 46,
   "objectives": [
-   "Explain every point in “Part — 34. Production streaming and output verification” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Streaming strategies",
+   "Claim-level citation verification"
   ],
   "labIds": [
    "retrieval"
@@ -749,9 +746,9 @@
   "summary": "The final practical project should not only test successful question answering. Students must intentionally introduce failures into a controlled local or staging environment. 35.1 Failure injection test matrix Test…",
   "order": 47,
   "objectives": [
-   "Explain every point in “Part — 35. End-to-end production failure testing” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Failure injection test matrix",
+   "Testing with pytest",
+   "Security metrics"
   ],
   "labIds": [
    "chunking",
@@ -766,9 +763,7 @@
   "summary": "A RAG deployment may change several components: - Parsing configuration. - Chunking algorithm. - Embedding model. - Vector index parameters. - Retrieval strategy. - Reranker. - Prompt. - Generation model. -…",
   "order": 48,
   "objectives": [
-   "Explain every point in “Part — 36. Production CI/CD, continuous evaluation and rollback” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Part — 36. Production CI/CD, continuous evaluation and rollback"
   ],
   "labIds": [
    "chunking",
@@ -782,9 +777,7 @@
   "summary": "After reviewing the complete earlier curriculum, the following subjects should be explicitly added to make the course genuinely production-oriented. Domain Additional advanced concepts -------- -------- Document…",
   "order": 49,
   "objectives": [
-   "Explain every point in “Part — 37. Additional production topics that were missing” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Part — 37. Additional production topics that were missing"
   ],
   "labIds": [
    "chunking",
@@ -798,9 +791,8 @@
   "summary": "Rather than teaching disconnected notebooks, we should develop one enterprise application throughout the course. Enterprise RAG project evolution Recommended technology stack Component Classroom/local implementation…",
   "order": 50,
   "objectives": [
-   "Explain every point in “Part — 38. Cumulative production-grade practical projects” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Recommended technology stack",
+   "Final project structure additions"
   ],
   "labIds": [
    "retrieval",
@@ -815,9 +807,7 @@
   "summary": "The original 100-hour course should now be expanded into approximately 200 hours of combined conceptual teaching and practical implementation . Phase Subject Hours -------- -------- -------- Foundation Complete earlier…",
   "order": 51,
   "objectives": [
-   "Explain every point in “Part — 39. Revised advanced teaching schedule” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Important reference material"
   ],
   "labIds": [
    "chunking",
@@ -834,9 +824,12 @@
   "summary": "FinOps is the practice of managing technology expenditure while maximizing business value. In production RAG, cost optimization is not simply choosing the cheapest LLM. It is understanding where money is spent, who…",
   "order": 52,
   "objectives": [
-   "Explain every point in “Part — 40. RAG cost management and LLM FinOps” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Total cost of ownership",
+   "Scenario — Hidden cost of agentic RAG",
+   "Cost per successful answer — A better business metric",
+   "Monthly RAG cost simulator",
+   "Cost attribution and chargeback",
+   "Cost budgets and spending protection"
   ],
   "labIds": [
    "retrieval"
@@ -849,9 +842,12 @@
   "summary": "Latency optimization is more than making vector search faster. A request may spend only 30 milliseconds searching the vector database but several seconds waiting for model inference. 41.1 Complete latency breakdown \\[ T…",
   "order": 53,
   "objectives": [
-   "Explain every point in “Part — 41. Latency reduction and performance engineering” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Complete latency breakdown",
+   "Time to first token, time per token and total latency",
+   "Understanding p50, p95 and p99 latency",
+   "Fan-out and tail latency amplification",
+   "Sequential vs parallel retrieval",
+   "Production latency optimization techniques"
   ],
   "labIds": [
    "retrieval",
@@ -865,9 +861,10 @@
   "summary": "Caching deserves its own module because it affects cost, latency, retrieval quality, data freshness and security simultaneously. Complete RAG caching hierarchy These are logical cache layers, not necessarily a mandatory…",
   "order": 54,
   "objectives": [
-   "Explain every point in “Part — 42. Multi-layer caching architecture” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Cache hit rate mathematics",
+   "Semantic caching failure scenario",
+   "Cache stampede",
+   "Production cache patterns"
   ],
   "labIds": [
    "cosine",
@@ -881,9 +878,9 @@
   "summary": "Not every question requires multi-query retrieval, HyDE, reranking, context grading and answer verification using a large LLM. 43.1 Query complexity routing Incoming question Intent + complexity + risk classifier…",
   "order": 55,
   "objectives": [
-   "Explain every point in “Part — 43. Adaptive RAG and intelligent model routing” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Query complexity routing",
+   "Model cascade economics",
+   "Multi-objective optimization"
   ],
   "labIds": [
    "retrieval",
@@ -897,9 +894,9 @@
   "summary": "44.1 Hidden token inflation Consider a RAG system using these components: --- Total required context-window allocation 11,900 tokens A conversation with a short user question can still generate a very large model…",
   "order": 56,
   "objectives": [
-   "Explain every point in “Part — 44. Advanced token management and context compression” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Hidden token inflation",
+   "Context compression techniques",
+   "Inference optimization concepts"
   ],
   "labIds": [
    "retrieval"
@@ -912,9 +909,7 @@
   "summary": "Previously, we covered indexing algorithms. We also need to understand what happens inside a distributed vector database during production operations. Concept Why it matters -------- -------- Sharding Distributes large…",
   "order": 57,
   "objectives": [
-   "Explain every point in “Part — 45. Deep vector database operations” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Part — 45. Deep vector database operations"
   ],
   "labIds": []
  },
@@ -925,9 +920,8 @@
   "summary": "These topics were mentioned earlier but not explained in sufficient depth. 46.1 Embedding hubness In high-dimensional vector spaces, some vectors appear disproportionately often in nearest-neighbor results. A generic…",
   "order": 58,
   "objectives": [
-   "Explain every point in “Part — 46. Advanced embedding failures and diagnostics” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Embedding hubness",
+   "Other embedding diagnostics"
   ],
   "labIds": [
    "cosine",
@@ -941,9 +935,7 @@
   "summary": "A text-only RAG system cannot reliably answer every question involving diagrams, charts, handwritten records or document layouts. Complex PDF document Text Dense + sparse Tables Structured data Images Visual embeddings…",
   "order": 59,
   "objectives": [
-   "Explain every point in “Part — 47. Multimodal RAG production engineering” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Part — 47. Multimodal RAG production engineering"
   ],
   "labIds": [
    "retrieval"
@@ -956,9 +948,8 @@
   "summary": "48.1 Conversation drift Conversation: The final question requires entity resolution, conversation context and historical policy filtering. Sending the complete conversation to the retriever is not always effective. A…",
   "order": 60,
   "objectives": [
-   "Explain every point in “Part — 48. Conversational RAG and memory engineering” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Conversation drift",
+   "Types of memory"
   ],
   "labIds": [
    "retrieval"
@@ -971,9 +962,8 @@
   "summary": "49.1 Change Data Capture — CDC Enterprise knowledge sources continuously change. Instead of re-indexing everything every night, use incremental synchronization where the source supports it. Teach event ordering,…",
   "order": 61,
   "objectives": [
-   "Explain every point in “Part — 49. Data synchronization and deletion engineering” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Change Data Capture — CDC",
+   "Deletion propagation"
   ],
   "labIds": []
  },
@@ -984,9 +974,8 @@
   "summary": "50.1 RPO and RTO Term Meaning -------- -------- RPO Maximum acceptable data loss measured in time RTO Maximum acceptable recovery duration MTTR Mean time to restore or recover MTTD Mean time to detect an incident MTBF…",
   "order": 62,
   "objectives": [
-   "Explain every point in “Part — 50. Disaster recovery and incident management” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "RPO and RTO",
+   "Incident response runbook"
   ],
   "labIds": [
    "retrieval",
@@ -1000,9 +989,7 @@
   "summary": "The following topics should also receive dedicated lessons and practical exercises. They were absent or only briefly mentioned in the earlier sections. Module Advanced concepts to teach -------- -------- Advanced…",
   "order": 63,
   "objectives": [
-   "Explain every point in “Part — 51. Remaining advanced topics — Final curriculum audit” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Part — 51. Remaining advanced topics — Final curriculum audit"
   ],
   "labIds": [
    "chunking",
@@ -1017,9 +1004,7 @@
   "summary": "To make this course technically strong, students should learn these mathematical foundations beyond ordinary cosine similarity. Mathematical concept RAG application -------- -------- TF-IDF Lexical relevance BM25…",
   "order": 64,
   "objectives": [
-   "Explain every point in “Part — 52. Additional mathematics to include” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Part — 52. Additional mathematics to include"
   ],
   "labIds": [
    "cosine",
@@ -1034,9 +1019,7 @@
   "summary": "Instead of separate unrelated applications, build the same Enterprise Knowledge Assistant in successive versions.",
   "order": 65,
   "objectives": [
-   "Explain every point in “Part — 53. Final cumulative project plan” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Part — 53. Final cumulative project plan"
   ],
   "labIds": []
  },
@@ -1047,9 +1030,12 @@
   "summary": "Considering all the topics discussed so far, the earlier 200-hour curriculum should be expanded. Training phase Hours -------- -------- RAG foundations and architecture 8 Document ingestion and document intelligence 18…",
   "order": 66,
   "objectives": [
-   "Explain every point in “Part — 54. Revised complete masterclass duration” with clear language",
-   "Use the flow diagram to see what happens one step after another",
-   "Connect the visual flow to the written explanation and code"
+   "Final production readiness checklist",
+   "Interview coverage",
+   "Q1. How would you design a production-grade enterprise RAG system from scratch?",
+   "Q2. When would you choose RAG over fine-tuning, long-context prompting or traditional search?",
+   "Q3. Explain the mathematical foundations of RAG. How does retrieval influence answer generation?",
+   "Q4. A RAG system retrieves the correct documents but still generates incorrect answers. What could be wrong?"
   ],
   "labIds": [
    "chunking",

@@ -2,6 +2,7 @@ import { getPythonPath } from '@/content/python/path'
 import { getAgentsPath } from '@/content/agents/path'
 import { getRagPath } from '@/content/rag/path'
 import { getProjectPath } from '@/content/project/path'
+import { getMlPath } from '@/content/ml/path'
 import type { PathCourse } from '@/pages/path/PathPages'
 
 const PY_COMPANIONS = { '10': 'Exercises', '11': 'Project', '12': 'Interview' }
@@ -39,11 +40,20 @@ export const PROJECT_PATH_COURSE: PathCourse = {
   companions: VP_COMPANIONS,
 }
 
+export const ML_PATH_COURSE: PathCourse = {
+  track: 'veeraml',
+  base: '/ml',
+  title: 'VeeraML',
+  getPath: getMlPath,
+  companions: VP_COMPANIONS,
+}
+
 /** Which path (if any) a lesson belongs to — used for lesson navigation and the "Topic · step" link. */
 export function pathForTrack(track: string) {
   if (track === 'python') return PYTHON_PATH_COURSE
   if (track === 'agents') return AGENTS_PATH_COURSE
   if (track === 'veerarag') return RAG_PATH_COURSE
   if (track === 'veeraproject') return PROJECT_PATH_COURSE
+  if (track === 'veeraml') return ML_PATH_COURSE
   return null
 }

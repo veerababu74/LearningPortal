@@ -52,8 +52,11 @@ function outputText(outputs = []) {
   return t
 }
 
-/** Notebook → markdown. Returns { md, title } (title from the banner H1 when present). */
-export function notebookToMd(raw, file) {
+/**
+ * Notebook → markdown. Returns { md, title } (title from the banner H1 when present).
+ * `opts.image(base64Text)` may return a URL for an image/png output; it is embedded after the cell.
+ */
+export function notebookToMd(raw, file, opts = {}) {
   let nb
   try {
     nb = JSON.parse(raw)
@@ -78,6 +81,14 @@ export function notebookToMd(raw, file) {
       out.push(`\`\`\`${fence}\n${src.replace(/^\s*[!%]+/gm, '').trimEnd()}\n\`\`\``)
       const o = outputText(cell.outputs)
       if (o) out.push(`**Output**\n\n\`\`\`text\n${o.replace(/```/g, "'''")}\n\`\`\``)
+      if (opts.image) {
+        for (const output of cell.outputs || []) {
+          const png = output.data?.['image/png']
+          if (!png) continue
+          const url = opts.image(cellText(png))
+          if (url) out.push(`![Plot produced by the cell above](${url})`)
+        }
+      }
     }
   }
   return { md: out.join('\n\n'), title: title || path.basename(file, '.ipynb') }

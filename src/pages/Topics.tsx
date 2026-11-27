@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom'
 import { getCurriculumIndex } from '@/content/loadCurriculum'
 import { DOCKER_LABS, DOCKER_MODULES } from '@/content/docker/modules'
 import { PYTHON_LABS } from '@/content/python/modules'
-import { AGENT_GALLERY as AGENT_SIMS, PYTHON_GALLERY, RAG_GALLERY, PROJECT_GALLERY } from '@/content/sims/registry'
+import { AGENT_GALLERY as AGENT_SIMS, PYTHON_GALLERY, RAG_GALLERY, PROJECT_GALLERY, ML_GALLERY } from '@/content/sims/registry'
+import { ML_LABS } from '@/content/ml/course'
 import { RAG_LABS } from '@/content/rag/course'
 import { PROJECT_LABS } from '@/content/project/course'
 import { useProgress } from '@/store/progress'
@@ -20,7 +21,7 @@ type TopicCard = {
   pct: number
 }
 
-const COURSE_TRACKS = new Set(['python', 'asyncconcur', 'agents', 'veerarag', 'veeraproject'])
+const COURSE_TRACKS = new Set(['python', 'asyncconcur', 'agents', 'veerarag', 'veeraproject', 'veeraml'])
 
 function pctOf(ids: string[], done: string[]) {
   if (!ids.length) return 0
@@ -97,6 +98,17 @@ export function Topics() {
       accent: track('veeraproject')?.accent || '#2563eb',
       stats: [`${track('veeraproject')?.lessonCount ?? 0} lessons`, `${PROJECT_GALLERY.length} simulations`, `${PROJECT_LABS.length} labs`],
       pct: pctOf(lessonIds('veeraproject'), completed),
+    },
+    {
+      key: 'ml',
+      title: 'VeeraML',
+      kicker: 'Machine learning · math · deep learning · MLOps',
+      blurb:
+        'Machine learning from the math up: data preparation, regression, classification, ensembles, clustering and PCA, evaluation and tuning, deep learning, NLP and LLMs, and MLOps — with real plots, simulations, labs, projects and interview answers.',
+      to: '/ml',
+      accent: track('veeraml')?.accent || '#ea580c',
+      stats: [`${track('veeraml')?.lessonCount ?? 0} lessons`, `${ML_GALLERY.length} simulations`, `${ML_LABS.length} labs`],
+      pct: pctOf(lessonIds('veeraml'), completed),
     },
     {
       key: 'docker',

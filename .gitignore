@@ -10,6 +10,7 @@ dist
 # Local-only source material (agents, rag, roadmaps, Python copy, asyncconcur, PDFs…).
 # Never pushed: the site builds from the committed src/content/generated output.
 /.bin/
+/.ml/
 
 # Editor / OS
 .idea
