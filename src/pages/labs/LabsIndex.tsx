@@ -1,8 +1,9 @@
 import { Link, useSearchParams } from 'react-router-dom'
 import { PYTHON_LABS } from '@/content/python/modules'
 import { DOCKER_LABS } from '@/content/docker/modules'
-import { AGENT_GALLERY, PYTHON_GALLERY, RAG_GALLERY, PROJECT_GALLERY, ML_GALLERY, simGroup, simHref } from '@/content/sims/registry'
+import { AGENT_GALLERY, PYTHON_GALLERY, RAG_GALLERY, PROJECT_GALLERY, ML_GALLERY, SD_GALLERY, simGroup, simHref } from '@/content/sims/registry'
 import { ML_LABS } from '@/content/ml/course'
+import { SD_LABS } from '@/content/system/course'
 import { RAG_LABS } from '@/content/rag/course'
 import { PROJECT_LABS } from '@/content/project/course'
 import type { AgentSim } from '@/content/agents/visualizer'
@@ -11,6 +12,8 @@ import './LabsIndex.css'
 type LabKind = 'playground' | 'simulator' | 'lab'
 type Lab = { id: string; title: string; blurb: string; to: string; kind: LabKind; tags?: string[]; sub?: string }
 type GroupId =
+  | 'sd-labs'
+  | 'sd-sims'
   | 'ml-labs'
   | 'ml-sims'
   | 'project-labs'
@@ -106,6 +109,31 @@ const GENAI_LABS: Lab[] = [
 ]
 
 const GROUPS: Group[] = [
+  {
+    id: 'sd-labs',
+    title: 'System design playgrounds',
+    blurb: 'Capacity estimation, load balancing, consistent hashing, cache eviction and rate-limiter algorithms — change the inputs and watch the system respond.',
+    accent: '#0f766e',
+    course: { to: '/system-design', label: 'VeeraSystem course' },
+    labs: SD_LABS.map((l) => ({
+      id: l.to.split('/').pop() as string,
+      title: l.title,
+      blurb: l.text,
+      to: l.to,
+      kind: 'playground' as const,
+      tags: ['System design'],
+    })),
+    isNew: true,
+  },
+  {
+    id: 'sd-sims',
+    title: 'System design simulators',
+    blurb: 'Step-by-step animations: a request through the stack, replication lag, cache-aside, consistent hashing, load balancing, Raft, sagas, Kafka, circuit breakers, rate limiting and a URL shortener.',
+    accent: '#115e59',
+    course: { to: '/system-design/visualizer', label: 'System Design Visualizer gallery' },
+    labs: SD_GALLERY.map(fromSim),
+    isNew: true,
+  },
   {
     id: 'ml-labs',
     title: 'Machine learning playgrounds',

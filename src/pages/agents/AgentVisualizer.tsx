@@ -2,12 +2,12 @@ import { useMemo, useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { AGENT_MODULE_INFO } from '@/content/agents/catalog'
 import type { AgentSim } from '@/content/agents/visualizer'
-import { AGENT_GALLERY, ML_GALLERY, PROJECT_GALLERY, PYTHON_GALLERY, RAG_GALLERY, simGroup, simLessonsHref } from '@/content/sims/registry'
+import { AGENT_GALLERY, ML_GALLERY, SD_GALLERY, PROJECT_GALLERY, PYTHON_GALLERY, RAG_GALLERY, simGroup, simLessonsHref } from '@/content/sims/registry'
 import { AgentSimPlayer } from '@/components/agents/AgentSimPlayer'
 import '@/components/python/python.css'
 import '@/components/agents/agents.css'
 
-type Kind = 'agents' | 'python' | 'rag' | 'project' | 'ml'
+type Kind = 'agents' | 'python' | 'rag' | 'project' | 'ml' | 'system'
 
 const GALLERIES: Record<
   Kind,
@@ -53,6 +53,16 @@ const GALLERIES: Record<
     intro:
       'A leak-free pipeline, gradient descent (and divergence), a decision-tree split, threshold tuning, random forests, gradient boosting, K-means, cross-validation, backpropagation and production drift — each with the real numbers at every step, highlighted code and predict-the-next-step questions.',
   },
+  system: {
+    sims: SD_GALLERY,
+    base: '/system-design/visualizer',
+    home: '/system-design',
+    homeLabel: 'VeeraSystem',
+    kicker: 'System Design Visualizer',
+    title: 'Watch distributed systems work, one step at a time',
+    intro:
+      'A request through the whole stack, read replicas and lag, cache-aside races, consistent hashing, load balancing, Raft elections, sagas, Kafka consumer groups, circuit breakers, rate limiting and a URL shortener — each with live state, highlighted code and predict-the-next-step questions.',
+  },
   project: {
     sims: PROJECT_GALLERY,
     base: '/project/visualizer',
@@ -66,7 +76,7 @@ const GALLERIES: Record<
 }
 
 function moduleLabel(sim: AgentSim, kind: Kind) {
-  if (kind === 'python' || kind === 'project' || kind === 'ml') return `Module ${sim.module}`
+  if (kind === 'python' || kind === 'project' || kind === 'ml' || kind === 'system') return `Module ${sim.module}`
   if (kind === 'rag') return `Module ${sim.ragModule || '—'}`
   const info = AGENT_MODULE_INFO[sim.module]
   return `${info?.icon || ''} Module ${sim.module}`
@@ -226,4 +236,12 @@ export function MlVisualizerIndex() {
 
 export function MlVisualizerPage() {
   return <SimPage kind="ml" />
+}
+
+export function SystemVisualizerIndex() {
+  return <SimGallery kind="system" />
+}
+
+export function SystemVisualizerPage() {
+  return <SimPage kind="system" />
 }

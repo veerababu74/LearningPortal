@@ -5,6 +5,7 @@ export type TrackId =
   | 'veerarag'
   | 'veeraproject'
   | 'veeraml'
+  | 'veerasys'
   | 'llm-concepts'
   | 'rag'
   | 'agentic-ai'

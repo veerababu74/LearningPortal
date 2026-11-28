@@ -29,6 +29,11 @@ import { GradientDescentLab } from './labs/playground/ml/GradientDescentLab'
 import { BiasVarianceLab } from './labs/playground/ml/BiasVarianceLab'
 import { ThresholdLab } from './labs/playground/ml/ThresholdLab'
 import { KMeansLab } from './labs/playground/ml/KMeansLab'
+import { CapacityLab } from './labs/playground/system/CapacityLab'
+import { LoadBalancerLab } from './labs/playground/system/LoadBalancerLab'
+import { ConsistentHashLab } from './labs/playground/system/ConsistentHashLab'
+import { CacheEvictionLab } from './labs/playground/system/CacheEvictionLab'
+import { RateLimiterLab } from './labs/playground/system/RateLimiterLab'
 
 const MAP = {
   chunking: ChunkingLab,
@@ -61,6 +66,11 @@ const MAP = {
   'bias-variance': BiasVarianceLab,
   threshold: ThresholdLab,
   kmeans: KMeansLab,
+  'capacity-estimation': CapacityLab,
+  'load-balancer': LoadBalancerLab,
+  'consistent-hashing': ConsistentHashLab,
+  'cache-eviction': CacheEvictionLab,
+  'rate-limiter-algorithms': RateLimiterLab,
 } as const
 
 export function LabRouter() {

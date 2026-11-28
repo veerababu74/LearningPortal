@@ -2,8 +2,9 @@ import { Link } from 'react-router-dom'
 import { getCurriculumIndex } from '@/content/loadCurriculum'
 import { DOCKER_LABS, DOCKER_MODULES } from '@/content/docker/modules'
 import { PYTHON_LABS } from '@/content/python/modules'
-import { AGENT_GALLERY as AGENT_SIMS, PYTHON_GALLERY, RAG_GALLERY, PROJECT_GALLERY, ML_GALLERY } from '@/content/sims/registry'
+import { AGENT_GALLERY as AGENT_SIMS, PYTHON_GALLERY, RAG_GALLERY, PROJECT_GALLERY, ML_GALLERY, SD_GALLERY } from '@/content/sims/registry'
 import { ML_LABS } from '@/content/ml/course'
+import { SD_LABS } from '@/content/system/course'
 import { RAG_LABS } from '@/content/rag/course'
 import { PROJECT_LABS } from '@/content/project/course'
 import { useProgress } from '@/store/progress'
@@ -21,7 +22,7 @@ type TopicCard = {
   pct: number
 }
 
-const COURSE_TRACKS = new Set(['python', 'asyncconcur', 'agents', 'veerarag', 'veeraproject', 'veeraml'])
+const COURSE_TRACKS = new Set(['python', 'asyncconcur', 'agents', 'veerarag', 'veeraproject', 'veeraml', 'veerasys'])
 
 function pctOf(ids: string[], done: string[]) {
   if (!ids.length) return 0
@@ -109,6 +110,17 @@ export function Topics() {
       accent: track('veeraml')?.accent || '#ea580c',
       stats: [`${track('veeraml')?.lessonCount ?? 0} lessons`, `${ML_GALLERY.length} simulations`, `${ML_LABS.length} labs`],
       pct: pctOf(lessonIds('veeraml'), completed),
+    },
+    {
+      key: 'system',
+      title: 'VeeraSystem',
+      kicker: 'System design · distributed systems · case studies',
+      blurb:
+        'System design from first principles: databases, caching, load balancing, distributed systems, messaging, microservices, security, observability, scaling to millions, low-level design and 25+ case studies — with simulations, labs, projects and interview answers.',
+      to: '/system-design',
+      accent: track('veerasys')?.accent || '#0f766e',
+      stats: [`${track('veerasys')?.lessonCount ?? 0} lessons`, `${SD_GALLERY.length} simulations`, `${SD_LABS.length} labs`],
+      pct: pctOf(lessonIds('veerasys'), completed),
     },
     {
       key: 'docker',

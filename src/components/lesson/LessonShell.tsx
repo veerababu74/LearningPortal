@@ -16,6 +16,7 @@ import { phaseForModule as coursePhaseForModule } from '@/content/courseKit'
 import { RAG_COURSE } from '@/content/rag/course'
 import { PROJECT_COURSE } from '@/content/project/course'
 import { ML_COURSE } from '@/content/ml/course'
+import { SD_COURSE } from '@/content/system/course'
 import { pathForTrack } from '@/content/paths/courses'
 import { shortTitle, tidyTitle } from '@/content/titles'
 import { simHref, simsForLesson } from '@/content/sims/registry'
@@ -59,6 +60,12 @@ function cardBrowsePath(trackId: string, title: string) {
     const phase = coursePhaseForModule(ML_COURSE, m[1])
     if (!phase) return '/ml'
     return phase === 'learn' ? `/ml/learn/${m[1]}` : `/ml/${phase}`
+  }
+  if (trackId === 'veerasys') {
+    if (!m) return '/system-design'
+    const phase = coursePhaseForModule(SD_COURSE, m[1])
+    if (!phase) return '/system-design'
+    return phase === 'learn' ? `/system-design/learn/${m[1]}` : `/system-design/${phase}`
   }
   return `/tracks/${trackId}`
 }
@@ -174,7 +181,7 @@ export function LessonShell({
       ),
     [lesson.sections],
   )
-  const isCourseTrack = ['python', 'asyncconcur', 'agents', 'veerarag', 'veeraproject', 'veeraml'].includes(lesson.trackId)
+  const isCourseTrack = ['python', 'asyncconcur', 'agents', 'veerarag', 'veeraproject', 'veeraml', 'veerasys'].includes(lesson.trackId)
   const COURSE_HOME: Record<string, [string, string]> = {
     python: ['/python', 'Python'],
     asyncconcur: ['/async', 'Async'],
@@ -182,6 +189,7 @@ export function LessonShell({
     veerarag: ['/rag', 'VeeraRAG'],
     veeraproject: ['/project', 'VeeraProject'],
     veeraml: ['/ml', 'VeeraML'],
+    veerasys: ['/system-design', 'VeeraSystem'],
   }
   const agentVisuals = simsForLesson(lesson.trackId, lesson.title, lesson.sourceFile || '')
   const pathCourse = pathForTrack(lesson.trackId)

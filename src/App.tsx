@@ -75,6 +75,14 @@ const MlModulePage = page(() => import('@/pages/ml/MlPages'), 'MlModulePage')
 const MlTopicPage = page(() => import('@/pages/ml/MlPages'), 'MlTopicPage')
 const MlInterviewHub = page(() => import('@/pages/ml/MlPages'), 'MlInterviewHub')
 
+const SystemVisualizerIndex = page(() => import('@/pages/agents/AgentVisualizer'), 'SystemVisualizerIndex')
+const SystemVisualizerPage = page(() => import('@/pages/agents/AgentVisualizer'), 'SystemVisualizerPage')
+const SystemHome = page(() => import('@/pages/system/SystemPages'), 'SystemHome')
+const SystemPhasePage = page(() => import('@/pages/system/SystemPages'), 'SystemPhasePage')
+const SystemModulePage = page(() => import('@/pages/system/SystemPages'), 'SystemModulePage')
+const SystemTopicPage = page(() => import('@/pages/system/SystemPages'), 'SystemTopicPage')
+const SystemInterviewHub = page(() => import('@/pages/system/SystemPages'), 'SystemInterviewHub')
+
 function NotFound() {
   return (
     <div className="track-page" style={{ maxWidth: 720, margin: '0 auto', padding: '3rem 1.25rem' }}>
@@ -150,6 +158,15 @@ export default function App() {
           <Route path="ml/learn/:moduleId" element={<MlModulePage />} />
           <Route path="ml/:phaseId" element={<MlPhasePage />} />
 
+          <Route path="system-design" element={<SystemHome />} />
+          <Route path="system-design/visualizer" element={<SystemVisualizerIndex />} />
+          <Route path="system-design/visualizer/:simId" element={<SystemVisualizerPage />} />
+          <Route path="system-design/path/:topicId" element={<SystemTopicPage />} />
+          <Route path="system-design/interview" element={<SystemInterviewHub />} />
+          <Route path="system-design/learn" element={<Navigate to="/system-design" replace />} />
+          <Route path="system-design/learn/:moduleId" element={<SystemModulePage />} />
+          <Route path="system-design/:phaseId" element={<SystemPhasePage />} />
+
           <Route path="docker" element={<DockerHome />} />
           <Route path="docker/labs" element={<DockerLabsIndex />} />
           <Route path="docker/labs/:labId" element={<DockerLabRouter />} />
@@ -164,6 +181,7 @@ export default function App() {
           <Route path="tracks/veerarag" element={<Navigate to="/rag" replace />} />
           <Route path="tracks/veeraproject" element={<Navigate to="/project" replace />} />
           <Route path="tracks/veeraml" element={<Navigate to="/ml" replace />} />
+          <Route path="tracks/veerasys" element={<Navigate to="/system-design" replace />} />
           <Route path="tracks/:trackId" element={<TrackOverview />} />
           <Route path="learn/:trackId/:lessonId" element={<LessonPage />} />
           <Route path="labs" element={<LabsIndex />} />

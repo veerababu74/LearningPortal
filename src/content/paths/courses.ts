@@ -3,6 +3,7 @@ import { getAgentsPath } from '@/content/agents/path'
 import { getRagPath } from '@/content/rag/path'
 import { getProjectPath } from '@/content/project/path'
 import { getMlPath } from '@/content/ml/path'
+import { getSdPath } from '@/content/system/path'
 import type { PathCourse } from '@/pages/path/PathPages'
 
 const PY_COMPANIONS = { '10': 'Exercises', '11': 'Project', '12': 'Interview' }
@@ -48,6 +49,14 @@ export const ML_PATH_COURSE: PathCourse = {
   companions: VP_COMPANIONS,
 }
 
+export const SD_PATH_COURSE: PathCourse = {
+  track: 'veerasys',
+  base: '/system-design',
+  title: 'VeeraSystem',
+  getPath: getSdPath,
+  companions: VP_COMPANIONS,
+}
+
 /** Which path (if any) a lesson belongs to — used for lesson navigation and the "Topic · step" link. */
 export function pathForTrack(track: string) {
   if (track === 'python') return PYTHON_PATH_COURSE
@@ -55,5 +64,6 @@ export function pathForTrack(track: string) {
   if (track === 'veerarag') return RAG_PATH_COURSE
   if (track === 'veeraproject') return PROJECT_PATH_COURSE
   if (track === 'veeraml') return ML_PATH_COURSE
+  if (track === 'veerasys') return SD_PATH_COURSE
   return null
 }

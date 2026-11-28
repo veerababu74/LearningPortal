@@ -17,6 +17,7 @@ import { AGENT_DIAGRAMS } from './diagrams-agents.mjs'
 import { RAG_DIAGRAMS } from './diagrams-rag.mjs'
 import { PROJECT_DIAGRAMS } from './diagrams-project.mjs'
 import { ML_DIAGRAMS } from './diagrams-ml.mjs'
+import { SD_DIAGRAMS } from './diagrams-system.mjs'
 
 // mermaid's parser touches DOMPurify hooks; outside a browser they are missing.
 for (const fn of ['addHook', 'removeHook', 'removeHooks', 'removeAllHooks', 'setConfig']) {
@@ -45,6 +46,7 @@ async function main() {
     ['veerarag', RAG_DIAGRAMS],
     ['veeraproject', PROJECT_DIAGRAMS],
     ['veeraml', ML_DIAGRAMS],
+    ['veerasys', SD_DIAGRAMS],
   ]) {
     const ids = new Set()
     for (const d of list) {
@@ -63,7 +65,7 @@ async function main() {
   }
 
   if (!curatedOnly) {
-    for (const track of ['python', 'asyncconcur', 'agents', 'veerarag', 'veeraproject', 'veeraml']) {
+    for (const track of ['python', 'asyncconcur', 'agents', 'veerarag', 'veeraproject', 'veeraml', 'veerasys']) {
       const dir = path.join(root, 'src', 'content', 'generated', track, 'lessons')
       if (!fs.existsSync(dir)) continue
       let total = 0

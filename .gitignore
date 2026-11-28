@@ -12,6 +12,8 @@ dist
 /.bin/
 /.ml/
 
+/.system/
+
 # Editor / OS
 .idea
 .vscode

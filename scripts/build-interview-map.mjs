@@ -13,7 +13,7 @@ import { fileURLToPath } from 'node:url'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const gen = path.join(root, 'src', 'content', 'generated')
-const TRACKS = { python: '12', agents: '12', veerarag: '22', veeraproject: '22', veeraml: '22' }
+const TRACKS = { python: '12', agents: '12', veerarag: '22', veeraproject: '22', veeraml: '22', veerasys: '22' }
 
 const GENERIC = /^(\d+\.\s*)?(question|conceptual question|scenario[- ]based question|scenario|the question|q|scenario q|interview question)(\s*#?\d+)?\s*[:.]?$/i
 const NOT_A_QUESTION = /summary|cheat ?sheet|key (concepts|takeaways)|^introduction$|^overview$|table of contents|^\d+\.\s*(conceptual|scenario)[^?]*questions(\s*\(\d+\))?$/i

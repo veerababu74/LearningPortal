@@ -1,7 +1,7 @@
 import { getCurriculumIndex } from '@/content/loadCurriculum'
 
 export type Course = {
-  id: 'python' | 'async' | 'agents' | 'rag' | 'project' | 'ml' | 'docker' | 'genai'
+  id: 'python' | 'async' | 'agents' | 'rag' | 'project' | 'ml' | 'system' | 'docker' | 'genai'
   title: string
   kicker: string
   blurb: string
@@ -13,7 +13,7 @@ export type Course = {
 }
 
 /** Tracks that have their own course home (everything else is a GenAI track). */
-export const COURSE_TRACKS = new Set(['python', 'asyncconcur', 'agents', 'veerarag', 'veeraproject', 'veeraml'])
+export const COURSE_TRACKS = new Set(['python', 'asyncconcur', 'agents', 'veerarag', 'veeraproject', 'veeraml', 'veerasys'])
 
 export function genaiTrackIds() {
   return getCurriculumIndex()
@@ -83,6 +83,16 @@ export const COURSES: Course[] = [
     trackIds: ['veeraml'],
   },
   {
+    id: 'system',
+    title: 'VeeraSystem',
+    kicker: 'System design · distributed systems · case studies',
+    blurb: 'System design from first principles: databases, caching, load balancing, distributed systems, messaging, microservices, security, observability, scaling to millions, low-level design and 25+ case studies — with simulations, labs and interview answers.',
+    to: '/system-design',
+    accent: '#0f766e',
+    icon: '🏗️',
+    trackIds: ['veerasys'],
+  },
+  {
     id: 'genai',
     title: 'Generative AI',
     kicker: 'LLMs · RAG · security · production',
@@ -116,6 +126,7 @@ export function courseHomeFor(trackId: string): { to: string; label: string } {
   if (trackId === 'veerarag') return { to: '/rag', label: 'VeeraRAG' }
   if (trackId === 'veeraproject') return { to: '/project', label: 'VeeraProject' }
   if (trackId === 'veeraml') return { to: '/ml', label: 'VeeraML' }
+  if (trackId === 'veerasys') return { to: '/system-design', label: 'VeeraSystem' }
   const t = getCurriculumIndex().tracks.find((x) => x.id === trackId)
   return t ? { to: `/tracks/${trackId}`, label: t.title } : { to: '/tracks', label: 'Generative AI tracks' }
 }
